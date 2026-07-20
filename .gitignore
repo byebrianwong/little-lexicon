@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+pipeline/node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts.bak
+
+# Native
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Env / secrets (never commit real values)
+.env
+.env.local
+.env*.local
+pipeline/.env
+supabase/functions/**/.env
+
+# Build-time pipeline outputs (large / regenerable)
+pipeline/out/
+pipeline/.cache/
+
+# Supabase local
+supabase/.branches/
+supabase/.temp/
+
+# OS / editor
+.DS_Store
+*.log
+coverage/
+.vscode/
+.idea/
