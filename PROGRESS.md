@@ -384,10 +384,20 @@ for dynamic imports before pruning any dependency that appears unused.
 - `npx jest`: 9 suites, 64 tests, all pass.
 - `npx expo export --platform web`: bundles successfully (1584 modules).
 
-### Noted, not changed
+### Deduplicated `react-native-css-interop`
 
-`package.json` lists `react-native-css-interop` twice in `dependencies`, once as
-`^0.1.22` and once as `0.1.22`. Duplicate JSON keys resolve last-wins, so the
-pinned `0.1.22` is what installs and the floating entry is dead text. It is
-outside the scope of this change and was left alone, but the floating `^` entry
-should be deleted since this repo pins every version.
+`package.json` listed `react-native-css-interop` twice in `dependencies`, once
+as `^0.1.22` and once as `0.1.22`. Duplicate JSON keys resolve last-wins, so the
+pinned `0.1.22` was already the version installing and the floating `^` entry
+was dead text. The floating entry violated the repo rule that every version is
+pinned, and the duplicate was a hazard: reordering or reformatting the
+dependency block could silently swap which value wins and allow a minor-version
+float.
+
+One entry remains, `"react-native-css-interop": "0.1.22"`, in the alphabetically
+correct slot (the surviving duplicate had been sitting out of order between
+`react-native-reanimated` and `react-native-safe-area-context`). This is a no-op
+for what actually installs, confirmed two ways: `npm install` produced no
+change to `package-lock.json`, and the web export emitted byte-identical bundle
+hashes to the run before it.
+
