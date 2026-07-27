@@ -358,3 +358,36 @@ entitlement; `EXPIRATION` fires at period end and revokes.
   Android emulator, a live Supabase database, real EAS builds, and any paid API
   call. These are the remaining "runs on a device / against live infra" parts of
   the definition of done.
+
+## Dependency cleanup: removed `zeego`
+
+`zeego` (pinned at 3.0.5) was removed from `package.json` dependencies. A
+repo-wide search (excluding `node_modules`) found no reference to it anywhere in
+`app/`, `src/`, `pipeline/`, `supabase/`, or any config file (babel, metro,
+jest, eslint, tailwind, app.json). Its only appearances were the `package.json`
+entry itself and the resulting `package-lock.json` subtree. It was never wired
+up, so nothing in the app used its menu primitives. Dropping it removed 848
+lines from the lockfile, mostly a private nested copy of several `@radix-ui`
+menu packages that only `zeego` depended on.
+
+`react-native-purchases` looks similarly unreferenced by a plain import search
+but was deliberately kept. `src/lib/purchases.ts` loads it through a dynamic
+`await import('react-native-purchases')` gated on
+`EXPO_PUBLIC_REVENUECAT_ENABLED`, so the native module is never initialized
+unless the flag is on. Static import searches do not catch that pattern. Check
+for dynamic imports before pruning any dependency that appears unused.
+
+### Verification after the removal
+
+- `npx tsc --noEmit`: passes, 0 errors.
+- `npx eslint .`: passes, 0 errors, 0 warnings.
+- `npx jest`: 9 suites, 64 tests, all pass.
+- `npx expo export --platform web`: bundles successfully (1584 modules).
+
+### Noted, not changed
+
+`package.json` lists `react-native-css-interop` twice in `dependencies`, once as
+`^0.1.22` and once as `0.1.22`. Duplicate JSON keys resolve last-wins, so the
+pinned `0.1.22` is what installs and the floating entry is dead text. It is
+outside the scope of this change and was left alone, but the floating `^` entry
+should be deleted since this repo pins every version.
