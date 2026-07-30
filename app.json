@@ -8,12 +8,17 @@
     "scheme": "littlelexicon",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "runtimeVersion": {
+      "policy": "fingerprint"
+    },
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#0B1020"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.gamesapps.littlelexicon"
@@ -23,7 +28,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0B1020"
-      }
+      },
+      "permissions": ["android.permission.MODIFY_AUDIO_SETTINGS"]
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +38,12 @@
     },
     "plugins": [
       "expo-router",
-      "expo-audio",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false
+        }
+      ],
       "expo-notifications",
       [
         "expo-splash-screen",
@@ -48,7 +59,14 @@
     },
     "extra": {
       "revenueCatEnabled": false,
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "3e202ba1-e937-467c-a236-94ad42fa05c0"
+      }
+    },
+    "owner": "byebrianwong",
+    "updates": {
+      "url": "https://u.expo.dev/3e202ba1-e937-467c-a236-94ad42fa05c0"
     }
   }
 }

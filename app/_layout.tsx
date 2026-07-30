@@ -12,6 +12,7 @@ import { useAuthStore } from '@/features/auth/authStore';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 import { configurePurchases } from '@/lib/purchases';
 import { flushReviewQueue } from '@/features/offline/reviewQueue';
+import { applyUpdateOnStartup } from '@/lib/updates';
 
 export default function RootLayout() {
   const init = useAuthStore((s) => s.init);
@@ -24,6 +25,9 @@ export default function RootLayout() {
     // any reviews queued while offline.
     configurePurchases().catch(() => {});
     flushReviewQueue().catch(() => {});
+    // Apply a published OTA update straight away rather than on the next
+    // launch. No-op in dev and on web; handles its own failures.
+    applyUpdateOnStartup();
   }, [init, hydrateSettings]);
 
   return (
