@@ -1,5 +1,5 @@
 import { RefreshControl, ScrollView, View } from 'react-native';
-import { router, useFocusEffect } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 import { useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQueryClient } from '@tanstack/react-query';
@@ -8,6 +8,7 @@ import { useProfile } from '@/features/review/queries';
 import { useProgressCounts, useTodayStats } from '@/features/stats/queries';
 import { levelProgress } from '@/features/gamification/xp';
 import { hitNewWordCap } from '@/features/monetization/limits';
+import { pushOnce } from '@/lib/navigation';
 
 export default function Home() {
   const qc = useQueryClient();
@@ -67,11 +68,11 @@ export default function Home() {
         </Card>
 
         <View className="mt-5 gap-3">
-          <Button title="Start session" onPress={() => router.push('/session')} />
+          <Button title="Start session" onPress={() => pushOnce('/session')} />
           <Button
             title="⚡️ Speed round"
             variant="secondary"
-            onPress={() => router.push('/speed')}
+            onPress={() => pushOnce('/speed')}
           />
         </View>
 
@@ -83,7 +84,7 @@ export default function Home() {
               Go Pro for unlimited new words and every game mode.
             </Muted>
             <View className="mt-3">
-              <Button title="See Pro" variant="secondary" onPress={() => router.push('/paywall')} />
+              <Button title="See Pro" variant="secondary" onPress={() => pushOnce('/paywall')} />
             </View>
           </Card>
         ) : null}
@@ -91,7 +92,7 @@ export default function Home() {
         <Row className="mt-5 gap-3">
           <StatTile label="Due now" value={counts.data?.due ?? 0} />
           <StatTile label="Learning" value={counts.data?.learning ?? 0} />
-          <StatTile label="Known" value={(counts.data?.reviewCount ?? 0) + (counts.data?.known ?? 0)} />
+          <StatTile label="Known" value={counts.data?.knownTotal ?? 0} />
         </Row>
 
         {lvl ? (

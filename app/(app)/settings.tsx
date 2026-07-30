@@ -8,6 +8,7 @@ import { useSettingsStore } from '@/features/settings/settingsStore';
 import { useAuthStore } from '@/features/auth/authStore';
 import { backend } from '@/lib/backend';
 import { isDemoMode } from '@/lib/env';
+import { pushOnce } from '@/lib/navigation';
 import { scheduleDailyReminder, cancelDailyReminder } from '@/lib/notifications';
 
 const GOALS = [10, 15, 20, 30];
@@ -111,7 +112,7 @@ export default function Settings() {
           </Row>
           {!p.isPro ? (
             <View className="mt-3">
-              <Button title="Upgrade to Pro" variant="secondary" onPress={() => router.push('/paywall')} />
+              <Button title="Upgrade to Pro" variant="secondary" onPress={() => pushOnce('/paywall')} />
             </View>
           ) : null}
         </Card>
