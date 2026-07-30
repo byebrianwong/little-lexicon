@@ -5,10 +5,10 @@
 
 import { useRef, useState } from 'react';
 import { ActivityIndicator, TextInput, View } from 'react-native';
-import { router } from 'expo-router';
 import { Body, Button, Card, H2, Muted } from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
 import { speakWord } from '@/lib/audio';
+import { pushOnce } from '@/lib/navigation';
 import { useGameContext } from '../GameContext';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -34,7 +34,7 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
             reviewing with the other modes for free.
           </Muted>
           <View className="mt-4 gap-3">
-            <Button title="See Pro" onPress={() => router.push('/paywall')} />
+            <Button title="See Pro" onPress={() => pushOnce('/paywall')} />
             <Button
               title="Skip this one"
               variant="secondary"

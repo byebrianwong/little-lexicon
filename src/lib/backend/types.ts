@@ -49,6 +49,9 @@ export interface ProgressCounts {
   learning: number;
   due: number;
   reviewCount: number; // cards in 'review' state
+  // Distinct words that count as known: is_known OR state 'review'. These two
+  // sets overlap (markKnown sets both), so they cannot be added together.
+  knownTotal: number;
   total: number; // words with any state row
 }
 

@@ -284,14 +284,18 @@ export class DemoBackend implements Backend {
     let known = 0;
     let learning = 0;
     let reviewCount = 0;
+    let knownTotal = 0;
     let due = 0;
     for (const r of rows) {
       if (r.is_known) known++;
       if (r.state === 'learning' || r.state === 'relearning') learning++;
       if (r.state === 'review') reviewCount++;
+      // Union, not a sum: markKnown sets is_known and state 'review' on the
+      // same row, so adding known + reviewCount would count it twice.
+      if (r.is_known || r.state === 'review') knownTotal++;
       if (!r.is_suspended && !r.is_known && Date.parse(r.due) <= now) due++;
     }
-    return { known, learning, reviewCount, due, total: rows.length };
+    return { known, learning, reviewCount, knownTotal, due, total: rows.length };
   }
 
   async getRetention(sinceDays: number): Promise<number> {

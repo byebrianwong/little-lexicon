@@ -350,17 +350,20 @@ export class SupabaseBackend implements Backend {
       supabase.from('user_word_state').select('word_id', { count: 'exact', head: true });
 
     const nowIso = new Date().toISOString();
-    const [total, known, learning, relearning, reviewCount, due] = await Promise.all([
+    const [total, known, learning, relearning, reviewCount, knownTotal, due] = await Promise.all([
       countOf((q) => q),
       countOf((q) => q.eq('is_known', true)),
       countOf((q) => q.eq('state', 'learning')),
       countOf((q) => q.eq('state', 'relearning')),
       countOf((q) => q.eq('state', 'review')),
+      // Union, not a sum: markKnown sets is_known and state 'review' on the
+      // same row, so adding known + reviewCount would count it twice.
+      countOf((q) => q.or('is_known.eq.true,state.eq.review')),
       countOf((q) =>
         q.eq('is_suspended', false).eq('is_known', false).lte('due', nowIso),
       ),
     ]);
-    return { known, learning: learning + relearning, reviewCount, due, total };
+    return { known, learning: learning + relearning, reviewCount, knownTotal, due, total };
   }
 
   async getRetention(sinceDays: number): Promise<number> {
