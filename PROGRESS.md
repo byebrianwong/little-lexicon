@@ -401,3 +401,241 @@ for what actually installs, confirmed two ways: `npm install` produced no
 change to `package-lock.json`, and the web export emitted byte-identical bundle
 hashes to the run before it.
 
+## Playthrough pass: three defects found and fixed
+
+First run of the app as a user rather than as a test suite. Played the whole
+loop in demo mode on web (placement, goals, home, a six-item session covering
+word intro, both multiple-choice directions, cloze and production, summary,
+back to home) and checked every tab. The loop works: adaptive placement moved
+tiers correctly and estimated level 4, FSRS scheduled and persisted across a
+reload, XP and levels tracked, two achievements unlocked on real conditions,
+stats and forecast and leaderboard and settings and paywall all render, and
+there were no console or server errors. Three defects surfaced anyway.
+
+### The "Known" tile on Home double-counted (both backends)
+
+Home computed its Known tile as `reviewCount + known`, but `markKnown` writes
+`is_known = true` and `state = 'review'` on the same row, so every word marked
+known during placement was counted twice. With six known words Home showed 12
+while the Progress screen showed "Known 6" and "In review 6" from the same
+query. At one point Home claimed 12 known out of 7 words that had any state row
+at all, which is how the double count was spotted.
+
+The two sets genuinely overlap, so the sum can never be right. `ProgressCounts`
+now carries `knownTotal`, a real union (`is_known OR state = 'review'`) computed
+in both backends: a counter in the demo backend, and a `.or(...)` count in the
+Supabase backend so it stays one query. Home reads `knownTotal`. The Progress
+screen was already correct and is unchanged, since it reports the two figures
+separately on purpose. Verified against the same saved state that previously
+displayed 12: Home now shows 6.
+
+### Unguarded router.push stacked duplicate screens on a double tap
+
+`router.push` appends a screen on every call, and all five push call sites were
+unguarded. Two ordinary taps on "Start session" opened two stacked sessions,
+both at item 1, each needing its own dismissal. This is easy to hit on a device
+because the button stays live while the session screen is still bundling.
+
+`src/lib/navigation.ts` adds `pushOnce`, which ignores a repeat push of the same
+route inside a 700 ms window, and all five call sites now use it ("Start
+session", "Speed round", and the three "See Pro" / "Upgrade to Pro" buttons).
+The pure guard and the href keying are unit tested (8 new tests). The href type
+is derived from `Parameters<typeof router.push>[0]` because expo-router does not
+re-export `Href` from its entry point, which avoids a cast. Verified: three
+rapid taps now open exactly one session, a deliberate re-entry after closing
+still works, and the paywall opens once from a double tap.
+
+### package.json had a duplicate dependency key
+
+`react-native-css-interop` appeared twice, as `^0.1.22` and `0.1.22`. Later keys
+win in JSON parsing so the installed version was already pinned, but the caret
+violated the repo rule against floating ranges and a duplicate key hides which
+line is authoritative. Fixed here and, independently, by the separate cleanup
+recorded under "Deduplicated `react-native-css-interop`" above; the two changes
+were identical, so merging them was a no-op. There are now no duplicate keys and
+no floating ranges in either dependency block.
+
+### Verification after the fixes
+
+- `npx tsc --noEmit`: 0 errors.
+- `npx eslint .`: 0 errors, 0 warnings.
+- `npx jest`: 10 suites, 72 tests, all pass (was 9 and 64).
+- Re-played the loop on web with no console or server errors.
+
+## First native run: the iOS bundle was broken
+
+Installed the iOS 26.5 simulator runtime and ran the app on an iPhone 17 Pro
+simulator through Expo Go. No dev build and no CocoaPods were needed: this is a
+managed project, and the only native modules the app imports (expo-audio,
+expo-speech, expo-notifications, react-native-gesture-handler) all ship inside
+Expo Go. `zeego` and `react-native-purchases` are never imported, so Expo Go
+does not need them either.
+
+The first native bundle failed outright, so the app had never been able to start
+on a device:
+
+```
+The package at "node_modules/ws/lib/stream.js" attempted to import the Node
+standard library module "stream".
+```
+
+The chain is `app/onboarding/goals.tsx` to `@/lib/backend` to
+`supabaseBackend.ts` to `@supabase/supabase-js` to `@supabase/realtime-js` to
+`ws` to Node's `stream`, which React Native does not have. Demo mode does not
+avoid this: `src/lib/backend/index.ts` imports `SupabaseBackend` statically, so
+the bundler pulls Supabase in whichever backend is selected at runtime.
+
+Cause: SDK 54 sets `unstable_enablePackageExports: true`, so a package's
+`exports` map takes precedence over its `browser` and `main` fields, but Expo
+ships `unstable_conditionNames` empty. The `ws` exports map lists `browser`,
+`import`, then `require`, and with no conditions requested the resolver fell
+through to `require`, which is the Node build. Web was fine because it resolves
+the `browser` condition, which is why only native broke and why every earlier
+check passed.
+
+Fix in `metro.config.js`: `config.resolver.unstable_conditionNames =
+['react-native', 'browser', 'require']`. That gives `ws` its browser stub and
+leaves realtime on the global WebSocket that React Native provides, which is
+what the ESM build of realtime-js already expects. The app does not use realtime
+channels, so nothing depends on the Node path. Considered and rejected: adding
+`module` to `resolverMainFields` (changes resolution for every package), and
+pointing at `dist/module/index.js` directly (hardcodes a Supabase internal
+path).
+
+After the fix the iOS bundle builds (1842 modules) and the app runs. Verified on
+the simulator: the placement screen renders with correct safe-area insets around
+the Dynamic Island, and tapping "I know it" advanced from "ephemeral" to the
+harder "quixotic" with the progress bar moving, so the adaptive ladder works
+against real touch input. Web export, typecheck, lint and all 72 tests still
+pass with the new resolver config.
+
+### Notes for the next phase
+
+- Native is now verified on iOS only, and through Expo Go rather than a dev
+  build. Android emulator is still unverified. A dev build (which needs
+  CocoaPods) is still required to exercise RevenueCat and full notification
+  behaviour, neither of which Expo Go supports.
+- Expo Go prints two warnings that are Expo Go limitations rather than app bugs:
+  `expo-notifications` is not fully supported there since SDK 53, and a
+  deprecated `SafeAreaView` import warning comes from a dependency.
+- Worth considering: split the backend selection so demo mode does not pull
+  supabase-js into the bundle at all. A dynamic import in
+  `src/lib/backend/index.ts` would cut a large dependency out of the demo path
+  and would have prevented this class of failure.
+
+## OTA updates were never actually wired up
+
+Phase 7.5 recorded that `eas.json` "defines dev/preview/production build and
+submit profiles with EAS Update channels". The channels are there, but nothing
+else was: `expo-updates` was not a dependency, and `app.json` had no
+`runtimeVersion`, no `updates.url`, and no `extra.eas.projectId`. Channels alone
+do nothing without the update client, so an installed build would have run
+correctly and then never updated.
+
+Wired up here:
+
+- `expo-updates` 29.0.19, pinned exactly. `npx expo install` wrote `~29.0.19`;
+  changed to an exact pin to match the repo rule against floating ranges.
+- `app.json` gains `runtimeVersion: { policy: "fingerprint" }`. Fingerprint
+  hashes the native project, so adding a native module moves the runtime version
+  and older installs stop matching updates that need native code they lack. The
+  `appVersion` policy would have shipped them anyway. The `ws`/`stream` failure
+  above is exactly that class of mismatch, which is why fingerprint was chosen.
+- `src/lib/updates.ts` applies a published update on startup instead of on the
+  next launch, which is the stock behaviour. `shouldCheckForUpdate` is split out
+  as pure logic and unit tested (4 tests); the I/O wrapper never throws, so a
+  failed check or an offline device cannot stop the app starting. Called from
+  `app/_layout.tsx`.
+
+Not done here, because both create or consume resources in the Expo account:
+`eas init` (registers the project and writes `extra.eas.projectId`) and
+`eas update:configure` (writes `updates.url`, which needs that project id), plus
+the first `eas build`. Those are the remaining steps before a phone build can
+receive updates.
+
+Verified: typecheck, lint, 76 tests across 11 suites, web export, and the iOS
+bundle (1852 modules) all pass with expo-updates added, and the app still runs
+in Expo Go, where `Updates.isEnabled` is false so the startup check no-ops.
+
+### The app was asking for the microphone
+
+Running `eas init` and the first Android build surfaced this. The generated
+`android.permissions` in `app.json` listed `RECORD_AUDIO` (twice, alongside
+`MODIFY_AUDIO_SETTINGS` twice). The cause is `expo-audio`'s config plugin, which
+adds `RECORD_AUDIO` unless it is passed `microphonePermission: false`.
+
+The app never records. It calls only `createAudioPlayer` and
+`setAudioModeAsync`, and there is no `useAudioRecorder` or any other recording
+API anywhere in `src/` or `app/`. `docs/DATA_SAFETY.md` does not mention a
+microphone either, so the shipped manifest and the store disclosure would have
+contradicted each other, which is the kind of mismatch Play review rejects. A
+vocabulary app requesting microphone access is also a poor listing.
+
+Fixed by configuring the plugin as `["expo-audio", { "microphonePermission":
+false }]` and reducing `android.permissions` to just
+`["android.permission.MODIFY_AUDIO_SETTINGS"]`. Verified against the resolved
+native config (`expo config --type prebuild`), not just the source file:
+Android permissions are now `MODIFY_AUDIO_SETTINGS` alone, and
+`NSMicrophoneUsageDescription` is undefined, so iOS will not prompt either.
+
+Consequence worth remembering: this edit changes the fingerprint runtimeVersion,
+so the Android build that was in flight when it landed can never receive updates
+published afterwards. It was cancelled and rebuilt. Any future change to
+`app.json` or to a config plugin has the same effect and needs a fresh build.
+
+### An unused dependency broke the Android build
+
+The rebuild failed in Gradle. The EAS error was only
+`EAS_BUILD_UNKNOWN_GRADLE_ERROR`; the real cause was in the build log, which is
+Brotli-encoded rather than gzip, so it needs
+`zlib.brotliDecompressSync` to read:
+
+```
+e: .../@react-native-menu/menu/android/src/main/java/com/reactnativemenu/MenuView.kt:50:3
+   'setHitSlopRect' overrides nothing.
+Execution failed for task ':react-native-menu_menu:compileReleaseKotlin'.
+```
+
+`@react-native-menu/menu@1.2.2` calls `setHitSlopRect`, which no longer exists
+in React Native 0.81's Kotlin API. That package was in the tree only as a peer
+of `zeego@3.0.5`, and `zeego` is imported nowhere in `src/` or `app/`.
+
+This is the same `zeego` removed by the cleanup recorded under "Dependency
+cleanup: removed `zeego`" above, which landed separately on `main`. That note
+treats it as dead weight worth pruning. It was more than that: it was the sole
+reason the Android build could not complete. Removing it drops 37 packages and
+takes `@react-native-menu/menu` out of the tree entirely. Typecheck, lint, 76
+tests and the web export all still pass.
+
+Lesson for this repo: an unused dependency is not inert once it carries native
+code. Anything with an Android or iOS component gets compiled during a build
+regardless of whether the JS side references it.
+
+### Known, deliberately not fixed
+
+`expo doctor` fails two checks on every build. Neither blocked this build (Gradle
+ran 155 tasks and only the react-native-menu one failed), so both are recorded
+rather than fixed:
+
+- Duplicate native module `expo-constants`, at 18.0.9 at the root and 18.0.13
+  nested under `expo/expo-asset`. Expo warns duplicates can cause unexpected
+  build errors, though this build tolerated it.
+- 14 packages behind their SDK 54 expected versions, including a major-looking
+  mismatch on `babel-preset-expo` (14.0.4 against `~54.0.10`, which is a
+  versioning-scheme change rather than 40 major versions of drift).
+
+Both trace to the same root cause and would be resolved together by
+`npx expo install --check`. That touches 14 packages at once and needs its own
+verification pass, so it is left as a separate task.
+- Open, not fixed: the speed round dead-ends with "Nothing to race yet" once a
+  user has a state row for every word. Its pool is due cards plus brand-new
+  words only (`app/speed.tsx`), so the 12-word demo corpus is exhausted after
+  one session. Harmless with a production corpus of thousands, but the Home
+  button gives no reason for the empty state, and it makes the speed round hard
+  to exercise in demo mode. Consider falling back to already-learned words.
+- `expo doctor` reports about 15 packages behind their SDK 54 expected versions
+  (for example `expo@54.0.12` against `~54.0.36`). Left alone deliberately: the
+  repo pins deliberately, and bumping them is its own task with its own retest.
+- The interest and pace chips in onboarding render as plain views rather than
+  buttons, so they expose no button role to assistive technology. Not fixed
+  here; worth folding into an accessibility pass.
