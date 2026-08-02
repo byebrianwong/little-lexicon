@@ -39,7 +39,20 @@ export default function SpeedRound() {
     (async () => {
       const due = await backend.getDueQueue(40);
       const fresh = due.length < 10 ? await backend.getNewWords(15) : [];
-      setItems([...due, ...fresh]);
+      let pool = [...due, ...fresh];
+      // Nothing due and nothing new does not mean nothing to race. Fall back to
+      // the whole collection so the speed round is always playable.
+      if (pool.length < 5) {
+        const all = await backend.getAllWords();
+        const have = new Set(pool.map((i) => i.content.wordId));
+        pool = [
+          ...pool,
+          ...all
+            .filter((c) => !have.has(c.wordId))
+            .map<SessionItem>((content) => ({ content, state: null, isNew: false })),
+        ];
+      }
+      setItems(pool);
     })().catch(() => setItems([]));
   }, []);
 
