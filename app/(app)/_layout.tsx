@@ -30,6 +30,13 @@ export default function AppLayout() {
         }}
       />
       <Tabs.Screen
+        name="browse"
+        options={{
+          title: 'Words',
+          tabBarIcon: ({ color }) => <TabIcon emoji="📖" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="stats"
         options={{
           title: 'Progress',

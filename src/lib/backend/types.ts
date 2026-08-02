@@ -92,6 +92,11 @@ export interface Backend {
 
   // Content
   getWordContent(wordId: number): Promise<WordContent | null>;
+  /**
+   * Every word in the collection, ordered easiest first. Backs the browse
+   * screen and endless practice, both of which ignore scheduling entirely.
+   */
+  getAllWords(limit?: number): Promise<WordContent[]>;
 
   // Review queue
   getDueQueue(limit: number): Promise<SessionItem[]>;

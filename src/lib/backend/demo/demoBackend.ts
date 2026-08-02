@@ -184,6 +184,15 @@ export class DemoBackend implements Backend {
     return DEMO_WORDS_BY_ID.get(wordId) ?? null;
   }
 
+  async getAllWords(limit?: number): Promise<WordContent[]> {
+    const sorted = [...DEMO_WORDS].sort(
+      (a, b) =>
+        a.difficultyTier - b.difficultyTier ||
+        (a.frequencyRank ?? 0) - (b.frequencyRank ?? 0),
+    );
+    return limit === undefined ? sorted : sorted.slice(0, limit);
+  }
+
   // --- Queue ----------------------------------------------------------------
   async getDueQueue(limit: number): Promise<SessionItem[]> {
     await this.ensureLoaded();

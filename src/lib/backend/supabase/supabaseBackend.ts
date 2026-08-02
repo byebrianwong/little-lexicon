@@ -205,6 +205,23 @@ export class SupabaseBackend implements Backend {
     return map.get(wordId) ?? null;
   }
 
+  async getAllWords(limit?: number): Promise<WordContent[]> {
+    let q = supabase
+      .from('words')
+      .select('id')
+      .order('difficulty_tier', { ascending: true })
+      .order('frequency_rank', { ascending: true, nullsFirst: false });
+    if (limit !== undefined) q = q.limit(limit);
+    const { data, error } = await q;
+    if (error) throw new Error(error.message);
+    const ids = (data ?? []).map((r) => r.id);
+    const content = await this.getWordContentBatch(ids);
+    // Preserve the query order; drop ids with no usable content.
+    return ids
+      .map((id) => content.get(id))
+      .filter((c): c is WordContent => c !== undefined);
+  }
+
   // --- Queue ----------------------------------------------------------------
   async getDueQueue(limit: number): Promise<SessionItem[]> {
     const nowIso = new Date().toISOString();
