@@ -1,15 +1,17 @@
 // Assemble a session queue from due reviews and new words (Phase 3.1). Pure and
-// unit tested. Reviews are time-sensitive so they claim slots first (Anki-style);
-// new words fill the remaining slots up to the per-day new allowance.
+// unit tested. Reviews are time-sensitive so they come first (Anki-style), with
+// new words interleaved among them.
+//
+// The daily goal is a target for streaks and the progress ring, NOT a cap on the
+// session. A session offers everything available: every due review and every
+// new word the queue returned. Nothing stops a user studying as long as they
+// like.
 
 import type { SessionItem } from '@/lib/types';
 
 export interface SessionPlanInput {
   due: SessionItem[];
   newWords: SessionItem[];
-  dailyGoal: number;
-  // Max new words to introduce today (free tier caps this; Pro raises it).
-  newAllowance: number;
 }
 
 export interface SessionPlan {
@@ -45,16 +47,11 @@ export function interleave(reviews: SessionItem[], news: SessionItem[]): Session
 }
 
 export function buildSessionPlan(input: SessionPlanInput): SessionPlan {
-  const goal = Math.max(1, Math.floor(input.dailyGoal));
-  const reviewCount = Math.min(input.due.length, goal);
-  const newSlots = Math.max(0, goal - reviewCount);
-  const newCount = Math.min(input.newWords.length, input.newAllowance, newSlots);
-
-  const reviews = input.due.slice(0, reviewCount);
-  const news = input.newWords.slice(0, newCount);
+  const reviews = input.due;
+  const news = input.newWords;
   return {
     items: interleave(reviews, news),
-    reviewCount,
-    newCount,
+    reviewCount: reviews.length,
+    newCount: news.length,
   };
 }

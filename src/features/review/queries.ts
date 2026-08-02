@@ -6,7 +6,7 @@ import { backend } from '@/lib/backend';
 import { qk } from '@/lib/queryClient';
 import type { Profile, SessionItem } from '@/lib/types';
 import { buildSessionPlan, type SessionPlan } from './sessionPlan';
-import { newAllowance } from '@/features/monetization/limits';
+import { DUE_FETCH_LIMIT, NEW_WORD_FETCH_LIMIT } from '@/features/monetization/limits';
 
 // --- Plain async wrappers (usable outside React, e.g. the session runner) ----
 export function getDueQueue(limit: number): Promise<SessionItem[]> {
@@ -59,18 +59,18 @@ export function useSessionPlan(profile: Profile | undefined) {
     staleTime: 0,
     queryFn: async (): Promise<SessionPlan> => {
       const p = profile!;
-      const goal = p.dailyGoal;
       const tierWindow = tierWindowForLevel(p.levelEstimate);
-      const [due, fresh] = await Promise.all([
-        backend.getDueQueue(goal),
-        backend.getNewWords(newAllowance(p), tierWindow),
+      // The tier window orders new words near the user's level first; it does
+      // not fence them in. Anything outside the window is appended after, so a
+      // session is never starved of material by the placement estimate.
+      const [due, inWindow, everything] = await Promise.all([
+        backend.getDueQueue(DUE_FETCH_LIMIT),
+        backend.getNewWords(NEW_WORD_FETCH_LIMIT, tierWindow),
+        backend.getNewWords(NEW_WORD_FETCH_LIMIT),
       ]);
-      return buildSessionPlan({
-        due,
-        newWords: fresh,
-        dailyGoal: goal,
-        newAllowance: newAllowance(p),
-      });
+      const seen = new Set(inWindow.map((i) => i.content.wordId));
+      const fresh = [...inWindow, ...everything.filter((i) => !seen.has(i.content.wordId))];
+      return buildSessionPlan({ due, newWords: fresh });
     },
   });
 }

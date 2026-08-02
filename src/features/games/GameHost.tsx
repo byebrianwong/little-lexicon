@@ -1,10 +1,8 @@
-// Renders the right game mode for an item, substituting when a mode is not
-// available to this user (e.g. use_it for a free user degrades to production).
+// Renders the right game mode for an item. Every mode is available to every
+// user, so the mode chosen by the escalation ladder is always the mode played.
 
 import type { GameOutcome } from '@/srs/srs';
 import type { GameModeId, SessionItem } from '@/lib/types';
-import { isModeAllowed } from '@/features/monetization/limits';
-import { useGameContext } from './GameContext';
 import { MultipleChoice } from './modes/MultipleChoice';
 import { Cloze } from './modes/Cloze';
 import { Production } from './modes/Production';
@@ -23,8 +21,7 @@ export function GameHost({
   onOutcome: (o: GameOutcome) => void;
   soundEnabled: boolean;
 }) {
-  const { profile } = useGameContext();
-  const effective: GameModeId = isModeAllowed(mode, profile) ? mode : 'production';
+  const effective: GameModeId = mode;
   const common = { item, onOutcome, soundEnabled };
 
   switch (effective) {

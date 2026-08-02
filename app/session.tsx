@@ -12,7 +12,6 @@ import { submitReview } from '@/features/review/submitReview';
 import { enqueueReview } from '@/features/offline/reviewQueue';
 import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 import { chooseMode } from '@/features/games/ladder';
-import { isModeAllowed } from '@/features/monetization/limits';
 import { GameProvider } from '@/features/games/GameContext';
 import { GameHost } from '@/features/games/GameHost';
 import { WordIntro } from '@/features/games/WordIntro';
@@ -76,7 +75,7 @@ export default function SessionScreen() {
       caps: capsForWord(current.content),
       variantSeed: current.content.wordId + (current.state?.reps ?? 0),
     });
-    return isModeAllowed(chosen, profile) ? chosen : 'production';
+    return chosen;
   }, [current, profile]);
 
   const finish = useCallback(
