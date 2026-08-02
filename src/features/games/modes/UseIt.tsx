@@ -1,50 +1,24 @@
 // "Use it": write your own sentence with the word (Phase 4.4). Highest XP tier.
-// Evaluation is a gated runtime Claude call routed through an Edge Function
-// (Pro only, rate-limited, key server-side). Free users see it gated. Malformed
-// or unavailable evaluation degrades to a neutral, logged result.
+// Available to everyone. Evaluation is a runtime Claude call routed through an
+// Edge Function (rate-limited, key server-side); in demo mode it is a local
+// heuristic. Malformed or unavailable evaluation degrades to a neutral, logged
+// result rather than blocking the answer.
 
 import { useRef, useState } from 'react';
 import { ActivityIndicator, TextInput, View } from 'react-native';
 import { Body, Button, Card, H2, Muted } from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
 import { speakWord } from '@/lib/audio';
-import { pushOnce } from '@/lib/navigation';
-import { useGameContext } from '../GameContext';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
 export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
-  const { profile } = useGameContext();
   const content = item.content;
   const sense = content.senses[0]!;
   const startedAt = useRef(Date.now()).current;
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [feedback, setFeedback] = useState<SentenceFeedback | null>(null);
-
-  if (!profile.isPro) {
-    return (
-      <View>
-        <Muted>Use it in a sentence</Muted>
-        <H2 className="mt-1">{content.headword}</H2>
-        <Card className="mt-5">
-          <Body className="font-semibold">Pro feature</Body>
-          <Muted className="mt-1">
-            Writing your own sentence with instant feedback is part of Pro. You can keep
-            reviewing with the other modes for free.
-          </Muted>
-          <View className="mt-4 gap-3">
-            <Button title="See Pro" onPress={() => pushOnce('/paywall')} />
-            <Button
-              title="Skip this one"
-              variant="secondary"
-              onPress={() => onOutcome(makeOutcome(true, startedAt, true))}
-            />
-          </View>
-        </Card>
-      </View>
-    );
-  }
 
   async function evaluate() {
     if (busy || feedback) return;

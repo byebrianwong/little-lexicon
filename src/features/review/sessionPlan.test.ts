@@ -25,46 +25,36 @@ describe('interleave', () => {
 });
 
 describe('buildSessionPlan', () => {
-  it('caps the total at the daily goal', () => {
-    const plan = buildSessionPlan({
-      due: due(20),
-      newWords: fresh(20),
-      dailyGoal: 15,
-      newAllowance: 10,
-    });
-    expect(plan.items).toHaveLength(15);
+  it('offers everything available, with no cap on session length', () => {
+    const plan = buildSessionPlan({ due: due(20), newWords: fresh(20) });
+    expect(plan.items).toHaveLength(40);
+    expect(plan.reviewCount).toBe(20);
+    expect(plan.newCount).toBe(20);
   });
 
-  it('prioritizes due reviews when overloaded, pausing new intake', () => {
-    const plan = buildSessionPlan({
-      due: due(20),
-      newWords: fresh(20),
-      dailyGoal: 15,
-      newAllowance: 10,
-    });
-    expect(plan.reviewCount).toBe(15);
+  it('does not ration new words behind a daily allowance', () => {
+    const plan = buildSessionPlan({ due: [], newWords: fresh(50) });
+    expect(plan.newCount).toBe(50);
+    expect(plan.items).toHaveLength(50);
+  });
+
+  it('still introduces new words when a large review backlog exists', () => {
+    // The old planner starved new intake once due >= goal. Nothing is starved now.
+    const plan = buildSessionPlan({ due: due(100), newWords: fresh(5) });
+    expect(plan.reviewCount).toBe(100);
+    expect(plan.newCount).toBe(5);
+  });
+
+  it('handles an empty queue', () => {
+    const plan = buildSessionPlan({ due: [], newWords: [] });
+    expect(plan.items).toHaveLength(0);
+    expect(plan.reviewCount).toBe(0);
     expect(plan.newCount).toBe(0);
   });
 
-  it('fills remaining slots with new words up to the allowance', () => {
-    const plan = buildSessionPlan({
-      due: due(3),
-      newWords: fresh(20),
-      dailyGoal: 15,
-      newAllowance: 8,
-    });
-    expect(plan.reviewCount).toBe(3);
-    expect(plan.newCount).toBe(8); // allowance caps it below the 12 open slots
-    expect(plan.items).toHaveLength(11);
-  });
-
-  it('respects the new allowance as a hard cap', () => {
-    const plan = buildSessionPlan({
-      due: [],
-      newWords: fresh(20),
-      dailyGoal: 30,
-      newAllowance: 5,
-    });
-    expect(plan.newCount).toBe(5);
+  it('keeps every item exactly once', () => {
+    const plan = buildSessionPlan({ due: due(7), newWords: fresh(4) });
+    const ids = plan.items.map((i) => i.content.wordId);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 });

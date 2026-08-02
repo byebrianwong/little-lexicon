@@ -3,11 +3,10 @@ import { useFocusEffect } from 'expo-router';
 import { useCallback } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQueryClient } from '@tanstack/react-query';
-import { Body, Button, Card, H1, H2, Muted, Pill, ProgressBar, Row } from '@/components/ui';
+import { Button, Card, H1, H2, Muted, Pill, ProgressBar, Row } from '@/components/ui';
 import { useProfile } from '@/features/review/queries';
 import { useProgressCounts, useTodayStats } from '@/features/stats/queries';
 import { levelProgress } from '@/features/gamification/xp';
-import { hitNewWordCap } from '@/features/monetization/limits';
 import { pushOnce } from '@/lib/navigation';
 
 export default function Home() {
@@ -27,7 +26,6 @@ export default function Home() {
   const goal = p?.dailyGoal ?? 15;
   const goalFraction = Math.min(1, reviewsToday / goal);
   const lvl = p ? levelProgress(p.xpTotal) : null;
-  const atCap = p ? hitNewWordCap(p, today.data?.newLearned ?? 0) : false;
 
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top']}>
@@ -70,24 +68,16 @@ export default function Home() {
         <View className="mt-5 gap-3">
           <Button title="Start session" onPress={() => pushOnce('/session')} />
           <Button
+            title="♾️ Endless practice"
+            variant="secondary"
+            onPress={() => pushOnce('/practice')}
+          />
+          <Button
             title="⚡️ Speed round"
             variant="secondary"
             onPress={() => pushOnce('/speed')}
           />
         </View>
-
-        {atCap && !p?.isPro ? (
-          <Card className="mt-4 border-gold">
-            <Body className="font-semibold">Daily new-word limit reached</Body>
-            <Muted className="mt-1">
-              You have hit the free limit of new words for today. Reviews are still unlimited.
-              Go Pro for unlimited new words and every game mode.
-            </Muted>
-            <View className="mt-3">
-              <Button title="See Pro" variant="secondary" onPress={() => pushOnce('/paywall')} />
-            </View>
-          </Card>
-        ) : null}
 
         <Row className="mt-5 gap-3">
           <StatTile label="Due now" value={counts.data?.due ?? 0} />
