@@ -47,6 +47,7 @@ export default function RootLayout() {
               <Stack.Screen name="onboarding" />
               <Stack.Screen name="(app)" />
               <Stack.Screen name="session" options={{ presentation: 'fullScreenModal' }} />
+              <Stack.Screen name="practice" options={{ presentation: 'fullScreenModal' }} />
               <Stack.Screen name="speed" options={{ presentation: 'fullScreenModal' }} />
               <Stack.Screen name="summary" options={{ presentation: 'fullScreenModal' }} />
               <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
