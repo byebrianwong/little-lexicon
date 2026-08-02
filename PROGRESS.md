@@ -639,3 +639,96 @@ verification pass, so it is left as a separate task.
 - The interest and pace chips in onboarding render as plain views rather than
   buttons, so they expose no button role to assistive technology. Not fixed
   here; worth folding into an accessibility pass.
+
+## Removing the artificial limits
+
+The app shipped with a free/Pro split that rationed the experience: a 10 new
+words per day cap, `use_it` locked behind Pro, and a session hard-capped at the
+daily goal. None of that is wanted. Every gate is gone, and two things were
+added so "no limits" is true in practice rather than only on paper.
+
+### What was removed
+
+- `FREE_DAILY_NEW_CAP` / `PRO_DAILY_NEW_CAP` and `hitNewWordCap`. `limits.ts`
+  now exports only two fetch bounds (`NEW_WORD_FETCH_LIMIT`, `DUE_FETCH_LIMIT`).
+  Those are query bounds so a large collection does not load in full, not caps
+  on what a user may learn.
+- `PRO_ONLY_MODES` and `isModeAllowed`. `GameHost` no longer substitutes a
+  fallback mode, and `UseIt` no longer renders a paywall. Every mode is playable
+  by everyone.
+- The daily-goal cap in `buildSessionPlan`. The goal is now a target for streaks
+  and the progress ring only; a session offers every due review and every new
+  word available. Its tests were rewritten to assert the new semantics.
+- The "Daily new-word limit reached" card on Home.
+
+`profiles.is_pro` still exists and is still set server-side by the RevenueCat
+webhook. Nothing in the client reads it for gating any more.
+
+### The tier window was a hidden limiter
+
+Removing the caps was not enough. A session still came back with 6 of the 12
+demo words, because `tierWindowForLevel` fenced new words to the placement
+estimate plus or minus one tier. That is a reasonable ordering heuristic and a
+bad wall: a level-2 estimate made tier-4 words permanently unreachable.
+
+The window is now a preference, not a fence. `useSessionPlan` fetches
+in-window words first, then appends everything outside the window, deduplicated.
+Easier words still come first; nothing is excluded. A session went from 6 items
+to all 12 after this change.
+
+### Endless practice (`app/practice.tsx`)
+
+The scheduled session is bounded by what FSRS says is due, which is correct for
+retention but means it ends. Practice is the complement: shuffled rounds over
+every word in the collection, extended a round at a time, so it never runs out.
+
+Practice deliberately writes nothing. No review log, no card reschedule, no XP.
+Grading a word repeatedly in one sitting would wreck its FSRS interval and
+inflate retention, so practice keeps an in-run score instead and leaves the
+schedule alone. Verified by playing 39 answers over the 12-word corpus (three
+full passes, still running) and confirming the store held 0 review logs and 0
+state rows afterwards.
+
+The queue and mode-selection logic live in `src/features/games/practice.ts` as
+pure functions with 13 unit tests. `practiceMode` never returns a mode the word
+lacks content for, and rounds are deterministic per seed.
+
+XP is the open question here. Practice awards none, to keep levels, retention
+and the leaderboard meaningful. If practice should count toward XP, that is a
+one-line change plus a decision about what it does to the leaderboard.
+
+### Browse (`app/(app)/browse.tsx`)
+
+A new Words tab listing the whole collection, scrollable, searchable by headword
+and by meaning, with tier badges. Tapping a row expands the example sentence,
+the memory hook, and audio for both the word and the sentence. Backed by a new
+`getAllWords()` on the `Backend` interface, implemented in both backends;
+the speed round now falls back to it so it no longer dead-ends when nothing is
+due (the open item recorded above).
+
+### A bug this introduced, and the check that caught it
+
+The first version of the browse row wrapped the whole card in a `Pressable`
+with the audio buttons inside it. React Native Web renders every `Pressable` as
+a `<button>`, so that produced nested buttons: invalid HTML and a React
+hydration error. Typecheck, lint and all 90 tests passed anyway. Only reading
+the browser console surfaced it. The toggle and the audio controls are now
+siblings, verified in a clean tab with zero console errors and zero nested
+buttons.
+
+### Verification
+
+- `npx tsc --noEmit`: 0 errors.
+- `npx eslint .`: 0 errors, 0 warnings.
+- `npx jest`: 12 suites, 90 tests (was 11 and 76).
+- `npx expo export --platform web`: bundles.
+- Played in the browser: a session now offers all 12 words instead of 6,
+  practice ran 39 answers without ending, browse lists and searches all 12, and
+  the console is clean.
+
+### Note for the next phase
+
+The 12-word demo corpus is now the binding constraint. With the gates gone,
+nothing stops a user exhausting the entire collection in one sitting. Practice
+papers over it by cycling, but the real fix is content: provision Supabase and
+run the Phase 1 pipeline, which is still the largest untested area in the repo.
