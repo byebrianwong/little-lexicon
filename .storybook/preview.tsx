@@ -16,6 +16,10 @@ const metrics: Metrics = {
 
 const preview: Preview = {
   parameters: {
+    // Runs axe against every story. Chromatic needs this alongside the addon
+    // and the project's own Accessibility setting; all three are required
+    // before any violation is reported.
+    a11y: { test: 'error' },
     // The app has one dark palette; Storybook's background switcher would only
     // offer combinations that never ship.
     backgrounds: { disable: true },
