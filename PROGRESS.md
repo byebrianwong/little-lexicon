@@ -982,3 +982,119 @@ stays `PENDING`. The `Progress` story proved it. What is still untested is the
 step after that, whether a `PENDING` test actually fails this job now that
 `exitZeroOnChanges` is false. The next pull request that changes a story's
 pixels will answer it.
+
+## Story coverage for every screen
+
+Storybook went from 24 stories of design-system pieces to 138. The 114 new ones
+cover every screen a user can reach and every game mode, in the states people
+actually see: loading, empty, populated, answered right, answered wrong, free
+and Pro.
+
+### The shape of the change
+
+Each screen was split in two.
+
+- A **view** under `src/features/<area>/<Name>View.tsx` holds the layout. It
+  takes data as props and fetches nothing.
+- The **screen** under `app/` keeps the hooks, mutations, navigation and
+  dialogs, and passes data down.
+
+The JSX moved unchanged, so the app looks the same. This was the only way to
+get real state coverage: a screen that calls `useQuery` inside itself can only
+be storied by mocking TanStack Query, the backend and expo-router, and the
+result would still be one snapshot of whatever the mocks returned. A view with
+props can be rendered in six states with six lines each.
+
+Views created: `HomeView`, `BrowseView`, `StatsView`, `LeaderboardView`,
+`SettingsView`, `SessionView` (runner, loading, caught-up), `PracticeView`,
+`SpeedView`, `SummaryView`, `PaywallView`, `AuthFormView`, `GoalsView`,
+`PlacementView`.
+
+Views own transient UI state, such as the browse search text, the settings name
+box, and chip selections. That state belongs to the screen, not the server, and
+keeping it in the view makes the stories interactive.
+
+### What the stories cover
+
+- **Screens (78 stories, 13 screens).** Home, Browse, Stats, Leaderboard,
+  Settings, Session, Practice, Speed round, Summary, Paywall, Auth (sign-in and
+  sign-up), and both onboarding steps.
+- **Game components (36 stories).** All six modes plus the word introduction
+  and the shared reveal panel, each in its unanswered, correct and incorrect
+  states, with hints where a mode has one.
+
+Answered states are reached with Storybook `play` functions that click and type
+the way a user would, so they double as interaction tests. Chromatic runs them
+before it snapshots, so a broken interaction fails the build rather than
+quietly snapshotting the unanswered state.
+
+Fixture data lives in `src/stories/fixtures.ts`. Word content comes from the
+bundled demo corpus rather than a second set of invented words, and every date
+is a constant. Nothing reads the clock or a random seed, so a story only
+changes when the code changes.
+
+### Two Storybook stubs
+
+`.storybook/mocks/` stands in for the two device-effect modules:
+
+- `@/lib/audio` reaches for `expo-audio`, which needs `expo-asset`. That
+  package is not installed, and Vite cannot resolve it. The stub also keeps the
+  speech synthesizer quiet, which matters because the reveal panel speaks the
+  word on mount and Chromatic would otherwise start a synthesizer per snapshot.
+- `expo-haptics` resolves to `expo-modules-core`, which ships TypeScript source
+  that re-exports types as values. Vite cannot transform that. Nothing is lost:
+  `feedback.ts` already returns early on web.
+
+Neither module has any UI, so neither is worth snapshotting.
+
+### Three bugs the stories found
+
+**Relation-match options had no role.** The synonym and antonym rows were
+plain `Pressable`s with no `accessibilityRole`, so a screen reader read five
+words with no hint that they could be tapped or that any were selected. They
+now carry `accessibilityRole="button"` and `accessibilityState.selected`. The
+settings and onboarding chips had the same gap and got the same fix.
+
+**The sound switch had no name.** axe reported it as a critical violation: an
+`<input role="switch">` with nothing to announce. The heading beside it is not
+attached to the control. It now has an `accessibilityLabel`.
+
+**The settings name box stayed empty.** `useState(p?.displayName ?? '')` ran
+before the profile query resolved, and never re-ran, so the field was blank
+even after the name loaded. The container now renders a loading state until the
+profile exists, and the view mounts with the name already in hand.
+
+### Accessibility findings left alone
+
+These are real, they predate this change, and fixing them is a design decision
+rather than a bug fix:
+
+- **Button contrast**, already recorded above: white text on the primary,
+  danger and success colours is between 1.90:1 and 3.07:1, under the 4.5:1 WCAG
+  AA asks for. The new stories report it on every screen with a button, because
+  it is a palette problem, not a screen problem. Fixing it is the same design
+  decision it was then.
+- **Locked achievement cards.** The card is dimmed to 60% opacity, which takes
+  the muted description text under the contrast threshold.
+- **`scrollable-region-focusable` on the tall screens.** React Native Web
+  renders `ScrollView` as a scrollable div with no `tabindex`, so a keyboard
+  user cannot scroll it. It affects Stats and Leaderboard. Web is the companion
+  surface here, so this is worth fixing but is not urgent.
+
+### Not covered
+
+- `app/(app)/_layout.tsx`, the tab bar. It is an expo-router `Tabs` component,
+  and rendering it in Storybook needs a router mock.
+- `app/index.tsx`, which is a spinner plus a redirect.
+- Session logic: which mode the ladder picks, what gets committed, how the
+  queue advances. That is in `app/session.tsx` and is covered by unit tests,
+  not stories.
+
+### Verified
+
+`tsc --noEmit`, lint and the 90 unit tests pass. Storybook builds, and all 138
+stories were loaded in both the dev server and the built output with no render
+errors. The app itself was run on web (full export, served, clicked through
+onboarding, home, practice, browse, stats, leaderboard and settings) and on the
+iOS simulator through Expo Go (placement, goals, home, practice). No Android
+SDK is installed on this machine, so the Android emulator was not run.

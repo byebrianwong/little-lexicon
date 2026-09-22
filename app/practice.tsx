@@ -6,11 +6,8 @@
 // retention. Practice keeps a score for the current run instead.
 
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQuery } from '@tanstack/react-query';
-import { Button, H2, Muted, Row } from '@/components/ui';
 import type { GameOutcome } from '@/srs/srs';
 import type { SessionItem } from '@/lib/types';
 import { backend } from '@/lib/backend';
@@ -19,6 +16,7 @@ import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 import { GameProvider } from '@/features/games/GameContext';
 import { GameHost } from '@/features/games/GameHost';
 import { buildPracticeRound, practiceMode } from '@/features/games/practice';
+import { PracticeEmpty, PracticeLoading, PracticeRunner } from '@/features/games/PracticeView';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 
 export default function PracticeScreen() {
@@ -78,91 +76,33 @@ export default function PracticeScreen() {
     [index, queue.length],
   );
 
-  if (words.isLoading || profileQuery.isLoading) {
-    return (
-      <Center>
-        <ActivityIndicator color="#6C8CFF" size="large" />
-      </Center>
-    );
-  }
+  if (words.isLoading || profileQuery.isLoading) return <PracticeLoading />;
 
   const profile = profileQuery.data;
 
   if (!profile || (words.data ?? []).length === 0) {
-    return (
-      <Center>
-        <View className="items-center px-8">
-          <Text className="text-5xl">📚</Text>
-          <H2 className="mt-4 text-center">No words yet</H2>
-          <Muted className="mt-2 text-center">
-            Practice draws from your whole collection. Once the collection has words, this
-            never runs out.
-          </Muted>
-          <View className="mt-6 w-full">
-            <Button title="Back" onPress={() => router.replace('/(app)')} />
-          </View>
-        </View>
-      </Center>
-    );
+    return <PracticeEmpty onBack={() => router.replace('/(app)')} />;
   }
 
-  if (!current || !mode) {
-    return (
-      <Center>
-        <ActivityIndicator color="#6C8CFF" size="large" />
-      </Center>
-    );
-  }
+  if (!current || !mode) return <PracticeLoading />;
 
   const { answered, correct } = score.current;
-  const accuracy = answered > 0 ? Math.round((correct / answered) * 100) : 0;
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
-      <View className="px-5 pt-2">
-        <Row className="items-center gap-3">
-          <Pressable
-            accessibilityLabel="Close practice"
-            onPress={() => router.replace('/(app)')}
-            className="h-9 w-9 items-center justify-center rounded-full bg-surface2"
-          >
-            <Text className="text-text text-lg">✕</Text>
-          </Pressable>
-          <View className="flex-1">
-            <Muted>{`Practice · ${answered} answered`}</Muted>
-          </View>
-          <Muted>{answered > 0 ? `${accuracy}%` : '—'}</Muted>
-        </Row>
-      </View>
-
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{
-          paddingHorizontal: 20,
-          paddingTop: 24,
-          paddingBottom: 32,
-          flexGrow: 1,
-        }}
-        keyboardShouldPersistTaps="handled"
-      >
-        <GameProvider value={{ pool, profile }}>
-          <GameHost
-            key={`${current.content.wordId}-${index}`}
-            item={current}
-            mode={mode}
-            onOutcome={onOutcome}
-            soundEnabled={soundEnabled}
-          />
-        </GameProvider>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-function Center({ children }: { children: React.ReactNode }) {
-  return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-bg">
-      <View className="flex-1 w-full items-center justify-center">{children}</View>
-    </SafeAreaView>
+    <PracticeRunner
+      answered={answered}
+      correct={correct}
+      onClose={() => router.replace('/(app)')}
+    >
+      <GameProvider value={{ pool, profile }}>
+        <GameHost
+          key={`${current.content.wordId}-${index}`}
+          item={current}
+          mode={mode}
+          onOutcome={onOutcome}
+          soundEnabled={soundEnabled}
+        />
+      </GameProvider>
+    </PracticeRunner>
   );
 }
