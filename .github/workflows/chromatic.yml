@@ -1,0 +1,41 @@
+# Publishes Storybook to Chromatic and compares each story against its
+# baseline. Turn this on by setting the repository variable
+# CHROMATIC_ENABLED to "true" and adding the CHROMATIC_PROJECT_TOKEN secret.
+# Until then the job is skipped, so the workflow is safe to merge early.
+name: Chromatic
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  chromatic:
+    name: Visual tests
+    # A pull request from a fork cannot read repository secrets, so the job
+    # would fail on a token it never receives.
+    if: >-
+      vars.CHROMATIC_ENABLED == 'true' &&
+      (github.event_name == 'push' ||
+       github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Chromatic picks a baseline from git history. A shallow clone leaves
+          # it with nothing to compare against, so every story reads as new.
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Publish to Chromatic
+        uses: chromaui/action@v18.9.4
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # Only snapshot stories whose code actually changed.
+          onlyChanged: true
+          # A visual change should not block the PR; a human accepts or rejects
+          # it in the Chromatic UI. Remove this to make diffs blocking.
+          exitZeroOnChanges: true
