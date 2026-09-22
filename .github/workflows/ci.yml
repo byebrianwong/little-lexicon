@@ -7,7 +7,7 @@ on:
 
 jobs:
   app:
-    name: App (typecheck, lint, test, storybook)
+    name: App (typecheck, lint, test)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

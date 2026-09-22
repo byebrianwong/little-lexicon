@@ -819,3 +819,17 @@ ESLint does not read `.gitignore`, so running `npm run lint` after
 `npm run build-storybook` reported about 16,000 problems in the generated
 bundle. CI never hit this because lint runs before the build, but anyone
 building locally would have. The ignore is in `eslint.config.js`.
+
+### A merge gate this broke, and the fix
+
+Renaming the CI job to `App (typecheck, lint, test, storybook)` silently broke
+the merge gate on `main`. The branch is protected by a repository **ruleset**
+(not classic branch protection, which is why a `branches/main/protection` check
+returns 404 and looks unprotected), and that ruleset requires a status check
+named `App (typecheck, lint, test)`. A renamed job never reports under the old
+name, so the pull request sat at `mergeStateStatus: BLOCKED` with every visible
+check green and nothing explaining why.
+
+The job name is back to the original. The Storybook build still runs as a step
+inside it. If the name is ever worth changing, the ruleset's required check has
+to change in the same breath.
