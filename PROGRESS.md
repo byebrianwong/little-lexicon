@@ -887,3 +887,52 @@ immediately, with nobody accepting it. No auto-accept setting is exposed on the
 Chromatic API, so the cause could not be determined from here. Worth looking at
 in the project's settings: if changes accept themselves, no human ever reviews
 a diff, which defeats the point of having the checks.
+
+## The heatmap accessibility bug, and what auto-accept actually means
+
+### One line, 171 violations
+
+The heatmap's day cells carried `accessibilityLabel` on a bare `View`. React
+Native Web renders a `View` as a `<div>` and turns `accessibilityLabel` into
+`aria-label`, which ARIA prohibits on an element with no role. So axe reported
+`aria-prohibited-attr` once per cell: 84 on Twelve Weeks, 31 on Partial Week,
+28 each on Four Weeks and No Activity. 171 of the project's 186 reported
+violations came from that single line.
+
+The cells now declare `accessibilityRole="image"`, which is what a cell is: one
+day's activity, conveyed visually. After the fix, `aria-prohibited-attr` is
+zero across the whole build, and the four heatmap stories report 171 resolved
+violations with no pixel change.
+
+This is a web-surface bug only. On native, `accessibilityLabel` on a `View` is
+correct.
+
+### Auto-accept was not a broken review gate
+
+Earlier builds showed every visual change marked `ACCEPTED` within seconds with
+nobody accepting, which looked like the review gate was switched off. It was
+not. A deliberate test build with two new stories and one changed story
+returned all three as `PENDING`, correctly awaiting a person.
+
+There are three ways a test reads `ACCEPTED` without a human:
+
+- **The capture set changed.** Enabling accessibility takes a story from one
+  capture to three, so every story differs from a baseline taken at one
+  capture, and all of them auto-accept. That is what happened when
+  accessibility was turned on.
+- **A violation was resolved.** A test whose pixels are `EQUAL` but whose
+  accessibility comparison reports removed violations auto-accepts. An
+  improvement does not need approval to become the baseline. That is what the
+  four heatmap stories do in this change.
+- **A real visual change**, which does not auto-accept.
+
+Read `status` and `result` together. `ACCEPTED` beside `EQUAL` is routine.
+`ACCEPTED` beside `CHANGED`, on a build whose capture set did not move, is the
+one worth investigating.
+
+### Also here
+
+Two stories for states nothing covered: the `Screen` chrome, and an option
+label long enough to wrap. The `Progress` story now shows each bar's percentage
+beside it, which is a real visual change to an existing snapshot and is the
+change that proved the review gate still works.

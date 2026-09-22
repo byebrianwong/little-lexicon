@@ -54,3 +54,13 @@ export const AnsweredIncorrectly: Story = {
     </View>
   ),
 };
+
+// Definitions are not all short. This is the wrapping case, which the fixed
+// row height in the other stories never shows.
+export const LongLabel: Story = {
+  args: {
+    label:
+      'occurring at irregular intervals and without any discernible pattern, ' +
+      'especially in a way that frustrates prediction',
+  },
+};

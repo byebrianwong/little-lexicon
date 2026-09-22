@@ -26,6 +26,12 @@ export function Heatmap({ days }: { days: DailyStats[] }) {
             {week.map((d) => (
               <View
                 key={d.day}
+                // The label needs a role to go with it. React Native Web renders
+                // a plain View as a <div> and turns accessibilityLabel into
+                // aria-label, which ARIA prohibits on an element with no role,
+                // so every cell reported aria-prohibited-attr. "image" is the
+                // honest description: each cell conveys one day's activity.
+                accessibilityRole="image"
                 accessibilityLabel={`${d.day}: ${d.reviewsDone} reviews`}
                 style={{
                   width: 12,
