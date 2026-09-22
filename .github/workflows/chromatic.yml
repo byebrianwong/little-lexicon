@@ -36,6 +36,8 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # Only snapshot stories whose code actually changed.
           onlyChanged: true
-          # A visual change should not block the PR; a human accepts or rejects
-          # it in the Chromatic UI. Remove this to make diffs blocking.
-          exitZeroOnChanges: true
+          # An unreviewed visual change fails this job. "Visual tests" is a
+          # required check on main, so the pull request cannot merge until
+          # someone accepts or denies the diff in the Chromatic UI. Re-run the
+          # job after accepting to turn it green.
+          exitZeroOnChanges: false
