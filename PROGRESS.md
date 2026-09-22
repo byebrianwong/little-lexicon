@@ -732,3 +732,90 @@ The 12-word demo corpus is now the binding constraint. With the gates gone,
 nothing stops a user exhausting the entire collection in one sitting. Practice
 papers over it by cycling, but the real fix is content: provision Supabase and
 run the Phase 1 pipeline, which is still the largest untested area in the repo.
+
+## Storybook and Chromatic
+
+Added a Storybook build so the UI components can be reviewed in isolation, and
+wired it to Chromatic for visual regression testing.
+
+### What was built
+
+- `.storybook/main.ts` and `.storybook/preview.tsx`, using the
+  `@storybook/react-native-web-vite` framework. The components run in a browser
+  through `react-native-web`, bundled by Vite.
+- Stories for the design system and two feature components: `UI/Button`,
+  `UI/Primitives`, `Games/OptionButton`, `Stats/Heatmap`. 22 stories total.
+- `npm run storybook`, `npm run build-storybook`, and `npm run chromatic`.
+- `.github/workflows/chromatic.yml`, plus a `build-storybook` step added to the
+  existing CI job.
+
+### Decisions
+
+**Two bundlers, on purpose.** The app still builds with Metro. Storybook uses
+Vite, because that is what the Storybook React Native framework supports and
+what Chromatic expects. Nothing in the Metro pipeline changed.
+
+**PostCSS is configured inline in `main.ts`, not in a root
+`postcss.config.js`.** Expo's Metro web build reads a root PostCSS config, so a
+file there would run Tailwind twice: once through NativeWind's Metro
+transformer and once through PostCSS. Keeping the config inside the Storybook
+config leaves the app build untouched.
+
+**NativeWind needs `jsxImportSource: 'nativewind'`.** Without it the JSX
+transform drops every `className`, and the stories render unstyled. This was
+verified visually, not just by the build passing.
+
+**Safe-area insets are pinned in the preview decorator.** On web,
+`react-native-safe-area-context` reports no insets, and on a device it reports
+real ones. Chromatic compares images, so a story whose size depends on the
+environment would report a diff on every run. The decorator supplies a fixed
+390x844 frame with zero insets.
+
+**Heatmap story data is fixed, not generated.** It starts from a hardcoded date
+(5 January 2026) and cycles a fixed array of review counts. Deriving the dates
+from `new Date()` would make the snapshot change daily.
+
+**The Chromatic workflow is gated on a repository variable.** It runs only when
+`CHROMATIC_ENABLED` is `"true"`, so the file could be merged before the project
+token exists without turning CI red. It also skips pull requests from forks,
+which cannot read repository secrets.
+
+### Stories cover only presentational components
+
+`ui.tsx`, `OptionButton` and `Heatmap` import nothing but `react-native` and
+types. The game components one level up (`Reveal`, `WordIntro`, `GameHost`)
+pull in `@/lib/audio` and `@/lib/backend`, so they need mocks before they can be
+storied. That is deliberate scope, not an oversight.
+
+### Verification
+
+- `npx tsc --noEmit`: 0 errors.
+- `npx eslint .`: 0 errors, 0 warnings.
+- `npx jest`: 12 suites, 90 tests, all passing. Jest does not pick up
+  `.stories.tsx`.
+- `npm run build-storybook`: succeeds, all 4 story files compiled.
+- Served the static build and checked three stories in a browser. NativeWind
+  styling renders correctly: the palette from `tailwind.config.js`, card
+  borders, pill tones, and heatmap shades all match the app.
+
+### The Chromatic project is connected
+
+Project `little-lexicon`, id `Project:6ab197588c58110371860309`, in the
+`byebrianwong` Chromatic account and linked to the GitHub repository, so
+Chromatic reports results on pull requests. Build 1 published 22 snapshots and
+was auto-accepted, which makes it the baseline. The id is committed in
+`chromatic.config.json`; the project token is not in the repository, it is the
+`CHROMATIC_PROJECT_TOKEN` GitHub secret. The `CHROMATIC_ENABLED` repository
+variable is set to `true`, so the workflow is live.
+
+Baseline build 1 was recorded on the branch this work was done on rather than
+on `main`. Chromatic follows git ancestry, so the first build on `main` finds
+it.
+
+### One thing to watch
+
+ESLint had to be told to ignore `storybook-static/`. It is git-ignored, but
+ESLint does not read `.gitignore`, so running `npm run lint` after
+`npm run build-storybook` reported about 16,000 problems in the generated
+bundle. CI never hit this because lint runs before the build, but anyone
+building locally would have. The ignore is in `eslint.config.js`.

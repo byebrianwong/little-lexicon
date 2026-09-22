@@ -11,6 +11,7 @@ module.exports = defineConfig([
       'pipeline/*',
       'supabase/functions/*',
       '.expo/*',
+      'storybook-static/*',
       'src/lib/database.types.ts',
     ],
   },
