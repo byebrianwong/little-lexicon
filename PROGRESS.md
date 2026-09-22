@@ -833,3 +833,57 @@ check green and nothing explaining why.
 The job name is back to the original. The Storybook build still runs as a step
 inside it. If the name is ever worth changing, the ruleset's required check has
 to change in the same breath.
+
+## Accessibility testing turned on
+
+Storybook now runs axe against every story, and Chromatic reports the results.
+
+### What it took
+
+Three things, all required, and the missing one is silent:
+
+1. `@storybook/addon-a11y` in `package.json` and listed in `.storybook/main.ts`.
+2. `parameters.a11y` in `.storybook/preview.tsx`.
+3. **Accessibility tests enabled on the project's Manage page in the Chromatic
+   web app.** This one is not readable or settable through the API, and without
+   it a build returns no accessibility comparisons at all. That reads as a clean
+   result and is not one.
+
+Verified the hard way: a build with the addon installed and the parameter set,
+but the project switch off, returned zero accessibility comparisons on all 22
+tests while correctly detecting 8 visual changes in the same build.
+
+### Two consequences worth expecting
+
+**The first build reports nothing.** Chromatic's accessibility model is a diff,
+so the first build after switching it on has no accessibility baseline: every
+comparison comes back `ADDED` with a null diff and no rule data anywhere. Rule
+data appears on the second build. The build published from this branch is that
+first one.
+
+**Every story reads as changed, once.** Enabling accessibility raises the
+capture count from 22 to 66, three per story instead of one. Against a baseline
+taken with one capture per story, all 22 stories report a visual change. They
+are not visual regressions.
+
+### The violations it finds are real
+
+A build with a baseline in place reported 13 standing violations across 6
+stories. Three were confirmed by computing the contrast ratios directly:
+white text on the primary button is 3.07:1, on danger 2.78:1, and on success
+1.90:1, against the 4.5:1 that WCAG AA asks for normal text. The colours are in
+`tailwind.config.js`, so this affects the app, not only the stories. The
+`Loading` state also has no accessible name, because the spinner replaces the
+label with nothing a screen reader can read.
+
+None of that is fixed here. This change makes the problems visible; fixing them
+is a separate piece of work and a real design decision, since the button colours
+are the app's palette.
+
+### Something to check
+
+Every visual change on the build from this branch was marked `ACCEPTED`
+immediately, with nobody accepting it. No auto-accept setting is exposed on the
+Chromatic API, so the cause could not be determined from here. Worth looking at
+in the project's settings: if changes accept themselves, no human ever reviews
+a diff, which defeats the point of having the checks.

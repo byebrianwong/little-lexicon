@@ -12,7 +12,10 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(ts|tsx)'],
-  addons: [],
+  // Chromatic reads accessibility results from this addon. Without it a build
+  // reports no accessibility comparisons at all, which is not the same as a
+  // clean result and is easy to misread as one.
+  addons: ['@storybook/addon-a11y'],
   framework: {
     name: '@storybook/react-native-web-vite',
     options: {
