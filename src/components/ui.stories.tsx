@@ -10,6 +10,7 @@ import {
   Pill,
   ProgressBar,
   Row,
+  Screen,
   Spacer,
 } from './ui';
 
@@ -77,16 +78,23 @@ export const Cards: Story = {
 export const Progress: Story = {
   render: () => (
     <View style={{ gap: 12 }}>
-      <Muted>Empty</Muted>
-      <ProgressBar fraction={0} />
-      <Muted>Part way</Muted>
-      <ProgressBar fraction={0.35} />
-      <Muted>Nearly done</Muted>
-      <ProgressBar fraction={0.9} />
-      <Muted>Complete</Muted>
-      <ProgressBar fraction={1} />
-      <Muted>Out of range values are clamped</Muted>
-      <ProgressBar fraction={1.8} />
+      {(
+        [
+          ['Empty', 0],
+          ['Part way', 0.35],
+          ['Nearly done', 0.9],
+          ['Complete', 1],
+          ['Out of range values are clamped', 1.8],
+        ] as const
+      ).map(([label, fraction]) => (
+        <View key={label} style={{ gap: 6 }}>
+          <Row className="justify-between">
+            <Muted>{label}</Muted>
+            <Muted>{Math.round(Math.min(1, Math.max(0, fraction)) * 100)}%</Muted>
+          </Row>
+          <ProgressBar fraction={fraction} />
+        </View>
+      ))}
     </View>
   ),
 };
@@ -103,5 +111,27 @@ export const Layout: Story = {
       <Spacer h={32} />
       <Body>32 points lower.</Body>
     </View>
+  ),
+};
+
+// The screen chrome itself: safe-area padding and the page background, which
+// nothing else in this file exercises.
+export const ScreenChrome: Story = {
+  decorators: [
+    (Story) => (
+      <View style={{ width: 340, height: 420 }}>
+        <Story />
+      </View>
+    ),
+  ],
+  render: () => (
+    <Screen>
+      <Spacer h={16} />
+      <H1>Session complete</H1>
+      <Spacer h={8} />
+      <Muted>12 words reviewed</Muted>
+      <Divider />
+      <Body>The screen supplies the background and the safe-area inset.</Body>
+    </Screen>
   ),
 };
