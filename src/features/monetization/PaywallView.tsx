@@ -5,11 +5,14 @@ import { View } from 'react-native';
 import { Body, Button, Card, Divider, H1, H2, Muted, Row, Screen, Spacer } from '@/components/ui';
 import type { PurchasesPackage } from '@/lib/purchases';
 
+// Pro covers the two features that call Claude at runtime, because each call
+// costs money per use. Nothing about playing is gated: every game mode, every
+// word and unlimited sessions are free. The list used to promise "unlimited new
+// words every day", which is no longer something Pro unlocks.
 const BENEFITS = [
-  'Unlimited new words every day',
-  'Every game mode, including write-your-own with instant feedback',
+  'Instant feedback on the sentences you write',
   'Personalized examples and memory hooks tuned to your interests',
-  'Advanced stats and offline audio',
+  'Supports the app and the words added to it',
 ];
 
 export interface PaywallViewProps {
@@ -42,7 +45,15 @@ export function PaywallView({
     <Screen scroll>
       <Spacer h={16} />
       <H1>Little Lexicon Pro</H1>
-      <Muted className="mt-2">Go further, faster. Cancel anytime.</Muted>
+      <Muted className="mt-2">Cancel anytime.</Muted>
+
+      <Card className="mt-4">
+        <Body className="font-semibold">Playing is free and unlimited</Body>
+        <Muted className="mt-1">
+          Every game mode, every word and as many sessions a day as you like are free. Pro adds
+          the two features that use AI, which cost money each time they run.
+        </Muted>
+      </Card>
 
       <Card className="mt-5">
         {BENEFITS.map((b, i) => (

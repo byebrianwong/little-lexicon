@@ -23,7 +23,7 @@ export function SummaryView({ summary, onDone, onAnother }: SummaryViewProps) {
         <Muted className="mt-2">
           {summary.goalMet
             ? `Streak is now ${summary.streakCount} day${summary.streakCount === 1 ? '' : 's'}.`
-            : 'Every review counts. Come back to hit your goal.'}
+            : 'Every review counts. Keep going whenever you have the time.'}
         </Muted>
       </View>
 
@@ -35,7 +35,7 @@ export function SummaryView({ summary, onDone, onAnother }: SummaryViewProps) {
 
       {summary.newWords > 0 ? (
         <Card className="mt-4">
-          <Body>{`You learned ${summary.newWords} new word${summary.newWords === 1 ? '' : 's'} today.`}</Body>
+          <Body>{`You learned ${summary.newWords} new word${summary.newWords === 1 ? '' : 's'} in that session.`}</Body>
         </Card>
       ) : null}
 
@@ -62,7 +62,7 @@ export function SummaryView({ summary, onDone, onAnother }: SummaryViewProps) {
       <Spacer h={28} />
       <Button title="Done" onPress={onDone} />
       <Spacer h={10} />
-      <Button title="Another session" variant="secondary" onPress={onAnother} />
+      <Button title="Keep going" variant="secondary" onPress={onAnother} />
     </Screen>
   );
 }
