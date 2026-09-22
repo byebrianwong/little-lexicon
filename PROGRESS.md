@@ -936,3 +936,49 @@ Two stories for states nothing covered: the `Screen` chrome, and an option
 label long enough to wrap. The `Progress` story now shows each bar's percentage
 beside it, which is a real visual change to an existing snapshot and is the
 change that proved the review gate still works.
+
+## Branch protection on `main`
+
+A repository ruleset named `main` now guards the default branch. It blocks
+deletions and force pushes, requires a pull request (zero approvals, so you can
+merge your own), and requires three status checks:
+
+- `App (typecheck, lint, test)`
+- `Content pipeline (typecheck, dry-run)`
+- `Visual tests`
+
+Repository admins can bypass the ruleset. That is per-ruleset, not per-rule, so
+the force-push and deletion guards bind tokens, Actions and collaborators, but
+not the owner. Splitting those two rules into a second ruleset with no bypass
+actors would make them bind everyone.
+
+GitHub turned on `require_extra_approval_for_unattributed_changes` by default
+when the ruleset was created. It was set back to false. On a single-owner repo
+it can demand one approval on any pull request holding commits not attributed to
+the author, which the `Co-Authored-By` trailers here would trigger, and you
+cannot approve your own pull request.
+
+### Visual diffs now block
+
+`exitZeroOnChanges` in `.github/workflows/chromatic.yml` went from true to
+false, so an unreviewed visual change fails the `Visual tests` job, and the
+required check holds the merge until someone accepts or denies the diff.
+
+Two things about this are unverified:
+
+**Fork pull requests.** The `chromatic` job is skipped on pull requests from
+forks, because a fork cannot read `CHROMATIC_PROJECT_TOKEN`. A skipped Actions
+job posts a check run with conclusion `skipped`, which GitHub is expected to
+count as passing for a required check, but that has not been tested here with a
+real fork pull request. If it does not, fork pull requests will stall at
+"Expected, waiting for status". The Chromatic app's own `UI Tests` commit status
+is deliberately not required for the same reason: on a fork it is never posted
+at all, so it would stall for certain.
+
+**Whether a real diff reaches the job.** The auto-accept worry recorded earlier
+turned out to be unfounded, and the section above explains why: a capture-set
+change and a resolved violation both auto-accept, while a genuine visual change
+stays `PENDING`. The `Progress` story proved it. What is still untested is the
+step after that, whether a `PENDING` test actually fails this job now that
+`exitZeroOnChanges` is false. The next pull request that changes a story's
+pixels will answer it.
