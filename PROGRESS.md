@@ -982,3 +982,109 @@ stays `PENDING`. The `Progress` story proved it. What is still untested is the
 step after that, whether a `PENDING` test actually fails this job now that
 `exitZeroOnChanges` is false. The next pull request that changes a story's
 pixels will answer it.
+
+## Sessions that do not end
+
+The caps were removed earlier (see "Limit removal, browse and endless
+practice"), but the app still felt like a once-a-day thing. The reason was the
+shape of a session, not a limit: the queue was built once, and answering the
+last item ended the session and pushed the user to the summary. Carrying on
+meant backing out and starting again. Some screens still said so in as many
+words.
+
+### What changed
+
+**The queue refills while you play.** `src/features/review/continuation.ts` is
+the new pure module. `shouldRefill` decides when the play head is close enough
+to the end to fetch more (five items). `buildRefill` merges the fetched page
+onto the running queue, dropping anything already there and interleaving new
+words among the due cards the way the opening plan does. The session screen
+calls the backend; the module does the deciding and is unit tested (13 tests in
+`continuation.test.ts`).
+
+**Refills only serve schedulable material.** This is the constraint that shapes
+the design. A session writes FSRS reviews, so it may only serve cards that are
+due and words never seen. Replaying a word answered minutes earlier would wreck
+its interval and inflate retention, which is why practice never writes to the
+schedule. `buildRefill` therefore matches against the *whole* queue including
+answered items, not just the unanswered tail, so a word cannot be graded twice
+in one session.
+
+**Running dry offers practice instead of stopping.** When a refill returns
+nothing the screen shows a panel with "Keep going in practice" and "Finish and
+see summary". The forced jump to the summary is gone.
+
+**Closing the session now finishes it.** Because the queue no longer runs out,
+the close button is the normal way to end a session, so it runs the wrap-up the
+old end-of-queue path did: the session row, streak reconciliation and
+achievements. Leaving without answering anything still just goes home. Before
+this change, closing a session skipped the streak and achievements entirely.
+
+**The progress bar shows the daily goal.** A bar filling toward the end of the
+queue is meaningless when the queue grows, and it would appear to slide
+backwards on every refill. The header now shows the daily goal, which is a real
+target the session is free to run past, plus an "N done" count.
+
+**Copy.** The session empty state said "today's new words are done. Come back
+later or raise your daily goal in settings", which described a cap that no
+longer exists. The summary said "Come back to hit your goal" and "Another
+session". Both now say the session can continue.
+
+**Page sizes.** `src/features/monetization/limits.ts` is gone, and with it the
+last file from the free/Pro system. It is replaced by
+`src/features/review/pageSizes.ts`, whose two constants are opening page sizes,
+not caps: refills continue past them, so one sitting can reach the whole
+collection.
+
+### The paywall was advertising limits that no longer exist
+
+`app/paywall.tsx` still listed "Unlimited new words every day" and "Every game
+mode" as things Pro unlocks. Both have been free for everyone since the limits
+were removed, so a free user reading it would reasonably conclude they were
+capped. The benefit list now names only what Pro actually gates, and the screen
+opens by saying that playing is free and unlimited.
+
+What Pro still gates is real and deliberate: the two Edge Functions that call
+Claude at runtime (`little-lexicon-evaluate-sentence` and
+`little-lexicon-generate-personalized`) check `profiles.is_pro` with a
+service-role client and return 403 otherwise. They cost money per call, and
+CLAUDE.md requires runtime paid calls be gated. That gate was left alone. The
+write-your-own game mode is playable without Pro; only the AI feedback degrades,
+with "Evaluation is unavailable right now".
+
+**Open question for Brian:** with play fully unlimited, Pro now rests on two AI
+features. Whether that is enough to sell, and whether the "Free" label in
+settings still makes sense, is a product call that was not made here.
+
+### Verified
+
+Run in demo mode on web (`npx expo start --web`, no `.env`, so the bundled
+14-word corpus). Onboarding with a 10/day goal, then:
+
+- A session ran to 13 answers in one sitting, straight past the goal of 10. The
+  goal bar filled at 10 and the session carried on without interrupting.
+- At the end of the material the run-dry panel appeared instead of the summary,
+  and "Keep going in practice" started practice immediately.
+- Closing a session after one answer produced the summary with the streak set to
+  1 day and two achievements unlocked, confirming the wrap-up now runs on close.
+- The refill was confirmed by temporarily setting the opening pages and the
+  refill page to 3. With three due cards fetched and no unseen words left, the
+  session continued to a fourth and fifth item, which can only come from a
+  refill. The real values were restored afterwards.
+
+`tsc --noEmit`, `eslint .` and `jest` all pass (103 tests, 13 suites). The one
+console error seen while testing is a pre-existing NativeWind dark-mode warning,
+not from this work.
+
+Note: `node_modules` was incomplete at the start of this task (`expo-updates` and
+`@storybook/react-native-web-vite` were missing, which broke the typecheck and
+one test suite). A plain `npm install` fixed it; no dependency was added or
+changed.
+
+### Not done
+
+`REFILL_PAGE` is 40 and `REFILL_LOOKAHEAD` is 5. Those were not tuned against a
+real Supabase collection, only against the 14-word demo corpus. On a slow
+connection a refill could in principle arrive after the user reaches the end of
+the queue, in which case they would see the run-dry panel for a moment. Raising
+the lookahead is the fix if that shows up.
