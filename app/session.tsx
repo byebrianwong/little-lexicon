@@ -1,4 +1,15 @@
-import { useCallback, useMemo, useRef, useState } from 'react';
+// The scheduled session.
+//
+// The session does not end on its own. Its queue refills from the server as the
+// user works through it, so one sitting can cover as many words as they have
+// the energy for. The user ends the session by closing it; the only other stop
+// is running out of schedulable material, and that offers practice rather than
+// a dead end.
+//
+// See features/review/continuation.ts for why a session refills only with due
+// cards and unseen words, and never replays a word it already graded.
+
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -7,6 +18,8 @@ import { Button, H2, Muted, ProgressBar, Row } from '@/components/ui';
 import type { GameModeId, SessionItem } from '@/lib/types';
 import type { GameOutcome } from '@/srs/srs';
 import { useProfile, useSessionPlan } from '@/features/review/queries';
+import { useTodayStats } from '@/features/stats/queries';
+import { buildRefill, shouldRefill, REFILL_PAGE } from '@/features/review/continuation';
 import { backend } from '@/lib/backend';
 import { submitReview } from '@/features/review/submitReview';
 import { enqueueReview } from '@/features/offline/reviewQueue';
@@ -33,6 +46,7 @@ interface Totals {
 export default function SessionScreen() {
   const profileQuery = useProfile();
   const planQuery = useSessionPlan(profileQuery.data);
+  const todayQuery = useTodayStats();
   const soundEnabled = useSettingsStore((s) => s.soundEnabled);
   const setSummary = useSessionResult((s) => s.setSummary);
   const qc = useQueryClient();
@@ -40,6 +54,14 @@ export default function SessionScreen() {
   const [index, setIndex] = useState(0);
   const [introduced, setIntroduced] = useState<Set<number>>(new Set());
   const [submitting, setSubmitting] = useState(false);
+  // The queue grows as the session runs, so it is state rather than a view of
+  // the opening plan. `ranDry` means a refill came back empty: everything
+  // schedulable is done, and the only way to carry on is practice.
+  const [items, setItems] = useState<SessionItem[]>([]);
+  const [ranDry, setRanDry] = useState(false);
+  const seeded = useRef(false);
+  const refilling = useRef(false);
+  const exhausted = useRef(false);
   const totals = useRef<Totals>({
     reviewed: 0,
     correct: 0,
@@ -51,11 +73,22 @@ export default function SessionScreen() {
   const sessionId = useRef<string | null>(null);
   const finishing = useRef(false);
 
-  const items = useMemo(() => planQuery.data?.items ?? [], [planQuery.data]);
+  // Seed the queue from the opening plan, once. After this the plan query is
+  // no longer the source of truth; refills append to `items` directly.
+  useEffect(() => {
+    if (seeded.current || !planQuery.data) return;
+    seeded.current = true;
+    setItems(planQuery.data.items);
+  }, [planQuery.data]);
+
+  // Read the live queue from inside async callbacks without re-creating them.
+  const itemsRef = useRef<SessionItem[]>([]);
+  itemsRef.current = items;
+
   const pool = useMemo(() => buildOptionPool(items), [items]);
   const profile = profileQuery.data;
 
-  // Start the session row once when a plan is ready.
+  // Start the session row once there is something to play.
   if (planQuery.data && sessionId.current === null && items.length > 0) {
     sessionId.current = 'pending';
     backend
@@ -77,6 +110,40 @@ export default function SessionScreen() {
     });
     return chosen;
   }, [current, profile]);
+
+  /**
+   * Pull another page and append whatever is genuinely new. Returns how many
+   * items were added, so the caller can tell "more to play" from "run dry".
+   *
+   * `force` retries even after a previous refill came back empty. Cards in a
+   * learning step fall due again within minutes, so an exhausted session can
+   * legitimately have material again a little later.
+   */
+  const refill = useCallback(async (force = false): Promise<number> => {
+    if (refilling.current) return 0;
+    if (exhausted.current && !force) return 0;
+    refilling.current = true;
+    try {
+      const [due, fresh] = await Promise.all([
+        backend.getDueQueue(REFILL_PAGE),
+        backend.getNewWords(REFILL_PAGE),
+      ]);
+      const chunk = buildRefill({ queue: itemsRef.current, due, newWords: fresh });
+      if (chunk.length === 0) {
+        exhausted.current = true;
+        return 0;
+      }
+      exhausted.current = false;
+      setItems((prev) => [...prev, ...chunk]);
+      return chunk.length;
+    } catch {
+      // Offline or a failed fetch is not the same as having run out, so the
+      // exhausted flag is left alone and the next attempt can still succeed.
+      return 0;
+    } finally {
+      refilling.current = false;
+    }
+  }, []);
 
   const finish = useCallback(
     async (t: Totals) => {
@@ -156,6 +223,19 @@ export default function SessionScreen() {
     [profile, qc, setSummary],
   );
 
+  /**
+   * Closing the session is now the normal way to end one, so it has to run the
+   * same wrap-up the old end-of-queue path did: the session row, the streak and
+   * any achievements. Leaving without answering anything just goes home.
+   */
+  const close = useCallback(() => {
+    if (totals.current.reviewed === 0) {
+      router.replace('/(app)');
+      return;
+    }
+    void finish(totals.current);
+  }, [finish]);
+
   const onOutcome = useCallback(
     async (outcome: GameOutcome) => {
       if (!current || !profile || !effectiveMode || submitting) return;
@@ -220,16 +300,21 @@ export default function SessionScreen() {
         };
 
         const nextIndex = index + 1;
-        if (nextIndex >= items.length) {
-          await finish(totals.current);
-        } else {
+        if (nextIndex < itemsRef.current.length) {
           setIndex(nextIndex);
+          // Top up ahead of the play head so the next item is always ready.
+          if (shouldRefill(nextIndex, itemsRef.current.length)) void refill();
+          return;
         }
+        // At the end of the queue: try once more before concluding anything.
+        const added = await refill(true);
+        if (added > 0) setIndex(nextIndex);
+        else setRanDry(true);
       } finally {
         setSubmitting(false);
       }
     },
-    [current, profile, effectiveMode, submitting, index, items.length, finish],
+    [current, profile, effectiveMode, submitting, index, refill],
   );
 
   // --- Render states ---
@@ -242,13 +327,40 @@ export default function SessionScreen() {
       <Center>
         <View className="items-center px-8">
           <Text className="text-5xl">✅</Text>
-          <H2 className="mt-4 text-center">You are all caught up</H2>
+          <H2 className="mt-4 text-center">Nothing scheduled right now</H2>
           <Muted className="mt-2 text-center">
-            No reviews are due and today&apos;s new words are done. Come back later or raise your
-            daily goal in settings.
+            No reviews are due and there are no new words waiting. Practice draws from your
+            whole collection and never runs out, so you can keep playing.
           </Muted>
-          <View className="mt-6 w-full">
-            <Button title="Back to home" onPress={() => router.replace('/(app)')} />
+          <View className="mt-6 w-full gap-3">
+            <Button title="Start endless practice" onPress={() => router.replace('/practice')} />
+            <Button
+              title="Back to home"
+              variant="secondary"
+              onPress={() => router.replace('/(app)')}
+            />
+          </View>
+        </View>
+      </Center>
+    );
+  }
+
+  if (ranDry) {
+    return (
+      <Center>
+        <View className="items-center px-8">
+          <Text className="text-5xl">🎉</Text>
+          <H2 className="mt-4 text-center">Everything scheduled is done</H2>
+          <Muted className="mt-2 text-center">
+            {`You answered ${totals.current.reviewed} this session. Nothing else is due yet. Practice keeps going for as long as you want, and it leaves your review schedule alone.`}
+          </Muted>
+          <View className="mt-6 w-full gap-3">
+            <Button title="Keep going in practice" onPress={() => router.replace('/practice')} />
+            <Button
+              title="Finish and see summary"
+              variant="secondary"
+              onPress={() => void finish(totals.current)}
+            />
           </View>
         </View>
       </Center>
@@ -258,6 +370,13 @@ export default function SessionScreen() {
   if (!current || !profile || !effectiveMode) return <Center>{null}</Center>;
 
   const showIntro = current.isNew && !introduced.has(current.content.wordId);
+  // The queue has no fixed end any more, so a bar that fills toward it would be
+  // meaningless. Show the daily goal instead: a real target that the session is
+  // free to run past.
+  const answered = totals.current.reviewed;
+  const goal = profile.dailyGoal > 0 ? profile.dailyGoal : 15;
+  const reviewsToday = (todayQuery.data?.reviewsDone ?? 0) + answered;
+  const goalFraction = Math.min(1, reviewsToday / goal);
 
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
@@ -265,15 +384,15 @@ export default function SessionScreen() {
         <Row className="items-center gap-3">
           <Pressable
             accessibilityLabel="Close session"
-            onPress={() => router.replace('/(app)')}
+            onPress={close}
             className="h-9 w-9 items-center justify-center rounded-full bg-surface2"
           >
             <Text className="text-text text-lg">✕</Text>
           </Pressable>
           <View className="flex-1">
-            <ProgressBar fraction={index / items.length} />
+            <ProgressBar fraction={goalFraction} />
           </View>
-          <Muted>{`${index + 1}/${items.length}`}</Muted>
+          <Muted>{`${answered} done`}</Muted>
         </Row>
       </View>
 

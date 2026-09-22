@@ -6,7 +6,7 @@ import { backend } from '@/lib/backend';
 import { qk } from '@/lib/queryClient';
 import type { Profile, SessionItem } from '@/lib/types';
 import { buildSessionPlan, type SessionPlan } from './sessionPlan';
-import { DUE_FETCH_LIMIT, NEW_WORD_FETCH_LIMIT } from '@/features/monetization/limits';
+import { OPENING_DUE_PAGE, OPENING_NEW_WORD_PAGE } from './pageSizes';
 
 // --- Plain async wrappers (usable outside React, e.g. the session runner) ----
 export function getDueQueue(limit: number): Promise<SessionItem[]> {
@@ -48,9 +48,11 @@ export function useUpdateProfile() {
 }
 
 /**
- * Assemble today's session plan: due reviews + new words, capped by the daily
- * goal and the user's new-word allowance. The level estimate from onboarding
- * biases the new-word tier window.
+ * Assemble the opening queue for a session: due reviews plus new words, with
+ * new words interleaved. Nothing here is capped. The daily goal is a target for
+ * the streak and the progress bar, not a limit on the session, and the page
+ * sizes below only bound the first fetch: the session refills as it is played.
+ * The level estimate from onboarding biases the new-word tier window.
  */
 export function useSessionPlan(profile: Profile | undefined) {
   return useQuery({
@@ -64,9 +66,9 @@ export function useSessionPlan(profile: Profile | undefined) {
       // not fence them in. Anything outside the window is appended after, so a
       // session is never starved of material by the placement estimate.
       const [due, inWindow, everything] = await Promise.all([
-        backend.getDueQueue(DUE_FETCH_LIMIT),
-        backend.getNewWords(NEW_WORD_FETCH_LIMIT, tierWindow),
-        backend.getNewWords(NEW_WORD_FETCH_LIMIT),
+        backend.getDueQueue(OPENING_DUE_PAGE),
+        backend.getNewWords(OPENING_NEW_WORD_PAGE, tierWindow),
+        backend.getNewWords(OPENING_NEW_WORD_PAGE),
       ]);
       const seen = new Set(inWindow.map((i) => i.content.wordId));
       const fresh = [...inWindow, ...everything.filter((i) => !seen.has(i.content.wordId))];
