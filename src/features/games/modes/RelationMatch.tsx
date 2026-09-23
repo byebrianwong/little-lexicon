@@ -75,6 +75,11 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
           return (
             <Pressable
               key={opt}
+              // Without an explicit role these rows reach a screen reader as
+              // plain text, so the choice is invisible to anyone not looking at
+              // the screen. `selected` carries the tick mark's meaning.
+              accessibilityRole="button"
+              accessibilityState={{ selected: isSel, disabled: answered !== null }}
               onPress={() => toggle(opt)}
               disabled={answered !== null}
               className={`flex-row items-center justify-between rounded-2xl border px-4 py-4 mb-3 ${cls}`}

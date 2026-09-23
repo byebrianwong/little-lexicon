@@ -1,9 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQueryClient } from '@tanstack/react-query';
-import { Body, Button, H1, H2, Muted, ProgressBar, Row } from '@/components/ui';
 import type { SessionItem } from '@/lib/types';
 import { useProfile } from '@/features/review/queries';
 import { backend } from '@/lib/backend';
@@ -15,11 +12,13 @@ import {
   pickDefinitionDistractors,
   type Option,
 } from '@/features/games/optionPool';
-import { OptionButton } from '@/features/games/modes/OptionButton';
+import {
+  ROUND_SECONDS,
+  SpeedEmpty,
+  SpeedLoading,
+  SpeedRoundView,
+} from '@/features/games/SpeedView';
 import { useSessionResult } from '@/features/session/sessionResult';
-import { FAST_THRESHOLD_MS } from '@/srs/srs';
-
-const ROUND_SECONDS = 60;
 
 export default function SpeedRound() {
   const profileQuery = useProfile();
@@ -130,85 +129,19 @@ export default function SpeedRound() {
     }, 450);
   }
 
-  if (items === null || profileQuery.isLoading) {
-    return (
-      <Center>
-        <ActivityIndicator color="#6C8CFF" size="large" />
-      </Center>
-    );
-  }
+  if (items === null || profileQuery.isLoading) return <SpeedLoading />;
 
-  if (items.length === 0) {
-    return (
-      <Center>
-        <View className="items-center px-8">
-          <Text className="text-5xl">⚡️</Text>
-          <H2 className="mt-4 text-center">Nothing to race yet</H2>
-          <Muted className="mt-2 text-center">
-            Learn a few words first, then come back for a speed round.
-          </Muted>
-          <View className="mt-6 w-full">
-            <Button title="Back" onPress={() => router.replace('/(app)')} />
-          </View>
-        </View>
-      </Center>
-    );
-  }
+  if (items.length === 0) return <SpeedEmpty onBack={() => router.replace('/(app)')} />;
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
-      <View className="px-5 pt-2">
-        <Row className="items-center gap-3">
-          <Pressable
-            onPress={() => router.replace('/(app)')}
-            className="h-9 w-9 items-center justify-center rounded-full bg-surface2"
-          >
-            <Text className="text-text text-lg">✕</Text>
-          </Pressable>
-          <View className="flex-1">
-            <ProgressBar fraction={Math.max(0, remaining) / ROUND_SECONDS} />
-          </View>
-          <Muted>{`${Math.max(0, remaining)}s`}</Muted>
-        </Row>
-      </View>
-
-      <View className="flex-1 px-5 pt-8">
-        <Row className="justify-between">
-          <H1>{current?.content.headword}</H1>
-          <Muted>{`⚡️ ${totals.current.reviewed}`}</Muted>
-        </Row>
-        <Body className="mt-2 text-muted">Pick the meaning, fast.</Body>
-
-        <View className="mt-6">
-          {options.map((opt) => {
-            const state = !chosen
-              ? 'idle'
-              : opt.correct
-                ? 'correct'
-                : opt === chosen
-                  ? 'wrong'
-                  : 'muted';
-            return (
-              <OptionButton
-                key={opt.text}
-                label={opt.text}
-                state={state}
-                disabled={!!chosen}
-                onPress={() => choose(opt)}
-              />
-            );
-          })}
-        </View>
-        <Muted className="mt-2">
-          {`Fast answers under ${Math.round(FAST_THRESHOLD_MS / 1000)}s earn bonus XP.`}
-        </Muted>
-      </View>
-    </SafeAreaView>
-  );
-}
-
-function Center({ children }: { children: React.ReactNode }) {
-  return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-bg">{children}</SafeAreaView>
+    <SpeedRoundView
+      headword={current?.content.headword ?? ''}
+      options={options}
+      chosen={chosen}
+      remaining={remaining}
+      answeredCount={totals.current.reviewed}
+      onChoose={choose}
+      onClose={() => router.replace('/(app)')}
+    />
   );
 }

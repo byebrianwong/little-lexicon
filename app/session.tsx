@@ -10,11 +10,8 @@
 // cards and unseen words, and never replays a word it already graded.
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useQueryClient } from '@tanstack/react-query';
-import { Button, H2, Muted, ProgressBar, Row } from '@/components/ui';
 import type { GameModeId, SessionItem } from '@/lib/types';
 import type { GameOutcome } from '@/srs/srs';
 import { useProfile, useSessionPlan } from '@/features/review/queries';
@@ -30,6 +27,13 @@ import { GameHost } from '@/features/games/GameHost';
 import { WordIntro } from '@/features/games/WordIntro';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 import { useSessionResult } from '@/features/session/sessionResult';
+import {
+  SessionCenter,
+  SessionLoading,
+  SessionNothingScheduled,
+  SessionRanDry,
+  SessionRunner,
+} from '@/features/session/SessionView';
 import { applyGoalMet } from '@/features/gamification/streak';
 import { newlyUnlocked } from '@/features/gamification/achievements';
 import { todayString } from '@/lib/date';
@@ -318,56 +322,28 @@ export default function SessionScreen() {
   );
 
   // --- Render states ---
-  if (profileQuery.isLoading || planQuery.isLoading) {
-    return <Center>{<ActivityIndicator color="#6C8CFF" size="large" />}</Center>;
-  }
+  if (profileQuery.isLoading || planQuery.isLoading) return <SessionLoading />;
 
   if (items.length === 0) {
     return (
-      <Center>
-        <View className="items-center px-8">
-          <Text className="text-5xl">✅</Text>
-          <H2 className="mt-4 text-center">Nothing scheduled right now</H2>
-          <Muted className="mt-2 text-center">
-            No reviews are due and there are no new words waiting. Practice draws from your
-            whole collection and never runs out, so you can keep playing.
-          </Muted>
-          <View className="mt-6 w-full gap-3">
-            <Button title="Start endless practice" onPress={() => router.replace('/practice')} />
-            <Button
-              title="Back to home"
-              variant="secondary"
-              onPress={() => router.replace('/(app)')}
-            />
-          </View>
-        </View>
-      </Center>
+      <SessionNothingScheduled
+        onPractice={() => router.replace('/practice')}
+        onBack={() => router.replace('/(app)')}
+      />
     );
   }
 
   if (ranDry) {
     return (
-      <Center>
-        <View className="items-center px-8">
-          <Text className="text-5xl">🎉</Text>
-          <H2 className="mt-4 text-center">Everything scheduled is done</H2>
-          <Muted className="mt-2 text-center">
-            {`You answered ${totals.current.reviewed} this session. Nothing else is due yet. Practice keeps going for as long as you want, and it leaves your review schedule alone.`}
-          </Muted>
-          <View className="mt-6 w-full gap-3">
-            <Button title="Keep going in practice" onPress={() => router.replace('/practice')} />
-            <Button
-              title="Finish and see summary"
-              variant="secondary"
-              onPress={() => void finish(totals.current)}
-            />
-          </View>
-        </View>
-      </Center>
+      <SessionRanDry
+        answered={totals.current.reviewed}
+        onPractice={() => router.replace('/practice')}
+        onFinish={() => void finish(totals.current)}
+      />
     );
   }
 
-  if (!current || !profile || !effectiveMode) return <Center>{null}</Center>;
+  if (!current || !profile || !effectiveMode) return <SessionCenter>{null}</SessionCenter>;
 
   const showIntro = current.isNew && !introduced.has(current.content.wordId);
   // The queue has no fixed end any more, so a bar that fills toward it would be
@@ -376,64 +352,30 @@ export default function SessionScreen() {
   const answered = totals.current.reviewed;
   const goal = profile.dailyGoal > 0 ? profile.dailyGoal : 15;
   const reviewsToday = (todayQuery.data?.reviewsDone ?? 0) + answered;
-  const goalFraction = Math.min(1, reviewsToday / goal);
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
-      <View className="px-5 pt-2">
-        <Row className="items-center gap-3">
-          <Pressable
-            accessibilityLabel="Close session"
-            onPress={close}
-            className="h-9 w-9 items-center justify-center rounded-full bg-surface2"
-          >
-            <Text className="text-text text-lg">✕</Text>
-          </Pressable>
-          <View className="flex-1">
-            <ProgressBar fraction={goalFraction} />
-          </View>
-          <Muted>{`${answered} done`}</Muted>
-        </Row>
-      </View>
-
-      <ScrollView
-        className="flex-1"
-        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 24, paddingBottom: 32, flexGrow: 1 }}
-        keyboardShouldPersistTaps="handled"
-      >
-        <GameProvider value={{ pool, profile }}>
-          {showIntro ? (
-            <WordIntro
-              content={current.content}
-              onStart={() =>
-                setIntroduced((prev) => new Set(prev).add(current.content.wordId))
-              }
-            />
-          ) : (
-            <GameHost
-              key={`${current.content.wordId}-${index}`}
-              item={current}
-              mode={effectiveMode}
-              onOutcome={onOutcome}
-              soundEnabled={soundEnabled}
-            />
-          )}
-        </GameProvider>
-      </ScrollView>
-
-      {submitting ? (
-        <View className="absolute inset-0 items-center justify-center bg-bg/40">
-          <ActivityIndicator color="#6C8CFF" />
-        </View>
-      ) : null}
-    </SafeAreaView>
-  );
-}
-
-function Center({ children }: { children: React.ReactNode }) {
-  return (
-    <SafeAreaView className="flex-1 items-center justify-center bg-bg">
-      <View className="flex-1 w-full items-center justify-center">{children}</View>
-    </SafeAreaView>
+    <SessionRunner
+      answered={answered}
+      goalFraction={Math.min(1, reviewsToday / goal)}
+      submitting={submitting}
+      onClose={close}
+    >
+      <GameProvider value={{ pool, profile }}>
+        {showIntro ? (
+          <WordIntro
+            content={current.content}
+            onStart={() => setIntroduced((prev) => new Set(prev).add(current.content.wordId))}
+          />
+        ) : (
+          <GameHost
+            key={`${current.content.wordId}-${index}`}
+            item={current}
+            mode={effectiveMode}
+            onOutcome={onOutcome}
+            soundEnabled={soundEnabled}
+          />
+        )}
+      </GameProvider>
+    </SessionRunner>
   );
 }
