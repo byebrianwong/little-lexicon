@@ -87,7 +87,7 @@ export function Pill({
           ? 'bg-danger/20 text-danger'
           : tone === 'gold'
             ? 'bg-gold/20 text-gold'
-            : 'bg-surface2 text-muted';
+            : 'bg-surface2 text-muted/60';
   return (
     <View className={`self-start rounded-full px-3 py-1 ${toneClass}`}>
       <Text className={`text-xs font-semibold ${toneClass}`}>{children}</Text>
@@ -106,7 +106,7 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
   { title, variant = 'primary', loading, disabled, className, ...rest },
   ref,
 ) {
-  const base = 'rounded-2xl px-5 py-4 items-center justify-center';
+  const base = 'rounded-full px-6 py-3.5 items-center justify-center';
   const byVariant =
     variant === 'primary'
       ? 'bg-primary active:bg-primary-dark'
@@ -140,8 +140,8 @@ export const Button = forwardRef<View, ButtonProps>(function Button(
 export function ProgressBar({ fraction }: { fraction: number }) {
   const pct = Math.round(Math.min(1, Math.max(0, fraction)) * 100);
   return (
-    <View className="h-3 w-full bg-surface2 rounded-full overflow-hidden">
-      <View className="h-3 bg-primary rounded-full" style={{ width: `${pct}%` }} />
+    <View className="h-2 w-full bg-surface2 rounded-full overflow-hidden">
+      <View className="h-2 bg-success rounded-full" style={{ width: `${pct}%` }} />
     </View>
   );
 }
