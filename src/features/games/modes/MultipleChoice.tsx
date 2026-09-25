@@ -7,7 +7,8 @@ import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Body, Button, H2, Muted, Row } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
-import { useGameContext } from '../GameContext';
+import type { GameOutcome } from '@/srs/srs';
+import { useGameContext, useNextDueLabel } from '../GameContext';
 import {
   buildOptions,
   mulberry32,
@@ -32,8 +33,10 @@ export function MultipleChoice({
   const isDefToWord = mode === 'mc_def_to_word';
   const startedAt = useRef(Date.now()).current;
   const [answered, setAnswered] = useState<Option | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [hintUsed, setHintUsed] = useState(false);
   const [eliminated, setEliminated] = useState<Set<string>>(new Set());
+  const nextDueLabel = useNextDueLabel(item, outcome);
 
   const seed = content.wordId * 100 + (isDefToWord ? 1 : 2);
   const options = useMemo<Option[]>(() => {
@@ -54,6 +57,8 @@ export function MultipleChoice({
   function choose(opt: Option) {
     if (answered) return;
     setAnswered(opt);
+    // The clock stops here, not at Continue: reading the reveal is not answering.
+    setOutcome(makeOutcome(opt.correct, startedAt, hintUsed));
   }
 
   function useHint() {
@@ -107,7 +112,10 @@ export function MultipleChoice({
           content={content}
           example={sense.examples[0] ?? null}
           soundEnabled={soundEnabled}
-          onContinue={() => onOutcome(makeOutcome(answered.correct, startedAt, hintUsed))}
+          nextDueLabel={nextDueLabel}
+          onContinue={() => {
+            if (outcome) onOutcome(outcome);
+          }}
         />
       )}
 

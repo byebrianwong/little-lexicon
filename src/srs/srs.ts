@@ -53,6 +53,12 @@ export interface GameOutcome {
   firstAttempt: boolean;
   hintUsed: boolean;
   responseMs: number;
+  /**
+   * When the answer was given, in ms since the epoch. The review is dated
+   * from this instant, so a preview of the next due date and the commit that
+   * follows it agree exactly. Absent means "now".
+   */
+  answeredAt?: number;
 }
 
 /** Response slower than this still counts as correct, but downgraded to Hard. */

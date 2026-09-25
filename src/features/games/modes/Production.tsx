@@ -6,6 +6,8 @@ import { useMemo, useRef, useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { Body, Button, H2, Muted } from '@/components/ui';
 import { gradeAnswer, type AnswerGrade } from '@/lib/text';
+import type { GameOutcome } from '@/srs/srs';
+import { useNextDueLabel } from '../GameContext';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -16,7 +18,9 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
   const startedAt = useRef(Date.now()).current;
   const [value, setValue] = useState('');
   const [grade, setGrade] = useState<AnswerGrade | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [hintUsed, setHintUsed] = useState(false);
+  const nextDueLabel = useNextDueLabel(item, outcome);
 
   // Vary the prompt: definition, or a "the word that means X" synonym cue.
   const prompt = useMemo(() => {
@@ -27,10 +31,16 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content.wordId]);
 
-  function submit() {
+  function finish(result: AnswerGrade) {
     if (grade !== null) return;
+    setGrade(result);
+    // The clock stops here, not at Continue: reading the reveal is not answering.
+    setOutcome(makeOutcome(result !== 'wrong', startedAt, hintUsed));
+  }
+
+  function submit() {
     // Only the exact target headword counts (synonyms are rejected).
-    setGrade(gradeAnswer(value, content.headword));
+    finish(gradeAnswer(value, content.headword));
   }
 
   const hint = hintUsed
@@ -63,7 +73,7 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
             <Button
               title={hintUsed ? 'Show answer' : 'Hint'}
               variant="ghost"
-              onPress={() => (hintUsed ? setGrade('wrong') : setHintUsed(true))}
+              onPress={() => (hintUsed ? finish('wrong') : setHintUsed(true))}
             />
           </View>
         </>
@@ -74,7 +84,10 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
           example={sense.examples[0] ?? null}
           soundEnabled={soundEnabled}
           attempt={{ text: value, grade }}
-          onContinue={() => onOutcome(makeOutcome(grade !== 'wrong', startedAt, hintUsed))}
+          nextDueLabel={nextDueLabel}
+          onContinue={() => {
+            if (outcome) onOutcome(outcome);
+          }}
         />
       )}
 

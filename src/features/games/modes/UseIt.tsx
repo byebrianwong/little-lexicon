@@ -9,6 +9,8 @@ import { ActivityIndicator, TextInput, View } from 'react-native';
 import { Body, Button, Card, H2, Muted } from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
 import { speakWord } from '@/lib/audio';
+import type { GameOutcome } from '@/srs/srs';
+import { useNextDueLabel } from '../GameContext';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
@@ -19,22 +21,29 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [feedback, setFeedback] = useState<SentenceFeedback | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
+  const nextDueLabel = useNextDueLabel(item, outcome);
 
   async function evaluate() {
     if (busy || feedback) return;
     setBusy(true);
+    // The clock stops when the sentence is handed in, not when the evaluation
+    // comes back and not at Continue.
+    const answeredAt = Date.now();
+    let result: SentenceFeedback;
     try {
-      const result = await backend.evaluateSentence({
+      result = await backend.evaluateSentence({
         wordId: content.wordId,
         headword: content.headword,
         sentence: text,
       });
-      setFeedback(result);
     } catch {
-      setFeedback({ correct: null, feedback: 'Saved. Evaluation is unavailable right now.' });
+      result = { correct: null, feedback: 'Saved. Evaluation is unavailable right now.' };
     } finally {
       setBusy(false);
     }
+    setFeedback(result);
+    setOutcome(makeOutcome(result.correct !== false, startedAt, false, answeredAt));
   }
 
   const correct = feedback ? feedback.correct !== false : false;
@@ -94,7 +103,10 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
             content={content}
             example={sense.examples[0] ?? null}
             soundEnabled={soundEnabled}
-            onContinue={() => onOutcome(makeOutcome(correct, startedAt, false))}
+            nextDueLabel={nextDueLabel}
+            onContinue={() => {
+              if (outcome) onOutcome(outcome);
+            }}
           />
         </View>
       )}

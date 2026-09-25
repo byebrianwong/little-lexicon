@@ -19,6 +19,7 @@ import { useTodayStats } from '@/features/stats/queries';
 import { buildRefill, shouldRefill, REFILL_PAGE } from '@/features/review/continuation';
 import { backend } from '@/lib/backend';
 import { submitReview } from '@/features/review/submitReview';
+import { previewNextDue as previewNextDueFor, reviewTime } from '@/features/review/nextDue';
 import { enqueueReview } from '@/features/offline/reviewQueue';
 import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 import { chooseMode } from '@/features/games/ladder';
@@ -91,6 +92,14 @@ export default function SessionScreen() {
 
   const pool = useMemo(() => buildOptionPool(items), [items]);
   const profile = profileQuery.data;
+
+  // Lets the reveal say when the word comes back, using the same scheduler
+  // and the same instant the commit will use.
+  const previewNextDue = useCallback(
+    (item: SessionItem, outcome: GameOutcome) =>
+      previewNextDueFor(item, outcome, profile?.desiredRetention ?? 0.9),
+    [profile],
+  );
 
   // Start the session row once there is something to play.
   if (planQuery.data && sessionId.current === null && items.length > 0) {
@@ -280,7 +289,7 @@ export default function SessionScreen() {
                 learning_steps: current.state.learningSteps,
               })
             : newCard();
-          const { card: next } = review(scheduler, card, rating);
+          const { card: next } = review(scheduler, card, rating, reviewTime(outcome));
           await enqueueReview({
             wordId: current.content.wordId,
             card: cardToRow(next),
@@ -360,7 +369,7 @@ export default function SessionScreen() {
       submitting={submitting}
       onClose={close}
     >
-      <GameProvider value={{ pool, profile }}>
+      <GameProvider value={{ pool, profile, previewNextDue }}>
         {showIntro ? (
           <WordIntro
             content={current.content}

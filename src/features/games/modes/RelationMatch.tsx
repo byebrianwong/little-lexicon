@@ -4,7 +4,8 @@
 import { useMemo, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { Body, Button, H2, Muted } from '@/components/ui';
-import { useGameContext } from '../GameContext';
+import type { GameOutcome } from '@/srs/srs';
+import { useGameContext, useNextDueLabel } from '../GameContext';
 import { mulberry32, pickRelationDistractors, shuffle } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -36,6 +37,8 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
 
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [answered, setAnswered] = useState<null | boolean>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
+  const nextDueLabel = useNextDueLabel(item, outcome);
 
   function toggle(opt: string) {
     if (answered !== null) return;
@@ -51,6 +54,8 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
     const correct =
       chosen.size === correctSet.size && [...chosen].every((c) => correctSet.has(c));
     setAnswered(correct);
+    // The clock stops here, not at Continue: reading the reveal is not answering.
+    setOutcome(makeOutcome(correct, startedAt, false));
   }
 
   return (
@@ -99,7 +104,10 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
           content={content}
           example={content.senses[0]?.examples[0] ?? null}
           soundEnabled={soundEnabled}
-          onContinue={() => onOutcome(makeOutcome(answered, startedAt, false))}
+          nextDueLabel={nextDueLabel}
+          onContinue={() => {
+            if (outcome) onOutcome(outcome);
+          }}
         />
       )}
       {answered === null ? (
