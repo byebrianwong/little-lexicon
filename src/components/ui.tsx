@@ -552,12 +552,17 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
     <TextInput
       ref={ref}
       placeholderTextColor={colors.graphite}
+      // Focus is shown by the field's own rule: the underline doubles and
+      // turns red, or the box's border doubles in ink. The browser's default
+      // outline is turned off because it drew a box around an underline and
+      // sat flush against the text. Padding drops by a pixel on focus so the
+      // thicker border does not move anything.
       className={tw(
         cx(
-          'font-serif text-[20px] text-ink',
+          'font-serif text-[20px] text-ink web:outline-none',
           variant === 'line'
-            ? 'border-b border-ink py-3'
-            : 'min-h-[110px] rounded-[3px] border border-line px-3 py-3 leading-[28px]',
+            ? 'border-b border-ink py-3 focus:border-b-2 focus:border-accent focus:pb-[11px]'
+            : 'min-h-[110px] rounded-[3px] border border-line px-3 py-3 leading-[28px] focus:border-2 focus:border-ink focus:p-[11px]',
         ),
         className,
       )}
