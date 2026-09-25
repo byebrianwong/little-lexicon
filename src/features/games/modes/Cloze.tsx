@@ -5,7 +5,8 @@ import { useMemo, useRef, useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { Body, Button, Muted } from '@/components/ui';
 import { gradeAnswer, makeClozeBlank, type AnswerGrade } from '@/lib/text';
-import { useGameContext } from '../GameContext';
+import type { GameOutcome } from '@/srs/srs';
+import { useGameContext, useNextDueLabel } from '../GameContext';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -32,17 +33,24 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   const [value, setValue] = useState('');
   const [grade, setGrade] = useState<AnswerGrade | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [hintUsed, setHintUsed] = useState(false);
+  const nextDueLabel = useNextDueLabel(item, outcome);
+
+  function finish(result: AnswerGrade) {
+    if (grade !== null) return;
+    setGrade(result);
+    // The clock stops here, not at Continue: reading the reveal is not answering.
+    setOutcome(makeOutcome(result !== 'wrong', startedAt, hintUsed));
+  }
 
   function submit() {
-    if (grade !== null) return;
-    setGrade(gradeAnswer(value, target));
+    finish(gradeAnswer(value, target));
   }
 
   function showAnswer() {
-    if (grade !== null) return;
     // Give up: counts as incorrect.
-    setGrade('wrong');
+    finish('wrong');
   }
 
   // The hint sits under the box rather than in its placeholder, so it stays
@@ -85,7 +93,10 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
           example={example}
           soundEnabled={soundEnabled}
           attempt={{ text: value, grade }}
-          onContinue={() => onOutcome(makeOutcome(grade !== 'wrong', startedAt, hintUsed))}
+          nextDueLabel={nextDueLabel}
+          onContinue={() => {
+            if (outcome) onOutcome(outcome);
+          }}
         />
       )}
     </View>

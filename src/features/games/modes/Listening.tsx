@@ -6,7 +6,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Body, Muted } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
-import { useGameContext } from '../GameContext';
+import type { GameOutcome } from '@/srs/srs';
+import { useGameContext, useNextDueLabel } from '../GameContext';
 import { buildOptions, mulberry32, pickWordDistractors, type Option } from '../optionPool';
 import { AudioButton, Reveal } from '../Reveal';
 import { OptionButton } from './OptionButton';
@@ -17,6 +18,15 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
   const content = item.content;
   const startedAt = useRef(Date.now()).current;
   const [answered, setAnswered] = useState<Option | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
+  const nextDueLabel = useNextDueLabel(item, outcome);
+
+  function choose(opt: Option) {
+    if (answered) return;
+    setAnswered(opt);
+    // The clock stops here, not at Continue: reading the reveal is not answering.
+    setOutcome(makeOutcome(opt.correct, startedAt, false));
+  }
 
   const options = useMemo<Option[]>(() => {
     const rng = mulberry32(content.wordId + 11);
@@ -55,7 +65,7 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
               label={opt.text}
               state={state}
               disabled={!!answered}
-              onPress={() => setAnswered(opt)}
+              onPress={() => choose(opt)}
             />
           );
         })}
@@ -69,7 +79,10 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
           content={content}
           example={content.senses[0]?.examples[0] ?? null}
           soundEnabled={soundEnabled}
-          onContinue={() => onOutcome(makeOutcome(answered.correct, startedAt, false))}
+          nextDueLabel={nextDueLabel}
+          onContinue={() => {
+            if (outcome) onOutcome(outcome);
+          }}
         />
       )}
     </View>

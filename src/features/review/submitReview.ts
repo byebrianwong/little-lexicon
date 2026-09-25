@@ -2,7 +2,7 @@
 // outcome, this computes the FSRS update and the XP, then hands a single
 // atomic write to the backend (an RPC transaction in production).
 
-import type { GameModeId, Profile, SessionItem, UserWordState } from '@/lib/types';
+import type { GameModeId, Profile, SessionItem } from '@/lib/types';
 import {
   makeScheduler,
   newCard,
@@ -13,26 +13,11 @@ import {
   FAST_THRESHOLD_MS,
   Rating,
   type GameOutcome,
-  type UserWordStateRow,
 } from '@/srs/srs';
 import { xpForOutcome } from '@/features/gamification/xp';
 import { backend } from '@/lib/backend';
 import type { SubmitReviewResult } from '@/lib/backend';
-
-function stateToRow(state: UserWordState): UserWordStateRow {
-  return {
-    due: state.due,
-    stability: state.stability,
-    difficulty: state.difficulty,
-    elapsed_days: state.elapsedDays,
-    scheduled_days: state.scheduledDays,
-    reps: state.reps,
-    lapses: state.lapses,
-    state: state.state,
-    last_review: state.lastReview,
-    learning_steps: state.learningSteps,
-  };
-}
+import { reviewTime, stateToRow } from './nextDue';
 
 export interface ReviewCommit {
   result: SubmitReviewResult;
@@ -52,7 +37,9 @@ export interface SubmitReviewParams {
 
 export async function submitReview(params: SubmitReviewParams): Promise<ReviewCommit> {
   const { item, outcome, mode, profile } = params;
-  const now = params.now ?? new Date();
+  // Dated from the answer, so the reveal's "next review" preview and this
+  // commit land on the same day (see nextDue.ts).
+  const now = params.now ?? reviewTime(outcome);
 
   // Per-user weight optimization is future scope; build from desired retention.
   const scheduler = makeScheduler(profile.desiredRetention);

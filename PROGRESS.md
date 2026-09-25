@@ -1259,3 +1259,46 @@ simulator or Android in this pass; nothing here is platform-specific, but the
   those same colours would pass at 6:1 or better, but it changes every button
   in the app, so it stays a design call.
 - `nextDueLabel` on the reveal panel is still never passed by any mode.
+
+## Response time stops at the answer, and the reveal says when the word is back
+
+### The bug
+
+Every mode built its outcome inside the Continue handler, so `responseMs` ran
+from the question appearing to the Continue tap. That included however long
+the user spent reading the reveal, listening to the word, or reading the
+example. The rating thresholds are 3 s for Easy and 8 s for Hard, so a correct
+answer with a careful read of the reveal was routinely committed as Hard,
+which shortens the FSRS interval, and the fast-answer Easy grade and its XP
+bonus were close to unreachable.
+
+Every mode now builds the outcome the moment the answer is given: on the tap
+in multiple choice and listening, on Check or Show answer in cloze and
+production, on Check in relation match, and when the sentence is handed in
+for "use it" (not when the evaluation comes back). Continue only commits it.
+The speed round already measured its own time correctly and is unchanged.
+
+### The reveal's "Next review" line
+
+`Reveal` has accepted `nextDueLabel` since Phase 3 and nothing ever passed it.
+It is now filled in for scheduled sessions: "Next review in 10 minutes",
+"tomorrow", "in 3 days", "in 2 months".
+
+The date has to match what the commit schedules a moment later. FSRS fuzzes
+intervals with a seed that includes the review timestamp, so a preview and a
+commit made at different instants would land on different days. `GameOutcome`
+therefore carries `answeredAt`, and both the preview
+(`src/features/review/nextDue.ts`) and `submitReview` date the review from
+it. The unit test checks the preview equals a commit at the same instant to
+the millisecond, fuzz included. The offline queue path uses the same instant.
+
+The session passes `previewNextDue` through `GameContext`; modes read it with
+`useNextDueLabel`. Practice does not pass it, because practice never
+reschedules, so its reveal shows no line. Storybook's game decorator does not
+pass it either, so no existing story changed.
+
+### Verified
+
+`tsc --noEmit`, lint and the 120 unit tests pass (new: `makeOutcome`,
+`formatNextDue`, `previewNextDue`). Played a session on web and saw the
+"Next review" line on the reveal.
