@@ -2,13 +2,14 @@
 // typo tolerance; a hint shows the first letter and downgrades to Hard.
 
 import { useMemo, useRef, useState } from 'react';
-import { TextInput, View } from 'react-native';
-import { Body, Button, Muted } from '@/components/ui';
+import { View } from 'react-native';
+import { Button, Label, Note, TextField } from '@/components/ui';
 import { gradeAnswer, makeClozeBlank, type AnswerGrade } from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
+import { Prompt } from '../Prompt';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
 export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
@@ -59,25 +60,25 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   return (
     <View>
-      <Muted>Fill in the missing word</Muted>
-      <Body className="mt-3 text-lg leading-7">{blanked}</Body>
+      <Label>Fill in the missing word</Label>
+      <Prompt className="mt-3 font-serif text-[24px] leading-[35px]">{blanked}</Prompt>
 
       {grade === null ? (
         <>
-          <TextInput
+          <TextField
             value={value}
             onChangeText={setValue}
             autoFocus
             autoCapitalize="none"
             autoCorrect={false}
             placeholder="Type the word"
-            placeholderTextColor="#6B7699"
-            className="mt-5 rounded-2xl border border-border bg-surface px-4 py-4 text-text text-base"
+            accessibilityLabel="The missing word"
+            className="mt-6"
             onSubmitEditing={submit}
             returnKeyType="done"
           />
-          {hint ? <Muted className="mt-2">{hint}</Muted> : null}
-          <View className="mt-4 gap-3">
+          {hint ? <Note className="mt-2">{hint}</Note> : null}
+          <View className="mt-6 gap-2">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button
               title={hintUsed ? 'Show answer' : 'Hint'}

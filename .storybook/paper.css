@@ -1,0 +1,40 @@
+/* Newsreader for Storybook. The app loads these faces with expo-font at
+   runtime (src/theme/fonts.ts); Storybook never runs the app's root layout,
+   so it declares the same family names here from the same files. Without
+   this every story would render in the browser's fallback serif and
+   Chromatic would compare the wrong typeface. */
+
+@font-face {
+  font-family: 'Newsreader_400Regular';
+  src: url('../node_modules/@expo-google-fonts/newsreader/400Regular/Newsreader_400Regular.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Newsreader_400Regular_Italic';
+  src: url('../node_modules/@expo-google-fonts/newsreader/400Regular_Italic/Newsreader_400Regular_Italic.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Newsreader_500Medium';
+  src: url('../node_modules/@expo-google-fonts/newsreader/500Medium/Newsreader_500Medium.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Newsreader_500Medium_Italic';
+  src: url('../node_modules/@expo-google-fonts/newsreader/500Medium_Italic/Newsreader_500Medium_Italic.ttf') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Newsreader_600SemiBold';
+  src: url('../node_modules/@expo-google-fonts/newsreader/600SemiBold/Newsreader_600SemiBold.ttf') format('truetype');
+  font-display: block;
+}
+
+/* The page behind the story frame, so a snapshot has no white margin. */
+body {
+  background: #f7f3ea;
+}

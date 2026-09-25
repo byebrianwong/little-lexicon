@@ -1302,3 +1302,97 @@ pass it either, so no existing story changed.
 `tsc --noEmit`, lint and the 120 unit tests pass (new: `makeOutcome`,
 `formatNextDue`, `previewNextDue`). Played a session on web and saw the
 "Next review" line on the reveal.
+
+## Paper and Ink redesign
+
+The whole app moved from the dark navy-and-indigo look to a light design
+called Paper and Ink. It was chosen from six directions mocked up on
+2026-09-24. Every screen changed; the logic did not.
+
+### The design in brief
+
+- **One typeface, Newsreader**, a serif made for reading on screens. Five
+  faces are loaded (regular, italic, medium, medium italic, semibold).
+- **Warm paper background and near-black ink.** Structure comes from hairline
+  rules and type size. There are no cards, shadows or emoji.
+- **One accent, a deep red, used like a teacher's pen.** It marks answers
+  (a tick on the right one, a cross and a strike-through on a wrong pick), the
+  active tab, the speed round's clock and destructive actions. The marks differ
+  in shape as well as colour, so they read in greyscale.
+- **One centred column, at most 640 px wide.** The same screens work on a
+  phone and in a desktop browser. In a browser at 768 px or wider the tab bar
+  becomes a masthead across the top. Native apps keep the tabs at the bottom
+  at every size.
+- New app icon, splash and favicon: "Ll" in Newsreader over a short red rule.
+
+### Where things live
+
+- `tailwind.config.js` holds the colours and the `font-serif-*` classes.
+  `src/theme/colors.ts` repeats the colours as strings for props that need
+  one (spinners, placeholders, the heatmap). `colors.test.ts` fails if the two
+  drift apart.
+- `src/theme/fonts.ts` lists the faces. `app/_layout.tsx` loads them and holds
+  the splash screen until they are ready. If loading fails it logs a warning
+  and carries on in the fallback serif.
+- `src/components/ui.tsx` has the primitives. New ones: `Section` (replaces
+  `Card`), `Label` (small capitals, replaces `Pill`), `Headword`, `Note`,
+  `Stat`, `ListRow`, `Choice`, `TextField`, `TextButton`, `IconButton`,
+  `RunnerHeader`, `EmptyState`, `CenterScreen`, `FullScreen`, `Spinner`.
+  `Button` lost its `success` variant and gained `trailingIcon`.
+- `src/components/Icon.tsx` draws the line icons with react-native-svg.
+- `src/components/TabBar.tsx` is the text tab bar and the web masthead.
+- `src/components/tw.ts` merges a component's classes with a caller's so the
+  caller's win. Two Tailwind classes that set the same property are resolved
+  by stylesheet order, not by the order written, so without this
+  `Body className="text-[20px]"` kept the base size on some screens.
+
+### Rules for new screens
+
+- Pick weight with a family class (`font-serif-medium`), never `font-bold` or
+  `fontWeight`. Android ignores weight on a custom font.
+- `Animated.View` is not wrapped by NativeWind, so it drops `className`. Put
+  spacing on a plain `View` inside it. The reveal panel's top margin never
+  applied for this reason, before and during this change.
+- Anything shown as a full-screen modal uses `FullScreen` (or
+  `Screen insets="window"`), not the native `SafeAreaView`. The native view
+  measures itself while the modal is still sliding up, sees no overlap with
+  the status bar, and never measures again, so on iOS the header sat under the
+  Dynamic Island. Tabs and the paywall's page sheet keep the native view,
+  which handles a sheet that never reaches the top.
+
+### Behaviour changes that came with it
+
+- The reveal no longer springs in. On iOS the native-driven spring could stop
+  at 98% scale and leave the panel inset from the question above it.
+- Multiple-choice options are lettered a to d.
+- Locked achievements say "Locked" in words instead of being dimmed to 60%
+  opacity, which fixes the contrast finding recorded in the story-coverage
+  entry.
+- Buttons use their title as their accessible name, so a button showing a
+  spinner still has one. Spinners are named "Loading".
+
+### Accessibility
+
+Before: white text on the old primary, danger and success colours failed
+contrast on every screen with a button. After: axe reports no contrast
+failures in any of the 145 stories. The only remaining finding is
+`scrollable-region-focusable` on Stats and Leaderboard, the React Native Web
+ScrollView issue already recorded above.
+
+### Storybook and Chromatic
+
+`.storybook/paper.css` declares the Newsreader faces from the same font
+files, because Storybook never runs the app's root layout. Every snapshot
+will change on the first Chromatic build after this lands. That is expected;
+the baselines need accepting once.
+
+### Verified
+
+`tsc --noEmit`, lint and 128 unit tests pass (new: the palette check and the
+class merge). `expo export --platform web` succeeds. All 145 stories render,
+every play function passes, and axe shows only the known scroll-region
+finding. Clicked through onboarding, home, a session's empty state, practice
+(synonym match, listening, multiple choice, typed answers), Words, Progress,
+Ranks and Settings on web at phone width and at 1280 px. Ran home and
+practice on the iOS simulator in Expo Go. No Android SDK is installed on this
+machine, so the Android emulator was not run.

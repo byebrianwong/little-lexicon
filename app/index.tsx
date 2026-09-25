@@ -1,7 +1,7 @@
-import { ActivityIndicator, View } from 'react-native';
 import { Redirect } from 'expo-router';
 import { useAuthStore } from '@/features/auth/authStore';
 import { useProfile } from '@/features/review/queries';
+import { CenterScreen, Spinner } from '@/components/ui';
 
 // Entry redirector: routes to auth, onboarding, or the app based on session and
 // onboarding state.
@@ -21,8 +21,8 @@ export default function Index() {
 
 function Splash() {
   return (
-    <View className="flex-1 items-center justify-center bg-bg">
-      <ActivityIndicator color="#6C8CFF" size="large" />
-    </View>
+    <CenterScreen>
+      <Spinner size="large" />
+    </CenterScreen>
   );
 }

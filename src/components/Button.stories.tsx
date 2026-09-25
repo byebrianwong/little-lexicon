@@ -12,7 +12,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['primary', 'secondary', 'ghost', 'danger', 'success'],
+      options: ['primary', 'secondary', 'ghost', 'danger'],
     },
     loading: { control: 'boolean' },
     disabled: { control: 'boolean' },
@@ -43,8 +43,10 @@ export const Danger: Story = {
   args: { variant: 'danger', title: 'Delete account' },
 };
 
-export const Success: Story = {
-  args: { variant: 'success', title: 'Got it right' },
+// A button that leads somewhere: the title moves to the left edge and an
+// arrow sits at the right, as on "Got it, quiz me".
+export const WithArrow: Story = {
+  args: { title: 'Start learning', trailingIcon: 'arrow-right' },
 };
 
 export const Loading: Story = {
@@ -64,7 +66,7 @@ export const AllVariants: Story = {
       <Button title="Secondary" variant="secondary" />
       <Button title="Ghost" variant="ghost" />
       <Button title="Danger" variant="danger" />
-      <Button title="Success" variant="success" />
+      <Button title="With arrow" variant="primary" trailingIcon="arrow-right" />
       <Button title="Disabled" variant="primary" disabled />
       <Button title="Loading" variant="primary" loading />
     </View>

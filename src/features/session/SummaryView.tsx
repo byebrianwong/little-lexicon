@@ -2,8 +2,21 @@
 // and handles navigation; this renders it.
 
 import { View } from 'react-native';
-import { Body, Button, Card, H1, H2, Muted, Pill, Row, Screen, Spacer } from '@/components/ui';
+import {
+  Body,
+  Button,
+  H1,
+  Label,
+  Muted,
+  Note,
+  Row,
+  Screen,
+  Section,
+  Stat,
+} from '@/components/ui';
+import { Icon } from '@/components/Icon';
 import { achievementByCode } from '@/features/gamification/achievements';
+import { colors } from '@/theme/colors';
 import type { SessionSummary } from './sessionResult';
 
 export interface SummaryViewProps {
@@ -16,62 +29,60 @@ export function SummaryView({ summary, onDone, onAnother }: SummaryViewProps) {
   const accuracyPct = Math.round(summary.accuracy * 100);
 
   return (
-    <Screen scroll>
-      <Spacer h={24} />
-      <View className="items-center">
-        <H1>{summary.goalMet ? 'Goal met 🎉' : 'Session complete'}</H1>
-        <Muted className="mt-2">
+    <Screen scroll insets="window">
+      <View className="pt-8">
+        <Label tone={summary.goalMet ? 'accent' : 'graphite'}>
+          {summary.goalMet ? 'Daily goal met' : 'Session'}
+        </Label>
+        <H1 className="mt-2 text-[40px] leading-[46px]">
+          {summary.goalMet ? 'Well done.' : 'Session complete'}
+        </H1>
+        <Note className="mt-2 text-[17px]">
           {summary.goalMet
             ? `Streak is now ${summary.streakCount} day${summary.streakCount === 1 ? '' : 's'}.`
             : 'Every review counts. Keep going whenever you have the time.'}
-        </Muted>
+        </Note>
       </View>
 
-      <Row className="mt-6 gap-3">
-        <Metric label="Reviewed" value={`${summary.reviewed}`} />
-        <Metric label="Accuracy" value={`${accuracyPct}%`} />
-        <Metric label="XP" value={`+${summary.xpEarned}`} />
-      </Row>
+      <Section className="mt-8">
+        <Row className="items-start gap-4 pt-1">
+          <Stat value={summary.reviewed} label="Reviewed" />
+          <Stat value={`${accuracyPct}%`} label="Accuracy" />
+          <Stat value={`+${summary.xpEarned}`} label="XP" />
+        </Row>
+      </Section>
 
       {summary.newWords > 0 ? (
-        <Card className="mt-4">
-          <Body>{`You learned ${summary.newWords} new word${summary.newWords === 1 ? '' : 's'} in that session.`}</Body>
-        </Card>
+        <Body className="mt-6">
+          {`You learned ${summary.newWords} new word${summary.newWords === 1 ? '' : 's'} in that session.`}
+        </Body>
       ) : null}
 
       {summary.newAchievements.length > 0 ? (
-        <Card className="mt-4 border-gold">
-          <H2>Achievements unlocked</H2>
-          <View className="mt-3 gap-3">
+        <Section label="Achievements unlocked" className="mt-8">
+          <View className="border-b border-rule">
             {summary.newAchievements.map((code) => {
               const a = achievementByCode(code);
               return (
-                <Row key={code} className="gap-3">
-                  <Pill tone="gold">★</Pill>
+                <Row key={code} className="items-start gap-3 border-t border-rule py-3">
+                  <View className="pt-[3px]">
+                    <Icon name="check" color={colors.accent} strokeWidth={2.25} />
+                  </View>
                   <View className="flex-1">
-                    <Body className="font-semibold">{a?.title ?? code}</Body>
+                    <Body className="font-serif-medium">{a?.title ?? code}</Body>
                     {a?.description ? <Muted>{a.description}</Muted> : null}
                   </View>
                 </Row>
               );
             })}
           </View>
-        </Card>
+        </Section>
       ) : null}
 
-      <Spacer h={28} />
-      <Button title="Done" onPress={onDone} />
-      <Spacer h={10} />
-      <Button title="Keep going" variant="secondary" onPress={onAnother} />
+      <View className="mt-10 gap-3">
+        <Button title="Done" onPress={onDone} />
+        <Button title="Keep going" variant="secondary" onPress={onAnother} />
+      </View>
     </Screen>
-  );
-}
-
-function Metric({ label, value }: { label: string; value: string }) {
-  return (
-    <Card className="flex-1 items-center">
-      <H2>{value}</H2>
-      <Muted className="mt-1">{label}</Muted>
-    </Card>
   );
 }

@@ -1,10 +1,13 @@
-// Global story setup: Tailwind CSS, the dark app background, and a fixed
-// safe-area frame so snapshots do not shift between runs.
+// Global story setup: Tailwind CSS, the Newsreader faces, the paper
+// background, and a fixed safe-area frame so snapshots do not shift between
+// runs.
 
 import '../global.css';
+import './paper.css';
 import { View } from 'react-native';
 import { SafeAreaProvider, type Metrics } from 'react-native-safe-area-context';
 import type { Preview } from '@storybook/react-native-web-vite';
+import { colors } from '../src/theme/colors';
 
 // react-native-safe-area-context reads real device insets on a phone and
 // returns nothing on web. Pinning them keeps every story the same size in
@@ -20,7 +23,7 @@ const preview: Preview = {
     // and the project's own Accessibility setting; all three are required
     // before any violation is reported.
     a11y: { test: 'error' },
-    // The app has one dark palette; Storybook's background switcher would only
+    // The app has one paper palette; Storybook's background switcher would only
     // offer combinations that never ship.
     backgrounds: { disable: true },
     controls: { matchers: { color: /(background|color)$/i } },
@@ -28,7 +31,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <SafeAreaProvider initialMetrics={metrics}>
-        <View style={{ backgroundColor: '#0B1020', padding: 16 }}>
+        <View style={{ backgroundColor: colors.paper, padding: 16 }}>
           <Story />
         </View>
       </SafeAreaProvider>
