@@ -28,6 +28,16 @@ export const Incorrect: Story = {
   args: { correct: false },
 };
 
+/** A typed answer with a typo inside tolerance: accepted, with the slip pointed out. */
+export const NearMiss: Story = {
+  args: { correct: true, attempt: { text: 'insiduous', grade: 'near' } },
+};
+
+/** A typed wrong answer sits next to the word that was wanted. */
+export const IncorrectWithAttempt: Story = {
+  args: { correct: false, attempt: { text: 'invidious', grade: 'wrong' } },
+};
+
 /** After a graded review the panel also says when the word comes back. */
 export const WithNextDue: Story = {
   args: { nextDueLabel: 'in 8 days' },

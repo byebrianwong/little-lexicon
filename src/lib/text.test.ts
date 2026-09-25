@@ -2,6 +2,7 @@ import {
   normalizeAnswer,
   levenshtein,
   typoTolerance,
+  gradeAnswer,
   isNearMatch,
   makeClozeBlank,
 } from './text';
@@ -34,6 +35,25 @@ describe('typoTolerance', () => {
     expect(typoTolerance('cat')).toBe(0);
     expect(typoTolerance('lucid')).toBe(1);
     expect(typoTolerance('ephemeral')).toBe(2);
+  });
+});
+
+describe('gradeAnswer', () => {
+  it('grades an exact match, ignoring case and surrounding punctuation', () => {
+    expect(gradeAnswer('Ephemeral', 'ephemeral')).toBe('exact');
+    expect(gradeAnswer(' "lucid" ', 'lucid')).toBe('exact');
+  });
+  it('grades a typo within tolerance as near', () => {
+    expect(gradeAnswer('ephimeral', 'ephemeral')).toBe('near'); // 1 edit, tol 2
+    expect(gradeAnswer('lucyd', 'lucid')).toBe('near'); // 1 edit, tol 1
+  });
+  it('grades a different word as wrong', () => {
+    expect(gradeAnswer('opaque', 'ephemeral')).toBe('wrong');
+    expect(gradeAnswer('bat', 'cat')).toBe('wrong'); // short word, tol 0
+  });
+  it('grades an empty guess as wrong', () => {
+    expect(gradeAnswer('', 'cat')).toBe('wrong');
+    expect(gradeAnswer('   ', 'cat')).toBe('wrong');
   });
 });
 

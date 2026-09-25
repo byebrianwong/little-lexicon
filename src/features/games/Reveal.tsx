@@ -5,9 +5,11 @@
 import { useEffect, useRef } from 'react';
 import { Animated, Pressable, Text, View } from 'react-native';
 import type { ExampleContent, WordContent } from '@/lib/types';
+import type { AnswerGrade } from '@/lib/text';
 import { speakSentence, speakWord } from '@/lib/audio';
 import { Body, Button, Muted } from '@/components/ui';
 import { feedbackCorrect, feedbackIncorrect } from './feedback';
+import { useScrollToReveal } from './RevealScroll';
 
 export function AudioButton({
   onPress,
@@ -29,6 +31,16 @@ export function AudioButton({
   );
 }
 
+/**
+ * What the user typed, for the modes with a text box. The panel uses it to say
+ * "close enough" when a typo was accepted, and to show a wrong attempt next to
+ * the word that was wanted. Tap-to-choose modes leave it out.
+ */
+export interface RevealAttempt {
+  text: string;
+  grade: AnswerGrade;
+}
+
 export function Reveal({
   correct,
   content,
@@ -36,6 +48,7 @@ export function Reveal({
   onContinue,
   nextDueLabel,
   soundEnabled,
+  attempt,
 }: {
   correct: boolean;
   content: WordContent;
@@ -43,8 +56,11 @@ export function Reveal({
   onContinue: () => void;
   nextDueLabel?: string | null;
   soundEnabled: boolean;
+  attempt?: RevealAttempt | null;
 }) {
   const scale = useRef(new Animated.Value(0.9)).current;
+  const scrollToReveal = useScrollToReveal();
+  const scrolled = useRef(false);
 
   useEffect(() => {
     Animated.spring(scale, { toValue: 1, useNativeDriver: true, friction: 6 }).start();
@@ -55,11 +71,24 @@ export function Reveal({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Once the panel has a size, the question area can bring it on screen. Only
+  // the first layout counts: the panel is the last thing in the question, and
+  // later layouts (the spring finishing, a font loading) should not re-scroll.
+  function onLayout() {
+    if (scrolled.current) return;
+    scrolled.current = true;
+    requestAnimationFrame(scrollToReveal);
+  }
+
   const primaryDef =
     content.senses[0]?.plainLanguageDefinition ?? content.senses[0]?.definition ?? '';
 
+  const nearMiss = correct && attempt?.grade === 'near';
+  const title = !correct ? 'Not quite' : nearMiss ? 'Close enough' : 'Correct';
+  const typed = attempt && attempt.grade !== 'exact' ? attempt.text.trim() : '';
+
   return (
-    <Animated.View style={{ transform: [{ scale }] }} className="mt-4">
+    <Animated.View style={{ transform: [{ scale }] }} className="mt-4" onLayout={onLayout}>
       <View
         className={`rounded-2xl border p-4 ${
           correct ? 'border-success bg-success/10' : 'border-danger bg-danger/10'
@@ -68,8 +97,9 @@ export function Reveal({
         <Text
           className={`text-lg font-bold ${correct ? 'text-success' : 'text-danger'}`}
         >
-          {correct ? 'Correct' : 'Not quite'}
+          {title}
         </Text>
+        {typed !== '' ? <Muted className="mt-1">{`You typed "${typed}"`}</Muted> : null}
         <View className="mt-2 flex-row items-center gap-3">
           <Text className="text-text text-2xl font-bold">{content.headword}</Text>
           {content.ipa ? <Muted>{content.ipa}</Muted> : null}

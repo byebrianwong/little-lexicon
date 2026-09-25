@@ -5,7 +5,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { Body, Button, H2, Muted } from '@/components/ui';
-import { isNearMatch } from '@/lib/text';
+import { gradeAnswer, type AnswerGrade } from '@/lib/text';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -15,7 +15,7 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
   const sense = content.senses[0]!;
   const startedAt = useRef(Date.now()).current;
   const [value, setValue] = useState('');
-  const [answered, setAnswered] = useState<null | boolean>(null);
+  const [grade, setGrade] = useState<AnswerGrade | null>(null);
   const [hintUsed, setHintUsed] = useState(false);
 
   // Vary the prompt: definition, or a "the word that means X" synonym cue.
@@ -28,9 +28,9 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
   }, [content.wordId]);
 
   function submit() {
-    if (answered !== null) return;
+    if (grade !== null) return;
     // Only the exact target headword counts (synonyms are rejected).
-    setAnswered(isNearMatch(value, content.headword));
+    setGrade(gradeAnswer(value, content.headword));
   }
 
   const hint = hintUsed
@@ -43,11 +43,12 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
       <H2 className="mt-2">{prompt}</H2>
       {content.partOfSpeech ? <Muted className="mt-1">{content.partOfSpeech}</Muted> : null}
 
-      {answered === null ? (
+      {grade === null ? (
         <>
           <TextInput
             value={value}
             onChangeText={setValue}
+            autoFocus
             autoCapitalize="none"
             autoCorrect={false}
             placeholder="Your answer"
@@ -60,23 +61,24 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
           <View className="mt-4 gap-3">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button
-              title={hintUsed ? 'Give up' : 'Hint'}
+              title={hintUsed ? 'Show answer' : 'Hint'}
               variant="ghost"
-              onPress={() => (hintUsed ? setAnswered(false) : setHintUsed(true))}
+              onPress={() => (hintUsed ? setGrade('wrong') : setHintUsed(true))}
             />
           </View>
         </>
       ) : (
         <Reveal
-          correct={answered}
+          correct={grade !== 'wrong'}
           content={content}
           example={sense.examples[0] ?? null}
           soundEnabled={soundEnabled}
-          onContinue={() => onOutcome(makeOutcome(answered, startedAt, hintUsed))}
+          attempt={{ text: value, grade }}
+          onContinue={() => onOutcome(makeOutcome(grade !== 'wrong', startedAt, hintUsed))}
         />
       )}
 
-      {answered === null ? <Body className="mt-3 text-muted">Spell the exact word.</Body> : null}
+      {grade === null ? <Body className="mt-3 text-muted">Spell the exact word.</Body> : null}
     </View>
   );
 }

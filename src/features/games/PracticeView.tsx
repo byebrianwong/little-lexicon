@@ -1,9 +1,11 @@
 // Chrome for endless practice: a header with the running score and the game
 // itself as children. app/practice.tsx keeps the queue and the scoring.
 
+import { useEffect, useRef } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, H2, Muted, Row } from '@/components/ui';
+import { RevealScrollProvider } from './RevealScroll';
 
 function Center({ children }: { children: React.ReactNode }) {
   return (
@@ -49,6 +51,13 @@ export interface PracticeRunnerProps {
 
 export function PracticeRunner({ answered, correct, onClose, children }: PracticeRunnerProps) {
   const accuracy = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+  const scrollRef = useRef<ScrollView>(null);
+
+  // Each answer brings in a new question. The reveal may have scrolled the
+  // previous one to its end, so start the next one from the top.
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [answered]);
 
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
@@ -70,6 +79,7 @@ export function PracticeRunner({ answered, correct, onClose, children }: Practic
       </View>
 
       <ScrollView
+        ref={scrollRef}
         className="flex-1"
         contentContainerStyle={{
           paddingHorizontal: 20,
@@ -79,7 +89,7 @@ export function PracticeRunner({ answered, correct, onClose, children }: Practic
         }}
         keyboardShouldPersistTaps="handled"
       >
-        {children}
+        <RevealScrollProvider scrollRef={scrollRef}>{children}</RevealScrollProvider>
       </ScrollView>
     </SafeAreaView>
   );

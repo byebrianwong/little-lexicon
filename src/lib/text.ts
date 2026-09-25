@@ -46,15 +46,28 @@ export function typoTolerance(target: string): number {
 }
 
 /**
+ * How a typed answer compares to its target.
+ * - `exact`: the same word after normalising.
+ * - `near`: within the typo tolerance. The modes accept it, and the reveal
+ *   points out the slip so the right spelling registers.
+ * - `wrong`: anything else, including an empty guess.
+ */
+export type AnswerGrade = 'exact' | 'near' | 'wrong';
+
+export function gradeAnswer(guess: string, target: string): AnswerGrade {
+  const g = normalizeAnswer(guess);
+  const t = normalizeAnswer(target);
+  if (g === '' || t === '') return 'wrong';
+  if (g === t) return 'exact';
+  return levenshtein(g, t) <= typoTolerance(t) ? 'near' : 'wrong';
+}
+
+/**
  * True when `guess` matches `target` exactly or within the typo tolerance.
  * Used by cloze and production modes. Never accepts an empty guess.
  */
 export function isNearMatch(guess: string, target: string): boolean {
-  const g = normalizeAnswer(guess);
-  const t = normalizeAnswer(target);
-  if (g === '' || t === '') return false;
-  if (g === t) return true;
-  return levenshtein(g, t) <= typoTolerance(t);
+  return gradeAnswer(guess, target) !== 'wrong';
 }
 
 /**
