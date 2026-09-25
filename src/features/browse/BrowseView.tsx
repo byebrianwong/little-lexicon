@@ -1,11 +1,29 @@
 // The browse screen's layout, search box and expandable rows. It owns the
 // search text and which row is open, because those are screen-local; the word
 // list itself comes from app/(app)/browse.tsx.
+//
+// Each row is set like a dictionary entry: the word, its pronunciation and
+// part of speech, then the definition. Opening a row adds the example, the
+// memory hook and audio.
 
 import { useMemo, useState } from 'react';
-import { ActivityIndicator, FlatList, Pressable, Text, TextInput, View } from 'react-native';
+import { FlatList, Pressable, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Card, H1, H2, Muted, Pill, Row } from '@/components/ui';
+import {
+  Body,
+  Column,
+  H1,
+  Label,
+  Muted,
+  Note,
+  Row,
+  Section,
+  Spinner,
+  TextButton,
+  TextField,
+} from '@/components/ui';
+import { Icon } from '@/components/Icon';
+import { colors } from '@/theme/colors';
 import { speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 
@@ -34,39 +52,47 @@ export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) 
   }, [words, query]);
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={['top']}>
-      <View className="px-5 pt-5">
-        <Row className="justify-between">
+    <SafeAreaView className="flex-1 bg-paper" edges={['top']}>
+      <Column className="px-6 pt-10">
+        <Row className="items-baseline justify-between">
           <H1>Words</H1>
-          <Muted>{`${filtered.length}`}</Muted>
+          <Note>{`${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'}`}</Note>
         </Row>
-        <TextInput
+        <TextField
           value={query}
           onChangeText={setQuery}
           placeholder="Search words and meanings"
-          placeholderTextColor="#6B7796"
+          accessibilityLabel="Search words and meanings"
           autoCapitalize="none"
           autoCorrect={false}
-          className="mt-4 rounded-2xl bg-surface2 px-4 py-3 text-text"
+          className="mt-4 text-[18px]"
         />
-      </View>
+      </Column>
 
       {isLoading ? (
         <View className="flex-1 items-center justify-center">
-          <ActivityIndicator color="#6C8CFF" size="large" />
+          <Spinner size="large" />
         </View>
       ) : (
         <FlatList
           data={filtered}
           keyExtractor={(w) => String(w.wordId)}
-          contentContainerStyle={{ padding: 20, paddingBottom: 40, gap: 12 }}
+          contentContainerStyle={{
+            width: '100%',
+            maxWidth: 640,
+            alignSelf: 'center',
+            paddingHorizontal: 24,
+            paddingTop: 8,
+            paddingBottom: 48,
+          }}
           keyboardShouldPersistTaps="handled"
           ListEmptyComponent={
-            <Muted className="mt-8 text-center">No word matches that search.</Muted>
+            <Note className="mt-8 text-center">No word matches that search.</Note>
           }
-          renderItem={({ item }) => (
+          renderItem={({ item, index }) => (
             <WordRow
               word={item}
+              first={index === 0}
               expanded={openId === item.wordId}
               onToggle={() => setOpenId(openId === item.wordId ? null : item.wordId)}
               soundEnabled={soundEnabled}
@@ -80,11 +106,13 @@ export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) 
 
 function WordRow({
   word,
+  first,
   expanded,
   onToggle,
   soundEnabled,
 }: {
   word: WordContent;
+  first: boolean;
   expanded: boolean;
   onToggle: () => void;
   soundEnabled: boolean;
@@ -97,47 +125,62 @@ function WordRow({
   // Web renders every Pressable as a <button>, and a button inside a button is
   // invalid HTML that breaks hydration.
   return (
-    <Card>
+    <View className={first ? 'pt-2' : 'border-t border-rule'}>
       <Pressable
         onPress={onToggle}
         accessibilityRole="button"
         accessibilityLabel={`${word.headword}. ${expanded ? 'Collapse' : 'Expand'}`}
+        accessibilityState={{ expanded }}
+        className="py-4 active:bg-paper-deep web:hover:bg-paper-deep"
       >
-        <Row className="justify-between">
-          <View className="flex-1 pr-3">
-            <Row className="items-baseline gap-2">
-              <H2>{word.headword}</H2>
-              {word.ipa ? <Muted>{word.ipa}</Muted> : null}
-            </Row>
-            {word.partOfSpeech ? <Muted className="mt-1">{word.partOfSpeech}</Muted> : null}
+        <Row className="items-start justify-between gap-3">
+          <View className="flex-1 flex-row flex-wrap items-baseline gap-x-2">
+            <Body className="font-serif-medium text-[24px] leading-[30px]">
+              {word.headword}
+            </Body>
+            {word.ipa ? <Muted className="text-[15px]">{word.ipa}</Muted> : null}
+            {word.partOfSpeech ? (
+              <Note className="text-[15px]">{word.partOfSpeech}</Note>
+            ) : null}
           </View>
-          <Pill tone="neutral">{`T${word.difficultyTier}`}</Pill>
+          <Row className="gap-2 pt-[6px]">
+            <Label>{`Tier ${word.difficultyTier}`}</Label>
+            <Icon
+              name={expanded ? 'chevron-up' : 'chevron-down'}
+              size={16}
+              color={colors.graphite}
+            />
+          </Row>
         </Row>
-
-        <Text className="text-text mt-3">{definition}</Text>
+        <Body className="mt-1">{definition}</Body>
       </Pressable>
 
       {expanded ? (
-        <View className="mt-3 gap-3">
-          {example ? <Text className="text-muted italic">{`"${example.text}"`}</Text> : null}
-
-          {word.mnemonics[0] ? (
-            <View className="rounded-2xl bg-surface2 p-3">
-              <Muted>Memory hook</Muted>
-              <Text className="text-text mt-1">{word.mnemonics[0]}</Text>
-            </View>
+        <View className="gap-3 pb-5">
+          {example ? (
+            <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           ) : null}
 
-          <Row className="gap-3">
-            <SmallButton
-              label="🔊 Word"
+          {word.mnemonics[0] ? (
+            <Section label="Memory hook" rule="hairline" className="mt-1">
+              <Body className="text-[17px] leading-[25px]">{word.mnemonics[0]}</Body>
+            </Section>
+          ) : null}
+
+          <Row className="gap-6">
+            <TextButton
+              icon="speaker"
+              label="Word"
+              accessibilityLabel={`Hear ${word.headword}`}
               onPress={() => {
                 if (soundEnabled) void speakWord(word.headword, word.audioUrl);
               }}
             />
             {example ? (
-              <SmallButton
-                label="🔊 Sentence"
+              <TextButton
+                icon="speaker"
+                label="Sentence"
+                accessibilityLabel="Hear the example sentence"
                 onPress={() => {
                   if (soundEnabled) void speakSentence(example.text, example.audioUrl);
                 }}
@@ -146,18 +189,6 @@ function WordRow({
           </Row>
         </View>
       ) : null}
-    </Card>
-  );
-}
-
-function SmallButton({ label, onPress }: { label: string; onPress: () => void }) {
-  return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      className="rounded-full bg-surface2 px-4 py-2"
-    >
-      <Text className="text-text">{label}</Text>
-    </Pressable>
+    </View>
   );
 }

@@ -5,8 +5,19 @@
 // result rather than blocking the answer.
 
 import { useRef, useState } from 'react';
-import { ActivityIndicator, TextInput, View } from 'react-native';
-import { Body, Button, Card, H2, Muted } from '@/components/ui';
+import { View } from 'react-native';
+import {
+  Body,
+  Button,
+  Headword,
+  Label,
+  Muted,
+  Note,
+  Section,
+  Spinner,
+  TextButton,
+  TextField,
+} from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
 import { speakWord } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
@@ -50,25 +61,28 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   return (
     <View>
-      <Muted>Write a sentence using</Muted>
-      <H2 className="mt-1">{content.headword}</H2>
-      <Body className="mt-1 text-muted">{sense.plainLanguageDefinition ?? sense.definition}</Body>
+      <Label>Write a sentence using</Label>
+      <Headword size="md" className="mt-1">
+        {content.headword}
+      </Headword>
+      <Muted className="mt-1">{sense.plainLanguageDefinition ?? sense.definition}</Muted>
 
       {!feedback ? (
         <>
-          <TextInput
+          <TextField
+            variant="box"
             value={text}
             onChangeText={setText}
             autoFocus
             multiline
             placeholder={`Use "${content.headword}" naturally...`}
-            placeholderTextColor="#6B7699"
-            className="mt-5 min-h-24 rounded-2xl border border-border bg-surface px-4 py-3 text-text text-base"
+            accessibilityLabel={`Your sentence using ${content.headword}`}
+            className="mt-6"
           />
-          <View className="mt-4">
+          <View className="mt-6">
             {busy ? (
               <View className="items-center py-3">
-                <ActivityIndicator color="#6C8CFF" />
+                <Spinner />
               </View>
             ) : (
               <Button
@@ -81,23 +95,19 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
         </>
       ) : (
         <View>
-          <Card
-            className={`mt-5 ${
-              feedback.correct === false ? 'border-danger' : 'border-success'
-            }`}
-          >
-            <Body className="font-semibold">{feedback.feedback}</Body>
+          <Section label="Feedback" className="mt-6">
+            <Body>{feedback.feedback}</Body>
             {feedback.suggestion ? (
-              <Muted className="mt-2">{feedback.suggestion}</Muted>
+              <Note className="mt-2">{feedback.suggestion}</Note>
             ) : null}
-          </Card>
-          <View className="mt-3">
-            <Button
-              title="Hear the word"
-              variant="ghost"
-              onPress={() => speakWord(content.headword, content.audioUrl)}
-            />
-          </View>
+            <View className="mt-1">
+              <TextButton
+                icon="speaker"
+                label="Hear the word"
+                onPress={() => speakWord(content.headword, content.audioUrl)}
+              />
+            </View>
+          </Section>
           <Reveal
             correct={correct}
             content={content}

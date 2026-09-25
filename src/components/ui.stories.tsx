@@ -1,17 +1,26 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { View } from 'react-native';
+import { Icon, type IconName } from './Icon';
 import {
   Body,
-  Card,
+  Choice,
+  ChoiceGroup,
   Divider,
   H1,
   H2,
+  Headword,
+  Label,
+  ListRow,
   Muted,
-  Pill,
+  Note,
   ProgressBar,
   Row,
   Screen,
+  Section,
   Spacer,
+  Stat,
+  TextButton,
+  TextField,
 } from './ui';
 
 // A catalog meta: these primitives are small enough that one story per
@@ -30,54 +39,106 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const noop = () => {};
+
 export const Typography: Story = {
   render: () => (
-    <View style={{ gap: 8 }}>
+    <View style={{ gap: 10 }}>
+      <Label>Label, in small capitals</Label>
       <H1>Little Lexicon</H1>
       <H2>Your session</H2>
+      <Headword>ephemeral</Headword>
       <Body>A word you have seen twice before.</Body>
       <Muted>Due in 3 days</Muted>
+      <Note>“Fame in the age of the internet is ephemeral.”</Note>
+      <Row className="gap-4">
+        <Label tone="ink">Ink</Label>
+        <Label tone="accent">Accent</Label>
+      </Row>
     </View>
   ),
 };
 
-export const Pills: Story = {
+// Sections replace cards: an ink rule, a label, then the content. A hairline
+// section sits inside another as an aside.
+export const Sections: Story = {
   render: () => (
-    <View style={{ gap: 8, alignItems: 'flex-start' }}>
-      <Pill>Neutral</Pill>
-      <Pill tone="primary">New</Pill>
-      <Pill tone="success">Learned</Pill>
-      <Pill tone="danger">Missed</Pill>
-      <Pill tone="gold">Streak</Pill>
-    </View>
-  ),
-};
-
-export const Cards: Story = {
-  render: () => (
-    <View style={{ gap: 12 }}>
-      <Card>
-        <H2>ephemeral</H2>
-        <Spacer h={4} />
-        <Muted>adjective</Muted>
-        <Spacer h={8} />
-        <Body>Lasting for a very short time.</Body>
-      </Card>
-      <Card>
-        <Row className="gap-2">
-          <Pill tone="gold">7 day streak</Pill>
-          <Pill tone="primary">12 words</Pill>
+    <View style={{ gap: 28 }}>
+      <Section label="Today" trailing="7 of 15">
+        <Body>Eight more to keep your streak.</Body>
+      </Section>
+      <Section label="Memory hook" rule="hairline">
+        <Body>Ephemera are the scraps of paper meant to be thrown away.</Body>
+      </Section>
+      <Section label="Words">
+        <Row className="items-start gap-4">
+          <Stat value={9} label="Due now" />
+          <Stat value={24} label="Learning" />
+          <Stat value={112} label="Known" />
         </Row>
-        <Divider />
-        <Body>Keep going to reach 10.</Body>
-      </Card>
+      </Section>
     </View>
+  ),
+};
+
+export const Rows: Story = {
+  render: () => (
+    <View>
+      <ListRow title="Start session" emphasis showArrow onPress={noop} />
+      <ListRow title="Endless practice" detail="no timer" onPress={noop} />
+      <ListRow title="Delete account" tone="accent" onPress={noop} last />
+    </View>
+  ),
+};
+
+export const Controls: Story = {
+  render: () => (
+    <View style={{ gap: 20 }}>
+      <ChoiceGroup>
+        <Choice label="10" selected={false} onPress={noop} />
+        <Choice label="15" selected onPress={noop} />
+        <Choice label="20" selected={false} onPress={noop} />
+      </ChoiceGroup>
+      <TextField placeholder="Type the word" accessibilityLabel="Answer" />
+      <TextField
+        variant="box"
+        multiline
+        placeholder="Write a sentence"
+        accessibilityLabel="Sentence"
+      />
+      <TextButton icon="speaker" label="Hear it" onPress={noop} />
+    </View>
+  ),
+};
+
+const ICONS: IconName[] = [
+  'arrow-right',
+  'arrow-left',
+  'close',
+  'check',
+  'cross',
+  'speaker',
+  'chevron-down',
+  'chevron-up',
+  'search',
+];
+
+export const Icons: Story = {
+  render: () => (
+    <Row className="flex-wrap gap-5">
+      {ICONS.map((name) => (
+        <View key={name} style={{ alignItems: 'center', gap: 4, width: 64 }}>
+          <Icon name={name} size={24} />
+          <Muted className="text-[12px] leading-[16px]">{name}</Muted>
+        </View>
+      ))}
+    </Row>
   ),
 };
 
 export const Progress: Story = {
   render: () => (
-    <View style={{ gap: 12 }}>
+    <View style={{ gap: 14 }}>
       {(
         [
           ['Empty', 0],
@@ -90,11 +151,15 @@ export const Progress: Story = {
         <View key={label} style={{ gap: 6 }}>
           <Row className="justify-between">
             <Muted>{label}</Muted>
-            <Muted>{Math.round(Math.min(1, Math.max(0, fraction)) * 100)}%</Muted>
+            <Muted>{`${Math.round(Math.min(1, Math.max(0, fraction)) * 100)}%`}</Muted>
           </Row>
           <ProgressBar fraction={fraction} />
         </View>
       ))}
+      <View style={{ gap: 6 }}>
+        <Muted>Accent, for the speed round clock</Muted>
+        <ProgressBar fraction={0.4} tone="accent" />
+      </View>
     </View>
   ),
 };
@@ -103,7 +168,7 @@ export const Layout: Story = {
   render: () => (
     <View>
       <Row className="gap-2">
-        <Pill tone="primary">Row</Pill>
+        <Label tone="ink">Row</Label>
         <Muted>items sit on one line</Muted>
       </Row>
       <Divider />

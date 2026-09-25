@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "scheme": "littlelexicon",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "runtimeVersion": {
       "policy": "fingerprint"
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#0B1020"
+      "backgroundColor": "#F7F3EA"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -27,7 +27,7 @@
       "package": "com.gamesapps.littlelexicon",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0B1020"
+        "backgroundColor": "#F7F3EA"
       },
       "permissions": ["android.permission.MODIFY_AUDIO_SETTINGS"]
     },
@@ -48,7 +48,7 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#0B1020",
+          "backgroundColor": "#F7F3EA",
           "image": "./assets/splash.png",
           "imageWidth": 200
         }

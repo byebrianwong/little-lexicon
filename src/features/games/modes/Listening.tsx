@@ -4,13 +4,18 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
-import { Body, Muted } from '@/components/ui';
+import { Label, Note } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
-import { buildOptions, mulberry32, pickWordDistractors, type Option } from '../optionPool';
+import {
+  buildOptions,
+  mulberry32,
+  pickWordDistractors,
+  type Option,
+} from '../optionPool';
 import { AudioButton, Reveal } from '../Reveal';
-import { OptionButton } from './OptionButton';
+import { OptionButton, OptionList } from './OptionButton';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
 export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
@@ -42,37 +47,40 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   return (
     <View>
-      <Muted>Listen, then choose the word</Muted>
-      <View className="mt-3">
+      <Label>Listen, then choose the word</Label>
+      <View className="mt-2">
         <AudioButton
           onPress={() => speakWord(content.headword, content.audioUrl)}
           label="Play again"
         />
       </View>
 
-      <View className="mt-5">
-        {options.map((opt) => {
-          const state = !answered
-            ? 'idle'
-            : opt.correct
-              ? 'correct'
-              : opt === answered
-                ? 'wrong'
-                : 'muted';
-          return (
-            <OptionButton
-              key={opt.text}
-              label={opt.text}
-              state={state}
-              disabled={!!answered}
-              onPress={() => choose(opt)}
-            />
-          );
-        })}
+      <View className="mt-4">
+        <OptionList>
+          {options.map((opt, i) => {
+            const state = !answered
+              ? 'idle'
+              : opt.correct
+                ? 'correct'
+                : opt === answered
+                  ? 'wrong'
+                  : 'muted';
+            return (
+              <OptionButton
+                key={opt.text}
+                index={i}
+                label={opt.text}
+                state={state}
+                disabled={!!answered}
+                onPress={() => choose(opt)}
+              />
+            );
+          })}
+        </OptionList>
       </View>
 
       {!answered ? (
-        <Body className="mt-1 text-muted">Tap the word you heard.</Body>
+        <Note className="mt-4">Tap the word you heard.</Note>
       ) : (
         <Reveal
           correct={answered.correct}

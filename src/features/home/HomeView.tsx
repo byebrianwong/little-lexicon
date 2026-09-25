@@ -2,9 +2,18 @@
 // so every state it can be in (loading, brand new account, goal met) is one
 // props object away. app/(app)/index.tsx supplies the real data.
 
-import { RefreshControl, ScrollView, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button, Card, H1, H2, Muted, Pill, ProgressBar, Row } from '@/components/ui';
+import { Text, View } from 'react-native';
+import {
+  H1,
+  Label,
+  ListRow,
+  Muted,
+  Note,
+  Row,
+  Screen,
+  Section,
+  Stat,
+} from '@/components/ui';
 import { levelProgress } from '@/features/gamification/xp';
 import type { ProgressCounts } from '@/lib/backend/types';
 import type { Profile } from '@/lib/types';
@@ -30,76 +39,57 @@ export function HomeView({
   onSpeedRound,
 }: HomeViewProps) {
   const goal = profile?.dailyGoal ?? 15;
-  const goalFraction = Math.min(1, reviewsToday / goal);
+  const goalMet = reviewsToday >= goal;
+  const toGo = Math.max(0, goal - reviewsToday);
   const lvl = profile ? levelProgress(profile.xpTotal) : null;
+  const streak = profile?.streakCount ?? 0;
 
   return (
-    <SafeAreaView className="flex-1 bg-bg" edges={['top']}>
-      <ScrollView
-        contentContainerStyle={{ padding: 20, paddingBottom: 40 }}
-        refreshControl={
-          <RefreshControl refreshing={false} onRefresh={onRefresh} tintColor="#6C8CFF" />
-        }
-      >
-        <Row className="justify-between">
-          <View>
-            <Muted>Welcome back</Muted>
-            <H1>{profile?.displayName ?? 'Learner'}</H1>
-          </View>
-          <View className="items-end">
-            <Pill tone="gold">{`🔥 ${profile?.streakCount ?? 0}`}</Pill>
-            {lvl ? <Muted className="mt-2">{`Level ${lvl.level}`}</Muted> : null}
-          </View>
-        </Row>
-
-        <Card className="mt-5">
-          <Row className="justify-between">
-            <H2>Today</H2>
-            <Muted>{`${reviewsToday} / ${goal}`}</Muted>
-          </Row>
-          <View className="mt-3">
-            <ProgressBar fraction={goalFraction} />
-          </View>
-          <Muted className="mt-2">
-            {goalFraction >= 1
-              ? 'Daily goal met. Nice work.'
-              : `${Math.max(0, goal - reviewsToday)} to go to keep your streak.`}
-          </Muted>
-        </Card>
-
-        <View className="mt-5 gap-3">
-          <Button title="Start session" onPress={onStartSession} />
-          <Button title="♾️ Endless practice" variant="secondary" onPress={onPractice} />
-          <Button title="⚡️ Speed round" variant="secondary" onPress={onSpeedRound} />
+    <Screen scroll edges={['top']} onRefresh={onRefresh}>
+      <Row className="items-end justify-between gap-4 pt-4">
+        <View className="flex-shrink">
+          <Note className="text-[17px]">Welcome back</Note>
+          <H1 className="text-[44px] leading-[48px]">
+            {profile?.displayName ?? 'Learner'}
+          </H1>
         </View>
+        <View className="items-end pb-1">
+          <Label>Streak</Label>
+          <Text className="mt-1 font-serif-medium text-[22px] leading-[26px] text-ink">
+            {`${streak} day${streak === 1 ? '' : 's'}`}
+          </Text>
+        </View>
+      </Row>
 
-        <Row className="mt-5 gap-3">
-          <StatTile label="Due now" value={counts?.due ?? 0} />
-          <StatTile label="Learning" value={counts?.learning ?? 0} />
-          <StatTile label="Known" value={counts?.knownTotal ?? 0} />
+      <Section label="Today" className="mt-10">
+        <Row className="items-baseline gap-3">
+          <Text className="font-serif-medium text-[64px] leading-[68px] tracking-[-1px] text-ink">
+            {reviewsToday}
+          </Text>
+          <Note className="text-[22px] leading-[28px]">{`of ${goal} reviews`}</Note>
         </Row>
+        <Muted className="mt-1 text-[17px]">
+          {goalMet ? 'Daily goal met. Nice work.' : `${toGo} to go to keep your streak.`}
+        </Muted>
+      </Section>
 
-        {lvl ? (
-          <Card className="mt-5">
-            <Row className="justify-between">
-              <Muted>{`Level ${lvl.level}`}</Muted>
-              <Muted>{`${lvl.xpIntoLevel} / ${lvl.xpForNextLevel} XP`}</Muted>
-            </Row>
-            <View className="mt-2">
-              <ProgressBar fraction={lvl.fraction} />
-            </View>
-          </Card>
-        ) : null}
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
+      <View className="mt-9">
+        <ListRow title="Start session" emphasis showArrow onPress={onStartSession} />
+        <ListRow title="Endless practice" detail="no timer" onPress={onPractice} />
+        <ListRow title="Speed round" detail="sixty seconds" onPress={onSpeedRound} last />
+      </View>
 
-function StatTile({ label, value }: { label: string; value: number }) {
-  return (
-    <Card className="flex-1 items-center">
-      <H2>{value}</H2>
-      <Muted className="mt-1">{label}</Muted>
-    </Card>
+      <Row className="mt-9 items-start gap-4">
+        <Stat value={counts?.due ?? 0} label="Due now" />
+        <Stat value={counts?.learning ?? 0} label="Learning" />
+        <Stat value={counts?.knownTotal ?? 0} label="Known" />
+      </Row>
+
+      {lvl ? (
+        <Note className="mt-10 text-[15px]">
+          {`Level ${lvl.level}. ${lvl.xpIntoLevel} of ${lvl.xpForNextLevel} XP toward level ${lvl.level + 1}.`}
+        </Note>
+      ) : null}
+    </Screen>
   );
 }

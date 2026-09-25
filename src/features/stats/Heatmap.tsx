@@ -1,17 +1,24 @@
 // Calendar heatmap of daily activity (Phase 5.4). Columns are weeks; each cell
 // is a day, shaded by reviews done. No external chart library.
+//
+// Shades run from a faint paper tone to full ink, so busier days are darker
+// in greyscale as well as in colour.
 
 import { View } from 'react-native';
 import type { DailyStats } from '@/lib/types';
 import { Muted } from '@/components/ui';
+import { heat } from '@/theme/colors';
 
 function shade(reviews: number): string {
-  if (reviews <= 0) return '#1E2740';
-  if (reviews < 5) return '#2C3E6B';
-  if (reviews < 10) return '#3E5DB0';
-  if (reviews < 20) return '#5A7CF0';
-  return '#8AA6FF';
+  if (reviews <= 0) return heat[0];
+  if (reviews < 5) return heat[1];
+  if (reviews < 10) return heat[2];
+  if (reviews < 20) return heat[3];
+  return heat[4];
 }
+
+const CELL = 13;
+const GAP = 3;
 
 export function Heatmap({ days }: { days: DailyStats[] }) {
   // Group into weeks of 7, oldest first.
@@ -20,9 +27,9 @@ export function Heatmap({ days }: { days: DailyStats[] }) {
 
   return (
     <View>
-      <View className="flex-row gap-1">
+      <View className="flex-row" style={{ gap: GAP }}>
         {weeks.map((week, wi) => (
-          <View key={wi} className="gap-1">
+          <View key={wi} style={{ gap: GAP }}>
             {week.map((d) => (
               <View
                 key={d.day}
@@ -34,9 +41,9 @@ export function Heatmap({ days }: { days: DailyStats[] }) {
                 accessibilityRole="image"
                 accessibilityLabel={`${d.day}: ${d.reviewsDone} reviews`}
                 style={{
-                  width: 12,
-                  height: 12,
-                  borderRadius: 3,
+                  width: CELL,
+                  height: CELL,
+                  borderRadius: 2,
                   backgroundColor: shade(d.reviewsDone),
                 }}
               />
@@ -44,15 +51,20 @@ export function Heatmap({ days }: { days: DailyStats[] }) {
           </View>
         ))}
       </View>
-      <View className="mt-2 flex-row items-center gap-2">
-        <Muted>Less</Muted>
+      <View className="mt-3 flex-row items-center gap-2">
+        <Muted className="text-[14px] leading-[18px]">Less</Muted>
         {[0, 4, 9, 19, 25].map((n) => (
           <View
             key={n}
-            style={{ width: 12, height: 12, borderRadius: 3, backgroundColor: shade(n) }}
+            style={{
+              width: CELL,
+              height: CELL,
+              borderRadius: 2,
+              backgroundColor: shade(n),
+            }}
           />
         ))}
-        <Muted>More</Muted>
+        <Muted className="text-[14px] leading-[18px]">More</Muted>
       </View>
     </View>
   );

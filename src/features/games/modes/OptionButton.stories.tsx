@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { View } from 'react-native';
-import { OptionButton } from './OptionButton';
+import { OptionButton, OptionList } from './OptionButton';
 
 const meta = {
   title: 'Games/OptionButton',
@@ -43,15 +43,35 @@ export const Muted: Story = {
 };
 
 // What a multiple-choice question looks like right after a wrong answer:
-// the chosen option is red, the right one green, the rest dimmed.
+// the right option ticked, the chosen one crossed out, the rest dimmed.
 export const AnsweredIncorrectly: Story = {
   render: () => (
-    <View>
-      <OptionButton label="lasting a very short time" state="correct" onPress={() => {}} />
-      <OptionButton label="happening once a year" state="wrong" onPress={() => {}} />
-      <OptionButton label="impossible to describe" state="muted" onPress={() => {}} />
-      <OptionButton label="full of sudden changes" state="muted" onPress={() => {}} />
-    </View>
+    <OptionList>
+      <OptionButton
+        index={0}
+        label="lasting a very short time"
+        state="correct"
+        onPress={() => {}}
+      />
+      <OptionButton
+        index={1}
+        label="happening once a year"
+        state="wrong"
+        onPress={() => {}}
+      />
+      <OptionButton
+        index={2}
+        label="impossible to describe"
+        state="muted"
+        onPress={() => {}}
+      />
+      <OptionButton
+        index={3}
+        label="full of sudden changes"
+        state="muted"
+        onPress={() => {}}
+      />
+    </OptionList>
   ),
 };
 

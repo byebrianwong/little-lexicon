@@ -5,7 +5,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
-import { Body, Button, H2, Muted, Row } from '@/components/ui';
+import { Button, Headword, Label, Note } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
@@ -17,7 +17,8 @@ import {
   type Option,
 } from '../optionPool';
 import { AudioButton, Reveal } from '../Reveal';
-import { OptionButton } from './OptionButton';
+import { OptionButton, OptionList } from './OptionButton';
+import { Prompt } from '../Prompt';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
 export function MultipleChoice({
@@ -71,41 +72,60 @@ export function MultipleChoice({
 
   return (
     <View>
-      <Muted>{isDefToWord ? 'Which word means:' : 'What does this word mean?'}</Muted>
+      <Label>{isDefToWord ? 'Which word means' : 'What does this word mean?'}</Label>
       {isDefToWord ? (
-        <H2 className="mt-2">{prompt}</H2>
+        <Prompt className="mt-2">{prompt}</Prompt>
       ) : (
-        <Row className="mt-2 gap-3">
-          {!audioFirst ? <H2>{content.headword}</H2> : <H2>🔊 …</H2>}
-          <AudioButton onPress={() => speakWord(content.headword, content.audioUrl)} label="Hear it" />
-        </Row>
+        <View className="mt-1">
+          <Headword size="md" accessibilityLabel={audioFirst ? 'Hidden word' : undefined}>
+            {audioFirst ? '…' : content.headword}
+          </Headword>
+          <AudioButton
+            onPress={() => speakWord(content.headword, content.audioUrl)}
+            label="Hear it"
+          />
+        </View>
       )}
 
       <View className="mt-5">
-        {options.map((opt) => {
-          const state = !answered
-            ? eliminated.has(opt.text)
-              ? 'muted'
-              : 'idle'
-            : opt.correct
-              ? 'correct'
-              : opt === answered
-                ? 'wrong'
-                : 'muted';
-          return (
-            <OptionButton
-              key={opt.text}
-              label={opt.text}
-              state={state}
-              disabled={!!answered || eliminated.has(opt.text)}
-              onPress={() => choose(opt)}
-            />
-          );
-        })}
+        <OptionList>
+          {options.map((opt, i) => {
+            const state = !answered
+              ? eliminated.has(opt.text)
+                ? 'muted'
+                : 'idle'
+              : opt.correct
+                ? 'correct'
+                : opt === answered
+                  ? 'wrong'
+                  : 'muted';
+            return (
+              <OptionButton
+                key={opt.text}
+                index={i}
+                label={opt.text}
+                state={state}
+                disabled={!!answered || eliminated.has(opt.text)}
+                onPress={() => choose(opt)}
+              />
+            );
+          })}
+        </OptionList>
       </View>
 
       {!answered ? (
-        <Button title="Hint (50/50)" variant="ghost" onPress={useHint} disabled={hintUsed} />
+        <View className="mt-4 flex-row flex-wrap items-center justify-between gap-2">
+          <Note>
+            {isDefToWord ? 'Pick the word that fits.' : 'Tap the meaning you think fits.'}
+          </Note>
+          <Button
+            title="Hint (50/50)"
+            variant="ghost"
+            className="px-0"
+            onPress={useHint}
+            disabled={hintUsed}
+          />
+        </View>
       ) : (
         <Reveal
           correct={answered.correct}
@@ -118,10 +138,6 @@ export function MultipleChoice({
           }}
         />
       )}
-
-      {!answered && !isDefToWord ? (
-        <Body className="mt-2 text-muted">Tap the meaning you think fits.</Body>
-      ) : null}
     </View>
   );
 }

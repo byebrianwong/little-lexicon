@@ -3,7 +3,9 @@
 
 import { useMemo, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import { Body, Button, H2, Muted } from '@/components/ui';
+import { Button, Headword, Label, Note, cx } from '@/components/ui';
+import { Icon } from '@/components/Icon';
+import { colors } from '@/theme/colors';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import { mulberry32, pickRelationDistractors, shuffle } from '../optionPool';
@@ -60,23 +62,20 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
 
   return (
     <View>
-      <Muted>{`Select every ${relationType} of`}</Muted>
-      <H2 className="mt-1">{content.headword}</H2>
+      <Label>{`Select every ${relationType} of`}</Label>
+      <Headword size="md" className="mt-1">
+        {content.headword}
+      </Headword>
 
-      <View className="mt-5">
+      <View className="mt-5 border-b border-rule">
         {options.map((opt) => {
           const isSel = selected.has(opt);
           const isCorrect = correctSet.has(opt.toLowerCase());
-          const cls =
-            answered === null
-              ? isSel
-                ? 'border-primary bg-primary/15'
-                : 'border-border bg-surface'
-              : isCorrect
-                ? 'border-success bg-success/15'
-                : isSel
-                  ? 'border-danger bg-danger/15'
-                  : 'border-border bg-surface opacity-60';
+          // Before checking, a box shows what is picked. After, the red pen
+          // marks every right answer and crosses out a wrong pick.
+          const mark: 'correct' | 'wrong' | null =
+            answered === null ? null : isCorrect ? 'correct' : isSel ? 'wrong' : null;
+          const dim = answered !== null && mark === null;
           return (
             <Pressable
               key={opt}
@@ -87,17 +86,55 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
               accessibilityState={{ selected: isSel, disabled: answered !== null }}
               onPress={() => toggle(opt)}
               disabled={answered !== null}
-              className={`flex-row items-center justify-between rounded-2xl border px-4 py-4 mb-3 ${cls}`}
+              className={cx(
+                'min-h-[54px] flex-row items-center gap-3 border-t border-rule py-3',
+                answered === null && 'active:bg-paper-deep web:hover:bg-paper-deep',
+              )}
             >
-              <Text className="text-text text-base">{opt}</Text>
-              {isSel ? <Text className="text-primary text-base">✓</Text> : null}
+              <View
+                className={cx(
+                  'h-5 w-5 items-center justify-center rounded-[2px] border',
+                  isSel ? 'border-ink bg-ink' : 'border-line',
+                  dim && 'opacity-50',
+                )}
+              >
+                {isSel ? (
+                  <Icon name="check" size={14} color={colors.paper} strokeWidth={2.5} />
+                ) : null}
+              </View>
+              <Text
+                className={cx(
+                  'flex-1 text-[19px] leading-[27px]',
+                  mark === 'correct'
+                    ? 'font-serif-medium text-ink'
+                    : mark === 'wrong'
+                      ? 'font-serif text-graphite line-through'
+                      : dim
+                        ? 'font-serif text-graphite'
+                        : 'font-serif text-ink',
+                )}
+              >
+                {opt}
+              </Text>
+              {mark ? (
+                <Icon
+                  name={mark === 'correct' ? 'check' : 'cross'}
+                  color={colors.accent}
+                  strokeWidth={2.25}
+                />
+              ) : null}
             </Pressable>
           );
         })}
       </View>
 
       {answered === null ? (
-        <Button title="Check" onPress={submit} disabled={selected.size === 0} />
+        <>
+          <Note className="mt-4">You can pick more than one.</Note>
+          <View className="mt-6">
+            <Button title="Check" onPress={submit} disabled={selected.size === 0} />
+          </View>
+        </>
       ) : (
         <Reveal
           correct={answered}
@@ -110,9 +147,6 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
           }}
         />
       )}
-      {answered === null ? (
-        <Body className="mt-2 text-muted">You can pick more than one.</Body>
-      ) : null}
     </View>
   );
 }

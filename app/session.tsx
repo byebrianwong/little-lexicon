@@ -29,7 +29,6 @@ import { WordIntro } from '@/features/games/WordIntro';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 import { useSessionResult } from '@/features/session/sessionResult';
 import {
-  SessionCenter,
   SessionLoading,
   SessionNothingScheduled,
   SessionRanDry,
@@ -38,6 +37,7 @@ import {
 import { applyGoalMet } from '@/features/gamification/streak';
 import { newlyUnlocked } from '@/features/gamification/achievements';
 import { todayString } from '@/lib/date';
+import { CenterScreen } from '@/components/ui';
 
 interface Totals {
   reviewed: number;
@@ -352,7 +352,7 @@ export default function SessionScreen() {
     );
   }
 
-  if (!current || !profile || !effectiveMode) return <SessionCenter>{null}</SessionCenter>;
+  if (!current || !profile || !effectiveMode) return <CenterScreen>{null}</CenterScreen>;
 
   const showIntro = current.isNew && !introduced.has(current.content.wordId);
   // The queue has no fixed end any more, so a bar that fills toward it would be

@@ -3,13 +3,14 @@
 // target headword (a synonym does not count).
 
 import { useMemo, useRef, useState } from 'react';
-import { TextInput, View } from 'react-native';
-import { Body, Button, H2, Muted } from '@/components/ui';
+import { View } from 'react-native';
+import { Button, Label, Note, TextField } from '@/components/ui';
 import { gradeAnswer, type AnswerGrade } from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useNextDueLabel } from '../GameContext';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
+import { Prompt } from '../Prompt';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
 
 export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
@@ -49,26 +50,30 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   return (
     <View>
-      <Muted>Type the word</Muted>
-      <H2 className="mt-2">{prompt}</H2>
-      {content.partOfSpeech ? <Muted className="mt-1">{content.partOfSpeech}</Muted> : null}
+      <Label>Type the word</Label>
+      <Prompt className="mt-2">{prompt}</Prompt>
+      {content.partOfSpeech ? <Note className="mt-1">{content.partOfSpeech}</Note> : null}
 
       {grade === null ? (
         <>
-          <TextInput
+          <TextField
             value={value}
             onChangeText={setValue}
             autoFocus
             autoCapitalize="none"
             autoCorrect={false}
             placeholder="Your answer"
-            placeholderTextColor="#6B7699"
-            className="mt-5 rounded-2xl border border-border bg-surface px-4 py-4 text-text text-base"
+            accessibilityLabel="Your answer"
+            className="mt-6"
             onSubmitEditing={submit}
             returnKeyType="done"
           />
-          {hint ? <Muted className="mt-2">{hint}</Muted> : null}
-          <View className="mt-4 gap-3">
+          {hint ? (
+            <Note className="mt-2">{hint}</Note>
+          ) : (
+            <Note className="mt-2">Spell the exact word.</Note>
+          )}
+          <View className="mt-6 gap-2">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button
               title={hintUsed ? 'Show answer' : 'Hint'}
@@ -90,8 +95,6 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
           }}
         />
       )}
-
-      {grade === null ? <Body className="mt-3 text-muted">Spell the exact word.</Body> : null}
     </View>
   );
 }

@@ -2,8 +2,8 @@
 // container (AuthForm) owns the backend calls, the error text and navigation.
 
 import { useState } from 'react';
-import { TextInput, View } from 'react-native';
-import { Body, Button, Divider, H1, Muted, Spacer } from '@/components/ui';
+import { View } from 'react-native';
+import { Body, Button, H1, Label, Note, Row, Rule, TextField } from '@/components/ui';
 
 export interface AuthCredentials {
   email: string;
@@ -22,9 +22,6 @@ export interface AuthFormViewProps {
   onSwitchMode: () => void;
 }
 
-const inputClass =
-  'rounded-2xl border border-border bg-surface px-4 py-4 text-text text-base mb-3';
-
 export function AuthFormView({
   mode,
   busy,
@@ -40,67 +37,81 @@ export function AuthFormView({
   const [displayName, setDisplayName] = useState('');
 
   return (
-    <View className="flex-1 justify-center">
-      <H1>{isSignUp ? 'Create your account' : 'Welcome back'}</H1>
-      <Muted className="mt-2">Advanced English vocabulary, one short session a day.</Muted>
+    <View className="flex-1 justify-center py-8">
+      <Label>Little Lexicon</Label>
+      <H1 className="mt-3 text-[40px] leading-[46px]">
+        {isSignUp ? 'Create your account' : 'Welcome back'}
+      </H1>
+      <Note className="mt-2 text-[17px]">
+        Advanced English vocabulary, one short session a day.
+      </Note>
 
       {showDemoNote ? (
-        <Body className="mt-3 text-primary">
-          Demo mode: any email and password works. Nothing leaves this device.
-        </Body>
+        <View className="mt-6 border-t border-rule pt-3">
+          <Label tone="accent">Demo mode</Label>
+          <Body className="mt-1 text-[16px] leading-[23px]">
+            Any email and password works. Nothing leaves this device.
+          </Body>
+        </View>
       ) : null}
 
-      <Spacer h={20} />
-
-      {isSignUp ? (
-        <TextInput
-          value={displayName}
-          onChangeText={setDisplayName}
-          placeholder="Display name (optional)"
-          placeholderTextColor="#6B7699"
-          accessibilityLabel="Display name (optional)"
-          className={inputClass}
+      <View className="mt-6 gap-2">
+        {isSignUp ? (
+          <TextField
+            value={displayName}
+            onChangeText={setDisplayName}
+            placeholder="Display name (optional)"
+            accessibilityLabel="Display name (optional)"
+          />
+        ) : null}
+        <TextField
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Email"
+          accessibilityLabel="Email"
+          autoCapitalize="none"
+          keyboardType="email-address"
+          autoComplete="email"
         />
-      ) : null}
-      <TextInput
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Email"
-        placeholderTextColor="#6B7699"
-        accessibilityLabel="Email"
-        autoCapitalize="none"
-        keyboardType="email-address"
-        autoComplete="email"
-        className={inputClass}
-      />
-      <TextInput
-        value={password}
-        onChangeText={setPassword}
-        placeholder="Password"
-        placeholderTextColor="#6B7699"
-        accessibilityLabel="Password"
-        secureTextEntry
-        className={inputClass}
-      />
+        <TextField
+          value={password}
+          onChangeText={setPassword}
+          placeholder="Password"
+          accessibilityLabel="Password"
+          secureTextEntry
+        />
+      </View>
 
-      {error ? <Body className="text-danger mb-2">{error}</Body> : null}
+      {error ? <Body className="mt-4 text-accent">{error}</Body> : null}
 
+      <View className="mt-8">
+        <Button
+          title={isSignUp ? 'Sign up' : 'Sign in'}
+          onPress={() => onSubmit({ email, password, displayName })}
+          loading={busy}
+          disabled={email.trim() === '' || password === ''}
+        />
+      </View>
+
+      <Row className="my-6 gap-3">
+        <Rule className="flex-1" />
+        <Note>or</Note>
+        <Rule className="flex-1" />
+      </Row>
       <Button
-        title={isSignUp ? 'Sign up' : 'Sign in'}
-        onPress={() => onSubmit({ email, password, displayName })}
-        loading={busy}
-        disabled={email.trim() === '' || password === ''}
+        title="Continue with Google"
+        variant="secondary"
+        onPress={onOAuth}
+        disabled={busy}
       />
 
-      <Divider />
-      <Button title="Continue with Google" variant="secondary" onPress={onOAuth} disabled={busy} />
-
-      <Spacer h={16} />
-      <Button
-        title={isSignUp ? 'Have an account? Sign in' : 'New here? Create an account'}
-        variant="ghost"
-        onPress={onSwitchMode}
-      />
+      <View className="mt-6">
+        <Button
+          title={isSignUp ? 'Have an account? Sign in' : 'New here? Create an account'}
+          variant="ghost"
+          onPress={onSwitchMode}
+        />
+      </View>
     </View>
   );
 }

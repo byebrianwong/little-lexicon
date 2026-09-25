@@ -1,13 +1,27 @@
 // Shared reveal shown after every answer: correctness, the correct answer, one
 // example, and audio (Phase 3.1). Modes render this in their answered state so
 // audio-on-reveal and the continue affordance are consistent everywhere.
+//
+// It is set like a dictionary entry under an ink rule: the verdict in small
+// capitals, the word, its definition, then the example in italic.
 
 import { useEffect, useRef } from 'react';
-import { Animated, Pressable, Text, View } from 'react-native';
+import { Pressable, View } from 'react-native';
 import type { ExampleContent, WordContent } from '@/lib/types';
 import type { AnswerGrade } from '@/lib/text';
 import { speakSentence, speakWord } from '@/lib/audio';
-import { Body, Button, Muted } from '@/components/ui';
+import {
+  Body,
+  Button,
+  Headword,
+  Label,
+  Muted,
+  Note,
+  Row,
+  TextButton,
+} from '@/components/ui';
+import { Icon } from '@/components/Icon';
+import { colors } from '@/theme/colors';
 import { feedbackCorrect, feedbackIncorrect } from './feedback';
 import { useScrollToReveal } from './RevealScroll';
 
@@ -18,17 +32,7 @@ export function AudioButton({
   onPress: () => void;
   label?: string;
 }) {
-  return (
-    <Pressable
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      onPress={onPress}
-      className="flex-row items-center gap-2 self-start rounded-full bg-surface2 px-4 py-2 active:opacity-70"
-    >
-      <Text className="text-lg">🔊</Text>
-      <Text className="text-muted text-sm font-medium">{label}</Text>
-    </Pressable>
-  );
+  return <TextButton icon="speaker" label={label} onPress={onPress} />;
 }
 
 /**
@@ -58,12 +62,10 @@ export function Reveal({
   soundEnabled: boolean;
   attempt?: RevealAttempt | null;
 }) {
-  const scale = useRef(new Animated.Value(0.9)).current;
   const scrollToReveal = useScrollToReveal();
   const scrolled = useRef(false);
 
   useEffect(() => {
-    Animated.spring(scale, { toValue: 1, useNativeDriver: true, friction: 6 }).start();
     if (correct) feedbackCorrect(soundEnabled);
     else feedbackIncorrect(soundEnabled);
     speakWord(content.headword, content.audioUrl);
@@ -73,7 +75,7 @@ export function Reveal({
 
   // Once the panel has a size, the question area can bring it on screen. Only
   // the first layout counts: the panel is the last thing in the question, and
-  // later layouts (the spring finishing, a font loading) should not re-scroll.
+  // later layouts (a font loading, say) should not re-scroll.
   function onLayout() {
     if (scrolled.current) return;
     scrolled.current = true;
@@ -88,41 +90,52 @@ export function Reveal({
   const typed = attempt && attempt.grade !== 'exact' ? attempt.text.trim() : '';
 
   return (
-    <Animated.View style={{ transform: [{ scale }] }} className="mt-4" onLayout={onLayout}>
-      <View
-        className={`rounded-2xl border p-4 ${
-          correct ? 'border-success bg-success/10' : 'border-danger bg-danger/10'
-        }`}
-      >
-        <Text
-          className={`text-lg font-bold ${correct ? 'text-success' : 'text-danger'}`}
-        >
-          {title}
-        </Text>
-        {typed !== '' ? <Muted className="mt-1">{`You typed "${typed}"`}</Muted> : null}
-        <View className="mt-2 flex-row items-center gap-3">
-          <Text className="text-text text-2xl font-bold">{content.headword}</Text>
+    // No entrance animation. The panel used to spring in from 90% scale; on
+    // iOS the native-driven spring could stop short of 1 and leave the panel
+    // inset from the question above it, and a calm page suits it better.
+    <View onLayout={onLayout}>
+      <View className="mt-8 border-t border-ink pt-4">
+        <Row className="gap-2">
+          <Icon
+            name={correct ? 'check' : 'cross'}
+            size={16}
+            color={colors.accent}
+            strokeWidth={2.25}
+          />
+          <Label tone="accent">{title}</Label>
+        </Row>
+        {typed !== '' ? <Note className="mt-2">{`You typed "${typed}"`}</Note> : null}
+
+        <View className="mt-3 flex-row flex-wrap items-baseline gap-x-3">
+          <Headword size="md">{content.headword}</Headword>
           {content.ipa ? <Muted>{content.ipa}</Muted> : null}
+          {content.partOfSpeech ? <Note>{content.partOfSpeech}</Note> : null}
         </View>
-        <Body className="mt-1 text-muted">{primaryDef}</Body>
+        <Body className="mt-2 text-[19px] leading-[27px]">{primaryDef}</Body>
         {example ? (
           <Pressable
+            accessibilityRole="button"
+            accessibilityLabel={`Hear the sentence: ${example.text}`}
             onPress={() => speakSentence(example.text, example.audioUrl)}
-            className="mt-3 active:opacity-70"
+            className="mt-2 active:opacity-60"
           >
-            <Body className="italic">{`"${example.text}"`}</Body>
+            <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           </Pressable>
         ) : null}
-        <View className="mt-3">
-          <AudioButton onPress={() => speakWord(content.headword, content.audioUrl)} />
+        <View className="mt-2">
+          <AudioButton
+            onPress={() => speakWord(content.headword, content.audioUrl)}
+            label="Hear it"
+          />
         </View>
       </View>
 
-      {nextDueLabel ? <Muted className="mt-2">{`Next review ${nextDueLabel}`}</Muted> : null}
-
-      <View className="mt-4">
+      <View className="mt-6 gap-3">
+        {nextDueLabel ? (
+          <Note className="text-center text-[15px]">{`Next review ${nextDueLabel}`}</Note>
+        ) : null}
         <Button title="Continue" onPress={onContinue} />
       </View>
-    </Animated.View>
+    </View>
   );
 }
