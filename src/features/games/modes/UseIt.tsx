@@ -50,6 +50,7 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
           <TextInput
             value={text}
             onChangeText={setText}
+            autoFocus
             multiline
             placeholder={`Use "${content.headword}" naturally...`}
             placeholderTextColor="#6B7699"

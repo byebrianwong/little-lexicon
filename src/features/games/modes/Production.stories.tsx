@@ -45,13 +45,25 @@ export const AnsweredCorrectly: Story = {
   },
 };
 
-/** A near miss is still graded: only the target headword counts. */
+/** A typo within tolerance is accepted, but the reveal points out the slip. */
+export const AnsweredNearMiss: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.type(canvas.getByPlaceholderText('Your answer'), 'laconik');
+    await userEvent.click(canvas.getByText('Check'));
+    await expect(await canvas.findByText('Close enough')).toBeInTheDocument();
+    await expect(canvas.getByText('You typed "laconik"')).toBeInTheDocument();
+  },
+};
+
+/** A synonym is still wrong: only the target headword counts. The attempt is shown. */
 export const AnsweredIncorrectly: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.type(canvas.getByPlaceholderText('Your answer'), 'terse');
     await userEvent.click(canvas.getByText('Check'));
     await expect(await canvas.findByText('Not quite')).toBeInTheDocument();
+    await expect(canvas.getByText('You typed "terse"')).toBeInTheDocument();
   },
 };
 

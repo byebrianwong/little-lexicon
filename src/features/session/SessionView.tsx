@@ -3,9 +3,11 @@
 // no question to show. The question itself is passed in as children, so
 // app/session.tsx keeps the queue, the refills and the SRS work.
 
+import { useEffect, useRef } from 'react';
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, H2, Muted, ProgressBar, Row } from '@/components/ui';
+import { RevealScrollProvider } from '@/features/games/RevealScroll';
 
 /** Full-screen centred content, used by the loading and stop states. */
 export function SessionCenter({ children }: { children: React.ReactNode }) {
@@ -98,6 +100,14 @@ export function SessionRunner({
   onClose,
   children,
 }: SessionRunnerProps) {
+  const scrollRef = useRef<ScrollView>(null);
+
+  // Each answer brings in a new question. The reveal may have scrolled the
+  // previous one to its end, so start the next one from the top.
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ y: 0, animated: false });
+  }, [answered]);
+
   return (
     <SafeAreaView className="flex-1 bg-bg" edges={['top', 'bottom']}>
       <View className="px-5 pt-2">
@@ -118,6 +128,7 @@ export function SessionRunner({
       </View>
 
       <ScrollView
+        ref={scrollRef}
         className="flex-1"
         contentContainerStyle={{
           paddingHorizontal: 20,
@@ -127,7 +138,7 @@ export function SessionRunner({
         }}
         keyboardShouldPersistTaps="handled"
       >
-        {children}
+        <RevealScrollProvider scrollRef={scrollRef}>{children}</RevealScrollProvider>
       </ScrollView>
 
       {submitting ? (

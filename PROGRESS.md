@@ -1204,3 +1204,58 @@ errors. The app itself was run on web (full export, served, clicked through
 onboarding, home, practice, browse, stats, leaderboard and settings) and on the
 iOS simulator through Expo Go (placement, goals, home, practice). No Android
 SDK is installed on this machine, so the Android emulator was not run.
+
+## Answer-loop polish
+
+Five small changes to the part of the app a user spends nearly all their time
+in: answering a question and reading the reveal. None of them touch the SRS
+math or what gets committed.
+
+### What changed
+
+- **The reveal scrolls into view.** After an answer, the reveal panel and its
+  Continue button mount below the question. With four definition-length
+  options they landed under the fold, so every answer cost a scroll before the
+  user could move on. The session and practice runners now hand their
+  ScrollView to a small context (`src/features/games/RevealScroll.tsx`), and
+  the panel asks for a scroll to the end once it has laid out. The runners
+  also jump back to the top when a new question arrives, so the next question
+  never starts half-scrolled. Without a provider (the panel on its own, as in
+  Storybook) the scroll call is a no-op.
+- **The reveal says when a typo was accepted.** Cloze and production accept a
+  spelling within the typo tolerance, but the panel used to say "Correct" and
+  the user never learned they had misspelled the word. `gradeAnswer` in
+  `src/lib/text.ts` now returns `exact`, `near` or `wrong` (unit tested), and
+  the typed modes pass what was typed to the panel. A near miss reads "Close
+  enough" with "You typed …" above the right spelling. A wrong typed answer
+  also shows the attempt, so the user can compare it with the word that was
+  wanted. Tap-to-choose modes pass nothing and look the same as before.
+- **The cloze hint is visible.** It used to go in the box's placeholder, which
+  disappears as soon as the user types. It now sits under the box, as the
+  production hint already did, and includes the letter count.
+- **The answer box has focus on arrival.** Cloze, production and the sentence
+  box in "use it" set `autoFocus`, which saves a tap on every typed question
+  and brings the keyboard up on native.
+- **One label for giving up.** Cloze said "Reveal answer" and production said
+  "Give up" for the same action. Both now say "Show answer".
+
+### Verified
+
+`tsc --noEmit`, lint and the 107 unit tests pass. On web (Expo dev server,
+phone-sized viewport) a session was played through multiple choice, listening
+and cloze: the reveal scrolled to its end with Continue on screen, the next
+question started at the top, the cloze box had focus on arrival, the hint line
+stayed visible with text in the box, and "sycophantz" for "sycophant" showed
+"Close enough" with the attempt. The Cloze, Production and Reveal stories,
+including the new near-miss, incorrect-with-attempt and gave-up stories, were
+loaded in Storybook and reached their asserted end states. Not run on the iOS
+simulator or Android in this pass; nothing here is platform-specific, but the
+`autoFocus` keyboard behaviour on native is the one thing worth a glance.
+
+### Known, left alone
+
+- Button text contrast (white on the primary, success and danger colours) is
+  still under WCAG AA, as recorded in earlier notes. Dark text (`#0B1020`) on
+  those same colours would pass at 6:1 or better, but it changes every button
+  in the app, so it stays a design call.
+- `nextDueLabel` on the reveal panel is still never passed by any mode.

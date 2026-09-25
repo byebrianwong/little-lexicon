@@ -1,10 +1,10 @@
 // Cloze: fill the blank in an example sentence (Phase 3.4). Typed answer with
-// typo tolerance; a hint reveals the first letter and downgrades to Hard.
+// typo tolerance; a hint shows the first letter and downgrades to Hard.
 
 import { useMemo, useRef, useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { Body, Button, Muted } from '@/components/ui';
-import { isNearMatch, makeClozeBlank } from '@/lib/text';
+import { gradeAnswer, makeClozeBlank, type AnswerGrade } from '@/lib/text';
 import { useGameContext } from '../GameContext';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
@@ -31,55 +31,61 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
   const blanked = example ? makeClozeBlank(example.text, target) : '';
 
   const [value, setValue] = useState('');
-  const [answered, setAnswered] = useState<null | boolean>(null);
+  const [grade, setGrade] = useState<AnswerGrade | null>(null);
   const [hintUsed, setHintUsed] = useState(false);
 
   function submit() {
-    if (answered !== null) return;
-    const correct = isNearMatch(value, target);
-    setAnswered(correct);
+    if (grade !== null) return;
+    setGrade(gradeAnswer(value, target));
   }
 
-  function reveal() {
-    if (answered !== null) return;
+  function showAnswer() {
+    if (grade !== null) return;
     // Give up: counts as incorrect.
-    setAnswered(false);
+    setGrade('wrong');
   }
+
+  // The hint sits under the box rather than in its placeholder, so it stays
+  // readable after the user has started typing.
+  const hint = hintUsed ? `Starts with "${target[0]}", ${target.length} letters` : null;
 
   return (
     <View>
       <Muted>Fill in the missing word</Muted>
       <Body className="mt-3 text-lg leading-7">{blanked}</Body>
 
-      {answered === null ? (
+      {grade === null ? (
         <>
           <TextInput
             value={value}
             onChangeText={setValue}
+            autoFocus
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder={hintUsed ? `Starts with "${target[0]}"` : 'Type the word'}
+            placeholder="Type the word"
             placeholderTextColor="#6B7699"
             className="mt-5 rounded-2xl border border-border bg-surface px-4 py-4 text-text text-base"
             onSubmitEditing={submit}
             returnKeyType="done"
           />
+          {hint ? <Muted className="mt-2">{hint}</Muted> : null}
           <View className="mt-4 gap-3">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button
-              title={hintUsed ? 'Reveal answer' : 'Hint'}
+              title={hintUsed ? 'Show answer' : 'Hint'}
               variant="ghost"
-              onPress={() => (hintUsed ? reveal() : setHintUsed(true))}
+              onPress={() => (hintUsed ? showAnswer() : setHintUsed(true))}
             />
           </View>
         </>
       ) : (
         <Reveal
-          correct={answered}
+          correct={grade !== 'wrong'}
           content={content}
           example={example}
           soundEnabled={soundEnabled}
-          onContinue={() => onOutcome(makeOutcome(answered, startedAt, hintUsed))}
+          attempt={{ text: value, grade }}
+          onContinue={() => onOutcome(makeOutcome(grade !== 'wrong', startedAt, hintUsed))}
         />
       )}
     </View>
