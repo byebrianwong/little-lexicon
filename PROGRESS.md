@@ -1468,3 +1468,57 @@ was `main` plus `vercel.json`, so nothing wrong was published.
 - Vercel's newer npm skips install scripts that are not allow-listed, and
   says so in the build log (`esbuild`, `unrs-resolver`). The web export does
   not use them. If a future build step does, allow them in `package.json`.
+
+## The placement test can be skipped
+
+A new user can now skip the intro (the placement test, then the goals
+screen) and go straight to home. Home then offers the test until it is taken.
+
+### What was added
+
+- A "Skip for now" link at the top right of the placement screen. The
+  question count moved to just under the progress bar to make room.
+- A "Placement test" row at the end of the home menu, shown only while the
+  test has not been taken. It opens the same intro: the test, then goals.
+- `needsPlacement(profile)` in `src/features/onboarding/placement.ts`, with
+  unit tests.
+- A `PlacementNotTaken` story for home. The `NewAccount` home story and every
+  placement story change in Chromatic, because both screens changed.
+
+### Decisions
+
+**No new column.** Skipping sets `onboarded_at`, so the app opens on home
+from then on. It leaves `level_estimate` empty. Finishing the test always
+saves a level estimate (`estimateLevel` never returns null), so an empty
+estimate means the test was skipped. That is what `needsPlacement` checks.
+
+**Leaving the intro uses `router.dismissTo('/(app)')`.** On first run there
+is no home screen behind the intro, so this replaces the intro with home.
+When the intro was opened from home, it pops back to that same home screen.
+The old `router.replace` would have put a second copy of home on the stack.
+
+**Retaking the intro keeps what is already saved.** The goals screen starts
+from the saved daily goal and interests when the user has been through the
+intro before, so a goal set in Settings is not reset to 15. The first
+`onboarded_at` date is kept.
+
+**A failed save on skip still lets the user in.** It is logged with
+`console.warn`. The app opens on the test again next launch, where they can
+skip again.
+
+### Verified
+
+- Web at phone width and 1280 px: first visit opens on the test; skip goes
+  home and a reload stays on home; the home row opens the test; finishing it
+  saves the level and known words, keeps the goal set in Settings, keeps the
+  first `onboarded_at`, and removes the row. Skipping a retaken test leaves
+  the profile unchanged. Browser back after finishing does not reopen the
+  test.
+- iOS simulator in Expo Go: the same skip, retake and finish flow. Finishing
+  slides back to the existing home screen.
+- No Android emulator on this machine, so Android was not run.
+
+### For later
+
+- Someone who finished the test cannot retake it. A "Retake placement test"
+  entry in Settings would cover that.

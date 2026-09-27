@@ -14,6 +14,7 @@ const meta = {
     onStartSession: () => {},
     onPractice: () => {},
     onSpeedRound: () => {},
+    onPlacementTest: () => {},
   },
   decorators: [phone],
 } satisfies Meta<typeof HomeView>;
@@ -34,9 +35,20 @@ export const NothingDoneToday: Story = {
   args: { reviewsToday: 0 },
 };
 
-/** A brand new account: no name, no streak, no words, no level card. */
+/**
+ * A brand new account: no name, no streak, no words, no level card. It skipped
+ * the placement test, so the menu offers it.
+ */
 export const NewAccount: Story = {
   args: { profile: NEW_PROFILE, reviewsToday: 0, counts: EMPTY_COUNTS },
+};
+
+/**
+ * A returning learner who skipped the placement test at the start. The menu
+ * offers it until it is taken.
+ */
+export const PlacementNotTaken: Story = {
+  args: { profile: profile({ levelEstimate: null }) },
 };
 
 /** Queries still in flight. Every value falls back rather than blanking out. */

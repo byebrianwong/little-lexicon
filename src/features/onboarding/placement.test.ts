@@ -1,4 +1,10 @@
-import { nextTier, knownWordIds, estimateLevel, type PlacementResponse } from './placement';
+import {
+  nextTier,
+  knownWordIds,
+  estimateLevel,
+  needsPlacement,
+  type PlacementResponse,
+} from './placement';
 
 describe('nextTier', () => {
   it('goes harder on know, easier on dont_know, holds on unsure', () => {
@@ -43,5 +49,15 @@ describe('estimateLevel', () => {
       { wordId: 2, tier: 2, answer: 'dont_know' },
     ];
     expect(estimateLevel(r)).toBe(3);
+  });
+});
+
+describe('needsPlacement', () => {
+  it('is true when the test was skipped, so no level was saved', () => {
+    expect(needsPlacement({ levelEstimate: null })).toBe(true);
+  });
+  it('is false once any level is saved', () => {
+    expect(needsPlacement({ levelEstimate: 1 })).toBe(false);
+    expect(needsPlacement({ levelEstimate: 5 })).toBe(false);
   });
 });
