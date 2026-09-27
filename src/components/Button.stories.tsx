@@ -36,7 +36,7 @@ export const Secondary: Story = {
 };
 
 export const Ghost: Story = {
-  args: { variant: 'ghost', title: 'Skip' },
+  args: { variant: 'ghost', title: 'Skip (gate test)' },
 };
 
 export const Danger: Story = {
