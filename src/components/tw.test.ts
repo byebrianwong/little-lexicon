@@ -40,4 +40,9 @@ describe('tw', () => {
   it('replaces horizontal padding without touching vertical padding', () => {
     expect(tw('px-5 py-3 min-h-[52px]', 'px-0')).toBe('py-3 min-h-[52px] px-0');
   });
+
+  it('lets a caller re-align a primitive that pins its own alignment', () => {
+    // TextButton sits at self-start; the feed's Undo centres it in a row.
+    expect(tw('min-h-[44px] self-start', 'self-center')).toBe('min-h-[44px] self-center');
+  });
 });

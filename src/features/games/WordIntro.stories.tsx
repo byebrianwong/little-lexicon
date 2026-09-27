@@ -2,7 +2,7 @@ import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite
 import { View } from 'react-native';
 import { expect, userEvent, within } from 'storybook/test';
 import { GameProvider } from '@/features/games/GameContext';
-import { POOL, PRO_PROFILE, profile, word } from '@/stories/fixtures';
+import { NEW_PROFILE, POOL, profile, word } from '@/stories/fixtures';
 import { WordIntro } from './WordIntro';
 
 const meta = {
@@ -34,23 +34,22 @@ export const Verb: Story = {
   args: { content: word('obfuscate') },
 };
 
-// Pro accounts with interests get the "Make it personal" affordance. Everyone
-// else never sees it, which is why the two need separate snapshots.
-const pro: Decorator = (Story) => (
+// Someone who skipped the interests step never sees "Make it personal", because
+// there is nothing to personalize with. Everyone else does.
+const noInterests: Decorator = (Story) => (
   <View style={{ width: 350 }}>
-    <GameProvider value={{ pool: POOL, profile: PRO_PROFILE }}>
+    <GameProvider value={{ pool: POOL, profile: NEW_PROFILE }}>
       <Story />
     </GameProvider>
   </View>
 );
 
-export const ProWithInterests: Story = {
-  decorators: [pro],
+export const NoInterests: Story = {
+  decorators: [noInterests],
 };
 
 /** After generating a personalized memory hook. */
 export const Personalized: Story = {
-  decorators: [pro],
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('Make it personal'));

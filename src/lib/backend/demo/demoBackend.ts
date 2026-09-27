@@ -7,6 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
+  ListedWord,
   Profile,
   SessionItem,
   UserWordState,
@@ -17,6 +18,7 @@ import type {
   AuthResult,
   AuthSession,
   Backend,
+  FeedRequest,
   ForecastDay,
   LeaderboardEntry,
   ProgressCounts,
@@ -27,6 +29,7 @@ import type {
 import { loadContent, type ContentIndex } from '@/lib/content';
 import { normalizeAnswer } from '@/lib/text';
 import { legacyIdMap, remapWordIds } from './legacyWordIds';
+import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
 
 const STORAGE_KEY = 'little_lexicon.demo.v1';
 const DEMO_USER_ID = 'demo-user';
@@ -44,6 +47,11 @@ interface LogRow {
   reviewed_at: string;
 }
 
+interface ListRow {
+  added_at: string;
+  removed_at: string | null;
+}
+
 // Saved progress refers to words by id. 'words-file' means ids from the words
 // file; data saved without it used the old 12-word numbering and is converted
 // on load (see legacyWordIds).
@@ -53,6 +61,11 @@ interface PersistShape {
   session: AuthSession | null;
   profile: Profile;
   states: Record<number, StateRow>;
+  /**
+   * The Discover list, keyed by word id. Removed entries stay, soft-deleted.
+   * It shipped after the words file, so it is never in the old numbering.
+   */
+  list: Record<number, ListRow>;
   logs: LogRow[];
   daily: Record<string, DailyStats>;
   achievements: string[];
@@ -72,7 +85,6 @@ function defaultProfile(): Profile {
     streakCount: 0,
     streakFreezeCount: 2,
     xpTotal: 0,
-    isPro: false,
     onboardedAt: null,
     reminderHour: null,
     lastGoalMetDay: null,
@@ -84,6 +96,7 @@ function emptyState(): PersistShape {
     session: { userId: DEMO_USER_ID, email: 'demo@little_lexicon.app' },
     profile: defaultProfile(),
     states: {},
+    list: {},
     logs: [],
     daily: {},
     achievements: [],
@@ -107,6 +120,14 @@ function rowToUserWordState(row: StateRow): UserWordState {
     isKnown: row.is_known,
     isSuspended: row.is_suspended,
   };
+}
+
+function catalogOf(content: ContentIndex): CatalogEntry[] {
+  return content.words.map((w) => ({
+    wordId: w.wordId,
+    difficultyTier: w.difficultyTier,
+    frequencyRank: w.frequencyRank,
+  }));
 }
 
 /** A review item, or null when the word has left the words file. */
@@ -254,19 +275,75 @@ export class DemoBackend implements Backend {
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]> {
     await this.ensureLoaded();
-    const { words } = await loadContent(); // already easiest first
-    const seen = new Set(Object.keys(this.data.states).map(Number));
-    const minTier = opts?.minTier ?? 1;
-    const maxTier = opts?.maxTier ?? 5;
-    return words
-      .filter(
-        (w) =>
-          !seen.has(w.wordId) &&
-          w.difficultyTier >= minTier &&
-          w.difficultyTier <= maxTier,
-      )
-      .slice(0, limit)
-      .map<SessionItem>((content) => ({ content, state: null, isNew: true }));
+    const content = await loadContent();
+    const ids = pickNewWordIds({
+      catalog: catalogOf(content),
+      seen: this.seenIds(),
+      listed: this.listedIds(),
+      minTier: opts?.minTier,
+      maxTier: opts?.maxTier,
+      limit,
+    });
+    return ids
+      .map((id) => content.byId.get(id))
+      .filter((c): c is WordContent => c !== undefined)
+      .map<SessionItem>((word) => ({ content: word, state: null, isNew: true }));
+  }
+
+  /** Words with a state row: studied, or marked known. */
+  private seenIds(): Set<number> {
+    return new Set(Object.keys(this.data.states).map(Number));
+  }
+
+  /** Active list entries, oldest first. */
+  private listedIds(): number[] {
+    return Object.entries(this.data.list)
+      .filter(([, row]) => row.removed_at === null)
+      .sort(([a, ra], [b, rb]) => ra.added_at.localeCompare(rb.added_at) || Number(a) - Number(b))
+      .map(([id]) => Number(id));
+  }
+
+  // --- Discover feed and the word list --------------------------------------
+  async getFeedWords(input: FeedRequest): Promise<WordContent[]> {
+    await this.ensureLoaded();
+    const content = await loadContent();
+    const exclude = new Set([...this.seenIds(), ...this.listedIds(), ...input.exclude]);
+    return orderFeed({
+      catalog: catalogOf(content),
+      exclude,
+      levelEstimate: input.levelEstimate,
+      seed: input.seed,
+      limit: input.limit,
+    })
+      .map((id) => content.byId.get(id))
+      .filter((c): c is WordContent => c !== undefined);
+  }
+
+  async getWordList(): Promise<ListedWord[]> {
+    await this.ensureLoaded();
+    const content = await loadContent();
+    const seen = this.seenIds();
+    return this.listedIds()
+      .filter((id) => !seen.has(id))
+      .map((id) => {
+        const word = content.byId.get(id);
+        return word ? { content: word, addedAt: this.data.list[id]!.added_at } : null;
+      })
+      .filter((w): w is ListedWord => w !== null);
+  }
+
+  async addToWordList(wordId: number): Promise<void> {
+    await this.ensureLoaded();
+    this.data.list[wordId] = { added_at: new Date().toISOString(), removed_at: null };
+    await this.persist();
+  }
+
+  async removeFromWordList(wordId: number): Promise<void> {
+    await this.ensureLoaded();
+    const row = this.data.list[wordId];
+    if (!row || row.removed_at !== null) return;
+    this.data.list[wordId] = { ...row, removed_at: new Date().toISOString() };
+    await this.persist();
   }
 
   // --- Session + review commit ----------------------------------------------
@@ -519,6 +596,10 @@ export class DemoBackend implements Backend {
       exportedAt: new Date().toISOString(),
       profile: this.data.profile,
       wordStates: Object.values(this.data.states),
+      wordList: Object.entries(this.data.list).map(([wordId, row]) => ({
+        word_id: Number(wordId),
+        ...row,
+      })),
       reviewLogs: this.data.logs,
       dailyStats: Object.values(this.data.daily),
       achievements: this.data.achievements,

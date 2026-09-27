@@ -26,6 +26,7 @@ const GROUPS: [string, RegExp][] = [
   ['min-h', /^min-h-/],
   ['justify', /^justify-/],
   ['items', /^items-/],
+  ['self', /^self-/],
 ];
 
 function groupOf(cls: string): string | null {

@@ -91,7 +91,7 @@ export function WordIntro({
         <Section label="For you" rule="hairline" className="mt-6">
           <Body>{personalized}</Body>
         </Section>
-      ) : profile.isPro && profile.interests.length > 0 ? (
+      ) : profile.interests.length > 0 ? (
         <View className="mt-4 items-start">
           {generating ? (
             <View className="py-3">

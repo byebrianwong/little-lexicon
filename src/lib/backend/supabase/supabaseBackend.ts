@@ -7,6 +7,7 @@ import { supabase } from '@/lib/supabase';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
+  ListedWord,
   Profile,
   SessionItem,
   UserWordState,
@@ -17,6 +18,7 @@ import type {
   AuthResult,
   AuthSession,
   Backend,
+  FeedRequest,
   ForecastDay,
   LeaderboardEntry,
   OAuthProvider,
@@ -26,6 +28,27 @@ import type {
   SubmitReviewResult,
 } from '../types';
 import { mapWordRow, WORD_SELECT, type RawWordRow } from './mapContent';
+import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
+
+/**
+ * PostgREST returns at most 1,000 rows per request by default, and the
+ * collection is several thousand words. This reads a query page by page until
+ * a short page says there is nothing left. `page` must build a fresh query for
+ * each range.
+ */
+const PAGE_ROWS = 1000;
+async function fetchAllRows<T>(
+  page: (from: number, to: number) => PromiseLike<{ data: T[] | null; error: { message: string } | null }>,
+): Promise<T[]> {
+  const out: T[] = [];
+  for (let from = 0; ; from += PAGE_ROWS) {
+    const { data, error } = await page(from, from + PAGE_ROWS - 1);
+    if (error) throw new Error(error.message);
+    const rows = data ?? [];
+    out.push(...rows);
+    if (rows.length < PAGE_ROWS) return out;
+  }
+}
 
 type StateRow = {
   word_id: number;
@@ -71,7 +94,6 @@ function mapProfile(row: {
   streak_count: number;
   streak_freeze_count: number;
   xp_total: number;
-  is_pro: boolean;
   onboarded_at: string | null;
   reminder_hour: number | null;
   last_goal_met_day: string | null;
@@ -86,7 +108,6 @@ function mapProfile(row: {
     streakCount: row.streak_count,
     streakFreezeCount: row.streak_freeze_count,
     xpTotal: Number(row.xp_total),
-    isPro: row.is_pro,
     onboardedAt: row.onboarded_at,
     reminderHour: row.reminder_hour,
     lastGoalMetDay: row.last_goal_met_day,
@@ -95,6 +116,12 @@ function mapProfile(row: {
 
 export class SupabaseBackend implements Backend {
   readonly kind = 'supabase' as const;
+
+  /**
+   * Every word's id, tier and frequency, which is all the ordering needs.
+   * Content is read-only to clients, so one fetch serves the whole app run.
+   */
+  private catalog: Promise<CatalogEntry[]> | null = null;
 
   private async requireUserId(): Promise<string> {
     const { data } = await supabase.auth.getUser();
@@ -171,7 +198,6 @@ export class SupabaseBackend implements Backend {
       update.streak_freeze_count = patch.streakFreezeCount;
     }
     if (patch.xpTotal !== undefined) update.xp_total = patch.xpTotal;
-    if (patch.isPro !== undefined) update.is_pro = patch.isPro;
     if (patch.onboardedAt !== undefined) update.onboarded_at = patch.onboardedAt;
     if (patch.reminderHour !== undefined) update.reminder_hour = patch.reminderHour;
     if (patch.lastGoalMetDay !== undefined) update.last_goal_met_day = patch.lastGoalMetDay;
@@ -250,33 +276,128 @@ export class SupabaseBackend implements Backend {
     limit: number,
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]> {
-    // Words with no user_word_state row for this user. We exclude the user's
-    // seen ids client-side. For very large study histories, replace this with a
-    // dedicated RPC (see PROGRESS Phase 2 note).
-    const { data: seenRows, error: seenErr } = await supabase
-      .from('user_word_state')
-      .select('word_id');
-    if (seenErr) throw new Error(seenErr.message);
-    const seen = (seenRows ?? []).map((r) => r.word_id);
-
-    let q = supabase
-      .from('words')
-      .select('id')
-      .gte('difficulty_tier', opts?.minTier ?? 1)
-      .lte('difficulty_tier', opts?.maxTier ?? 5)
-      .order('difficulty_tier', { ascending: true })
-      .order('frequency_rank', { ascending: true, nullsFirst: false })
-      .limit(limit + Math.min(seen.length, 500));
-    if (seen.length > 0) q = q.not('id', 'in', `(${seen.join(',')})`);
-
-    const { data, error } = await q;
-    if (error) throw new Error(error.message);
-    const ids = (data ?? []).map((r) => r.id).slice(0, limit);
+    // Ordering is done here rather than in SQL so it shares the tested logic
+    // in features/feed/wordOrder with demo mode. It also avoids sending every
+    // seen id back in the URL as a `not in` filter, which grows with history.
+    const [catalog, seen, listed] = await Promise.all([
+      this.getCatalog(),
+      this.getSeenIds(),
+      this.getListedRows(),
+    ]);
+    const ids = pickNewWordIds({
+      catalog,
+      seen,
+      listed: listed.map((r) => r.word_id),
+      minTier: opts?.minTier,
+      maxTier: opts?.maxTier,
+      limit,
+    });
     const content = await this.getWordContentBatch(ids);
     return ids
       .map((id) => content.get(id))
       .filter((c): c is WordContent => c !== undefined)
       .map<SessionItem>((content) => ({ content, state: null, isNew: true }));
+  }
+
+  private getCatalog(): Promise<CatalogEntry[]> {
+    if (!this.catalog) {
+      this.catalog = fetchAllRows((from, to) =>
+        supabase
+          .from('words')
+          .select('id, difficulty_tier, frequency_rank')
+          .order('id', { ascending: true })
+          .range(from, to),
+      ).then((rows) =>
+        rows.map((r) => ({
+          wordId: r.id,
+          difficultyTier: r.difficulty_tier,
+          frequencyRank: r.frequency_rank,
+        })),
+      );
+      // A failed fetch should not be cached for the rest of the run.
+      this.catalog.catch(() => {
+        this.catalog = null;
+      });
+    }
+    return this.catalog;
+  }
+
+  /** Words with a user_word_state row (RLS limits it to this user's rows). */
+  private async getSeenIds(): Promise<Set<number>> {
+    const rows = await fetchAllRows((from, to) =>
+      supabase.from('user_word_state').select('word_id').order('word_id').range(from, to),
+    );
+    return new Set(rows.map((r) => r.word_id));
+  }
+
+  /** Active list entries, oldest first. */
+  private getListedRows(): Promise<{ word_id: number; added_at: string }[]> {
+    return fetchAllRows((from, to) =>
+      supabase
+        .from('word_list')
+        .select('word_id, added_at')
+        .is('removed_at', null)
+        .order('added_at', { ascending: true })
+        .order('word_id', { ascending: true })
+        .range(from, to),
+    );
+  }
+
+  // --- Discover feed and the word list --------------------------------------
+  async getFeedWords(input: FeedRequest): Promise<WordContent[]> {
+    const [catalog, seen, listed] = await Promise.all([
+      this.getCatalog(),
+      this.getSeenIds(),
+      this.getListedRows(),
+    ]);
+    const exclude = new Set([...seen, ...listed.map((r) => r.word_id), ...input.exclude]);
+    const ids = orderFeed({
+      catalog,
+      exclude,
+      levelEstimate: input.levelEstimate,
+      seed: input.seed,
+      limit: input.limit,
+    });
+    const content = await this.getWordContentBatch(ids);
+    return ids.map((id) => content.get(id)).filter((c): c is WordContent => c !== undefined);
+  }
+
+  async getWordList(): Promise<ListedWord[]> {
+    const [listed, seen] = await Promise.all([this.getListedRows(), this.getSeenIds()]);
+    const rows = listed.filter((r) => !seen.has(r.word_id));
+    const content = await this.getWordContentBatch(rows.map((r) => r.word_id));
+    return rows
+      .map((r) => {
+        const c = content.get(r.word_id);
+        return c ? { content: c, addedAt: r.added_at } : null;
+      })
+      .filter((w): w is ListedWord => w !== null);
+  }
+
+  async addToWordList(wordId: number): Promise<void> {
+    const userId = await this.requireUserId();
+    // Adding a word that was removed earlier brings the same row back.
+    const { error } = await supabase.from('word_list').upsert(
+      {
+        user_id: userId,
+        word_id: wordId,
+        added_at: new Date().toISOString(),
+        removed_at: null,
+      },
+      { onConflict: 'user_id,word_id' },
+    );
+    if (error) throw new Error(error.message);
+  }
+
+  async removeFromWordList(wordId: number): Promise<void> {
+    const userId = await this.requireUserId();
+    const { error } = await supabase
+      .from('word_list')
+      .update({ removed_at: new Date().toISOString() })
+      .eq('user_id', userId)
+      .eq('word_id', wordId)
+      .is('removed_at', null);
+    if (error) throw new Error(error.message);
   }
 
   // --- Session + review commit ----------------------------------------------
@@ -529,9 +650,10 @@ export class SupabaseBackend implements Backend {
   // --- Account management ---------------------------------------------------
   async exportData(): Promise<Record<string, unknown>> {
     const userId = await this.requireUserId();
-    const [profile, states, logs, daily, achievements] = await Promise.all([
+    const [profile, states, list, logs, daily, achievements] = await Promise.all([
       supabase.from('profiles').select('*').eq('user_id', userId).single(),
       supabase.from('user_word_state').select('*'),
+      supabase.from('word_list').select('*'),
       supabase.from('review_logs').select('*'),
       supabase.from('daily_stats').select('*'),
       supabase.from('achievements').select('*'),
@@ -540,6 +662,7 @@ export class SupabaseBackend implements Backend {
       exportedAt: new Date().toISOString(),
       profile: profile.data,
       wordStates: states.data ?? [],
+      wordList: list.data ?? [],
       reviewLogs: logs.data ?? [],
       dailyStats: daily.data ?? [],
       achievements: achievements.data ?? [],

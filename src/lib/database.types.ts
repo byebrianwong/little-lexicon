@@ -3,8 +3,9 @@
 // This file is normally produced by:
 //   supabase gen types typescript --local --schema little_lexicon > src/lib/database.types.ts
 //
-// It is committed here as a faithful representation of migration 0001..0005 so
-// the app typechecks before a live database exists. REGENERATE it (npm run
+// It is committed here as a faithful representation of migrations 0001..0009 so
+// the app typechecks before a live database exists. The one gap is 0006
+// (ai_usage and bump_ai_usage), which only the Edge Functions touch. REGENERATE it (npm run
 // gen:types) once the schema is applied to the shared `games-apps` project, and
 // do not hand-edit it thereafter.
 
@@ -163,7 +164,6 @@ export interface Database {
           streak_freeze_count: number;
           xp_total: number;
           fsrs_weights: Json | null;
-          is_pro: boolean;
           onboarded_at: string | null;
           reminder_hour: number | null;
           sound_enabled: boolean;
@@ -182,7 +182,6 @@ export interface Database {
           streak_freeze_count?: number;
           xp_total?: number;
           fsrs_weights?: Json | null;
-          is_pro?: boolean;
           onboarded_at?: string | null;
           reminder_hour?: number | null;
           sound_enabled?: boolean;
@@ -319,6 +318,22 @@ export interface Database {
           unlocked_at?: string;
         };
         Update: Partial<Database['little_lexicon']['Tables']['achievements']['Insert']>;
+        Relationships: [];
+      };
+      word_list: {
+        Row: {
+          user_id: string;
+          word_id: number;
+          added_at: string;
+          removed_at: string | null;
+        };
+        Insert: {
+          user_id: string;
+          word_id: number;
+          added_at?: string;
+          removed_at?: string | null;
+        };
+        Update: Partial<Database['little_lexicon']['Tables']['word_list']['Insert']>;
         Relationships: [];
       };
     };

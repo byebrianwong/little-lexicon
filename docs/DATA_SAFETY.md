@@ -10,7 +10,6 @@ Google Play Data safety form. Keep this in sync with docs/PRIVACY.md.
 | Email address | Yes | Yes | Account, authentication | No |
 | Display name | Yes | Yes | Profile, leaderboard | Yes |
 | App activity (reviews, streak, XP, stats) | Yes | Yes | App functionality | No |
-| Purchase history / entitlement | Yes | Yes | Provide Pro features | Yes |
 | User-generated content (sentence you write for evaluation) | Yes | Yes | AI feedback feature, on request | Yes |
 
 ## Data NOT collected
@@ -26,15 +25,14 @@ Google Play Data safety form. Keep this in sync with docs/PRIVACY.md.
 - **Deletion:** Users can delete their account in-app (Settings, Account).
 - **Third parties:**
   - Supabase (database, auth, storage): processor for account and learning data.
-  - RevenueCat and the app stores: purchase processing.
   - Anthropic: receives only the specific text of an AI feature request, on user
-    action, for Pro users.
+    action.
 - **Data sold:** No.
 - **Data used for tracking across apps/sites:** No.
 
 ## Runtime AI calls
 
-Only two features make runtime AI calls, both Pro-gated, rate-limited, and
+Only two features make runtime AI calls, both limited per user per day and
 routed through a server function that holds the API key (never the client):
 sentence evaluation and personalized content generation. All other content is
 pre-generated at build time and cached, so ordinary use makes no AI calls.

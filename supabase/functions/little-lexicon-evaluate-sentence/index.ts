@@ -7,11 +7,9 @@
 // Runtime Claude call, so it is gated:
 //   1. Auth: the caller is identified from the incoming bearer JWT (anon client
 //      + Authorization header -> getUser()). No user -> 401.
-//   2. Pro gate: profiles.is_pro is read with a service-role client (never a
-//      client flag). Non-Pro -> 403.
-//   3. Rate limit: bump_ai_usage('evaluate') increments the caller's daily
+//   2. Rate limit: bump_ai_usage('evaluate') increments the caller's daily
 //      counter atomically; over the cap -> 429.
-//   4. Claude: claude-haiku-4-5 with the rubric cached (cache_control) as the
+//   3. Claude: claude-haiku-4-5 with the rubric cached (cache_control) as the
 //      system prompt.
 //
 // Secrets are read from Deno.env only and never returned to the client.
@@ -60,9 +58,8 @@ Deno.serve(async (req: Request): Promise<Response> => {
 
   const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
   const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
-  const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY");
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !SERVICE_ROLE_KEY || !ANTHROPIC_API_KEY) {
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !ANTHROPIC_API_KEY) {
     return jsonResponse({ error: "Server not configured" }, 500);
   }
 
@@ -82,7 +79,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
   if (userErr || !userData?.user) {
     return jsonResponse({ error: "Unauthorized" }, 401);
   }
-  const userId = userData.user.id;
 
   let body: EvalRequest;
   try {
@@ -97,24 +93,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
   }
   if (sentence.length > 500) {
     return jsonResponse({ error: "sentence too long" }, 400);
-  }
-
-  // Service-role client for the entitlement read (bypasses RLS deliberately).
-  const serviceClient = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
-    auth: { persistSession: false, autoRefreshToken: false },
-    db: { schema: "little_lexicon" },
-  });
-
-  const { data: profile, error: profErr } = await serviceClient
-    .from("profiles")
-    .select("is_pro")
-    .eq("user_id", userId)
-    .maybeSingle();
-  if (profErr) {
-    return jsonResponse({ error: "Profile lookup failed" }, 500);
-  }
-  if (!profile?.is_pro) {
-    return jsonResponse({ error: "Pro required" }, 403);
   }
 
   // Rate limit (increment-first, atomic). Runs as the caller so auth.uid()

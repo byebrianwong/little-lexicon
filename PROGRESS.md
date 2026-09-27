@@ -1711,3 +1711,164 @@ only.
 - **No snapshot shows the WordNet credit line.** Story screens sit in a fixed
   390 by 844 frame and Settings scrolls, so the line is below the frame. It
   was checked in the browser instead.
+
+## No paid features
+
+Monetization is gone. As of 2026-09-27 the goal is the best app possible, not
+revenue, so there is no paywall, no subscription and no Pro flag.
+
+### What was removed
+
+- `app/paywall.tsx`, `src/features/monetization/` (the paywall view and its
+  stories) and `src/lib/purchases.ts`.
+- The `react-native-purchases` package, the `EXPO_PUBLIC_REVENUECAT_*`
+  variables in `src/lib/env.ts` and `.env.example`, and `revenueCatEnabled` in
+  `app.json`.
+- The `little-lexicon-revenuecat-webhook` Edge Function.
+- `Profile.isPro`, and the Membership row and "Upgrade to Pro" button in
+  Settings.
+- `profiles.is_pro`, dropped by migration `0008_drop_pro.sql`.
+
+### What changed because of it
+
+- **"Make it personal" shows for anyone who picked interests.** It used to
+  need Pro as well.
+- **The two AI Edge Functions no longer check Pro.** CLAUDE.md still requires
+  runtime paid calls to be gated. They stay gated by sign-in and by the
+  per-user daily cap of 30 calls in `ai_usage` (migration 0006), which was
+  already there as a second check. Dropping the Pro check also removed their
+  only use of the service-role key, so neither function needs it now.
+- SPEC.md section 9, CLAUDE.md (the Payments line), README, the store listing,
+  the privacy policy and the data safety form now say there are no paid
+  features. `tasks/phase-7-monetization-polish.md` has a note that 7.1 and 7.2
+  no longer apply.
+
+## Discover: a feed for picking new words
+
+The Words tab has three views now: **Discover**, **Your list** and **All
+words** (the old browse list). Discover shows unseen words one per screen,
+like the feed in the Vocabulary app by Monkey Taps. Each word has two
+buttons: **Learn this** adds it to your list, and **I know it** marks it
+known. Scrolling past a word records nothing.
+
+Your list is the words you picked that no session has shown yet. Sessions
+take new words from the list first, oldest pick first, then fall back to the
+automatic order (easiest tier, most frequent). The list decides which new
+words come next. It does not limit how many, because nothing does.
+
+### Where things live
+
+- `src/features/feed/wordOrder.ts`: pure ordering, shared by both backends.
+  `orderFeed` orders the feed. `pickNewWordIds` picks a session's new words
+  with the list first. `tierWindowForLevel` moved here from
+  `features/review/queries.ts`.
+- `src/features/feed/feedState.ts`: pure. Decides what each button press does
+  and returns the writes to make.
+- `src/features/feed/useFeedWords.ts`: loads the feed a page (20 words) at a
+  time.
+- `src/features/feed/queries.ts`: TanStack Query hooks for the list, with
+  optimistic add and remove.
+- `src/features/feed/FeedView.tsx` and `WordListView.tsx`: the two new views.
+  `src/features/browse/WordsLayout.tsx`: the title and view switch.
+- `app/(app)/browse.tsx`: the Words screen. Owns the feed state and runs
+  every write.
+- Backend: `getFeedWords`, `getWordList`, `addToWordList` and
+  `removeFromWordList`, in both the demo and Supabase backends.
+- Migration `0009_word_list.sql`: `little_lexicon.word_list (user_id, word_id,
+  added_at, removed_at)` with owner-only RLS and no delete policy.
+
+### Decisions
+
+**A word is "new" while it has no `user_word_state` row, so the list needed
+its own table.** There was nowhere to record "chosen, not started".
+Removing a word sets `removed_at`; adding it again brings the same row back.
+Nothing is hard-deleted.
+
+**"I know it" is saved when the card leaves the screen, not on the tap.**
+Marking a word known writes a `user_word_state` row, and undoing that would
+mean deleting the row. So the tap is held as pending while the word is on
+screen, and Undo just forgets it. The write happens when the user scrolls to
+another word, switches view, leaves the tab, or the app goes to the
+background. After that the card says "Marked as known" with no Undo. "Learn
+this" is saved at once, because its undo is a soft remove.
+
+**Only the buttons act on a word.** In the Vocabulary app a stray tap moves
+on and the word is lost. Here tapping the page does nothing, and scrolling
+back always shows the same word, because loaded words never change order.
+
+**The feed's words live in screen state, not the query cache.** Home, Stats
+and Ranks call `invalidateQueries()` with no filter when they come into
+focus, and the Words tab stays mounted. A cached feed would refetch then,
+and words just added (which the backend now excludes) would disappear from
+under the user. This is the same reason the session keeps its own queue.
+
+**The feed order is shuffled with a seed, and paging cannot move words.**
+Words inside the user's tier window come first, then one tier outside it,
+and so on. Each group is shuffled before anything is excluded, so asking
+for page two (by excluding page one) never moves a word the user has not
+reached. The seed is picked once per app start, so skipped words come back
+in a different place next time.
+
+**The Supabase backend orders words in the client.** It fetches every
+word's id, tier and frequency once per app run (paged, since PostgREST
+returns at most 1,000 rows per request) and uses the same functions as demo
+mode. This replaced `getNewWords`' `not in (every seen id)` URL filter,
+which grew with the user's history. The seen-id and list reads are paged the
+same way.
+
+**The list only returns words no session has shown.** Otherwise it would
+grow for good and every read would load hundreds of words' content. The
+feed remembers what was added during the current visit, so a card still
+says "On your list" after a session has started that word.
+
+**One list, no named collections.** SPEC.md keeps user-authored decks out of
+v1. A single list of the app's own words is not a deck. Named collections
+would come close to one.
+
+### Two layout traps found on the way
+
+- React Native Web only watches an element's size if the element has
+  `onLayout` when it mounts. The feed first rendered a loading view and then
+  swapped in a view with `onLayout` at the same position, so React reused
+  the element and the size was never reported. The measuring view is now
+  rendered from the first frame, with the loading state inside it.
+- An error line above the list made the list shorter than the page height
+  it had measured, which would misalign every page. The line is now laid
+  over the top of the page.
+
+### Verified
+
+- `tsc --noEmit` and lint pass. 28 new unit tests, in `wordOrder.test.ts`
+  and `feedState.test.ts`.
+- In the browser at phone size and at 1280 px, in demo mode: the feed pages
+  one word per screen; Learn this, its Undo, I know it and its Undo all
+  behave as described; a pending "I know it" is stored on scrolling away and
+  not before; the list shows picks in order and Remove soft-deletes; a
+  session introduces listed words first and in list order; after a session
+  the list drops the word it started; the end page shows when every word has
+  been seen.
+- On the iOS simulator (iPhone 17, Expo Go): the feed renders with the
+  "Swipe up" hint, Learn this switches the card to "On your list" and the
+  count appears on the switch, and a swipe settles on exactly the next word.
+- `expo export --platform web` succeeds.
+- After merging the 317-word file (#17): the feed loaded its second page on
+  the way down (40 words loaded by word 24), each scroll still landed on one
+  word, and a word added from the feed was the first new word in the next
+  session. 177 unit tests pass.
+- Storybook: 17 stories under Screens/Words (10 new for Discover, 4 for Your
+  list, 3 existing for All words, retitled). All render, no play function
+  fails, and axe finds no violations in any of them.
+
+### Not done
+
+- The Supabase path typechecks but has not run against a live database, like
+  the rest of it. Migrations 0008 and 0009 are unapplied. Its word order reads
+  ids, tiers and frequencies from the Postgres `words` table, and
+  `word_list.word_id` has a foreign key to `words`. Both join the list in "Words
+  come from a bundled file, not Postgres" of things to move to the words file
+  before Supabase mode is turned on.
+- Merged after the words file landed (#17), so demo mode's feed now draws
+  on 317 words. The demo backend reads its catalog from `loadContent()`.
+- Not run on an Android emulator. No Android SDK is installed on this machine.
+- All words has no "Learn this" button. Adding one would let someone who
+  searched for a word put it on their list.

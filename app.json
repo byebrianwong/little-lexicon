@@ -58,7 +58,6 @@
       "typedRoutes": true
     },
     "extra": {
-      "revenueCatEnabled": false,
       "router": {},
       "eas": {
         "projectId": "3e202ba1-e937-467c-a236-94ad42fa05c0"

@@ -1,18 +1,25 @@
-import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { expect, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
 import { WORDS } from '@/stories/fixtures';
 import { BrowseView } from './BrowseView';
+import { WordsLayout } from './WordsLayout';
+
+const allWords: Decorator = (Story) => (
+  <WordsLayout view="all" onChangeView={() => {}} listCount={2}>
+    <Story />
+  </WordsLayout>
+);
 
 const meta = {
-  title: 'Screens/Browse',
+  title: 'Screens/Words/All words',
   component: BrowseView,
   args: {
     words: WORDS,
     isLoading: false,
     soundEnabled: true,
   },
-  decorators: [phone],
+  decorators: [allWords, phone],
 } satisfies Meta<typeof BrowseView>;
 
 export default meta;

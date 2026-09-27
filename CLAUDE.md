@@ -12,7 +12,7 @@ Conventions and guardrails for this repo. Read before starting any task. Apply t
 - **State:** Zustand for client/session state, TanStack Query for server state.
 - **SRS:** `ts-fsrs`. Ref: https://github.com/open-spaced-repetition/ts-fsrs
 - **Styling:** NativeWind (Tailwind for RN). If a component needs primitives NativeWind can't express cleanly, use plain StyleSheet, not a second styling library.
-- **Payments:** RevenueCat (`react-native-purchases`). Ref: https://www.revenuecat.com/docs/
+- **Payments:** none. The app has no paid features (decided 2026-09-27). Do not add purchase code, paywalls or feature gating by plan without a new decision.
 - **LLM (build-time and optional runtime):** Anthropic Claude API via `@anthropic-ai/sdk`. Never called directly from the client; only from Node scripts (Phase 1) or Supabase Edge Functions.
 
 Version-pin everything in `package.json`. Do not float major versions.

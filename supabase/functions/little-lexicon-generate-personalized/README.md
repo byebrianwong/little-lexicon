@@ -37,8 +37,6 @@ Sentence (returned only, never written to shared content):
 ## Gating and limits
 
 - Auth: bearer JWT via `getUser()`; missing/invalid returns 401.
-- Pro only: `profiles.is_pro` read with a service-role client; non-Pro returns
-  403.
 - Rate limit: `little_lexicon.bump_ai_usage('generate')`, `DAILY_CAP` 30, over the cap
   returns 429 (increment-first / fail-closed).
 - Model: `claude-haiku-4-5`, rubric cached with `cache_control`.
@@ -51,7 +49,7 @@ shared `example_sentences` table.
 ## Required secrets (Deno.env)
 
 - `ANTHROPIC_API_KEY` (set via `supabase secrets set`)
-- `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`
+- `SUPABASE_URL`, `SUPABASE_ANON_KEY`
   (auto-injected)
 
 ## Deploy

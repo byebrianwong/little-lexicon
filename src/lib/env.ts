@@ -14,9 +14,6 @@ function readBool(value: string | undefined, fallback: boolean): boolean {
 export const env = {
   supabaseUrl: readString(process.env.EXPO_PUBLIC_SUPABASE_URL),
   supabaseAnonKey: readString(process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY),
-  revenueCatIosKey: readString(process.env.EXPO_PUBLIC_REVENUECAT_IOS_KEY),
-  revenueCatAndroidKey: readString(process.env.EXPO_PUBLIC_REVENUECAT_ANDROID_KEY),
-  revenueCatEnabled: readBool(process.env.EXPO_PUBLIC_REVENUECAT_ENABLED, false),
   demoMode: readBool(process.env.EXPO_PUBLIC_DEMO_MODE, false),
 };
 

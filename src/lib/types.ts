@@ -74,6 +74,13 @@ export interface SessionItem {
   isNew: boolean;
 }
 
+// A word the user picked in the Discover feed that no session has shown yet.
+// Once a session shows it, the word is being learned and leaves the list.
+export interface ListedWord {
+  content: WordContent;
+  addedAt: string; // ISO
+}
+
 export interface Profile {
   userId: string;
   displayName: string | null;
@@ -84,7 +91,6 @@ export interface Profile {
   streakCount: number;
   streakFreezeCount: number;
   xpTotal: number;
-  isPro: boolean;
   onboardedAt: string | null;
   reminderHour: number | null;
   lastGoalMetDay: string | null;

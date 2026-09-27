@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { phone } from '@/stories/decorators';
-import { counts, EMPTY_COUNTS, NEW_PROFILE, PRO_PROFILE, profile } from '@/stories/fixtures';
+import { counts, EMPTY_COUNTS, NEW_PROFILE, VETERAN_PROFILE, profile } from '@/stories/fixtures';
 import { HomeView } from './HomeView';
 
 const meta = {
@@ -59,7 +59,7 @@ export const Loading: Story = {
 /** A long-running account: five figures of XP and a three-digit streak. */
 export const LongRunningAccount: Story = {
   args: {
-    profile: PRO_PROFILE,
+    profile: VETERAN_PROFILE,
     reviewsToday: 22,
     counts: counts({ known: 1240, learning: 68, due: 152, knownTotal: 1240, total: 1500 }),
   },

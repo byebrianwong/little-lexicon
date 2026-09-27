@@ -34,9 +34,10 @@ What you get:
   upcoming reviews.
 - Audio on every word and sentence.
 
-Free includes the core game modes and a set number of new words per day. Pro
-unlocks unlimited new words, every game mode, write-your-own-sentence feedback,
-personalized examples, advanced stats, and offline audio.
+- A Discover feed: scroll through new words one at a time and pick the ones you
+  want to learn next.
+
+Everything is free. There are no subscriptions, ads or locked features.
 
 ## Keywords (iOS, 100 chars)
 
@@ -55,7 +56,7 @@ vocabulary,GRE,SAT,words,spaced repetition,flashcards,English,learn,study,anki
 
 - A demo account is available on request. The App also runs in an on-device demo
   mode with no network for reviewers.
-- AI features are Pro-only and gated server-side.
+- AI features are limited per user per day, enforced server-side.
 
 ## Support and legal
 

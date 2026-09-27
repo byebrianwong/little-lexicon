@@ -1,6 +1,7 @@
-// The browse screen's layout, search box and expandable rows. It owns the
-// search text and which row is open, because those are screen-local; the word
-// list itself comes from app/(app)/browse.tsx.
+// The "All words" view of the Words tab: a search box and expandable rows. It
+// owns the search text and which row is open, because those are screen-local;
+// the word list itself comes from app/(app)/browse.tsx, and the title and view
+// switch above it from WordsLayout.
 //
 // Each row is set like a dictionary entry: the word, its pronunciation and
 // part of speech, then the definition. Opening a row adds the example, the
@@ -8,11 +9,9 @@
 
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   Body,
   Column,
-  H1,
   Label,
   Muted,
   Note,
@@ -52,21 +51,20 @@ export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) 
   }, [words, query]);
 
   return (
-    <SafeAreaView className="flex-1 bg-paper" edges={['top']}>
-      <Column className="px-6 pt-10">
-        <Row className="items-baseline justify-between">
-          <H1>Words</H1>
-          <Note>{`${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'}`}</Note>
+    <View className="flex-1">
+      <Column className="px-6 pt-4">
+        <Row className="items-end gap-4">
+          <TextField
+            value={query}
+            onChangeText={setQuery}
+            placeholder="Search words and meanings"
+            accessibilityLabel="Search words and meanings"
+            autoCapitalize="none"
+            autoCorrect={false}
+            className="flex-1 text-[18px]"
+          />
+          <Note className="pb-3">{`${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'}`}</Note>
         </Row>
-        <TextField
-          value={query}
-          onChangeText={setQuery}
-          placeholder="Search words and meanings"
-          accessibilityLabel="Search words and meanings"
-          autoCapitalize="none"
-          autoCorrect={false}
-          className="mt-4 text-[18px]"
-        />
       </Column>
 
       {isLoading ? (
@@ -100,7 +98,7 @@ export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) 
           )}
         />
       )}
-    </SafeAreaView>
+    </View>
   );
 }
 

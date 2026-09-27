@@ -6,6 +6,7 @@
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
+  ListedWord,
   Profile,
   SessionItem,
   WordContent,
@@ -75,6 +76,13 @@ export interface SentenceFeedback {
   suggestion?: string;
 }
 
+export interface FeedRequest {
+  limit: number;
+  exclude: readonly number[];
+  levelEstimate: number | null;
+  seed: number;
+}
+
 export interface Backend {
   readonly kind: 'demo' | 'supabase';
 
@@ -100,10 +108,31 @@ export interface Backend {
 
   // Review queue
   getDueQueue(limit: number): Promise<SessionItem[]>;
+  /**
+   * Words never seen, for a session. Words on the user's list come first,
+   * oldest pick first and regardless of tier; the rest follow easiest first.
+   */
   getNewWords(
     limit: number,
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]>;
+
+  // Discover feed and the word list
+  /**
+   * The next words for the Discover feed: never seen, not marked known, not
+   * on the list and not in `exclude`, near the user's level, shuffled by
+   * `seed`. Pass the ids already shown as `exclude` to get the next page.
+   */
+  getFeedWords(input: FeedRequest): Promise<WordContent[]>;
+  /**
+   * The user's list, oldest first, minus words a session has already shown.
+   * Those are being learned, and keeping them would make the list grow for
+   * good.
+   */
+  getWordList(): Promise<ListedWord[]>;
+  addToWordList(wordId: number): Promise<void>;
+  /** A soft remove: the entry is kept with a removed time. */
+  removeFromWordList(wordId: number): Promise<void>;
 
   // Session lifecycle + review commit
   startSession(): Promise<{ sessionId: string }>;

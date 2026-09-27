@@ -29,7 +29,7 @@ Supabase project "games-apps"
   ├── Postgres  (schema: little_lexicon)            per-user SRS state + logs
   ├── Auth                                 email + OAuth
   ├── Storage   (bucket: little-lexicon-audio)      reserved for MP3s; audio host not chosen yet
-  └── Edge Functions (little-lexicon-*)             optional runtime Claude calls, RevenueCat webhook
+  └── Edge Functions (little-lexicon-*)             optional runtime Claude calls, account deletion
 
 Offline build-time pipeline (Node, not shipped in the app)
   ├── ingest word lists
@@ -123,9 +123,11 @@ Structured output: prompt the model to return JSON only, parse defensively, stri
 - Anti-gaming rules baked in from the start: XP scales with retrieval difficulty (production and cloze award more than multiple choice), and streak credit requires genuine review completion, not trivial taps. This keeps engagement aligned with learning rather than decoupled from it.
 - Progress views: words known/learning/due, retention percentage, streak, XP and level, a calendar heatmap, and a forecast of upcoming reviews.
 
-## 9. Monetization (Phase 7, high level)
+## 9. Monetization
 
-Freemium. Free tier: a capped number of new words per day and the core game modes. Pro (target around $5 to $8 per month or roughly $40 per year): unlimited new words, all game modes, advanced stats, offline audio, and the Claude-powered features. Use RevenueCat for cross-platform purchases and entitlement checks. Do not put purchase logic or entitlement decisions on the client alone; verify entitlements server-side via the RevenueCat webhook and a `profiles` entitlement flag.
+None. As of 2026-09-27 the goal is the best app possible, not revenue, so every feature is available to every user and there is no paywall, subscription or plan flag.
+
+The two runtime Claude features (sentence evaluation and personalized content) still cost money per call, so they stay gated: the caller must be signed in, and each user gets a daily cap enforced server-side through `little_lexicon.ai_usage`.
 
 ## 10. Out of scope for v1
 

@@ -35,9 +35,9 @@ describe('hrefKey', () => {
   });
 
   it('keys object hrefs by their contents', () => {
-    const a = hrefKey({ pathname: '/paywall', params: { from: 'home' } });
-    const b = hrefKey({ pathname: '/paywall', params: { from: 'home' } });
+    const a = hrefKey({ pathname: '/practice', params: { from: 'home' } });
+    const b = hrefKey({ pathname: '/practice', params: { from: 'home' } });
     expect(a).toBe(b);
-    expect(a).not.toBe(hrefKey({ pathname: '/paywall', params: { from: 'settings' } }));
+    expect(a).not.toBe(hrefKey({ pathname: '/practice', params: { from: 'browse' } }));
   });
 });

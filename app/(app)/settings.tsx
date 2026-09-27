@@ -8,7 +8,6 @@ import { useAuthStore } from '@/features/auth/authStore';
 import { backend } from '@/lib/backend';
 import { loadContent } from '@/lib/content';
 import { isDemoMode } from '@/lib/env';
-import { pushOnce } from '@/lib/navigation';
 import { scheduleDailyReminder, cancelDailyReminder } from '@/lib/notifications';
 
 export default function Settings() {
@@ -80,7 +79,6 @@ export default function Settings() {
       onSelectRetention={(desiredRetention) => update.mutate({ desiredRetention })}
       onToggleSound={setSoundEnabled}
       onSelectReminder={setReminder}
-      onUpgrade={() => pushOnce('/paywall')}
       onExport={exportData}
       onSignOut={() => signOut()}
       onDeleteAccount={confirmDelete}

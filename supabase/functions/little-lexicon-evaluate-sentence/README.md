@@ -35,8 +35,6 @@ result instead of failing:
 
 - Auth: the caller is identified from the bearer JWT via `getUser()`. Missing or
   invalid token returns 401.
-- Pro only: `profiles.is_pro` is read with a service-role client. Non-Pro
-  returns 403. The client-side flag is never trusted.
 - Rate limit: `little_lexicon.bump_ai_usage('evaluate')` increments a per-user daily
   counter. Over `DAILY_CAP` (30) returns 429. The counter is incremented before
   the paid call (fail-closed), so bursts are throttled.
@@ -45,7 +43,7 @@ result instead of failing:
 ## Required secrets (Deno.env)
 
 - `ANTHROPIC_API_KEY` (set via `supabase secrets set`)
-- `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`
+- `SUPABASE_URL`, `SUPABASE_ANON_KEY`
   (auto-injected in the Supabase Functions runtime)
 
 No secret is ever returned to the client.
