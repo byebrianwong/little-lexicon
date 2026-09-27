@@ -1450,7 +1450,8 @@ was `main` plus `vercel.json`, so nothing wrong was published.
   Vercel (Node 24, about 80 seconds including `npm ci`).
 - Without a Vercel login, `/`, `/session`, `/practice`, `/onboarding` and an
   unknown path all return the app's HTML with status 200. The unknown path
-  shows the router's own not-found screen.
+  shows Expo Router's default "Unmatched Route" page, because the app has no
+  `+not-found` route of its own.
 - The entry bundle is served with `cache-control: public, max-age=31536000,
   immutable`.
 - The fonts are served even though their paths contain `node_modules`.
