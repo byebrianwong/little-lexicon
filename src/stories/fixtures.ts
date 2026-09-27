@@ -2,11 +2,12 @@
 // network: Chromatic compares images, so a story whose data moves on its own
 // reports a diff on every run.
 //
-// Word content comes from the bundled demo corpus rather than a second set of
-// invented words, so stories show the same text the app shows in demo mode.
+// Word content comes from twelve hand-written sample words (sampleCorpus.ts),
+// not from the app's words file, so regenerating that file does not change
+// any snapshot.
 
 import { buildOptionPool, type OptionPool } from '@/features/games/optionPool';
-import { DEMO_WORDS } from '@/lib/backend/demo/content';
+import { SAMPLE_WORDS } from './sampleWords';
 import type {
   DailyStats,
   Profile,
@@ -16,13 +17,19 @@ import type {
 } from '@/lib/types';
 import type { ForecastDay, LeaderboardEntry, ProgressCounts } from '@/lib/backend/types';
 
-/** Every demo word, easiest first. */
-export const WORDS: WordContent[] = DEMO_WORDS;
+/** The credit line the words file carries (see pipeline/src/lib/wordnet.ts). */
+export const CREDITS: string[] = [
+  'Definitions, dictionary examples, synonyms, antonyms and pronunciations from ' +
+    'Open English WordNet 2025 (https://en-word.net/), licensed CC BY 4.0.',
+];
+
+/** Every sample word, in corpus order. */
+export const WORDS: WordContent[] = SAMPLE_WORDS;
 
 /** One word by headword. Throws on a typo rather than rendering a blank story. */
 export function word(headword: string): WordContent {
   const found = WORDS.find((w) => w.headword === headword);
-  if (!found) throw new Error(`No demo word named "${headword}"`);
+  if (!found) throw new Error(`No sample word named "${headword}"`);
   return found;
 }
 

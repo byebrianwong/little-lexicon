@@ -1,25 +1,24 @@
-// The write target abstraction. Two implementations behind one interface:
+// The pipeline's record: every word, sense, example, relation, mnemonic and
+// distractor row, with the ids assigned to them. It is one JSON file.
 //
-//   JsonFileStore  - dry-run. Reads/writes pipeline/out/dry-run.json. No network.
-//   SupabaseStore  - live. Writes the Little Lexicon content tables + little-lexicon-audio bucket.
+//   live     data/content-db.json (committed). Word ids are permanent: saved
+//            progress refers to them, so the counters only ever go up and an id
+//            is never reused.
+//   dry-run  out/dry-run.json (git-ignored), filled with stub content.
 //
 // Every read method the stages use for idempotency (getWordByHeadword,
-// listSensesForWord, ...) is implemented by both, so "re-running fills gaps and
-// never duplicates" holds identically in dry-run and live mode.
+// listSensesForWord, ...) works the same in both modes, so re-running fills
+// gaps and never duplicates.
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { dirname } from 'node:path';
+import { dirname, join } from 'node:path';
 import type { Logger } from './logger.ts';
-import {
-  createServiceRoleClient,
-  STORAGE_BUCKET,
-  type PipelineSupabaseClient,
-} from './supabase.ts';
+import type { ContentRows } from './exportContent.ts';
 import type {
   AudioBody,
   AudioObject,
-  AudioUploadResult,
+  AudioSaveResult,
   DistractorRow,
   ExampleRow,
   MnemonicRow,
@@ -35,18 +34,21 @@ import type {
 } from './types.ts';
 
 export type WordMetaPatch = Partial<
-  Pick<WordRow, 'part_of_speech' | 'ipa' | 'syllables' | 'etymology' | 'frequency_rank'>
+  Pick<
+    WordRow,
+    'part_of_speech' | 'ipa' | 'syllables' | 'etymology' | 'frequency_rank' | 'difficulty_tier'
+  >
 >;
 
 export interface Store {
-  readonly mode: 'json' | 'supabase';
   init(): Promise<void>;
   flush(): Promise<void>;
+  /** Every content row, for the export stage. */
+  snapshot(): Promise<ContentRows>;
 
   getWordByHeadword(headword: string): Promise<WordRow | null>;
   listWords(): Promise<WordRow[]>;
   insertWord(input: NewWord): Promise<WordRow>;
-  setWordAudio(wordId: number, url: string): Promise<void>;
   updateWordMeta(wordId: number, patch: WordMetaPatch): Promise<void>;
 
   listSensesForWord(wordId: number): Promise<SenseRow[]>;
@@ -55,7 +57,6 @@ export interface Store {
 
   listExamplesForSense(senseId: number): Promise<ExampleRow[]>;
   insertExample(input: NewExample): Promise<ExampleRow>;
-  setExampleAudio(exampleId: number, url: string): Promise<void>;
 
   listRelationsForWord(wordId: number): Promise<RelationRow[]>;
   insertRelation(input: NewRelation): Promise<RelationRow>;
@@ -66,14 +67,11 @@ export interface Store {
   listDistractorsForSense(senseId: number): Promise<DistractorRow[]>;
   insertDistractor(input: NewDistractor): Promise<DistractorRow>;
 
-  uploadAudio(path: string, body: AudioBody): Promise<AudioUploadResult>;
-  listAudioObjects(): Promise<AudioObject[]>;
-  totalBucketBytes(): Promise<number>;
+  hasAudio(path: string): Promise<boolean>;
+  saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult>;
+  totalAudioBytes(): Promise<number>;
 }
 
-// ---------------------------------------------------------------------------
-// JSON file store (dry-run)
-// ---------------------------------------------------------------------------
 
 interface JsonDb {
   meta: { note: string; createdAt: string; updatedAt: string };
@@ -87,11 +85,17 @@ interface JsonDb {
   audio_objects: AudioObject[];
 }
 
-function emptyDb(): JsonDb {
+const LIVE_NOTE =
+  'Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers ' +
+  'to them. Edit content here, then run `npx tsx src/run.ts --only=export`.';
+const DRY_RUN_NOTE =
+  'Dry-run output for the Little Lexicon content pipeline. Stub content is labeled "(dry-run stub)". Not for production.';
+
+function emptyDb(dryRun: boolean): JsonDb {
   const now = new Date().toISOString();
   return {
     meta: {
-      note: 'Dry-run output for the Little Lexicon content pipeline. Stub content is labeled "(dry-run stub)". Not for production.',
+      note: dryRun ? DRY_RUN_NOTE : LIVE_NOTE,
       createdAt: now,
       updatedAt: now,
     },
@@ -107,33 +111,42 @@ function emptyDb(): JsonDb {
 }
 
 export class JsonFileStore implements Store {
-  readonly mode = 'json' as const;
-  private db: JsonDb = emptyDb();
+  private db: JsonDb;
 
   constructor(
     private readonly filePath: string,
+    private readonly audioDir: string,
+    dryRun: boolean,
     private readonly logger: Logger,
-  ) {}
+  ) {
+    this.db = emptyDb(dryRun);
+  }
 
   async init(): Promise<void> {
-    if (existsSync(this.filePath)) {
-      try {
-        this.db = JSON.parse(await readFile(this.filePath, 'utf8')) as JsonDb;
-        this.logger.info(`Loaded existing dry-run state from ${this.filePath}`);
-      } catch {
-        this.logger.warn(`Could not parse ${this.filePath}; starting fresh`);
-        this.db = emptyDb();
-      }
-    } else {
-      this.db = emptyDb();
+    if (!existsSync(this.filePath)) {
+      this.logger.info(`No record at ${this.filePath} yet; starting a new one.`);
+      return;
     }
+    try {
+      this.db = JSON.parse(await readFile(this.filePath, 'utf8')) as JsonDb;
+    } catch (err) {
+      // Never start fresh over an unreadable record: new ids would silently
+      // point saved progress at different words.
+      throw new Error(`Could not parse ${this.filePath}: ${(err as Error).message}`);
+    }
+    this.logger.info(`Loaded ${this.db.words.length} words from ${this.filePath}`);
   }
 
   async flush(): Promise<void> {
     this.db.meta.updatedAt = new Date().toISOString();
     const dir = dirname(this.filePath);
     if (!existsSync(dir)) await mkdir(dir, { recursive: true });
-    await writeFile(this.filePath, JSON.stringify(this.db, null, 2), 'utf8');
+    await writeFile(this.filePath, JSON.stringify(this.db, null, 2) + '\n', 'utf8');
+  }
+
+  async snapshot(): Promise<ContentRows> {
+    const { words, senses, example_sentences, word_relations, mnemonics, distractors } = this.db;
+    return { words, senses, example_sentences, word_relations, mnemonics, distractors };
   }
 
   private nextId(table: string): number {
@@ -156,11 +169,6 @@ export class JsonFileStore implements Store {
     const row: WordRow = { id: this.nextId('words'), ...input };
     this.db.words.push(row);
     return row;
-  }
-
-  async setWordAudio(wordId: number, url: string): Promise<void> {
-    const w = this.db.words.find((x) => x.id === wordId);
-    if (w) w.audio_url = url;
   }
 
   async updateWordMeta(wordId: number, patch: WordMetaPatch): Promise<void> {
@@ -199,11 +207,6 @@ export class JsonFileStore implements Store {
     const row: ExampleRow = { id: this.nextId('example_sentences'), ...input };
     this.db.example_sentences.push(row);
     return row;
-  }
-
-  async setExampleAudio(exampleId: number, url: string): Promise<void> {
-    const e = this.db.example_sentences.find((x) => x.id === exampleId);
-    if (e) e.audio_url = url;
   }
 
   async listRelationsForWord(wordId: number): Promise<RelationRow[]> {
@@ -251,244 +254,32 @@ export class JsonFileStore implements Store {
     return row;
   }
 
-  async uploadAudio(path: string, body: AudioBody): Promise<AudioUploadResult> {
-    const bytes = body.kind === 'bytes' ? body.data.length : body.estimatedBytes;
-    const url = `https://dry-run.local/${STORAGE_BUCKET}/${path}`;
-    const existing = this.db.audio_objects.find((a) => a.path === path);
-    if (existing) {
-      existing.bytes = bytes;
-      existing.url = url;
+  async hasAudio(path: string): Promise<boolean> {
+    return this.db.audio_objects.some((a) => a.path === path);
+  }
+
+  /**
+   * Record a clip. Real bytes are written under the audio folder; dry-run stubs
+   * only record an estimated size. Nothing is uploaded and no audio_url is set
+   * until an audio host is chosen (see README).
+   */
+  async saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult> {
+    let bytes: number;
+    if (body.kind === 'bytes') {
+      const file = join(this.audioDir, path);
+      await mkdir(dirname(file), { recursive: true });
+      await writeFile(file, body.data);
+      bytes = body.data.length;
     } else {
-      this.db.audio_objects.push({ path, bytes, url });
+      bytes = body.estimatedBytes;
     }
-    return { publicUrl: url, bytes };
+    const existing = this.db.audio_objects.find((a) => a.path === path);
+    if (existing) existing.bytes = bytes;
+    else this.db.audio_objects.push({ path, bytes });
+    return { bytes };
   }
 
-  async listAudioObjects(): Promise<AudioObject[]> {
-    return [...this.db.audio_objects];
-  }
-
-  async totalBucketBytes(): Promise<number> {
+  async totalAudioBytes(): Promise<number> {
     return this.db.audio_objects.reduce((sum, a) => sum + a.bytes, 0);
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Supabase store (live). Untested in dry-run; guarded behind live credentials.
-// ---------------------------------------------------------------------------
-
-export class SupabaseStore implements Store {
-  readonly mode = 'supabase' as const;
-  private readonly client: PipelineSupabaseClient;
-
-  constructor(
-    url: string,
-    serviceRoleKey: string,
-    private readonly logger: Logger,
-  ) {
-    this.client = createServiceRoleClient(url, serviceRoleKey);
-  }
-
-  async init(): Promise<void> {
-    // Cheap connectivity probe against the content table.
-    const { error } = await this.client.from('words').select('id').limit(1);
-    if (error) {
-      throw new Error(`Supabase connectivity check failed: ${error.message}`);
-    }
-    this.logger.info('Connected to Supabase (service role).');
-  }
-
-  async flush(): Promise<void> {
-    // Writes are committed per row; nothing to flush.
-  }
-
-  private fail(op: string, message: string): never {
-    throw new Error(`Supabase ${op} failed: ${message}`);
-  }
-
-  async getWordByHeadword(headword: string): Promise<WordRow | null> {
-    const { data, error } = await this.client
-      .from('words')
-      .select('*')
-      .eq('headword', headword)
-      .maybeSingle();
-    if (error) this.fail('getWordByHeadword', error.message);
-    return (data as WordRow | null) ?? null;
-  }
-
-  async listWords(): Promise<WordRow[]> {
-    const { data, error } = await this.client.from('words').select('*').order('id');
-    if (error) this.fail('listWords', error.message);
-    return (data as WordRow[] | null) ?? [];
-  }
-
-  async insertWord(input: NewWord): Promise<WordRow> {
-    const { data, error } = await this.client
-      .from('words')
-      .insert(input)
-      .select('*')
-      .single();
-    if (error) this.fail('insertWord', error.message);
-    return data as WordRow;
-  }
-
-  async setWordAudio(wordId: number, url: string): Promise<void> {
-    const { error } = await this.client
-      .from('words')
-      .update({ audio_url: url })
-      .eq('id', wordId);
-    if (error) this.fail('setWordAudio', error.message);
-  }
-
-  async updateWordMeta(wordId: number, patch: WordMetaPatch): Promise<void> {
-    if (Object.keys(patch).length === 0) return;
-    const { error } = await this.client.from('words').update(patch).eq('id', wordId);
-    if (error) this.fail('updateWordMeta', error.message);
-  }
-
-  async listSensesForWord(wordId: number): Promise<SenseRow[]> {
-    const { data, error } = await this.client
-      .from('senses')
-      .select('*')
-      .eq('word_id', wordId)
-      .order('sense_order');
-    if (error) this.fail('listSensesForWord', error.message);
-    return (data as SenseRow[] | null) ?? [];
-  }
-
-  async insertSense(input: NewSense): Promise<SenseRow> {
-    const { data, error } = await this.client
-      .from('senses')
-      .insert(input)
-      .select('*')
-      .single();
-    if (error) this.fail('insertSense', error.message);
-    return data as SenseRow;
-  }
-
-  async setPlainDefinition(senseId: number, text: string): Promise<void> {
-    const { error } = await this.client
-      .from('senses')
-      .update({ plain_language_definition: text })
-      .eq('id', senseId);
-    if (error) this.fail('setPlainDefinition', error.message);
-  }
-
-  async listExamplesForSense(senseId: number): Promise<ExampleRow[]> {
-    const { data, error } = await this.client
-      .from('example_sentences')
-      .select('*')
-      .eq('sense_id', senseId);
-    if (error) this.fail('listExamplesForSense', error.message);
-    return (data as ExampleRow[] | null) ?? [];
-  }
-
-  async insertExample(input: NewExample): Promise<ExampleRow> {
-    const { data, error } = await this.client
-      .from('example_sentences')
-      .insert(input)
-      .select('*')
-      .single();
-    if (error) this.fail('insertExample', error.message);
-    return data as ExampleRow;
-  }
-
-  async setExampleAudio(exampleId: number, url: string): Promise<void> {
-    const { error } = await this.client
-      .from('example_sentences')
-      .update({ audio_url: url })
-      .eq('id', exampleId);
-    if (error) this.fail('setExampleAudio', error.message);
-  }
-
-  async listRelationsForWord(wordId: number): Promise<RelationRow[]> {
-    const { data, error } = await this.client
-      .from('word_relations')
-      .select('*')
-      .eq('word_id', wordId);
-    if (error) this.fail('listRelationsForWord', error.message);
-    return (data as RelationRow[] | null) ?? [];
-  }
-
-  async insertRelation(input: NewRelation): Promise<RelationRow> {
-    const { data, error } = await this.client
-      .from('word_relations')
-      .upsert(input, { onConflict: 'word_id,related_lemma,relation_type', ignoreDuplicates: false })
-      .select('*')
-      .single();
-    if (error) this.fail('insertRelation', error.message);
-    return data as RelationRow;
-  }
-
-  async listMnemonicsForWord(wordId: number): Promise<MnemonicRow[]> {
-    const { data, error } = await this.client
-      .from('mnemonics')
-      .select('*')
-      .eq('word_id', wordId);
-    if (error) this.fail('listMnemonicsForWord', error.message);
-    return (data as MnemonicRow[] | null) ?? [];
-  }
-
-  async insertMnemonic(input: NewMnemonic): Promise<MnemonicRow> {
-    const { data, error } = await this.client
-      .from('mnemonics')
-      .insert(input)
-      .select('*')
-      .single();
-    if (error) this.fail('insertMnemonic', error.message);
-    return data as MnemonicRow;
-  }
-
-  async listDistractorsForSense(senseId: number): Promise<DistractorRow[]> {
-    const { data, error } = await this.client
-      .from('distractors')
-      .select('*')
-      .eq('sense_id', senseId);
-    if (error) this.fail('listDistractorsForSense', error.message);
-    return (data as DistractorRow[] | null) ?? [];
-  }
-
-  async insertDistractor(input: NewDistractor): Promise<DistractorRow> {
-    const { data, error } = await this.client
-      .from('distractors')
-      .insert(input)
-      .select('*')
-      .single();
-    if (error) this.fail('insertDistractor', error.message);
-    return data as DistractorRow;
-  }
-
-  async uploadAudio(path: string, body: AudioBody): Promise<AudioUploadResult> {
-    if (body.kind !== 'bytes') {
-      this.fail('uploadAudio', 'live store requires real audio bytes');
-    }
-    const { error } = await this.client.storage
-      .from(STORAGE_BUCKET)
-      .upload(path, body.data, { contentType: body.contentType, upsert: true });
-    if (error) this.fail('uploadAudio', error.message);
-    const { data } = this.client.storage.from(STORAGE_BUCKET).getPublicUrl(path);
-    return { publicUrl: data.publicUrl, bytes: body.data.length };
-  }
-
-  async listAudioObjects(): Promise<AudioObject[]> {
-    const objects: AudioObject[] = [];
-    for (const prefix of ['words', 'sentences']) {
-      const { data, error } = await this.client.storage
-        .from(STORAGE_BUCKET)
-        .list(prefix, { limit: 100000 });
-      if (error) this.fail('listAudioObjects', error.message);
-      for (const obj of data ?? []) {
-        const size = (obj.metadata as { size?: number } | null)?.size ?? 0;
-        const path = `${prefix}/${obj.name}`;
-        const { data: pub } = this.client.storage.from(STORAGE_BUCKET).getPublicUrl(path);
-        objects.push({ path, bytes: size, url: pub.publicUrl });
-      }
-    }
-    return objects;
-  }
-
-  async totalBucketBytes(): Promise<number> {
-    const objects = await this.listAudioObjects();
-    return objects.reduce((sum, o) => sum + o.bytes, 0);
   }
 }

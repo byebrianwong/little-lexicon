@@ -33,7 +33,7 @@ export interface HydrateStub {
   example: { text: string; clozeTarget: string };
 }
 
-/** Offline stand-in for WordNet + Free Dictionary hydration. */
+/** Offline stand-in for WordNet hydration. */
 export function stubHydrate(word: string): HydrateStub {
   const h = hash(word);
   const pos = POS_CYCLE[h % POS_CYCLE.length]!;
@@ -42,7 +42,7 @@ export function stubHydrate(word: string): HydrateStub {
     partOfSpeech: pos,
     ipa: `/${word}/`,
     syllables: estimateSyllables(word),
-    definition: `(dry-run stub) A ${pos} sense of "${word}"; replace with WordNet or Free Dictionary data in a live run.`,
+    definition: `(dry-run stub) A ${pos} sense of "${word}"; replace with WordNet data in a live run.`,
     register,
     synonyms: [`${word}-synonym-1`, `${word}-synonym-2`],
     antonyms: [`${word}-antonym-1`],
@@ -71,13 +71,9 @@ export function stubGenerate(
     `Few readers expected such ${word} from a debut so slim.`,
   ].map((text) => ({ text, cloze_target: word }));
 
-  const distractors = [
-    `${word}-distractor-1`,
-    `${word}-distractor-2`,
-    `${word}-distractor-3`,
-    `${word}-distractor-4`,
-    `${word}-distractor-5`,
-  ];
+  const distractors = [1, 2, 3, 4, 5].map(
+    (n) => `(dry-run stub) Wrong definition ${n} for "${word}".`,
+  );
 
   return {
     sense_id: senseId,
@@ -91,7 +87,7 @@ export function stubGenerate(
 }
 
 /**
- * Estimate MP3 byte size from character count for dry-run bucket accounting.
+ * Estimate MP3 byte size from character count for dry-run audio accounting.
  * A rough figure (about 120 bytes/char) standing in for a real synthesized MP3.
  */
 export function estimateAudioBytes(chars: number): number {

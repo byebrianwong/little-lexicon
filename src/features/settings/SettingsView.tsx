@@ -46,6 +46,8 @@ export interface SettingsViewProps {
   onDeleteAccount: () => void;
   /** Demo mode stores everything on the device; the screen says so. */
   showDemoNote: boolean;
+  /** Credits for licensed word content, shown at the bottom. */
+  credits: string[];
 }
 
 export function SettingsView({
@@ -60,6 +62,7 @@ export function SettingsView({
   onSignOut,
   onDeleteAccount,
   showDemoNote,
+  credits,
 }: SettingsViewProps) {
   const [name, setName] = useState(profile.displayName ?? '');
 
@@ -164,6 +167,12 @@ export function SettingsView({
           Demo mode: data is stored only on this device.
         </Note>
       ) : null}
+
+      {credits.map((line) => (
+        <Note key={line} className="mt-6 text-center">
+          {line}
+        </Note>
+      ))}
     </Screen>
   );
 }

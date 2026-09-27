@@ -1,10 +1,12 @@
 import { Alert, Share } from 'react-native';
 import { router } from 'expo-router';
+import { useQuery } from '@tanstack/react-query';
 import { useProfile, useUpdateProfile } from '@/features/review/queries';
 import { SettingsLoading, SettingsView } from '@/features/settings/SettingsView';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 import { useAuthStore } from '@/features/auth/authStore';
 import { backend } from '@/lib/backend';
+import { loadContent } from '@/lib/content';
 import { isDemoMode } from '@/lib/env';
 import { scheduleDailyReminder, cancelDailyReminder } from '@/lib/notifications';
 
@@ -14,6 +16,10 @@ export default function Settings() {
   const soundEnabled = useSettingsStore((s) => s.soundEnabled);
   const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
   const signOut = useAuthStore((s) => s.signOut);
+  const credits = useQuery({
+    queryKey: ['contentCredits'],
+    queryFn: async () => (await loadContent()).attribution,
+  });
   const p = profile.data;
 
   if (!p) return <SettingsLoading />;
@@ -77,6 +83,7 @@ export default function Settings() {
       onSignOut={() => signOut()}
       onDeleteAccount={confirmDelete}
       showDemoNote={isDemoMode}
+      credits={credits.data ?? []}
     />
   );
 }

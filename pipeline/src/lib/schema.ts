@@ -25,7 +25,8 @@ export const GeneratedSenseSchema = z.object({
   sense_id: z.number().int().positive(),
   plain_language_definition: nonEmpty.max(400),
   examples: z.array(GeneratedExampleSchema).min(3).max(5),
-  distractors: z.array(nonEmpty.max(80)).min(4).max(6),
+  // Wrong definitions, shown beside the real one in multiple choice.
+  distractors: z.array(nonEmpty.max(200)).min(4).max(6),
   // One global mnemonic per word. We ask for it alongside the word's first
   // sense so the batch stays one-request-per-sense.
   mnemonic: nonEmpty.max(300).nullable().optional(),

@@ -1,17 +1,20 @@
 // Stage 01 (task 1.1): ingest and curate the word list.
 //
 // Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates
-// and multi-word entries, assign a difficulty_tier (1..5), and insert into
-// little_lexicon.words. Live mode reads frequency from Datamuse (md=f); dry-run uses a
-// deterministic heuristic. Idempotent: existing headwords are skipped.
+// and multi-word entries, assign a difficulty_tier (1..5), and add each word to
+// the record. Live mode reads frequency from Datamuse; dry-run uses a
+// deterministic heuristic. Idempotent: existing headwords are skipped, and an
+// existing word keeps its id.
 
 import { readFile } from 'node:fs/promises';
 import type { RunContext } from '../config.ts';
+import { datamuseLookup } from '../lib/datamuse.ts';
 import {
   estimateSyllables,
   heuristicTier,
   rankFromFrequency,
   tierFromFrequency,
+  tiersByFrequencyRank,
 } from '../lib/difficulty.ts';
 
 interface CleanSeed {
@@ -81,28 +84,21 @@ interface WordMeta {
   syllables: number;
 }
 
-interface DatamuseHit {
-  word: string;
-  tags?: string[];
-}
-
 async function resolveWordMeta(ctx: RunContext, word: string): Promise<WordMeta> {
   const syllables = estimateSyllables(word);
   if (ctx.dryRun) {
     return { tier: heuristicTier(word), rank: null, syllables };
   }
-  // Live: ask Datamuse for frequency (occurrences per million).
-  const url = `https://api.datamuse.com/words?sp=${encodeURIComponent(word)}&md=f&max=1`;
   try {
-    const { data } = await ctx.http.getJson<DatamuseHit[]>(url);
-    const hit = data?.[0];
-    const freqTag = hit?.tags?.find((t) => t.startsWith('f:'));
-    if (freqTag) {
-      const freq = Number.parseFloat(freqTag.slice(2));
-      if (Number.isFinite(freq)) {
-        return { tier: tierFromFrequency(freq), rank: rankFromFrequency(freq), syllables };
-      }
+    const { frequency } = await datamuseLookup(ctx.http, word);
+    if (frequency !== null) {
+      return {
+        tier: tierFromFrequency(frequency),
+        rank: rankFromFrequency(frequency),
+        syllables,
+      };
     }
+    ctx.log.warn(`Datamuse has no frequency for "${word}"; using the heuristic tier.`);
   } catch (err) {
     ctx.log.warn(`Datamuse lookup failed for "${word}": ${(err as Error).message}`);
   }
@@ -141,8 +137,20 @@ export async function ingestWords(ctx: RunContext): Promise<void> {
     ctx.metrics.wordsInserted += 1;
   }
 
+  // Re-tier the whole list relative to itself (see lib/difficulty.ts).
+  const all = await ctx.store.listWords();
+  let retiered = 0;
+  for (const [id, tier] of tiersByFrequencyRank(all)) {
+    const word = all.find((w) => w.id === id)!;
+    if (word.difficulty_tier !== tier) {
+      await ctx.store.updateWordMeta(id, { difficulty_tier: tier });
+      retiered += 1;
+    }
+  }
+
   await ctx.store.flush();
   ctx.log.success(
-    `Words: +${ctx.metrics.wordsInserted} inserted, ${ctx.metrics.wordsSkipped} already present.`,
+    `Words: +${ctx.metrics.wordsInserted} inserted, ${ctx.metrics.wordsSkipped} already present, ` +
+      `${retiered} re-tiered.`,
   );
 }

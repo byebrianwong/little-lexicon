@@ -635,6 +635,8 @@ export class SupabaseBackend implements Backend {
 
   async generatePersonalized(input: {
     wordId: number;
+    /** The word on screen, so the backend does not have to look it up by id. */
+    headword: string;
     kind: 'mnemonic' | 'sentence';
     interests: string[];
   }): Promise<{ text: string }> {
