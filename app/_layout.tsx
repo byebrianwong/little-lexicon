@@ -1,7 +1,7 @@
 import '../global.css';
 
 import { useEffect } from 'react';
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
@@ -16,6 +16,16 @@ import { flushReviewQueue } from '@/features/offline/reviewQueue';
 import { applyUpdateOnStartup } from '@/lib/updates';
 import { fontFaces } from '@/theme/fonts';
 import { colors } from '@/theme/colors';
+
+// Session, practice, speed round and summary cover the whole screen on a phone.
+// On web, Expo Router draws any modal as a centred dialog at most 586 px tall
+// (its iOS 26 default). A question and its answer panel need more than that, so
+// they scrolled inside the box. On web these open as ordinary full-window pages
+// instead. That also means a click outside the dialog can no longer close a
+// session before its wrap-up (streak, achievements, summary) runs.
+const fullScreen = {
+  presentation: Platform.OS === 'web' ? 'card' : 'fullScreenModal',
+} as const;
 
 // Hold the splash screen until Newsreader is ready, so the first frame is set
 // in the right type rather than flashing the system font. No-op on web.
@@ -69,19 +79,10 @@ export default function RootLayout() {
               <Stack.Screen name="(auth)" />
               <Stack.Screen name="onboarding" />
               <Stack.Screen name="(app)" />
-              <Stack.Screen
-                name="session"
-                options={{ presentation: 'fullScreenModal' }}
-              />
-              <Stack.Screen
-                name="practice"
-                options={{ presentation: 'fullScreenModal' }}
-              />
-              <Stack.Screen name="speed" options={{ presentation: 'fullScreenModal' }} />
-              <Stack.Screen
-                name="summary"
-                options={{ presentation: 'fullScreenModal' }}
-              />
+              <Stack.Screen name="session" options={fullScreen} />
+              <Stack.Screen name="practice" options={fullScreen} />
+              <Stack.Screen name="speed" options={fullScreen} />
+              <Stack.Screen name="summary" options={fullScreen} />
             </Stack>
           </View>
         </QueryClientProvider>

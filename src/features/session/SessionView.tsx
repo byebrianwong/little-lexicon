@@ -131,15 +131,12 @@ export function SessionRunner({
       <ScrollView
         ref={scrollRef}
         className="flex-1"
-        contentContainerStyle={{
-          paddingHorizontal: 24,
-          paddingTop: 28,
-          paddingBottom: 40,
-          flexGrow: 1,
-        }}
+        contentContainerStyle={{ paddingTop: 28, paddingBottom: 40, flexGrow: 1 }}
         keyboardShouldPersistTaps="handled"
       >
-        <Column className="flex-1">
+        {/* The side padding sits inside the column, as on every other screen,
+            so the question lines up with the header on a wide window. */}
+        <Column className="flex-1 px-6">
           <RevealScrollProvider scrollRef={scrollRef}>{children}</RevealScrollProvider>
         </Column>
       </ScrollView>

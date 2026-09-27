@@ -1,5 +1,6 @@
-// The placement question: one word, three honest answers. The adaptive tier
-// logic and the word picking live in app/onboarding/placement.tsx.
+// The placement question: one word, three honest answers, and a way to skip
+// the whole test. The adaptive tier logic and the word picking live in
+// app/onboarding/placement.tsx.
 
 import { View } from 'react-native';
 import {
@@ -13,6 +14,7 @@ import {
   Row,
   Screen,
   Spinner,
+  TextButton,
 } from '@/components/ui';
 import { AudioButton } from '@/features/games/Reveal';
 import type { WordContent } from '@/lib/types';
@@ -34,6 +36,8 @@ export interface PlacementViewProps {
   total: number;
   onAnswer: (answer: PlacementAnswer) => void;
   onHear: () => void;
+  /** Leaves the test for the home screen, which offers it again later. */
+  onSkip: () => void;
 }
 
 export function PlacementView({
@@ -42,16 +46,18 @@ export function PlacementView({
   total,
   onAnswer,
   onHear,
+  onSkip,
 }: PlacementViewProps) {
   return (
     <Screen>
-      <Row className="justify-between pt-6">
-        <Label>Placement</Label>
-        <Label>{`Question ${answeredCount + 1} of ${total}`}</Label>
+      <Row className="items-center justify-between pt-2">
+        <Label>Placement test</Label>
+        <TextButton label="Skip for now" onPress={onSkip} />
       </Row>
-      <View className="mt-3">
+      <View className="mt-1">
         <ProgressBar fraction={total > 0 ? answeredCount / total : 0} />
       </View>
+      <Label className="mt-3 self-end">{`Question ${answeredCount + 1} of ${total}`}</Label>
 
       <View className="flex-1 justify-center">
         <Note className="text-[17px]">Do you know this word?</Note>
@@ -61,7 +67,8 @@ export function PlacementView({
           {word ? <AudioButton onPress={onHear} label="Hear it" /> : null}
         </View>
         <Muted className="mt-6">
-          Be honest. This just sets your starting difficulty; you can change it later.
+          Be honest. This sets the difficulty of your new words. If you skip it, you
+          can take it later from the Learn tab.
         </Muted>
       </View>
 
