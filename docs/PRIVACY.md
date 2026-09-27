@@ -13,8 +13,8 @@ to hide behind legalese.
 - **Learning data.** Your review history, spaced-repetition card state, daily
   activity, streak, XP, and settings. This is what makes scheduling and progress
   work. It is tied to your account and readable only by you.
-- **Purchases.** If you subscribe, purchase and entitlement status is processed
-  by the app store and RevenueCat. We store only whether your account is Pro.
+- **Your word list.** The words you choose to learn from the Discover feed, and
+  when you added or removed them.
 
 We do not sell your data. We do not send your word-level performance to
 advertising networks.
@@ -28,10 +28,10 @@ advertising networks.
 
 ## AI features
 
-Optional Pro features (evaluating a sentence you write, generating a
+Two optional features (evaluating a sentence you write, generating a
 personalized memory hook) send the specific text of that request to our AI
 provider (Anthropic) through our server, only when you trigger the feature. We
-do not send your broader history. These calls are rate-limited and gated to Pro.
+do not send your broader history. These calls are limited per user per day.
 
 ## Your choices and rights
 

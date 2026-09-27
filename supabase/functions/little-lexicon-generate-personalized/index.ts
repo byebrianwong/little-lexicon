@@ -6,9 +6,8 @@
 //
 // Same gating as little-lexicon-evaluate-sentence:
 //   1. Auth via the incoming bearer JWT -> getUser(); no user -> 401.
-//   2. Pro gate on profiles.is_pro via a service-role client; non-Pro -> 403.
-//   3. Rate limit via bump_ai_usage('generate'); over the cap -> 429.
-//   4. Generation with claude-haiku-4-5 (rubric cached).
+//   2. Rate limit via bump_ai_usage('generate'); over the cap -> 429.
+//   3. Generation with claude-haiku-4-5 (rubric cached).
 //
 // Personalized mnemonics are written with user_id set, so RLS keeps them
 // owner-visible only. Sentences are personal and short-lived, so they are
@@ -49,9 +48,8 @@ Deno.serve(async (req: Request): Promise<Response> => {
 
   const SUPABASE_URL = Deno.env.get("SUPABASE_URL");
   const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
-  const SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const ANTHROPIC_API_KEY = Deno.env.get("ANTHROPIC_API_KEY");
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !SERVICE_ROLE_KEY || !ANTHROPIC_API_KEY) {
+  if (!SUPABASE_URL || !SUPABASE_ANON_KEY || !ANTHROPIC_API_KEY) {
     return jsonResponse({ error: "Server not configured" }, 500);
   }
 
@@ -90,23 +88,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
     .filter((s) => typeof s === "string" && s.trim().length > 0)
     .slice(0, 5)
     .map((s) => s.trim());
-
-  // Pro gate via service role.
-  const serviceClient = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
-    auth: { persistSession: false, autoRefreshToken: false },
-    db: { schema: "little_lexicon" },
-  });
-  const { data: profile, error: profErr } = await serviceClient
-    .from("profiles")
-    .select("is_pro")
-    .eq("user_id", userId)
-    .maybeSingle();
-  if (profErr) {
-    return jsonResponse({ error: "Profile lookup failed" }, 500);
-  }
-  if (!profile?.is_pro) {
-    return jsonResponse({ error: "Pro required" }, 403);
-  }
 
   // Rate limit (increment-first, atomic), as the caller.
   const { data: usageCount, error: usageErr } = await authClient.rpc("bump_ai_usage", {

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { expect, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
-import { NEW_PROFILE, PRO_PROFILE, profile } from '@/stories/fixtures';
+import { NEW_PROFILE, profile } from '@/stories/fixtures';
 import { SettingsLoading, SettingsView } from './SettingsView';
 
 const meta = {
@@ -16,7 +16,6 @@ const meta = {
     onSelectRetention: () => {},
     onToggleSound: () => {},
     onSelectReminder: () => {},
-    onUpgrade: () => {},
     onExport: () => {},
     onSignOut: () => {},
     onDeleteAccount: () => {},
@@ -27,13 +26,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** A free account: the upgrade button shows, chips mark the current choices. */
+/** A typical account: chips mark the current choices. */
 export const FreeAccount: Story = {};
-
-/** Pro: the membership row turns gold and the upgrade button disappears. */
-export const ProAccount: Story = {
-  args: { profile: PRO_PROFILE },
-};
 
 /** Sound off and no reminder set, so "Off" is the selected reminder chip. */
 export const FeedbackAndRemindersOff: Story = {

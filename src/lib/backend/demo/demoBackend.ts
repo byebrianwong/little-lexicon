@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
+  ListedWord,
   Profile,
   SessionItem,
   UserWordState,
@@ -16,6 +17,7 @@ import type {
   AuthResult,
   AuthSession,
   Backend,
+  FeedRequest,
   ForecastDay,
   LeaderboardEntry,
   ProgressCounts,
@@ -25,6 +27,13 @@ import type {
 } from '../types';
 import { DEMO_WORDS, DEMO_WORDS_BY_ID } from './content';
 import { normalizeAnswer } from '@/lib/text';
+import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
+
+const CATALOG: CatalogEntry[] = DEMO_WORDS.map((w) => ({
+  wordId: w.wordId,
+  difficultyTier: w.difficultyTier,
+  frequencyRank: w.frequencyRank,
+}));
 
 const STORAGE_KEY = 'little_lexicon.demo.v1';
 const DEMO_USER_ID = 'demo-user';
@@ -42,10 +51,17 @@ interface LogRow {
   reviewed_at: string;
 }
 
+interface ListRow {
+  added_at: string;
+  removed_at: string | null;
+}
+
 interface PersistShape {
   session: AuthSession | null;
   profile: Profile;
   states: Record<number, StateRow>;
+  /** The Discover list, keyed by word id. Removed entries stay, soft-deleted. */
+  list: Record<number, ListRow>;
   logs: LogRow[];
   daily: Record<string, DailyStats>;
   achievements: string[];
@@ -62,7 +78,6 @@ function defaultProfile(): Profile {
     streakCount: 0,
     streakFreezeCount: 2,
     xpTotal: 0,
-    isPro: false,
     onboardedAt: null,
     reminderHour: null,
     lastGoalMetDay: null,
@@ -74,6 +89,7 @@ function emptyState(): PersistShape {
     session: { userId: DEMO_USER_ID, email: 'demo@little_lexicon.app' },
     profile: defaultProfile(),
     states: {},
+    list: {},
     logs: [],
     daily: {},
     achievements: [],
@@ -209,22 +225,72 @@ export class DemoBackend implements Backend {
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]> {
     await this.ensureLoaded();
-    const seen = new Set(Object.keys(this.data.states).map(Number));
-    const minTier = opts?.minTier ?? 1;
-    const maxTier = opts?.maxTier ?? 5;
-    const words = DEMO_WORDS.filter(
-      (w) =>
-        !seen.has(w.wordId) &&
-        w.difficultyTier >= minTier &&
-        w.difficultyTier <= maxTier,
-    )
-      .sort(
-        (a, b) =>
-          a.difficultyTier - b.difficultyTier ||
-          (a.frequencyRank ?? 0) - (b.frequencyRank ?? 0),
-      )
-      .slice(0, limit);
-    return words.map<SessionItem>((content) => ({ content, state: null, isNew: true }));
+    const ids = pickNewWordIds({
+      catalog: CATALOG,
+      seen: this.seenIds(),
+      listed: this.listedIds(),
+      minTier: opts?.minTier,
+      maxTier: opts?.maxTier,
+      limit,
+    });
+    return ids
+      .map((id) => DEMO_WORDS_BY_ID.get(id))
+      .filter((c): c is WordContent => c !== undefined)
+      .map<SessionItem>((content) => ({ content, state: null, isNew: true }));
+  }
+
+  /** Words with a state row: studied, or marked known. */
+  private seenIds(): Set<number> {
+    return new Set(Object.keys(this.data.states).map(Number));
+  }
+
+  /** Active list entries, oldest first. */
+  private listedIds(): number[] {
+    return Object.entries(this.data.list)
+      .filter(([, row]) => row.removed_at === null)
+      .sort(([a, ra], [b, rb]) => ra.added_at.localeCompare(rb.added_at) || Number(a) - Number(b))
+      .map(([id]) => Number(id));
+  }
+
+  // --- Discover feed and the word list --------------------------------------
+  async getFeedWords(input: FeedRequest): Promise<WordContent[]> {
+    await this.ensureLoaded();
+    const exclude = new Set([...this.seenIds(), ...this.listedIds(), ...input.exclude]);
+    return orderFeed({
+      catalog: CATALOG,
+      exclude,
+      levelEstimate: input.levelEstimate,
+      seed: input.seed,
+      limit: input.limit,
+    })
+      .map((id) => DEMO_WORDS_BY_ID.get(id))
+      .filter((c): c is WordContent => c !== undefined);
+  }
+
+  async getWordList(): Promise<ListedWord[]> {
+    await this.ensureLoaded();
+    const seen = this.seenIds();
+    return this.listedIds()
+      .filter((id) => !seen.has(id))
+      .map((id) => {
+        const content = DEMO_WORDS_BY_ID.get(id);
+        return content ? { content, addedAt: this.data.list[id]!.added_at } : null;
+      })
+      .filter((w): w is ListedWord => w !== null);
+  }
+
+  async addToWordList(wordId: number): Promise<void> {
+    await this.ensureLoaded();
+    this.data.list[wordId] = { added_at: new Date().toISOString(), removed_at: null };
+    await this.persist();
+  }
+
+  async removeFromWordList(wordId: number): Promise<void> {
+    await this.ensureLoaded();
+    const row = this.data.list[wordId];
+    if (!row || row.removed_at !== null) return;
+    this.data.list[wordId] = { ...row, removed_at: new Date().toISOString() };
+    await this.persist();
   }
 
   private toSessionItem(wordId: number, row: StateRow): SessionItem {
@@ -481,6 +547,10 @@ export class DemoBackend implements Backend {
       exportedAt: new Date().toISOString(),
       profile: this.data.profile,
       wordStates: Object.values(this.data.states),
+      wordList: Object.entries(this.data.list).map(([wordId, row]) => ({
+        word_id: Number(wordId),
+        ...row,
+      })),
       reviewLogs: this.data.logs,
       dailyStats: Object.values(this.data.daily),
       achievements: this.data.achievements,

@@ -6,15 +6,13 @@
 // would leave the box empty for good.
 
 import { useState } from 'react';
-import { Platform, Switch, View } from 'react-native';
+import { Platform, Switch } from 'react-native';
 import {
-  Body,
   Button,
   CenterScreen,
   Choice,
   ChoiceGroup,
   H1,
-  Label,
   ListRow,
   Muted,
   Note,
@@ -43,7 +41,6 @@ export interface SettingsViewProps {
   onToggleSound: (enabled: boolean) => void;
   /** null turns the daily reminder off. */
   onSelectReminder: (hour: number | null) => void;
-  onUpgrade: () => void;
   onExport: () => void;
   onSignOut: () => void;
   onDeleteAccount: () => void;
@@ -59,7 +56,6 @@ export function SettingsView({
   onSelectRetention,
   onToggleSound,
   onSelectReminder,
-  onUpgrade,
   onExport,
   onSignOut,
   onDeleteAccount,
@@ -88,20 +84,6 @@ export function SettingsView({
             onPress={() => onSaveName(name.trim() || null)}
           />
         </Row>
-        <Row className="mt-6 justify-between">
-          <Body>Membership</Body>
-          {profile.isPro ? <Label tone="accent">Pro</Label> : <Note>Free</Note>}
-        </Row>
-        {!profile.isPro ? (
-          <View className="mt-4">
-            <Button
-              title="Upgrade to Pro"
-              variant="secondary"
-              trailingIcon="arrow-right"
-              onPress={onUpgrade}
-            />
-          </View>
-        ) : null}
       </Section>
 
       <Section label="Daily goal" className="mt-10">

@@ -7,6 +7,7 @@ import { qk } from '@/lib/queryClient';
 import type { Profile, SessionItem } from '@/lib/types';
 import { buildSessionPlan, type SessionPlan } from './sessionPlan';
 import { OPENING_DUE_PAGE, OPENING_NEW_WORD_PAGE } from './pageSizes';
+import { tierWindowForLevel } from '@/features/feed/wordOrder';
 
 // --- Plain async wrappers (usable outside React, e.g. the session runner) ----
 export function getDueQueue(limit: number): Promise<SessionItem[]> {
@@ -75,13 +76,4 @@ export function useSessionPlan(profile: Profile | undefined) {
       return buildSessionPlan({ due, newWords: fresh });
     },
   });
-}
-
-/** Map a placement level estimate (1..5) to a tier window for new words. */
-export function tierWindowForLevel(
-  levelEstimate: number | null,
-): { minTier: number; maxTier: number } {
-  if (levelEstimate == null) return { minTier: 1, maxTier: 5 };
-  const center = Math.min(5, Math.max(1, levelEstimate));
-  return { minTier: Math.max(1, center - 1), maxTier: Math.min(5, center + 1) };
 }

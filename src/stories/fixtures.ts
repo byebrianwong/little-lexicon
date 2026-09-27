@@ -102,7 +102,6 @@ export function profile(overrides: Partial<Profile> = {}): Profile {
     streakCount: 7,
     streakFreezeCount: 1,
     xpTotal: 2450,
-    isPro: false,
     onboardedAt: `${isoDay(-60)}T10:00:00.000Z`,
     reminderHour: 18,
     lastGoalMetDay: isoDay(-1),
@@ -123,7 +122,8 @@ export const NEW_PROFILE: Profile = profile({
   lastGoalMetDay: null,
 });
 
-export const PRO_PROFILE: Profile = profile({ isPro: true, xpTotal: 18200, streakCount: 63 });
+/** A long-time learner: a big streak and a lot of XP. */
+export const VETERAN_PROFILE: Profile = profile({ xpTotal: 18200, streakCount: 63 });
 
 export function counts(overrides: Partial<ProgressCounts> = {}): ProgressCounts {
   return {

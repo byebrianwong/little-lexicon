@@ -12,7 +12,6 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from '@/lib/queryClient';
 import { useAuthStore } from '@/features/auth/authStore';
 import { useSettingsStore } from '@/features/settings/settingsStore';
-import { configurePurchases } from '@/lib/purchases';
 import { flushReviewQueue } from '@/features/offline/reviewQueue';
 import { applyUpdateOnStartup } from '@/lib/updates';
 import { fontFaces } from '@/theme/fonts';
@@ -45,9 +44,7 @@ export default function RootLayout() {
   useEffect(() => {
     init();
     hydrateSettings();
-    // Best-effort: configure payments (no-op unless the flag is on) and flush
-    // any reviews queued while offline.
-    configurePurchases().catch(() => {});
+    // Best-effort: flush any reviews queued while offline.
     flushReviewQueue().catch(() => {});
     // Apply a published OTA update straight away rather than on the next
     // launch. No-op in dev and on web; handles its own failures.
@@ -85,7 +82,6 @@ export default function RootLayout() {
                 name="summary"
                 options={{ presentation: 'fullScreenModal' }}
               />
-              <Stack.Screen name="paywall" options={{ presentation: 'modal' }} />
             </Stack>
           </View>
         </QueryClientProvider>

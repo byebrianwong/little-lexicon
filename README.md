@@ -9,8 +9,8 @@ The product is named **Little Lexicon** (working name). `little_lexicon` remains
 All eight phases are built. See `PROGRESS.md` for the full per-phase log and every decision made.
 
 - Universal Expo app (iOS / Android / web from one codebase) under `app/` and `src/`.
-- SRS core on `ts-fsrs`, seven game modes plus a speed round, XP/streaks/leaderboard/achievements, adaptive onboarding, and the freemium paywall.
-- Supabase schema (`supabase/migrations/`), the transactional review RPC, stats functions, the weekly leaderboard, and four `little-lexicon-*` Edge Functions (`supabase/functions/`).
+- SRS core on `ts-fsrs`, seven game modes plus a speed round, XP/streaks/leaderboard/achievements, adaptive onboarding, and a Discover feed for choosing new words. There are no paid features.
+- Supabase schema (`supabase/migrations/`), the transactional review RPC, stats functions, the weekly leaderboard, and three `little-lexicon-*` Edge Functions (`supabase/functions/`).
 - The offline content-and-audio pipeline (`pipeline/`), standalone Node with a no-network dry run.
 - Store-readiness docs in `docs/`, `eas.json`, and CI in `.github/workflows/ci.yml`.
 
@@ -76,7 +76,7 @@ Phase 0 (foundations)
                    └──> Phase 4 (more game modes)
                            └──> Phase 5 (gamification + progress)
                                    └──> Phase 6 (onboarding + personalization)
-                                           └──> Phase 7 (monetization + polish + ship)
+                                           └──> Phase 7 (polish + ship; monetization later removed)
 ```
 
 ## Fanning out to sub-agents

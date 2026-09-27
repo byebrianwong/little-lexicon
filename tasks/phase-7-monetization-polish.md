@@ -1,5 +1,9 @@
 # Phase 7: Monetization, Polish, and Ship
 
+> **Superseded in part (2026-09-27).** Monetization was removed: there is no
+> paywall, no RevenueCat and no Pro flag. Sections 7.1 and 7.2 no longer apply.
+> See SPEC.md section 9.
+
 Add the paywall, offline support, account handling, and store submission.
 
 **Depends on:** all prior phases.

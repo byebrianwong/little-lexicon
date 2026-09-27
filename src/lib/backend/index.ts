@@ -21,4 +21,5 @@ export type {
   ForecastDay,
   LeaderboardEntry,
   SentenceFeedback,
+  FeedRequest,
 } from './types';
