@@ -1,7 +1,8 @@
-// Shared row shapes and inputs. These mirror the columns defined in
-// supabase/migrations/0001_init_little_lexicon_schema.sql. The pipeline only ever writes
-// the content tables (words, senses, example_sentences, word_relations,
-// mnemonics, distractors); per-user tables are out of scope here.
+// Row shapes and inputs for the pipeline's record (data/content-db.json). They
+// keep the column names of the original Postgres content tables
+// (supabase/migrations/0001_init_little_lexicon_schema.sql) so the record reads
+// the same as the schema. The app no longer reads those tables; the export
+// stage turns these rows into src/content/words.json.
 
 /** little_lexicon.content_source enum. */
 export type ContentSource =
@@ -75,7 +76,6 @@ export interface DistractorRow {
 export interface AudioObject {
   path: string;
   bytes: number;
-  url: string;
 }
 
 // Insert inputs (id is assigned by the store).
@@ -86,12 +86,11 @@ export type NewRelation = Omit<RelationRow, 'id'>;
 export type NewMnemonic = Omit<MnemonicRow, 'id'>;
 export type NewDistractor = Omit<DistractorRow, 'id'>;
 
-/** Body passed to Store.uploadAudio. Real bytes in live mode, an estimate in dry-run. */
+/** Body passed to Store.saveAudio. Real bytes in live mode, an estimate in dry-run. */
 export type AudioBody =
   | { kind: 'bytes'; data: Uint8Array; contentType: string }
   | { kind: 'stub'; estimatedBytes: number };
 
-export interface AudioUploadResult {
-  publicUrl: string;
+export interface AudioSaveResult {
   bytes: number;
 }

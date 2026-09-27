@@ -22,23 +22,26 @@ Design target from the learning research: words need roughly 8 to 14 spaced, var
 
 ```
 Expo universal app (iOS / Android / web, one TS codebase)
+  ├── src/content/words.json               word content, bundled in the app
         │  @supabase/supabase-js (via TanStack Query)
         ▼
 Supabase project "games-apps"
-  ├── Postgres  (schema: little_lexicon)            content + per-user SRS state + logs
+  ├── Postgres  (schema: little_lexicon)            per-user SRS state + logs
   ├── Auth                                 email + OAuth
-  ├── Storage   (bucket: little-lexicon-audio)      pre-generated MP3s (words + sentences)
+  ├── Storage   (bucket: little-lexicon-audio)      reserved for MP3s; audio host not chosen yet
   └── Edge Functions (little-lexicon-*)             optional runtime Claude calls, RevenueCat webhook
 
 Offline build-time pipeline (Node, not shipped in the app)
   ├── ingest word lists
-  ├── hydrate from WordNet / Wiktionary / Free Dictionary API
+  ├── hydrate from Open English WordNet
   ├── Claude API (batch) -> sentences, distractors, mnemonics, plain definitions
   ├── TTS (batch) -> MP3s
-  └── seed Postgres + upload audio to Storage
+  └── export src/content/words.json
 ```
 
-The pipeline runs on the developer machine or CI, writes to Supabase once, and is not part of the runtime. Per-user runtime cost for paid APIs is therefore near zero.
+The pipeline runs on the developer machine or CI and is not part of the runtime. Per-user runtime cost for paid APIs is therefore near zero.
+
+Word content is read-only and the same for every user, so it ships inside the app as a data file instead of living in Postgres. That keeps definitions available offline and removes a network request before every word. A few hundred words is about 450 KB (40 KB compressed); on web the file is a separate download. Supabase holds only per-user data. Word ids in the file are permanent, because saved progress refers to them; the pipeline refuses to export a file that would change one.
 
 ### Universal-app choice
 
@@ -66,7 +69,7 @@ The wrapper and mapping are implemented in `src/srs/srs.ts` (starting artifact p
 
 Full DDL is in `supabase/migrations/0001_init_little_lexicon_schema.sql`. Summary of tables in schema `little_lexicon`:
 
-Content (seeded by Phase 1, read-only to clients):
+Content. The pipeline no longer fills these tables: word content ships as `src/content/words.json` (section 2). The demo backend reads that file; the Supabase backend still reads these tables and has to move to the file before Supabase mode is used. The pipeline's record (`pipeline/data/content-db.json`) keeps the same table and column names.
 
 - `words` (headword, part_of_speech, ipa, syllables, frequency_rank, difficulty_tier, etymology, audio_url).
 - `senses` (word_id, definition, plain_language_definition, sense_order, register).
@@ -88,16 +91,16 @@ Per-user (RLS: owner only):
 Sourcing plan, cheapest viable first:
 
 - **Word lists:** seed from public GRE/erudite lists (for example the aggregations under https://github.com/Xatta-Trone/gre-words-collection). Curate a master list of roughly 3,000 to 8,000 words. Treat aggregated lists as seeds, not authoritative content.
-- **Definitions, synonyms, antonyms, examples:** Open English WordNet (open license, structured) as the backbone. Refs: https://github.com/globalwordnet/english-wordnet and https://en-word.net/
+- **Definitions, synonyms, antonyms, examples:** Open English WordNet (open license, structured) as the backbone. Refs: https://github.com/globalwordnet/english-wordnet and https://en-word.net/ The pipeline downloads a pinned release and also takes US pronunciations from it. It is CC BY 4.0, so the app credits it on the Settings screen.
 - **Etymology, IPA, extra examples, some audio:** Wiktionary via the Free Dictionary API for prototyping. Ref: https://dictionaryapi.dev/ (sources Wiktionary, CC BY-SA; unofficial rate limits, so batch politely and cache).
 - **Related words / distractor candidates / frequency:** Datamuse. Ref: https://www.datamuse.com/api/ (free; note an API key becomes required Jan 1, 2027, at 100k requests/day; this is a build-time dependency, not runtime).
-- **Fresh example sentences, distractors, mnemonics, plain-language definitions:** Claude API in batch mode (see cost model). Store all generated content in Postgres so runtime never calls Claude for it.
+- **Fresh example sentences, distractors, mnemonics, plain-language definitions:** Claude API in batch mode (see cost model). Store all generated content in the words file so runtime never calls Claude for it. A distractor is a wrong definition, shown beside the real one in multiple choice.
 
 Respect licensing: WordNet needs attribution; Wiktionary-derived verbatim text is CC BY-SA (share-alike). Owning Claude-generated derived content avoids runtime dependence on share-alike text. Merriam-Webster and Oxford are higher quality but carry commercial-licensing friction; do not wire them in unless a later decision calls for it.
 
 ## 6. Audio
 
-- Pre-generate all audio once and cache MP3s in Storage (`little-lexicon-audio`). Do not generate audio at runtime.
+- Pre-generate all audio once and serve the MP3s from a file host. Do not generate audio at runtime. The host is not chosen yet: at full size the audio is hundreds of MB, too large to bundle in the app, and Supabase Storage's free 1 GB is shared with other apps. Until then the app speaks words with on-device speech.
 - Prefer human pronunciations for headwords where freely available (Wiktionary/Commons audio surfaced by the Free Dictionary API). Fall back to TTS for coverage and for all sentence audio.
 - TTS provider is a Phase 1 decision. Reasonable options by cost per 1M characters (verify before spending): Google Neural2 and Amazon Polly Neural in the mid range, OpenAI `gpt-4o-mini-tts` and `tts-1` for naturalness, ElevenLabs for the most natural output at higher cost. Google, Polly, and Azure have free monthly tiers that may cover the whole corpus.
 - Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters, a one-time cost in the tens of dollars or free within a provider's monthly free tier.

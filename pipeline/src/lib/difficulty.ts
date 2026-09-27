@@ -1,9 +1,12 @@
 // Difficulty tiering (1 easy .. 5 hard) and a cheap syllable estimate.
 //
-// Live mode gets word frequency from Datamuse (md=f, occurrences per million)
-// and maps it to a tier: common words are easier. Dry-run has no network, so it
-// uses a deterministic heuristic from length and syllable count. GRE seed words
-// skew rare, so tiers cluster in the 3..5 range either way.
+// Live mode gets word frequency from Datamuse (occurrences per million). GRE
+// words are all rare by everyday standards, so fixed frequency cut-offs put
+// almost every word in tiers 4 and 5. After ingest, tiersByFrequencyRank
+// re-tiers the list relative to itself: the most common fifth is tier 1, the
+// rarest fifth tier 5. Placement and the new-word window (level +/- 1) need
+// words in every tier. Dry-run has no network, so it uses a deterministic
+// heuristic from length and syllable count.
 
 /** Map Datamuse frequency (occurrences per million words) to a 1..5 tier. */
 export function tierFromFrequency(freqPerMillion: number): number {
@@ -22,6 +25,24 @@ export function rankFromFrequency(freqPerMillion: number): number {
   if (freqPerMillion <= 0) return 250000;
   // rank roughly inversely proportional to frequency.
   return Math.max(1, Math.round(1_000_000 / (freqPerMillion + 0.001) / 4));
+}
+
+/**
+ * Tier each word by its frequency rank within the list: five equal groups,
+ * most common first. Ties keep id order so the result is deterministic. Words
+ * with no rank are left out of the map (they keep their current tier).
+ */
+export function tiersByFrequencyRank(
+  words: { id: number; frequency_rank: number | null }[],
+): Map<number, number> {
+  const ranked = words
+    .filter((w): w is { id: number; frequency_rank: number } => w.frequency_rank !== null)
+    .sort((a, b) => a.frequency_rank - b.frequency_rank || a.id - b.id);
+  const tiers = new Map<number, number>();
+  ranked.forEach((w, i) => {
+    tiers.set(w.id, Math.floor((i * 5) / ranked.length) + 1);
+  });
+  return tiers;
 }
 
 /** Estimate syllables by counting vowel groups. Good enough for tiering/metadata. */

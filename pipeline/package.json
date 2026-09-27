@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Offline build-time content and audio pipeline for the Little Lexicon app. Not shipped in the app bundle.",
+  "description": "Offline build-time content and audio pipeline for the Little Lexicon app. Writes the words file the app bundles. Not shipped in the app.",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
     "build": "tsc --noEmit",
     "start": "tsx src/run.ts",
-    "test": "tsx src/run.ts --dry-run --limit=20"
+    "test:unit": "tsx --test src/lib/*.test.ts",
+    "test": "npm run test:unit && tsx src/run.ts --dry-run --limit=20"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.112.3",
-    "@supabase/supabase-js": "2.49.4",
     "dotenv": "16.6.1",
     "zod": "3.25.76"
   },

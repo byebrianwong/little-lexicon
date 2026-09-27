@@ -2,11 +2,14 @@
 //
 // For each sense that still lacks it, generate a plain-language definition,
 // 3-5 erudite example sentences (each with a cloze_target token), 4-6
-// distractors, and one global mnemonic per word. Live mode uses the Anthropic
+// distractors, and one global mnemonic per word. A distractor is a wrong
+// definition: the app's word-to-definition question shows it next to the real
+// one (task 3.3), so it has to read like a definition. Live mode uses the Anthropic
 // Batch API (50% off) with claude-haiku-4-5, a prompt-cached shared instruction
 // prefix, and escalation to claude-sonnet-5 for items Haiku keeps getting wrong.
-// Dry-run uses deterministic stubs. Every item is Zod-validated before any
-// write; malformed items are rejected and retried, never inserted.
+// Dry-run uses deterministic stubs. A live run without ANTHROPIC_API_KEY skips
+// this stage. Every item is Zod-validated before any write; malformed items are
+// rejected and retried, never inserted.
 
 import Anthropic from '@anthropic-ai/sdk';
 import type { RunContext } from '../config.ts';
@@ -42,13 +45,13 @@ JSON schema:
   "examples": [
     { "text": <an erudite, natural sentence that uses the word>, "cloze_target": <the exact word token as it appears in text> }
   ],
-  "distractors": [ <plausible but wrong single-word answers> ],
+  "distractors": [ <wrong definitions, each written like the dictionary definition you were given> ],
   "mnemonic": <a short memory aid, or null>
 }
 
 Rules:
 - Provide between 3 and 5 examples. Each cloze_target MUST appear verbatim (case-insensitive) inside its own text.
-- Provide between 4 and 6 distractors: real words that a learner might confuse with the target but that are wrong for this sense.
+- Provide between 4 and 6 distractors. Each is a wrong definition that a learner could mistake for this sense: often the meaning of a word that looks or sounds similar, or a plausible guess from the word's parts. Match the dictionary definition in length and style: start with a capital letter, end with a period, and do not use the word itself. None may mean the same thing as the dictionary definition.
 - Include a mnemonic string only when asked; otherwise set "mnemonic" to null.
 - No em dashes. Keep sentences precise and free of hype.`;
 
@@ -334,6 +337,13 @@ export async function generate(ctx: RunContext): Promise<void> {
 
   if (items.length === 0) {
     ctx.log.success('Generate: nothing to do, all senses already complete.');
+    return;
+  }
+  if (!ctx.dryRun && !ctx.useClaude) {
+    ctx.log.warn(
+      `Generate: skipped. ${items.length} senses need content, and ANTHROPIC_API_KEY is not set ` +
+        `in pipeline/.env.`,
+    );
     return;
   }
 

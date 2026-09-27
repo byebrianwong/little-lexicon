@@ -1,24 +1,47 @@
 # Little Lexicon content pipeline
 
-Offline, build-time pipeline that produces the word corpus and seeds Supabase
-for the Little Lexicon app. It runs on a developer machine or in CI, writes to Supabase
-once, and is not part of the app runtime. Per-user runtime cost for paid APIs is
-therefore near zero (SPEC.md sections 2 and 5).
+Offline, build-time pipeline that produces the words the app teaches. It runs
+on a developer machine or in CI and writes two files:
+
+- `data/content-db.json`: the pipeline's record. Every word, sense, example,
+  relation, mnemonic and distractor row, with its id. Committed.
+- `../src/content/words.json`: the words file the app bundles. Generated from
+  the record by the export stage. Committed.
+
+The app never calls the sources below at runtime, so per-user cost for paid
+APIs is near zero (SPEC.md sections 2 and 5).
 
 This directory is self-contained: its own `package.json`, its own `.env`, and no
 shared source with the app.
 
+## Word ids are permanent
+
+Saved progress refers to words by id, so an id must never change or be reused.
+
+- New words get the next id from a counter in the record. Ids only go up.
+- The export compares the new words file with the one already in the app. If a
+  headword would get a different id, or an id a different headword, it stops
+  and writes nothing.
+- A word removed from the seed list keeps its row and id in the record. If a
+  word stops being exported, the export warns and its id stays retired.
+- Never delete `data/content-db.json` once the app has shipped. A fresh record
+  would number words from 1 again, and the export would refuse it.
+
 ## Stages
 
-The pipeline runs four stages in order. Each is idempotent and can be run alone
+The pipeline runs five stages in order. Each is idempotent and can be run alone
 with `--only=<stage>`.
 
 | `--only` | Stage file | What it does |
 | --- | --- | --- |
-| `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, assign `difficulty_tier` (1..5) from frequency, insert `little_lexicon.words`. |
-| `senses` | `src/stages/02-hydrate.ts` | Pull definitions, part of speech, synonyms, antonyms, and real example sentences; write `little_lexicon.senses`, `little_lexicon.word_relations`, and `little_lexicon.example_sentences` (`is_generated=false`). Source recorded per row. |
-| `generate` | `src/stages/03-generate.ts` | Claude Batch API: per sense a plain-language definition, 3-5 erudite example sentences with cloze targets, 4-6 distractors, and one global mnemonic per word. Zod-validated before any write. |
-| `audio` | `src/stages/04-audio.ts` | TTS every headword and example sentence to MP3, upload to the `little-lexicon-audio` bucket at deterministic paths, write public URLs back. |
+| `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
+| `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
+| `generate` | `src/stages/03-generate.ts` | Claude Batch API: per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Zod-validated before any write. Skipped without `ANTHROPIC_API_KEY`. |
+| `audio` | `src/stages/04-audio.ts` | TTS every headword and example sentence to MP3 under `out/audio`. Not uploaded, and no `audio_url` is set, until an audio host is chosen. Skipped without `GOOGLE_TTS_API_KEY`. |
+| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. |
+
+A word WordNet does not have gets no senses, is left out of the export, and is
+logged. Stages never fill real files with stub text.
 
 ## How to run
 
@@ -26,116 +49,104 @@ with `--only=<stage>`.
 cd pipeline
 npm install
 
-# Offline self-test: no keys, no network, no spend. Writes out/dry-run.json.
-npm test                      # tsx src/run.ts --dry-run --limit=20
+# Unit tests plus an offline dry run: no keys, no network, no spend.
+npm test
 
-# Full offline dry-run over the whole bundled seed list.
+# Full offline dry-run over the whole seed list. Writes out/ only.
 npx tsx src/run.ts --dry-run
 
-# Live run (needs pipeline/.env with real keys):
+# Live run. Free stages always run; paid stages run when their key is set.
 npm start                     # tsx src/run.ts, all stages
-npx tsx src/run.ts --only=audio          # one stage
-npx tsx src/run.ts --limit=500           # first 500 words only
+npx tsx src/run.ts --only=generate       # one stage
+npx tsx src/run.ts --only=export         # re-export after editing the record
 
 # Typecheck.
 npm run build                 # tsc --noEmit
 ```
 
+The first live run downloads Open English WordNet (about 10 MB zipped, 80 MB
+unpacked) into `.cache/oewn`, checks its SHA-256, and unpacks it with the
+`unzip` command.
+
 ### Flags
 
-- `--dry-run` Force offline mode: bundled seed list, deterministic stub
-  generators, and writes to `pipeline/out/dry-run.json` instead of Supabase. No
-  API keys and no network are required. Stub content is labeled `(dry-run stub)`.
-- `--only=<words|senses|generate|audio>` Run a single stage. Stages assume the
-  earlier ones have already produced their rows.
-- `--limit=N` Process at most N words this run. Useful for smoke tests and for
-  chunking a large corpus.
+- `--dry-run` Offline mode: bundled seed list, deterministic stub generators,
+  and output to `out/dry-run.json` and `out/words.dry-run.json`. Stub content is
+  labeled `(dry-run stub)`.
+- `--only=<words|senses|generate|audio|export>` Run a single stage. Stages
+  assume the earlier ones have already produced their rows.
+- `--limit=N` Process at most N words this run. The export always covers the
+  whole record.
 - `-v` / `--verbose` Debug logging.
-
-If `SUPABASE_URL` / `SUPABASE_SERVICE_ROLE_KEY` are absent, the pipeline
-automatically falls into dry-run even without `--dry-run`, so it never fails for
-lack of credentials.
 
 ## Configuration
 
 Copy `.env.example` to `.env` and fill it in. `.env` is git-ignored (root
-`.gitignore`: `pipeline/.env`). Every value here is server-side only and must
-never reach the app bundle or any `EXPO_PUBLIC_*` variable (CLAUDE.md > Secrets).
+`.gitignore`: `pipeline/.env`). These are server-side keys and must never reach
+the app bundle or any `EXPO_PUBLIC_*` variable (CLAUDE.md > Secrets).
 
-- `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` - the service role bypasses RLS to
-  write the content tables.
 - `ANTHROPIC_API_KEY` - Claude batch generation (stage 03).
 - `GOOGLE_TTS_API_KEY` - text to speech (stage 04). Optional overrides:
-  `GOOGLE_TTS_VOICE`, `GOOGLE_TTS_LANGUAGE`, `STORAGE_BUCKET`.
+  `GOOGLE_TTS_VOICE`, `GOOGLE_TTS_LANGUAGE`.
+
+Datamuse and WordNet need no key.
 
 ## Idempotency
 
-Re-running is safe and cheap. Each stage checks for existing rows and only fills
-gaps:
+Re-running is safe and cheap. Each stage checks the record and only fills gaps:
 
-- `words`: an existing headword is skipped.
+- `words`: an existing headword is skipped and keeps its id.
 - `senses`: a word that already has senses is skipped.
-- `generate`: a sense already has its plain definition, three or more generated
-  examples, and four or more distractors is skipped; a word that already has a
-  global mnemonic gets no new one.
-- `audio`: a word or sentence that already has an `audio_url` is skipped, so no
-  clip is ever re-synthesized.
+- `generate`: a sense that already has its plain definition, three or more
+  generated examples, and four or more distractors is skipped; a word that
+  already has a mnemonic gets no new one.
+- `audio`: a clip already in the record is never re-synthesized.
 
-The same existence checks back both the Supabase store and the dry-run JSON
-store, so running the dry-run twice produces byte-for-byte the same row counts
-and no duplicates.
+Datamuse responses are cached under `.cache/` by URL. Only successful and
+"not found" answers are cached, so a server error is retried on the next run.
 
 ## Cost model
 
 Costs are one-time and small (SPEC.md sections 6 and 7). The summary printed at
 the end of every run reports token counts, characters synthesized, dollar
-estimates, and bucket size.
+estimates, and the words file size.
 
 - **Claude generation.** `claude-haiku-4-5` for bulk ($1 in / $5 out per 1M
-  tokens); items that fail validation twice escalate to `claude-sonnet-5`
-  ($2 / $10 intro). The Batch API is 50% off, and the shared instruction prefix
-  is prompt-cached (cached input bills at about 10% of the input rate). For
-  roughly 8,000 words this is a few million output tokens, on the order of tens
-  of dollars.
-- **TTS provider: Google Cloud Text-to-Speech (Neural2).** Chosen for a generous
-  monthly free tier (about 1M Neural2 characters/month, which can cover the whole
-  one-time corpus if spread across billing months), direct MP3 output, and simple
-  API-key auth on the REST `text:synthesize` endpoint (no service-account JSON).
-  List price past the free tier is about $16 per 1M characters. The whole corpus
-  (about 8,000 headwords plus a few sentences each) is a few million characters,
-  so tens of dollars at most, often free. Human pronunciations from the Free
-  Dictionary API are reused for headwords when available as MP3, which lowers the
-  synthesized character count.
-- **Storage.** The `little-lexicon-audio` bucket is tracked per run. The pipeline flags at
-  0.9 GB, before the shared ~1 GB Supabase free-tier limit, and recommends a
-  dedicated bucket or external object store at that point.
+  tokens); items that fail validation twice escalate to `claude-sonnet-5`. The
+  Batch API is 50% off, and the shared instruction prefix is prompt-cached. The
+  dry-run estimate for the 317-word sample is well under a dollar.
+- **TTS provider: Google Cloud Text-to-Speech (Neural2).** About 1M free Neural2
+  characters a month, then about $16 per 1M characters. Human pronunciations
+  from the Free Dictionary API are reused for headwords when available.
+- **Words file size.** 317 words with dictionary content only: 439 KB as
+  written, 41 KB compressed. Generated content will add to that; the export
+  reports the new size.
 
 ## Data sources and licensing
 
 - Seed word list: public GRE/erudite aggregations (treated as seeds, not
-  authoritative). A ~320-word sample ships at `data/seed-words.sample.txt` so a
-  dry-run needs no network.
-- Frequency and distractor candidates: Datamuse (free; build-time only).
-- Definitions, synonyms, antonyms, examples: the Free Dictionary API
-  (`dictionaryapi.dev`, Wiktionary-sourced, CC BY-SA) in the current live path.
-  Open English WordNet is the intended primary backbone for cleaner licensing;
-  bundling its data export and preferring it over the API is the documented
-  follow-up. Provenance is stored in the `source` column of every relation and
-  example row.
-- Wiktionary-derived verbatim text is share-alike. Owning the Claude-generated
-  derived content (sentences, distractors, mnemonics, plain definitions) keeps
-  the runtime free of share-alike dependencies.
+  authoritative). A ~320-word sample ships at `data/seed-words.sample.txt`.
+- Frequency and part-of-speech order: Datamuse (free; build-time only).
+- Definitions, examples, synonyms, antonyms, pronunciations: Open English
+  WordNet 2025 (https://en-word.net/), CC BY 4.0. The words file carries the
+  credit line and the app shows it on the Settings screen. Provenance is stored
+  in the `source` column of every relation and example row.
+- Human headword audio: the Free Dictionary API (Wiktionary-sourced), stage 04
+  only.
+- Claude-generated content (sentences, distractors, mnemonics, plain
+  definitions) is owned outright.
 
 ## Layout
 
 ```
 pipeline/
-  data/seed-words.sample.txt   bundled sample seed list (~320 words)
+  data/seed-words.sample.txt   seed list (~320 words)
+  data/content-db.json         the record: every row and id (committed)
   src/run.ts                   orchestrator (flags, stage sequencing, summary)
   src/config.ts                env + flags + RunContext + metrics
-  src/stages/                  01-ingest-words, 02-hydrate, 03-generate, 04-audio
-  src/lib/                     supabase client, store, schema (zod), fetch, stubs,
-                               difficulty, logger, types
-  out/dry-run.json             dry-run output (git-ignored)
-  .cache/                      cached Datamuse / Free Dictionary responses (git-ignored)
+  src/stages/                  01-ingest-words, 02-hydrate, 03-generate, 04-audio, 05-export
+  src/lib/                     store, wordnet, datamuse, exportContent, schema (zod),
+                               fetch, stubs, difficulty, logger, types, *.test.ts
+  out/                         dry-run output and synthesized audio (git-ignored)
+  .cache/                      WordNet download and Datamuse responses (git-ignored)
 ```

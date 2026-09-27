@@ -1,5 +1,5 @@
-// Expand the compact seed corpus into full WordContent view models with stable
-// ids. Deterministic so ids are consistent across reloads and tests.
+// Expand the story sample corpus into full WordContent view models with stable
+// ids. Deterministic so stories render the same on every run.
 
 import type {
   DistractorContent,
@@ -8,7 +8,7 @@ import type {
   SenseContent,
   WordContent,
 } from '@/lib/types';
-import { CORPUS, type SeedWord } from './corpus';
+import { CORPUS, type SeedWord } from './sampleCorpus';
 
 function buildSense(word: SeedWord, wordId: number, senseIndex: number): SenseContent {
   const seed = word.senses[senseIndex]!;
@@ -57,7 +57,7 @@ function buildWord(word: SeedWord, index: number): WordContent {
     difficultyTier: word.difficultyTier,
     frequencyRank: word.frequencyRank,
     etymology: word.etymology,
-    audioUrl: null, // demo uses on-device speech synthesis as a fallback
+    audioUrl: null, // the app speaks the word on the device when there is no clip
     senses,
     relations,
     mnemonics: [word.mnemonic],
@@ -65,14 +65,4 @@ function buildWord(word: SeedWord, index: number): WordContent {
 }
 
 // Built once at module load.
-export const DEMO_WORDS: WordContent[] = CORPUS.map(buildWord);
-
-export const DEMO_WORDS_BY_ID: Map<number, WordContent> = new Map(
-  DEMO_WORDS.map((w) => [w.wordId, w]),
-);
-
-// All distinct definitions, used as a fallback distractor pool for multiple
-// choice when a sense is short on its own distractors.
-export const ALL_DEFINITIONS: string[] = DEMO_WORDS.flatMap((w) =>
-  w.senses.map((s) => s.definition),
-);
+export const SAMPLE_WORDS: WordContent[] = CORPUS.map(buildWord);

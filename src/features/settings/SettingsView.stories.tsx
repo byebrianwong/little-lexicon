@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { expect, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
-import { NEW_PROFILE, PRO_PROFILE, profile } from '@/stories/fixtures';
+import { CREDITS, NEW_PROFILE, PRO_PROFILE, profile } from '@/stories/fixtures';
 import { SettingsLoading, SettingsView } from './SettingsView';
 
 const meta = {
@@ -11,6 +11,7 @@ const meta = {
     profile: profile(),
     soundEnabled: true,
     showDemoNote: false,
+    credits: CREDITS,
     onSaveName: () => {},
     onSelectGoal: () => {},
     onSelectRetention: () => {},
