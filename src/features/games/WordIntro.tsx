@@ -43,6 +43,7 @@ export function WordIntro({
     try {
       const res = await backend.generatePersonalized({
         wordId: content.wordId,
+        headword: content.headword,
         kind: 'mnemonic',
         interests: profile.interests,
       });

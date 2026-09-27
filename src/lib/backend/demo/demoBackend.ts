@@ -497,11 +497,12 @@ export class DemoBackend implements Backend {
 
   async generatePersonalized(input: {
     wordId: number;
+    /** The word on screen, so the backend does not have to look it up by id. */
+    headword: string;
     kind: 'mnemonic' | 'sentence';
     interests: string[];
   }): Promise<{ text: string }> {
-    const word = (await loadContent()).byId.get(input.wordId);
-    const head = word?.headword ?? 'the word';
+    const head = input.headword;
     const theme = input.interests[0] ?? 'everyday life';
     if (input.kind === 'mnemonic') {
       return { text: `Picture ${theme}: that scene helps you remember "${head}".` };

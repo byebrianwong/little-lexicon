@@ -96,3 +96,17 @@ describe('DemoBackend on a fresh install', () => {
     expect(fresh.every((i) => i.content.difficultyTier === 2 && i.isNew)).toBe(true);
   });
 });
+
+describe('DemoBackend personalization', () => {
+  it('uses the headword it is given, not a lookup by id', async () => {
+    // Story fixtures and the words file number words differently, so an id
+    // lookup would name the wrong word.
+    const { text } = await new DemoBackend().generatePersonalized({
+      wordId: 2,
+      headword: 'quixotic',
+      kind: 'mnemonic',
+      interests: ['Science'],
+    });
+    expect(text).toBe('Picture Science: that scene helps you remember "quixotic".');
+  });
+});
