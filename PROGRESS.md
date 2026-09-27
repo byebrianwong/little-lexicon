@@ -1651,6 +1651,13 @@ second pass does not recognize the new ids and would move all progress to
 `retired`. `ensureLoaded` now shares one load promise. The test in
 `demoBackend.test.ts` fails without this.
 
+**Personalized memory hooks get the headword from the caller.** The demo
+backend looked the word up by id. Story fixtures number their 12 sample words
+1 to 12, so the WordIntro "Personalized" story named "aberrant" (id 2 in the
+words file) on the quixotic card; Chromatic caught it on PR #17. The app was
+not affected, but `generatePersonalized` now takes `headword`, like
+`evaluateSentence`, so no backend has to resolve a word by id to name it.
+
 **Jest loads the words file with require.** Jest cannot run `import()` without
 Metro. `src/lib/content/importWordsFile.ts` is the one place the import
 happens, and `jest.setup.ts` swaps it for a `require`. The rest of the loader
@@ -1701,6 +1708,6 @@ only.
   `little-lexicon-generate-personalized` Edge Function reads `words` and
   `senses`. All three need to move to the words file before Supabase mode is
   turned on.
-- **Chromatic will show diffs** on the Settings stories (six of the seven
-  render the screen; Loading does not), because they now include the credit
-  line.
+- **No snapshot shows the WordNet credit line.** Story screens sit in a fixed
+  390 by 844 frame and Settings scrolls, so the line is below the frame. It
+  was checked in the browser instead.
