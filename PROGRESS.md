@@ -1872,3 +1872,63 @@ would come close to one.
 - Not run on an Android emulator. No Android SDK is installed on this machine.
 - All words has no "Learn this" button. Adding one would let someone who
   searched for a word put it on their list.
+
+## A bypassed Chromatic build no longer passes Visual tests
+
+`Visual tests` could pass while visual changes were still unreviewed. On
+PR #16, build 38 had 29 changes waiting for review and failed the check. The
+next commit only touched a Supabase function, so TurboSnap bypassed its
+build (build 39, `SKIPPED`), the Chromatic step exited 0, and every required
+check was green.
+
+### Why it happened
+
+This is how Chromatic works, not a mistake in our config. A build is bypassed
+when no story's files changed and the ancestor build passed, or is on the
+same branch. The CLI then prints "The pending status will be carried over
+from the most recent ancestor build that has unreviewed changes", and the
+`UI Tests` commit status on that commit does read pending. But the CLI
+(18.9.4) skips the step that turns a pending build into exit code 1, so
+`exitZeroOnChanges: false` does nothing for a bypassed build.
+
+It also happens while the earlier build is still running. On PR #17, commit
+3e25b63 was bypassed while build 42 was running. `Visual tests` passed at
+22:19:14, and build 42 finished at 22:19:47.
+
+### What changed
+
+A new last step in the `Visual tests` job,
+`.github/scripts/check-ui-tests-status.sh`, reads the `UI Tests` status
+Chromatic posted on the pull request's head commit. It passes only when that
+status is success. While it is pending, it checks every 10 seconds for up to
+5 minutes. It fails straight away when the status says changes "must be
+accepted", and it fails if Chromatic posts no status at all. The job now asks
+for `statuses: read`.
+
+The fix for a failure is the same as before: accept or deny the changes in
+Chromatic, then re-run the job. On the re-run, the step sees the status
+Chromatic updated after the accept.
+
+### Options not taken
+
+- **Require `UI Tests` in the ruleset.** It would also catch this, and it
+  turns green on accept without a re-run. It stays unrequired for the reason
+  given under "Visual diffs now block": Chromatic never posts it on a fork
+  pull request, so those would wait forever. The new step runs inside a job
+  that forks already skip.
+- **Turn off `onlyChanged`.** Every commit would capture every story (the
+  bypassed build 39 skipped 427 snapshots), which the free plan cannot
+  sustain.
+- **Ask the Chromatic API about the branch from CI.** This is possible with a
+  machine-to-machine OAuth client (the API is in private beta). It would need
+  two more secrets and a hand-written query that finds the latest real build
+  on the branch and handles running and superseded builds. The `UI Tests`
+  status already carries that answer, worked out by Chromatic.
+
+### For later
+
+- If a later CLI version makes a bypassed build exit non-zero when the
+  carried-over status is pending, this step becomes redundant and can go.
+- The step depends on Chromatic's GitHub integration. If the project is ever
+  unlinked from the repository, the step fails after 5 minutes with "posted
+  no UI Tests status".
