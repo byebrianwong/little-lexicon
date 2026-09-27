@@ -1059,7 +1059,7 @@ settings still makes sense, is a product call that was not made here.
 ### Verified
 
 Run in demo mode on web (`npx expo start --web`, no `.env`, so the bundled
-14-word corpus). Onboarding with a 10/day goal, then:
+12-word corpus). Onboarding with a 10/day goal, then:
 
 - A session ran to 13 answers in one sitting, straight past the goal of 10. The
   goal bar filled at 10 and the session carried on without interrupting.
@@ -1084,7 +1084,7 @@ changed.
 ### Not done
 
 `REFILL_PAGE` is 40 and `REFILL_LOOKAHEAD` is 5. Those were not tuned against a
-real Supabase collection, only against the 14-word demo corpus. On a slow
+real Supabase collection, only against the 12-word demo corpus. On a slow
 connection a refill could in principle arrive after the user reaches the end of
 the queue, in which case they would see the run-dry panel for a moment. Raising
 the lookahead is the fix if that shows up.
@@ -1567,3 +1567,147 @@ skip again.
 
 - Someone who finished the test cannot retake it. A "Retake placement test"
   entry in Settings would cover that.
+
+## Words come from a bundled file, not Postgres
+
+The app now teaches 317 words from `src/content/words.json`, a data file that
+ships inside the app. Before this, demo mode had 12 hand-written words, and the
+pipeline had only ever run as a dry run.
+
+### What was built
+
+- The pipeline writes its record to `pipeline/data/content-db.json` and exports
+  the app's words file from it. Both are committed. The Supabase writer and the
+  pipeline's `@supabase/supabase-js` dependency are gone.
+- Stage 02 reads Open English WordNet 2025 instead of the Free Dictionary API.
+  The release is a pinned download with a SHA-256 check.
+- A new stage 05 exports the words file. It stops without writing if any word's
+  id would change compared with the file already in the app.
+- Stage 01 re-tiers the whole list by frequency into five equal groups.
+- Stage 03's prompt asks for distractors as wrong definitions.
+- A live run skips a paid stage when its key is missing. Stub text can no
+  longer reach the committed files.
+- `src/lib/content` loads the words file once, through a dynamic import. The
+  demo backend reads it.
+- Demo progress saved under the old 12-word numbering is moved to the new ids
+  by headword on first load (`src/lib/backend/demo/legacyWordIds.ts`). Rows it
+  cannot map are kept under `retired` in storage, never deleted.
+- The 12 hand-written words moved to `src/stories/` and are still the story
+  fixtures, so Chromatic snapshots do not follow the words file.
+- Settings shows the WordNet credit line, which its license (CC BY 4.0)
+  requires.
+- `insidious` was added to the seed list so all 12 old demo words exist in the
+  file.
+- Pipeline unit tests run on Node's built-in test runner
+  (`npm run test:unit`, and `npm test` runs them before the dry run).
+
+### Decisions
+
+**Word content is a file in the app.** It is read-only and the same for every
+user. As a file it works offline and needs no request before a definition
+shows. 317 words with dictionary content are 439 KB as written and 41 KB
+compressed. On web, Metro puts the file in its own 249 KB script
+(`words-*.js`), separate from the 2.8 MB entry bundle. Supabase is still the
+plan for per-user data, when accounts, sync or the leaderboard are needed.
+
+**WordNet instead of the Free Dictionary API.** SPEC.md already named Open
+English WordNet as the backbone. The Free Dictionary API returned Cloudflare
+522 (origin timeout) on every request on 2026-09-27. WordNet is a local
+download, so runs do not depend on a volunteer service, and its license is CC
+BY 4.0 rather than share-alike.
+
+**One part of speech per word.** WordNet lists parts of speech alphabetically.
+Datamuse returns them most common first, from the same request stage 01 makes
+for frequency, and only that part of speech's senses are kept. The part of
+speech label then matches every definition shown.
+
+**Only dictionary examples that use the headword.** WordNet examples belong to
+a synonym group, so "a passing fancy" is listed under ephemeral. Examples are
+kept only when they contain the headword or a simple inflection of it, and the
+cloze target is the word as written ("abated").
+
+**Tiers are relative to the list.** With the fixed frequency cut-offs, tier 1
+was empty and 274 of 316 words were in tiers 4 and 5. The new-word window is
+the user's level plus or minus one, so at the default level of 2 it would have
+had 42 words. Five equal groups give 63 or 64 words per tier. A tier can shift
+when words are added; saved progress is unaffected because it refers to ids.
+
+**Vulgar synonyms are dropped.** WordNet lists "ass-kisser" for sycophant and
+"retarded" as the antonym of precocious. Related words are answer options, so
+a short whole-word blocklist in `pipeline/src/lib/wordnet.ts` removes them.
+
+**A distractor is a wrong definition.** The app shows distractors next to the
+real definition (task 3.3), but stage 03 asked Claude for single wrong words.
+One definition among three single words gives the answer away. No real content
+had been generated, so nothing needed fixing in the data.
+
+**Audio stays on the device for now.** At full size the audio is hundreds of
+MB, too large to bundle. Stage 04 now writes clips to `pipeline/out/audio` and
+sets no URL until a host is chosen.
+
+**The demo backend loads once.** Screens fire several queries at once, and
+each used to read storage on its own. With the id conversion that is unsafe: a
+second pass does not recognize the new ids and would move all progress to
+`retired`. `ensureLoaded` now shares one load promise. The test in
+`demoBackend.test.ts` fails without this.
+
+**Personalized memory hooks get the headword from the caller.** The demo
+backend looked the word up by id. Story fixtures number their 12 sample words
+1 to 12, so the WordIntro "Personalized" story named "aberrant" (id 2 in the
+words file) on the quixotic card; Chromatic caught it on PR #17. The app was
+not affected, but `generatePersonalized` now takes `headword`, like
+`evaluateSentence`, so no backend has to resolve a word by id to name it.
+
+**Jest loads the words file with require.** Jest cannot run `import()` without
+Metro. `src/lib/content/importWordsFile.ts` is the one place the import
+happens, and `jest.setup.ts` swaps it for a `require`. The rest of the loader
+runs unchanged in tests.
+
+**The fetch cache no longer stores server errors.** It cached every response,
+so a 5xx would have repeated on every later run. It now caches 2xx and 404
+only.
+
+### Verified
+
+- Pipeline: `tsc` passes and 16 unit tests pass. Two dry runs in a row add
+  nothing the second time. A live run hydrated all 316 seed words, then 317
+  with `insidious`. Rebuilding the record from scratch gave every word the same
+  id, and the export check passed against the existing file.
+- App: `tsc --noEmit` passes (2.4 s, so the JSON import does not slow it),
+  lint is clean, and 145 unit tests pass (new: the loader, checks on the
+  committed file, the id conversion, and the demo backend loading once under
+  concurrent calls).
+- Web, production export served locally: the words file loads as its own
+  request. Placement ran 12 questions across tiers and set level 5. A session
+  showed new-word cards and multiple choice. Words lists 317 entries. Settings
+  shows the credit. Writing old-format progress (ids 1, 11 and 40) and
+  reloading moved it to ids 99 (ephemeral) and 317 (insidious), and kept 40
+  under `retired`. The only console error was a 404 from opening `/browse`
+  directly, which `expo serve` does not rewrite and Vercel does.
+- iOS simulator in Expo Go: the words file loads as its own module. The
+  simulator had demo progress from the old numbering, and it converted (12
+  known). Words lists 317 entries, and a session ran a new-word card and
+  word-to-definition multiple choice. No Metro errors.
+- Not run: the Android emulator (no Android SDK on this machine).
+
+### Not done
+
+- **Stage 03 has not run.** There is no `ANTHROPIC_API_KEY` on this machine.
+  Words have dictionary content only: no plain-language definitions, no
+  mnemonics, no written distractors (multiple choice uses other words'
+  definitions), and 194 of 317 words have an example for the cloze game. Add
+  the key to `pipeline/.env` and run `npm start` in `pipeline/`. The dry-run
+  estimate scales to about $0.37 for the 557 senses.
+- **Stage 04 has not run** (no TTS key), and no audio host is chosen.
+- **WordNet's first sense is not always the one the GRE tests.** "derivative"
+  came through as the calculus noun, and aesthetic's first sense is circular.
+  Fixes: let Claude choose the sense, or edit the record by hand and re-export.
+- **Supabase mode is out of date for content.** `SupabaseBackend` still reads
+  the Postgres content tables, which the pipeline no longer fills;
+  `user_word_state` and `review_logs` have foreign keys to `words`; and the
+  `little-lexicon-generate-personalized` Edge Function reads `words` and
+  `senses`. All three need to move to the words file before Supabase mode is
+  turned on.
+- **No snapshot shows the WordNet credit line.** Story screens sit in a fixed
+  390 by 844 frame and Settings scrolls, so the line is below the frame. It
+  was checked in the browser instead.

@@ -1,6 +1,7 @@
 // In-memory backend for demo mode. Fully playable with no network. Persists to
 // AsyncStorage so progress survives reloads. Uses the same view models as the
-// Supabase backend so the rest of the app is identical either way.
+// Supabase backend so the rest of the app is identical either way. Words come
+// from the bundled words file (src/lib/content).
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { UserWordStateRow } from '@/srs/srs';
@@ -23,8 +24,9 @@ import type {
   SubmitReviewInput,
   SubmitReviewResult,
 } from '../types';
-import { DEMO_WORDS, DEMO_WORDS_BY_ID } from './content';
+import { loadContent, type ContentIndex } from '@/lib/content';
 import { normalizeAnswer } from '@/lib/text';
+import { legacyIdMap, remapWordIds } from './legacyWordIds';
 
 const STORAGE_KEY = 'little_lexicon.demo.v1';
 const DEMO_USER_ID = 'demo-user';
@@ -42,6 +44,11 @@ interface LogRow {
   reviewed_at: string;
 }
 
+// Saved progress refers to words by id. 'words-file' means ids from the words
+// file; data saved without it used the old 12-word numbering and is converted
+// on load (see legacyWordIds).
+const WORD_ID_SCHEME = 'words-file';
+
 interface PersistShape {
   session: AuthSession | null;
   profile: Profile;
@@ -49,6 +56,9 @@ interface PersistShape {
   logs: LogRow[];
   daily: Record<string, DailyStats>;
   achievements: string[];
+  wordIdScheme?: string;
+  /** Progress on words that are no longer in the words file. Kept, not shown. */
+  retired?: { states: StateRow[]; logs: LogRow[] };
 }
 
 function defaultProfile(): Profile {
@@ -77,6 +87,7 @@ function emptyState(): PersistShape {
     logs: [],
     daily: {},
     achievements: [],
+    wordIdScheme: WORD_ID_SCHEME,
   };
 }
 
@@ -98,21 +109,57 @@ function rowToUserWordState(row: StateRow): UserWordState {
   };
 }
 
+/** A review item, or null when the word has left the words file. */
+function toSessionItem(content: ContentIndex, row: StateRow): SessionItem | null {
+  const word = content.byId.get(row.word_id);
+  return word ? { content: word, state: rowToUserWordState(row), isNew: false } : null;
+}
+
 export class DemoBackend implements Backend {
   readonly kind = 'demo' as const;
   private data: PersistShape = emptyState();
-  private loaded = false;
+  private loading: Promise<void> | null = null;
   private authListeners = new Set<(s: AuthSession | null) => void>();
 
-  private async ensureLoaded(): Promise<void> {
-    if (this.loaded) return;
+  // One load per backend, shared by every caller. Screens fire several queries
+  // at once, and the id conversion must run exactly once: a second pass would
+  // not recognize the new ids and would retire all progress.
+  private ensureLoaded(): Promise<void> {
+    this.loading ??= this.load().catch((err: unknown) => {
+      this.loading = null; // let the next call retry
+      throw err;
+    });
+    return this.loading;
+  }
+
+  private async load(): Promise<void> {
     try {
       const raw = await AsyncStorage.getItem(STORAGE_KEY);
-      if (raw) this.data = { ...emptyState(), ...JSON.parse(raw) };
+      if (raw) {
+        const saved = JSON.parse(raw) as Partial<PersistShape>;
+        // Data saved before the scheme field existed uses the old numbering.
+        this.data = { ...emptyState(), wordIdScheme: undefined, ...saved };
+      }
     } catch (e) {
       console.warn('demo backend: failed to load persisted state', e);
     }
-    this.loaded = true;
+    if (this.data.wordIdScheme !== WORD_ID_SCHEME) await this.convertLegacyWordIds();
+  }
+
+  private async convertLegacyWordIds(): Promise<void> {
+    const content = await loadContent();
+    const idMap = legacyIdMap((headword) => content.byHeadword.get(headword)?.wordId);
+    const out = remapWordIds(this.data.states, this.data.logs, idMap);
+    this.data.states = out.states;
+    this.data.logs = out.logs;
+    if (out.unmapped.states.length > 0 || out.unmapped.logs.length > 0) {
+      this.data.retired = {
+        states: [...(this.data.retired?.states ?? []), ...out.unmapped.states],
+        logs: [...(this.data.retired?.logs ?? []), ...out.unmapped.logs],
+      };
+    }
+    this.data.wordIdScheme = WORD_ID_SCHEME;
+    await this.persist();
   }
 
   private async persist(): Promise<void> {
@@ -181,27 +228,25 @@ export class DemoBackend implements Backend {
 
   // --- Content --------------------------------------------------------------
   async getWordContent(wordId: number): Promise<WordContent | null> {
-    return DEMO_WORDS_BY_ID.get(wordId) ?? null;
+    return (await loadContent()).byId.get(wordId) ?? null;
   }
 
   async getAllWords(limit?: number): Promise<WordContent[]> {
-    const sorted = [...DEMO_WORDS].sort(
-      (a, b) =>
-        a.difficultyTier - b.difficultyTier ||
-        (a.frequencyRank ?? 0) - (b.frequencyRank ?? 0),
-    );
-    return limit === undefined ? sorted : sorted.slice(0, limit);
+    const { words } = await loadContent(); // already easiest first
+    return words.slice(0, limit);
   }
 
   // --- Queue ----------------------------------------------------------------
   async getDueQueue(limit: number): Promise<SessionItem[]> {
     await this.ensureLoaded();
+    const content = await loadContent();
     const now = Date.now();
-    const rows = Object.values(this.data.states)
+    return Object.values(this.data.states)
       .filter((r) => !r.is_suspended && !r.is_known && Date.parse(r.due) <= now)
       .sort((a, b) => Date.parse(a.due) - Date.parse(b.due))
+      .map((r) => toSessionItem(content, r))
+      .filter((item): item is SessionItem => item !== null)
       .slice(0, limit);
-    return rows.map((r) => this.toSessionItem(r.word_id, r));
   }
 
   async getNewWords(
@@ -209,27 +254,19 @@ export class DemoBackend implements Backend {
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]> {
     await this.ensureLoaded();
+    const { words } = await loadContent(); // already easiest first
     const seen = new Set(Object.keys(this.data.states).map(Number));
     const minTier = opts?.minTier ?? 1;
     const maxTier = opts?.maxTier ?? 5;
-    const words = DEMO_WORDS.filter(
-      (w) =>
-        !seen.has(w.wordId) &&
-        w.difficultyTier >= minTier &&
-        w.difficultyTier <= maxTier,
-    )
-      .sort(
-        (a, b) =>
-          a.difficultyTier - b.difficultyTier ||
-          (a.frequencyRank ?? 0) - (b.frequencyRank ?? 0),
+    return words
+      .filter(
+        (w) =>
+          !seen.has(w.wordId) &&
+          w.difficultyTier >= minTier &&
+          w.difficultyTier <= maxTier,
       )
-      .slice(0, limit);
-    return words.map<SessionItem>((content) => ({ content, state: null, isNew: true }));
-  }
-
-  private toSessionItem(wordId: number, row: StateRow): SessionItem {
-    const content = DEMO_WORDS_BY_ID.get(wordId)!;
-    return { content, state: rowToUserWordState(row), isNew: false };
+      .slice(0, limit)
+      .map<SessionItem>((content) => ({ content, state: null, isNew: true }));
   }
 
   // --- Session + review commit ----------------------------------------------
@@ -400,8 +437,8 @@ export class DemoBackend implements Backend {
 
   // --- Placement ------------------------------------------------------------
   async getPlacementWords(): Promise<WordContent[]> {
-    // A spread across tiers, easiest first.
-    return [...DEMO_WORDS].sort((a, b) => a.difficultyTier - b.difficultyTier);
+    // Every tier, easiest first; placement picks a few from each.
+    return [...(await loadContent()).words];
   }
 
   async markKnown(wordIds: number[]): Promise<void> {
@@ -460,11 +497,12 @@ export class DemoBackend implements Backend {
 
   async generatePersonalized(input: {
     wordId: number;
+    /** The word on screen, so the backend does not have to look it up by id. */
+    headword: string;
     kind: 'mnemonic' | 'sentence';
     interests: string[];
   }): Promise<{ text: string }> {
-    const word = DEMO_WORDS_BY_ID.get(input.wordId);
-    const head = word?.headword ?? 'the word';
+    const head = input.headword;
     const theme = input.interests[0] ?? 'everyday life';
     if (input.kind === 'mnemonic') {
       return { text: `Picture ${theme}: that scene helps you remember "${head}".` };
@@ -484,6 +522,7 @@ export class DemoBackend implements Backend {
       reviewLogs: this.data.logs,
       dailyStats: Object.values(this.data.daily),
       achievements: this.data.achievements,
+      retiredProgress: this.data.retired ?? null,
     };
   }
 

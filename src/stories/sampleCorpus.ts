@@ -1,7 +1,9 @@
-// A compact, hand-curated erudite corpus for demo mode and tests. The real
-// corpus (thousands of words) is produced by the Phase 1 pipeline and seeded
-// into Postgres; this bundled set exists so the app is fully playable with no
-// backend. Definitions are concise and original to avoid share-alike text.
+// Twelve hand-written words used as story fixtures. The app itself teaches the
+// words in src/content/words.json, which the pipeline generates; these stay
+// fixed so Chromatic snapshots do not change when that file does. Until the
+// words file existed, demo mode used this list, numbered 1 to 12 in this order
+// (see src/lib/backend/demo/legacyWordIds.ts). Definitions are concise and
+// original to avoid share-alike text.
 
 export interface SeedExample {
   text: string;

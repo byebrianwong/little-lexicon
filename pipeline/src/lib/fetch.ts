@@ -1,5 +1,6 @@
-// Rate-limited, on-disk-cached fetch for the free data sources (Datamuse and
-// the Free Dictionary API). These have unofficial rate limits, so we batch
+// Rate-limited, on-disk-cached fetch for the free data sources (Datamuse, and
+// the Free Dictionary API for human pronunciations in stage 04). These have
+// unofficial rate limits, so we batch
 // politely: one request at a time, a minimum gap between requests, and a
 // permanent cache under pipeline/.cache keyed by URL. Cached responses cost
 // nothing and make re-runs cheap and deterministic.
@@ -87,12 +88,17 @@ export class CachedFetcher {
     this.logger.debug(`GET ${url}`);
     const res = await fetch(url, { headers: { accept: 'application/json' } });
     const body = await res.text();
-    const entry: CacheEntry = {
-      status: res.status,
-      body,
-      fetchedAt: new Date().toISOString(),
-    };
-    await writeFile(file, JSON.stringify(entry), 'utf8');
+    // Cache answers, not outages. A 404 means "no entry" and is stable; a 5xx
+    // or 429 is temporary, and caching it would repeat the failure on every
+    // later run.
+    if (res.ok || res.status === 404) {
+      const entry: CacheEntry = {
+        status: res.status,
+        body,
+        fetchedAt: new Date().toISOString(),
+      };
+      await writeFile(file, JSON.stringify(entry), 'utf8');
+    }
     return { status: res.status, data: safeJson<T>(body) };
   }
 }

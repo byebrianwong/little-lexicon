@@ -1,10 +1,14 @@
 // Runtime configuration: parse CLI flags, load pipeline/.env, decide dry-run vs
 // live, and assemble the RunContext handed to every stage.
 //
-// Dry-run rule (SPEC + task): if --dry-run is passed OR the Supabase service
-// credentials are absent, the whole run goes offline. It uses the bundled seed
-// list and stub generators and writes to pipeline/out/dry-run.json instead of
-// Supabase. No API keys, no network, no spend.
+// Live (the default) reads real sources and writes the committed pipeline
+// record, data/content-db.json, then exports src/content/words.json for the
+// app. Paid stages run only when their key is set; without it they are skipped,
+// never filled with stub text.
+//
+// Dry-run (--dry-run) uses the bundled seed list and stub generators, writes
+// out/dry-run.json and out/words.dry-run.json, and never touches the network or
+// the committed files.
 
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -12,9 +16,9 @@ import { fileURLToPath } from 'node:url';
 import dotenv from 'dotenv';
 import { Logger } from './lib/logger.ts';
 import { CachedFetcher } from './lib/fetch.ts';
-import { JsonFileStore, SupabaseStore, type Store } from './lib/store.ts';
+import { JsonFileStore, type Store } from './lib/store.ts';
 
-export const STAGES = ['words', 'senses', 'generate', 'audio'] as const;
+export const STAGES = ['words', 'senses', 'generate', 'audio', 'export'] as const;
 export type StageName = (typeof STAGES)[number];
 
 export interface Flags {
@@ -25,8 +29,6 @@ export interface Flags {
 }
 
 export interface Env {
-  supabaseUrl: string | undefined;
-  supabaseServiceKey: string | undefined;
   anthropicKey: string | undefined;
   googleTtsKey: string | undefined;
   googleTtsVoice: string;
@@ -37,7 +39,12 @@ export interface Paths {
   root: string;
   seedFile: string;
   cacheDir: string;
-  outFile: string;
+  /** The pipeline's record of every row and id (committed in live mode). */
+  dbFile: string;
+  /** The words file the app bundles (src/content/words.json in live mode). */
+  exportFile: string;
+  /** Where synthesized MP3s are written until an audio host is chosen. */
+  audioDir: string;
 }
 
 export class Metrics {
@@ -63,7 +70,11 @@ export class Metrics {
   audioSentencesSynthed = 0;
   audioReusedHuman = 0;
   audioBytes = 0;
-  bucketBytes = 0;
+  audioClips = 0;
+  wordsExported = 0;
+  wordsHeldBack = 0;
+  exportBytes = 0;
+  exportGzipBytes = 0;
 }
 
 export interface RunContext {
@@ -111,8 +122,6 @@ function loadEnv(): Env {
     dotenv.config({ path: envPath });
   }
   return {
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseServiceKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     anthropicKey: process.env.ANTHROPIC_API_KEY,
     googleTtsKey: process.env.GOOGLE_TTS_API_KEY,
     googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? 'en-US-Neural2-D',
@@ -124,36 +133,35 @@ export async function createContext(flags: Flags): Promise<RunContext> {
   const log = new Logger(flags.verbose);
   const env = loadEnv();
 
+  const dryRun = flags.dryRun;
+  const out = join(PIPELINE_ROOT, 'out');
   const paths: Paths = {
     root: PIPELINE_ROOT,
     seedFile: join(PIPELINE_ROOT, 'data', 'seed-words.sample.txt'),
     cacheDir: join(PIPELINE_ROOT, '.cache'),
-    outFile: join(PIPELINE_ROOT, 'out', 'dry-run.json'),
+    dbFile: dryRun ? join(out, 'dry-run.json') : join(PIPELINE_ROOT, 'data', 'content-db.json'),
+    exportFile: dryRun
+      ? join(out, 'words.dry-run.json')
+      : join(PIPELINE_ROOT, '..', 'src', 'content', 'words.json'),
+    audioDir: join(out, 'audio'),
   };
 
-  const hasSupabase = Boolean(env.supabaseUrl && env.supabaseServiceKey);
-  const dryRun = flags.dryRun || !hasSupabase;
-
-  if (flags.dryRun) {
-    log.info('Mode: DRY-RUN (--dry-run). Offline stubs; writing to out/dry-run.json.');
-  } else if (!hasSupabase) {
-    log.warn('Mode: DRY-RUN (no Supabase credentials found). Writing to out/dry-run.json.');
+  if (dryRun) {
+    log.info('Mode: DRY-RUN. Offline stubs; writing to out/.');
   } else {
-    log.info('Mode: LIVE. Writing to Supabase with the service role.');
+    log.info('Mode: LIVE. Writing data/content-db.json and src/content/words.json.');
   }
 
-  const store: Store = dryRun
-    ? new JsonFileStore(paths.outFile, log)
-    : new SupabaseStore(env.supabaseUrl!, env.supabaseServiceKey!, log);
+  const store: Store = new JsonFileStore(paths.dbFile, paths.audioDir, dryRun, log);
 
   const useClaude = !dryRun && Boolean(env.anthropicKey);
   const useTts = !dryRun && Boolean(env.googleTtsKey);
 
   if (!dryRun && !env.anthropicKey) {
-    log.warn('ANTHROPIC_API_KEY not set: stage 03 will use stub generation.');
+    log.warn('ANTHROPIC_API_KEY not set: stage 03 will be skipped.');
   }
   if (!dryRun && !env.googleTtsKey) {
-    log.warn('GOOGLE_TTS_API_KEY not set: stage 04 will use stub audio.');
+    log.warn('GOOGLE_TTS_API_KEY not set: stage 04 will be skipped.');
   }
 
   const http = new CachedFetcher({ cacheDir: paths.cacheDir, logger: log });
