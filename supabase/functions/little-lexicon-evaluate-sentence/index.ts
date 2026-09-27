@@ -79,7 +79,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
   if (userErr || !userData?.user) {
     return jsonResponse({ error: "Unauthorized" }, 401);
   }
-  const userId = userData.user.id;
 
   let body: EvalRequest;
   try {
