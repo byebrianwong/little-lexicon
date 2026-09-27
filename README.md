@@ -27,6 +27,8 @@ npm run lint
 npx expo start            # run on iOS / Android / web
 ```
 
+The web build is hosted at https://little-lexicon.vercel.app. It runs in demo mode and updates on every push to `main`.
+
 The app runs in **demo mode** by default (a bundled in-memory corpus, no network) so it is playable immediately. To use the real backend, set `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY`, apply the migrations, deploy the Edge Functions, run the Phase 1 pipeline, and regenerate `src/lib/database.types.ts` with `npm run gen:types`.
 
 ## What this app is

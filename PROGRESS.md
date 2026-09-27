@@ -1396,3 +1396,75 @@ finding. Clicked through onboarding, home, a session's empty state, practice
 Ranks and Settings on web at phone width and at 1280 px. Ran home and
 practice on the iOS simulator in Expo Go. No Android SDK is installed on this
 machine, so the Android emulator was not run.
+
+## The web app is hosted on Vercel
+
+The web build now runs at https://little-lexicon.vercel.app. Before this, the
+only hosted view of the app was the Storybook on Chromatic, which shows
+screens one at a time and cannot be clicked through.
+
+### What was added
+
+- `vercel.json`. Vercel runs `npm ci`, then `npm run build:web`, and serves
+  the `dist` folder.
+- `npm run build:web`, which is `expo export --platform web`.
+- `.vercel/` in `.gitignore`, for anyone who links the project with the
+  Vercel CLI.
+- A Vercel project named `little-lexicon` in the `byebrianwongs-projects`
+  team, linked to the GitHub repository. A push to `main` updates production.
+  A push to any other branch builds a preview with its own URL.
+
+### Decisions
+
+**Every path is rewritten to `index.html`.** `app.json` sets web output to
+`single`, so the export is one HTML page and the router picks the screen in
+the browser. Without the rewrite, reloading `/session` or opening a shared
+link to any screen other than `/` returns a 404. Vercel checks for a real
+file before applying a rewrite, so the JavaScript, CSS, fonts and images are
+still served as files.
+
+**The hosted build is always in demo mode.** The build command sets
+`EXPO_PUBLIC_DEMO_MODE=true`. The site runs on the bundled words, saves
+progress in the browser's local storage (the demo backend's AsyncStorage),
+and never contacts Supabase. Each browser keeps its own progress. This stays
+true if Supabase keys are later added to the Vercel project. Pointing the
+site at the real backend needs a deliberate change to `vercel.json`.
+
+**Hashed bundles are cached for a year.** Everything under `/_expo/static/`
+has a content hash in its file name, so a new build produces new names and a
+long cache cannot serve stale code. `index.html` keeps Vercel's default,
+which revalidates on every load.
+
+**Build settings live in `vercel.json`, not only in the dashboard.** The
+project was created with the same values, but `vercel.json` overrides them,
+so the repository is the place to change them.
+
+**The first deploy went to production from this branch.** Vercel sent the
+new project's first Git deploy to production even though it came from this
+branch, so `little-lexicon.vercel.app` first served this branch. Its content
+was `main` plus `vercel.json`, so nothing wrong was published.
+
+### Verified
+
+- `npm run build:web` succeeds locally, and the same command succeeds on
+  Vercel (Node 24, about 80 seconds including `npm ci`).
+- Without a Vercel login, `/`, `/session`, `/practice`, `/onboarding` and an
+  unknown path all return the app's HTML with status 200. The unknown path
+  shows Expo Router's default "Unmatched Route" page, because the app has no
+  `+not-found` route of its own.
+- The entry bundle is served with `cache-control: public, max-age=31536000,
+  immutable`.
+- The fonts are served even though their paths contain `node_modules`.
+  Vercel serves the built output as-is.
+- In a browser: the app opens on placement, answering a question moves to
+  question 2, and reloading `/onboarding/placement` loads the app again. The
+  Newsreader faces load. The console is empty, and the only host contacted is
+  `little-lexicon.vercel.app`.
+
+### For later
+
+- Preview deployments sit behind Vercel's login (the team default).
+  Production is public.
+- Vercel's newer npm skips install scripts that are not allow-listed, and
+  says so in the build log (`esbuild`, `unrs-resolver`). The web export does
+  not use them. If a future build step does, allow them in `package.json`.

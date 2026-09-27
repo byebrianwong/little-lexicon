@@ -55,3 +55,6 @@ storybook-static/
 build-storybook.log
 chromatic.log
 chromatic-diagnostics.json
+
+# Vercel CLI link state
+.vercel/
