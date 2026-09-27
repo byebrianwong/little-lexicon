@@ -325,7 +325,14 @@ function Actions({
         <Icon name="check" size={20} color={colors.accent} />
         <Body accessibilityLiveRegion="polite">{message}</Body>
       </Row>
-      {undo ? <TextButton label="Undo" accessibilityLabel={undo.label} onPress={undo.run} /> : null}
+      {undo ? (
+        <TextButton
+          label="Undo"
+          accessibilityLabel={undo.label}
+          onPress={undo.run}
+          className="self-center"
+        />
+      ) : null}
     </Row>
   );
 }
