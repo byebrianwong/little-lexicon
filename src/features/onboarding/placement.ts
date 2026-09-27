@@ -39,3 +39,12 @@ export function estimateLevel(responses: PlacementResponse[]): number {
   );
   return Math.min(5, missedAtOrBelow ? hardestKnown : hardestKnown + 1);
 }
+
+/**
+ * Whether the learner still needs the placement test, so the home screen
+ * offers it. Finishing the test always saves a level estimate (estimateLevel
+ * never returns null), so a missing estimate means it was skipped.
+ */
+export function needsPlacement(profile: { levelEstimate: number | null }): boolean {
+  return profile.levelEstimate === null;
+}
