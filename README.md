@@ -88,3 +88,4 @@ Phase 1 (content/data pipeline, standalone Node scripts) shares no source with t
 
 Keep each sub-agent scoped to one task file at a time. Have it open a branch per task, satisfy the acceptance criteria, and stop. Do not let a sub-agent modify the schema outside the migration files, or change `src/srs/srs.ts` outside Phase 2.
 gate test B: no story files
+gate test C: ancestor waiting for review
