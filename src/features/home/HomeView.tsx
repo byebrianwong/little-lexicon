@@ -15,6 +15,7 @@ import {
   Stat,
 } from '@/components/ui';
 import { levelProgress } from '@/features/gamification/xp';
+import { needsPlacement } from '@/features/onboarding/placement';
 import type { ProgressCounts } from '@/lib/backend/types';
 import type { Profile } from '@/lib/types';
 
@@ -27,6 +28,8 @@ export interface HomeViewProps {
   onStartSession: () => void;
   onPractice: () => void;
   onSpeedRound: () => void;
+  /** Offered only until the placement test is taken, since it can be skipped. */
+  onPlacementTest: () => void;
 }
 
 export function HomeView({
@@ -37,12 +40,14 @@ export function HomeView({
   onStartSession,
   onPractice,
   onSpeedRound,
+  onPlacementTest,
 }: HomeViewProps) {
   const goal = profile?.dailyGoal ?? 15;
   const goalMet = reviewsToday >= goal;
   const toGo = Math.max(0, goal - reviewsToday);
   const lvl = profile ? levelProgress(profile.xpTotal) : null;
   const streak = profile?.streakCount ?? 0;
+  const offerPlacement = profile ? needsPlacement(profile) : false;
 
   return (
     <Screen scroll edges={['top']} onRefresh={onRefresh}>
@@ -76,7 +81,20 @@ export function HomeView({
       <View className="mt-9">
         <ListRow title="Start session" emphasis showArrow onPress={onStartSession} />
         <ListRow title="Endless practice" detail="no timer" onPress={onPractice} />
-        <ListRow title="Speed round" detail="sixty seconds" onPress={onSpeedRound} last />
+        <ListRow
+          title="Speed round"
+          detail="sixty seconds"
+          onPress={onSpeedRound}
+          last={!offerPlacement}
+        />
+        {offerPlacement ? (
+          <ListRow
+            title="Placement test"
+            detail="find your level"
+            onPress={onPlacementTest}
+            last
+          />
+        ) : null}
       </View>
 
       <Row className="mt-9 items-start gap-4">

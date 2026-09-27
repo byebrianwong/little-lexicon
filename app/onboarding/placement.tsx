@@ -14,6 +14,7 @@ import {
 } from '@/features/onboarding/placement';
 import { useOnboardingStore } from '@/features/onboarding/onboardingStore';
 import { PlacementLoading, PlacementView } from '@/features/onboarding/PlacementView';
+import { useProfile, useUpdateProfile } from '@/features/review/queries';
 
 export default function Placement() {
   const [words, setWords] = useState<WordContent[] | null>(null);
@@ -21,6 +22,11 @@ export default function Placement() {
   const [tier, setTier] = useState(START_TIER);
   const usedIds = useRef<Set<number>>(new Set());
   const setPlacement = useOnboardingStore((s) => s.setPlacement);
+  const resetOnboarding = useOnboardingStore((s) => s.reset);
+  const profile = useProfile();
+  const updateProfile = useUpdateProfile();
+  // Blocks a second tap on "Skip for now". Never cleared: the screen is leaving.
+  const skipping = useRef(false);
 
   useEffect(() => {
     backend.getPlacementWords().then(setWords).catch(() => setWords([]));
@@ -67,6 +73,26 @@ export default function Placement() {
     router.replace('/onboarding/goals');
   }
 
+  // Skipping marks the intro as seen, so the app opens on home from now on. The
+  // level estimate stays empty, and that is what makes home offer the test
+  // again. Taken again from home, the intro is already marked, so this just
+  // leaves.
+  async function skip() {
+    if (skipping.current) return;
+    skipping.current = true;
+    try {
+      if (!profile.data?.onboardedAt) {
+        await updateProfile.mutateAsync({ onboardedAt: new Date().toISOString() });
+      }
+    } catch (e) {
+      // Let them in anyway. The app opens on the test next time, and they can
+      // skip it again then.
+      console.warn('Could not save that the placement test was skipped', e);
+    }
+    resetOnboarding();
+    router.dismissTo('/(app)');
+  }
+
   if (done && current) {
     // Reached length: finish is called in answer(); this is a fallback.
     finish(responses);
@@ -81,6 +107,7 @@ export default function Placement() {
       onHear={() => {
         if (current) speakWord(current.headword, current.audioUrl);
       }}
+      onSkip={skip}
     />
   );
 }
