@@ -1469,6 +1469,51 @@ was `main` plus `vercel.json`, so nothing wrong was published.
   says so in the build log (`esbuild`, `unrs-resolver`). The web export does
   not use them. If a future build step does, allow them in `package.json`.
 
+## Full-window activities on desktop web
+
+On a desktop browser, the session, practice, speed round and summary screens
+opened as a small dialog with its own scrollbar. Expo Router draws every
+modal on web wider than 768 px as a centred box, at most 586 px tall (its
+iOS 26 default). A question plus its answer panel needs about 810 px, so the
+question scrolled out of view as soon as the answer appeared.
+
+### What changed
+
+- On web these four screens now use `presentation: 'card'`, so they open as
+  ordinary full-window pages (`app/_layout.tsx`). Native is unchanged and
+  still uses `fullScreenModal`. This also fixes a bug: clicking outside the
+  old dialog closed a session without running its wrap-up (session row,
+  streak, achievements) and without showing the summary. A page has no
+  outside to click.
+- The session and practice runners now put their 24 px side padding inside
+  the 640 px column, as every other screen does. Before, the padding sat
+  outside, so on a wide window the question ran 640 px wide while the header
+  above it was inset, and the close button and status did not line up with
+  the text. Phones look the same, because there the column is narrower than
+  640 px either way. On a tablet or a wide window the question is now 592 px
+  wide, like the other screens.
+
+### What the next change needs to know
+
+A full question with its answer fits without scrolling when the window is at
+least about 810 px tall (measured at 1280 x 800 and 1280 x 960). In a
+shorter window, "What does this word mean?" questions in a session still
+scroll by a few pixels after answering, because they add a "Next review"
+line. Tightening the answer panel (for example putting "Hear it" on the
+headword line) would fix that, but it changes the phone layout too, so it
+was left alone.
+
+### Verified
+
+`tsc --noEmit`, lint and 128 unit tests pass. On web at 1280 x 800 and
+1280 x 960, played a full session, practice across every mode, a speed
+round and the summary, and measured the scroll area after each answer. At
+375 x 812 the session opens as a page and scrolls to the answer as before.
+Storybook renders these screens at phone width, so Chromatic should show no
+changes. Not run on the iOS simulator or Android emulator; the only native
+change is where the side padding sits, which gives the same layout at phone
+width.
+
 ## The placement test can be skipped
 
 A new user can now skip the intro (the placement test, then the goals
