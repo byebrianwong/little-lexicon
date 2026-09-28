@@ -4,6 +4,7 @@ import {
   chunk,
   classifyRateLimit,
   DailyQuotaError,
+  GeminiUnavailableError,
   generateJson,
   parseBatchResponse,
 } from './gemini.ts';
@@ -131,4 +132,13 @@ test('generateJson stops on a daily quota and on a bad request', async () => {
 
   fakeFetch([{ status: 400, body: { error: { message: 'model not found' } } }]);
   await assert.rejects(generateJson(call, () => {}), /Gemini HTTP 400/);
+});
+
+test('generateJson retries an overloaded model, then reports it as unavailable', async () => {
+  const overloaded = { status: 503, body: { error: { message: 'high demand' } } };
+  fakeFetch([overloaded, { status: 200, body: { candidates: [{ content: { parts: [{ text: '{}' }] } }] } }]);
+  assert.equal((await generateJson(call, () => {}, 3, 1)).text, '{}');
+
+  fakeFetch([overloaded, overloaded, overloaded]);
+  await assert.rejects(generateJson(call, () => {}, 3, 1), GeminiUnavailableError);
 });

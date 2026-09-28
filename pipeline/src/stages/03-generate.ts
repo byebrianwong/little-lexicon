@@ -27,6 +27,7 @@ import {
   chunk,
   DailyQuotaError,
   GEMINI_PRICING,
+  GeminiUnavailableError,
   generateJson,
   parseBatchResponse,
 } from '../lib/gemini.ts';
@@ -295,10 +296,13 @@ async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<vo
           (message) => ctx.log.info(`Gemini: ${message}`),
         );
       } catch (err) {
-        if (err instanceof DailyQuotaError) {
+        // Neither clears by retrying now. Stop the stage but keep the run
+        // going, so what was written is saved and exported.
+        if (err instanceof DailyQuotaError || err instanceof GeminiUnavailableError) {
+          const why = err instanceof DailyQuotaError ? 'daily quota reached' : 'still unavailable';
           ctx.log.warn(
-            `Gemini daily quota reached after ${written} of ${items.length} senses. Everything ` +
-              `written so far is saved; run the pipeline again later to fill the rest. (${err.message})`,
+            `Gemini ${why} after ${written} of ${items.length} senses. Everything written so far ` +
+              `is saved; run the pipeline again later to fill the rest. (${err.message})`,
           );
           return;
         }
@@ -420,7 +424,7 @@ async function writeGenerated(
 }
 
 export async function generate(ctx: RunContext): Promise<void> {
-  ctx.log.stage('03 Claude batch generation');
+  ctx.log.stage('03 generate with an LLM');
   const allWords = await ctx.store.listWords();
   const words = ctx.limit ? allWords.slice(0, ctx.limit) : allWords;
 

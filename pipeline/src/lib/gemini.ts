@@ -136,6 +136,9 @@ export function classifyRateLimit(body: string, fallbackMs: number): RateLimit {
 
 export class DailyQuotaError extends Error {}
 
+/** Still rate limited or overloaded (HTTP 429 or 5xx) after every retry. */
+export class GeminiUnavailableError extends Error {}
+
 export interface GeminiCall {
   apiKey: string;
   model: string;
@@ -156,6 +159,7 @@ export async function generateJson(
   call: GeminiCall,
   onWait: (message: string) => void,
   maxAttempts = 6,
+  baseDelayMs = 5_000,
 ): Promise<GeminiResult> {
   const url = `${ENDPOINT}/${encodeURIComponent(call.model)}:generateContent`;
   const body = JSON.stringify({
@@ -199,16 +203,22 @@ export async function generateJson(
       };
     }
 
-    const backoffMs = Math.min(120_000, 5_000 * 2 ** (attempt - 1));
+    const backoffMs = Math.min(120_000, baseDelayMs * 2 ** (attempt - 1));
     if (res.status === 429) {
       const limit = classifyRateLimit(text, backoffMs);
       if (limit.kind === 'daily') throw new DailyQuotaError(limit.message);
-      if (attempt >= maxAttempts) throw new Error(`Gemini rate limit persisted: ${text.slice(0, 300)}`);
+      if (attempt >= maxAttempts) {
+        throw new GeminiUnavailableError(`rate limit persisted: ${text.slice(0, 300)}`);
+      }
       onWait(`rate limited; waiting ${Math.round(limit.delayMs / 1000)}s`);
       await sleep(limit.delayMs);
       continue;
     }
-    if (res.status >= 500 && attempt < maxAttempts) {
+    if (res.status >= 500) {
+      // 503 "high demand" spikes are common and pass on their own.
+      if (attempt >= maxAttempts) {
+        throw new GeminiUnavailableError(`HTTP ${res.status} persisted: ${text.slice(0, 300)}`);
+      }
       onWait(`Gemini HTTP ${res.status}; retrying in ${Math.round(backoffMs / 1000)}s`);
       await sleep(backoffMs);
       continue;
