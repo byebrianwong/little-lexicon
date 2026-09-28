@@ -576,6 +576,8 @@ export class DemoBackend implements Backend {
     wordId: number;
     /** The word on screen, so the backend does not have to look it up by id. */
     headword: string;
+    /** The definition on screen. The demo stub does not use it. */
+    definition: string;
     kind: 'mnemonic' | 'sentence';
     interests: string[];
   }): Promise<{ text: string }> {

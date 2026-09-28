@@ -28,6 +28,7 @@ export function WordIntro({
   onStart: () => void;
 }) {
   const sense = content.senses[0];
+  const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
   const { profile } = useGameContext();
   const [personalized, setPersonalized] = useState<string | null>(null);
   const [generating, setGenerating] = useState(false);
@@ -44,6 +45,7 @@ export function WordIntro({
       const res = await backend.generatePersonalized({
         wordId: content.wordId,
         headword: content.headword,
+        definition,
         kind: 'mnemonic',
         interests: profile.interests,
       });
@@ -67,9 +69,7 @@ export function WordIntro({
       ) : null}
 
       <View className="mt-6 border-t border-ink pt-4">
-        <Body className="text-[20px] leading-[29px]">
-          {sense?.plainLanguageDefinition ?? sense?.definition ?? ''}
-        </Body>
+        <Body className="text-[20px] leading-[29px]">{definition}</Body>
         {sense?.examples[0] ? (
           <Note className="mt-3 text-[17px] leading-[25px]">{`“${sense.examples[0].text}”`}</Note>
         ) : null}
