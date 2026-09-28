@@ -6,6 +6,7 @@ import {
   DailyQuotaError,
   GeminiUnavailableError,
   generateJson,
+  generateJsonWithFallback,
   parseBatchResponse,
 } from './gemini.ts';
 
@@ -141,4 +142,47 @@ test('generateJson retries an overloaded model, then reports it as unavailable',
 
   fakeFetch([overloaded, overloaded, overloaded]);
   await assert.rejects(generateJson(call, () => {}, 3, 1), GeminiUnavailableError);
+});
+
+// --- fallback across models -------------------------------------------------
+
+const ok = { status: 200, body: { candidates: [{ content: { parts: [{ text: '{}' }] } }] } };
+const busy = { status: 503, body: { error: { message: 'high demand' } } };
+const dailyOut = {
+  status: 429,
+  body: { error: { message: 'daily', details: [{ violations: [{ quotaId: 'RequestsPerDay' }] }] } },
+};
+const base = { apiKey: 'k', system: 's', prompt: 'p' };
+
+test('an overloaded model falls through to the next one', async () => {
+  const calls = fakeFetch([busy, busy, ok]);
+  const spent = new Set<string>();
+  const out = await generateJsonWithFallback(['m1', 'm2'], base, spent, () => {}, 2, 1);
+  assert.equal(out.model, 'm2');
+  assert.equal(calls.length, 3);
+  assert.equal(spent.size, 0, 'an overloaded model is tried again next request');
+});
+
+test('a spent daily quota skips that model for the rest of the run', async () => {
+  const spent = new Set<string>();
+  fakeFetch([dailyOut, ok]);
+  assert.equal((await generateJsonWithFallback(['m1', 'm2'], base, spent, () => {}, 2, 1)).model, 'm2');
+  assert.deepEqual([...spent], ['m1']);
+
+  const calls = fakeFetch([ok]);
+  assert.equal((await generateJsonWithFallback(['m1', 'm2'], base, spent, () => {}, 2, 1)).model, 'm2');
+  assert.match(calls[0]!.url, /models\/m2:/, 'm1 is not called again');
+});
+
+test('when no model answers, the error says whether waiting a day would help', async () => {
+  fakeFetch([busy, busy, busy, busy]);
+  await assert.rejects(
+    generateJsonWithFallback(['m1', 'm2'], base, new Set(), () => {}, 2, 1),
+    GeminiUnavailableError,
+  );
+  fakeFetch([dailyOut, dailyOut]);
+  await assert.rejects(
+    generateJsonWithFallback(['m1', 'm2'], base, new Set(), () => {}, 2, 1),
+    DailyQuotaError,
+  );
 });

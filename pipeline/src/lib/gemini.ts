@@ -5,12 +5,15 @@
 //
 // Free-tier rate limits depend on the Google project and are not published per
 // model, so requests go one at a time, spaced out, and back off on HTTP 429.
-// A daily quota ends the stage early instead of waiting: everything written so
-// far is saved, and the next run fills the rest.
+// On the free tier a model can also answer 503 "high demand" for minutes while
+// an older one works (seen 2026-09-27), so each request falls back through a
+// list of Flash models. When every model is out, the stage ends early:
+// everything written so far is saved, and the next run fills the rest.
 
 import { parseGeneratedSense, type GeneratedSense } from './schema.ts';
 
-export const GEMINI_DEFAULT_MODEL = 'gemini-3.8-flash';
+/** Tried in order for each request. Override with GEMINI_MODEL (comma-separated). */
+export const GEMINI_DEFAULT_MODELS = ['gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.5-flash-lite'];
 
 const ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models';
 
@@ -227,4 +230,49 @@ export async function generateJson(
     // worth retrying.
     throw new Error(`Gemini HTTP ${res.status}: ${text.slice(0, 500)}`);
   }
+}
+
+/**
+ * Try each model in turn until one answers. A model that is overloaded or
+ * rate limited is skipped for this request only, since those spells pass. A
+ * model whose daily quota is spent goes into `spent` and is skipped for the
+ * rest of the run. Throws DailyQuotaError when every model is spent, and
+ * GeminiUnavailableError when none answered.
+ */
+export async function generateJsonWithFallback(
+  models: string[],
+  call: Omit<GeminiCall, 'model'>,
+  spent: Set<string>,
+  onWait: (message: string) => void,
+  attemptsPerModel = 3,
+  baseDelayMs = 5_000,
+): Promise<GeminiResult & { model: string }> {
+  const reasons: string[] = [];
+  for (const model of models) {
+    if (spent.has(model)) continue;
+    try {
+      const result = await generateJson(
+        { ...call, model },
+        (m) => onWait(`${model}: ${m}`),
+        attemptsPerModel,
+        baseDelayMs,
+      );
+      return { ...result, model };
+    } catch (err) {
+      if (err instanceof DailyQuotaError) {
+        spent.add(model);
+        reasons.push(`${model}: daily quota`);
+        onWait(`${model} daily quota spent; trying the next model`);
+      } else if (err instanceof GeminiUnavailableError) {
+        reasons.push(`${model}: ${err.message.slice(0, 80)}`);
+        onWait(`${model} unavailable; trying the next model`);
+      } else {
+        throw err;
+      }
+    }
+  }
+  if (models.every((m) => spent.has(m))) {
+    throw new DailyQuotaError(`every model's daily quota is spent (${models.join(', ')})`);
+  }
+  throw new GeminiUnavailableError(`no model answered: ${reasons.join('; ')}`);
 }

@@ -28,7 +28,7 @@ import {
   DailyQuotaError,
   GEMINI_PRICING,
   GeminiUnavailableError,
-  generateJson,
+  generateJsonWithFallback,
   parseBatchResponse,
 } from '../lib/gemini.ts';
 
@@ -70,7 +70,7 @@ JSON schema:
 ${SENSE_CONTRACT}`;
 
 /** Gemini gets several senses per request. */
-const GEMINI_SYSTEM = `You generate study content for a vocabulary app. You will be given several dictionary senses of English words, separated by lines containing only ---. Treat each sense on its own.
+export const GEMINI_SYSTEM = `You generate study content for a vocabulary app. You will be given several dictionary senses of English words, separated by lines containing only ---. Treat each sense on its own.
 
 Return ONLY a JSON object of the form {"items": [...]} with one object per sense, in the order given. No prose, no markdown, no code fences.
 
@@ -138,7 +138,7 @@ async function computeNeeds(
   };
 }
 
-function buildUserPrompt(item: GenItem): string {
+export function buildUserPrompt(item: GenItem): string {
   const { word, sense, needs } = item;
   return [
     `Word: ${word.headword}`,
@@ -270,9 +270,9 @@ async function generateWithClaude(
 // --- Live Gemini path ---
 
 async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<void> {
-  const model = ctx.env.geminiModel;
-  const price = GEMINI_PRICING[model];
-  if (!price) ctx.log.warn(`No price on file for ${model}; the cost estimate will read $0.`);
+  const models = ctx.env.geminiModels;
+  const spent = new Set<string>(); // models whose daily quota ran out this run
+  const usedBy = new Map<string, number>(); // model -> senses written
   const byId = new Map(items.map((i) => [i.sense.id, i]));
   let written = 0;
   let pending = items;
@@ -286,14 +286,15 @@ async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<vo
       if (index > 0 || pass > 1) await new Promise((r) => setTimeout(r, GEMINI_REQUEST_GAP_MS));
       let result;
       try {
-        result = await generateJson(
+        result = await generateJsonWithFallback(
+          models,
           {
             apiKey: ctx.env.geminiKey!,
-            model,
             system: GEMINI_SYSTEM,
             prompt: batch.map(buildUserPrompt).join('\n---\n'),
           },
-          (message) => ctx.log.info(`Gemini: ${message}`),
+          spent,
+          (message) => ctx.log.info(`Gemini ${message}`),
         );
       } catch (err) {
         // Neither clears by retrying now. Stop the stage but keep the run
@@ -311,6 +312,7 @@ async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<vo
 
       ctx.metrics.llmInputTokens += result.inputTokens;
       ctx.metrics.llmOutputTokens += result.outputTokens;
+      const price = GEMINI_PRICING[result.model];
       if (price) {
         ctx.metrics.llmCostUsd +=
           (result.inputTokens / 1e6) * price.in + (result.outputTokens / 1e6) * price.out;
@@ -324,6 +326,7 @@ async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<vo
         await writeGenerated(ctx, byId.get(senseId)!, gen);
         written += 1;
       }
+      usedBy.set(result.model, (usedBy.get(result.model) ?? 0) + parsed.valid.size);
       for (const senseId of parsed.failed) failed.push(byId.get(senseId)!);
       if (parsed.errors.length > 0) {
         ctx.log.debug(`pass ${pass} batch ${index + 1}: ${parsed.errors.join('; ')}`);
@@ -336,6 +339,11 @@ async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<vo
     pending = failed;
   }
 
+  if (usedBy.size > 0) {
+    ctx.log.info(
+      `Gemini models used: ${[...usedBy].map(([m, n]) => `${m} ${n} senses`).join(', ')}.`,
+    );
+  }
   if (pending.length > 0) {
     ctx.metrics.invalidRejected += pending.length;
     ctx.log.warn(
@@ -373,6 +381,11 @@ function generateWithStub(
   return out;
 }
 
+/** Provenance for generated rows. Dry-run stubs keep 'claude', as before. */
+function generatedBy(ctx: RunContext): 'claude' | 'gemini' {
+  return ctx.llm === 'gemini' ? 'gemini' : 'claude';
+}
+
 async function writeGenerated(
   ctx: RunContext,
   item: GenItem,
@@ -392,7 +405,7 @@ async function writeGenerated(
         text: ex.text,
         audio_url: null,
         cloze_target: ex.cloze_target,
-        source: 'claude',
+        source: generatedBy(ctx),
         is_generated: true,
       });
       ctx.metrics.generatedExamples += 1;
@@ -406,7 +419,7 @@ async function writeGenerated(
         distractor_lemma: lemma,
         kind: 'mc',
         difficulty: word.difficulty_tier,
-        source: 'claude',
+        source: generatedBy(ctx),
       });
       ctx.metrics.distractorsInserted += 1;
     }
@@ -416,7 +429,7 @@ async function writeGenerated(
     await ctx.store.insertMnemonic({
       word_id: word.id,
       text: gen.mnemonic,
-      source: 'claude',
+      source: generatedBy(ctx),
       user_id: null,
     });
     ctx.metrics.mnemonicsInserted += 1;
@@ -454,7 +467,7 @@ export async function generate(ctx: RunContext): Promise<void> {
     ctx.llm === 'claude'
       ? 'Claude batch'
       : ctx.llm === 'gemini'
-        ? `Gemini ${ctx.env.geminiModel}`
+        ? `Gemini (${ctx.env.geminiModels.join(', then ')})`
         : 'dry-run stubs';
   ctx.log.info(`Generating for ${items.length} senses via ${via}.`);
 

@@ -17,7 +17,7 @@ import dotenv from 'dotenv';
 import { Logger } from './lib/logger.ts';
 import { CachedFetcher } from './lib/fetch.ts';
 import { JsonFileStore, type Store } from './lib/store.ts';
-import { GEMINI_DEFAULT_MODEL } from './lib/gemini.ts';
+import { GEMINI_DEFAULT_MODELS } from './lib/gemini.ts';
 
 export const STAGES = ['words', 'senses', 'generate', 'audio', 'export'] as const;
 export type StageName = (typeof STAGES)[number];
@@ -32,7 +32,8 @@ export interface Flags {
 export interface Env {
   anthropicKey: string | undefined;
   geminiKey: string | undefined;
-  geminiModel: string;
+  /** Gemini models to try in order for each request. */
+  geminiModels: string[];
   googleTtsKey: string | undefined;
   googleTtsVoice: string;
   googleTtsLanguage: string;
@@ -128,7 +129,9 @@ function loadEnv(): Env {
   return {
     anthropicKey: process.env.ANTHROPIC_API_KEY,
     geminiKey: process.env.GEMINI_API_KEY,
-    geminiModel: process.env.GEMINI_MODEL ?? GEMINI_DEFAULT_MODEL,
+    geminiModels: process.env.GEMINI_MODEL
+      ? process.env.GEMINI_MODEL.split(',').map((m) => m.trim()).filter(Boolean)
+      : GEMINI_DEFAULT_MODELS,
     googleTtsKey: process.env.GOOGLE_TTS_API_KEY,
     googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? 'en-US-Neural2-D',
     googleTtsLanguage: process.env.GOOGLE_TTS_LANGUAGE ?? 'en-US',
@@ -172,7 +175,7 @@ export async function createContext(flags: Flags): Promise<RunContext> {
   if (llm === 'claude') {
     log.info('Stage 03 writes with Claude (ANTHROPIC_API_KEY).');
   } else if (llm === 'gemini') {
-    log.info(`Stage 03 writes with Gemini ${env.geminiModel} (GEMINI_API_KEY).`);
+    log.info(`Stage 03 writes with Gemini: ${env.geminiModels.join(', then ')} (GEMINI_API_KEY).`);
   } else if (!dryRun) {
     log.warn('Neither ANTHROPIC_API_KEY nor GEMINI_API_KEY is set: stage 03 will be skipped.');
   }

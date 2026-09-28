@@ -11,6 +11,7 @@ export type ContentSource =
   | 'free_dictionary'
   | 'datamuse'
   | 'claude'
+  | 'gemini'
   | 'user'
   | 'manual';
 
