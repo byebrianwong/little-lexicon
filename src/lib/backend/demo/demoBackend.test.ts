@@ -104,6 +104,7 @@ describe('DemoBackend personalization', () => {
     const { text } = await new DemoBackend().generatePersonalized({
       wordId: 2,
       headword: 'quixotic',
+      definition: 'Idealistic in a way that is not practical.',
       kind: 'mnemonic',
       interests: ['Science'],
     });

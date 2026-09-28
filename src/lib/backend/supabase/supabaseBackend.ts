@@ -1,9 +1,13 @@
 // Production backend backed by Supabase (Postgres + Auth + Edge Functions).
 // All schema access goes through the little-lexicon-scoped client. Review commit is the
-// transactional `submit_review` RPC (see migration 0002). Content queries embed
-// senses/examples/distractors/relations/mnemonics in one round trip.
+// transactional `submit_review` RPC (see migration 0002).
+//
+// Word content comes from the bundled words file (src/lib/content), as in demo
+// mode. Supabase holds only per-user data, which refers to words by their id
+// in that file. The Postgres content tables are no longer read.
 
 import { supabase } from '@/lib/supabase';
+import { loadContent } from '@/lib/content';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
@@ -27,14 +31,12 @@ import type {
   SubmitReviewInput,
   SubmitReviewResult,
 } from '../types';
-import { mapWordRow, WORD_SELECT, type RawWordRow } from './mapContent';
-import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
+import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
 
 /**
- * PostgREST returns at most 1,000 rows per request by default, and the
- * collection is several thousand words. This reads a query page by page until
- * a short page says there is nothing left. `page` must build a fresh query for
- * each range.
+ * PostgREST returns at most 1,000 rows per request by default, and a user's
+ * history can pass that. This reads a query page by page until a short page
+ * says there is nothing left. `page` must build a fresh query for each range.
  */
 const PAGE_ROWS = 1000;
 async function fetchAllRows<T>(
@@ -84,6 +86,14 @@ function rowToUserWordState(r: StateRow): UserWordState {
   };
 }
 
+/**
+ * The words for `ids`, in the same order. An id that is not in the words file
+ * is skipped: a user row can outlive a word that was taken out of the file.
+ */
+function pickWords(byId: ReadonlyMap<number, WordContent>, ids: readonly number[]): WordContent[] {
+  return ids.map((id) => byId.get(id)).filter((c): c is WordContent => c !== undefined);
+}
+
 function mapProfile(row: {
   user_id: string;
   display_name: string | null;
@@ -116,12 +126,6 @@ function mapProfile(row: {
 
 export class SupabaseBackend implements Backend {
   readonly kind = 'supabase' as const;
-
-  /**
-   * Every word's id, tier and frequency, which is all the ordering needs.
-   * Content is read-only to clients, so one fetch serves the whole app run.
-   */
-  private catalog: Promise<CatalogEntry[]> | null = null;
 
   private async requireUserId(): Promise<string> {
     const { data } = await supabase.auth.getUser();
@@ -214,62 +218,48 @@ export class SupabaseBackend implements Backend {
   }
 
   // --- Content --------------------------------------------------------------
-  private async getWordContentBatch(wordIds: number[]): Promise<Map<number, WordContent>> {
-    if (wordIds.length === 0) return new Map();
-    const { data, error } = await supabase
-      .from('words')
-      .select(WORD_SELECT)
-      .in('id', wordIds);
-    if (error) throw new Error(error.message);
-    // Deep embeds are not fully inferred by the generated types; map explicitly.
-    const rows = (data ?? []) as unknown as RawWordRow[];
-    return new Map(rows.map((r) => [r.id, mapWordRow(r)]));
-  }
-
   async getWordContent(wordId: number): Promise<WordContent | null> {
-    const map = await this.getWordContentBatch([wordId]);
-    return map.get(wordId) ?? null;
+    return (await loadContent()).byId.get(wordId) ?? null;
   }
 
   async getAllWords(limit?: number): Promise<WordContent[]> {
-    let q = supabase
-      .from('words')
-      .select('id')
-      .order('difficulty_tier', { ascending: true })
-      .order('frequency_rank', { ascending: true, nullsFirst: false });
-    if (limit !== undefined) q = q.limit(limit);
-    const { data, error } = await q;
-    if (error) throw new Error(error.message);
-    const ids = (data ?? []).map((r) => r.id);
-    const content = await this.getWordContentBatch(ids);
-    // Preserve the query order; drop ids with no usable content.
-    return ids
-      .map((id) => content.get(id))
-      .filter((c): c is WordContent => c !== undefined);
+    const { words } = await loadContent(); // already easiest first
+    return words.slice(0, limit);
   }
 
   // --- Queue ----------------------------------------------------------------
   async getDueQueue(limit: number): Promise<SessionItem[]> {
+    const { byId } = await loadContent();
     const nowIso = new Date().toISOString();
-    const { data, error } = await supabase
-      .from('user_word_state')
-      .select(
-        'word_id, due, stability, difficulty, elapsed_days, scheduled_days, reps, lapses, state, last_review, learning_steps, is_known, is_suspended',
-      )
-      .eq('is_suspended', false)
-      .eq('is_known', false)
-      .lte('due', nowIso)
-      .order('due', { ascending: true })
-      .limit(limit);
-    if (error) throw new Error(error.message);
-    const rows = (data ?? []) as StateRow[];
-    const content = await this.getWordContentBatch(rows.map((r) => r.word_id));
-    return rows
-      .map<SessionItem | null>((r) => {
-        const c = content.get(r.word_id);
-        return c ? { content: c, state: rowToUserWordState(r), isNew: false } : null;
-      })
-      .filter((x): x is SessionItem => x !== null);
+    const items: SessionItem[] = [];
+    // A row whose word has left the words file is skipped. Nobody can review
+    // it, so its due date never moves and it stays at the front of this
+    // order. Reading on past such rows keeps them from taking places in the
+    // queue. Usually the first page is enough.
+    const pageSize = Math.max(1, limit);
+    for (let from = 0; items.length < limit; from += pageSize) {
+      const { data, error } = await supabase
+        .from('user_word_state')
+        .select(
+          'word_id, due, stability, difficulty, elapsed_days, scheduled_days, reps, lapses, state, last_review, learning_steps, is_known, is_suspended',
+        )
+        .eq('is_suspended', false)
+        .eq('is_known', false)
+        .lte('due', nowIso)
+        .order('due', { ascending: true })
+        // A second key keeps the order stable from one page to the next.
+        .order('word_id', { ascending: true })
+        .range(from, from + pageSize - 1);
+      if (error) throw new Error(error.message);
+      const rows = (data ?? []) as StateRow[];
+      for (const r of rows) {
+        if (items.length >= limit) break;
+        const word = byId.get(r.word_id);
+        if (word) items.push({ content: word, state: rowToUserWordState(r), isNew: false });
+      }
+      if (rows.length < pageSize) break;
+    }
+    return items;
   }
 
   async getNewWords(
@@ -279,47 +269,25 @@ export class SupabaseBackend implements Backend {
     // Ordering is done here rather than in SQL so it shares the tested logic
     // in features/feed/wordOrder with demo mode. It also avoids sending every
     // seen id back in the URL as a `not in` filter, which grows with history.
-    const [catalog, seen, listed] = await Promise.all([
-      this.getCatalog(),
+    const [content, seen, listed] = await Promise.all([
+      loadContent(),
       this.getSeenIds(),
       this.getListedRows(),
     ]);
     const ids = pickNewWordIds({
-      catalog,
+      // A word carries its own id, tier and frequency, so it is a catalog entry.
+      catalog: content.words,
       seen,
       listed: listed.map((r) => r.word_id),
       minTier: opts?.minTier,
       maxTier: opts?.maxTier,
       limit,
     });
-    const content = await this.getWordContentBatch(ids);
-    return ids
-      .map((id) => content.get(id))
-      .filter((c): c is WordContent => c !== undefined)
-      .map<SessionItem>((content) => ({ content, state: null, isNew: true }));
-  }
-
-  private getCatalog(): Promise<CatalogEntry[]> {
-    if (!this.catalog) {
-      this.catalog = fetchAllRows((from, to) =>
-        supabase
-          .from('words')
-          .select('id, difficulty_tier, frequency_rank')
-          .order('id', { ascending: true })
-          .range(from, to),
-      ).then((rows) =>
-        rows.map((r) => ({
-          wordId: r.id,
-          difficultyTier: r.difficulty_tier,
-          frequencyRank: r.frequency_rank,
-        })),
-      );
-      // A failed fetch should not be cached for the rest of the run.
-      this.catalog.catch(() => {
-        this.catalog = null;
-      });
-    }
-    return this.catalog;
+    return pickWords(content.byId, ids).map<SessionItem>((word) => ({
+      content: word,
+      state: null,
+      isNew: true,
+    }));
   }
 
   /** Words with a user_word_state row (RLS limits it to this user's rows). */
@@ -345,31 +313,33 @@ export class SupabaseBackend implements Backend {
 
   // --- Discover feed and the word list --------------------------------------
   async getFeedWords(input: FeedRequest): Promise<WordContent[]> {
-    const [catalog, seen, listed] = await Promise.all([
-      this.getCatalog(),
+    const [content, seen, listed] = await Promise.all([
+      loadContent(),
       this.getSeenIds(),
       this.getListedRows(),
     ]);
     const exclude = new Set([...seen, ...listed.map((r) => r.word_id), ...input.exclude]);
     const ids = orderFeed({
-      catalog,
+      catalog: content.words,
       exclude,
       levelEstimate: input.levelEstimate,
       seed: input.seed,
       limit: input.limit,
     });
-    const content = await this.getWordContentBatch(ids);
-    return ids.map((id) => content.get(id)).filter((c): c is WordContent => c !== undefined);
+    return pickWords(content.byId, ids);
   }
 
   async getWordList(): Promise<ListedWord[]> {
-    const [listed, seen] = await Promise.all([this.getListedRows(), this.getSeenIds()]);
-    const rows = listed.filter((r) => !seen.has(r.word_id));
-    const content = await this.getWordContentBatch(rows.map((r) => r.word_id));
-    return rows
+    const [content, listed, seen] = await Promise.all([
+      loadContent(),
+      this.getListedRows(),
+      this.getSeenIds(),
+    ]);
+    return listed
+      .filter((r) => !seen.has(r.word_id))
       .map((r) => {
-        const c = content.get(r.word_id);
-        return c ? { content: c, addedAt: r.added_at } : null;
+        const word = content.byId.get(r.word_id);
+        return word ? { content: word, addedAt: r.added_at } : null;
       })
       .filter((w): w is ListedWord => w !== null);
   }
@@ -585,18 +555,8 @@ export class SupabaseBackend implements Backend {
 
   // --- Placement ------------------------------------------------------------
   async getPlacementWords(): Promise<WordContent[]> {
-    const { data, error } = await supabase
-      .from('words')
-      .select('id')
-      .order('difficulty_tier', { ascending: true })
-      .order('frequency_rank', { ascending: true, nullsFirst: false })
-      .limit(30);
-    if (error) throw new Error(error.message);
-    const ids = (data ?? []).map((r) => r.id);
-    const content = await this.getWordContentBatch(ids);
-    return ids
-      .map((id) => content.get(id))
-      .filter((c): c is WordContent => c !== undefined);
+    // Every tier, easiest first; placement picks a few from each.
+    return [...(await loadContent()).words];
   }
 
   async markKnown(wordIds: number[]): Promise<void> {
@@ -637,6 +597,8 @@ export class SupabaseBackend implements Backend {
     wordId: number;
     /** The word on screen, so the backend does not have to look it up by id. */
     headword: string;
+    /** The definition on screen. The Edge Function puts it in the prompt. */
+    definition: string;
     kind: 'mnemonic' | 'sentence';
     interests: string[];
   }): Promise<{ text: string }> {

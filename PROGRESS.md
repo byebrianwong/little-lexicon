@@ -1873,6 +1873,192 @@ would come close to one.
 - All words has no "Learn this" button. Adding one would let someone who
   searched for a word put it on their list.
 
+## A bypassed Chromatic build no longer passes Visual tests
+
+`Visual tests` could pass while visual changes were still unreviewed. On
+PR #16, build 38 had 29 changes waiting for review and failed the check. The
+next commit only touched a Supabase function, so TurboSnap bypassed its
+build (build 39, `SKIPPED`), the Chromatic step exited 0, and every required
+check was green.
+
+### Why it happened
+
+This is how Chromatic works, not a mistake in our config. A build is bypassed
+when no story's files changed and the ancestor build passed, or is on the
+same branch. The CLI then prints "The pending status will be carried over
+from the most recent ancestor build that has unreviewed changes", and the
+`UI Tests` commit status on that commit does read pending. But the CLI
+(18.9.4) skips the step that turns a pending build into exit code 1, so
+`exitZeroOnChanges: false` does nothing for a bypassed build.
+
+It also happens while the earlier build is still running. On PR #17, commit
+3e25b63 was bypassed while build 42 was running. `Visual tests` passed at
+22:19:14, and build 42 finished at 22:19:47.
+
+### What changed
+
+A new last step in the `Visual tests` job,
+`.github/scripts/check-ui-tests-status.sh`, reads the `UI Tests` status
+Chromatic posted on the pull request's head commit. It passes only when that
+status is success. While it is pending, it checks every 10 seconds for up to
+5 minutes. It fails straight away when the status says changes "must be
+accepted", and it fails if Chromatic posts no status at all. The job now asks
+for `statuses: read`.
+
+The fix for a failure is the same as before: accept or deny the changes in
+Chromatic, then re-run the job. On the re-run, the step sees the status
+Chromatic updated after the accept.
+
+### Options not taken
+
+- **Require `UI Tests` in the ruleset.** It would also catch this, and it
+  turns green on accept without a re-run. It stays unrequired for the reason
+  given under "Visual diffs now block": Chromatic never posts it on a fork
+  pull request, so those would wait forever. The new step runs inside a job
+  that forks already skip.
+- **Turn off `onlyChanged`.** Every commit would capture every story (the
+  bypassed build 39 skipped 427 snapshots), which the free plan cannot
+  sustain.
+- **Ask the Chromatic API about the branch from CI.** This is possible with a
+  machine-to-machine OAuth client (the API is in private beta). It would need
+  two more secrets and a hand-written query that finds the latest real build
+  on the branch and handles running and superseded builds. The `UI Tests`
+  status already carries that answer, worked out by Chromatic.
+
+### For later
+
+- If a later CLI version makes a bypassed build exit non-zero when the
+  carried-over status is pending, this step becomes redundant and can go.
+- The step depends on Chromatic's GitHub integration. If the project is ever
+  unlinked from the repository, the step fails after 5 minutes with "posted
+  no UI Tests status".
+
+## Supabase mode reads words from the words file
+
+Supabase mode now gets word content from `src/content/words.json`, as demo
+mode does. Supabase holds only per-user data. This clears the item "Supabase
+mode is out of date for content" under "Words come from a bundled file, not
+Postgres", and the matching item under Discover.
+
+### What changed
+
+- `SupabaseBackend` reads content with `loadContent()` in `getWordContent`,
+  `getAllWords`, `getPlacementWords`, `getDueQueue`, `getNewWords`,
+  `getFeedWords` and `getWordList`. The last two came with Discover (#16) and
+  also read the `words` table. Per-user reads (`user_word_state`, `word_list`)
+  are unchanged. `mapContent.ts` is deleted; nothing else used it.
+- `getNewWords` and `getFeedWords` pass the words file's words to the shared
+  ordering in `features/feed/wordOrder`, so the per-run catalog fetch from
+  Postgres is gone. A `WordContent` has an id, tier and frequency, so it works
+  as a catalog entry as it is.
+- Migration `0010_drop_word_foreign_keys.sql` drops the foreign keys to
+  `little_lexicon.words` on `user_word_state`, `review_logs`, `mnemonics` and
+  `word_list`. `word_list` got the same key in 0009, so it is included.
+  `submit_review` (0002), `due_forecast` and `retention_rate` (0004) and the
+  leaderboard view (0005) do not join content tables, so no function changed.
+- `little-lexicon-generate-personalized` no longer reads `words` or `senses`.
+  It takes `headword` and `definition` from the request body, and the new
+  `request.ts` checks the body before the rate limit. Auth, the daily cap of 30
+  and the saved mnemonic are unchanged.
+- `Backend.generatePersonalized` takes `definition`. `WordIntro` sends the
+  definition it shows.
+- CLAUDE.md's "Word content" line and the README's go-live steps describe the
+  new setup.
+
+### Decisions
+
+**The client sends the definition, and the function checks its shape.** The
+function cannot look the word up anymore, so the prompt text comes from the
+caller. A headword must be letters, spaces, hyphens or apostrophes, at most 40
+characters. A definition must fit on one line (line breaks become spaces), at
+most 400 characters, with no control characters. The longest in the file now
+are 13 and 144. A test runs every word in the file through the check. This
+does not stop a caller from sending a made-up word. It keeps the call to a
+short memory aid for something shaped like a word. The daily cap and the
+200-token output limit still bound the cost.
+
+**The check runs before the rate limit.** As before for `wordId` and `kind`, a
+malformed request gets a 400 without using one of the caller's 30 daily calls.
+`wordId` must now be a positive integer. Before, any number passed, and a
+fraction would have failed later, at the insert.
+
+**The due queue reads past words that left the file.** The pipeline can stop
+exporting a word and keep its id retired (stage 05 lists these). A user's row
+for such a word can never be reviewed, so its due date never moves and it
+stays at the front of the due order. With a single query of `limit` rows,
+enough of these rows would empty the queue for good. `getDueQueue` now reads
+more pages until it has `limit` words that are in the file. Before, the
+foreign keys prevented such rows by deleting them along with the word.
+
+**Placement gets every word.** The old Supabase query took the 30 easiest
+words, and with the file's tiers those are all tier 1. Placement groups words
+by tier and moves between tiers, so it needs all of them, as in demo mode.
+
+**Dropping the keys also drops their cascade.** Each key was `on delete
+cascade`, so emptying the content tables would have deleted every user's
+progress. Account deletion is unaffected: user rows still cascade from
+`auth.users`.
+
+**The migration finds the keys in the catalog.** They were declared inline,
+so Postgres chose their names. 0010 looks them up in `pg_constraint` and drops
+what it finds. A second run finds nothing and does nothing.
+
+### Verified
+
+- `tsc --noEmit` and lint pass. 199 unit tests pass, 22 of them new:
+  - `src/lib/backend/supabase/supabaseBackend.test.ts` (10) replaces the
+    Supabase client with a fake that applies the backend's filters, orders and
+    ranges. It checks that content matches the words file, that no content
+    table is queried, the due order and state mapping, that a word missing
+    from the file does not take a place in the queue (this test fails if the
+    queue reads only one page), new-word order with the list first and the
+    tier filter, what the feed leaves out, and the list.
+  - `supabase/functions/little-lexicon-generate-personalized/request.test.ts`
+    (12). Jest finds it there. tsc and eslint skip `supabase/functions`, so the
+    two new function files were typechecked and linted once by hand with the
+    app's strict settings.
+- Migrations 0001 to 0010 ran in order on PGlite (Postgres 17 compiled to
+  WebAssembly, installed in a scratch folder outside the project), with a stub
+  `auth` schema and the API roles. Before 0010 there were six foreign keys to
+  `words`, and `submit_review` for word 317 failed on
+  `user_word_state_word_id_fkey`. After 0010 only the two content-table keys
+  remained. `submit_review(317)` wrote the card state, the log and the day's
+  stats, and `due_forecast` and `retention_rate` counted them. Inserts into
+  `word_list` and `mnemonics` for a file word id worked. A second run of 0010
+  changed nothing. Deleting the auth user still removed that user's rows.
+- Web, demo mode: a session opened on a new-word card showing its definition,
+  and "Make it personal" showed the demo hook.
+
+### Not run
+
+- **Nothing ran against a real Supabase project.** This machine has no `.env`
+  with Supabase keys, and no Docker, so `supabase start` cannot run a local
+  stack. PGlite is plain Postgres. It does not test RLS as the `authenticated`
+  role, the grants PostgREST needs, or the Edge Function runtime.
+- **`database.types.ts` was not regenerated.** `npm run gen:types` needs a
+  local Supabase. The committed file is hand-maintained and lists no
+  relationships for any table, so 0010 changes nothing in it. Regenerate it
+  once a database exists.
+- **Deno did not run or typecheck the Edge Function.** Deno is not installed.
+  Deploy it and call it once with a real token before relying on it.
+- Not run on iOS or Android. The app-side change is one prop in `WordIntro`,
+  and demo mode's behavior is unchanged.
+
+### Open questions
+
+- **Saved personalized mnemonics are no longer shown.** The old content query
+  embedded `mnemonics`, and under RLS that included the user's own. So a
+  generated hook could come back as `mnemonics[0]` in All words or on the
+  new-word card. The function still saves hooks, but nothing reads them now.
+  To bring them back, the backend could read the user's `mnemonics` rows and
+  put them first. I left this out: it was not part of the task, and the old
+  order between global and personal hooks was never defined.
+- **Counts include rows for words that left the file.** `getProgressCounts`
+  counts every `user_word_state` row, as demo mode does. So "due now" can be
+  higher than the queue once a word the user studied is removed from the file.
+- The Postgres content tables are still there, with their client read
+  policies. Dropping them is a separate decision.
+
 ## Generated content for all 317 words, written by Gemini
 
 Every word now has a plain-language definition, generated example sentences

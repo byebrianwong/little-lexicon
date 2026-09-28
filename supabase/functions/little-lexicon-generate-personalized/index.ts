@@ -1,13 +1,19 @@
 // little-lexicon-generate-personalized (Phase 6.4)
 //
-// POST { wordId, kind: 'mnemonic' | 'sentence', interests: string[] }
+// POST { wordId, headword, definition, kind: 'mnemonic' | 'sentence', interests: string[] }
 // -> mnemonic: { kind: 'mnemonic', id, text }  (also persisted, owner-only)
 //    sentence: { kind: 'sentence', text }       (returned only, never written to shared content)
 //
+// The headword and definition come from the client, which has them from the
+// words file in the app. Word content is no longer in Postgres, so there is
+// nothing to look up here. request.ts checks the body before the rate limit,
+// so a bad request does not use up the caller's daily allowance.
+//
 // Same gating as little-lexicon-evaluate-sentence:
 //   1. Auth via the incoming bearer JWT -> getUser(); no user -> 401.
-//   2. Rate limit via bump_ai_usage('generate'); over the cap -> 429.
-//   3. Generation with claude-haiku-4-5 (rubric cached).
+//   2. Body check (request.ts); invalid -> 400.
+//   3. Rate limit via bump_ai_usage('generate'); over the cap -> 429.
+//   4. Generation with claude-haiku-4-5 (rubric cached).
 //
 // Personalized mnemonics are written with user_id set, so RLS keeps them
 // owner-visible only. Sentences are personal and short-lived, so they are
@@ -16,16 +22,9 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.4";
 import { corsHeaders, jsonResponse } from "../_shared/cors.ts";
 import { callAnthropic, HAIKU_MODEL } from "../_shared/anthropic.ts";
+import { parseGenRequest } from "./request.ts";
 
 const DAILY_CAP = 30;
-
-type Kind = "mnemonic" | "sentence";
-
-interface GenRequest {
-  wordId?: number;
-  kind?: Kind;
-  interests?: string[];
-}
 
 const MNEMONIC_RUBRIC = `You write short, vivid memory aids for vocabulary learners.
 Given a target word, its definition, and a few of the learner's interests, write ONE
@@ -70,24 +69,17 @@ Deno.serve(async (req: Request): Promise<Response> => {
   }
   const userId = userData.user.id;
 
-  let body: GenRequest;
+  let body: unknown;
   try {
-    body = (await req.json()) as GenRequest;
+    body = await req.json();
   } catch {
     return jsonResponse({ error: "Invalid JSON body" }, 400);
   }
-  const wordId = body.wordId;
-  const kind: Kind = body.kind === "sentence" ? "sentence" : "mnemonic";
-  if (typeof wordId !== "number") {
-    return jsonResponse({ error: "wordId is required" }, 400);
+  const parsed = parseGenRequest(body);
+  if (!parsed.ok) {
+    return jsonResponse({ error: parsed.error }, 400);
   }
-  if (body.kind !== "mnemonic" && body.kind !== "sentence") {
-    return jsonResponse({ error: "kind must be 'mnemonic' or 'sentence'" }, 400);
-  }
-  const interests = (Array.isArray(body.interests) ? body.interests : [])
-    .filter((s) => typeof s === "string" && s.trim().length > 0)
-    .slice(0, 5)
-    .map((s) => s.trim());
+  const { wordId, headword, definition, kind, interests } = parsed.request;
 
   // Rate limit (increment-first, atomic), as the caller.
   const { data: usageCount, error: usageErr } = await authClient.rpc("bump_ai_usage", {
@@ -99,27 +91,6 @@ Deno.serve(async (req: Request): Promise<Response> => {
   if (typeof usageCount === "number" && usageCount > DAILY_CAP) {
     return jsonResponse({ error: "Daily limit reached" }, 429);
   }
-
-  // Word content is readable by authenticated users (content-read RLS).
-  const { data: word, error: wordErr } = await authClient
-    .from("words")
-    .select("headword")
-    .eq("id", wordId)
-    .maybeSingle();
-  if (wordErr) {
-    return jsonResponse({ error: "Word lookup failed" }, 500);
-  }
-  if (!word?.headword) {
-    return jsonResponse({ error: "Word not found" }, 404);
-  }
-  const { data: sense } = await authClient
-    .from("senses")
-    .select("definition, plain_language_definition")
-    .eq("word_id", wordId)
-    .order("sense_order", { ascending: true })
-    .limit(1)
-    .maybeSingle();
-  const definition = sense?.plain_language_definition ?? sense?.definition ?? "";
 
   const rubric = kind === "mnemonic" ? MNEMONIC_RUBRIC : SENTENCE_RUBRIC;
   const interestLine = interests.length > 0 ? interests.join(", ") : "general topics";
@@ -136,7 +107,7 @@ Deno.serve(async (req: Request): Promise<Response> => {
         {
           role: "user",
           content:
-            `Target word: ${word.headword}\n` +
+            `Target word: ${headword}\n` +
             `Definition: ${definition}\n` +
             `Learner interests: ${interestLine}`,
         },
