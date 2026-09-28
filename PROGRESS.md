@@ -1872,3 +1872,68 @@ would come close to one.
 - Not run on an Android emulator. No Android SDK is installed on this machine.
 - All words has no "Learn this" button. Adding one would let someone who
   searched for a word put it on their list.
+
+## Generated content for all 317 words, written by Gemini
+
+Every word now has a plain-language definition, generated example sentences
+(so every word supports the cloze game), wrong definitions for multiple choice,
+and a memory hook. Before this, words had WordNet content only.
+
+### What was built
+
+- Stage 03 can use Google Gemini when `GEMINI_API_KEY` is set and
+  `ANTHROPIC_API_KEY` is not (Brian's choice; there was no Anthropic key). It
+  calls the REST `generateContent` endpoint with a JSON response schema, so no
+  new dependency. Eight senses go in each request, and every item passes the
+  same Zod schema as Claude output before it is written.
+- Each request tries `gemini-3.8-flash`, then `gemini-3.7-flash`, then
+  `gemini-3.5-flash-lite` (`GEMINI_MODEL` overrides the list). Results are
+  saved as each request returns. If no model answers, or every daily quota is
+  spent, the stage stops, the export still runs, and the next run continues.
+- Generated rows record `source: 'gemini'`. The schema now rejects em dashes.
+- The Claude prompt text is unchanged; its field list and rules are shared with
+  the Gemini prompt.
+
+### What happened on the run
+
+The free tier was unreliable. `gemini-3.8-flash` answered 503 "high demand"
+for minutes at a time, then its free daily quota ran out after about 20
+requests (most spent on failed attempts and diagnosis). `gemini-3.7-flash`
+wrote 16 senses before its quota ran out. `gemini-3.5-flash-lite` wrote the
+other 537. `gemini-3.8-flash` wrote the 4 senses of the first 3 words in a test
+run. 553 senses, 0 rejected, about 175,000 tokens: $0.31 if billed at paid
+rates, $0 on the free tier.
+
+### Quality, from a read of samples
+
+- Plain definitions and example sentences are good.
+- Wrong definitions are usable but often too easy (for capricious: "Related to
+  the study of capybaras and similar rodents"). 23 of 2,617 repeat across
+  words. At least one has a typo ("Ressembling lace"). The 3.8-flash sample was
+  clearly better: its wrong definitions were real meanings of look-alike words.
+- Memory hooks are often weak or incoherent (ubiquitous: "you-be-quitters
+  because ubiquitous things are everywhere you quit looking for them"). They
+  show on every new-word card.
+- Three hooks had em dashes; they were fixed by hand in the record.
+- "derivative" is still taught as the calculus noun (a WordNet sense choice),
+  and its generated content follows that sense.
+
+### Verified
+
+- Pipeline: `tsc` and 28 unit tests pass (new: the Gemini client, fallback,
+  rate limits and outages against a fake server, and em dash rejection).
+- App: `tsc`, lint and 177 unit tests pass against the new words file (every
+  cloze target appears in its sentence, every tier has words).
+- Web export: the words script is 812 KB (197 KB compressed), still separate
+  from the 2.85 MB entry bundle. In the browser, a new-word card showed the
+  plain definition, an example and a memory hook, and multiple choice used the
+  generated wrong definitions. No console errors.
+
+### For later
+
+- The weak hooks and easy distractors could be regenerated with
+  `gemini-3.8-flash` once its daily quota resets. Stage 03 only fills gaps, so
+  that needs a flag to regenerate existing rows, or deleting the rows first.
+- At this size a words file for 8,000 words would be about 5 MB compressed.
+  Split it (by tier, for example) before the list grows that far.
+- The Gemini key was pasted into a chat on 2026-09-27. Rotate it.

@@ -44,6 +44,13 @@ test('parseBatchResponse keeps valid senses and reports the rest', () => {
   assert.equal(out.errors.length, 2);
 });
 
+test('parseBatchResponse rejects an em dash anywhere in a sense', () => {
+  const text = JSON.stringify({ items: [sense(1, { mnemonic: 'Brief \u2014 like a telegram.' })] });
+  const out = parseBatchResponse(text, [1]);
+  assert.deepEqual(out.failed, [1]);
+  assert.match(out.errors[0]!, /em dash/);
+});
+
 test('parseBatchResponse fails every sense on unreadable output', () => {
   assert.deepEqual(parseBatchResponse('not json', [4, 5]).failed, [4, 5]);
   assert.deepEqual(parseBatchResponse('{"nope": []}', [4]).failed, [4]);

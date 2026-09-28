@@ -21,7 +21,8 @@ export const GeneratedExampleSchema = z
   );
 
 /** The JSON contract we ask Claude to return for a single sense. */
-export const GeneratedSenseSchema = z.object({
+export const GeneratedSenseSchema = z
+  .object({
   sense_id: z.number().int().positive(),
   plain_language_definition: nonEmpty.max(400),
   examples: z.array(GeneratedExampleSchema).min(3).max(5),
@@ -30,7 +31,12 @@ export const GeneratedSenseSchema = z.object({
   // One global mnemonic per word. We ask for it alongside the word's first
   // sense so the batch stays one-request-per-sense.
   mnemonic: nonEmpty.max(300).nullable().optional(),
-});
+  })
+  // The prompt forbids em dashes (the house style for app copy), and models
+  // still slip them in, so reject and retry rather than ship them.
+  .refine((sense) => !JSON.stringify(sense).includes('\u2014'), {
+    message: 'contains an em dash',
+  });
 
 export type GeneratedExample = z.infer<typeof GeneratedExampleSchema>;
 export type GeneratedSense = z.infer<typeof GeneratedSenseSchema>;

@@ -87,10 +87,13 @@ the app bundle or any `EXPO_PUBLIC_*` variable (CLAUDE.md > Secrets).
 
 - `ANTHROPIC_API_KEY` - Claude batch generation (stage 03).
 - `GEMINI_API_KEY` - Gemini generation (stage 03), used only when there is no
-  Anthropic key. Optional `GEMINI_MODEL` (default `gemini-3.8-flash`). Free-tier
-  rate limits depend on the Google project: requests go one at a time, back off
-  on HTTP 429, and a daily quota stops the stage with its progress saved, so the
-  next run continues.
+  Anthropic key. Each request tries `gemini-3.8-flash`, then `gemini-3.7-flash`,
+  then `gemini-3.5-flash-lite`; set `GEMINI_MODEL` to a comma-separated list to
+  change that. Free-tier limits depend on the Google project, and a model can
+  answer 503 "high demand" for minutes while an older one works. Requests go
+  one at a time and back off on HTTP 429 or 5xx. If no model answers, or every
+  model's daily quota is spent, the stage stops with its progress saved and the
+  next run continues. Generated rows record `source: 'gemini'`.
 - `GOOGLE_TTS_API_KEY` - text to speech (stage 04). Optional overrides:
   `GOOGLE_TTS_VOICE`, `GOOGLE_TTS_LANGUAGE`.
 
