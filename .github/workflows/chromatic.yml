@@ -19,6 +19,10 @@ jobs:
       (github.event_name == 'push' ||
        github.event.pull_request.head.repo.full_name == github.repository)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # The last step reads the "UI Tests" status Chromatic posts on the commit.
+      statuses: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,3 +45,16 @@ jobs:
           # someone accepts or denies the diff in the Chromatic UI. Re-run the
           # job after accepting to turn it green.
           exitZeroOnChanges: false
+      # The step above can pass with changes still unreviewed. When a commit
+      # touches no story's files, TurboSnap bypasses the build and the CLI
+      # exits 0 without checking anything, even if an earlier build on the
+      # branch is still waiting for review or still running. Chromatic carries
+      # that earlier result over to its "UI Tests" status on the commit, so
+      # this step waits for that status and passes only when it is success.
+      # Forks never reach this step, because the whole job is skipped for them.
+      - name: Check Chromatic's UI Tests status
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.event.pull_request.head.sha }}
+        run: bash .github/scripts/check-ui-tests-status.sh
