@@ -17,6 +17,7 @@ import dotenv from 'dotenv';
 import { Logger } from './lib/logger.ts';
 import { CachedFetcher } from './lib/fetch.ts';
 import { JsonFileStore, type Store } from './lib/store.ts';
+import { GEMINI_DEFAULT_MODEL } from './lib/gemini.ts';
 
 export const STAGES = ['words', 'senses', 'generate', 'audio', 'export'] as const;
 export type StageName = (typeof STAGES)[number];
@@ -30,6 +31,8 @@ export interface Flags {
 
 export interface Env {
   anthropicKey: string | undefined;
+  geminiKey: string | undefined;
+  geminiModel: string;
   googleTtsKey: string | undefined;
   googleTtsVoice: string;
   googleTtsLanguage: string;
@@ -61,9 +64,9 @@ export class Metrics {
   plainDefsWritten = 0;
   invalidRejected = 0;
   escalatedToSonnet = 0;
-  claudeInputTokens = 0;
-  claudeOutputTokens = 0;
-  claudeCostUsd = 0;
+  llmInputTokens = 0;
+  llmOutputTokens = 0;
+  llmCostUsd = 0;
   ttsChars = 0;
   ttsCostUsd = 0;
   audioWordsSynthed = 0;
@@ -81,7 +84,8 @@ export interface RunContext {
   flags: Flags;
   env: Env;
   dryRun: boolean;
-  useClaude: boolean;
+  /** Which model writes stage 03 content: Claude if its key is set, else Gemini. */
+  llm: 'claude' | 'gemini' | null;
   useTts: boolean;
   limit: number | null;
   paths: Paths;
@@ -123,6 +127,8 @@ function loadEnv(): Env {
   }
   return {
     anthropicKey: process.env.ANTHROPIC_API_KEY,
+    geminiKey: process.env.GEMINI_API_KEY,
+    geminiModel: process.env.GEMINI_MODEL ?? GEMINI_DEFAULT_MODEL,
     googleTtsKey: process.env.GOOGLE_TTS_API_KEY,
     googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? 'en-US-Neural2-D',
     googleTtsLanguage: process.env.GOOGLE_TTS_LANGUAGE ?? 'en-US',
@@ -154,11 +160,21 @@ export async function createContext(flags: Flags): Promise<RunContext> {
 
   const store: Store = new JsonFileStore(paths.dbFile, paths.audioDir, dryRun, log);
 
-  const useClaude = !dryRun && Boolean(env.anthropicKey);
+  const llm: RunContext['llm'] = dryRun
+    ? null
+    : env.anthropicKey
+      ? 'claude'
+      : env.geminiKey
+        ? 'gemini'
+        : null;
   const useTts = !dryRun && Boolean(env.googleTtsKey);
 
-  if (!dryRun && !env.anthropicKey) {
-    log.warn('ANTHROPIC_API_KEY not set: stage 03 will be skipped.');
+  if (llm === 'claude') {
+    log.info('Stage 03 writes with Claude (ANTHROPIC_API_KEY).');
+  } else if (llm === 'gemini') {
+    log.info(`Stage 03 writes with Gemini ${env.geminiModel} (GEMINI_API_KEY).`);
+  } else if (!dryRun) {
+    log.warn('Neither ANTHROPIC_API_KEY nor GEMINI_API_KEY is set: stage 03 will be skipped.');
   }
   if (!dryRun && !env.googleTtsKey) {
     log.warn('GOOGLE_TTS_API_KEY not set: stage 04 will be skipped.');
@@ -170,7 +186,7 @@ export async function createContext(flags: Flags): Promise<RunContext> {
     flags,
     env,
     dryRun,
-    useClaude,
+    llm,
     useTts,
     limit: flags.limit,
     paths,

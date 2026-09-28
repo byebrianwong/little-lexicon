@@ -47,7 +47,7 @@ function printSummary(ctx: RunContext, elapsedMs: number): void {
     `distractors          +${m.distractorsInserted}`,
     `mnemonics            +${m.mnemonicsInserted}`,
     `rejected (invalid)   ${m.invalidRejected}   escalated to Sonnet: ${m.escalatedToSonnet}`,
-    `Claude tokens        in ${m.claudeInputTokens}, out ${m.claudeOutputTokens}  (est. $${m.claudeCostUsd.toFixed(4)})`,
+    `LLM tokens           in ${m.llmInputTokens}, out ${m.llmOutputTokens}  (est. $${m.llmCostUsd.toFixed(4)} if billed)`,
     `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, human reused ${m.audioReusedHuman}`,
     `TTS characters       ${m.ttsChars}  (est. $${m.ttsCostUsd.toFixed(4)})`,
     `audio this run       ${m.audioClips} clips, ${mb(m.audioBytes)} (saved under out/audio, not hosted)`,
