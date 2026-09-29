@@ -67,6 +67,11 @@ export interface Store {
   listDistractorsForSense(senseId: number): Promise<DistractorRow[]>;
   insertDistractor(input: NewDistractor): Promise<DistractorRow>;
 
+  /** Swap a sense's wrong answers for new ones (second pass). */
+  replaceDistractors(senseId: number, rows: NewDistractor[]): Promise<void>;
+  /** Swap a word's global (not personalized) mnemonic for a new one. */
+  replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void>;
+
   hasAudio(path: string): Promise<boolean>;
   saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult>;
   totalAudioBytes(): Promise<number>;
@@ -252,6 +257,22 @@ export class JsonFileStore implements Store {
     const row: DistractorRow = { id: this.nextId('distractors'), ...input };
     this.db.distractors.push(row);
     return row;
+  }
+
+  // Content rows, not user data: replacing them is how the second pass
+  // improves wrong answers and hooks. Ids are never reused.
+  async replaceDistractors(senseId: number, rows: NewDistractor[]): Promise<void> {
+    this.db.distractors = this.db.distractors.filter((d) => d.sense_id !== senseId);
+    for (const row of rows) {
+      this.db.distractors.push({ id: this.nextId('distractors'), ...row, sense_id: senseId });
+    }
+  }
+
+  async replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void> {
+    this.db.mnemonics = this.db.mnemonics.filter(
+      (m) => !(m.word_id === wordId && m.user_id === null),
+    );
+    this.db.mnemonics.push({ id: this.nextId('mnemonics'), ...row, word_id: wordId, user_id: null });
   }
 
   async hasAudio(path: string): Promise<boolean> {

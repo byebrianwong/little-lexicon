@@ -147,6 +147,8 @@ export interface GeminiCall {
   model: string;
   system: string;
   prompt: string;
+  /** Response schema; defaults to the stage 03 fill schema. */
+  responseSchema?: object;
 }
 
 export interface GeminiResult {
@@ -170,7 +172,7 @@ export async function generateJson(
     contents: [{ role: 'user', parts: [{ text: call.prompt }] }],
     generationConfig: {
       responseMimeType: 'application/json',
-      responseSchema: GEMINI_RESPONSE_SCHEMA,
+      responseSchema: call.responseSchema ?? GEMINI_RESPONSE_SCHEMA,
       temperature: 0.7,
     },
   });

@@ -63,6 +63,8 @@ export interface MnemonicRow {
   text: string;
   source: ContentSource;
   user_id: string | null;
+  /** 2 when written by the second pass (lib/revise.ts); absent before it. */
+  revision?: number;
 }
 
 export interface DistractorRow {
@@ -72,6 +74,8 @@ export interface DistractorRow {
   kind: string;
   difficulty: number;
   source: ContentSource;
+  /** 2 when written by the second pass (lib/revise.ts); absent before it. */
+  revision?: number;
 }
 
 export interface AudioObject {

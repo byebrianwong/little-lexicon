@@ -1,7 +1,7 @@
 // Orchestrator for the offline content-and-audio pipeline.
 //
 // Usage:
-//   tsx src/run.ts [--only=<words|senses|generate|audio|export>] [--dry-run] [--limit=N] [-v]
+//   tsx src/run.ts [--only=<words|senses|generate|audio|export|revise>] [--dry-run] [--limit=N] [-v]
 //
 // Runs the stages in order. Idempotent: each stage skips rows that already
 // exist and only fills gaps, so re-running is safe and does not re-spend on
@@ -21,6 +21,7 @@ import { hydrate } from './stages/02-hydrate.ts';
 import { generate } from './stages/03-generate.ts';
 import { audio } from './stages/04-audio.ts';
 import { exportWords } from './stages/05-export.ts';
+import { revise } from './stages/03-revise.ts';
 
 const RUNNERS: Record<StageName, (ctx: RunContext) => Promise<void>> = {
   words: ingestWords,
@@ -28,6 +29,7 @@ const RUNNERS: Record<StageName, (ctx: RunContext) => Promise<void>> = {
   generate,
   audio,
   export: exportWords,
+  revise,
 };
 
 function printSummary(ctx: RunContext, elapsedMs: number): void {
@@ -46,6 +48,7 @@ function printSummary(ctx: RunContext, elapsedMs: number): void {
     `plain definitions    +${m.plainDefsWritten}`,
     `distractors          +${m.distractorsInserted}`,
     `mnemonics            +${m.mnemonicsInserted}`,
+    `words revised        ${m.sensesRevised}`,
     `rejected (invalid)   ${m.invalidRejected}   escalated to Sonnet: ${m.escalatedToSonnet}`,
     `LLM tokens           in ${m.llmInputTokens}, out ${m.llmOutputTokens}  (est. $${m.llmCostUsd.toFixed(4)} if billed)`,
     `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, human reused ${m.audioReusedHuman}`,
