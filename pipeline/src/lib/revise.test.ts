@@ -99,3 +99,39 @@ test('unexpected ids, bad JSON and missing items all fail cleanly', () => {
   assert.deepEqual(stray.failed, [11]);
   assert.match(stray.errors[0]!, /unexpected sense_id 99/);
 });
+
+test('with a dictionary, look-alikes must be real words with the target part of speech', () => {
+  const lexicon = (w: string): string[] | null =>
+    ({ abet: ['verb'], abdicate: ['verb'], abase: ['verb'], abrade: ['verb'], abeyance: ['noun'] })[w] ?? null;
+  const ok = parseRevisedBatch(
+    batch({ sense_id: 11, distractors: goodDistractors, mnemonic: 'Abate: a bit less.' }),
+    [abate],
+    new Set(),
+    lexicon,
+  );
+  assert.deepEqual(ok.failed, []);
+
+  const noun = parseRevisedBatch(
+    batch({
+      sense_id: 11,
+      distractors: [...goodDistractors.slice(0, 3), { word: 'abeyance', meaning: 'A state of temporary disuse.' }],
+      mnemonic: 'Abate: a bit less.',
+    }),
+    [abate],
+    new Set(),
+    lexicon,
+  );
+  assert.match(noun.errors[0]!, /"abeyance" is a noun, not a verb/);
+
+  const unknown = parseRevisedBatch(
+    batch({
+      sense_id: 11,
+      distractors: [...goodDistractors.slice(0, 3), { word: 'abets', meaning: 'Helps a crime along.' }],
+      mnemonic: 'Abate: a bit less.',
+    }),
+    [abate],
+    new Set(),
+    lexicon,
+  );
+  assert.match(unknown.errors[0]!, /"abets" is not in the dictionary/);
+});

@@ -268,6 +268,22 @@ export function lookupWord(
   return { partOfSpeech, ipa: pickIpa(posEntries), senses, synonyms, antonyms };
 }
 
+/**
+ * The parts of speech WordNet lists for a lemma ("noun", "verb", ...), or
+ * null when WordNet does not have it. Only base forms are entries, so
+ * "abets" is null and "abet" is ["verb"].
+ */
+export function partsOfSpeechOf(data: Pick<WordNetData, 'entries'>, lemma: string): string[] | null {
+  const entry = data.entries[lemma.trim().toLowerCase()];
+  if (!entry) return null;
+  const names = new Set<string>();
+  for (const key of Object.keys(entry)) {
+    const name = POS_NAMES[key[0]!];
+    if (name) names.add(name);
+  }
+  return names.size > 0 ? [...names] : null;
+}
+
 // --- Loading ------------------------------------------------------------------
 
 export function indexSensesBySynset(entries: OewnEntries): Map<string, OewnSense[]> {

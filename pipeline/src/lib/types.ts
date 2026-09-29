@@ -76,6 +76,8 @@ export interface DistractorRow {
   source: ContentSource;
   /** 2 when written by the second pass (lib/revise.ts); absent before it. */
   revision?: number;
+  /** The look-alike word whose meaning this wrong answer is (second pass). */
+  lookalike?: string;
 }
 
 export interface AudioObject {

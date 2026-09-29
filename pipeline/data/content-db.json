@@ -2,15 +2,15 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-09-28T05:46:16.588Z"
+    "updatedAt": "2026-09-29T08:26:54.588Z"
   },
   "counters": {
     "words": 317,
     "senses": 557,
     "example_sentences": 2507,
     "word_relations": 1316,
-    "distractors": 2617,
-    "mnemonics": 317
+    "distractors": 2932,
+    "mnemonics": 380
   },
   "words": [
     {
@@ -39740,447 +39740,6 @@
   ],
   "mnemonics": [
     {
-      "id": 1,
-      "word_id": 1,
-      "text": "Think of taking a 'bite' out of something to make it smaller or less intense.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 2,
-      "word_id": 2,
-      "text": "Think of an 'errant' traveler who has wandered away from the normal path.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 3,
-      "word_id": 3,
-      "text": "An 'absent' person went on a 'second' trip with stolen goods: ab-scond.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 4,
-      "word_id": 4,
-      "text": "To abstain is to stay blank on the ballot.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 5,
-      "word_id": 5,
-      "text": "Ad-monish means to add a warning to your speech.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 6,
-      "word_id": 6,
-      "text": "Adulterate sounds like adult altering something to make it cheap.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 7,
-      "word_id": 7,
-      "text": "Aesthetic has art right at the beginning.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 8,
-      "word_id": 8,
-      "text": "Think of a grand prize making things look bigger.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 9,
-      "word_id": 9,
-      "text": "Alacrity sounds like a brisk activity done with speed.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 10,
-      "word_id": 10,
-      "text": "A light elevator helps lift away heavy pain.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 11,
-      "word_id": 11,
-      "text": "A game of amalgam brings many pieces together.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 12,
-      "word_id": 12,
-      "text": "Ambi means both, giving you two possible meanings.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 13,
-      "word_id": 13,
-      "text": "AMBIVALENT sounds like ambi-valiant, meaning you have two strong, opposing values fighting inside you.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 14,
-      "word_id": 14,
-      "text": "AMELIORATE sounds like a mellow rate, which means things are calming down and getting better.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 15,
-      "word_id": 15,
-      "text": "ANA (against) plus CHRON (time) equals something that goes against the correct time.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 16,
-      "word_id": 16,
-      "text": "ANALOGOUS shares a root with analogy, which means drawing a comparison between similar things.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 17,
-      "word_id": 17,
-      "text": "A normal order is missing in an anomaly.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 18,
-      "word_id": 18,
-      "text": "Anti means against, and pathy means feeling, so an antipathy is feeling against someone.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 19,
-      "word_id": 19,
-      "text": "A path without feeling is apathy.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 20,
-      "word_id": 20,
-      "text": "To appease someone is to offer them a 'peace' offering to make them pleased.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 21,
-      "word_id": 21,
-      "text": "Arduous sounds like 'hard for us,' which reminds you of exhausting physical work.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 22,
-      "word_id": 22,
-      "text": "Think of an 'articulated bus' that bends in the middle at a joint.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 23,
-      "word_id": 23,
-      "text": "Ascetic sounds like 'a saint tick': think of a saint living without luxuries.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 24,
-      "word_id": 24,
-      "text": "Assuage sounds like 'a sweet age': sweet words soothe and win people over.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 25,
-      "word_id": 25,
-      "text": "Audacious sounds like 'all-day-cious': fearless enough to face danger all day long.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 26,
-      "word_id": 26,
-      "text": "Austere rhymes with steer, like a cow eating plain grass without any seasonings.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 27,
-      "word_id": 27,
-      "text": "Aver sounds like verify, which means to prove something is true.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 28,
-      "word_id": 28,
-      "text": "Banal sounds like ban all, meaning we should ban all boring, overused phrases.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 29,
-      "word_id": 29,
-      "text": "Belie has lie in it, meaning it tells a lie about how things really are.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 30,
-      "word_id": 30,
-      "text": "Bene means good, and beneficent means doing good deeds.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 31,
-      "word_id": 31,
-      "text": "Imagine a boulder helping to hold up a weak wall, to bolster it.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 32,
-      "word_id": 32,
-      "text": "A bombastic person sounds like an exploding bomb of loud, empty words.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 33,
-      "word_id": 33,
-      "text": "A boor acts like a wild boar, loud and boorish in public.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 34,
-      "word_id": 34,
-      "text": "Think of a burger making you grow larger.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 35,
-      "word_id": 35,
-      "text": "A buttress supports your rear, just like this architectural support props up a wall.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 36,
-      "word_id": 36,
-      "text": "Cacophony sounds like bad phones ringing loudly and harshly at the same time.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 37,
-      "word_id": 37,
-      "text": "Cage old animals? No, you coax and cajole them gently.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 38,
-      "word_id": 38,
-      "text": "Callous people lack emotion; they call us heartless.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 39,
-      "word_id": 39,
-      "text": "Candor sounds like candid, meaning completely honest and open.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 40,
-      "word_id": 40,
-      "text": "Capricious sounds like capricorn, and goats are unpredictable.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 41,
-      "word_id": 41,
-      "text": "Castigate sounds like cast a gate, meaning to lock someone out and scold them.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 42,
-      "word_id": 42,
-      "text": "Catalyst sounds like cat analysis, which speeds up your understanding of pets.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 43,
-      "word_id": 43,
-      "text": "Caustic sounds like cause a stick, because sharp words can sting like a poke.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 44,
-      "word_id": 44,
-      "text": "Chicanery sounds like chicery, involving sneaky tricks like a sly fox.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 45,
-      "word_id": 45,
-      "text": "Coagulate sounds like cola glue, which turns a runny liquid into a sticky solid.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 46,
-      "word_id": 46,
-      "text": "Coalesce contains coal, and pieces of coal press together to form one mass.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 47,
-      "word_id": 47,
-      "text": "Cogent sounds like agent, and a good secret agent presents convincing facts.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 48,
-      "word_id": 48,
-      "text": "Commensurate shares common with measure, meaning measurements match up.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 49,
-      "word_id": 49,
-      "text": "Think of someone who is so pleasant that they are always complaisant.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 50,
-      "word_id": 50,
-      "text": "To be conciliatory is to try and reconcile differences.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 51,
-      "word_id": 51,
-      "text": "If you condone something, you give it the green light.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 52,
-      "word_id": 52,
-      "text": "Conflagration sounds like flame, pointing to a huge fire.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 53,
-      "word_id": 53,
-      "text": "A connoisseur knows their stuff.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 54,
-      "word_id": 54,
-      "text": "Contrite sounds like crushed tight with guilt.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 55,
-      "word_id": 55,
-      "text": "A conundrum makes your brain drum with confusion.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 56,
-      "word_id": 56,
-      "text": "Think of a volume (con-volume) rolled up on itself.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 57,
-      "word_id": 57,
-      "text": "Copious sounds like cornucopia, a horn of plenty filled with words.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 58,
-      "word_id": 58,
-      "text": "Corroborate: robot-rate your facts to make them stronger.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 59,
-      "word_id": 59,
-      "text": "Credulous people give credit too easily to anything they hear.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 60,
-      "word_id": 60,
-      "text": "A cursory review is done in a hurry, like a curse word muttered quickly.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 61,
-      "word_id": 61,
-      "text": "A dearth of food makes you feel dead on earth.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 62,
-      "word_id": 62,
-      "text": "De bar fell down in a sudden debacle.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 63,
-      "word_id": 63,
-      "text": "To debunk is to knock down a bunk claim.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
       "id": 64,
       "word_id": 64,
       "text": "Decorations in a room show good decorum.",
@@ -41957,41 +41516,513 @@
       "text": "An iconoclast crashes icons.",
       "source": "gemini",
       "user_id": null
+    },
+    {
+      "id": 318,
+      "word_id": 1,
+      "text": "Think of a heavy storm that begins to abate as the rain lessens bit by bit.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 319,
+      "word_id": 2,
+      "text": "The word aberrant contains err, reminding you of behavior that errs from the standard path.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 320,
+      "word_id": 3,
+      "text": "Think of a thief who steals away into the night in just a second to abscond.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 321,
+      "word_id": 4,
+      "text": "When voters abstain, they choose to stay back and withhold their votes.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 322,
+      "word_id": 5,
+      "text": "A teacher will admonish students so they learn to monitor their conduct.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 323,
+      "word_id": 6,
+      "text": "Think of an adult who tampers with pure milk by adding water to adulterate it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 324,
+      "word_id": 7,
+      "text": "Look at the arts to appreciate the aesthetic balance of a painting.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 325,
+      "word_id": 8,
+      "text": "To aggrandize an achievement is to make it sound grander than it really was.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 326,
+      "word_id": 9,
+      "text": "Think of high electricity powering someone to respond with cheerful alacrity.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 327,
+      "word_id": 10,
+      "text": "The Latin root lev means light, so to alleviate pain is to lighten the burden.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 328,
+      "word_id": 11,
+      "text": "Think of a dental amalgam that combines metals, just as companies amalgamate into one.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 329,
+      "word_id": 12,
+      "text": "The prefix ambi means both, so an ambiguous remark can point in two directions.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 330,
+      "word_id": 13,
+      "text": "With ambi meaning both, an ambivalent person feels pulled equally toward two options.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 331,
+      "word_id": 14,
+      "text": "The Latin root melior means better, which shows that to ameliorate a bad situation is to improve it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 332,
+      "word_id": 15,
+      "text": "The root chron means time, so an anachronism is an object placed in the wrong time.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 333,
+      "word_id": 16,
+      "text": "Two things that are analogous can be linked together through a simple analogy.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 334,
+      "word_id": 17,
+      "text": "Anomaly comes from the Greek an- (not) and homalos (even or regular), meaning it does not follow the normal pattern.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 335,
+      "word_id": 18,
+      "text": "Combine anti (against) and pathos (feeling) to remember that antipathy means strong negative feeling or dislike.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 336,
+      "word_id": 19,
+      "text": "The prefix a- means without and pathos means feeling, so apathy is a complete lack of feeling or enthusiasm.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 337,
+      "word_id": 20,
+      "text": "To appease someone is to offer them peace so their anger subsides.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 338,
+      "word_id": 21,
+      "text": "An arduous climb is hard for us because it takes so much physical effort.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 339,
+      "word_id": 23,
+      "text": "An ascetic person denies themselves luxury, much like an athlete in rigorous discipline without sweets or extra comforts.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 340,
+      "word_id": 24,
+      "text": "To assuage someone is to soften their feelings, sharing a root with sweet, like sweetening a bitter mood.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 341,
+      "word_id": 25,
+      "text": "Audacious people dare to act with audacity, fearless and bold in the face of danger.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 342,
+      "word_id": 26,
+      "text": "Think of austere as stern and bare: clean, simple, and stripped of all extra comfort.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 343,
+      "word_id": 27,
+      "text": "Aver comes from the Latin root verus, meaning truth; when you aver, you maintain that something is true.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 344,
+      "word_id": 28,
+      "text": "Something banal has been heard so often that you feel like putting a ban on all of it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 345,
+      "word_id": 29,
+      "text": "If a smile belies your anger, the smile gives a lie to what you truly feel inside.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 346,
+      "word_id": 30,
+      "text": "Bene means well and -ficent comes from facere (to do), so a beneficent act is literally doing good.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 347,
+      "word_id": 31,
+      "text": "Just as a bolster pillow props up your back, to bolster someone's case is to support and strengthen it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 348,
+      "word_id": 32,
+      "text": "Bombastic speech inflates words like a bomb bursting with excessive volume and grand style.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 349,
+      "word_id": 22,
+      "text": "To articulate parts is to connect them with joints, like the movable segments of a skeleton.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 350,
+      "word_id": 33,
+      "text": "A boorish person acts like a wild boar, charging around with crude and bad manners.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 351,
+      "word_id": 34,
+      "text": "When plant buds emerge in spring, they burgeon and quickly grow into full blooms.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 352,
+      "word_id": 35,
+      "text": "A buttress rests against the exterior of a wall to brace it and keep it from collapsing.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 353,
+      "word_id": 36,
+      "text": "Cacophony comes from Greek roots kakos (bad) and phone (sound), making it a harsh noise.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 354,
+      "word_id": 37,
+      "text": "To cajole is to coax someone gently, like telling pleasant jokes to win them over.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 355,
+      "word_id": 38,
+      "text": "Just as a skin callus becomes tough from friction, a callous person has an emotionally hardened heart.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 356,
+      "word_id": 39,
+      "text": "Candor comes from the Latin root for brightness, describing someone whose honest words are clear and candid.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 357,
+      "word_id": 40,
+      "text": "A capricious person acts on a sudden caprice, shifting their mood or mind without any warning.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 358,
+      "word_id": 41,
+      "text": "When authorities castigate a wrongdoer, they cast harsh words and reprimands to punish them.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 359,
+      "word_id": 42,
+      "text": "In chemistry, a catalyst speeds up a reaction without being consumed during the process.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 360,
+      "word_id": 43,
+      "text": "A caustic remark burns and hurts a listener just like a caustic chemical burns the skin.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 361,
+      "word_id": 44,
+      "text": "Chicanery sounds like chic trickery, describing dishonest methods used to swindle others.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 362,
+      "word_id": 45,
+      "text": "When blood or milk begins to coagulate, it clots and thickens into a firm gel.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 363,
+      "word_id": 46,
+      "text": "The prefix co- means together; when diverse elements coalesce, they blend into one cohesive whole.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 364,
+      "word_id": 47,
+      "text": "A cogent case uses sound reasoning and facts that compel people to agree.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 365,
+      "word_id": 48,
+      "text": "Commensurate shares a root with 'measure'; things that are commensurate have matching measures.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 366,
+      "word_id": 49,
+      "text": "Complaisant people want to please others and make them content.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 367,
+      "word_id": 50,
+      "text": "To be conciliatory is to seek to reconcile differences and make peace.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 368,
+      "word_id": 51,
+      "text": "Think of giving a 'pardon' in your 'condo'; when you condone bad behavior, you overlook it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 369,
+      "word_id": 52,
+      "text": "A conflagration contains a blazing 'flagrant' fire that burns fiercely.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 370,
+      "word_id": 53,
+      "text": "A connoisseur knows the fine details of art and food because of deep study.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 371,
+      "word_id": 54,
+      "text": "If you are contrite, you feel worn down with regret for doing something wrong.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 372,
+      "word_id": 55,
+      "text": "A conundrum leaves you wondering: 'What can under this riddle be the answer?'",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 373,
+      "word_id": 56,
+      "text": "Convoluted comes from Latin for 'rolled together'; imagine layers rolled upon themselves.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 374,
+      "word_id": 57,
+      "text": "Think of a 'cornucopia', the horn of plenty, to remember that copious means abundant.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 375,
+      "word_id": 58,
+      "text": "To corroborate a story, you make it robust with solid evidence.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 376,
+      "word_id": 59,
+      "text": "A credulous person gives credit to any story, believing it without proof.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 377,
+      "word_id": 60,
+      "text": "Think of a computer cursor quickly scanning across a page; a cursory glance is hurried.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 378,
+      "word_id": 61,
+      "text": "A dearth of food can lead directly to death from hunger.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 379,
+      "word_id": 62,
+      "text": "After hitting the breakable barrier, the entire setup turned into a total debacle.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
+    },
+    {
+      "id": 380,
+      "word_id": 63,
+      "text": "To debunk a rumor is to remove the 'bunk' or nonsense from it.",
+      "source": "gemini",
+      "user_id": null,
+      "revision": 2
     }
   ],
   "distractors": [
-    {
-      "id": 1,
-      "sense_id": 1,
-      "distractor_lemma": "Encourage or assist another person to commit a crime.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 2,
-      "sense_id": 1,
-      "distractor_lemma": "Give up a position of power or high office formally.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 3,
-      "sense_id": 1,
-      "distractor_lemma": "Cause severe damage or complete destruction to something.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 4,
-      "sense_id": 1,
-      "distractor_lemma": "Postpone or delay an action until a future time.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
     {
       "id": 5,
       "sense_id": 2,
@@ -42022,110 +42053,6 @@
       "distractor_lemma": "Remain entirely steady despite outside interference.",
       "kind": "mc",
       "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 9,
-      "sense_id": 3,
-      "distractor_lemma": "Showing deep hatred or severe contempt for others.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 10,
-      "sense_id": 3,
-      "distractor_lemma": "Completely obvious and impossible to misunderstand.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 11,
-      "sense_id": 3,
-      "distractor_lemma": "Existing only in brief or intermittent periods.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 12,
-      "sense_id": 3,
-      "distractor_lemma": "Showing excessive care or meticulous attention to detail.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 13,
-      "sense_id": 4,
-      "distractor_lemma": "Free someone from a formal obligation or criminal charge.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 14,
-      "sense_id": 4,
-      "distractor_lemma": "State a belief or opinion with great firmness and force.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 15,
-      "sense_id": 4,
-      "distractor_lemma": "Surrender formally after negotiating specific terms.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 16,
-      "sense_id": 4,
-      "distractor_lemma": "Conceal one's true motives through deceptive speech.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 17,
-      "sense_id": 5,
-      "distractor_lemma": "Hold back from physical movement or exercise.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 18,
-      "sense_id": 5,
-      "distractor_lemma": "Maintain a strict dietary routine to lose weight.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 19,
-      "sense_id": 5,
-      "distractor_lemma": "Refuse to sign an official legal document.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 20,
-      "sense_id": 5,
-      "distractor_lemma": "Decline an invitation to a social gathering.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 21,
-      "sense_id": 5,
-      "distractor_lemma": "Stay away from a public demonstration.",
-      "kind": "mc",
-      "difficulty": 2,
       "source": "gemini"
     },
     {
@@ -42166,46 +42093,6 @@
       "distractor_lemma": "Sustain damage from a severe storm.",
       "kind": "mc",
       "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 27,
-      "sense_id": 7,
-      "distractor_lemma": "Abolish laws that no longer serve the public interest.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 28,
-      "sense_id": 7,
-      "distractor_lemma": "Establish a new organization for charitable work.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 29,
-      "sense_id": 7,
-      "distractor_lemma": "Furnish a room with modern furniture.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 30,
-      "sense_id": 7,
-      "distractor_lemma": "Diminish in value over a period of time.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 31,
-      "sense_id": 7,
-      "distractor_lemma": "Demolish an old building to make space for a park.",
-      "kind": "mc",
-      "difficulty": 4,
       "source": "gemini"
     },
     {
@@ -42289,86 +42176,6 @@
       "source": "gemini"
     },
     {
-      "id": 42,
-      "sense_id": 10,
-      "distractor_lemma": "Alter clothing to fit a different body size.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 43,
-      "sense_id": 10,
-      "distractor_lemma": "Accelerate the speed of a chemical reaction.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 44,
-      "sense_id": 10,
-      "distractor_lemma": "Celebrate an achievement with friends and family.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 45,
-      "sense_id": 10,
-      "distractor_lemma": "Tolerate difficult conditions without complaining.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 46,
-      "sense_id": 10,
-      "distractor_lemma": "Generate electricity using renewable energy sources.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 47,
-      "sense_id": 11,
-      "distractor_lemma": "Athletic training requires dedication and physical endurance.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 48,
-      "sense_id": 11,
-      "distractor_lemma": "Ascetic monks live a life of extreme self-discipline.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 49,
-      "sense_id": 11,
-      "distractor_lemma": "Anesthetic drugs numb the body during surgical procedures.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 50,
-      "sense_id": 11,
-      "distractor_lemma": "Arithmetic calculations form the foundation of mathematics.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 51,
-      "sense_id": 11,
-      "distractor_lemma": "Alphabetical ordering helps organize large collections of data.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 52,
       "sense_id": 12,
       "distractor_lemma": "Athletic prowess is demonstrated through strength and speed.",
@@ -42449,126 +42256,6 @@
       "source": "gemini"
     },
     {
-      "id": 62,
-      "sense_id": 14,
-      "distractor_lemma": "Reduce in physical size or importance.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 63,
-      "sense_id": 14,
-      "distractor_lemma": "Analyze complex financial accounts.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 64,
-      "sense_id": 14,
-      "distractor_lemma": "Distribute evenly among multiple recipients.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 65,
-      "sense_id": 14,
-      "distractor_lemma": "Fabricate completely false information.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 66,
-      "sense_id": 14,
-      "distractor_lemma": "Accelerate the speed of production.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 67,
-      "sense_id": 15,
-      "distractor_lemma": "Deep hesitation born of fear.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 68,
-      "sense_id": 15,
-      "distractor_lemma": "Sluggish indifference to surroundings.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 69,
-      "sense_id": 15,
-      "distractor_lemma": "Stubborn resistance to authority.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 70,
-      "sense_id": 15,
-      "distractor_lemma": "Anxiety about future events.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 71,
-      "sense_id": 15,
-      "distractor_lemma": "Extreme physical fatigue.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 72,
-      "sense_id": 16,
-      "distractor_lemma": "Intrench deeper into the body.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 73,
-      "sense_id": 16,
-      "distractor_lemma": "Worsen an existing medical condition.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 74,
-      "sense_id": 16,
-      "distractor_lemma": "Provoke sudden sharp pain.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 75,
-      "sense_id": 16,
-      "distractor_lemma": "Diagnose a rare pathology.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 76,
-      "sense_id": 16,
-      "distractor_lemma": "Simulate physical symptoms.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 77,
       "sense_id": 17,
       "distractor_lemma": "Complicate a straightforward process.",
@@ -42604,86 +42291,6 @@
       "id": 81,
       "sense_id": 17,
       "distractor_lemma": "Obscure the intended purpose.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 82,
-      "sense_id": 18,
-      "distractor_lemma": "Separate into distinct chemical components.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 83,
-      "sense_id": 18,
-      "distractor_lemma": "Dismantle a complex machinery.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 84,
-      "sense_id": 18,
-      "distractor_lemma": "Isolate individual participants.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 85,
-      "sense_id": 18,
-      "distractor_lemma": "Distribute evenly across borders.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 86,
-      "sense_id": 18,
-      "distractor_lemma": "Obliterate all remaining evidence.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 87,
-      "sense_id": 19,
-      "distractor_lemma": "Extremely transparent and straightforward.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 88,
-      "sense_id": 19,
-      "distractor_lemma": "Rigorously proven by mathematics.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 89,
-      "sense_id": 19,
-      "distractor_lemma": "Completely devoid of emotional weight.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 90,
-      "sense_id": 19,
-      "distractor_lemma": "Historically accurate and verifiable.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 91,
-      "sense_id": 19,
-      "distractor_lemma": "Strictly prohibited by law.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini"
@@ -42769,86 +42376,6 @@
       "source": "gemini"
     },
     {
-      "id": 102,
-      "sense_id": 22,
-      "distractor_lemma": "Possessing boundless energy and enthusiasm for physical labor.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 103,
-      "sense_id": 22,
-      "distractor_lemma": "Showing intense anger and hostility toward an opponent.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 104,
-      "sense_id": 22,
-      "distractor_lemma": "Acting with absolute certainty and unwavering resolve.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 105,
-      "sense_id": 22,
-      "distractor_lemma": "Displaying a complete lack of emotional response or interest.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 106,
-      "sense_id": 22,
-      "distractor_lemma": "Moving back and forth between two physical locations.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 107,
-      "sense_id": 23,
-      "distractor_lemma": "To diminish the value or importance of an asset.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 108,
-      "sense_id": 23,
-      "distractor_lemma": "To aggravate an existing problem or medical condition.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 109,
-      "sense_id": 23,
-      "distractor_lemma": "To construct a physical barrier around a property.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 110,
-      "sense_id": 23,
-      "distractor_lemma": "To communicate in a secret or coded language.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 111,
-      "sense_id": 23,
-      "distractor_lemma": "To evaluate the financial worth of an enterprise.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
       "id": 112,
       "sense_id": 24,
       "distractor_lemma": "To deteriorate rapidly due to neglect or decay.",
@@ -42884,46 +42411,6 @@
       "id": 116,
       "sense_id": 24,
       "distractor_lemma": "To disintegrate into small particles under pressure.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 117,
-      "sense_id": 25,
-      "distractor_lemma": "An event that occurs precisely on schedule without delay.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 118,
-      "sense_id": 25,
-      "distractor_lemma": "A scientific instrument used to measure atmospheric pressure.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 119,
-      "sense_id": 25,
-      "distractor_lemma": "A geographical feature formed by tectonic plate movement.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 120,
-      "sense_id": 25,
-      "distractor_lemma": "A legal document that grants ownership of property.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 121,
-      "sense_id": 25,
-      "distractor_lemma": "A literary device that exaggerates the scale of an event.",
       "kind": "mc",
       "difficulty": 3,
       "source": "gemini"
@@ -43009,46 +42496,6 @@
       "source": "gemini"
     },
     {
-      "id": 132,
-      "sense_id": 28,
-      "distractor_lemma": "Possessing identical properties in every conceivable dimension.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 133,
-      "sense_id": 28,
-      "distractor_lemma": "Totally unrelated in origin, structure, and function.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 134,
-      "sense_id": 28,
-      "distractor_lemma": "Directly opposed to one another in purpose and design.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 135,
-      "sense_id": 28,
-      "distractor_lemma": "Represented through numerical data rather than visual graphics.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 136,
-      "sense_id": 28,
-      "distractor_lemma": "Inherently contradictory and impossible to reconcile.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 137,
       "sense_id": 29,
       "distractor_lemma": "Possessing identical genetic makeup and shared ancestry across diverse species.",
@@ -43076,38 +42523,6 @@
       "id": 140,
       "sense_id": 29,
       "distractor_lemma": "Displaying a direct causal relationship between historical events and modern traits.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 141,
-      "sense_id": 30,
-      "distractor_lemma": "A standard procedure followed during routine laboratory experiments.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 142,
-      "sense_id": 30,
-      "distractor_lemma": "The primary rule governing linguistic transformations in classical poetry.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 143,
-      "sense_id": 30,
-      "distractor_lemma": "A predictable pattern observed in standard economic forecasts.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 144,
-      "sense_id": 30,
-      "distractor_lemma": "The harmonious alignment of planetary orbits.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini"
@@ -43177,38 +42592,6 @@
       "source": "gemini"
     },
     {
-      "id": 153,
-      "sense_id": 33,
-      "distractor_lemma": "A deep emotional bond characterized by mutual admiration and affection.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 154,
-      "sense_id": 33,
-      "distractor_lemma": "A state of profound indifference toward external political events.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 155,
-      "sense_id": 33,
-      "distractor_lemma": "An overwhelming sense of curiosity regarding unfamiliar cultures.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 156,
-      "sense_id": 33,
-      "distractor_lemma": "A calculated strategy used to negotiate international treaties.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 157,
       "sense_id": 34,
       "distractor_lemma": "The cherished goal toward which all personal ambitions are directed.",
@@ -43241,38 +42624,6 @@
       "source": "gemini"
     },
     {
-      "id": 161,
-      "sense_id": 35,
-      "distractor_lemma": "An intense burst of creative energy that inspires artistic innovation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 162,
-      "sense_id": 35,
-      "distractor_lemma": "A structured emotional response to traumatic life events.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 163,
-      "sense_id": 35,
-      "distractor_lemma": "A deliberate strategy to remain neutral during public debates.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 164,
-      "sense_id": 35,
-      "distractor_lemma": "An overwhelming wave of enthusiasm for social reform.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 165,
       "sense_id": 36,
       "distractor_lemma": "A passionate dedication to philosophical inquiry and debate.",
@@ -43302,46 +42653,6 @@
       "distractor_lemma": "The systematic cultivation of gratitude for mundane blessings.",
       "kind": "mc",
       "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 169,
-      "sense_id": 37,
-      "distractor_lemma": "Instigate conflict or provoke strong hostility.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 170,
-      "sense_id": 37,
-      "distractor_lemma": "Assess the monetary value of an item or property.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 171,
-      "sense_id": 37,
-      "distractor_lemma": "Express formal praise and commendation.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 172,
-      "sense_id": 37,
-      "distractor_lemma": "Suppress evidence during a legal proceeding.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 173,
-      "sense_id": 37,
-      "distractor_lemma": "Transform something into a simplified state.",
-      "kind": "mc",
-      "difficulty": 2,
       "source": "gemini"
     },
     {
@@ -43425,46 +42736,6 @@
       "source": "gemini"
     },
     {
-      "id": 184,
-      "sense_id": 40,
-      "distractor_lemma": "Effortless and completed with minimal exertion.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 185,
-      "sense_id": 40,
-      "distractor_lemma": "Conducted with secrecy and deceptive intent.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 186,
-      "sense_id": 40,
-      "distractor_lemma": "Lacking structure, discipline, or coherence.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 187,
-      "sense_id": 40,
-      "distractor_lemma": "Pleasurable and yielding immediate relaxation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 188,
-      "sense_id": 40,
-      "distractor_lemma": "Occurring at erratic and unpredictable intervals.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 189,
       "sense_id": 41,
       "distractor_lemma": "Brief and requiring little attention.",
@@ -43540,46 +42811,6 @@
       "id": 198,
       "sense_id": 42,
       "distractor_lemma": "Carried out purely for entertainment or leisure.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 199,
-      "sense_id": 43,
-      "distractor_lemma": "Fuse permanently into a single rigid structure.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 200,
-      "sense_id": 43,
-      "distractor_lemma": "Dismantle completely into individual fragments.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 201,
-      "sense_id": 43,
-      "distractor_lemma": "Coat with a protective layer against corrosion.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 202,
-      "sense_id": 43,
-      "distractor_lemma": "Fasten securely with adhesive substances.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 203,
-      "sense_id": 43,
-      "distractor_lemma": "Measure dimensions using precise optical tools.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini"
@@ -43665,46 +42896,6 @@
       "source": "gemini"
     },
     {
-      "id": 214,
-      "sense_id": 46,
-      "distractor_lemma": "Characterized by sour or biting chemical properties.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 215,
-      "sense_id": 46,
-      "distractor_lemma": "Relating to the appreciation of visual beauty or art.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 216,
-      "sense_id": 46,
-      "distractor_lemma": "Showing high skepticism toward conventional wisdom.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 217,
-      "sense_id": 46,
-      "distractor_lemma": "Pertaining to ancient ceremonial traditions.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 218,
-      "sense_id": 46,
-      "distractor_lemma": "Marked by extravagant and self-indulgent living.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 219,
       "sense_id": 47,
       "distractor_lemma": "Devoted entirely to sensual pleasure and comfort.",
@@ -43742,46 +42933,6 @@
       "distractor_lemma": "Driven by intense ambition for political office.",
       "kind": "mc",
       "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 224,
-      "sense_id": 48,
-      "distractor_lemma": "Provoke hostility by deliberate mockery or insult.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 225,
-      "sense_id": 48,
-      "distractor_lemma": "Demand immediate compliance through coercion.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 226,
-      "sense_id": 48,
-      "distractor_lemma": "Assign guilt or responsibility to an innocent party.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 227,
-      "sense_id": 48,
-      "distractor_lemma": "Persuade someone to abandon a long-held religious faith.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 228,
-      "sense_id": 48,
-      "distractor_lemma": "Evaluate the financial value of real property.",
-      "kind": "mc",
-      "difficulty": 3,
       "source": "gemini"
     },
     {
@@ -43860,46 +43011,6 @@
       "id": 238,
       "sense_id": 50,
       "distractor_lemma": "Immobilize a limb with splints and bandages.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 239,
-      "sense_id": 51,
-      "distractor_lemma": "Prone to panic under unexpected pressure.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 240,
-      "sense_id": 51,
-      "distractor_lemma": "Having a keen sense of hearing or acoustics.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 241,
-      "sense_id": 51,
-      "distractor_lemma": "Easily persuaded by subtle flattery or bribes.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 242,
-      "sense_id": 51,
-      "distractor_lemma": "Marked by modest and self-effacing manners.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 243,
-      "sense_id": 51,
-      "distractor_lemma": "Showing complete indifference to worldly outcomes.",
       "kind": "mc",
       "difficulty": 3,
       "source": "gemini"
@@ -43985,46 +43096,6 @@
       "source": "gemini"
     },
     {
-      "id": 254,
-      "sense_id": 54,
-      "distractor_lemma": "Excessively ornate and decorated with intricate carvings.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 255,
-      "sense_id": 54,
-      "distractor_lemma": "Warm and inviting in atmosphere and design.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 256,
-      "sense_id": 54,
-      "distractor_lemma": "Composed of many different colors and textures.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 257,
-      "sense_id": 54,
-      "distractor_lemma": "Unpredictable in movement or direction.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 258,
-      "sense_id": 54,
-      "distractor_lemma": "Extremely loud and jarring to the ear.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 259,
       "sense_id": 55,
       "distractor_lemma": "Joyful and lighthearted in social interactions.",
@@ -44105,46 +43176,6 @@
       "source": "gemini"
     },
     {
-      "id": 269,
-      "sense_id": 57,
-      "distractor_lemma": "To conceal important information from authorities.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 270,
-      "sense_id": 57,
-      "distractor_lemma": "To deny responsibility for a previous action.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 271,
-      "sense_id": 57,
-      "distractor_lemma": "To wander aimlessly through unfamiliar territory.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 272,
-      "sense_id": 57,
-      "distractor_lemma": "To reduce the size or intensity of a conflict.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 273,
-      "sense_id": 57,
-      "distractor_lemma": "To gather scattered items into a single container.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
       "id": 274,
       "sense_id": 58,
       "distractor_lemma": "To whisper softly in someone's ear.",
@@ -44180,86 +43211,6 @@
       "id": 278,
       "sense_id": 58,
       "distractor_lemma": "To cancel an appointment at the last minute.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 279,
-      "sense_id": 59,
-      "distractor_lemma": "Shockingly violent and disturbing to watch.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 280,
-      "sense_id": 59,
-      "distractor_lemma": "Extremely complex and difficult to comprehend.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 281,
-      "sense_id": 59,
-      "distractor_lemma": "Highly innovative and ahead of its time.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 282,
-      "sense_id": 59,
-      "distractor_lemma": "Relying on strict mathematical formulas.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 283,
-      "sense_id": 59,
-      "distractor_lemma": "Causing intense physical pain upon contact.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 284,
-      "sense_id": 60,
-      "distractor_lemma": "To support an argument with solid evidence.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 285,
-      "sense_id": 60,
-      "distractor_lemma": "To decorate a room with expensive ornaments.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 286,
-      "sense_id": 60,
-      "distractor_lemma": "To multiply rapidly in number or size.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 287,
-      "sense_id": 60,
-      "distractor_lemma": "To erase writing from a piece of paper.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 288,
-      "sense_id": 60,
-      "distractor_lemma": "To travel across a vast ocean by boat.",
       "kind": "mc",
       "difficulty": 4,
       "source": "gemini"
@@ -44305,46 +43256,6 @@
       "source": "gemini"
     },
     {
-      "id": 294,
-      "sense_id": 62,
-      "distractor_lemma": "Beneficial to health and physical well-being.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 295,
-      "sense_id": 62,
-      "distractor_lemma": "Beneficiary of a large financial estate.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 296,
-      "sense_id": 62,
-      "distractor_lemma": "Benevolent in expression and facial features.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 297,
-      "sense_id": 62,
-      "distractor_lemma": "Benefited by the recent tax reforms.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 298,
-      "sense_id": 62,
-      "distractor_lemma": "Beneficence shown toward stray animals.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 299,
       "sense_id": 63,
       "distractor_lemma": "Beneficial to the economic development of rural towns.",
@@ -44380,46 +43291,6 @@
       "id": 303,
       "sense_id": 63,
       "distractor_lemma": "Beneficence practiced by religious orders.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 304,
-      "sense_id": 64,
-      "distractor_lemma": "Bolt shut a heavy wooden door securely.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 305,
-      "sense_id": 64,
-      "distractor_lemma": "Bother someone with trivial administrative complaints.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 306,
-      "sense_id": 64,
-      "distractor_lemma": "Bottleneck the traffic flow on a major highway.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 307,
-      "sense_id": 64,
-      "distractor_lemma": "Bolshevik ideology centered on centralized state control.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 308,
-      "sense_id": 64,
-      "distractor_lemma": "Boisterous behavior displayed by rowdy spectators.",
       "kind": "mc",
       "difficulty": 2,
       "source": "gemini"
@@ -44505,206 +43376,6 @@
       "source": "gemini"
     },
     {
-      "id": 319,
-      "sense_id": 67,
-      "distractor_lemma": "Bombarding an audience with excessive factual data.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 320,
-      "sense_id": 67,
-      "distractor_lemma": "Bombastic devices used in military combat.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 321,
-      "sense_id": 67,
-      "distractor_lemma": "Botanical terms used in scientific classification.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 322,
-      "sense_id": 67,
-      "distractor_lemma": "Bountiful harvests resulting from favorable weather.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 323,
-      "sense_id": 67,
-      "distractor_lemma": "Boisterous celebrations held in the town square.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 324,
-      "sense_id": 68,
-      "distractor_lemma": "Boring in conversation and lacking intellectual curiosity.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 325,
-      "sense_id": 68,
-      "distractor_lemma": "Boisterous in spirit and overly energetic.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 326,
-      "sense_id": 68,
-      "distractor_lemma": "Botanical in origin and difficult to cultivate.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 327,
-      "sense_id": 68,
-      "distractor_lemma": "Borderline offensive in political commentary.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 328,
-      "sense_id": 68,
-      "distractor_lemma": "Bountiful in generosity toward strangers.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 329,
-      "sense_id": 69,
-      "distractor_lemma": "To submerge completely in a liquid.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 330,
-      "sense_id": 69,
-      "distractor_lemma": "To hide or conceal from view.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 331,
-      "sense_id": 69,
-      "distractor_lemma": "To wander aimlessly without purpose.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 332,
-      "sense_id": 69,
-      "distractor_lemma": "To cut or trim excess material.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 333,
-      "sense_id": 69,
-      "distractor_lemma": "To burden with heavy responsibilities.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 334,
-      "sense_id": 70,
-      "distractor_lemma": "A decorative moulding placed near the ceiling.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 335,
-      "sense_id": 70,
-      "distractor_lemma": "A narrow opening used for ventilation.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 336,
-      "sense_id": 70,
-      "distractor_lemma": "A foundation made of packed earth and timber.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 337,
-      "sense_id": 70,
-      "distractor_lemma": "An arched gateway leading into a courtyard.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 338,
-      "sense_id": 70,
-      "distractor_lemma": "A heavy wooden beam spanning an open ceiling.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 339,
-      "sense_id": 71,
-      "distractor_lemma": "A sweet and harmonious musical chord.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 340,
-      "sense_id": 71,
-      "distractor_lemma": "A complete lack of ambient sound or movement.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 341,
-      "sense_id": 71,
-      "distractor_lemma": "A steady rhythmic pulsing sound.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 342,
-      "sense_id": 71,
-      "distractor_lemma": "A low frequency vibration felt rather than heard.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 343,
-      "sense_id": 71,
-      "distractor_lemma": "A melodic sequence played on a wind instrument.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
       "id": 344,
       "sense_id": 72,
       "distractor_lemma": "A peaceful whisper of wind through trees.",
@@ -44745,86 +43416,6 @@
       "source": "gemini"
     },
     {
-      "id": 349,
-      "sense_id": 73,
-      "distractor_lemma": "To force compliance through intimidation and threats.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 350,
-      "sense_id": 73,
-      "distractor_lemma": "To ignore someone completely in social settings.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 351,
-      "sense_id": 73,
-      "distractor_lemma": "To question closely during a formal interrogation.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 352,
-      "sense_id": 73,
-      "distractor_lemma": "To dismiss a proposal without consideration.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 353,
-      "sense_id": 73,
-      "distractor_lemma": "To instruct someone in technical matters.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 354,
-      "sense_id": 74,
-      "distractor_lemma": "Extremely warm and affectionate in behavior.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 355,
-      "sense_id": 74,
-      "distractor_lemma": "Prone to sudden emotional outbursts.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 356,
-      "sense_id": 74,
-      "distractor_lemma": "Overly sensitive to criticism from peers.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 357,
-      "sense_id": 74,
-      "distractor_lemma": "Nervous and hesitant in social interactions.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 358,
-      "sense_id": 74,
-      "distractor_lemma": "Dedicated to charitable causes.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 359,
       "sense_id": 75,
       "distractor_lemma": "Smooth and delicate like silk fabric.",
@@ -44860,46 +43451,6 @@
       "id": 363,
       "sense_id": 75,
       "distractor_lemma": "Tender and prone to bruising easily.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 364,
-      "sense_id": 76,
-      "distractor_lemma": "A tendency to hide intentions behind polite falsehoods.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 365,
-      "sense_id": 76,
-      "distractor_lemma": "The ability to create intricate works of art.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 366,
-      "sense_id": 76,
-      "distractor_lemma": "A strong bias toward personal advancement.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 367,
-      "sense_id": 76,
-      "distractor_lemma": "Extreme caution in financial matters.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 368,
-      "sense_id": 76,
-      "distractor_lemma": "The quality of being easily deceived by others.",
       "kind": "mc",
       "difficulty": 2,
       "source": "gemini"
@@ -44945,46 +43496,6 @@
       "source": "gemini"
     },
     {
-      "id": 374,
-      "sense_id": 78,
-      "distractor_lemma": "Possessing a great capacity for holding liquids.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 375,
-      "sense_id": 78,
-      "distractor_lemma": "Related to the study of capybaras and similar rodents.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 376,
-      "sense_id": 78,
-      "distractor_lemma": "Marked by extreme caution and careful planning.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 377,
-      "sense_id": 78,
-      "distractor_lemma": "Showing steadfast loyalty and unwavering devotion.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 378,
-      "sense_id": 78,
-      "distractor_lemma": "Characterized by a bitter and resentful attitude.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 379,
       "sense_id": 79,
       "distractor_lemma": "Calculated with extreme mathematical precision.",
@@ -45022,46 +43533,6 @@
       "distractor_lemma": "Rooted in ancient traditions and customs.",
       "kind": "mc",
       "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 384,
-      "sense_id": 80,
-      "distractor_lemma": "To throw something far away into the ocean.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 385,
-      "sense_id": 80,
-      "distractor_lemma": "To construct a sturdy fence around a castle.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 386,
-      "sense_id": 80,
-      "distractor_lemma": "To clean thoroughly with soap and water.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 387,
-      "sense_id": 80,
-      "distractor_lemma": "To celebrate a victory with grand festivities.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 388,
-      "sense_id": 80,
-      "distractor_lemma": "To calculate the total cost of an item.",
-      "kind": "mc",
-      "difficulty": 5,
       "source": "gemini"
     },
     {
@@ -45105,46 +43576,6 @@
       "source": "gemini"
     },
     {
-      "id": 394,
-      "sense_id": 82,
-      "distractor_lemma": "A device used to measure atmospheric pressure.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 395,
-      "sense_id": 82,
-      "distractor_lemma": "An instrument for viewing distant stars.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 396,
-      "sense_id": 82,
-      "distractor_lemma": "A type of catalog used in libraries.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 397,
-      "sense_id": 82,
-      "distractor_lemma": "A chemical compound that absorbs water from the air.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 398,
-      "sense_id": 82,
-      "distractor_lemma": "A protective coating applied to metal surfaces.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 399,
       "sense_id": 83,
       "distractor_lemma": "A barrier that prevents any progress from occurring.",
@@ -45180,46 +43611,6 @@
       "id": 403,
       "sense_id": 83,
       "distractor_lemma": "A formal agreement between two nations.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 404,
-      "sense_id": 84,
-      "distractor_lemma": "Related to the study of ocean tides and currents.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 405,
-      "sense_id": 84,
-      "distractor_lemma": "Flowing smoothly and gracefully like a river.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 406,
-      "sense_id": 84,
-      "distractor_lemma": "Possessing a sweet and pleasant fragrance.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 407,
-      "sense_id": 84,
-      "distractor_lemma": "Exhibiting extreme caution and hesitation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 408,
-      "sense_id": 84,
-      "distractor_lemma": "Characterized by deep religious devotion.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini"
@@ -45265,86 +43656,6 @@
       "source": "gemini"
     },
     {
-      "id": 414,
-      "sense_id": 86,
-      "distractor_lemma": "The practice of breeding rare chickens for agricultural exhibitions.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 415,
-      "sense_id": 86,
-      "distractor_lemma": "A formal ceremony celebrating the foundation of a city.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 416,
-      "sense_id": 86,
-      "distractor_lemma": "The architectural style typical of rural country houses.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 417,
-      "sense_id": 86,
-      "distractor_lemma": "A sudden outburst of unpredictable emotional distress.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 418,
-      "sense_id": 86,
-      "distractor_lemma": "The deliberate avoidance of difficult social gatherings.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 419,
-      "sense_id": 87,
-      "distractor_lemma": "To separate a mixture into distinct liquid layers.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 420,
-      "sense_id": 87,
-      "distractor_lemma": "To evaporate completely leaving behind solid crystals.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 421,
-      "sense_id": 87,
-      "distractor_lemma": "To expand rapidly when exposed to atmospheric pressure.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 422,
-      "sense_id": 87,
-      "distractor_lemma": "To dissolve entirely in a warm aqueous solution.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 423,
-      "sense_id": 87,
-      "distractor_lemma": "To change color gradually under ultraviolet light.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
       "id": 424,
       "sense_id": 88,
       "distractor_lemma": "To dilute a concentrated solution with excess water.",
@@ -45382,46 +43693,6 @@
       "distractor_lemma": "To stimulate rapid fermentation in organic matter.",
       "kind": "mc",
       "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 429,
-      "sense_id": 89,
-      "distractor_lemma": "To dismantle a complex mechanical structure into parts.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 430,
-      "sense_id": 89,
-      "distractor_lemma": "To separate a unified group into hostile factions.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 431,
-      "sense_id": 89,
-      "distractor_lemma": "To erase previous historical records from an archive.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 432,
-      "sense_id": 89,
-      "distractor_lemma": "To compare two contrasting literary traditions.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 433,
-      "sense_id": 89,
-      "distractor_lemma": "To conceal information behind a layer of bureaucracy.",
-      "kind": "mc",
-      "difficulty": 2,
       "source": "gemini"
     },
     {
@@ -45465,150 +43736,6 @@
       "source": "gemini"
     },
     {
-      "id": 439,
-      "sense_id": 91,
-      "distractor_lemma": "Marked by extreme hesitation and doubt.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 440,
-      "sense_id": 91,
-      "distractor_lemma": "Lacking logical structure or clear organization.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 441,
-      "sense_id": 91,
-      "distractor_lemma": "Excessively emotional and overly dramatic.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 442,
-      "sense_id": 91,
-      "distractor_lemma": "Relating to the study of mental cognition.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 443,
-      "sense_id": 91,
-      "distractor_lemma": "Inherently secretive and difficult to interpret.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 444,
-      "sense_id": 92,
-      "distractor_lemma": "Significantly smaller than the required minimum standard.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 445,
-      "sense_id": 92,
-      "distractor_lemma": "Existing in a state of permanent opposition.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 446,
-      "sense_id": 92,
-      "distractor_lemma": "Characterized by random and unpredictable variations.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 447,
-      "sense_id": 92,
-      "distractor_lemma": "Relating to the measurement of physical distances.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 448,
-      "sense_id": 92,
-      "distractor_lemma": "Exceeding all previously established boundaries.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 449,
-      "sense_id": 93,
-      "distractor_lemma": "Complaining constantly about trivial matters.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 450,
-      "sense_id": 93,
-      "distractor_lemma": "Displaying a rigid and unbending attitude.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 451,
-      "sense_id": 93,
-      "distractor_lemma": "Being overly complex in design or structure.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 452,
-      "sense_id": 93,
-      "distractor_lemma": "Compliant with regulations and strict standards.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 453,
-      "sense_id": 94,
-      "distractor_lemma": "Concealing important information from the public.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 454,
-      "sense_id": 94,
-      "distractor_lemma": "Displaying arrogant and dismissive behavior.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 455,
-      "sense_id": 94,
-      "distractor_lemma": "Acting in a sneaky and deceitful manner.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 456,
-      "sense_id": 94,
-      "distractor_lemma": "Creating confusion during a debate.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 457,
       "sense_id": 95,
       "distractor_lemma": "Designed to provoke a hostile reaction.",
@@ -45636,206 +43763,6 @@
       "id": 460,
       "sense_id": 95,
       "distractor_lemma": "Showing a lack of interest in the outcome.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 461,
-      "sense_id": 96,
-      "distractor_lemma": "Condemn severely in a public statement.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 462,
-      "sense_id": 96,
-      "distractor_lemma": "Condense a long text into a brief summary.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 463,
-      "sense_id": 96,
-      "distractor_lemma": "Conduct an orchestra with great precision.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 464,
-      "sense_id": 96,
-      "distractor_lemma": "Connect two separate ideas into one.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 465,
-      "sense_id": 97,
-      "distractor_lemma": "A sudden collapse of a financial market.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 466,
-      "sense_id": 97,
-      "distractor_lemma": "A secret meeting of conspirators.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 467,
-      "sense_id": 97,
-      "distractor_lemma": "A grand celebration with music and dancing.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 468,
-      "sense_id": 97,
-      "distractor_lemma": "A severe flood caused by heavy rain.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 469,
-      "sense_id": 98,
-      "distractor_lemma": "A person who travels extensively for business.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 470,
-      "sense_id": 98,
-      "distractor_lemma": "Someone who collects old and rusty metal.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 471,
-      "sense_id": 98,
-      "distractor_lemma": "An amateur painter with little formal training.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 472,
-      "sense_id": 98,
-      "distractor_lemma": "A critic of political corruption.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 473,
-      "sense_id": 99,
-      "distractor_lemma": "Acting arrogant despite making a mistake.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 474,
-      "sense_id": 99,
-      "distractor_lemma": "Feeling extremely tired after a long journey.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 475,
-      "sense_id": 99,
-      "distractor_lemma": "Showing excitement about a new project.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 476,
-      "sense_id": 99,
-      "distractor_lemma": "Refusing to admit any fault in an argument.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 477,
-      "sense_id": 100,
-      "distractor_lemma": "A small musical instrument played with a bow.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 478,
-      "sense_id": 100,
-      "distractor_lemma": "A smooth track used for racing cars.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 479,
-      "sense_id": 100,
-      "distractor_lemma": "A detailed map of an underground cave.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 480,
-      "sense_id": 100,
-      "distractor_lemma": "A sudden loud noise in the distance.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 481,
-      "sense_id": 101,
-      "distractor_lemma": "Divided into multiple distinct segments or sections.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 482,
-      "sense_id": 101,
-      "distractor_lemma": "Characterized by severe twisting or turning.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 483,
-      "sense_id": 101,
-      "distractor_lemma": "Spread out flat across a horizontal surface.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 484,
-      "sense_id": 101,
-      "distractor_lemma": "Covered with a protective outer layer of skin.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 485,
-      "sense_id": 101,
-      "distractor_lemma": "Forming a perfect circle around a central point.",
       "kind": "mc",
       "difficulty": 2,
       "source": "gemini"
@@ -45881,46 +43808,6 @@
       "source": "gemini"
     },
     {
-      "id": 491,
-      "sense_id": 103,
-      "distractor_lemma": "Marked by extreme brevity and concise phrasing.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 492,
-      "sense_id": 103,
-      "distractor_lemma": "Relating to financial wealth and prosperity.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 493,
-      "sense_id": 103,
-      "distractor_lemma": "Derived from a single central source or origin.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 494,
-      "sense_id": 103,
-      "distractor_lemma": "Lacking any emotional depth or sincerity.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 495,
-      "sense_id": 103,
-      "distractor_lemma": "Characterized by hidden meanings and subtle hints.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 496,
       "sense_id": 104,
       "distractor_lemma": "Restricted to a very limited geographic area.",
@@ -45958,46 +43845,6 @@
       "distractor_lemma": "Consisting entirely of synthetic materials.",
       "kind": "mc",
       "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 501,
-      "sense_id": 105,
-      "distractor_lemma": "Contradict a previously established statement.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 502,
-      "sense_id": 105,
-      "distractor_lemma": "Examine closely for hidden flaws or errors.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 503,
-      "sense_id": 105,
-      "distractor_lemma": "Create a false impression through deception.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 504,
-      "sense_id": 105,
-      "distractor_lemma": "Distribute responsibility among multiple parties.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 505,
-      "sense_id": 105,
-      "distractor_lemma": "Delay action until further notice is given.",
-      "kind": "mc",
-      "difficulty": 3,
       "source": "gemini"
     },
     {
@@ -46081,46 +43928,6 @@
       "source": "gemini"
     },
     {
-      "id": 516,
-      "sense_id": 108,
-      "distractor_lemma": "Possessing great skepticism toward new ideas.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 517,
-      "sense_id": 108,
-      "distractor_lemma": "Showing high levels of intelligence and cunning.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 518,
-      "sense_id": 108,
-      "distractor_lemma": "Refusing to cooperate with established authority.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 519,
-      "sense_id": 108,
-      "distractor_lemma": "Displaying harsh judgment of others.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 520,
-      "sense_id": 108,
-      "distractor_lemma": "Inclined to doubt official explanations.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
       "id": 521,
       "sense_id": 109,
       "distractor_lemma": "Possessing a great abundance of wealth.",
@@ -46161,86 +43968,6 @@
       "source": "gemini"
     },
     {
-      "id": 526,
-      "sense_id": 110,
-      "distractor_lemma": "Marked by extreme slowness and deliberate care.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 527,
-      "sense_id": 110,
-      "distractor_lemma": "Flowing smoothly like a river.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 528,
-      "sense_id": 110,
-      "distractor_lemma": "Associated with magical or mystical spells.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 529,
-      "sense_id": 110,
-      "distractor_lemma": "Extremely complex and difficult to understand.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 530,
-      "sense_id": 110,
-      "distractor_lemma": "Possessing a sharp or cutting edge.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 531,
-      "sense_id": 111,
-      "distractor_lemma": "A large and overflowing abundance of goods.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 532,
-      "sense_id": 111,
-      "distractor_lemma": "A deep underground cave or cavern.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 533,
-      "sense_id": 111,
-      "distractor_lemma": "An official decree issued by a monarch.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 534,
-      "sense_id": 111,
-      "distractor_lemma": "A decorative ribbon worn on formal attire.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 535,
-      "sense_id": 111,
-      "distractor_lemma": "A sharp and sudden pain in the chest.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
       "id": 536,
       "sense_id": 112,
       "distractor_lemma": "An excessive amount of unnecessary clutter.",
@@ -46276,46 +44003,6 @@
       "id": 540,
       "sense_id": 112,
       "distractor_lemma": "A slow and steady movement forward.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 541,
-      "sense_id": 113,
-      "distractor_lemma": "A slow and orderly progression of events.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 542,
-      "sense_id": 113,
-      "distractor_lemma": "A joyful celebration of victory.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 543,
-      "sense_id": 113,
-      "distractor_lemma": "A peaceful agreement between rival nations.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 544,
-      "sense_id": 113,
-      "distractor_lemma": "A sturdy foundation built of stone.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 545,
-      "sense_id": 113,
-      "distractor_lemma": "A brilliant display of fireworks.",
       "kind": "mc",
       "difficulty": 2,
       "source": "gemini"
@@ -46398,46 +44085,6 @@
       "distractor_lemma": "A formal award given for bravery.",
       "kind": "mc",
       "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 556,
-      "sense_id": 116,
-      "distractor_lemma": "To support and praise a faulty theory.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 557,
-      "sense_id": 116,
-      "distractor_lemma": "To build a strong foundation for an argument.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 558,
-      "sense_id": 116,
-      "distractor_lemma": "To hide the truth behind complicated language.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 559,
-      "sense_id": 116,
-      "distractor_lemma": "To create a fake story for entertainment.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 560,
-      "sense_id": 116,
-      "distractor_lemma": "To accept a claim without questioning it.",
-      "kind": "mc",
-      "difficulty": 5,
       "source": "gemini"
     },
     {
@@ -62895,6 +60542,2841 @@
       "kind": "mc",
       "difficulty": 3,
       "source": "gemini"
+    },
+    {
+      "id": 2618,
+      "sense_id": 1,
+      "distractor_lemma": "Encourage or assist someone to commit a crime or wrong.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2619,
+      "sense_id": 1,
+      "distractor_lemma": "Renounce one's throne or formally give up a position of power.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2620,
+      "sense_id": 1,
+      "distractor_lemma": "Behave in a way that belittles or degrades another person.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2621,
+      "sense_id": 1,
+      "distractor_lemma": "Scrape or wear away by physical friction or erosion.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2622,
+      "sense_id": 1,
+      "distractor_lemma": "Repeal or formally do away with a law, agreement, or right.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2623,
+      "sense_id": 3,
+      "distractor_lemma": "Inspiring intense disgust, loathing, or moral outrage.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2624,
+      "sense_id": 3,
+      "distractor_lemma": "Temporarily inactive, suspended, or set aside.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2625,
+      "sense_id": 3,
+      "distractor_lemma": "Showing little concern for others' feelings in a harsh way.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2626,
+      "sense_id": 3,
+      "distractor_lemma": "Clearly visible or easy to perceive and understand.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2627,
+      "sense_id": 3,
+      "distractor_lemma": "Complete, thorough, and utter without any qualification.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2628,
+      "sense_id": 4,
+      "distractor_lemma": "Take in or soak up energy, liquid, or other substances.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2629,
+      "sense_id": 4,
+      "distractor_lemma": "Declare someone free from blame, guilt, or legal obligation.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2630,
+      "sense_id": 4,
+      "distractor_lemma": "Restrain oneself voluntarily from doing or enjoying something.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2631,
+      "sense_id": 4,
+      "distractor_lemma": "Descend a rock face or vertical surface using a rope.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2632,
+      "sense_id": 4,
+      "distractor_lemma": "Give or grant someone special status, power, or recognition.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2633,
+      "sense_id": 5,
+      "distractor_lemma": "Succeed in achieving a goal through continuous effort.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2634,
+      "sense_id": 5,
+      "distractor_lemma": "Continue to have, hold, or keep possession of something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2635,
+      "sense_id": 5,
+      "distractor_lemma": "Strengthen or support physically, mentally, or financially over time.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2636,
+      "sense_id": 5,
+      "distractor_lemma": "Be appropriate, related, or applicable to a particular matter.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2637,
+      "sense_id": 5,
+      "distractor_lemma": "Hold or keep something within specified physical limits.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2638,
+      "sense_id": 7,
+      "distractor_lemma": "Surprise or impress someone to a great degree.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2639,
+      "sense_id": 7,
+      "distractor_lemma": "Pull down or break apart a building or large structure.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2640,
+      "sense_id": 7,
+      "distractor_lemma": "Fill something up again after it has been used or emptied.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2641,
+      "sense_id": 7,
+      "distractor_lemma": "Protect, love, and care for someone or something dearly.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2642,
+      "sense_id": 7,
+      "distractor_lemma": "Send someone away from a country or place as an official punishment.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2643,
+      "sense_id": 10,
+      "distractor_lemma": "Praise, flatter, or admire someone in an excessive manner.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2644,
+      "sense_id": 10,
+      "distractor_lemma": "Destroy completely or wipe out all traces of something.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2645,
+      "sense_id": 10,
+      "distractor_lemma": "Increase the speed, rate, or velocity of an action.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2646,
+      "sense_id": 10,
+      "distractor_lemma": "Express an idea or feeling fluently and clearly in speech.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2647,
+      "sense_id": 10,
+      "distractor_lemma": "Collect, cluster, or form into a single dense mass.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2648,
+      "sense_id": 11,
+      "distractor_lemma": "Practicing severe self-discipline and abstaining from all physical pleasures.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2649,
+      "sense_id": 11,
+      "distractor_lemma": "Physically strong, active, agile, and proficient in sports.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2650,
+      "sense_id": 11,
+      "distractor_lemma": "Inducing a temporary loss of bodily sensation or awareness.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2651,
+      "sense_id": 11,
+      "distractor_lemma": "Of undisputed origin, genuine, and verified as real.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2652,
+      "sense_id": 11,
+      "distractor_lemma": "Arousing pity, sadness, or compassion through obvious distress.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2653,
+      "sense_id": 14,
+      "distractor_lemma": "Promote a product, event, or service to public consumers.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2654,
+      "sense_id": 14,
+      "distractor_lemma": "Form or group distinct elements into a clustered whole.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2655,
+      "sense_id": 14,
+      "distractor_lemma": "Undergo extreme mental anguish or worry about a decision.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2656,
+      "sense_id": 14,
+      "distractor_lemma": "Gradually reduce or write off the initial cost of a loan.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2657,
+      "sense_id": 14,
+      "distractor_lemma": "Take parts from a machine to repair another device.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2658,
+      "sense_id": 15,
+      "distractor_lemma": "The level or concentration of acid in a chemical substance.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2659,
+      "sense_id": 15,
+      "distractor_lemma": "An extremely cruel, wicked, or shockingly violent act.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2660,
+      "sense_id": 15,
+      "distractor_lemma": "A willingness to take bold, insolent, and surprising risks.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2661,
+      "sense_id": 15,
+      "distractor_lemma": "The quality of holding on firmly and refusing to give up.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2662,
+      "sense_id": 15,
+      "distractor_lemma": "The state or condition of lacking transparency or clarity.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2663,
+      "sense_id": 16,
+      "distractor_lemma": "Lift or raise something to a higher physical position.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2664,
+      "sense_id": 16,
+      "distractor_lemma": "Assign or distribute resources and tasks for a specific purpose.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2665,
+      "sense_id": 16,
+      "distractor_lemma": "Remove, bypass, or prevent a need, obstacle, or difficulty.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2666,
+      "sense_id": 16,
+      "distractor_lemma": "Shorten a word, sentence, or text by leaving out parts.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2667,
+      "sense_id": 16,
+      "distractor_lemma": "Occur sequentially in turns or swap back and forth repeatedly.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2668,
+      "sense_id": 18,
+      "distractor_lemma": "Reduce the force, thickness, or effectiveness of an item.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2669,
+      "sense_id": 18,
+      "distractor_lemma": "Give vigor, energy, or apparent physical life to something.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2670,
+      "sense_id": 18,
+      "distractor_lemma": "Match, equal, or surpass an outcome through close imitation.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2671,
+      "sense_id": 18,
+      "distractor_lemma": "Deprive someone or something of strength, role, or power.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2672,
+      "sense_id": 18,
+      "distractor_lemma": "Make an argument, claim, or official document officially void.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2673,
+      "sense_id": 19,
+      "distractor_lemma": "Having or showing a strong desire and determination to succeed.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2674,
+      "sense_id": 19,
+      "distractor_lemma": "Adapted to living or operating both on land and in water.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2675,
+      "sense_id": 19,
+      "distractor_lemma": "Able to use both the right and left hands equally well.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2676,
+      "sense_id": 19,
+      "distractor_lemma": "Sharing a border or touching directly along a common edge.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2677,
+      "sense_id": 19,
+      "distractor_lemma": "Operating independently without external control or supervision.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2678,
+      "sense_id": 22,
+      "distractor_lemma": "Well meaning, charitable, and kindly disposed toward others.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2679,
+      "sense_id": 22,
+      "distractor_lemma": "Displaying a clear desire or intent to cause harm to others.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2680,
+      "sense_id": 22,
+      "distractor_lemma": "Commonly occurring or widely accepted in a specific area.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2681,
+      "sense_id": 22,
+      "distractor_lemma": "Equal in value, quantity, function, or overall meaning.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2682,
+      "sense_id": 22,
+      "distractor_lemma": "Possessing unlimited and absolute strength or power.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2683,
+      "sense_id": 23,
+      "distractor_lemma": "Recall and show public respect for someone in a ceremony.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2684,
+      "sense_id": 23,
+      "distractor_lemma": "Express a point clearly and precisely using speech.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2685,
+      "sense_id": 23,
+      "distractor_lemma": "Absorb and integrate people, cultures, or ideas into a wider group.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2686,
+      "sense_id": 23,
+      "distractor_lemma": "State or repeat an instruction multiple times for clarity.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2687,
+      "sense_id": 23,
+      "distractor_lemma": "Engage in careful, prolonged thought and discussion before deciding.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2688,
+      "sense_id": 25,
+      "distractor_lemma": "A political belief advocating the total abolition of government authority.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2689,
+      "sense_id": 25,
+      "distractor_lemma": "A concise statement containing a widely accepted general truth.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2690,
+      "sense_id": 25,
+      "distractor_lemma": "Active, open hostility or opposition toward another entity.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2691,
+      "sense_id": 25,
+      "distractor_lemma": "An abnormal enlargement of an artery caused by a weakened wall.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2692,
+      "sense_id": 25,
+      "distractor_lemma": "Excessive and uncritical bias or patriotism for one's own group.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2693,
+      "sense_id": 28,
+      "distractor_lemma": "Deviating from what is standard, expected, or typical.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2694,
+      "sense_id": 28,
+      "distractor_lemma": "Not identified by name or having unknown authorship.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2695,
+      "sense_id": 28,
+      "distractor_lemma": "Possessing the power to govern oneself independently.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2696,
+      "sense_id": 28,
+      "distractor_lemma": "Occurring or existing simultaneously at the exact same rate.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2697,
+      "sense_id": 28,
+      "distractor_lemma": "Sharing identical opinions and held by everyone in agreement.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2698,
+      "sense_id": 30,
+      "distractor_lemma": "The state of being unknown or unacknowledged by name.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2699,
+      "sense_id": 30,
+      "distractor_lemma": "An inference that if things agree in some respects they probably agree in others.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2700,
+      "sense_id": 30,
+      "distractor_lemma": "Vastness of size, extent, or influence.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2701,
+      "sense_id": 30,
+      "distractor_lemma": "A deficiency of red blood cells or hemoglobin in the blood.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2702,
+      "sense_id": 30,
+      "distractor_lemma": "Personal state of isolation and lack of social standards.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2703,
+      "sense_id": 33,
+      "distractor_lemma": "Understanding and entering into another's feelings.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2704,
+      "sense_id": 33,
+      "distractor_lemma": "Apparent communication from one mind to another without speech or signs.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2705,
+      "sense_id": 33,
+      "distractor_lemma": "Sharing the feelings of others, especially feelings of sorrow or anguish.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2706,
+      "sense_id": 33,
+      "distractor_lemma": "The historic period preceding the Middle Ages in Europe.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2707,
+      "sense_id": 33,
+      "distractor_lemma": "A collection of selected literary passages or poems.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2708,
+      "sense_id": 35,
+      "distractor_lemma": "A decrease in size of an organ caused by disease or disuse.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2709,
+      "sense_id": 35,
+      "distractor_lemma": "The highest point of something, or the point in an orbit farthest from Earth.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2710,
+      "sense_id": 35,
+      "distractor_lemma": "An expression of regret at having caused trouble or done wrong.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2711,
+      "sense_id": 35,
+      "distractor_lemma": "The abandonment or renunciation of a religious or political belief.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2712,
+      "sense_id": 35,
+      "distractor_lemma": "A state of disorder due to absence or nonrecognition of authority.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2713,
+      "sense_id": 37,
+      "distractor_lemma": "Estimate the value of something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2714,
+      "sense_id": 37,
+      "distractor_lemma": "Take into custody or arrest.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2715,
+      "sense_id": 37,
+      "distractor_lemma": "Give information or notice to.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2716,
+      "sense_id": 37,
+      "distractor_lemma": "Fix to; attach; add to the end of a document.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2717,
+      "sense_id": 37,
+      "distractor_lemma": "Request earnestly or plead with urgency.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2718,
+      "sense_id": 40,
+      "distractor_lemma": "Characterized by intense emotion or passion.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2719,
+      "sense_id": 40,
+      "distractor_lemma": "Lacking sufficient water or rainfall.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2720,
+      "sense_id": 40,
+      "distractor_lemma": "Marked by skill in achieving a goal, especially through deceit.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2721,
+      "sense_id": 40,
+      "distractor_lemma": "Invulnerable to fear or intimidation.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2722,
+      "sense_id": 40,
+      "distractor_lemma": "Based on individual discretion or judgment rather than on fixed rules.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2723,
+      "sense_id": 46,
+      "distractor_lemma": "Concerning or characterized by an appreciation of beauty or good taste.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2724,
+      "sense_id": 46,
+      "distractor_lemma": "Having the properties of an acid, especially tasting sour.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2725,
+      "sense_id": 46,
+      "distractor_lemma": "Related to the rejection of belief in the existence of deities.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2726,
+      "sense_id": 46,
+      "distractor_lemma": "Conforming to fact and therefore worthy of belief.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2727,
+      "sense_id": 46,
+      "distractor_lemma": "Free from living germs or microorganisms.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2728,
+      "sense_id": 48,
+      "distractor_lemma": "Attack someone physically or with words.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2729,
+      "sense_id": 48,
+      "distractor_lemma": "Take something to be the case without proof.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2730,
+      "sense_id": 48,
+      "distractor_lemma": "Entice or attract by offering or showing something pleasant.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2731,
+      "sense_id": 48,
+      "distractor_lemma": "Evaluate or estimate the nature, quality, or ability of.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2732,
+      "sense_id": 48,
+      "distractor_lemma": "Give a duty, task, or share of work to someone.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2733,
+      "sense_id": 51,
+      "distractor_lemma": "Heard or perceptible by the ear.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2734,
+      "sense_id": 51,
+      "distractor_lemma": "Indicating favorable circumstances and good luck.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2735,
+      "sense_id": 51,
+      "distractor_lemma": "Immoderately desirous of acquiring wealth.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2736,
+      "sense_id": 51,
+      "distractor_lemma": "Acutely insightful and wise.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2737,
+      "sense_id": 51,
+      "distractor_lemma": "Characterized by lust or appealing to sexual desire.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2738,
+      "sense_id": 54,
+      "distractor_lemma": "Marked by practical hardheaded intelligence.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2739,
+      "sense_id": 54,
+      "distractor_lemma": "Not counterfeit or copied, but genuine.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2740,
+      "sense_id": 54,
+      "distractor_lemma": "Difficult to penetrate or comprehend.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2741,
+      "sense_id": 54,
+      "distractor_lemma": "Relating to Austria or its people.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2742,
+      "sense_id": 54,
+      "distractor_lemma": "Profoundly honored or inspiring reverence.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2743,
+      "sense_id": 57,
+      "distractor_lemma": "Turn away or ward off.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2744,
+      "sense_id": 57,
+      "distractor_lemma": "Cut off from a whole by a sudden blow or cut.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2745,
+      "sense_id": 57,
+      "distractor_lemma": "Hold back to a later time.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2746,
+      "sense_id": 57,
+      "distractor_lemma": "Discourage or prevent from taking action through fear of the consequences.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2747,
+      "sense_id": 57,
+      "distractor_lemma": "Stick fast or adhere firmly to a surface or rule.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2748,
+      "sense_id": 59,
+      "distractor_lemma": "Exceedingly harmful or destructive.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2749,
+      "sense_id": 59,
+      "distractor_lemma": "Incapable of producing offspring or vegetation.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2750,
+      "sense_id": 59,
+      "distractor_lemma": "Threatening or foreshadowing evil or tragic developments.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2751,
+      "sense_id": 59,
+      "distractor_lemma": "Characterized by extreme cruelty or lack of mercy.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2752,
+      "sense_id": 59,
+      "distractor_lemma": "Lacking taste or flavor or tangible qualities.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2753,
+      "sense_id": 60,
+      "distractor_lemma": "Cause someone or something to seem less serious or important.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2754,
+      "sense_id": 60,
+      "distractor_lemma": "Attract or interest someone, sometimes in a deceptive way.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2755,
+      "sense_id": 60,
+      "distractor_lemma": "Express sorrow or deep regret over something.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2756,
+      "sense_id": 60,
+      "distractor_lemma": "Ask someone urgently and fervently to do something.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2757,
+      "sense_id": 60,
+      "distractor_lemma": "Leave or give by will after one's death.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2758,
+      "sense_id": 62,
+      "distractor_lemma": "Promoting or enhancing well-being.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2759,
+      "sense_id": 62,
+      "distractor_lemma": "Characterized by grandeur, splendor, or beauty.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2760,
+      "sense_id": 62,
+      "distractor_lemma": "Wishing or appearing to wish evil to others.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2761,
+      "sense_id": 62,
+      "distractor_lemma": "Intending or showing kindness and goodwill.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2762,
+      "sense_id": 62,
+      "distractor_lemma": "Harmful or evil in intent or effect.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2763,
+      "sense_id": 64,
+      "distractor_lemma": "Blow in gusts, or talk in a loud, aggressive manner without much effect.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2764,
+      "sense_id": 64,
+      "distractor_lemma": "Promote the growth or development of.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2765,
+      "sense_id": 64,
+      "distractor_lemma": "Move hesitatingly, as if about to give way.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2766,
+      "sense_id": 64,
+      "distractor_lemma": "Expose oneself to pleasant warmth and light.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2767,
+      "sense_id": 64,
+      "distractor_lemma": "Cover meat with liquid during cooking to keep it moist.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2768,
+      "sense_id": 67,
+      "distractor_lemma": "Direct a continuous flow of questions or attacks at someone.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2769,
+      "sense_id": 67,
+      "distractor_lemma": "Relating to projectiles or their flight through the air.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2770,
+      "sense_id": 67,
+      "distractor_lemma": "Noisy, energetic, and rowdy.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2771,
+      "sense_id": 67,
+      "distractor_lemma": "Without civilizing influences; crude and uncivilized.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2772,
+      "sense_id": 67,
+      "distractor_lemma": "Characterized by arrogant assertion of unproved principles.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2773,
+      "sense_id": 43,
+      "distractor_lemma": "Establish or prove to be genuine or valid.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2774,
+      "sense_id": 43,
+      "distractor_lemma": "Suggest or assume the existence of something as a basis for reasoning.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2775,
+      "sense_id": 43,
+      "distractor_lemma": "Take in and incorporate information or culture into a larger body.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2776,
+      "sense_id": 43,
+      "distractor_lemma": "Make something more noticeable or prominent.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2777,
+      "sense_id": 43,
+      "distractor_lemma": "Demand or specify a requirement as part of an agreement.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2778,
+      "sense_id": 68,
+      "distractor_lemma": "Devoted to reading and study rather than worldly interests.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2779,
+      "sense_id": 68,
+      "distractor_lemma": "Resembling an animal in lack of intelligence or refined feeling.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2780,
+      "sense_id": 68,
+      "distractor_lemma": "Anticipating a fall in market prices.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2781,
+      "sense_id": 68,
+      "distractor_lemma": "Confident, optimistic, and expecting market prices to rise.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2782,
+      "sense_id": 68,
+      "distractor_lemma": "Characteristic of or suitable for a young male.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2783,
+      "sense_id": 69,
+      "distractor_lemma": "Polish and make smooth and shiny by rubbing.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2784,
+      "sense_id": 69,
+      "distractor_lemma": "Strike repeatedly with a heavy blunt object.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2785,
+      "sense_id": 69,
+      "distractor_lemma": "Pester or harass someone persistently.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2786,
+      "sense_id": 69,
+      "distractor_lemma": "Charm or enchant someone, sometimes in a deceptive way.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2787,
+      "sense_id": 69,
+      "distractor_lemma": "Leave property or assets to a person by a will.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2788,
+      "sense_id": 70,
+      "distractor_lemma": "A large fabric pad filled with resilient material used for sleeping.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2789,
+      "sense_id": 70,
+      "distractor_lemma": "Extreme anxiety, sorrow, or physical pain.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2790,
+      "sense_id": 70,
+      "distractor_lemma": "A heavily defended building or fortified place.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2791,
+      "sense_id": 70,
+      "distractor_lemma": "A female monarch or ruler of an empire.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2792,
+      "sense_id": 70,
+      "distractor_lemma": "A female tiger.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2793,
+      "sense_id": 71,
+      "distractor_lemma": "An elaborate musical composition for a full orchestra.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2794,
+      "sense_id": 71,
+      "distractor_lemma": "A moment of sudden and profound realization.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2795,
+      "sense_id": 71,
+      "distractor_lemma": "The process of transmitting sound over a distance by wire or radio.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2796,
+      "sense_id": 71,
+      "distractor_lemma": "The unnecessary repetition of an idea using different words.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2797,
+      "sense_id": 71,
+      "distractor_lemma": "Musical texture combining two or more independent melodic parts.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2798,
+      "sense_id": 73,
+      "distractor_lemma": "Provide comfort to someone who is grieving or disappointed.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2799,
+      "sense_id": 73,
+      "distractor_lemma": "Drink alcohol and celebrate in a lively and noisy way.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2800,
+      "sense_id": 73,
+      "distractor_lemma": "Solidify or become gelatinous through cooling.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2801,
+      "sense_id": 73,
+      "distractor_lemma": "Secretly conspire to do something illegal or harmful.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2802,
+      "sense_id": 73,
+      "distractor_lemma": "Raise irritating and trivial objections.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2803,
+      "sense_id": 74,
+      "distractor_lemma": "Inexperienced and lacking sophisticated maturity.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2804,
+      "sense_id": 74,
+      "distractor_lemma": "Plowed and harrowed but left unsown for a period.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2805,
+      "sense_id": 74,
+      "distractor_lemma": "Having an unhealthy yellow or pale brown skin tone.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2806,
+      "sense_id": 74,
+      "distractor_lemma": "Feeling envious of another person and their advantages.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2807,
+      "sense_id": 74,
+      "distractor_lemma": "Showing intense energy or enthusiasm for a cause.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2808,
+      "sense_id": 76,
+      "distractor_lemma": "A continuous loud banging or clashing sound.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2809,
+      "sense_id": 76,
+      "distractor_lemma": "The quality of being extremely thorough, exhaustive, or strict.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2810,
+      "sense_id": 76,
+      "distractor_lemma": "A pleasant feeling of tiredness or inertia.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2811,
+      "sense_id": 76,
+      "distractor_lemma": "Intense and passionate feeling about something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2812,
+      "sense_id": 76,
+      "distractor_lemma": "A very large vulture native to South America and California.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2813,
+      "sense_id": 78,
+      "distractor_lemma": "Tending to find fault or raise petty objections readily.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2814,
+      "sense_id": 78,
+      "distractor_lemma": "Developing certain abilities or knowledge at an unusually early age.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2815,
+      "sense_id": 78,
+      "distractor_lemma": "Having or showing a cautious distrust of someone or something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2816,
+      "sense_id": 78,
+      "distractor_lemma": "Having or showing an extreme greed for wealth or material gain.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2817,
+      "sense_id": 78,
+      "distractor_lemma": "Indicating a favorable likelihood of future success.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2818,
+      "sense_id": 80,
+      "distractor_lemma": "Remove the testicles of a male human or animal.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2819,
+      "sense_id": 80,
+      "distractor_lemma": "Initiate, provoke, or incite an action or course of events.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2820,
+      "sense_id": 80,
+      "distractor_lemma": "Chew food into smaller pieces before swallowing.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2821,
+      "sense_id": 80,
+      "distractor_lemma": "Carry out a formal inquiry to discover facts.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2822,
+      "sense_id": 80,
+      "distractor_lemma": "Renounce or surrender a right, claim, or responsibility.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2823,
+      "sense_id": 82,
+      "distractor_lemma": "A specialist who examines data, systems, or behavior in detail.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2824,
+      "sense_id": 82,
+      "distractor_lemma": "A doctor who specializes in treating disorders of the feet.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2825,
+      "sense_id": 82,
+      "distractor_lemma": "A teacher of religious doctrine using questions and answers.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2826,
+      "sense_id": 82,
+      "distractor_lemma": "A writer or performer who uses humor to criticize human foolishness.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2827,
+      "sense_id": 82,
+      "distractor_lemma": "A person who remains faithful to an established government or ruler.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2828,
+      "sense_id": 84,
+      "distractor_lemma": "Relating to sound, hearing, or the properties of an auditorium.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2829,
+      "sense_id": 84,
+      "distractor_lemma": "Relating to the countryside or characterized by rural simplicity.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2830,
+      "sense_id": 84,
+      "distractor_lemma": "Relating to esoteric religious mysteries or spiritual contemplation.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2831,
+      "sense_id": 84,
+      "distractor_lemma": "Asserting opinions in an arrogant and unproven manner.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2832,
+      "sense_id": 84,
+      "distractor_lemma": "In a state of complete disorder and confusion.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2833,
+      "sense_id": 86,
+      "distractor_lemma": "Apparatus consisting of interrelated parts used to do work.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2834,
+      "sense_id": 86,
+      "distractor_lemma": "The medieval knightly system of honor and courteous behavior.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2835,
+      "sense_id": 86,
+      "distractor_lemma": "The natural appearance of a landscape viewed by an observer.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2836,
+      "sense_id": 86,
+      "distractor_lemma": "The savage killing or slaughter of a large number of people.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2837,
+      "sense_id": 86,
+      "distractor_lemma": "Sweet foods such as candies, cakes, and pastries viewed as a group.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2838,
+      "sense_id": 87,
+      "distractor_lemma": "Gather into a crowd or collection of people.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2839,
+      "sense_id": 87,
+      "distractor_lemma": "Reflect deeply and deliberately on an idea.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2840,
+      "sense_id": 87,
+      "distractor_lemma": "Breed or reproduce specimens of a plant or animal naturally.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2841,
+      "sense_id": 87,
+      "distractor_lemma": "Shape material into alternating parallel ridges and grooves.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2842,
+      "sense_id": 87,
+      "distractor_lemma": "Bring a group or nation under control by military force.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2843,
+      "sense_id": 89,
+      "distractor_lemma": "Accept something reluctantly but without verbal protest.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2844,
+      "sense_id": 89,
+      "distractor_lemma": "Become outdated or gradually fall into disuse.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2845,
+      "sense_id": 89,
+      "distractor_lemma": "Recover health and strength gradually after an illness.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2846,
+      "sense_id": 89,
+      "distractor_lemma": "Pass out of sight, memory, or existence by gradually fading.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2847,
+      "sense_id": 89,
+      "distractor_lemma": "Cooperate secretly in order to deceive or cheat others.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2848,
+      "sense_id": 91,
+      "distractor_lemma": "Requiring immediate action, decision, or attention.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2849,
+      "sense_id": 91,
+      "distractor_lemma": "Showing persistent care and effort in completing one's duties.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2850,
+      "sense_id": 91,
+      "distractor_lemma": "Having knowledge, understanding, or awareness of a situation.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2851,
+      "sense_id": 91,
+      "distractor_lemma": "Having a sharply strong or biting taste or smell.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2852,
+      "sense_id": 91,
+      "distractor_lemma": "Rising in active rebellion against an established authority.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2853,
+      "sense_id": 92,
+      "distractor_lemma": "Having or showing supreme mastery or skill.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2854,
+      "sense_id": 92,
+      "distractor_lemma": "Living together with another organism without causing harm or benefit.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2855,
+      "sense_id": 92,
+      "distractor_lemma": "Showing or having sympathy and concern for others.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2856,
+      "sense_id": 92,
+      "distractor_lemma": "Capable of being exchanged or substituted for another thing.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2857,
+      "sense_id": 92,
+      "distractor_lemma": "Intended to make up for a loss or injury.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2858,
+      "sense_id": 93,
+      "distractor_lemma": "Self-satisfied, often unaware of impending trouble or danger.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2859,
+      "sense_id": 93,
+      "distractor_lemma": "Disposed or willing to obey rules or demands.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2860,
+      "sense_id": 93,
+      "distractor_lemma": "Affording pleasure or providing satisfaction.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2861,
+      "sense_id": 93,
+      "distractor_lemma": "The trait of wishing to please or do favors for others.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2862,
+      "sense_id": 93,
+      "distractor_lemma": "Calm and in control of one's emotions.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2863,
+      "sense_id": 94,
+      "distractor_lemma": "Intended to overcome distrust or animosity.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2864,
+      "sense_id": 94,
+      "distractor_lemma": "Giving advice or offering formal recommendations.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2865,
+      "sense_id": 94,
+      "distractor_lemma": "Offering comfort or solace in a time of grief.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2866,
+      "sense_id": 94,
+      "distractor_lemma": "Moving back and forth between two points at a regular speed.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2867,
+      "sense_id": 94,
+      "distractor_lemma": "Expressing much in few words; brief and to the point.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2868,
+      "sense_id": 96,
+      "distractor_lemma": "Express sympathy with someone on the occasion of a sorrow.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2869,
+      "sense_id": 96,
+      "distractor_lemma": "Help to bring about a particular result or outcome.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2870,
+      "sense_id": 96,
+      "distractor_lemma": "Make something denser, more compact, or concentrated.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2871,
+      "sense_id": 96,
+      "distractor_lemma": "Acknowledge the truth or validity of something reluctantly.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2872,
+      "sense_id": 96,
+      "distractor_lemma": "Cause surprise or confusion in someone, especially by not according with expectations.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2873,
+      "sense_id": 97,
+      "distractor_lemma": "The act of whipping or beating for punishment or pleasure.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2874,
+      "sense_id": 97,
+      "distractor_lemma": "The act of dedicating something to a sacred purpose.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2875,
+      "sense_id": 97,
+      "distractor_lemma": "A gathering or crowd of people, especially for worship.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2876,
+      "sense_id": 97,
+      "distractor_lemma": "An arrangement of parts or elements in a particular form or figure.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2877,
+      "sense_id": 97,
+      "distractor_lemma": "Sudden shock or distress that causes feelings of confusion.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2878,
+      "sense_id": 98,
+      "distractor_lemma": "A person who has expert knowledge in a subject.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2879,
+      "sense_id": 98,
+      "distractor_lemma": "A member of a group planning a secret or unlawful act.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2880,
+      "sense_id": 98,
+      "distractor_lemma": "A person who claims or appears to use magic or illusion.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2881,
+      "sense_id": 98,
+      "distractor_lemma": "An official appointed by a government commission or agency.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2882,
+      "sense_id": 98,
+      "distractor_lemma": "One who calls up spirits by magic or performs stage tricks.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2883,
+      "sense_id": 99,
+      "distractor_lemma": "Opposed in nature, direction, or purpose.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2884,
+      "sense_id": 99,
+      "distractor_lemma": "Deliberately created rather than arising naturally or spontaneously.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2885,
+      "sense_id": 99,
+      "distractor_lemma": "Made narrow, tight, or restricted in movement.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2886,
+      "sense_id": 99,
+      "distractor_lemma": "Satisfied with what one is or has.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2887,
+      "sense_id": 99,
+      "distractor_lemma": "Difficult to understand; obscure or profound.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2888,
+      "sense_id": 100,
+      "distractor_lemma": "A thin, translucent membrane separating the external ear from the middle ear.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2889,
+      "sense_id": 100,
+      "distractor_lemma": "An alcoholic tincture of opium formerly used as a painkiller.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2890,
+      "sense_id": 100,
+      "distractor_lemma": "An extremely hard mineral consisting of aluminum oxide.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2891,
+      "sense_id": 100,
+      "distractor_lemma": "Propriety in manners and conduct.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2892,
+      "sense_id": 100,
+      "distractor_lemma": "A complete or impressive collection of things.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2893,
+      "sense_id": 101,
+      "distractor_lemma": "To form into a complex, intricate, or overlapping spiral.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2894,
+      "sense_id": 101,
+      "distractor_lemma": "The curve formed by the centers of curvature of another curve.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2895,
+      "sense_id": 101,
+      "distractor_lemma": "Intricate, complex, or rolled inward at the edges.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2896,
+      "sense_id": 101,
+      "distractor_lemma": "Relating to or caused by the movement of heat through liquids or gases.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2897,
+      "sense_id": 101,
+      "distractor_lemma": "Increasing or growing by successive additions.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2898,
+      "sense_id": 103,
+      "distractor_lemma": "Having a lot of space inside; roomy.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2899,
+      "sense_id": 103,
+      "distractor_lemma": "Standing out so as to be clearly visible.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2900,
+      "sense_id": 103,
+      "distractor_lemma": "Careful to avoid potential problems or dangers.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2901,
+      "sense_id": 103,
+      "distractor_lemma": "Giving or being a sign of future success.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2902,
+      "sense_id": 103,
+      "distractor_lemma": "Given to sudden and unaccountable changes of mood or behavior.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2903,
+      "sense_id": 105,
+      "distractor_lemma": "Destroy or weaken gradually, especially by chemical action.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2904,
+      "sense_id": 105,
+      "distractor_lemma": "Fold or shape into alternate ridges and grooves.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2905,
+      "sense_id": 105,
+      "distractor_lemma": "Work jointly toward the same end.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2906,
+      "sense_id": 105,
+      "distractor_lemma": "Work jointly on an activity or project to produce something.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2907,
+      "sense_id": 105,
+      "distractor_lemma": "Developed or presented with many details.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2908,
+      "sense_id": 108,
+      "distractor_lemma": "Able to be believed; convincing.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2909,
+      "sense_id": 108,
+      "distractor_lemma": "Deserving praise, but not necessarily outstanding or successful.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2910,
+      "sense_id": 108,
+      "distractor_lemma": "Showing dedication and diligence.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2911,
+      "sense_id": 108,
+      "distractor_lemma": "Shaking or quivering slightly from nervousness or weakness.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2912,
+      "sense_id": 108,
+      "distractor_lemma": "Complaining in a petulant or whining manner.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2913,
+      "sense_id": 110,
+      "distractor_lemma": "Deserving or under a malevolent spiritual influence.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2914,
+      "sense_id": 110,
+      "distractor_lemma": "Digressing from subject to subject in speech or writing.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2915,
+      "sense_id": 110,
+      "distractor_lemma": "Tending to explore around or wander off the point.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2916,
+      "sense_id": 110,
+      "distractor_lemma": "Involving an invasion or hostile raid.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2917,
+      "sense_id": 110,
+      "distractor_lemma": "Rudely brief or abrupt in speech or manner.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2918,
+      "sense_id": 111,
+      "distractor_lemma": "The permanent end of all biological functions that sustain an organism.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2919,
+      "sense_id": 111,
+      "distractor_lemma": "Relating to or characterized by scarcity or lack.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2920,
+      "sense_id": 111,
+      "distractor_lemma": "The floor of a fireplace, often extending into a room.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2921,
+      "sense_id": 111,
+      "distractor_lemma": "The measurement or extent of something from side to side.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2922,
+      "sense_id": 111,
+      "distractor_lemma": "The measurement around the middle of something, especially a person's waist.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2923,
+      "sense_id": 113,
+      "distractor_lemma": "The highest point of development or achievement.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2924,
+      "sense_id": 113,
+      "distractor_lemma": "A marine crustacean with a shell that attaches itself to rocks and ships.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2925,
+      "sense_id": 113,
+      "distractor_lemma": "A fixed or movable sanctuary, dwelling place, or tent.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2926,
+      "sense_id": 113,
+      "distractor_lemma": "A thing that blocks one's way or prevents progress.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2927,
+      "sense_id": 113,
+      "distractor_lemma": "An object or space used to contain something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2928,
+      "sense_id": 116,
+      "distractor_lemma": "Leave a ship, aircraft, or other vehicle.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2929,
+      "sense_id": 116,
+      "distractor_lemma": "Provide with a narrow shelf-like bed in a shared space.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2930,
+      "sense_id": 116,
+      "distractor_lemma": "Express contempt for; ridicule or mock.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2931,
+      "sense_id": 116,
+      "distractor_lemma": "Damage the good reputation of someone by slander or libel.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
+    },
+    {
+      "id": 2932,
+      "sense_id": 116,
+      "distractor_lemma": "Make someone weak and infirm.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "gemini",
+      "revision": 2
     }
   ],
   "audio_objects": []

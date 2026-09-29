@@ -43,22 +43,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Encourage or assist another person to commit a crime.",
+              "lemma": "Encourage or assist someone to commit a crime or wrong.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Give up a position of power or high office formally.",
+              "lemma": "Renounce one's throne or formally give up a position of power.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Cause severe damage or complete destruction to something.",
+              "lemma": "Behave in a way that belittles or degrades another person.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Postpone or delay an action until a future time.",
+              "lemma": "Scrape or wear away by physical friction or erosion.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Repeal or formally do away with a law, agreement, or right.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -149,7 +154,7 @@
         }
       ],
       "mnemonics": [
-        "Think of taking a 'bite' out of something to make it smaller or less intense."
+        "Think of a heavy storm that begins to abate as the rain lessens bit by bit."
       ]
     },
     {
@@ -197,22 +202,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Showing deep hatred or severe contempt for others.",
+              "lemma": "Inspiring intense disgust, loathing, or moral outrage.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Completely obvious and impossible to misunderstand.",
+              "lemma": "Temporarily inactive, suspended, or set aside.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Existing only in brief or intermittent periods.",
+              "lemma": "Showing little concern for others' feelings in a harsh way.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Showing excessive care or meticulous attention to detail.",
+              "lemma": "Clearly visible or easy to perceive and understand.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Complete, thorough, and utter without any qualification.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -234,7 +244,7 @@
         }
       ],
       "mnemonics": [
-        "Think of an 'errant' traveler who has wandered away from the normal path."
+        "The word aberrant contains err, reminding you of behavior that errs from the standard path."
       ]
     },
     {
@@ -282,22 +292,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Free someone from a formal obligation or criminal charge.",
+              "lemma": "Take in or soak up energy, liquid, or other substances.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "State a belief or opinion with great firmness and force.",
+              "lemma": "Declare someone free from blame, guilt, or legal obligation.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Surrender formally after negotiating specific terms.",
+              "lemma": "Restrain oneself voluntarily from doing or enjoying something.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Conceal one's true motives through deceptive speech.",
+              "lemma": "Descend a rock face or vertical surface using a rope.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Give or grant someone special status, power, or recognition.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -331,7 +346,7 @@
         }
       ],
       "mnemonics": [
-        "An 'absent' person went on a 'second' trip with stolen goods: ab-scond."
+        "Think of a thief who steals away into the night in just a second to abscond."
       ]
     },
     {
@@ -379,27 +394,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Hold back from physical movement or exercise.",
+              "lemma": "Succeed in achieving a goal through continuous effort.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Maintain a strict dietary routine to lose weight.",
+              "lemma": "Continue to have, hold, or keep possession of something.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Refuse to sign an official legal document.",
+              "lemma": "Strengthen or support physically, mentally, or financially over time.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Decline an invitation to a social gathering.",
+              "lemma": "Be appropriate, related, or applicable to a particular matter.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Stay away from a public demonstration.",
+              "lemma": "Hold or keep something within specified physical limits.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -487,7 +502,7 @@
         }
       ],
       "mnemonics": [
-        "To abstain is to stay blank on the ballot."
+        "When voters abstain, they choose to stay back and withhold their votes."
       ]
     },
     {
@@ -535,27 +550,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Abolish laws that no longer serve the public interest.",
+              "lemma": "Surprise or impress someone to a great degree.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Establish a new organization for charitable work.",
+              "lemma": "Pull down or break apart a building or large structure.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Furnish a room with modern furniture.",
+              "lemma": "Fill something up again after it has been used or emptied.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Diminish in value over a period of time.",
+              "lemma": "Protect, love, and care for someone or something dearly.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Demolish an old building to make space for a park.",
+              "lemma": "Send someone away from a country or place as an official punishment.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -715,7 +730,7 @@
         }
       ],
       "mnemonics": [
-        "Ad-monish means to add a warning to your speech."
+        "A teacher will admonish students so they learn to monitor their conduct."
       ]
     },
     {
@@ -769,27 +784,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Alter clothing to fit a different body size.",
+              "lemma": "Praise, flatter, or admire someone in an excessive manner.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Accelerate the speed of a chemical reaction.",
+              "lemma": "Destroy completely or wipe out all traces of something.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Celebrate an achievement with friends and family.",
+              "lemma": "Increase the speed, rate, or velocity of an action.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Tolerate difficult conditions without complaining.",
+              "lemma": "Express an idea or feeling fluently and clearly in speech.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Generate electricity using renewable energy sources.",
+              "lemma": "Collect, cluster, or form into a single dense mass.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -815,7 +830,7 @@
         }
       ],
       "mnemonics": [
-        "Adulterate sounds like adult altering something to make it cheap."
+        "Think of an adult who tampers with pure milk by adding water to adulterate it."
       ]
     },
     {
@@ -863,27 +878,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Athletic training requires dedication and physical endurance.",
+              "lemma": "Practicing severe self-discipline and abstaining from all physical pleasures.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Ascetic monks live a life of extreme self-discipline.",
+              "lemma": "Physically strong, active, agile, and proficient in sports.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Anesthetic drugs numb the body during surgical procedures.",
+              "lemma": "Inducing a temporary loss of bodily sensation or awareness.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Arithmetic calculations form the foundation of mathematics.",
+              "lemma": "Of undisputed origin, genuine, and verified as real.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Alphabetical ordering helps organize large collections of data.",
+              "lemma": "Arousing pity, sadness, or compassion through obvious distress.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -1043,7 +1058,7 @@
         }
       ],
       "mnemonics": [
-        "Aesthetic has art right at the beginning."
+        "Look at the arts to appreciate the aesthetic balance of a painting."
       ]
     },
     {
@@ -1085,27 +1100,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Reduce in physical size or importance.",
+              "lemma": "Promote a product, event, or service to public consumers.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Analyze complex financial accounts.",
+              "lemma": "Form or group distinct elements into a clustered whole.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Distribute evenly among multiple recipients.",
+              "lemma": "Undergo extreme mental anguish or worry about a decision.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Fabricate completely false information.",
+              "lemma": "Gradually reduce or write off the initial cost of a loan.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Accelerate the speed of production.",
+              "lemma": "Take parts from a machine to repair another device.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -1139,7 +1154,7 @@
         }
       ],
       "mnemonics": [
-        "Think of a grand prize making things look bigger."
+        "To aggrandize an achievement is to make it sound grander than it really was."
       ]
     },
     {
@@ -1187,27 +1202,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Deep hesitation born of fear.",
+              "lemma": "The level or concentration of acid in a chemical substance.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Sluggish indifference to surroundings.",
+              "lemma": "An extremely cruel, wicked, or shockingly violent act.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Stubborn resistance to authority.",
+              "lemma": "A willingness to take bold, insolent, and surprising risks.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Anxiety about future events.",
+              "lemma": "The quality of holding on firmly and refusing to give up.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Extreme physical fatigue.",
+              "lemma": "The state or condition of lacking transparency or clarity.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -1225,7 +1240,7 @@
         }
       ],
       "mnemonics": [
-        "Alacrity sounds like a brisk activity done with speed."
+        "Think of high electricity powering someone to respond with cheerful alacrity."
       ]
     },
     {
@@ -1267,27 +1282,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Intrench deeper into the body.",
+              "lemma": "Lift or raise something to a higher physical position.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Worsen an existing medical condition.",
+              "lemma": "Assign or distribute resources and tasks for a specific purpose.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Provoke sudden sharp pain.",
+              "lemma": "Remove, bypass, or prevent a need, obstacle, or difficulty.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Diagnose a rare pathology.",
+              "lemma": "Shorten a word, sentence, or text by leaving out parts.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Simulate physical symptoms.",
+              "lemma": "Occur sequentially in turns or swap back and forth repeatedly.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -1371,7 +1386,7 @@
         }
       ],
       "mnemonics": [
-        "A light elevator helps lift away heavy pain."
+        "The Latin root lev means light, so to alleviate pain is to lighten the burden."
       ]
     },
     {
@@ -1413,27 +1428,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Separate into distinct chemical components.",
+              "lemma": "Reduce the force, thickness, or effectiveness of an item.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Dismantle a complex machinery.",
+              "lemma": "Give vigor, energy, or apparent physical life to something.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Isolate individual participants.",
+              "lemma": "Match, equal, or surpass an outcome through close imitation.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Distribute evenly across borders.",
+              "lemma": "Deprive someone or something of strength, role, or power.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Obliterate all remaining evidence.",
+              "lemma": "Make an argument, claim, or official document officially void.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -1459,7 +1474,7 @@
         }
       ],
       "mnemonics": [
-        "A game of amalgam brings many pieces together."
+        "Think of a dental amalgam that combines metals, just as companies amalgamate into one."
       ]
     },
     {
@@ -1507,27 +1522,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Extremely transparent and straightforward.",
+              "lemma": "Having or showing a strong desire and determination to succeed.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Rigorously proven by mathematics.",
+              "lemma": "Adapted to living or operating both on land and in water.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Completely devoid of emotional weight.",
+              "lemma": "Able to use both the right and left hands equally well.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Historically accurate and verifiable.",
+              "lemma": "Sharing a border or touching directly along a common edge.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Strictly prohibited by law.",
+              "lemma": "Operating independently without external control or supervision.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -1687,7 +1702,7 @@
         }
       ],
       "mnemonics": [
-        "Ambi means both, giving you two possible meanings."
+        "The prefix ambi means both, so an ambiguous remark can point in two directions."
       ]
     },
     {
@@ -1741,27 +1756,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Possessing boundless energy and enthusiasm for physical labor.",
+              "lemma": "Well meaning, charitable, and kindly disposed toward others.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Showing intense anger and hostility toward an opponent.",
+              "lemma": "Displaying a clear desire or intent to cause harm to others.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Acting with absolute certainty and unwavering resolve.",
+              "lemma": "Commonly occurring or widely accepted in a specific area.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Displaying a complete lack of emotional response or interest.",
+              "lemma": "Equal in value, quantity, function, or overall meaning.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Moving back and forth between two physical locations.",
+              "lemma": "Possessing unlimited and absolute strength or power.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -1779,7 +1794,7 @@
         }
       ],
       "mnemonics": [
-        "AMBIVALENT sounds like ambi-valiant, meaning you have two strong, opposing values fighting inside you."
+        "With ambi meaning both, an ambivalent person feels pulled equally toward two options."
       ]
     },
     {
@@ -1827,27 +1842,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To diminish the value or importance of an asset.",
+              "lemma": "Recall and show public respect for someone in a ceremony.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "To aggravate an existing problem or medical condition.",
+              "lemma": "Express a point clearly and precisely using speech.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "To construct a physical barrier around a property.",
+              "lemma": "Absorb and integrate people, cultures, or ideas into a wider group.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "To communicate in a secret or coded language.",
+              "lemma": "State or repeat an instruction multiple times for clarity.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "To evaluate the financial worth of an enterprise.",
+              "lemma": "Engage in careful, prolonged thought and discussion before deciding.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -1933,7 +1948,7 @@
         }
       ],
       "mnemonics": [
-        "AMELIORATE sounds like a mellow rate, which means things are calming down and getting better."
+        "The Latin root melior means better, which shows that to ameliorate a bad situation is to improve it."
       ]
     },
     {
@@ -1981,27 +1996,27 @@
           ],
           "distractors": [
             {
-              "lemma": "An event that occurs precisely on schedule without delay.",
+              "lemma": "A political belief advocating the total abolition of government authority.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A scientific instrument used to measure atmospheric pressure.",
+              "lemma": "A concise statement containing a widely accepted general truth.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A geographical feature formed by tectonic plate movement.",
+              "lemma": "Active, open hostility or opposition toward another entity.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A legal document that grants ownership of property.",
+              "lemma": "An abnormal enlargement of an artery caused by a weakened wall.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A literary device that exaggerates the scale of an event.",
+              "lemma": "Excessive and uncritical bias or patriotism for one's own group.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -2139,7 +2154,7 @@
         }
       ],
       "mnemonics": [
-        "ANA (against) plus CHRON (time) equals something that goes against the correct time."
+        "The root chron means time, so an anachronism is an object placed in the wrong time."
       ]
     },
     {
@@ -2199,27 +2214,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Possessing identical properties in every conceivable dimension.",
+              "lemma": "Deviating from what is standard, expected, or typical.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Totally unrelated in origin, structure, and function.",
+              "lemma": "Not identified by name or having unknown authorship.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Directly opposed to one another in purpose and design.",
+              "lemma": "Possessing the power to govern oneself independently.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Represented through numerical data rather than visual graphics.",
+              "lemma": "Occurring or existing simultaneously at the exact same rate.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Inherently contradictory and impossible to reconcile.",
+              "lemma": "Sharing identical opinions and held by everyone in agreement.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -2306,7 +2321,7 @@
         }
       ],
       "mnemonics": [
-        "ANALOGOUS shares a root with analogy, which means drawing a comparison between similar things."
+        "Two things that are analogous can be linked together through a simple analogy."
       ]
     },
     {
@@ -2354,22 +2369,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A standard procedure followed during routine laboratory experiments.",
+              "lemma": "The state of being unknown or unacknowledged by name.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "The primary rule governing linguistic transformations in classical poetry.",
+              "lemma": "An inference that if things agree in some respects they probably agree in others.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A predictable pattern observed in standard economic forecasts.",
+              "lemma": "Vastness of size, extent, or influence.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "The harmonious alignment of planetary orbits.",
+              "lemma": "A deficiency of red blood cells or hemoglobin in the blood.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "Personal state of isolation and lack of social standards.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -2497,7 +2517,7 @@
         }
       ],
       "mnemonics": [
-        "A normal order is missing in an anomaly."
+        "Anomaly comes from the Greek an- (not) and homalos (even or regular), meaning it does not follow the normal pattern."
       ]
     },
     {
@@ -2545,22 +2565,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A deep emotional bond characterized by mutual admiration and affection.",
+              "lemma": "Understanding and entering into another's feelings.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A state of profound indifference toward external political events.",
+              "lemma": "Apparent communication from one mind to another without speech or signs.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "An overwhelming sense of curiosity regarding unfamiliar cultures.",
+              "lemma": "Sharing the feelings of others, especially feelings of sorrow or anguish.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A calculated strategy used to negotiate international treaties.",
+              "lemma": "The historic period preceding the Middle Ages in Europe.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "A collection of selected literary passages or poems.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -2639,7 +2664,7 @@
         }
       ],
       "mnemonics": [
-        "Anti means against, and pathy means feeling, so an antipathy is feeling against someone."
+        "Combine anti (against) and pathos (feeling) to remember that antipathy means strong negative feeling or dislike."
       ]
     },
     {
@@ -2687,22 +2712,27 @@
           ],
           "distractors": [
             {
-              "lemma": "An intense burst of creative energy that inspires artistic innovation.",
+              "lemma": "A decrease in size of an organ caused by disease or disuse.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A structured emotional response to traumatic life events.",
+              "lemma": "The highest point of something, or the point in an orbit farthest from Earth.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A deliberate strategy to remain neutral during public debates.",
+              "lemma": "An expression of regret at having caused trouble or done wrong.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An overwhelming wave of enthusiasm for social reform.",
+              "lemma": "The abandonment or renunciation of a religious or political belief.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A state of disorder due to absence or nonrecognition of authority.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -2779,7 +2809,7 @@
         }
       ],
       "mnemonics": [
-        "A path without feeling is apathy."
+        "The prefix a- means without and pathos means feeling, so apathy is a complete lack of feeling or enthusiasm."
       ]
     },
     {
@@ -2821,27 +2851,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Instigate conflict or provoke strong hostility.",
+              "lemma": "Estimate the value of something.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Assess the monetary value of an item or property.",
+              "lemma": "Take into custody or arrest.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Express formal praise and commendation.",
+              "lemma": "Give information or notice to.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Suppress evidence during a legal proceeding.",
+              "lemma": "Fix to; attach; add to the end of a document.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Transform something into a simplified state.",
+              "lemma": "Request earnestly or plead with urgency.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -2983,7 +3013,7 @@
         }
       ],
       "mnemonics": [
-        "To appease someone is to offer them a 'peace' offering to make them pleased."
+        "To appease someone is to offer them peace so their anger subsides."
       ]
     },
     {
@@ -3031,27 +3061,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Effortless and completed with minimal exertion.",
+              "lemma": "Characterized by intense emotion or passion.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Conducted with secrecy and deceptive intent.",
+              "lemma": "Lacking sufficient water or rainfall.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Lacking structure, discipline, or coherence.",
+              "lemma": "Marked by skill in achieving a goal, especially through deceit.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Pleasurable and yielding immediate relaxation.",
+              "lemma": "Invulnerable to fear or intimidation.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Occurring at erratic and unpredictable intervals.",
+              "lemma": "Based on individual discretion or judgment rather than on fixed rules.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -3213,7 +3243,7 @@
         }
       ],
       "mnemonics": [
-        "Arduous sounds like 'hard for us,' which reminds you of exhausting physical work."
+        "An arduous climb is hard for us because it takes so much physical effort."
       ]
     },
     {
@@ -3255,27 +3285,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Fuse permanently into a single rigid structure.",
+              "lemma": "Establish or prove to be genuine or valid.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Dismantle completely into individual fragments.",
+              "lemma": "Suggest or assume the existence of something as a basis for reasoning.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Coat with a protective layer against corrosion.",
+              "lemma": "Take in and incorporate information or culture into a larger body.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Fasten securely with adhesive substances.",
+              "lemma": "Make something more noticeable or prominent.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Measure dimensions using precise optical tools.",
+              "lemma": "Demand or specify a requirement as part of an agreement.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -3417,7 +3447,7 @@
         }
       ],
       "mnemonics": [
-        "Think of an 'articulated bus' that bends in the middle at a joint."
+        "To articulate parts is to connect them with joints, like the movable segments of a skeleton."
       ]
     },
     {
@@ -3465,27 +3495,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Characterized by sour or biting chemical properties.",
+              "lemma": "Concerning or characterized by an appreciation of beauty or good taste.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Relating to the appreciation of visual beauty or art.",
+              "lemma": "Having the properties of an acid, especially tasting sour.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Showing high skepticism toward conventional wisdom.",
+              "lemma": "Related to the rejection of belief in the existence of deities.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Pertaining to ancient ceremonial traditions.",
+              "lemma": "Conforming to fact and therefore worthy of belief.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Marked by extravagant and self-indulgent living.",
+              "lemma": "Free from living germs or microorganisms.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -3571,7 +3601,7 @@
         }
       ],
       "mnemonics": [
-        "Ascetic sounds like 'a saint tick': think of a saint living without luxuries."
+        "An ascetic person denies themselves luxury, much like an athlete in rigorous discipline without sweets or extra comforts."
       ]
     },
     {
@@ -3613,27 +3643,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Provoke hostility by deliberate mockery or insult.",
+              "lemma": "Attack someone physically or with words.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Demand immediate compliance through coercion.",
+              "lemma": "Take something to be the case without proof.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Assign guilt or responsibility to an innocent party.",
+              "lemma": "Entice or attract by offering or showing something pleasant.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Persuade someone to abandon a long-held religious faith.",
+              "lemma": "Evaluate or estimate the nature, quality, or ability of.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Evaluate the financial value of real property.",
+              "lemma": "Give a duty, task, or share of work to someone.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -3775,7 +3805,7 @@
         }
       ],
       "mnemonics": [
-        "Assuage sounds like 'a sweet age': sweet words soothe and win people over."
+        "To assuage someone is to soften their feelings, sharing a root with sweet, like sweetening a bitter mood."
       ]
     },
     {
@@ -3823,27 +3853,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Prone to panic under unexpected pressure.",
+              "lemma": "Heard or perceptible by the ear.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Having a keen sense of hearing or acoustics.",
+              "lemma": "Indicating favorable circumstances and good luck.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Easily persuaded by subtle flattery or bribes.",
+              "lemma": "Immoderately desirous of acquiring wealth.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Marked by modest and self-effacing manners.",
+              "lemma": "Acutely insightful and wise.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Showing complete indifference to worldly outcomes.",
+              "lemma": "Characterized by lust or appealing to sexual desire.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -4021,7 +4051,7 @@
         }
       ],
       "mnemonics": [
-        "Audacious sounds like 'all-day-cious': fearless enough to face danger all day long."
+        "Audacious people dare to act with audacity, fearless and bold in the face of danger."
       ]
     },
     {
@@ -4069,27 +4099,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Excessively ornate and decorated with intricate carvings.",
+              "lemma": "Marked by practical hardheaded intelligence.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Warm and inviting in atmosphere and design.",
+              "lemma": "Not counterfeit or copied, but genuine.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Composed of many different colors and textures.",
+              "lemma": "Difficult to penetrate or comprehend.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Unpredictable in movement or direction.",
+              "lemma": "Relating to Austria or its people.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Extremely loud and jarring to the ear.",
+              "lemma": "Profoundly honored or inspiring reverence.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -4267,7 +4297,7 @@
         }
       ],
       "mnemonics": [
-        "Austere rhymes with steer, like a cow eating plain grass without any seasonings."
+        "Think of austere as stern and bare: clean, simple, and stripped of all extra comfort."
       ]
     },
     {
@@ -4315,27 +4345,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To conceal important information from authorities.",
+              "lemma": "Turn away or ward off.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To deny responsibility for a previous action.",
+              "lemma": "Cut off from a whole by a sudden blow or cut.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To wander aimlessly through unfamiliar territory.",
+              "lemma": "Hold back to a later time.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To reduce the size or intensity of a conflict.",
+              "lemma": "Discourage or prevent from taking action through fear of the consequences.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To gather scattered items into a single container.",
+              "lemma": "Stick fast or adhere firmly to a surface or rule.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -4429,7 +4459,7 @@
         }
       ],
       "mnemonics": [
-        "Aver sounds like verify, which means to prove something is true."
+        "Aver comes from the Latin root verus, meaning truth; when you aver, you maintain that something is true."
       ]
     },
     {
@@ -4477,27 +4507,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Shockingly violent and disturbing to watch.",
+              "lemma": "Exceedingly harmful or destructive.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Extremely complex and difficult to comprehend.",
+              "lemma": "Incapable of producing offspring or vegetation.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Highly innovative and ahead of its time.",
+              "lemma": "Threatening or foreshadowing evil or tragic developments.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Relying on strict mathematical formulas.",
+              "lemma": "Characterized by extreme cruelty or lack of mercy.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Causing intense physical pain upon contact.",
+              "lemma": "Lacking taste or flavor or tangible qualities.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -4535,7 +4565,7 @@
         }
       ],
       "mnemonics": [
-        "Banal sounds like ban all, meaning we should ban all boring, overused phrases."
+        "Something banal has been heard so often that you feel like putting a ban on all of it."
       ]
     },
     {
@@ -4583,27 +4613,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To support an argument with solid evidence.",
+              "lemma": "Cause someone or something to seem less serious or important.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To decorate a room with expensive ornaments.",
+              "lemma": "Attract or interest someone, sometimes in a deceptive way.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To multiply rapidly in number or size.",
+              "lemma": "Express sorrow or deep regret over something.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To erase writing from a piece of paper.",
+              "lemma": "Ask someone urgently and fervently to do something.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To travel across a vast ocean by boat.",
+              "lemma": "Leave or give by will after one's death.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -4685,7 +4715,7 @@
         }
       ],
       "mnemonics": [
-        "Belie has lie in it, meaning it tells a lie about how things really are."
+        "If a smile belies your anger, the smile gives a lie to what you truly feel inside."
       ]
     },
     {
@@ -4739,27 +4769,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Beneficial to health and physical well-being.",
+              "lemma": "Promoting or enhancing well-being.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Beneficiary of a large financial estate.",
+              "lemma": "Characterized by grandeur, splendor, or beauty.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Benevolent in expression and facial features.",
+              "lemma": "Wishing or appearing to wish evil to others.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Benefited by the recent tax reforms.",
+              "lemma": "Intending or showing kindness and goodwill.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Beneficence shown toward stray animals.",
+              "lemma": "Harmful or evil in intent or effect.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -4849,7 +4879,7 @@
         }
       ],
       "mnemonics": [
-        "Bene means good, and beneficent means doing good deeds."
+        "Bene means well and -ficent comes from facere (to do), so a beneficent act is literally doing good."
       ]
     },
     {
@@ -4903,27 +4933,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Bolt shut a heavy wooden door securely.",
+              "lemma": "Blow in gusts, or talk in a loud, aggressive manner without much effect.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Bother someone with trivial administrative complaints.",
+              "lemma": "Promote the growth or development of.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Bottleneck the traffic flow on a major highway.",
+              "lemma": "Move hesitatingly, as if about to give way.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Bolshevik ideology centered on centralized state control.",
+              "lemma": "Expose oneself to pleasant warmth and light.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Boisterous behavior displayed by rowdy spectators.",
+              "lemma": "Cover meat with liquid during cooking to keep it moist.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -5061,7 +5091,7 @@
         }
       ],
       "mnemonics": [
-        "Imagine a boulder helping to hold up a weak wall, to bolster it."
+        "Just as a bolster pillow props up your back, to bolster someone's case is to support and strengthen it."
       ]
     },
     {
@@ -5109,27 +5139,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Bombarding an audience with excessive factual data.",
+              "lemma": "Direct a continuous flow of questions or attacks at someone.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Bombastic devices used in military combat.",
+              "lemma": "Relating to projectiles or their flight through the air.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Botanical terms used in scientific classification.",
+              "lemma": "Noisy, energetic, and rowdy.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Bountiful harvests resulting from favorable weather.",
+              "lemma": "Without civilizing influences; crude and uncivilized.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Boisterous celebrations held in the town square.",
+              "lemma": "Characterized by arrogant assertion of unproved principles.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -5163,7 +5193,7 @@
         }
       ],
       "mnemonics": [
-        "A bombastic person sounds like an exploding bomb of loud, empty words."
+        "Bombastic speech inflates words like a bomb bursting with excessive volume and grand style."
       ]
     },
     {
@@ -5217,27 +5247,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Boring in conversation and lacking intellectual curiosity.",
+              "lemma": "Devoted to reading and study rather than worldly interests.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Boisterous in spirit and overly energetic.",
+              "lemma": "Resembling an animal in lack of intelligence or refined feeling.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Botanical in origin and difficult to cultivate.",
+              "lemma": "Anticipating a fall in market prices.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Borderline offensive in political commentary.",
+              "lemma": "Confident, optimistic, and expecting market prices to rise.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Bountiful in generosity toward strangers.",
+              "lemma": "Characteristic of or suitable for a young male.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -5271,7 +5301,7 @@
         }
       ],
       "mnemonics": [
-        "A boor acts like a wild boar, loud and boorish in public."
+        "A boorish person acts like a wild boar, charging around with crude and bad manners."
       ]
     },
     {
@@ -5325,27 +5355,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To submerge completely in a liquid.",
+              "lemma": "Polish and make smooth and shiny by rubbing.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To hide or conceal from view.",
+              "lemma": "Strike repeatedly with a heavy blunt object.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To wander aimlessly without purpose.",
+              "lemma": "Pester or harass someone persistently.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To cut or trim excess material.",
+              "lemma": "Charm or enchant someone, sometimes in a deceptive way.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To burden with heavy responsibilities.",
+              "lemma": "Leave property or assets to a person by a will.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -5354,7 +5384,7 @@
       ],
       "relations": [],
       "mnemonics": [
-        "Think of a burger making you grow larger."
+        "When plant buds emerge in spring, they burgeon and quickly grow into full blooms."
       ]
     },
     {
@@ -5402,27 +5432,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A decorative moulding placed near the ceiling.",
+              "lemma": "A large fabric pad filled with resilient material used for sleeping.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A narrow opening used for ventilation.",
+              "lemma": "Extreme anxiety, sorrow, or physical pain.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A foundation made of packed earth and timber.",
+              "lemma": "A heavily defended building or fortified place.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "An arched gateway leading into a courtyard.",
+              "lemma": "A female monarch or ruler of an empire.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A heavy wooden beam spanning an open ceiling.",
+              "lemma": "A female tiger.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -5436,7 +5466,7 @@
         }
       ],
       "mnemonics": [
-        "A buttress supports your rear, just like this architectural support props up a wall."
+        "A buttress rests against the exterior of a wall to brace it and keep it from collapsing."
       ]
     },
     {
@@ -5484,27 +5514,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A sweet and harmonious musical chord.",
+              "lemma": "An elaborate musical composition for a full orchestra.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A complete lack of ambient sound or movement.",
+              "lemma": "A moment of sudden and profound realization.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A steady rhythmic pulsing sound.",
+              "lemma": "The process of transmitting sound over a distance by wire or radio.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A low frequency vibration felt rather than heard.",
+              "lemma": "The unnecessary repetition of an idea using different words.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A melodic sequence played on a wind instrument.",
+              "lemma": "Musical texture combining two or more independent melodic parts.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -5590,7 +5620,7 @@
         }
       ],
       "mnemonics": [
-        "Cacophony sounds like bad phones ringing loudly and harshly at the same time."
+        "Cacophony comes from Greek roots kakos (bad) and phone (sound), making it a harsh noise."
       ]
     },
     {
@@ -5638,27 +5668,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To force compliance through intimidation and threats.",
+              "lemma": "Provide comfort to someone who is grieving or disappointed.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To ignore someone completely in social settings.",
+              "lemma": "Drink alcohol and celebrate in a lively and noisy way.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To question closely during a formal interrogation.",
+              "lemma": "Solidify or become gelatinous through cooling.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To dismiss a proposal without consideration.",
+              "lemma": "Secretly conspire to do something illegal or harmful.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To instruct someone in technical matters.",
+              "lemma": "Raise irritating and trivial objections.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -5692,7 +5722,7 @@
         }
       ],
       "mnemonics": [
-        "Cage old animals? No, you coax and cajole them gently."
+        "To cajole is to coax someone gently, like telling pleasant jokes to win them over."
       ]
     },
     {
@@ -5746,27 +5776,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Extremely warm and affectionate in behavior.",
+              "lemma": "Inexperienced and lacking sophisticated maturity.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Prone to sudden emotional outbursts.",
+              "lemma": "Plowed and harrowed but left unsown for a period.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Overly sensitive to criticism from peers.",
+              "lemma": "Having an unhealthy yellow or pale brown skin tone.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Nervous and hesitant in social interactions.",
+              "lemma": "Feeling envious of another person and their advantages.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Dedicated to charitable causes.",
+              "lemma": "Showing intense energy or enthusiasm for a cause.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -5872,7 +5902,7 @@
         }
       ],
       "mnemonics": [
-        "Callous people lack emotion; they call us heartless."
+        "Just as a skin callus becomes tough from friction, a callous person has an emotionally hardened heart."
       ]
     },
     {
@@ -5920,27 +5950,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A tendency to hide intentions behind polite falsehoods.",
+              "lemma": "A continuous loud banging or clashing sound.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "The ability to create intricate works of art.",
+              "lemma": "The quality of being extremely thorough, exhaustive, or strict.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A strong bias toward personal advancement.",
+              "lemma": "A pleasant feeling of tiredness or inertia.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Extreme caution in financial matters.",
+              "lemma": "Intense and passionate feeling about something.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "The quality of being easily deceived by others.",
+              "lemma": "A very large vulture native to South America and California.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -6034,7 +6064,7 @@
         }
       ],
       "mnemonics": [
-        "Candor sounds like candid, meaning completely honest and open."
+        "Candor comes from the Latin root for brightness, describing someone whose honest words are clear and candid."
       ]
     },
     {
@@ -6088,27 +6118,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Possessing a great capacity for holding liquids.",
+              "lemma": "Tending to find fault or raise petty objections readily.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Related to the study of capybaras and similar rodents.",
+              "lemma": "Developing certain abilities or knowledge at an unusually early age.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Marked by extreme caution and careful planning.",
+              "lemma": "Having or showing a cautious distrust of someone or something.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Showing steadfast loyalty and unwavering devotion.",
+              "lemma": "Having or showing an extreme greed for wealth or material gain.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Characterized by a bitter and resentful attitude.",
+              "lemma": "Indicating a favorable likelihood of future success.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -6210,7 +6240,7 @@
         }
       ],
       "mnemonics": [
-        "Capricious sounds like capricorn, and goats are unpredictable."
+        "A capricious person acts on a sudden caprice, shifting their mood or mind without any warning."
       ]
     },
     {
@@ -6258,27 +6288,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To throw something far away into the ocean.",
+              "lemma": "Remove the testicles of a male human or animal.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To construct a sturdy fence around a castle.",
+              "lemma": "Initiate, provoke, or incite an action or course of events.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To clean thoroughly with soap and water.",
+              "lemma": "Chew food into smaller pieces before swallowing.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To celebrate a victory with grand festivities.",
+              "lemma": "Carry out a formal inquiry to discover facts.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To calculate the total cost of an item.",
+              "lemma": "Renounce or surrender a right, claim, or responsibility.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -6364,7 +6394,7 @@
         }
       ],
       "mnemonics": [
-        "Castigate sounds like cast a gate, meaning to lock someone out and scold them."
+        "When authorities castigate a wrongdoer, they cast harsh words and reprimands to punish them."
       ]
     },
     {
@@ -6412,27 +6442,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A device used to measure atmospheric pressure.",
+              "lemma": "A specialist who examines data, systems, or behavior in detail.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An instrument for viewing distant stars.",
+              "lemma": "A doctor who specializes in treating disorders of the feet.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A type of catalog used in libraries.",
+              "lemma": "A teacher of religious doctrine using questions and answers.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A chemical compound that absorbs water from the air.",
+              "lemma": "A writer or performer who uses humor to criticize human foolishness.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A protective coating applied to metal surfaces.",
+              "lemma": "A person who remains faithful to an established government or ruler.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -6516,7 +6546,7 @@
         }
       ],
       "mnemonics": [
-        "Catalyst sounds like cat analysis, which speeds up your understanding of pets."
+        "In chemistry, a catalyst speeds up a reaction without being consumed during the process."
       ]
     },
     {
@@ -6570,27 +6600,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Related to the study of ocean tides and currents.",
+              "lemma": "Relating to sound, hearing, or the properties of an auditorium.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Flowing smoothly and gracefully like a river.",
+              "lemma": "Relating to the countryside or characterized by rural simplicity.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Possessing a sweet and pleasant fragrance.",
+              "lemma": "Relating to esoteric religious mysteries or spiritual contemplation.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Exhibiting extreme caution and hesitation.",
+              "lemma": "Asserting opinions in an arrogant and unproven manner.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Characterized by deep religious devotion.",
+              "lemma": "In a state of complete disorder and confusion.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -6692,7 +6722,7 @@
         }
       ],
       "mnemonics": [
-        "Caustic sounds like cause a stick, because sharp words can sting like a poke."
+        "A caustic remark burns and hurts a listener just like a caustic chemical burns the skin."
       ]
     },
     {
@@ -6740,27 +6770,27 @@
           ],
           "distractors": [
             {
-              "lemma": "The practice of breeding rare chickens for agricultural exhibitions.",
+              "lemma": "Apparatus consisting of interrelated parts used to do work.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A formal ceremony celebrating the foundation of a city.",
+              "lemma": "The medieval knightly system of honor and courteous behavior.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "The architectural style typical of rural country houses.",
+              "lemma": "The natural appearance of a landscape viewed by an observer.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A sudden outburst of unpredictable emotional distress.",
+              "lemma": "The savage killing or slaughter of a large number of people.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "The deliberate avoidance of difficult social gatherings.",
+              "lemma": "Sweet foods such as candies, cakes, and pastries viewed as a group.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -6790,7 +6820,7 @@
         }
       ],
       "mnemonics": [
-        "Chicanery sounds like chicery, involving sneaky tricks like a sly fox."
+        "Chicanery sounds like chic trickery, describing dishonest methods used to swindle others."
       ]
     },
     {
@@ -6844,27 +6874,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To separate a mixture into distinct liquid layers.",
+              "lemma": "Gather into a crowd or collection of people.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To evaporate completely leaving behind solid crystals.",
+              "lemma": "Reflect deeply and deliberately on an idea.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To expand rapidly when exposed to atmospheric pressure.",
+              "lemma": "Breed or reproduce specimens of a plant or animal naturally.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To dissolve entirely in a warm aqueous solution.",
+              "lemma": "Shape material into alternating parallel ridges and grooves.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To change color gradually under ultraviolet light.",
+              "lemma": "Bring a group or nation under control by military force.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -6938,7 +6968,7 @@
         }
       ],
       "mnemonics": [
-        "Coagulate sounds like cola glue, which turns a runny liquid into a sticky solid."
+        "When blood or milk begins to coagulate, it clots and thickens into a firm gel."
       ]
     },
     {
@@ -6986,27 +7016,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To dismantle a complex mechanical structure into parts.",
+              "lemma": "Accept something reluctantly but without verbal protest.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "To separate a unified group into hostile factions.",
+              "lemma": "Become outdated or gradually fall into disuse.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "To erase previous historical records from an archive.",
+              "lemma": "Recover health and strength gradually after an illness.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "To compare two contrasting literary traditions.",
+              "lemma": "Pass out of sight, memory, or existence by gradually fading.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "To conceal information behind a layer of bureaucracy.",
+              "lemma": "Cooperate secretly in order to deceive or cheat others.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -7100,7 +7130,7 @@
         }
       ],
       "mnemonics": [
-        "Coalesce contains coal, and pieces of coal press together to form one mass."
+        "The prefix co- means together; when diverse elements coalesce, they blend into one cohesive whole."
       ]
     },
     {
@@ -7154,27 +7184,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Marked by extreme hesitation and doubt.",
+              "lemma": "Requiring immediate action, decision, or attention.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Lacking logical structure or clear organization.",
+              "lemma": "Showing persistent care and effort in completing one's duties.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Excessively emotional and overly dramatic.",
+              "lemma": "Having knowledge, understanding, or awareness of a situation.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Relating to the study of mental cognition.",
+              "lemma": "Having a sharply strong or biting taste or smell.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Inherently secretive and difficult to interpret.",
+              "lemma": "Rising in active rebellion against an established authority.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -7196,7 +7226,7 @@
         }
       ],
       "mnemonics": [
-        "Cogent sounds like agent, and a good secret agent presents convincing facts."
+        "A cogent case uses sound reasoning and facts that compel people to agree."
       ]
     },
     {
@@ -7250,27 +7280,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Significantly smaller than the required minimum standard.",
+              "lemma": "Having or showing supreme mastery or skill.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Existing in a state of permanent opposition.",
+              "lemma": "Living together with another organism without causing harm or benefit.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Characterized by random and unpredictable variations.",
+              "lemma": "Showing or having sympathy and concern for others.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Relating to the measurement of physical distances.",
+              "lemma": "Capable of being exchanged or substituted for another thing.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Exceeding all previously established boundaries.",
+              "lemma": "Intended to make up for a loss or injury.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -7284,7 +7314,7 @@
         }
       ],
       "mnemonics": [
-        "Commensurate shares common with measure, meaning measurements match up."
+        "Commensurate shares a root with 'measure'; things that are commensurate have matching measures."
       ]
     },
     {
@@ -7338,22 +7368,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Complaining constantly about trivial matters.",
+              "lemma": "Self-satisfied, often unaware of impending trouble or danger.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Displaying a rigid and unbending attitude.",
+              "lemma": "Disposed or willing to obey rules or demands.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Being overly complex in design or structure.",
+              "lemma": "Affording pleasure or providing satisfaction.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Compliant with regulations and strict standards.",
+              "lemma": "The trait of wishing to please or do favors for others.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Calm and in control of one's emotions.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -7371,7 +7406,7 @@
         }
       ],
       "mnemonics": [
-        "Think of someone who is so pleasant that they are always complaisant."
+        "Complaisant people want to please others and make them content."
       ]
     },
     {
@@ -7419,22 +7454,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Concealing important information from the public.",
+              "lemma": "Intended to overcome distrust or animosity.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Displaying arrogant and dismissive behavior.",
+              "lemma": "Giving advice or offering formal recommendations.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Acting in a sneaky and deceitful manner.",
+              "lemma": "Offering comfort or solace in a time of grief.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Creating confusion during a debate.",
+              "lemma": "Moving back and forth between two points at a regular speed.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Expressing much in few words; brief and to the point.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -7521,7 +7561,7 @@
         }
       ],
       "mnemonics": [
-        "To be conciliatory is to try and reconcile differences."
+        "To be conciliatory is to seek to reconcile differences and make peace."
       ]
     },
     {
@@ -7575,22 +7615,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Condemn severely in a public statement.",
+              "lemma": "Express sympathy with someone on the occasion of a sorrow.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Condense a long text into a brief summary.",
+              "lemma": "Help to bring about a particular result or outcome.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Conduct an orchestra with great precision.",
+              "lemma": "Make something denser, more compact, or concentrated.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Connect two separate ideas into one.",
+              "lemma": "Acknowledge the truth or validity of something reluctantly.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Cause surprise or confusion in someone, especially by not according with expectations.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -7604,7 +7649,7 @@
         }
       ],
       "mnemonics": [
-        "If you condone something, you give it the green light."
+        "Think of giving a 'pardon' in your 'condo'; when you condone bad behavior, you overlook it."
       ]
     },
     {
@@ -7652,22 +7697,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A sudden collapse of a financial market.",
+              "lemma": "The act of whipping or beating for punishment or pleasure.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A secret meeting of conspirators.",
+              "lemma": "The act of dedicating something to a sacred purpose.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A grand celebration with music and dancing.",
+              "lemma": "A gathering or crowd of people, especially for worship.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A severe flood caused by heavy rain.",
+              "lemma": "An arrangement of parts or elements in a particular form or figure.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Sudden shock or distress that causes feelings of confusion.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -7681,7 +7731,7 @@
         }
       ],
       "mnemonics": [
-        "Conflagration sounds like flame, pointing to a huge fire."
+        "A conflagration contains a blazing 'flagrant' fire that burns fiercely."
       ]
     },
     {
@@ -7729,22 +7779,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A person who travels extensively for business.",
+              "lemma": "A person who has expert knowledge in a subject.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Someone who collects old and rusty metal.",
+              "lemma": "A member of a group planning a secret or unlawful act.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "An amateur painter with little formal training.",
+              "lemma": "A person who claims or appears to use magic or illusion.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A critic of political corruption.",
+              "lemma": "An official appointed by a government commission or agency.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "One who calls up spirits by magic or performs stage tricks.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -7758,7 +7813,7 @@
         }
       ],
       "mnemonics": [
-        "A connoisseur knows their stuff."
+        "A connoisseur knows the fine details of art and food because of deep study."
       ]
     },
     {
@@ -7806,22 +7861,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Acting arrogant despite making a mistake.",
+              "lemma": "Opposed in nature, direction, or purpose.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Feeling extremely tired after a long journey.",
+              "lemma": "Deliberately created rather than arising naturally or spontaneously.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Showing excitement about a new project.",
+              "lemma": "Made narrow, tight, or restricted in movement.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Refusing to admit any fault in an argument.",
+              "lemma": "Satisfied with what one is or has.",
+              "kind": "mc",
+              "difficulty": 4
+            },
+            {
+              "lemma": "Difficult to understand; obscure or profound.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -7851,7 +7911,7 @@
         }
       ],
       "mnemonics": [
-        "Contrite sounds like crushed tight with guilt."
+        "If you are contrite, you feel worn down with regret for doing something wrong."
       ]
     },
     {
@@ -7899,22 +7959,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A small musical instrument played with a bow.",
+              "lemma": "A thin, translucent membrane separating the external ear from the middle ear.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A smooth track used for racing cars.",
+              "lemma": "An alcoholic tincture of opium formerly used as a painkiller.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A detailed map of an underground cave.",
+              "lemma": "An extremely hard mineral consisting of aluminum oxide.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A sudden loud noise in the distance.",
+              "lemma": "Propriety in manners and conduct.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "A complete or impressive collection of things.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -7936,7 +8001,7 @@
         }
       ],
       "mnemonics": [
-        "A conundrum makes your brain drum with confusion."
+        "A conundrum leaves you wondering: 'What can under this riddle be the answer?'"
       ]
     },
     {
@@ -7984,27 +8049,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Divided into multiple distinct segments or sections.",
+              "lemma": "To form into a complex, intricate, or overlapping spiral.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Characterized by severe twisting or turning.",
+              "lemma": "The curve formed by the centers of curvature of another curve.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Spread out flat across a horizontal surface.",
+              "lemma": "Intricate, complex, or rolled inward at the edges.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Covered with a protective outer layer of skin.",
+              "lemma": "Relating to or caused by the movement of heat through liquids or gases.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Forming a perfect circle around a central point.",
+              "lemma": "Increasing or growing by successive additions.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -8124,7 +8189,7 @@
         }
       ],
       "mnemonics": [
-        "Think of a volume (con-volume) rolled up on itself."
+        "Convoluted comes from Latin for 'rolled together'; imagine layers rolled upon themselves."
       ]
     },
     {
@@ -8178,27 +8243,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Marked by extreme brevity and concise phrasing.",
+              "lemma": "Having a lot of space inside; roomy.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Relating to financial wealth and prosperity.",
+              "lemma": "Standing out so as to be clearly visible.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Derived from a single central source or origin.",
+              "lemma": "Careful to avoid potential problems or dangers.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Lacking any emotional depth or sincerity.",
+              "lemma": "Giving or being a sign of future success.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Characterized by hidden meanings and subtle hints.",
+              "lemma": "Given to sudden and unaccountable changes of mood or behavior.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -8304,7 +8369,7 @@
         }
       ],
       "mnemonics": [
-        "Copious sounds like cornucopia, a horn of plenty filled with words."
+        "Think of a 'cornucopia', the horn of plenty, to remember that copious means abundant."
       ]
     },
     {
@@ -8352,27 +8417,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Contradict a previously established statement.",
+              "lemma": "Destroy or weaken gradually, especially by chemical action.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Examine closely for hidden flaws or errors.",
+              "lemma": "Fold or shape into alternate ridges and grooves.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Create a false impression through deception.",
+              "lemma": "Work jointly toward the same end.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Distribute responsibility among multiple parties.",
+              "lemma": "Work jointly on an activity or project to produce something.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Delay action until further notice is given.",
+              "lemma": "Developed or presented with many details.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -8532,7 +8597,7 @@
         }
       ],
       "mnemonics": [
-        "Corroborate: robot-rate your facts to make them stronger."
+        "To corroborate a story, you make it robust with solid evidence."
       ]
     },
     {
@@ -8586,27 +8651,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Possessing great skepticism toward new ideas.",
+              "lemma": "Able to be believed; convincing.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Showing high levels of intelligence and cunning.",
+              "lemma": "Deserving praise, but not necessarily outstanding or successful.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Refusing to cooperate with established authority.",
+              "lemma": "Showing dedication and diligence.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Displaying harsh judgment of others.",
+              "lemma": "Shaking or quivering slightly from nervousness or weakness.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Inclined to doubt official explanations.",
+              "lemma": "Complaining in a petulant or whining manner.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -8690,7 +8755,7 @@
         }
       ],
       "mnemonics": [
-        "Credulous people give credit too easily to anything they hear."
+        "A credulous person gives credit to any story, believing it without proof."
       ]
     },
     {
@@ -8744,27 +8809,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Marked by extreme slowness and deliberate care.",
+              "lemma": "Deserving or under a malevolent spiritual influence.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Flowing smoothly like a river.",
+              "lemma": "Digressing from subject to subject in speech or writing.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Associated with magical or mystical spells.",
+              "lemma": "Tending to explore around or wander off the point.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Extremely complex and difficult to understand.",
+              "lemma": "Involving an invasion or hostile raid.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Possessing a sharp or cutting edge.",
+              "lemma": "Rudely brief or abrupt in speech or manner.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -8794,7 +8859,7 @@
         }
       ],
       "mnemonics": [
-        "A cursory review is done in a hurry, like a curse word muttered quickly."
+        "Think of a computer cursor quickly scanning across a page; a cursory glance is hurried."
       ]
     },
     {
@@ -8842,27 +8907,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A large and overflowing abundance of goods.",
+              "lemma": "The permanent end of all biological functions that sustain an organism.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A deep underground cave or cavern.",
+              "lemma": "Relating to or characterized by scarcity or lack.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "An official decree issued by a monarch.",
+              "lemma": "The floor of a fireplace, often extending into a room.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A decorative ribbon worn on formal attire.",
+              "lemma": "The measurement or extent of something from side to side.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A sharp and sudden pain in the chest.",
+              "lemma": "The measurement around the middle of something, especially a person's waist.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -8944,7 +9009,7 @@
         }
       ],
       "mnemonics": [
-        "A dearth of food makes you feel dead on earth."
+        "A dearth of food can lead directly to death from hunger."
       ]
     },
     {
@@ -8992,27 +9057,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A slow and orderly progression of events.",
+              "lemma": "The highest point of development or achievement.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A joyful celebration of victory.",
+              "lemma": "A marine crustacean with a shell that attaches itself to rocks and ships.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A peaceful agreement between rival nations.",
+              "lemma": "A fixed or movable sanctuary, dwelling place, or tent.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A sturdy foundation built of stone.",
+              "lemma": "A thing that blocks one's way or prevents progress.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "A brilliant display of fireworks.",
+              "lemma": "An object or space used to contain something.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -9166,7 +9231,7 @@
         }
       ],
       "mnemonics": [
-        "De bar fell down in a sudden debacle."
+        "After hitting the breakable barrier, the entire setup turned into a total debacle."
       ]
     },
     {
@@ -9220,27 +9285,27 @@
           ],
           "distractors": [
             {
-              "lemma": "To support and praise a faulty theory.",
+              "lemma": "Leave a ship, aircraft, or other vehicle.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To build a strong foundation for an argument.",
+              "lemma": "Provide with a narrow shelf-like bed in a shared space.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To hide the truth behind complicated language.",
+              "lemma": "Express contempt for; ridicule or mock.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To create a fake story for entertainment.",
+              "lemma": "Damage the good reputation of someone by slander or libel.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "To accept a claim without questioning it.",
+              "lemma": "Make someone weak and infirm.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -9254,7 +9319,7 @@
         }
       ],
       "mnemonics": [
-        "To debunk is to knock down a bunk claim."
+        "To debunk a rumor is to remove the 'bunk' or nonsense from it."
       ]
     },
     {

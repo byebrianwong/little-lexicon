@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  partsOfSpeechOf,
   isOffensive,
   findWordToken,
   formatDefinition,
@@ -172,4 +173,10 @@ test('tiersByFrequencyRank splits the list into five equal groups, common first'
     '1122334455',
   );
   assert.equal(tiers.has(99), false, 'unranked words keep their tier');
+});
+
+test('partsOfSpeechOf lists every part of speech a base form has', () => {
+  assert.deepEqual(partsOfSpeechOf(data, 'censure')!.sort(), ['noun', 'verb']);
+  assert.deepEqual(partsOfSpeechOf(data, 'ephemeral')!.sort(), ['adjective', 'noun']);
+  assert.equal(partsOfSpeechOf(data, 'abated'), null, 'inflected forms are not entries');
 });

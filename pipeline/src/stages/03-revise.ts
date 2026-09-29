@@ -18,12 +18,14 @@ import {
   GeminiUnavailableError,
   generateJsonWithFallback,
 } from '../lib/gemini.ts';
+import { ensureWordNet, loadWordNet, partsOfSpeechOf } from '../lib/wordnet.ts';
 import {
   buildRevisePrompt,
   parseRevisedBatch,
   REVISE_RESPONSE_SCHEMA,
   REVISE_SYSTEM,
   REVISION,
+  type Lexicon,
   type ReviseItem,
 } from '../lib/revise.ts';
 
@@ -87,6 +89,11 @@ export async function revise(ctx: RunContext): Promise<void> {
   }
   ctx.log.info(`Revising ${targets.length} words with ${models.join(', then ')}.`);
 
+  // WordNet checks that each look-alike is a real word with the target's part
+  // of speech.
+  const wordnet = loadWordNet(await ensureWordNet(ctx.paths.cacheDir, ctx.log));
+  const lexicon: Lexicon = (lemma) => partsOfSpeechOf(wordnet, lemma);
+
   const bySense = new Map(targets.map((t) => [t.sense.id, t]));
   const spent = new Set<string>(); // models whose daily quota ran out this run
   let pending = targets;
@@ -137,6 +144,7 @@ export async function revise(ctx: RunContext): Promise<void> {
         result.text,
         batch.map((t) => t.item),
         taken,
+        lexicon,
       );
       for (const [senseId, revised] of parsed.valid) {
         const target = bySense.get(senseId)!;
@@ -149,6 +157,7 @@ export async function revise(ctx: RunContext): Promise<void> {
             difficulty: target.word.difficulty_tier,
             source: 'gemini',
             revision: REVISION,
+            lookalike: d.word,
           })),
         );
         if (revised.mnemonic) {

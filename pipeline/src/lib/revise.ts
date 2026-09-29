@@ -5,8 +5,9 @@
 // hooks that often made no sense. This pass asks for each wrong answer as the
 // real meaning of a named look-alike word (abate: abet, abdicate), and for a
 // hook that names the word and agrees with its meaning. The code checks what
-// it can: the look-alike is not the target, no answer repeats across words, no
-// answer mentions the target, and the hook names the target.
+// it can: the look-alike is a real word with the target's part of speech (by
+// WordNet), it is not the target, no answer repeats across words, no answer
+// mentions the target, and the hook names the target.
 //
 // Rows written by this pass carry `revision: REVISION`, so a run that stops
 // part way (a daily quota) continues where it left off.
@@ -36,11 +37,11 @@ export const REVISE_SYSTEM = `You improve study content for an English vocabular
 For each word, write:
 
 1. "distractors": 5 wrong answers for a multiple-choice question that shows the dictionary definition among them. Each wrong answer is the real meaning of a different English word that a learner could confuse with the target, because it looks or sounds similar or shares a prefix or root. For "abate", good choices are abet, abdicate and abase. Put that other word in "word" and its meaning in "meaning".
-   - "word" is a real English word. It is not the target word or a form of it, and each wrong answer uses a different word.
-   - Prefer words with the same part of speech as the target.
+   - "word" is a real English word in its base form (for example "abet", not "abets"). It is not the target word or a form of it, and each wrong answer uses a different word.
+   - "word" has the same part of speech as the target, so the wrong answers cannot be ruled out by grammar.
    - "meaning" is an accurate definition of "word", written like the dictionary definition you were given: similar length, starting with a capital letter and ending with a period. Do not put "word" or the target word in it.
    - No meaning may be close to the target's meaning. Do not use antonyms of the target, and do not use silly or joke meanings.
-2. "mnemonic": one or two short sentences that help a learner remember what the target word means. Link the word's sound, its spelling, or a well-known Latin or Greek root to its meaning. It must include the target word, make sense when read aloud, and agree with the definition. Do not invent etymologies. Write it only when asked; otherwise set it to null.
+2. "mnemonic": one or two short sentences that help a learner remember what the target word means. Pick a part of the word that sounds like a common English word, or a well-known Latin or Greek root, name that part, and say how it connects to the meaning. For example: "Capricious comes from caprice, a sudden change of mind." A sentence that only uses the word, such as "The storm began to abate", is not a mnemonic. Spell every word correctly; do not misspell a word to make it sound alike. It must include the target word, make sense when read aloud, and agree with the definition. Do not invent etymologies. Write it only when asked; otherwise set it to null.
 
 Return ONLY a JSON object {"items": [...]} with one object per word, in the order given, each shaped {"sense_id": <the sense id>, "distractors": [{"word": "...", "meaning": "..."}], "mnemonic": "..." or null}. No prose, no markdown, no code fences.
 
@@ -101,11 +102,15 @@ const RawSchema = z.object({
 const key = (s: string): string => s.trim().toLowerCase();
 const letters = (s: string): string => s.toLowerCase().replace(/[^a-z]/g, '');
 
+/** Parts of speech for a lemma, or null when it is not a known word. */
+export type Lexicon = (lemma: string) => string[] | null;
+
 /** Every problem with one revised item, or an empty list. */
 export function checkRevised(
   raw: z.infer<typeof RawSchema>,
   item: ReviseItem,
   taken: Set<string>,
+  lexicon?: Lexicon,
 ): string[] {
   const problems: string[] = [];
   const word = item.headword;
@@ -121,6 +126,13 @@ export function checkRevised(
     }
     if (seenWords.has(w)) problems.push(`look-alike "${d.word}" is used twice`);
     seenWords.add(w);
+    if (lexicon) {
+      const pos = lexicon(w);
+      if (!pos) problems.push(`look-alike "${d.word}" is not in the dictionary`);
+      else if (item.partOfSpeech && !pos.includes(item.partOfSpeech)) {
+        problems.push(`look-alike "${d.word}" is a ${pos.join('/')}, not a ${item.partOfSpeech}`);
+      }
+    }
 
     const m = d.meaning.trim();
     if (!/^[A-Z]/.test(m) || !/\.$/.test(m)) problems.push(`"${m}" is not a capitalized sentence`);
@@ -148,6 +160,7 @@ export function parseRevisedBatch(
   text: string,
   items: ReviseItem[],
   taken: Set<string>,
+  lexicon?: Lexicon,
 ): { valid: Map<number, Revised>; failed: number[]; errors: string[] } {
   const bySense = new Map(items.map((i) => [i.senseId, i]));
   const valid = new Map<number, Revised>();
@@ -172,7 +185,7 @@ export function parseRevisedBatch(
       errors.push(`unexpected sense_id ${parsed.data.sense_id}`);
       continue;
     }
-    const problems = checkRevised(parsed.data, item, taken);
+    const problems = checkRevised(parsed.data, item, taken, lexicon);
     if (problems.length > 0) {
       errors.push(`${item.headword}: ${problems.join('; ')}`);
       continue;
