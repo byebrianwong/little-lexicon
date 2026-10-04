@@ -95,6 +95,9 @@ export interface ReviewRow {
   /** Content fields this review changed. */
   changed: string[];
   notes: string;
+  /** Scores from a second reviewer that did not write the content. */
+  checker_scores?: Record<string, number>;
+  checker_notes?: string;
 }
 
 export interface AudioObject {

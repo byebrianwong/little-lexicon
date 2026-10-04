@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
+  namesWord,
   buildEntry,
   changedFields,
   checkContent,
@@ -55,6 +56,10 @@ function goodEntry(): WorksheetEntry {
     review: {
       scores: { sense: 5, definition: 4, plain: 5, examples: 5, wrongAnswers: 5, hook: 4, related: 4 },
       verdict: 'fixed',
+      notes: '',
+    },
+    checker: {
+      scores: { sense: 5, definition: 5, plain: 4, examples: 4, wrongAnswers: 5, hook: 4, related: 4 },
       notes: '',
     },
   };
@@ -191,4 +196,36 @@ test('buildEntry reads the first sense, generated examples first, and the newest
 test('wrongAnswerOwners covers first senses only and skips the given words', () => {
   const owners = wrongAnswerOwners(rows(), new Set([2]));
   assert.deepEqual([...owners.entries()], [['help a crime along.', 1]]);
+});
+
+test('other senses must be clean sentences that do not repeat a sense or name the word', () => {
+  const e = goodEntry();
+  e.otherSenses = ['Become less in amount or intensity.', 'Make less active or intense.', 'To abate a tax.'];
+  const problems = checkContent(e, env());
+  assert.ok(problems.some((p) => p.includes('"Make less active or intense." repeats another sense')));
+  assert.ok(problems.some((p) => p.includes('"To abate a tax." names the word')));
+  assert.ok(!problems.some((p) => p.includes('Become less in amount')));
+});
+
+test('the second reviewer must score every criterion, and its low scores block the verdict', () => {
+  const missing = goodEntry();
+  missing.checker.scores = null;
+  assert.deepEqual(checkReview(missing, ['hook']), ['checker.scores is not filled in']);
+
+  const low = goodEntry();
+  low.checker.scores!.examples = 3;
+  low.checker.notes = 'Second example is generic.';
+  assert.ok(checkReview(low, ['hook']).some((p) => p.includes('second reviewer scored examples under 4 (Second example is generic.)')));
+
+  low.review.verdict = 'flagged';
+  low.review.notes = 'Could not find a less generic example in time.';
+  assert.deepEqual(checkReview(low, ['hook']), []);
+});
+
+test('namesWord catches inflections and words built on the headword, not look-alikes', () => {
+  assert.equal(namesWord('Aesthetically pleasing.', 'aesthetic'), true);
+  assert.equal(namesWord('A call for abatement of the tax.', 'abate'), true);
+  assert.equal(namesWord('The storm abated.', 'abate'), true);
+  assert.equal(namesWord('Help or encourage someone to do wrong.', 'abate'), false);
+  assert.equal(namesWord('Practicing strict self-denial.', 'aesthetic'), false);
 });

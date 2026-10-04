@@ -81,8 +81,12 @@ export interface Store {
   ): Promise<void>;
   replaceExamples(senseId: number, rows: NewExample[]): Promise<void>;
   replaceRelations(wordId: number, rows: NewRelation[]): Promise<void>;
-  /** Drop a word's other senses and their rows (when its part of speech changes). */
-  removeOtherSenses(wordId: number, keepSenseId: number): Promise<void>;
+  /**
+   * Make a word's senses after the first match these definitions, in order.
+   * Senses whose definition is unchanged keep their rows; the rest are
+   * removed with their examples and wrong answers.
+   */
+  setOtherSenses(wordId: number, primarySenseId: number, definitions: string[]): Promise<void>;
   listReviews(): Promise<ReviewRow[]>;
   addReview(row: NewReview): Promise<ReviewRow>;
 
@@ -314,11 +318,32 @@ export class JsonFileStore implements Store {
     }
   }
 
-  async removeOtherSenses(wordId: number, keepSenseId: number): Promise<void> {
-    const drop = new Set(
-      this.db.senses.filter((s) => s.word_id === wordId && s.id !== keepSenseId).map((s) => s.id),
-    );
+  async setOtherSenses(wordId: number, primarySenseId: number, definitions: string[]): Promise<void> {
+    const others = this.db.senses.filter((s) => s.word_id === wordId && s.id !== primarySenseId);
+    const keep = new Map<number, number>(); // sense id -> new order
+    const added: SenseRow[] = [];
+    definitions.forEach((definition, i) => {
+      const order = i + 2;
+      const existing = others.find((s) => s.definition.trim() === definition.trim() && !keep.has(s.id));
+      if (existing) keep.set(existing.id, order);
+      else {
+        added.push({
+          id: this.nextId('senses'),
+          word_id: wordId,
+          definition: definition.trim(),
+          plain_language_definition: null,
+          sense_order: order,
+          register: null,
+        });
+      }
+    });
+    const drop = new Set(others.filter((s) => !keep.has(s.id)).map((s) => s.id));
     this.db.senses = this.db.senses.filter((s) => !drop.has(s.id));
+    for (const s of this.db.senses) {
+      const order = keep.get(s.id);
+      if (order !== undefined) s.sense_order = order;
+    }
+    this.db.senses.push(...added);
     this.db.example_sentences = this.db.example_sentences.filter((e) => !drop.has(e.sense_id));
     this.db.distractors = this.db.distractors.filter((d) => !drop.has(d.sense_id));
   }

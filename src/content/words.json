@@ -846,7 +846,7 @@
       "senses": [
         {
           "senseId": 11,
-          "definition": "Concerned with beauty or the appreciation of beauty.",
+          "definition": "Relating to beauty, or to the way people judge and enjoy it.",
           "plainLanguageDefinition": "Having to do with beauty and how good something looks.",
           "senseOrder": 1,
           "register": null,
@@ -877,7 +877,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Physically strong, fit and good at sports.",
+              "lemma": "Feeling no interest and making no effort.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -887,160 +887,31 @@
               "difficulty": 1
             },
             {
-              "lemma": "Genuine and of undisputed origin.",
+              "lemma": "Made in a factory from chemicals instead of grown or found in nature.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Arousing pity, especially through weakness or sadness.",
+              "lemma": "So weak or sad that it makes people feel sorry for it.",
               "kind": "mc",
               "difficulty": 1
             }
           ]
         },
         {
-          "senseId": 12,
-          "definition": "Concerning or characterized by an appreciation of beauty or good taste.",
-          "plainLanguageDefinition": "Showing a strong appreciation for visual beauty and style.",
+          "senseId": 558,
+          "definition": "Pleasing in appearance; tasteful.",
+          "plainLanguageDefinition": null,
           "senseOrder": 2,
           "register": null,
-          "examples": [
-            {
-              "exampleId": 372,
-              "text": "The interior designer created a space with a remarkably cohesive aesthetic.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 373,
-              "text": "He appreciated the minimalist aesthetic of the modern Scandinavian furniture.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 374,
-              "text": "The film is known for its stunning cinematography and careful aesthetic choices.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 375,
-              "text": "Her personal style reflects a distinct vintage aesthetic from the nineteen seventies.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 7,
-              "text": "The aesthetic faculties",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 8,
-              "text": "An aesthetic person",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Athletic prowess is demonstrated through strength and speed.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Ascetic practices involve renouncing worldly comforts.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Anesthetic applications reduce pain during medical exams.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Pathetic attempts to fix the machine only caused more damage.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Synthetic materials mimic the texture of natural fibers.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 13,
-          "definition": "Aesthetically pleasing.",
-          "plainLanguageDefinition": "Looking very beautiful or pleasing to the eye.",
-          "senseOrder": 3,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 376,
-              "text": "The curator curated an exhibition featuring highly aesthetic installations that captivated the discerning audience.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 377,
-              "text": "Her thoughtful interior design choices created a remarkably aesthetic atmosphere throughout the historic residence.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 378,
-              "text": "Critics praised the film for its striking visual compositions and deeply aesthetic framing.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Relating to the philosophy of art.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Causing sudden physical revulsion.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Possessing hidden moral virtue.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Marked by extreme structural complexity.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Deals with numerical data.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
+          "examples": [],
+          "distractors": []
         }
       ],
       "relations": [
         {
           "relatedLemma": "artistic",
           "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "tasteful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "tasteless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "unsightly",
-          "relationType": "antonym"
         }
       ],
       "mnemonics": [
@@ -3480,7 +3351,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Relating to or producing vinegar.",
+              "lemma": "Sour like vinegar, or containing it.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -3491,66 +3362,6 @@
             },
             {
               "lemma": "Denying that any god exists.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 47,
-          "definition": "Practicing great self-denial.",
-          "plainLanguageDefinition": "Living without comforts or luxuries as a form of personal or spiritual discipline.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 494,
-              "text": "The hermit led an ascetic existence in the high desert, subsisting only on wild grains and rainwater.",
-              "audioUrl": null,
-              "clozeTarget": "ascetic"
-            },
-            {
-              "exampleId": 495,
-              "text": "An ascetic scholar might willingly forfeit social engagements to pursue uninterrupted research.",
-              "audioUrl": null,
-              "clozeTarget": "ascetic"
-            },
-            {
-              "exampleId": 496,
-              "text": "Despite his immense wealth, the industrialist remained ascetic in his private quarters.",
-              "audioUrl": null,
-              "clozeTarget": "ascetic"
-            },
-            {
-              "exampleId": 24,
-              "text": "Be systematically ascetic … do … something for no other reason than that you would rather not do it",
-              "audioUrl": null,
-              "clozeTarget": "ascetic"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Devoted entirely to sensual pleasure and comfort.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Prone to severe bouts of melancholic withdrawal.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Lacking ordinary intellectual or critical faculties.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Excessively generous to strangers and acquaintances.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Driven by intense ambition for political office.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -6059,7 +5870,7 @@
       "senses": [
         {
           "senseId": 78,
-          "definition": "Given to sudden changes of mood or behavior without an obvious reason.",
+          "definition": "Inclined to switch moods or plans suddenly, with nothing to explain the change.",
           "plainLanguageDefinition": "Likely to change suddenly, so you cannot predict what will happen next.",
           "senseOrder": 1,
           "register": null,
@@ -6085,27 +5896,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Tending to find fault or raise petty objections readily.",
+              "lemma": "Large enough inside to hold a great deal.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Developing certain abilities or knowledge at an unusually early age.",
+              "lemma": "Greedy, and ready to take by force what belongs to others.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Having or showing a cautious distrust of someone or something.",
+              "lemma": "Quick to complain about small and unimportant faults.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Having or showing an extreme greed for wealth or material gain.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Indicating a favorable likelihood of future success.",
+              "lemma": "Showing promising signs that things will go well.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -6186,19 +5992,23 @@
       ],
       "relations": [
         {
-          "relatedLemma": "impulsive",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "whimsical",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "fickle",
           "relationType": "synonym"
         },
         {
           "relatedLemma": "erratic",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "mercurial",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "volatile",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unpredictable",
           "relationType": "synonym"
         },
         {
@@ -6253,7 +6063,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Bring about or provoke an action or event.",
+              "lemma": "Set something in motion, especially trouble or a conflict.",
               "kind": "mc",
               "difficulty": 5
             },
@@ -6268,7 +6078,7 @@
               "difficulty": 5
             },
             {
-              "lemma": "Make something less severe, serious or painful.",
+              "lemma": "Lessen how harsh, painful or serious something is.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -6431,70 +6241,13 @@
           ]
         },
         {
-          "senseId": 83,
-          "definition": "Something that causes an important event to happen.",
-          "plainLanguageDefinition": "A catalyst is an event or person that triggers a major change or action.",
+          "senseId": 559,
+          "definition": "A substance that starts or speeds up a chemical reaction without being changed itself.",
+          "plainLanguageDefinition": null,
           "senseOrder": 2,
           "register": null,
-          "examples": [
-            {
-              "exampleId": 632,
-              "text": "The sudden economic collapse served as a catalyst for widespread revolution.",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            },
-            {
-              "exampleId": 633,
-              "text": "Her speech was the catalyst that inspired the community to action.",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            },
-            {
-              "exampleId": 634,
-              "text": "The discovery of gold proved to be the catalyst for the town's rapid growth.",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            },
-            {
-              "exampleId": 635,
-              "text": "A good mentor can be a powerful catalyst for personal success.",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            },
-            {
-              "exampleId": 41,
-              "text": "The invasion acted as a catalyst to unite the country",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "A barrier that prevents any progress from occurring.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A predictable outcome of a long sequence of events.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A minor detail that has no impact on the result.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A calming influence in a chaotic situation.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A formal agreement between two nations.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
+          "examples": [],
+          "distractors": []
         }
       ],
       "relations": [
@@ -6516,7 +6269,7 @@
         }
       ],
       "mnemonics": [
-        "Catalyst comes from the Greek katalysis, \"loosening\": a catalyst loosens things up so that change can happen."
+        "Catalyst comes from the Greek katalysis, \"dissolving\": a catalyst breaks a fixed situation apart so that change can happen."
       ]
     },
     {
@@ -6558,7 +6311,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Relating to sound or to the sense of hearing.",
+              "lemma": "Having to do with sound, or with the ability to hear it.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -6573,12 +6326,12 @@
               "difficulty": 1
             },
             {
-              "lemma": "Relating to or acting as a cause.",
+              "lemma": "Being the reason that something happens.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Having a spiritual meaning hidden from ordinary understanding.",
+              "lemma": "Unwilling to take risks; acting with great care.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -9780,7 +9533,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Serving to make something look more attractive.",
+              "lemma": "Added to make something look nicer rather than to be useful.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -9795,7 +9548,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Extremely or unusually small.",
+              "lemma": "Very small in size.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -30852,8 +30605,8 @@
       "senses": [
         {
           "senseId": 381,
-          "definition": "Cause an event, especially a bad one, to happen suddenly or sooner than expected.",
-          "plainLanguageDefinition": "To make something, usually something bad, happen suddenly or too soon.",
+          "definition": "Bring about an event, usually an unwelcome one, abruptly or earlier than it would otherwise come.",
+          "plainLanguageDefinition": "To set off an event, usually a bad one, all at once or before it would have happened anyway.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -30878,12 +30631,12 @@
           ],
           "distractors": [
             {
-              "lemma": "Expect or predict that something will happen.",
+              "lemma": "See an event coming and get ready for it.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Take part in an activity or event.",
+              "lemma": "Join in with others in something they are doing.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -30893,7 +30646,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Beat rapidly or irregularly, like a racing heart.",
+              "lemma": "Beat fast and unevenly.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -32183,26 +31936,26 @@
       "senses": [
         {
           "senseId": 397,
-          "definition": "Producing a large amount of work or many results.",
+          "definition": "Producing a large quantity of work, such as books, songs, inventions or goals.",
           "plainLanguageDefinition": "Making a lot of something, such as books, songs or ideas.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 2529,
-              "text": "As a prolific author, she published three novels in a single year.",
+              "exampleId": 2538,
+              "text": "Thomas Edison was a prolific inventor, with more than a thousand patents to his name.",
               "audioUrl": null,
               "clozeTarget": "prolific"
             },
             {
-              "exampleId": 2530,
-              "text": "The prolific scientist published dozens of papers before turning thirty.",
+              "exampleId": 2539,
+              "text": "The striker had a prolific season, scoring forty goals in all competitions.",
               "audioUrl": null,
               "clozeTarget": "prolific"
             },
             {
-              "exampleId": 2531,
-              "text": "She remained a prolific composer throughout her long career.",
+              "exampleId": 2540,
+              "text": "Agatha Christie was so prolific that she wrote more than sixty detective novels.",
               "audioUrl": null,
               "clozeTarget": "prolific"
             }
@@ -32389,7 +32142,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Nearness in space, time or relationship.",
+              "lemma": "How close one thing is to another in place or time.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -32400,132 +32153,6 @@
             },
             {
               "lemma": "A claim to importance that is not justified.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 400,
-          "definition": "A natural inclination.",
-          "plainLanguageDefinition": "A propensity is an inherent tendency toward a particular behavior.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1878,
-              "text": "Cats have a propensity to sleep in warm patches of sunlight.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1879,
-              "text": "The child exhibited a propensity for drawing on walls.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1880,
-              "text": "Her inherent propensity for leadership became obvious early on.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1881,
-              "text": "Their family shared a propensity for musical talent.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "A lack of interest in surroundings.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "An excessive amount of wealth.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A tendency to forget important details.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A formal agreement between nations.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A physical illness.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 401,
-          "definition": "A disposition to behave in a certain way.",
-          "plainLanguageDefinition": "A propensity is a regular way of behaving shaped by character.",
-          "senseOrder": 3,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1882,
-              "text": "His sudden propensity for silence worried his friends.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1883,
-              "text": "The politician demonstrated a propensity for dodging difficult questions.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1884,
-              "text": "She maintained a steady propensity for helping strangers.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 1885,
-              "text": "Their shared propensity for debate energized the seminar.",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            },
-            {
-              "exampleId": 226,
-              "text": "The propensity of disease to spread",
-              "audioUrl": null,
-              "clozeTarget": "propensity"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "A method for measuring distance.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A heavy textile used in furniture.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "An unyielding stubbornness.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A complete lack of emotion.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A temporary mood swing.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -32571,7 +32198,7 @@
       "senses": [
         {
           "senseId": 402,
-          "definition": "Win or regain someone's favor by doing something that pleases them.",
+          "definition": "Win back the goodwill of an angry person, or of a god, by giving them what they want.",
           "plainLanguageDefinition": "To calm someone's anger or win their goodwill by pleasing them.",
           "senseOrder": 1,
           "register": null,
@@ -32603,12 +32230,12 @@
           ],
           "distractors": [
             {
-              "lemma": "Cause something to happen suddenly or sooner than expected.",
+              "lemma": "Bring on a crisis or some other event abruptly.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Spread an idea widely, or breed plants or animals.",
+              "lemma": "Spread an idea or belief widely among people.",
               "kind": "mc",
               "difficulty": 4
             },
@@ -32674,20 +32301,26 @@
           "register": null,
           "examples": [
             {
-              "exampleId": 2532,
+              "exampleId": 2541,
               "text": "They discussed prosaic matters like grocery shopping over dinner.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             },
             {
-              "exampleId": 2533,
-              "text": "The architecture of the office building was thoroughly prosaic.",
+              "exampleId": 2542,
+              "text": "After the thrilling trailer, the film itself felt prosaic, with a predictable plot and flat dialogue.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             },
             {
-              "exampleId": 2534,
+              "exampleId": 2543,
               "text": "Her journal entries recorded the prosaic events of her daily routine.",
+              "audioUrl": null,
+              "clozeTarget": "prosaic"
+            },
+            {
+              "exampleId": 2544,
+              "text": "He hoped for a dramatic reason behind the delay, but the explanation was prosaic: a flat tire.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             }
@@ -32709,122 +32342,7 @@
               "difficulty": 2
             },
             {
-              "lemma": "Dealing with things in a practical, realistic way.",
-              "kind": "mc",
-              "difficulty": 2
-            }
-          ]
-        },
-        {
-          "senseId": 404,
-          "definition": "Lacking wit or imagination.",
-          "plainLanguageDefinition": "A prosaic person or thing is boring and lacks creative imagination.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1894,
-              "text": "The committee rejected the proposal for its prosaic approach.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1895,
-              "text": "His speech was so prosaic that many audience members fell asleep.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1896,
-              "text": "She found her office job increasingly prosaic and uninspiring.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1897,
-              "text": "The artist avoided prosaic designs in favor of surrealism.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Showing exceptional brilliance.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Prone to emotional outbursts.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Possessing a sharp tongue.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Acting with reckless abandon.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Displaying nervous tension.",
-              "kind": "mc",
-              "difficulty": 2
-            }
-          ]
-        },
-        {
-          "senseId": 405,
-          "definition": "Not challenging; dull and lacking excitement.",
-          "plainLanguageDefinition": "It means something is ordinary, boring, and completely lacking in excitement.",
-          "senseOrder": 3,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1898,
-              "text": "The committee rejected the proposal because it offered only prosaic solutions to a complex crisis.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1899,
-              "text": "She found comfort in her daily routines despite their remarkably prosaic nature.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1900,
-              "text": "His poetry was praised for transforming prosaic moments into profound literature.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1901,
-              "text": "The architect wanted to design a building that rose above the prosaic urban landscape.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Pertaining to the creation of written prose.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Characterized by loud and aggressive public protests.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Relating to ancient Greek mythology and legendary heroes.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Possessing great physical strength and endurance.",
+              "lemma": "Having to do with the rhythm and stress of language, in speech or in verse.",
               "kind": "mc",
               "difficulty": 2
             }

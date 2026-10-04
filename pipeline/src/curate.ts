@@ -91,6 +91,11 @@ async function status(): Promise<void> {
     `Reviewed: ${done.size} (pass ${verdicts.pass}, fixed ${verdicts.fixed}, flagged ${verdicts.flagged}). ` +
       `To review: ${rows.words.length - done.size}.`,
   );
+  const unchecked = [...done.values()].filter((r) => !r.checker_scores);
+  if (unchecked.length > 0) {
+    const names = unchecked.map((r) => rows.words.find((w) => w.id === r.word_id)?.headword).join(', ');
+    console.log(`  ${unchecked.length} reviewed without a second reviewer; review them again: ${names}`);
+  }
   const flagged = [...done.values()].filter((r) => r.verdict === 'flagged');
   for (const r of flagged) {
     const w = rows.words.find((x) => x.id === r.word_id);
@@ -126,12 +131,16 @@ async function next(args: string[]): Promise<void> {
   } else {
     // Unreviewed words; ones that give the answer away first, then record order.
     const env: CheckEnv = { lexicon, takenWrongAnswers: wrongAnswerOwners(rows, new Set()) };
+    const unchecked = rows.words.filter((w) => done.has(w.id) && !done.get(w.id)!.checker_scores);
     const candidates = rows.words
       .filter((w) => !done.has(w.id) && primarySense(rows, w.id))
       .map((w) => ({ w, giveaway: checkContent(buildEntry(rows, w), env).some((p) => p.includes('names the word')) }));
-    words = [...candidates.filter((c) => c.giveaway), ...candidates.filter((c) => !c.giveaway)]
-      .slice(0, count)
-      .map((c) => c.w);
+    // Words reviewed before the second reviewer existed come first.
+    words = [
+      ...unchecked,
+      ...candidates.filter((c) => c.giveaway).map((c) => c.w),
+      ...candidates.filter((c) => !c.giveaway).map((c) => c.w),
+    ].slice(0, count);
   }
   if (words.length === 0) {
     console.log('Nothing to review at this rubric version.');
@@ -192,6 +201,14 @@ async function checkSheet(file: string, rows: ContentRows, lexicon: Lexicon): Pr
     const before = buildEntry(rows, word);
     const changed = changedFields(before, entry);
     const problems = [...checkContent(entry, env), ...checkReview(entry, changed)];
+    if (changed.includes('partOfSpeech')) {
+      const kept = entry.otherSenses.filter((s) => before.otherSenses.includes(s));
+      if (kept.length > 0) {
+        problems.push(
+          `the part of speech changed, but otherSenses still holds senses of the old one: ${kept.map((s) => `"${s.slice(0, 40)}"`).join(', ')}`,
+        );
+      }
+    }
     for (const wa of entry.wrongAnswers) owners.set(wa.meaning.trim().toLowerCase(), entry.wordId);
     return { entry, before, changed, problems };
   });
@@ -236,8 +253,9 @@ async function apply(file: string): Promise<void> {
 
     if (has('partOfSpeech')) {
       await store.updateWordMeta(word.id, { part_of_speech: entry.partOfSpeech });
-      // The other senses belong to the old part of speech.
-      await store.removeOtherSenses(word.id, primary.id);
+    }
+    if (has('partOfSpeech') || has('otherSenses')) {
+      await store.setOtherSenses(word.id, primary.id, entry.otherSenses);
     }
     if (has('definition') || has('plain')) {
       await store.updateSense(primary.id, {
@@ -308,6 +326,8 @@ async function apply(file: string): Promise<void> {
       verdict: entry.review.verdict!,
       changed,
       notes: entry.review.notes.trim(),
+      checker_scores: Object.fromEntries(CRITERIA.map((c) => [c, entry.checker.scores![c]!])),
+      checker_notes: entry.checker.notes.trim(),
     });
   }
   await store.flush();

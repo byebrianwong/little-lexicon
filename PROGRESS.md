@@ -2181,9 +2181,51 @@ the worksheet failed with all three planted errors.
   reading the record), and the dry run still passes.
 - App: `tsc`, lint and 199 unit tests pass against the new words file.
 
-### Next
+### Second review (added the same day)
 
-- 304 words to review. `npx tsx src/curate.ts status` lists the most common
-  problems: every first-pass wrong answer lacks a look-alike word, 159 words
-  have WordNet fragments as examples, 3 plain definitions still give the answer
-  away.
+The writer scoring its own work proved unreliable. A second reviewer (a subagent
+that did not write the content) failed 9 of the 13 words the writer had scored 4
+or 5. Its main finding: definitions and wrong answers that reproduced Oxford,
+Cambridge or Longman wording, confirmed by web search. Models write stock
+dictionary definitions without noticing. It also caught related words from the
+wrong sense, weak look-alikes (mystic for caustic), examples that give no clue
+in the cloze game, and a duplicate sense (catalyst had its everyday meaning twice
+and had lost the chemistry one).
+
+What changed in the process:
+
+- `check` and `apply` now require the second reviewer's scores
+  (`checker.scores`). A word passes only when both reviewers give 4 or more, or
+  when it is flagged. Reviews store `checker_scores` and `checker_notes`.
+- The skill holds the exact prompt for the second reviewer, and the line on
+  copying: a whole dictionary definition, word for word or with one word
+  changed, scores 3; short shared phrasing can score 4. After three review
+  rounds a word is flagged instead of looping.
+- `otherSenses` is editable and checked (no repeats of the first sense, no
+  naming the word). The giveaway check now also catches words built on the
+  headword ("aesthetically", "abatement").
+- `next` picks words reviewed without a second reviewer first.
+
+All 13 words went through it: three rounds for most, four for aesthetic and
+precipitate. Final result: 12 fixed, 1 pass, 0 flagged, every second-reviewer
+score 4 or more.
+
+The Gemini first pass probably contains copied dictionary phrasing too, mostly
+in wrong answers. Curation will catch it word by word.
+
+### Where to pick up
+
+- Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-04:
+  13 of 317 words reviewed, 304 to go. Every unreviewed word lacks look-alike
+  words for its wrong answers, 159 have fragment examples, 3 plain definitions
+  give the answer away (`next` puts those first).
+- Plan for about 12 words per worksheet and up to three second-review rounds.
+- Add a line below for each batch: date, words, verdicts, anything learned.
+
+### Curation log
+
+- 2026-10-04: 13 words (aesthetic, ascetic, capricious, castigate, catalyst,
+  caustic, derivative, precipitate, prolific, propensity, propitiate, prosaic,
+  reticent). 12 fixed, 1 pass. derivative became the adjective and precipitate
+  the verb.

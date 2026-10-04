@@ -41,9 +41,8 @@ export interface WorksheetEntry {
   wordId: number;
   headword: string;
   tier: number;
-  otherSenses: string[];
-  // Editable content. All of it is about the word's first sense, which is the
-  // one every screen and game uses.
+  // Editable content. Most of it is about the word's first sense, which is
+  // the one every screen and game uses.
   partOfSpeech: string;
   definition: string;
   plain: string;
@@ -52,12 +51,19 @@ export interface WorksheetEntry {
   hook: string;
   synonyms: string[];
   antonyms: string[];
+  /** Definitions of the word's other senses, same part of speech, in order. */
+  otherSenses: string[];
   /** What the checks found in the record's current content (read-only). */
   problems?: string[];
   // Filled in by the reviewer.
   review: {
     scores: Partial<Record<Criterion, number>> | null;
     verdict: Verdict | null;
+    notes: string;
+  };
+  // Filled in by a second reviewer: a subagent that did not write the content.
+  checker: {
+    scores: Partial<Record<Criterion, number>> | null;
     notes: string;
   };
 }
@@ -71,7 +77,8 @@ export interface Worksheet {
 
 export const WORKSHEET_INSTRUCTIONS =
   'Edit the content fields of each word, then fill in review.scores (1 to 5 for every ' +
-  'criterion), review.verdict and review.notes. The rubric is in ' +
+  'criterion), review.verdict and review.notes. Then have a subagent that did not write the ' +
+  'content fill in checker.scores and checker.notes. The rubric and the steps are in ' +
   '.claude/skills/improve-words/SKILL.md. Check with `npx tsx src/curate.ts check <file>`, ' +
   'then apply with `npx tsx src/curate.ts apply <file>`.';
 
@@ -83,6 +90,19 @@ const letters = (s: string): string => s.toLowerCase().replace(/[^a-z]/g, '');
 const isSentence = (s: string): boolean => /^[A-Z"']/.test(s.trim()) && /[.!?]["']?$/.test(s.trim());
 const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).length;
 
+/**
+ * Whether text uses the word or a word built on it: an inflection
+ * ("abated"), or any word that starts with it ("aesthetically",
+ * "abatement"). A definition that does this gives the answer away.
+ */
+export function namesWord(text: string, word: string): boolean {
+  if (findWordToken(text, word)) return true;
+  const stem = word.toLowerCase().replace(/e$/, '');
+  return (text.toLowerCase().match(/[a-z]+/g) ?? []).some(
+    (t) => t.length > word.length && t.startsWith(stem),
+  );
+}
+
 export interface CheckEnv {
   lexicon: Lexicon;
   /** Wrong answers (lowercased) already used by words outside this worksheet, to their word id. */
@@ -93,9 +113,9 @@ export interface CheckEnv {
 export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
   const p: string[] = [];
   const word = entry.headword;
-  const mentions = (text: string): boolean => findWordToken(text, word) !== null;
+  const mentions = (text: string): boolean => namesWord(text, word);
 
-  const content = { ...entry, problems: undefined, review: undefined };
+  const content = { ...entry, problems: undefined, review: undefined, checker: undefined };
   if (JSON.stringify(content).includes('\u2014')) p.push('contains an em dash');
   if (!PARTS_OF_SPEECH.includes(entry.partOfSpeech)) {
     p.push(`partOfSpeech must be one of ${PARTS_OF_SPEECH.join(', ')}`);
@@ -161,6 +181,20 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
   if (hook.length < 20 || hook.length > 240) p.push('hook must be 20 to 240 characters');
   if (!letters(hook).includes(letters(word))) p.push('hook must name the word');
 
+  // Other senses: not shown on most screens, but their definitions become
+  // fallback wrong answers for other words, so they must be clean too.
+  if (entry.otherSenses.length > 3) p.push('at most 3 other senses');
+  const senseTexts = new Set([key(entry.definition)]);
+  for (const other of entry.otherSenses) {
+    const where = `other sense "${other.slice(0, 40)}"`;
+    if (!isSentence(other) || other.length < 10 || other.length > 220) {
+      p.push(`${where} must be one sentence of 10 to 220 characters, capitalized, ending in a period`);
+    }
+    if (mentions(other)) p.push(`${where} names the word`);
+    if (senseTexts.has(key(other))) p.push(`${where} repeats another sense`);
+    senseTexts.add(key(other));
+  }
+
   // Related words appear as answer options in the synonym and antonym games.
   const seenRelated = new Set<string>();
   for (const [label, list] of [['synonym', entry.synonyms], ['antonym', entry.antonyms]] as const) {
@@ -178,23 +212,39 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
   return p;
 }
 
-/** Review problems: the scores and verdict must be filled in and consistent. */
-export function checkReview(entry: WorksheetEntry, changed: string[]): string[] {
+function scoreProblems(label: string, scores: Partial<Record<Criterion, number>> | null): string[] {
+  if (!scores) return [`${label}.scores is not filled in`];
   const p: string[] = [];
-  const { scores, verdict, notes } = entry.review;
-  if (!scores) return ['review.scores is not filled in'];
   for (const c of CRITERIA) {
     const s = scores[c];
-    if (s === undefined) p.push(`review.scores.${c} is missing`);
-    else if (!Number.isInteger(s) || s < 1 || s > 5) p.push(`review.scores.${c} must be a whole number from 1 to 5`);
+    if (s === undefined) p.push(`${label}.scores.${c} is missing`);
+    else if (!Number.isInteger(s) || s < 1 || s > 5) p.push(`${label}.scores.${c} must be a whole number from 1 to 5`);
   }
+  return p;
+}
+
+/**
+ * Review problems: the writer's and the second reviewer's scores must be
+ * filled in, and the verdict must agree with both and with the changes.
+ */
+export function checkReview(entry: WorksheetEntry, changed: string[]): string[] {
+  const { scores, verdict, notes } = entry.review;
+  const p = [...scoreProblems('review', scores), ...scoreProblems('checker', entry.checker?.scores ?? null)];
+  if (p.length > 0) return p;
   if (verdict !== 'pass' && verdict !== 'fixed' && verdict !== 'flagged') {
     p.push('review.verdict must be "pass", "fixed" or "flagged"');
     return p;
   }
-  const low = CRITERIA.filter((c) => (scores[c] ?? 0) < PASS_SCORE);
+  const low = CRITERIA.filter((c) => (scores![c] ?? 0) < PASS_SCORE);
   if (verdict !== 'flagged' && low.length > 0) {
     p.push(`verdict "${verdict}" needs every score at ${PASS_SCORE} or more; low: ${low.join(', ')}. Fix them or flag the word.`);
+  }
+  const checkerLow = CRITERIA.filter((c) => (entry.checker.scores![c] ?? 0) < PASS_SCORE);
+  if (verdict !== 'flagged' && checkerLow.length > 0) {
+    p.push(
+      `the second reviewer scored ${checkerLow.join(', ')} under ${PASS_SCORE} ` +
+        `(${entry.checker.notes || 'no notes'}). Fix the content and ask again, or flag the word.`,
+    );
   }
   if (verdict === 'flagged' && notes.trim().length < 15) p.push('a flagged word needs notes saying what is still wrong');
   if (verdict === 'pass' && changed.length > 0) p.push(`verdict "pass" but these fields changed: ${changed.join(', ')}; use "fixed"`);
@@ -206,6 +256,7 @@ export function checkReview(entry: WorksheetEntry, changed: string[]): string[] 
 export function changedFields(before: WorksheetEntry, after: WorksheetEntry): string[] {
   const fields: (keyof WorksheetEntry)[] = [
     'partOfSpeech',
+    'otherSenses',
     'definition',
     'plain',
     'examples',
@@ -259,6 +310,7 @@ export function buildEntry(rows: ContentRows, word: WordRow): WorksheetEntry {
     synonyms: relations.filter((r) => r.relation_type === 'synonym').map((r) => r.related_lemma),
     antonyms: relations.filter((r) => r.relation_type === 'antonym').map((r) => r.related_lemma),
     review: { scores: null, verdict: null, notes: '' },
+    checker: { scores: null, notes: '' },
   };
 }
 

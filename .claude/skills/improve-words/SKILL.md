@@ -14,6 +14,20 @@ This costs nothing beyond the Claude Code session. Do not call the Claude or
 Gemini APIs, and do not ask for an API key. (The pipeline's Gemini stages are an
 older, separate path. They skip any word curated here.)
 
+## Start here
+
+A new session picks up where the last one stopped:
+
+1. `cd pipeline && npm ci` if `node_modules` is missing.
+2. `npx tsx src/curate.ts status`. It shows how many words are reviewed, which
+   are flagged for a person, and the most common problems in the rest.
+3. Run the loop below. `next` chooses the words: first any reviewed without a
+   second reviewer, then words that give the answer away, then the rest in
+   record order.
+4. After `apply`, commit, open or update a pull request, and add a line to the
+   "Curation log" at the end of PROGRESS.md (date, words, verdicts, anything new
+   you learned).
+
 ## The loop
 
 Run these from `pipeline/` (run `npm ci` there first if `node_modules` is
@@ -31,14 +45,62 @@ missing).
    - Rewrite every field that scores under 4. Then score the content as it now
      stands.
    - Fill in `review.scores`, `review.verdict` and `review.notes`.
-4. `npx tsx src/curate.ts check <worksheet>` runs the checks. Fix and repeat
-   until every word says `ok`.
-5. `npx tsx src/curate.ts apply <worksheet>` writes the record
+4. Get a second review (see below). `check` and `apply` refuse a word without
+   one.
+5. `npx tsx src/curate.ts check <worksheet>` runs the checks. Fix and repeat
+   until every word says `ok`. If you change a word's content after the second
+   reviewer scored it, clear its `checker.scores` (set them to null) and ask
+   again.
+6. `npx tsx src/curate.ts apply <worksheet>` writes the record
    (`pipeline/data/content-db.json`) and exports `src/content/words.json`. It
    writes nothing if any word fails.
-6. From the repo root, run `npx jest src/lib/content` to check the exported
+7. From the repo root, run `npx jest src/lib/content` to check the exported
    file. Commit the record and the words file together, and list the words in
    the commit message.
+
+## The second review
+
+You cannot judge your own writing fairly. Before `check`, give the worksheet to
+a subagent (the Agent tool, `general-purpose`) that did not write it. It fills
+in each word's `checker.scores` and `checker.notes`. A word passes only when
+both your scores and the second reviewer's are 4 or more, or when you flag it.
+
+On the first batch the second reviewer failed 9 of 13 words that the writer had
+scored 4 or 5. The main reason: definitions and wrong answers that matched
+Oxford's wording, which a writer does not notice in its own text. Use this
+prompt, with the paths filled in:
+
+> You are the independent second reviewer for word entries in a vocabulary app
+> for adults studying for tests like the GRE. Another session wrote them. Score
+> them honestly and strictly. Read the sections "What the app shows" and "The
+> rubric" in `.claude/skills/improve-words/SKILL.md`. Then, for each word in
+> `<worksheet>`: do not read the `review` block (the writer's own scores);
+> score the 7 criteria from 1 to 5 from the content fields alone; check
+> accuracy, that each wrong answer really is the meaning of its look-alike and
+> not of the target, that etymologies are true, that related words fit the
+> first sense, that examples give a clue in the cloze game, and that no text
+> copies Oxford, Merriam-Webster or another commercial dictionary (search the
+> web for any phrase that sounds like a stock definition). Write only each
+> word's `checker.scores` (keys: sense, definition, plain, examples,
+> wrongAnswers, hook, related) and `checker.notes` (what is wrong for every
+> score under 4, otherwise the weakest point). Do not edit anything else. Then
+> run `npx tsx src/curate.ts check <worksheet>` from `pipeline/` and report a
+> table of scores and every note under 4.
+
+When it reports back, fix what it found, clear the `checker` block of each word
+you changed, and send those words back to the same subagent (SendMessage) to
+score again.
+
+Where to draw the line on copying (agreed on the first batch): a definition,
+wrong answer or other sense scores 3 when it reproduces a dictionary's whole
+definition word for word or with one word changed, and a search confirms the
+source. Short common phrasing that several dictionaries share ("unwilling to take
+risks") can score 4 with a note. Fix the 3s; do not chase every 4.
+
+Stop after three review rounds on a word. If it still has a score under 4, flag
+it with notes saying what is left, and move on.
+
+## Batch size
 
 Worksheets of 10 to 15 words work well. For a big run, split the words into
 several worksheets and give each one to a subagent (the Agent tool) to edit.
@@ -80,7 +142,8 @@ An entry is done when every score is 4 or 5. The verdict is:
 
 ### sense
 
-The first sense is the meaning an advanced learner most needs.
+The first sense is the meaning an advanced learner most needs, and the other
+senses are clean.
 
 - Low: WordNet's first sense is technical or rare. "derivative" came through as
   the calculus noun. The test meaning is the adjective, "imitative of someone
@@ -89,6 +152,14 @@ The first sense is the meaning an advanced learner most needs.
   speech, change `partOfSpeech` too. `apply` then drops the word's other senses,
   because they belong to the old part of speech. Rewrite the examples, wrong
   answers and related words to match.
+- `otherSenses` lists the word's other definitions. They are not shown on most
+  screens, but their text becomes a fallback wrong answer for other words. Keep
+  at most 3. Each must be a different meaning from the first sense and from each
+  other, with the same part of speech, and must not name the word ("Aesthetically
+  pleasing." does). WordNet often lists near copies ("A natural inclination." next
+  to "An inclination to do something."); drop them. If you rewrite the first
+  sense to a different meaning, keep the old meaning as an other sense when it is
+  still useful (catalyst kept its chemistry meaning).
 
 ### definition
 
@@ -98,8 +169,13 @@ An accurate dictionary-style definition of that sense, in one sentence.
 - Low: circular ("Relating to or dealing with the subject of aesthetics") or
   too thin to tell the word apart ("Changeable." for capricious).
 - Keep WordNet's text when it scores 4 or more. It is licensed (CC BY 4.0) and
-  credited in the app. Never copy from Merriam-Webster, Oxford or other
-  commercial dictionaries. Write your own text instead.
+  credited in the app.
+- Never copy from Merriam-Webster, Oxford or other commercial dictionaries.
+  Models reproduce their stock definitions without noticing ("Concerned with
+  beauty or the appreciation of beauty" is Oxford's, word for word), so write
+  each definition from scratch in your own phrasing, and expect the second
+  reviewer to search for matches. This applies to wrong answers and other
+  senses too. Text from the Gemini pass may already contain copied phrases.
 
 ### plain
 
