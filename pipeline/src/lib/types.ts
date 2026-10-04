@@ -11,6 +11,7 @@ export type ContentSource =
   | 'free_dictionary'
   | 'datamuse'
   | 'claude'
+  | 'gemini'
   | 'user'
   | 'manual';
 
@@ -62,6 +63,8 @@ export interface MnemonicRow {
   text: string;
   source: ContentSource;
   user_id: string | null;
+  /** 2 when written by the second pass (lib/revise.ts); absent before it. */
+  revision?: number;
 }
 
 export interface DistractorRow {
@@ -71,6 +74,30 @@ export interface DistractorRow {
   kind: string;
   difficulty: number;
   source: ContentSource;
+  /** 2 when written by the second pass (lib/revise.ts); absent before it. */
+  revision?: number;
+  /** The look-alike word whose meaning this wrong answer is (second pass). */
+  lookalike?: string;
+}
+
+/**
+ * One curation review of a word (lib/curate.ts). The newest review at the
+ * current rubric version is the word's standing verdict.
+ */
+export interface ReviewRow {
+  id: number;
+  word_id: number;
+  rubric_version: number;
+  /** YYYY-MM-DD. */
+  reviewed_at: string;
+  scores: Record<string, number>;
+  verdict: 'pass' | 'fixed' | 'flagged';
+  /** Content fields this review changed. */
+  changed: string[];
+  notes: string;
+  /** Scores from a second reviewer that did not write the content. */
+  checker_scores?: Record<string, number>;
+  checker_notes?: string;
 }
 
 export interface AudioObject {
@@ -85,6 +112,7 @@ export type NewExample = Omit<ExampleRow, 'id'>;
 export type NewRelation = Omit<RelationRow, 'id'>;
 export type NewMnemonic = Omit<MnemonicRow, 'id'>;
 export type NewDistractor = Omit<DistractorRow, 'id'>;
+export type NewReview = Omit<ReviewRow, 'id'>;
 
 /** Body passed to Store.saveAudio. Real bytes in live mode, an estimate in dry-run. */
 export type AudioBody =

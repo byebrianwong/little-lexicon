@@ -26,9 +26,11 @@ import type {
   NewExample,
   NewMnemonic,
   NewRelation,
+  NewReview,
   NewSense,
   NewWord,
   RelationRow,
+  ReviewRow,
   SenseRow,
   WordRow,
 } from './types.ts';
@@ -67,6 +69,27 @@ export interface Store {
   listDistractorsForSense(senseId: number): Promise<DistractorRow[]>;
   insertDistractor(input: NewDistractor): Promise<DistractorRow>;
 
+  /** Swap a sense's wrong answers for new ones (second pass). */
+  replaceDistractors(senseId: number, rows: NewDistractor[]): Promise<void>;
+  /** Swap a word's global (not personalized) mnemonic for a new one. */
+  replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void>;
+
+  // Curation (lib/curate.ts) edits a word's first sense in place.
+  updateSense(
+    senseId: number,
+    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
+  ): Promise<void>;
+  replaceExamples(senseId: number, rows: NewExample[]): Promise<void>;
+  replaceRelations(wordId: number, rows: NewRelation[]): Promise<void>;
+  /**
+   * Make a word's senses after the first match these definitions, in order.
+   * Senses whose definition is unchanged keep their rows; the rest are
+   * removed with their examples and wrong answers.
+   */
+  setOtherSenses(wordId: number, primarySenseId: number, definitions: string[]): Promise<void>;
+  listReviews(): Promise<ReviewRow[]>;
+  addReview(row: NewReview): Promise<ReviewRow>;
+
   hasAudio(path: string): Promise<boolean>;
   saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult>;
   totalAudioBytes(): Promise<number>;
@@ -83,6 +106,8 @@ interface JsonDb {
   mnemonics: MnemonicRow[];
   distractors: DistractorRow[];
   audio_objects: AudioObject[];
+  /** Added with curation; older records have none. */
+  reviews?: ReviewRow[];
 }
 
 const LIVE_NOTE =
@@ -252,6 +277,85 @@ export class JsonFileStore implements Store {
     const row: DistractorRow = { id: this.nextId('distractors'), ...input };
     this.db.distractors.push(row);
     return row;
+  }
+
+  // Content rows, not user data: replacing them is how the second pass
+  // improves wrong answers and hooks. Ids are never reused.
+  async replaceDistractors(senseId: number, rows: NewDistractor[]): Promise<void> {
+    this.db.distractors = this.db.distractors.filter((d) => d.sense_id !== senseId);
+    for (const row of rows) {
+      this.db.distractors.push({ id: this.nextId('distractors'), ...row, sense_id: senseId });
+    }
+  }
+
+  async replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void> {
+    this.db.mnemonics = this.db.mnemonics.filter(
+      (m) => !(m.word_id === wordId && m.user_id === null),
+    );
+    this.db.mnemonics.push({ id: this.nextId('mnemonics'), ...row, word_id: wordId, user_id: null });
+  }
+
+  async updateSense(
+    senseId: number,
+    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
+  ): Promise<void> {
+    const s = this.db.senses.find((x) => x.id === senseId);
+    if (!s) throw new Error(`updateSense: no sense ${senseId}`);
+    Object.assign(s, patch);
+  }
+
+  async replaceExamples(senseId: number, rows: NewExample[]): Promise<void> {
+    this.db.example_sentences = this.db.example_sentences.filter((e) => e.sense_id !== senseId);
+    for (const row of rows) {
+      this.db.example_sentences.push({ id: this.nextId('example_sentences'), ...row, sense_id: senseId });
+    }
+  }
+
+  async replaceRelations(wordId: number, rows: NewRelation[]): Promise<void> {
+    this.db.word_relations = this.db.word_relations.filter((r) => r.word_id !== wordId);
+    for (const row of rows) {
+      this.db.word_relations.push({ id: this.nextId('word_relations'), ...row, word_id: wordId });
+    }
+  }
+
+  async setOtherSenses(wordId: number, primarySenseId: number, definitions: string[]): Promise<void> {
+    const others = this.db.senses.filter((s) => s.word_id === wordId && s.id !== primarySenseId);
+    const keep = new Map<number, number>(); // sense id -> new order
+    const added: SenseRow[] = [];
+    definitions.forEach((definition, i) => {
+      const order = i + 2;
+      const existing = others.find((s) => s.definition.trim() === definition.trim() && !keep.has(s.id));
+      if (existing) keep.set(existing.id, order);
+      else {
+        added.push({
+          id: this.nextId('senses'),
+          word_id: wordId,
+          definition: definition.trim(),
+          plain_language_definition: null,
+          sense_order: order,
+          register: null,
+        });
+      }
+    });
+    const drop = new Set(others.filter((s) => !keep.has(s.id)).map((s) => s.id));
+    this.db.senses = this.db.senses.filter((s) => !drop.has(s.id));
+    for (const s of this.db.senses) {
+      const order = keep.get(s.id);
+      if (order !== undefined) s.sense_order = order;
+    }
+    this.db.senses.push(...added);
+    this.db.example_sentences = this.db.example_sentences.filter((e) => !drop.has(e.sense_id));
+    this.db.distractors = this.db.distractors.filter((d) => !drop.has(d.sense_id));
+  }
+
+  async listReviews(): Promise<ReviewRow[]> {
+    return [...(this.db.reviews ?? [])];
+  }
+
+  async addReview(row: NewReview): Promise<ReviewRow> {
+    const review: ReviewRow = { id: this.nextId('reviews'), ...row };
+    (this.db.reviews ??= []).push(review);
+    return review;
   }
 
   async hasAudio(path: string): Promise<boolean> {

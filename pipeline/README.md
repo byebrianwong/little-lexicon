@@ -36,12 +36,29 @@ with `--only=<stage>`.
 | --- | --- | --- |
 | `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
 | `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
-| `generate` | `src/stages/03-generate.ts` | Claude Batch API: per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Zod-validated before any write. Skipped without `ANTHROPIC_API_KEY`. |
+| `generate` | `src/stages/03-generate.ts` | Per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Claude Batch API when `ANTHROPIC_API_KEY` is set; otherwise Gemini when `GEMINI_API_KEY` is set (eight senses per request, saved as each returns). Zod-validated before any write. Skipped with neither key. |
 | `audio` | `src/stages/04-audio.ts` | TTS every headword and example sentence to MP3 under `out/audio`. Not uploaded, and no `audio_url` is set, until an audio host is chosen. Skipped without `GOOGLE_TTS_API_KEY`. |
 | `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. |
 
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
+
+## Improving entries without an API key
+
+Word entries are reviewed and improved inside a Claude Code session: the
+session's model writes and scores the content, and these commands pick the
+words, check the work and apply it. The process and the scoring rubric are in
+`.claude/skills/improve-words/SKILL.md`.
+
+```bash
+npx tsx src/curate.ts status                 # what is reviewed, what is left
+npx tsx src/curate.ts next --count=12        # write a worksheet to out/curate/
+npx tsx src/curate.ts check <worksheet>      # run the fixed checks
+npx tsx src/curate.ts apply <worksheet>      # write the record, export words.json
+```
+
+Every review is stored in the record's `reviews` table with its scores. The
+Gemini stages (`generate`, `revise`) skip reviewed words.
 
 ## How to run
 
@@ -86,6 +103,14 @@ Copy `.env.example` to `.env` and fill it in. `.env` is git-ignored (root
 the app bundle or any `EXPO_PUBLIC_*` variable (CLAUDE.md > Secrets).
 
 - `ANTHROPIC_API_KEY` - Claude batch generation (stage 03).
+- `GEMINI_API_KEY` - Gemini generation (stage 03), used only when there is no
+  Anthropic key. Each request tries `gemini-3.8-flash`, then `gemini-3.7-flash`,
+  then `gemini-3.5-flash-lite`; set `GEMINI_MODEL` to a comma-separated list to
+  change that. Free-tier limits depend on the Google project, and a model can
+  answer 503 "high demand" for minutes while an older one works. Requests go
+  one at a time and back off on HTTP 429 or 5xx. If no model answers, or every
+  model's daily quota is spent, the stage stops with its progress saved and the
+  next run continues. Generated rows record `source: 'gemini'`.
 - `GOOGLE_TTS_API_KEY` - text to speech (stage 04). Optional overrides:
   `GOOGLE_TTS_VOICE`, `GOOGLE_TTS_LANGUAGE`.
 

@@ -1,4 +1,4 @@
-// Stage 03 (task 1.3): Claude batch generation.
+// Stage 03 (task 1.3): LLM generation, with Claude or Gemini.
 //
 // For each sense that still lacks it, generate a plain-language definition,
 // 3-5 erudite example sentences (each with a cloze_target token), 4-6
@@ -7,9 +7,12 @@
 // one (task 3.3), so it has to read like a definition. Live mode uses the Anthropic
 // Batch API (50% off) with claude-haiku-4-5, a prompt-cached shared instruction
 // prefix, and escalation to claude-sonnet-5 for items Haiku keeps getting wrong.
-// Dry-run uses deterministic stubs. A live run without ANTHROPIC_API_KEY skips
-// this stage. Every item is Zod-validated before any write; malformed items are
-// rejected and retried, never inserted.
+// With only GEMINI_API_KEY set, Gemini writes the same content instead: eight
+// senses per request, written and saved as each request returns, so a daily
+// quota stops the stage without losing work (see lib/gemini.ts). Dry-run uses
+// deterministic stubs. A live run with neither key skips this stage. Every item
+// is Zod-validated before any write; malformed items are rejected and retried,
+// never inserted.
 
 import Anthropic from '@anthropic-ai/sdk';
 import type { RunContext } from '../config.ts';
@@ -20,6 +23,14 @@ import {
   type GeneratedSense,
 } from '../lib/schema.ts';
 import { stubGenerate } from '../lib/stubs.ts';
+import {
+  chunk,
+  DailyQuotaError,
+  GEMINI_PRICING,
+  GeminiUnavailableError,
+  generateJsonWithFallback,
+  parseBatchResponse,
+} from '../lib/gemini.ts';
 
 const HAIKU = 'claude-haiku-4-5';
 const SONNET = 'claude-sonnet-5';
@@ -33,13 +44,8 @@ const PRICING: Record<string, { in: number; out: number }> = {
   [SONNET]: { in: 2, out: 10 },
 };
 
-/** Stable, cacheable instruction prefix. Keep this identical across items. */
-const PROMPT_PREFIX = `You generate study content for a vocabulary app. You will be given ONE dictionary sense of an English word.
-
-Return ONLY a single JSON object. No prose, no markdown, no code fences.
-
-JSON schema:
-{
+/** The fields and rules for one sense, shared by the Claude and Gemini prompts. */
+const SENSE_CONTRACT = `{
   "sense_id": <the integer sense id you were given>,
   "plain_language_definition": <one clear sentence a teenager could understand>,
   "examples": [
@@ -54,6 +60,25 @@ Rules:
 - Provide between 4 and 6 distractors. Each is a wrong definition that a learner could mistake for this sense: often the meaning of a word that looks or sounds similar, or a plausible guess from the word's parts. Match the dictionary definition in length and style: start with a capital letter, end with a period, and do not use the word itself. None may mean the same thing as the dictionary definition.
 - Include a mnemonic string only when asked; otherwise set "mnemonic" to null.
 - No em dashes. Keep sentences precise and free of hype.`;
+
+/** Stable, cacheable instruction prefix. Keep this identical across items. */
+const PROMPT_PREFIX = `You generate study content for a vocabulary app. You will be given ONE dictionary sense of an English word.
+
+Return ONLY a single JSON object. No prose, no markdown, no code fences.
+
+JSON schema:
+${SENSE_CONTRACT}`;
+
+/** Gemini gets several senses per request. */
+export const GEMINI_SYSTEM = `You generate study content for a vocabulary app. You will be given several dictionary senses of English words, separated by lines containing only ---. Treat each sense on its own.
+
+Return ONLY a JSON object of the form {"items": [...]} with one object per sense, in the order given. No prose, no markdown, no code fences.
+
+Each object in "items":
+${SENSE_CONTRACT}`;
+
+const GEMINI_BATCH_SIZE = 8;
+const GEMINI_REQUEST_GAP_MS = 4_000; // at most 15 requests a minute
 
 interface Needs {
   plainDef: boolean;
@@ -113,7 +138,7 @@ async function computeNeeds(
   };
 }
 
-function buildUserPrompt(item: GenItem): string {
+export function buildUserPrompt(item: GenItem): string {
   const { word, sense, needs } = item;
   return [
     `Word: ${word.headword}`,
@@ -186,9 +211,9 @@ async function runBatch(
     const message = entry.result.message;
     const usage = message.usage;
     const cached = usage.cache_read_input_tokens ?? 0;
-    ctx.metrics.claudeInputTokens += usage.input_tokens + cached;
-    ctx.metrics.claudeOutputTokens += usage.output_tokens;
-    ctx.metrics.claudeCostUsd += claudeCostUsd(
+    ctx.metrics.llmInputTokens += usage.input_tokens + cached;
+    ctx.metrics.llmOutputTokens += usage.output_tokens;
+    ctx.metrics.llmCostUsd += claudeCostUsd(
       model,
       usage.input_tokens + cached,
       usage.output_tokens,
@@ -242,6 +267,92 @@ async function generateWithClaude(
   return out;
 }
 
+// --- Live Gemini path ---
+
+async function generateWithGemini(ctx: RunContext, items: GenItem[]): Promise<void> {
+  const models = ctx.env.geminiModels;
+  const spent = new Set<string>(); // models whose daily quota ran out this run
+  const usedBy = new Map<string, number>(); // model -> senses written
+  const byId = new Map(items.map((i) => [i.sense.id, i]));
+  let written = 0;
+  let pending = items;
+
+  // Pass 1 sends eight senses per request. Passes 2 and 3 retry what failed,
+  // one sense per request, so one bad item cannot sink its neighbours again.
+  for (let pass = 1; pass <= 3 && pending.length > 0; pass += 1) {
+    const batches = chunk(pending, pass === 1 ? GEMINI_BATCH_SIZE : 1);
+    const failed: GenItem[] = [];
+    for (const [index, batch] of batches.entries()) {
+      if (index > 0 || pass > 1) await new Promise((r) => setTimeout(r, GEMINI_REQUEST_GAP_MS));
+      let result;
+      try {
+        result = await generateJsonWithFallback(
+          models,
+          {
+            apiKey: ctx.env.geminiKey!,
+            system: GEMINI_SYSTEM,
+            prompt: batch.map(buildUserPrompt).join('\n---\n'),
+          },
+          spent,
+          (message) => ctx.log.info(`Gemini ${message}`),
+        );
+      } catch (err) {
+        // Neither clears by retrying now. Stop the stage but keep the run
+        // going, so what was written is saved and exported.
+        if (err instanceof DailyQuotaError || err instanceof GeminiUnavailableError) {
+          const why = err instanceof DailyQuotaError ? 'daily quota reached' : 'still unavailable';
+          ctx.log.warn(
+            `Gemini ${why} after ${written} of ${items.length} senses. Everything written so far ` +
+              `is saved; run the pipeline again later to fill the rest. (${err.message})`,
+          );
+          return;
+        }
+        throw err;
+      }
+
+      ctx.metrics.llmInputTokens += result.inputTokens;
+      ctx.metrics.llmOutputTokens += result.outputTokens;
+      const price = GEMINI_PRICING[result.model];
+      if (price) {
+        ctx.metrics.llmCostUsd +=
+          (result.inputTokens / 1e6) * price.in + (result.outputTokens / 1e6) * price.out;
+      }
+
+      const parsed = parseBatchResponse(
+        result.text,
+        batch.map((b) => b.sense.id),
+      );
+      for (const [senseId, gen] of parsed.valid) {
+        await writeGenerated(ctx, byId.get(senseId)!, gen);
+        written += 1;
+      }
+      usedBy.set(result.model, (usedBy.get(result.model) ?? 0) + parsed.valid.size);
+      for (const senseId of parsed.failed) failed.push(byId.get(senseId)!);
+      if (parsed.errors.length > 0) {
+        ctx.log.debug(`pass ${pass} batch ${index + 1}: ${parsed.errors.join('; ')}`);
+      }
+      await ctx.store.flush(); // keep progress if the run stops
+      if ((index + 1) % 10 === 0 || index === batches.length - 1) {
+        ctx.log.info(`Gemini pass ${pass}: ${index + 1}/${batches.length} requests, ${written} senses written.`);
+      }
+    }
+    pending = failed;
+  }
+
+  if (usedBy.size > 0) {
+    ctx.log.info(
+      `Gemini models used: ${[...usedBy].map(([m, n]) => `${m} ${n} senses`).join(', ')}.`,
+    );
+  }
+  if (pending.length > 0) {
+    ctx.metrics.invalidRejected += pending.length;
+    ctx.log.warn(
+      `${pending.length} senses still invalid after three passes; leaving gaps: ` +
+        pending.map((p) => p.word.headword).join(', '),
+    );
+  }
+}
+
 // --- Dry-run stub path ---
 
 function generateWithStub(
@@ -263,11 +374,16 @@ function generateWithStub(
 
     const inputTokens = prefixTokens + estTokens(buildUserPrompt(item));
     const outputTokens = estTokens(JSON.stringify(parsed.data));
-    ctx.metrics.claudeInputTokens += inputTokens;
-    ctx.metrics.claudeOutputTokens += outputTokens;
-    ctx.metrics.claudeCostUsd += claudeCostUsd(HAIKU, inputTokens, outputTokens, prefixTokens);
+    ctx.metrics.llmInputTokens += inputTokens;
+    ctx.metrics.llmOutputTokens += outputTokens;
+    ctx.metrics.llmCostUsd += claudeCostUsd(HAIKU, inputTokens, outputTokens, prefixTokens);
   }
   return out;
+}
+
+/** Provenance for generated rows. Dry-run stubs keep 'claude', as before. */
+function generatedBy(ctx: RunContext): 'claude' | 'gemini' {
+  return ctx.llm === 'gemini' ? 'gemini' : 'claude';
 }
 
 async function writeGenerated(
@@ -289,7 +405,7 @@ async function writeGenerated(
         text: ex.text,
         audio_url: null,
         cloze_target: ex.cloze_target,
-        source: 'claude',
+        source: generatedBy(ctx),
         is_generated: true,
       });
       ctx.metrics.generatedExamples += 1;
@@ -303,7 +419,7 @@ async function writeGenerated(
         distractor_lemma: lemma,
         kind: 'mc',
         difficulty: word.difficulty_tier,
-        source: 'claude',
+        source: generatedBy(ctx),
       });
       ctx.metrics.distractorsInserted += 1;
     }
@@ -313,7 +429,7 @@ async function writeGenerated(
     await ctx.store.insertMnemonic({
       word_id: word.id,
       text: gen.mnemonic,
-      source: 'claude',
+      source: generatedBy(ctx),
       user_id: null,
     });
     ctx.metrics.mnemonicsInserted += 1;
@@ -321,9 +437,14 @@ async function writeGenerated(
 }
 
 export async function generate(ctx: RunContext): Promise<void> {
-  ctx.log.stage('03 Claude batch generation');
+  ctx.log.stage('03 generate with an LLM');
   const allWords = await ctx.store.listWords();
-  const words = ctx.limit ? allWords.slice(0, ctx.limit) : allWords;
+  // Words reviewed by curation (.claude/skills/improve-words) are owned by
+  // that process; an LLM stage must not overwrite them.
+  const reviewed = new Set((await ctx.store.listReviews()).map((r) => r.word_id));
+  const words = (ctx.limit ? allWords.slice(0, ctx.limit) : allWords).filter(
+    (w) => !reviewed.has(w.id),
+  );
 
   const items: GenItem[] = [];
   for (const word of words) {
@@ -339,31 +460,38 @@ export async function generate(ctx: RunContext): Promise<void> {
     ctx.log.success('Generate: nothing to do, all senses already complete.');
     return;
   }
-  if (!ctx.dryRun && !ctx.useClaude) {
+  if (!ctx.dryRun && ctx.llm === null) {
     ctx.log.warn(
-      `Generate: skipped. ${items.length} senses need content, and ANTHROPIC_API_KEY is not set ` +
-        `in pipeline/.env.`,
+      `Generate: skipped. ${items.length} senses need content, and neither ANTHROPIC_API_KEY ` +
+        `nor GEMINI_API_KEY is set in pipeline/.env.`,
     );
     return;
   }
 
-  ctx.log.info(
-    `Generating for ${items.length} senses via ${ctx.useClaude ? 'Claude batch' : 'dry-run stubs'}.`,
-  );
-  const generated = ctx.useClaude
-    ? await generateWithClaude(ctx, items)
-    : generateWithStub(ctx, items);
+  const via =
+    ctx.llm === 'claude'
+      ? 'Claude batch'
+      : ctx.llm === 'gemini'
+        ? `Gemini (${ctx.env.geminiModels.join(', then ')})`
+        : 'dry-run stubs';
+  ctx.log.info(`Generating for ${items.length} senses via ${via}.`);
 
-  for (const item of items) {
-    const gen = generated.get(item.sense.id);
-    if (!gen) continue; // rejected after retries; leave the gap
-    await writeGenerated(ctx, item, gen);
+  if (ctx.llm === 'gemini') {
+    await generateWithGemini(ctx, items); // writes and saves as it goes
+  } else {
+    const generated =
+      ctx.llm === 'claude' ? await generateWithClaude(ctx, items) : generateWithStub(ctx, items);
+    for (const item of items) {
+      const gen = generated.get(item.sense.id);
+      if (!gen) continue; // rejected after retries; leave the gap
+      await writeGenerated(ctx, item, gen);
+    }
   }
 
   await ctx.store.flush();
   ctx.log.success(
     `Generate: +${ctx.metrics.plainDefsWritten} plain defs, +${ctx.metrics.generatedExamples} examples, ` +
       `+${ctx.metrics.distractorsInserted} distractors, +${ctx.metrics.mnemonicsInserted} mnemonics. ` +
-      `Rejected ${ctx.metrics.invalidRejected}. Est. Claude cost $${ctx.metrics.claudeCostUsd.toFixed(4)}.`,
+      `Rejected ${ctx.metrics.invalidRejected}. Est. cost $${ctx.metrics.llmCostUsd.toFixed(4)} if billed.`,
   );
 }

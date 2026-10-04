@@ -2058,3 +2058,174 @@ what it finds. A second run finds nothing and does nothing.
   higher than the queue once a word the user studied is removed from the file.
 - The Postgres content tables are still there, with their client read
   policies. Dropping them is a separate decision.
+
+## Generated content for all 317 words, written by Gemini
+
+Every word now has a plain-language definition, generated example sentences
+(so every word supports the cloze game), wrong definitions for multiple choice,
+and a memory hook. Before this, words had WordNet content only.
+
+### What was built
+
+- Stage 03 can use Google Gemini when `GEMINI_API_KEY` is set and
+  `ANTHROPIC_API_KEY` is not (Brian's choice; there was no Anthropic key). It
+  calls the REST `generateContent` endpoint with a JSON response schema, so no
+  new dependency. Eight senses go in each request, and every item passes the
+  same Zod schema as Claude output before it is written.
+- Each request tries `gemini-3.8-flash`, then `gemini-3.7-flash`, then
+  `gemini-3.5-flash-lite` (`GEMINI_MODEL` overrides the list). Results are
+  saved as each request returns. If no model answers, or every daily quota is
+  spent, the stage stops, the export still runs, and the next run continues.
+- Generated rows record `source: 'gemini'`. The schema now rejects em dashes.
+- The Claude prompt text is unchanged; its field list and rules are shared with
+  the Gemini prompt.
+
+### What happened on the run
+
+The free tier was unreliable. `gemini-3.8-flash` answered 503 "high demand"
+for minutes at a time, then its free daily quota ran out after about 20
+requests (most spent on failed attempts and diagnosis). `gemini-3.7-flash`
+wrote 16 senses before its quota ran out. `gemini-3.5-flash-lite` wrote the
+other 537. `gemini-3.8-flash` wrote the 4 senses of the first 3 words in a test
+run. 553 senses, 0 rejected, about 175,000 tokens: $0.31 if billed at paid
+rates, $0 on the free tier.
+
+### Quality, from a read of samples
+
+- Plain definitions and example sentences are good.
+- Wrong definitions are usable but often too easy (for capricious: "Related to
+  the study of capybaras and similar rodents"). 23 of 2,617 repeat across
+  words. At least one has a typo ("Ressembling lace"). The 3.8-flash sample was
+  clearly better: its wrong definitions were real meanings of look-alike words.
+- Memory hooks are often weak or incoherent (ubiquitous: "you-be-quitters
+  because ubiquitous things are everywhere you quit looking for them"). They
+  show on every new-word card.
+- Three hooks had em dashes; they were fixed by hand in the record.
+- "derivative" is still taught as the calculus noun (a WordNet sense choice),
+  and its generated content follows that sense.
+
+### Verified
+
+- Pipeline: `tsc` and 28 unit tests pass (new: the Gemini client, fallback,
+  rate limits and outages against a fake server, and em dash rejection).
+- App: `tsc`, lint and 177 unit tests pass against the new words file (every
+  cloze target appears in its sentence, every tier has words).
+- Web export: the words script is 812 KB (197 KB compressed), still separate
+  from the 2.85 MB entry bundle. In the browser, a new-word card showed the
+  plain definition, an example and a memory hook, and multiple choice used the
+  generated wrong definitions. No console errors.
+
+### For later
+
+- The weak hooks and easy distractors could be regenerated with
+  `gemini-3.8-flash` once its daily quota resets. Stage 03 only fills gaps, so
+  that needs a flag to regenerate existing rows, or deleting the rows first.
+- At this size a words file for 8,000 words would be about 5 MB compressed.
+  Split it (by tier, for example) before the list grows that far.
+- The Gemini key was pasted into a chat on 2026-09-27. Rotate it.
+
+## Word curation inside Claude Code sessions, with no paid API
+
+Word entries are now improved by the Claude Code session itself: its model
+reads entries, scores them against a rubric, rewrites what is weak, and tools
+in `pipeline/` check and apply the result. No API key and no per-token cost.
+The process is the `improve-words` project skill,
+`.claude/skills/improve-words/SKILL.md`.
+
+### What was built
+
+- `pipeline/src/curate.ts` with four commands: `status`, `next` (writes a
+  worksheet of 10 to 15 words to `pipeline/out/curate/`), `check` and `apply`.
+  `apply` refuses the whole worksheet if any word fails, then writes the record
+  and exports `src/content/words.json`.
+- `pipeline/src/lib/curate.ts`: the worksheet format, the rubric's criteria
+  (`sense`, `definition`, `plain`, `examples`, `wrongAnswers`, `hook`,
+  `related`, scored 1 to 5, done at 4 or more), and the fixed checks.
+- A `reviews` table in the record. Each review keeps its rubric version, scores,
+  verdict (`pass`, `fixed` or `flagged`), changed fields and notes.
+- The Gemini `generate` and `revise` stages skip reviewed words, so they cannot
+  overwrite curated content.
+- `.gitignore` now commits `.claude/skills/` while the rest of `.claude/`
+  (worktrees, launch.json) stays local.
+
+### Decisions
+
+**The fixed checks cover what code can judge.** The plain definition must not
+name the word, because the "which word means" question shows it as the prompt
+(12 words gave the answer away). Examples must be full sentences that use the
+word, with the cloze target as written. Each wrong answer needs a look-alike
+word that WordNet lists with the target's part of speech, and no wrong answer
+may repeat across words. No em dashes. The hook must name the word. Related
+words must be in WordNet and not offensive. Quality beyond that is the rubric's
+job, and the scores are stored so it can be audited.
+
+**Only the first sense is curated.** Every screen and game uses it. Changing a
+word's part of speech drops its other senses, because they belong to the old
+part of speech.
+
+**The skill lives in the repo.** Any session on any machine finds it, and the
+rubric changes together with the tools and the content. Bumping
+`RUBRIC_VERSION` marks every word unreviewed again.
+
+### First batch
+
+13 words, all `fixed`: 9 of the 12 plain-definition giveaways, plus aesthetic, ascetic and
+precipitate (definitions that named the word), and derivative. derivative is
+now the adjective ("Copied or adapted from the work of others; not original.")
+and precipitate the verb; both keep their ids. A deliberately broken copy of
+the worksheet failed with all three planted errors.
+
+### Verified
+
+- Pipeline: `tsc` and 48 unit tests pass (new: curation checks, review rules,
+  reading the record), and the dry run still passes.
+- App: `tsc`, lint and 199 unit tests pass against the new words file.
+
+### Second review (added the same day)
+
+The writer scoring its own work proved unreliable. A second reviewer (a subagent
+that did not write the content) failed 9 of the 13 words the writer had scored 4
+or 5. Its main finding: definitions and wrong answers that reproduced Oxford,
+Cambridge or Longman wording, confirmed by web search. Models write stock
+dictionary definitions without noticing. It also caught related words from the
+wrong sense, weak look-alikes (mystic for caustic), examples that give no clue
+in the cloze game, and a duplicate sense (catalyst had its everyday meaning twice
+and had lost the chemistry one).
+
+What changed in the process:
+
+- `check` and `apply` now require the second reviewer's scores
+  (`checker.scores`). A word passes only when both reviewers give 4 or more, or
+  when it is flagged. Reviews store `checker_scores` and `checker_notes`.
+- The skill holds the exact prompt for the second reviewer, and the line on
+  copying: a whole dictionary definition, word for word or with one word
+  changed, scores 3; short shared phrasing can score 4. After three review
+  rounds a word is flagged instead of looping.
+- `otherSenses` is editable and checked (no repeats of the first sense, no
+  naming the word). The giveaway check now also catches words built on the
+  headword ("aesthetically", "abatement").
+- `next` picks words reviewed without a second reviewer first.
+
+All 13 words went through it: three rounds for most, four for aesthetic and
+precipitate. Final result: 12 fixed, 1 pass, 0 flagged, every second-reviewer
+score 4 or more.
+
+The Gemini first pass probably contains copied dictionary phrasing too, mostly
+in wrong answers. Curation will catch it word by word.
+
+### Where to pick up
+
+- Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-04:
+  13 of 317 words reviewed, 304 to go. Every unreviewed word lacks look-alike
+  words for its wrong answers, 159 have fragment examples, 3 plain definitions
+  give the answer away (`next` puts those first).
+- Plan for about 12 words per worksheet and up to three second-review rounds.
+- Add a line below for each batch: date, words, verdicts, anything learned.
+
+### Curation log
+
+- 2026-10-04: 13 words (aesthetic, ascetic, capricious, castigate, catalyst,
+  caustic, derivative, precipitate, prolific, propensity, propitiate, prosaic,
+  reticent). 12 fixed, 1 pass. derivative became the adjective and precipitate
+  the verb.
