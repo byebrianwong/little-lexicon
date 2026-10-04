@@ -2169,7 +2169,7 @@ rubric changes together with the tools and the content. Bumping
 
 ### First batch
 
-13 words, all `fixed`: the 9 remaining giveaways plus aesthetic, ascetic and
+13 words, all `fixed`: 9 of the 12 plain-definition giveaways, plus aesthetic, ascetic and
 precipitate (definitions that named the word), and derivative. derivative is
 now the adjective ("Copied or adapted from the work of others; not original.")
 and precipitate the verb; both keep their ids. A deliberately broken copy of
