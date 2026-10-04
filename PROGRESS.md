@@ -2123,3 +2123,67 @@ rates, $0 on the free tier.
 - At this size a words file for 8,000 words would be about 5 MB compressed.
   Split it (by tier, for example) before the list grows that far.
 - The Gemini key was pasted into a chat on 2026-09-27. Rotate it.
+
+## Word curation inside Claude Code sessions, with no paid API
+
+Word entries are now improved by the Claude Code session itself: its model
+reads entries, scores them against a rubric, rewrites what is weak, and tools
+in `pipeline/` check and apply the result. No API key and no per-token cost.
+The process is the `improve-words` project skill,
+`.claude/skills/improve-words/SKILL.md`.
+
+### What was built
+
+- `pipeline/src/curate.ts` with four commands: `status`, `next` (writes a
+  worksheet of 10 to 15 words to `pipeline/out/curate/`), `check` and `apply`.
+  `apply` refuses the whole worksheet if any word fails, then writes the record
+  and exports `src/content/words.json`.
+- `pipeline/src/lib/curate.ts`: the worksheet format, the rubric's criteria
+  (`sense`, `definition`, `plain`, `examples`, `wrongAnswers`, `hook`,
+  `related`, scored 1 to 5, done at 4 or more), and the fixed checks.
+- A `reviews` table in the record. Each review keeps its rubric version, scores,
+  verdict (`pass`, `fixed` or `flagged`), changed fields and notes.
+- The Gemini `generate` and `revise` stages skip reviewed words, so they cannot
+  overwrite curated content.
+- `.gitignore` now commits `.claude/skills/` while the rest of `.claude/`
+  (worktrees, launch.json) stays local.
+
+### Decisions
+
+**The fixed checks cover what code can judge.** The plain definition must not
+name the word, because the "which word means" question shows it as the prompt
+(12 words gave the answer away). Examples must be full sentences that use the
+word, with the cloze target as written. Each wrong answer needs a look-alike
+word that WordNet lists with the target's part of speech, and no wrong answer
+may repeat across words. No em dashes. The hook must name the word. Related
+words must be in WordNet and not offensive. Quality beyond that is the rubric's
+job, and the scores are stored so it can be audited.
+
+**Only the first sense is curated.** Every screen and game uses it. Changing a
+word's part of speech drops its other senses, because they belong to the old
+part of speech.
+
+**The skill lives in the repo.** Any session on any machine finds it, and the
+rubric changes together with the tools and the content. Bumping
+`RUBRIC_VERSION` marks every word unreviewed again.
+
+### First batch
+
+13 words, all `fixed`: the 9 remaining giveaways plus aesthetic, ascetic and
+precipitate (definitions that named the word), and derivative. derivative is
+now the adjective ("Copied or adapted from the work of others; not original.")
+and precipitate the verb; both keep their ids. A deliberately broken copy of
+the worksheet failed with all three planted errors.
+
+### Verified
+
+- Pipeline: `tsc` and 48 unit tests pass (new: curation checks, review rules,
+  reading the record), and the dry run still passes.
+- App: `tsc`, lint and 199 unit tests pass against the new words file.
+
+### Next
+
+- 304 words to review. `npx tsx src/curate.ts status` lists the most common
+  problems: every first-pass wrong answer lacks a look-alike word, 159 words
+  have WordNet fragments as examples, 3 plain definitions still give the answer
+  away.

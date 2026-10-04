@@ -2,15 +2,16 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-09-29T08:26:54.588Z"
+    "updatedAt": "2026-10-04T08:25:16.972Z"
   },
   "counters": {
     "words": 317,
     "senses": 557,
-    "example_sentences": 2507,
-    "word_relations": 1316,
-    "distractors": 2932,
-    "mnemonics": 380
+    "example_sentences": 2537,
+    "word_relations": 1387,
+    "distractors": 2992,
+    "mnemonics": 392,
+    "reviews": 13
   },
   "words": [
     {
@@ -753,7 +754,7 @@
     {
       "id": 68,
       "headword": "derivative",
-      "part_of_speech": "noun",
+      "part_of_speech": "adjective",
       "ipa": "/dɪˈɹɪvətɪv/",
       "syllables": 4,
       "frequency_rank": 39759,
@@ -2436,7 +2437,7 @@
     {
       "id": 221,
       "headword": "precipitate",
-      "part_of_speech": "noun",
+      "part_of_speech": "verb",
       "ipa": "/pɹɪˈsɪpɪtət/",
       "syllables": 4,
       "frequency_rank": 52820,
@@ -3585,8 +3586,8 @@
     {
       "id": 11,
       "word_id": 7,
-      "definition": "Relating to or dealing with the subject of aesthetics.",
-      "plain_language_definition": "Connected to the study or principles of art and beauty.",
+      "definition": "Concerned with beauty or the appreciation of beauty.",
+      "plain_language_definition": "Having to do with beauty and how good something looks.",
       "sense_order": 1,
       "register": null
     },
@@ -3865,8 +3866,8 @@
     {
       "id": 46,
       "word_id": 23,
-      "definition": "Pertaining to or characteristic of an ascetic or the practice of rigorous self-discipline.",
-      "plain_language_definition": "Related to a simple, strict lifestyle that avoids luxury and sensory pleasure.",
+      "definition": "Practicing strict self-denial and giving up comfort and pleasure, often for religious reasons.",
+      "plain_language_definition": "Living very simply and refusing comforts and pleasures on purpose.",
       "sense_order": 1,
       "register": null
     },
@@ -4121,8 +4122,8 @@
     {
       "id": 78,
       "word_id": 40,
-      "definition": "Changeable.",
-      "plain_language_definition": "Capricious describes someone or something that changes very quickly and unpredictably.",
+      "definition": "Given to sudden changes of mood or behavior without an obvious reason.",
+      "plain_language_definition": "Likely to change suddenly, so you cannot predict what will happen next.",
       "sense_order": 1,
       "register": null
     },
@@ -4137,8 +4138,8 @@
     {
       "id": 80,
       "word_id": 41,
-      "definition": "Censure severely.",
-      "plain_language_definition": "To castigate means to severely scold or criticize someone for their mistakes.",
+      "definition": "Criticize or reprimand someone severely.",
+      "plain_language_definition": "To scold or criticize someone very harshly.",
       "sense_order": 1,
       "register": null
     },
@@ -4153,8 +4154,8 @@
     {
       "id": 82,
       "word_id": 42,
-      "definition": "(chemistry) a substance that initiates or accelerates a chemical reaction without itself being affected.",
-      "plain_language_definition": "A catalyst is a substance that speeds up a chemical reaction without getting used up itself.",
+      "definition": "Something or someone that causes an important change or event to happen.",
+      "plain_language_definition": "A person or thing that starts or speeds up a big change.",
       "sense_order": 1,
       "register": null
     },
@@ -4170,7 +4171,7 @@
       "id": 84,
       "word_id": 43,
       "definition": "Harsh or corrosive in tone.",
-      "plain_language_definition": "Caustic describes speech or writing that is bitterly sarcastic and biting.",
+      "plain_language_definition": "Bitterly sarcastic in a way that is meant to hurt.",
       "sense_order": 1,
       "register": null
     },
@@ -4481,25 +4482,9 @@
     {
       "id": 123,
       "word_id": 68,
-      "definition": "The result of mathematical differentiation; the instantaneous change of one quantity relative to another; df(x)/dx.",
-      "plain_language_definition": "The mathematical rate at which a function changes at any given point.",
+      "definition": "Copied or adapted from the work of others; not original.",
+      "plain_language_definition": "Copying other people's ideas instead of offering something new.",
       "sense_order": 1,
-      "register": null
-    },
-    {
-      "id": 124,
-      "word_id": 68,
-      "definition": "A compound obtained from, or regarded as derived from, another compound.",
-      "plain_language_definition": "A chemical substance made from another chemical substance.",
-      "sense_order": 2,
-      "register": null
-    },
-    {
-      "id": 125,
-      "word_id": 68,
-      "definition": "A financial instrument whose value is based on another security.",
-      "plain_language_definition": "A financial contract that gets its value from the price of something else.",
-      "sense_order": 3,
       "register": null
     },
     {
@@ -6545,8 +6530,8 @@
     {
       "id": 381,
       "word_id": 221,
-      "definition": "A precipitated solid substance in suspension or after settling or filtering.",
-      "plain_language_definition": "A solid that forms and falls to the bottom of a liquid during a chemical reaction.",
+      "definition": "Cause an event, especially a bad one, to happen suddenly or sooner than expected.",
+      "plain_language_definition": "To make something, usually something bad, happen suddenly or too soon.",
       "sense_order": 1,
       "register": null
     },
@@ -6673,8 +6658,8 @@
     {
       "id": 397,
       "word_id": 232,
-      "definition": "Intellectually productive.",
-      "plain_language_definition": "Someone who is prolific creates a lot of creative or intellectual work.",
+      "definition": "Producing a large amount of work or many results.",
+      "plain_language_definition": "Making a lot of something, such as books, songs or ideas.",
       "sense_order": 1,
       "register": null
     },
@@ -6690,7 +6675,7 @@
       "id": 399,
       "word_id": 233,
       "definition": "An inclination to do something.",
-      "plain_language_definition": "A propensity is a natural urge or tendency to act in a certain way.",
+      "plain_language_definition": "A natural habit or tendency to act in a certain way.",
       "sense_order": 1,
       "register": null
     },
@@ -6713,16 +6698,16 @@
     {
       "id": 402,
       "word_id": 234,
-      "definition": "Make peace with.",
-      "plain_language_definition": "To propitiate someone is to calm them down or win their favor.",
+      "definition": "Win or regain someone's favor by doing something that pleases them.",
+      "plain_language_definition": "To calm someone's anger or win their goodwill by pleasing them.",
       "sense_order": 1,
       "register": null
     },
     {
       "id": 403,
       "word_id": 235,
-      "definition": "Not fanciful or imaginative.",
-      "plain_language_definition": "Something prosaic is dull, ordinary, and lacking poetic flair.",
+      "definition": "Ordinary and dull, with no imagination or excitement.",
+      "plain_language_definition": "Plain and everyday, with nothing interesting or poetic about it.",
       "sense_order": 1,
       "register": null
     },
@@ -7057,8 +7042,8 @@
     {
       "id": 445,
       "word_id": 257,
-      "definition": "Temperamentally disinclined to talk.",
-      "plain_language_definition": "Someone who is reticent prefers to keep quiet and does not share their thoughts easily.",
+      "definition": "Inclined to keep one's thoughts and feelings to oneself.",
+      "plain_language_definition": "Not willing to say much about what you think or feel.",
       "sense_order": 1,
       "register": null
     },
@@ -8159,15 +8144,6 @@
       "is_generated": false
     },
     {
-      "id": 23,
-      "sense_id": 46,
-      "text": "Ascetic practices",
-      "audio_url": null,
-      "cloze_target": "Ascetic",
-      "source": "wordnet",
-      "is_generated": false
-    },
-    {
       "id": 24,
       "sense_id": 47,
       "text": "Be systematically ascetic … do … something for no other reason than that you would rather not do it",
@@ -8294,15 +8270,6 @@
       "is_generated": false
     },
     {
-      "id": 38,
-      "sense_id": 78,
-      "text": "A capricious summer breeze",
-      "audio_url": null,
-      "cloze_target": "capricious",
-      "source": "wordnet",
-      "is_generated": false
-    },
-    {
       "id": 39,
       "sense_id": 79,
       "text": "A capricious refusal",
@@ -8326,15 +8293,6 @@
       "text": "The invasion acted as a catalyst to unite the country",
       "audio_url": null,
       "cloze_target": "catalyst",
-      "source": "wordnet",
-      "is_generated": false
-    },
-    {
-      "id": 42,
-      "sense_id": 84,
-      "text": "Caustic jokes about political assassination, talk-show hosts and medical ethics",
-      "audio_url": null,
-      "cloze_target": "Caustic",
       "source": "wordnet",
       "is_generated": false
     },
@@ -9959,15 +9917,6 @@
       "is_generated": false
     },
     {
-      "id": 223,
-      "sense_id": 397,
-      "text": "A prolific writer",
-      "audio_url": null,
-      "cloze_target": "prolific",
-      "source": "wordnet",
-      "is_generated": false
-    },
-    {
       "id": 224,
       "sense_id": 398,
       "text": "Flying foxes are extremely prolific",
@@ -9991,15 +9940,6 @@
       "text": "The propensity of disease to spread",
       "audio_url": null,
       "cloze_target": "propensity",
-      "source": "wordnet",
-      "is_generated": false
-    },
-    {
-      "id": 227,
-      "sense_id": 403,
-      "text": "A prosaic and unimaginative essay",
-      "audio_url": null,
-      "cloze_target": "prosaic",
       "source": "wordnet",
       "is_generated": false
     },
@@ -11264,42 +11204,6 @@
       "is_generated": true
     },
     {
-      "id": 368,
-      "sense_id": 11,
-      "text": "The architecture critic evaluated the building from a purely aesthetic standpoint.",
-      "audio_url": null,
-      "cloze_target": "aesthetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 369,
-      "sense_id": 11,
-      "text": "Art historians debate the aesthetic value of abstract expressionism.",
-      "audio_url": null,
-      "cloze_target": "aesthetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 370,
-      "sense_id": 11,
-      "text": "Her research paper focused on the aesthetic theory of the nineteenth century.",
-      "audio_url": null,
-      "cloze_target": "aesthetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 371,
-      "sense_id": 11,
-      "text": "Philosophers have discussed aesthetic principles since the time of ancient Greece.",
-      "audio_url": null,
-      "cloze_target": "aesthetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 372,
       "sense_id": 12,
       "text": "The interior designer created a space with a remarkably cohesive aesthetic.",
@@ -12371,33 +12275,6 @@
       "is_generated": true
     },
     {
-      "id": 491,
-      "sense_id": 46,
-      "text": "The monastery was renowned for its ascetic architecture, featuring bare stone walls and unadorned wooden benches.",
-      "audio_url": null,
-      "cloze_target": "ascetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 492,
-      "sense_id": 46,
-      "text": "He adopted an ascetic routine of daily fasting and silent contemplation to prepare for his ordination.",
-      "audio_url": null,
-      "cloze_target": "ascetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 493,
-      "sense_id": 46,
-      "text": "Such ascetic practices were intended to free the mind from terrestrial distractions.",
-      "audio_url": null,
-      "cloze_target": "ascetic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 494,
       "sense_id": 47,
       "text": "The hermit led an ascetic existence in the high desert, subsisting only on wild grains and rainwater.",
@@ -13460,42 +13337,6 @@
       "is_generated": true
     },
     {
-      "id": 612,
-      "sense_id": 78,
-      "text": "The capricious weather ruined our plans for an outdoor picnic.",
-      "audio_url": null,
-      "cloze_target": "capricious",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 613,
-      "sense_id": 78,
-      "text": "She grew tired of working for a boss with such capricious moods.",
-      "audio_url": null,
-      "cloze_target": "capricious",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 614,
-      "sense_id": 78,
-      "text": "Financial markets are notoriously capricious during times of crisis.",
-      "audio_url": null,
-      "cloze_target": "capricious",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 615,
-      "sense_id": 78,
-      "text": "The capricious fashion trends of the nineties have returned to popularity.",
-      "audio_url": null,
-      "cloze_target": "capricious",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 616,
       "sense_id": 79,
       "text": "His capricious decision to quit his job shocked all his colleagues.",
@@ -13528,42 +13369,6 @@
       "text": "The king made several capricious decrees that confused the kingdom.",
       "audio_url": null,
       "cloze_target": "capricious",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 620,
-      "sense_id": 80,
-      "text": "The coach did not hesitate to castigate the team after their dismal performance.",
-      "audio_url": null,
-      "cloze_target": "castigate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 621,
-      "sense_id": 80,
-      "text": "Editors will often castigate poor writing habits in young authors.",
-      "audio_url": null,
-      "cloze_target": "castigate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 622,
-      "sense_id": 80,
-      "text": "The fierce editorial sought to castigate the corrupt politicians.",
-      "audio_url": null,
-      "cloze_target": "castigate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 623,
-      "sense_id": 80,
-      "text": "Parents should guide children rather than constantly castigate them.",
-      "audio_url": null,
-      "cloze_target": "castigate",
       "source": "gemini",
       "is_generated": true
     },
@@ -13604,42 +13409,6 @@
       "is_generated": true
     },
     {
-      "id": 628,
-      "sense_id": 82,
-      "text": "Platinum is often used as a catalyst in automotive exhaust systems.",
-      "audio_url": null,
-      "cloze_target": "catalyst",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 629,
-      "sense_id": 82,
-      "text": "The enzyme acts as a biological catalyst to digest food.",
-      "audio_url": null,
-      "cloze_target": "catalyst",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 630,
-      "sense_id": 82,
-      "text": "Without the proper catalyst, the mixture failed to react.",
-      "audio_url": null,
-      "cloze_target": "catalyst",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 631,
-      "sense_id": 82,
-      "text": "Scientists searched for a new catalyst to lower industrial production costs.",
-      "audio_url": null,
-      "cloze_target": "catalyst",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 632,
       "sense_id": 83,
       "text": "The sudden economic collapse served as a catalyst for widespread revolution.",
@@ -13672,42 +13441,6 @@
       "text": "A good mentor can be a powerful catalyst for personal success.",
       "audio_url": null,
       "cloze_target": "catalyst",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 636,
-      "sense_id": 84,
-      "text": "The critic was known for his caustic reviews that devastated opening night plays.",
-      "audio_url": null,
-      "cloze_target": "caustic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 637,
-      "sense_id": 84,
-      "text": "She regretted her caustic remarks as soon as she saw his hurt expression.",
-      "audio_url": null,
-      "cloze_target": "caustic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 638,
-      "sense_id": 84,
-      "text": "His caustic wit made him both feared and admired in the boardroom.",
-      "audio_url": null,
-      "cloze_target": "caustic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 639,
-      "sense_id": 84,
-      "text": "The debate grew heated as both candidates exchanged caustic insults.",
-      "audio_url": null,
-      "cloze_target": "caustic",
       "source": "gemini",
       "is_generated": true
     },
@@ -15103,114 +14836,6 @@
       "text": "He feared that his peers would deride his artistic ambitions.",
       "audio_url": null,
       "cloze_target": "deride",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 795,
-      "sense_id": 123,
-      "text": "The student calculated the derivative of the polynomial curve.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 796,
-      "sense_id": 123,
-      "text": "In calculus, finding the derivative helps locate maximum values.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 797,
-      "sense_id": 123,
-      "text": "The slope of the tangent line is given by the derivative.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 798,
-      "sense_id": 123,
-      "text": "Physics problems often require taking the derivative of position with respect to time.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 799,
-      "sense_id": 124,
-      "text": "Aspirin is a well-known derivative of salicylic acid.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 800,
-      "sense_id": 124,
-      "text": "The laboratory synthesized a new petroleum derivative for testing.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 801,
-      "sense_id": 124,
-      "text": "Many modern plastics are created as a chemical derivative of oil.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 802,
-      "sense_id": 124,
-      "text": "The pigment was identified as a plant derivative.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 803,
-      "sense_id": 125,
-      "text": "The institutional investor placed a substantial hedge using a complex derivative to mitigate market volatility.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 804,
-      "sense_id": 125,
-      "text": "Regulatory bodies increased oversight after risky derivative trading caused massive banking losses.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 805,
-      "sense_id": 125,
-      "text": "Economists debate whether every modern derivative adds liquidity or simply increases systemic risk.",
-      "audio_url": null,
-      "cloze_target": "derivative",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 806,
-      "sense_id": 125,
-      "text": "Her doctoral thesis analyzed how a specific derivative contract prices credit default swaps.",
-      "audio_url": null,
-      "cloze_target": "derivative",
       "source": "gemini",
       "is_generated": true
     },
@@ -24170,42 +23795,6 @@
       "is_generated": true
     },
     {
-      "id": 1802,
-      "sense_id": 381,
-      "text": "The chemist carefully filtered the red precipitate from the liquid solution.",
-      "audio_url": null,
-      "cloze_target": "precipitate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1803,
-      "sense_id": 381,
-      "text": "After the reagent was added, a heavy precipitate formed at the bottom of the flask.",
-      "audio_url": null,
-      "cloze_target": "precipitate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1804,
-      "sense_id": 381,
-      "text": "They collected the fine precipitate to measure its mass on the scale.",
-      "audio_url": null,
-      "cloze_target": "precipitate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1805,
-      "sense_id": 381,
-      "text": "The unwanted precipitate was washed away with distilled water.",
-      "audio_url": null,
-      "cloze_target": "precipitate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 1806,
       "sense_id": 382,
       "text": "Signing the non-disclosure agreement will preclude any future leaks of company secrets.",
@@ -24746,42 +24335,6 @@
       "is_generated": true
     },
     {
-      "id": 1866,
-      "sense_id": 397,
-      "text": "As a prolific author, she published three novels in a single year.",
-      "audio_url": null,
-      "cloze_target": "prolific",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1867,
-      "sense_id": 397,
-      "text": "The prolific scientist published dozens of papers before turning thirty.",
-      "audio_url": null,
-      "cloze_target": "prolific",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1868,
-      "sense_id": 397,
-      "text": "His prolific output of essays astonished his academic peers.",
-      "audio_url": null,
-      "cloze_target": "prolific",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1869,
-      "sense_id": 397,
-      "text": "She remained a prolific composer throughout her long career.",
-      "audio_url": null,
-      "cloze_target": "prolific",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
       "id": 1870,
       "sense_id": 398,
       "text": "The prolific rabbit population quickly overwhelmed the garden.",
@@ -24958,42 +24511,6 @@
       "text": "He apologized immediately to propitiate his offended colleague.",
       "audio_url": null,
       "cloze_target": "propitiate",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1890,
-      "sense_id": 403,
-      "text": "They discussed prosaic matters like grocery shopping over dinner.",
-      "audio_url": null,
-      "cloze_target": "prosaic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1891,
-      "sense_id": 403,
-      "text": "The architecture of the office building was thoroughly prosaic.",
-      "audio_url": null,
-      "cloze_target": "prosaic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1892,
-      "sense_id": 403,
-      "text": "He preferred a quiet, prosaic life in the countryside.",
-      "audio_url": null,
-      "cloze_target": "prosaic",
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 1893,
-      "sense_id": 403,
-      "text": "Her journal entries detailed the prosaic events of daily routines.",
-      "audio_url": null,
-      "cloze_target": "prosaic",
       "source": "gemini",
       "is_generated": true
     },
@@ -30522,6 +30039,276 @@
       "cloze_target": "indolent",
       "source": "gemini",
       "is_generated": true
+    },
+    {
+      "id": 2508,
+      "sense_id": 11,
+      "text": "The architects argued that the bridge needed aesthetic appeal as well as strength.",
+      "cloze_target": "aesthetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2509,
+      "sense_id": 11,
+      "text": "For purely aesthetic reasons, she painted the old radiator the same color as the wall.",
+      "cloze_target": "aesthetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2510,
+      "sense_id": 11,
+      "text": "The museum's new wing was a practical success but an aesthetic disappointment.",
+      "cloze_target": "aesthetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2511,
+      "sense_id": 46,
+      "text": "The monks kept an ascetic routine of fasting, prayer and long hours of silence.",
+      "cloze_target": "ascetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2512,
+      "sense_id": 46,
+      "text": "Her apartment was almost ascetic, with one chair, one lamp and nothing on the walls.",
+      "cloze_target": "ascetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2513,
+      "sense_id": 46,
+      "text": "He gave up his car and his phone in an ascetic attempt to simplify his life.",
+      "cloze_target": "ascetic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2514,
+      "sense_id": 78,
+      "text": "The weather in the mountains is capricious, so hikers pack for both sun and snow.",
+      "cloze_target": "capricious",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2515,
+      "sense_id": 78,
+      "text": "Employees never knew which rule their capricious manager would enforce on a given day.",
+      "cloze_target": "capricious",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2516,
+      "sense_id": 78,
+      "text": "Investors fled the market, unsettled by capricious swings in interest rates.",
+      "cloze_target": "capricious",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2517,
+      "sense_id": 80,
+      "text": "The coach did not hesitate to castigate the team after their dismal performance.",
+      "cloze_target": "castigate",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2518,
+      "sense_id": 80,
+      "text": "In her review, she castigated the museum for hiding its best paintings in a basement.",
+      "cloze_target": "castigated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2519,
+      "sense_id": 80,
+      "text": "Parents should guide children rather than constantly castigate them.",
+      "cloze_target": "castigate",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2520,
+      "sense_id": 82,
+      "text": "The factory's closure became the catalyst for a new wave of small businesses in town.",
+      "cloze_target": "catalyst",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2521,
+      "sense_id": 82,
+      "text": "Her blunt question acted as a catalyst, and the meeting finally reached a decision.",
+      "cloze_target": "catalyst",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2522,
+      "sense_id": 82,
+      "text": "Historians see the printing press as a catalyst for the spread of new ideas.",
+      "cloze_target": "catalyst",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2523,
+      "sense_id": 84,
+      "text": "The critic was known for caustic reviews that could close a play within a week.",
+      "cloze_target": "caustic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2524,
+      "sense_id": 84,
+      "text": "She regretted her caustic remarks as soon as she saw his hurt expression.",
+      "cloze_target": "caustic",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2525,
+      "sense_id": 84,
+      "text": "His caustic wit made him both feared and admired in the boardroom.",
+      "cloze_target": "caustic",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2526,
+      "sense_id": 381,
+      "text": "The bank's collapse precipitated a crisis that spread across the whole country.",
+      "cloze_target": "precipitated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2527,
+      "sense_id": 381,
+      "text": "A single angry post was enough to precipitate a week of protests.",
+      "cloze_target": "precipitate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2528,
+      "sense_id": 381,
+      "text": "Doctors worried that the long flight might precipitate another heart attack.",
+      "cloze_target": "precipitate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2529,
+      "sense_id": 397,
+      "text": "As a prolific author, she published three novels in a single year.",
+      "cloze_target": "prolific",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2530,
+      "sense_id": 397,
+      "text": "The prolific scientist published dozens of papers before turning thirty.",
+      "cloze_target": "prolific",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2531,
+      "sense_id": 397,
+      "text": "She remained a prolific composer throughout her long career.",
+      "cloze_target": "prolific",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2532,
+      "sense_id": 403,
+      "text": "They discussed prosaic matters like grocery shopping over dinner.",
+      "cloze_target": "prosaic",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2533,
+      "sense_id": 403,
+      "text": "The architecture of the office building was thoroughly prosaic.",
+      "cloze_target": "prosaic",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 2534,
+      "sense_id": 403,
+      "text": "Her journal entries recorded the prosaic events of her daily routine.",
+      "cloze_target": "prosaic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2535,
+      "sense_id": 123,
+      "text": "Critics dismissed the novel as derivative, little more than a rewrite of older thrillers.",
+      "cloze_target": "derivative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2536,
+      "sense_id": 123,
+      "text": "The band's early songs were derivative, but their second album found its own sound.",
+      "cloze_target": "derivative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 2537,
+      "sense_id": 123,
+      "text": "Investors wanted something new, not another derivative app that copied a popular game.",
+      "cloze_target": "derivative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
     }
   ],
   "word_relations": [
@@ -30712,48 +30499,6 @@
       "word_id": 6,
       "related_lemma": "debase",
       "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 28,
-      "word_id": 7,
-      "related_lemma": "esthetic",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 29,
-      "word_id": 7,
-      "related_lemma": "aesthetical",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 30,
-      "word_id": 7,
-      "related_lemma": "esthetical",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 31,
-      "word_id": 7,
-      "related_lemma": "artistic",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 32,
-      "word_id": 7,
-      "related_lemma": "inaesthetic",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 33,
-      "word_id": 7,
-      "related_lemma": "tasteless",
-      "relation_type": "antonym",
       "source": "wordnet"
     },
     {
@@ -31167,34 +30912,6 @@
       "word_id": 22,
       "related_lemma": "pronounce",
       "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 93,
-      "word_id": 23,
-      "related_lemma": "ascetical",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 94,
-      "word_id": 23,
-      "related_lemma": "austere",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 95,
-      "word_id": 23,
-      "related_lemma": "spartan",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 96,
-      "word_id": 23,
-      "related_lemma": "gluttonous",
-      "relation_type": "antonym",
       "source": "wordnet"
     },
     {
@@ -31772,139 +31489,6 @@
       "source": "wordnet"
     },
     {
-      "id": 179,
-      "word_id": 40,
-      "related_lemma": "freakish",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 180,
-      "word_id": 40,
-      "related_lemma": "impulsive",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 181,
-      "word_id": 40,
-      "related_lemma": "whimsical",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 182,
-      "word_id": 40,
-      "related_lemma": "predictable",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 183,
-      "word_id": 40,
-      "related_lemma": "nonarbitrary",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 184,
-      "word_id": 41,
-      "related_lemma": "chastise",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 185,
-      "word_id": 41,
-      "related_lemma": "objurgate",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 186,
-      "word_id": 41,
-      "related_lemma": "chasten",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 187,
-      "word_id": 41,
-      "related_lemma": "correct",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 188,
-      "word_id": 42,
-      "related_lemma": "accelerator",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 189,
-      "word_id": 42,
-      "related_lemma": "anticatalyst",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 190,
-      "word_id": 43,
-      "related_lemma": "acerb",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 191,
-      "word_id": 43,
-      "related_lemma": "acerbic",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 192,
-      "word_id": 43,
-      "related_lemma": "acid",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 193,
-      "word_id": 43,
-      "related_lemma": "acrid",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 194,
-      "word_id": 43,
-      "related_lemma": "bitter",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 195,
-      "word_id": 43,
-      "related_lemma": "blistering",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 196,
-      "word_id": 43,
-      "related_lemma": "pleasant",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 197,
-      "word_id": 43,
-      "related_lemma": "constructive",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
       "id": 198,
       "word_id": 44,
       "related_lemma": "trickery",
@@ -32469,41 +32053,6 @@
       "word_id": 66,
       "related_lemma": "harmless",
       "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 279,
-      "word_id": 68,
-      "related_lemma": "derived function",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 280,
-      "word_id": 68,
-      "related_lemma": "differential coefficient",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 281,
-      "word_id": 68,
-      "related_lemma": "differential",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 282,
-      "word_id": 68,
-      "related_lemma": "first derivative",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 283,
-      "word_id": 68,
-      "related_lemma": "derivative instrument",
-      "relation_type": "synonym",
       "source": "wordnet"
     },
     {
@@ -37092,132 +36641,6 @@
       "source": "wordnet"
     },
     {
-      "id": 939,
-      "word_id": 232,
-      "related_lemma": "fecund",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 940,
-      "word_id": 232,
-      "related_lemma": "fertile",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 941,
-      "word_id": 232,
-      "related_lemma": "unproductive",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 942,
-      "word_id": 232,
-      "related_lemma": "unfruitful",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 943,
-      "word_id": 233,
-      "related_lemma": "leaning",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 944,
-      "word_id": 233,
-      "related_lemma": "tendency",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 945,
-      "word_id": 233,
-      "related_lemma": "proclivity",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 946,
-      "word_id": 233,
-      "related_lemma": "aptness",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 947,
-      "word_id": 234,
-      "related_lemma": "appease",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 948,
-      "word_id": 235,
-      "related_lemma": "matter-of-fact",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 949,
-      "word_id": 235,
-      "related_lemma": "pedestrian",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 950,
-      "word_id": 235,
-      "related_lemma": "prosy",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 951,
-      "word_id": 235,
-      "related_lemma": "earthbound",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 952,
-      "word_id": 235,
-      "related_lemma": "commonplace",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 953,
-      "word_id": 235,
-      "related_lemma": "humdrum",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 954,
-      "word_id": 235,
-      "related_lemma": "rhetorical",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 955,
-      "word_id": 235,
-      "related_lemma": "interesting",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 956,
-      "word_id": 235,
-      "related_lemma": "exciting",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
       "id": 957,
       "word_id": 236,
       "related_lemma": "invariable",
@@ -37740,62 +37163,6 @@
       "word_id": 256,
       "related_lemma": "repeal",
       "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1032,
-      "word_id": 257,
-      "related_lemma": "untalkative",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1033,
-      "word_id": 257,
-      "related_lemma": "restrained",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1034,
-      "word_id": 257,
-      "related_lemma": "unemotional",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1035,
-      "word_id": 257,
-      "related_lemma": "self-effacing",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1036,
-      "word_id": 257,
-      "related_lemma": "retiring",
-      "relation_type": "synonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1037,
-      "word_id": 257,
-      "related_lemma": "voluble",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1038,
-      "word_id": 257,
-      "related_lemma": "demonstrative",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1039,
-      "word_id": 257,
-      "related_lemma": "assertive",
-      "relation_type": "antonym",
       "source": "wordnet"
     },
     {
@@ -39736,6 +39103,503 @@
       "related_lemma": "harmless",
       "relation_type": "antonym",
       "source": "wordnet"
+    },
+    {
+      "id": 1317,
+      "word_id": 7,
+      "related_lemma": "artistic",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1318,
+      "word_id": 7,
+      "related_lemma": "tasteful",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1319,
+      "word_id": 7,
+      "related_lemma": "tasteless",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1320,
+      "word_id": 7,
+      "related_lemma": "unsightly",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1321,
+      "word_id": 23,
+      "related_lemma": "austere",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1322,
+      "word_id": 23,
+      "related_lemma": "spartan",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1323,
+      "word_id": 23,
+      "related_lemma": "abstemious",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1324,
+      "word_id": 23,
+      "related_lemma": "self-indulgent",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1325,
+      "word_id": 23,
+      "related_lemma": "hedonistic",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1326,
+      "word_id": 40,
+      "related_lemma": "impulsive",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1327,
+      "word_id": 40,
+      "related_lemma": "whimsical",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1328,
+      "word_id": 40,
+      "related_lemma": "fickle",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1329,
+      "word_id": 40,
+      "related_lemma": "erratic",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1330,
+      "word_id": 40,
+      "related_lemma": "predictable",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1331,
+      "word_id": 40,
+      "related_lemma": "steady",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1332,
+      "word_id": 41,
+      "related_lemma": "chastise",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1333,
+      "word_id": 41,
+      "related_lemma": "rebuke",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1334,
+      "word_id": 41,
+      "related_lemma": "reprimand",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1335,
+      "word_id": 41,
+      "related_lemma": "berate",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1336,
+      "word_id": 41,
+      "related_lemma": "praise",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1337,
+      "word_id": 41,
+      "related_lemma": "commend",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1338,
+      "word_id": 42,
+      "related_lemma": "spark",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1339,
+      "word_id": 42,
+      "related_lemma": "trigger",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1340,
+      "word_id": 42,
+      "related_lemma": "stimulus",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1341,
+      "word_id": 42,
+      "related_lemma": "impetus",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1342,
+      "word_id": 43,
+      "related_lemma": "acerbic",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1343,
+      "word_id": 43,
+      "related_lemma": "biting",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1344,
+      "word_id": 43,
+      "related_lemma": "scathing",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1345,
+      "word_id": 43,
+      "related_lemma": "sarcastic",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1346,
+      "word_id": 43,
+      "related_lemma": "mild",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1347,
+      "word_id": 43,
+      "related_lemma": "soothing",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1348,
+      "word_id": 221,
+      "related_lemma": "trigger",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1349,
+      "word_id": 221,
+      "related_lemma": "provoke",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1350,
+      "word_id": 221,
+      "related_lemma": "hasten",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1351,
+      "word_id": 221,
+      "related_lemma": "prevent",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1352,
+      "word_id": 221,
+      "related_lemma": "delay",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1353,
+      "word_id": 232,
+      "related_lemma": "productive",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1354,
+      "word_id": 232,
+      "related_lemma": "fertile",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1355,
+      "word_id": 232,
+      "related_lemma": "fruitful",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1356,
+      "word_id": 232,
+      "related_lemma": "unproductive",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1357,
+      "word_id": 232,
+      "related_lemma": "barren",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1358,
+      "word_id": 233,
+      "related_lemma": "tendency",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1359,
+      "word_id": 233,
+      "related_lemma": "inclination",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1360,
+      "word_id": 233,
+      "related_lemma": "proclivity",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1361,
+      "word_id": 233,
+      "related_lemma": "penchant",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1362,
+      "word_id": 233,
+      "related_lemma": "aversion",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1363,
+      "word_id": 234,
+      "related_lemma": "appease",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1364,
+      "word_id": 234,
+      "related_lemma": "placate",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1365,
+      "word_id": 234,
+      "related_lemma": "conciliate",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1366,
+      "word_id": 234,
+      "related_lemma": "mollify",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1367,
+      "word_id": 234,
+      "related_lemma": "provoke",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1368,
+      "word_id": 234,
+      "related_lemma": "antagonize",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1369,
+      "word_id": 235,
+      "related_lemma": "pedestrian",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1370,
+      "word_id": 235,
+      "related_lemma": "humdrum",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1371,
+      "word_id": 235,
+      "related_lemma": "commonplace",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1372,
+      "word_id": 235,
+      "related_lemma": "mundane",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1373,
+      "word_id": 235,
+      "related_lemma": "imaginative",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1374,
+      "word_id": 235,
+      "related_lemma": "exciting",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1375,
+      "word_id": 257,
+      "related_lemma": "reserved",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1376,
+      "word_id": 257,
+      "related_lemma": "taciturn",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1377,
+      "word_id": 257,
+      "related_lemma": "restrained",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1378,
+      "word_id": 257,
+      "related_lemma": "uncommunicative",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1379,
+      "word_id": 257,
+      "related_lemma": "talkative",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1380,
+      "word_id": 257,
+      "related_lemma": "voluble",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 1381,
+      "word_id": 257,
+      "related_lemma": "forthcoming",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1382,
+      "word_id": 68,
+      "related_lemma": "imitative",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1383,
+      "word_id": 68,
+      "related_lemma": "unoriginal",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1384,
+      "word_id": 68,
+      "related_lemma": "uninspired",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 1385,
+      "word_id": 68,
+      "related_lemma": "original",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1386,
+      "word_id": 68,
+      "related_lemma": "innovative",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 1387,
+      "word_id": 68,
+      "related_lemma": "inventive",
+      "relation_type": "antonym",
+      "source": "claude"
     }
   ],
   "mnemonics": [
@@ -39764,13 +39628,6 @@
       "id": 67,
       "word_id": 67,
       "text": "Deride rhymes with ride, like riding someone with mean jokes.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 68,
-      "word_id": 68,
-      "text": "Derived from math class, the derivative measures change.",
       "source": "gemini",
       "user_id": null
     },
@@ -40832,13 +40689,6 @@
       "user_id": null
     },
     {
-      "id": 220,
-      "word_id": 221,
-      "text": "Think of precipitation like rain or snow falling down from the sky as solid particles drop to the bottom.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
       "id": 221,
       "word_id": 222,
       "text": "Preclude sounds like pre-close, meaning you close the door on something before it happens.",
@@ -40905,34 +40755,6 @@
       "id": 230,
       "word_id": 231,
       "text": "Profligate sounds like pro-fligate, professionally wasting money.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 231,
-      "word_id": 232,
-      "text": "A PRO writer is LIFIC, meaning they produce many books.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 232,
-      "word_id": 233,
-      "text": "PROS lean (pensi) toward their goals because of a natural propensity.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 233,
-      "word_id": 234,
-      "text": "Property owners (propitiate) make peace with their neighbors to avoid disputes.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 234,
-      "word_id": 235,
-      "text": "PROSE is ordinary writing, so PROSAIC means dull and ordinary.",
       "source": "gemini",
       "user_id": null
     },
@@ -41080,13 +40902,6 @@
       "id": 255,
       "word_id": 256,
       "text": "To rescind is to 're-send' an order backwards so it gets canceled.",
-      "source": "gemini",
-      "user_id": null
-    },
-    {
-      "id": 256,
-      "word_id": 257,
-      "text": "Think of a person holding back words like a net holding fish, staying quiet and reticent.",
       "source": "gemini",
       "user_id": null
     },
@@ -41566,14 +41381,6 @@
       "revision": 2
     },
     {
-      "id": 324,
-      "word_id": 7,
-      "text": "Look at the arts to appreciate the aesthetic balance of a painting.",
-      "source": "gemini",
-      "user_id": null,
-      "revision": 2
-    },
-    {
       "id": 325,
       "word_id": 8,
       "text": "To aggrandize an achievement is to make it sound grander than it really was.",
@@ -41681,14 +41488,6 @@
       "id": 338,
       "word_id": 21,
       "text": "An arduous climb is hard for us because it takes so much physical effort.",
-      "source": "gemini",
-      "user_id": null,
-      "revision": 2
-    },
-    {
-      "id": 339,
-      "word_id": 23,
-      "text": "An ascetic person denies themselves luxury, much like an athlete in rigorous discipline without sweets or extra comforts.",
       "source": "gemini",
       "user_id": null,
       "revision": 2
@@ -41833,30 +41632,6 @@
       "id": 357,
       "word_id": 40,
       "text": "A capricious person acts on a sudden caprice, shifting their mood or mind without any warning.",
-      "source": "gemini",
-      "user_id": null,
-      "revision": 2
-    },
-    {
-      "id": 358,
-      "word_id": 41,
-      "text": "When authorities castigate a wrongdoer, they cast harsh words and reprimands to punish them.",
-      "source": "gemini",
-      "user_id": null,
-      "revision": 2
-    },
-    {
-      "id": 359,
-      "word_id": 42,
-      "text": "In chemistry, a catalyst speeds up a reaction without being consumed during the process.",
-      "source": "gemini",
-      "user_id": null,
-      "revision": 2
-    },
-    {
-      "id": 360,
-      "word_id": 43,
-      "text": "A caustic remark burns and hurts a listener just like a caustic chemical burns the skin.",
       "source": "gemini",
       "user_id": null,
       "revision": 2
@@ -42020,6 +41795,102 @@
       "source": "gemini",
       "user_id": null,
       "revision": 2
+    },
+    {
+      "id": 381,
+      "word_id": 7,
+      "text": "Aesthetic comes from the Greek aisthesis, \"perception\": it is about how things look and feel to the senses.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 382,
+      "word_id": 23,
+      "text": "Ascetic comes from the Greek askesis, \"exercise\": an ascetic trains the body to do without comforts.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 383,
+      "word_id": 41,
+      "text": "Castigate comes from the Latin castigare, \"to correct or punish\": to castigate is to correct someone with harsh words.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 384,
+      "word_id": 42,
+      "text": "Catalyst comes from the Greek katalysis, \"loosening\": a catalyst loosens things up so that change can happen.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 385,
+      "word_id": 43,
+      "text": "Caustic comes from the Greek kaustikos, \"burning\": caustic words burn like acid.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 386,
+      "word_id": 221,
+      "text": "Precipitate comes from the Latin praeceps, \"headlong\": to precipitate an event is to send it rushing forward headfirst.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 387,
+      "word_id": 232,
+      "text": "Prolific shares the Latin root proles, \"offspring\", with proliferate: both are about producing a lot.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 388,
+      "word_id": 233,
+      "text": "Propensity comes from the Latin propensus, \"leaning forward\": a propensity is a leaning toward some kind of behavior.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 389,
+      "word_id": 234,
+      "text": "Propitiate shares a root with propitious, \"favorable\": you propitiate people to make them favorable toward you.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 390,
+      "word_id": 235,
+      "text": "Prosaic comes from prose, the ordinary language of everyday writing rather than poetry.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 391,
+      "word_id": 257,
+      "text": "Reticent comes from the Latin reticere, \"to keep silent\", built on tacere, the same root as tacit.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 392,
+      "word_id": 68,
+      "text": "Derivative work is derived from someone else's: it repeats rather than creates.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
     }
   ],
   "distractors": [
@@ -44277,110 +44148,6 @@
       "distractor_lemma": "Design a structure according to strict specifications.",
       "kind": "mc",
       "difficulty": 5,
-      "source": "gemini"
-    },
-    {
-      "id": 585,
-      "sense_id": 123,
-      "distractor_lemma": "A financial instrument of uncertain value.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 586,
-      "sense_id": 123,
-      "distractor_lemma": "The root word from which other terms are formed.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 587,
-      "sense_id": 123,
-      "distractor_lemma": "A device used to measure electric current.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 588,
-      "sense_id": 123,
-      "distractor_lemma": "An automatic process in mechanical engineering.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 589,
-      "sense_id": 124,
-      "distractor_lemma": "A logical conclusion drawn from false premises.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 590,
-      "sense_id": 124,
-      "distractor_lemma": "An artistic work that lacks originality.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 591,
-      "sense_id": 124,
-      "distractor_lemma": "A legal document transferring property rights.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 592,
-      "sense_id": 124,
-      "distractor_lemma": "A grammatical form based on a foreign root.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 593,
-      "sense_id": 125,
-      "distractor_lemma": "A primary share of stock issued directly by a corporation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 594,
-      "sense_id": 125,
-      "distractor_lemma": "An official document certifying ownership of physical commodities.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 595,
-      "sense_id": 125,
-      "distractor_lemma": "The profit earned from selling an asset above its purchase price.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 596,
-      "sense_id": 125,
-      "distractor_lemma": "A legal claim against a debtor's physical property.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 597,
-      "sense_id": 125,
-      "distractor_lemma": "An initial public offering of company shares.",
-      "kind": "mc",
-      "difficulty": 1,
       "source": "gemini"
     },
     {
@@ -53992,38 +53759,6 @@
       "source": "gemini"
     },
     {
-      "id": 1799,
-      "sense_id": 381,
-      "distractor_lemma": "A sudden drop in temperature caused by atmospheric pressure.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1800,
-      "sense_id": 381,
-      "distractor_lemma": "The act of falling steeply from a high elevation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1801,
-      "sense_id": 381,
-      "distractor_lemma": "A written order for medication issued by a physician.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1802,
-      "sense_id": 381,
-      "distractor_lemma": "An introductory statement preceding a formal document.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 1803,
       "sense_id": 382,
       "distractor_lemma": "To include multiple subjects within a single curriculum.",
@@ -54568,46 +54303,6 @@
       "source": "gemini"
     },
     {
-      "id": 1871,
-      "sense_id": 397,
-      "distractor_lemma": "Relating to high profits.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1872,
-      "sense_id": 397,
-      "distractor_lemma": "Characterized by professional behavior.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1873,
-      "sense_id": 397,
-      "distractor_lemma": "Prone to making loud proclamations.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1874,
-      "sense_id": 397,
-      "distractor_lemma": "Exhibiting a prolonged hesitation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1875,
-      "sense_id": 397,
-      "distractor_lemma": "Possessing profound knowledge.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
       "id": 1876,
       "sense_id": 398,
       "distractor_lemma": "Capable of flying long distances.",
@@ -54643,46 +54338,6 @@
       "id": 1880,
       "sense_id": 398,
       "distractor_lemma": "Moving with great speed.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1881,
-      "sense_id": 399,
-      "distractor_lemma": "A sudden change in direction.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1882,
-      "sense_id": 399,
-      "distractor_lemma": "An official decree or order.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1883,
-      "sense_id": 399,
-      "distractor_lemma": "A strong barrier or fence.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1884,
-      "sense_id": 399,
-      "distractor_lemma": "A clever method of solving problems.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1885,
-      "sense_id": 399,
-      "distractor_lemma": "A financial investment.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini"
@@ -54765,86 +54420,6 @@
       "distractor_lemma": "A temporary mood swing.",
       "kind": "mc",
       "difficulty": 1,
-      "source": "gemini"
-    },
-    {
-      "id": 1896,
-      "sense_id": 402,
-      "distractor_lemma": "To provoke an aggressive response.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 1897,
-      "sense_id": 402,
-      "distractor_lemma": "To participate in a formal ceremony.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 1898,
-      "sense_id": 402,
-      "distractor_lemma": "To calculate a financial loss.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 1899,
-      "sense_id": 402,
-      "distractor_lemma": "To investigate a crime scene.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 1900,
-      "sense_id": 402,
-      "distractor_lemma": "To postpone a meeting.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 1901,
-      "sense_id": 403,
-      "distractor_lemma": "Relating to prose writing.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 1902,
-      "sense_id": 403,
-      "distractor_lemma": "Extremely loud and chaotic.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 1903,
-      "sense_id": 403,
-      "distractor_lemma": "Filled with bright colors.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 1904,
-      "sense_id": 403,
-      "distractor_lemma": "Marked by extreme danger.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini"
-    },
-    {
-      "id": 1905,
-      "sense_id": 403,
-      "distractor_lemma": "Exhibiting great wealth.",
-      "kind": "mc",
-      "difficulty": 2,
       "source": "gemini"
     },
     {
@@ -56357,46 +55932,6 @@
       "distractor_lemma": "Resemble family members in physical appearance and demeanor.",
       "kind": "mc",
       "difficulty": 4,
-      "source": "gemini"
-    },
-    {
-      "id": 2095,
-      "sense_id": 445,
-      "distractor_lemma": "Relating to a sudden increase in speed or momentum.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 2096,
-      "sense_id": 445,
-      "distractor_lemma": "Characterized by sharp and biting sarcasm.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 2097,
-      "sense_id": 445,
-      "distractor_lemma": "Prone to sudden changes in mood or behavior.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 2098,
-      "sense_id": 445,
-      "distractor_lemma": "Marked by excessive ornamentation in style.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "gemini"
-    },
-    {
-      "id": 2099,
-      "sense_id": 445,
-      "distractor_lemma": "Inclined to argue without proper justification.",
-      "kind": "mc",
-      "difficulty": 3,
       "source": "gemini"
     },
     {
@@ -60814,51 +60349,6 @@
       "revision": 2
     },
     {
-      "id": 2648,
-      "sense_id": 11,
-      "distractor_lemma": "Practicing severe self-discipline and abstaining from all physical pleasures.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2649,
-      "sense_id": 11,
-      "distractor_lemma": "Physically strong, active, agile, and proficient in sports.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2650,
-      "sense_id": 11,
-      "distractor_lemma": "Inducing a temporary loss of bodily sensation or awareness.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2651,
-      "sense_id": 11,
-      "distractor_lemma": "Of undisputed origin, genuine, and verified as real.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2652,
-      "sense_id": 11,
-      "distractor_lemma": "Arousing pity, sadness, or compassion through obvious distress.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
       "id": 2653,
       "sense_id": 14,
       "distractor_lemma": "Promote a product, event, or service to public consumers.",
@@ -61483,51 +60973,6 @@
       "id": 2722,
       "sense_id": 40,
       "distractor_lemma": "Based on individual discretion or judgment rather than on fixed rules.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2723,
-      "sense_id": 46,
-      "distractor_lemma": "Concerning or characterized by an appreciation of beauty or good taste.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2724,
-      "sense_id": 46,
-      "distractor_lemma": "Having the properties of an acid, especially tasting sour.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2725,
-      "sense_id": 46,
-      "distractor_lemma": "Related to the rejection of belief in the existence of deities.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2726,
-      "sense_id": 46,
-      "distractor_lemma": "Conforming to fact and therefore worthy of belief.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2727,
-      "sense_id": 46,
-      "distractor_lemma": "Free from living germs or microorganisms.",
       "kind": "mc",
       "difficulty": 1,
       "source": "gemini",
@@ -62295,186 +61740,6 @@
       "distractor_lemma": "A very large vulture native to South America and California.",
       "kind": "mc",
       "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2813,
-      "sense_id": 78,
-      "distractor_lemma": "Tending to find fault or raise petty objections readily.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2814,
-      "sense_id": 78,
-      "distractor_lemma": "Developing certain abilities or knowledge at an unusually early age.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2815,
-      "sense_id": 78,
-      "distractor_lemma": "Having or showing a cautious distrust of someone or something.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2816,
-      "sense_id": 78,
-      "distractor_lemma": "Having or showing an extreme greed for wealth or material gain.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2817,
-      "sense_id": 78,
-      "distractor_lemma": "Indicating a favorable likelihood of future success.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2818,
-      "sense_id": 80,
-      "distractor_lemma": "Remove the testicles of a male human or animal.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2819,
-      "sense_id": 80,
-      "distractor_lemma": "Initiate, provoke, or incite an action or course of events.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2820,
-      "sense_id": 80,
-      "distractor_lemma": "Chew food into smaller pieces before swallowing.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2821,
-      "sense_id": 80,
-      "distractor_lemma": "Carry out a formal inquiry to discover facts.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2822,
-      "sense_id": 80,
-      "distractor_lemma": "Renounce or surrender a right, claim, or responsibility.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2823,
-      "sense_id": 82,
-      "distractor_lemma": "A specialist who examines data, systems, or behavior in detail.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2824,
-      "sense_id": 82,
-      "distractor_lemma": "A doctor who specializes in treating disorders of the feet.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2825,
-      "sense_id": 82,
-      "distractor_lemma": "A teacher of religious doctrine using questions and answers.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2826,
-      "sense_id": 82,
-      "distractor_lemma": "A writer or performer who uses humor to criticize human foolishness.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2827,
-      "sense_id": 82,
-      "distractor_lemma": "A person who remains faithful to an established government or ruler.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2828,
-      "sense_id": 84,
-      "distractor_lemma": "Relating to sound, hearing, or the properties of an auditorium.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2829,
-      "sense_id": 84,
-      "distractor_lemma": "Relating to the countryside or characterized by rural simplicity.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2830,
-      "sense_id": 84,
-      "distractor_lemma": "Relating to esoteric religious mysteries or spiritual contemplation.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2831,
-      "sense_id": 84,
-      "distractor_lemma": "Asserting opinions in an arrogant and unproven manner.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "gemini",
-      "revision": 2
-    },
-    {
-      "id": 2832,
-      "sense_id": 84,
-      "distractor_lemma": "In a state of complete disorder and confusion.",
-      "kind": "mc",
-      "difficulty": 1,
       "source": "gemini",
       "revision": 2
     },
@@ -63377,7 +62642,943 @@
       "difficulty": 5,
       "source": "gemini",
       "revision": 2
+    },
+    {
+      "id": 2933,
+      "sense_id": 11,
+      "distractor_lemma": "Practicing strict self-denial and avoiding comfort and pleasure.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "ascetic"
+    },
+    {
+      "id": 2934,
+      "sense_id": 11,
+      "distractor_lemma": "Physically strong, fit and good at sports.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "athletic"
+    },
+    {
+      "id": 2935,
+      "sense_id": 11,
+      "distractor_lemma": "Causing a loss of feeling or awareness.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "anesthetic"
+    },
+    {
+      "id": 2936,
+      "sense_id": 11,
+      "distractor_lemma": "Genuine and of undisputed origin.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "authentic"
+    },
+    {
+      "id": 2937,
+      "sense_id": 11,
+      "distractor_lemma": "Arousing pity, especially through weakness or sadness.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "pathetic"
+    },
+    {
+      "id": 2938,
+      "sense_id": 46,
+      "distractor_lemma": "Relating to beauty or to the enjoyment of beautiful things.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "aesthetic"
+    },
+    {
+      "id": 2939,
+      "sense_id": 46,
+      "distractor_lemma": "Relating to or producing vinegar.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "acetic"
+    },
+    {
+      "id": 2940,
+      "sense_id": 46,
+      "distractor_lemma": "Free from germs that could cause infection.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "aseptic"
+    },
+    {
+      "id": 2941,
+      "sense_id": 46,
+      "distractor_lemma": "Denying that any god exists.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "atheistic"
+    },
+    {
+      "id": 2942,
+      "sense_id": 78,
+      "distractor_lemma": "Tending to find fault or raise petty objections readily.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 3,
+      "lookalike": "captious"
+    },
+    {
+      "id": 2943,
+      "sense_id": 78,
+      "distractor_lemma": "Developing certain abilities or knowledge at an unusually early age.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 3,
+      "lookalike": "precocious"
+    },
+    {
+      "id": 2944,
+      "sense_id": 78,
+      "distractor_lemma": "Having or showing a cautious distrust of someone or something.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 3,
+      "lookalike": "suspicious"
+    },
+    {
+      "id": 2945,
+      "sense_id": 78,
+      "distractor_lemma": "Having or showing an extreme greed for wealth or material gain.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 3,
+      "lookalike": "avaricious"
+    },
+    {
+      "id": 2946,
+      "sense_id": 78,
+      "distractor_lemma": "Indicating a favorable likelihood of future success.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "gemini",
+      "revision": 3,
+      "lookalike": "auspicious"
+    },
+    {
+      "id": 2947,
+      "sense_id": 80,
+      "distractor_lemma": "Bring about or provoke an action or event.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "instigate"
+    },
+    {
+      "id": 2948,
+      "sense_id": 80,
+      "distractor_lemma": "Chew food before swallowing it.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "masticate"
+    },
+    {
+      "id": 2949,
+      "sense_id": 80,
+      "distractor_lemma": "Examine the facts of something to find out the truth.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "investigate"
+    },
+    {
+      "id": 2950,
+      "sense_id": 80,
+      "distractor_lemma": "Make something less severe, serious or painful.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mitigate"
+    },
+    {
+      "id": 2951,
+      "sense_id": 82,
+      "distractor_lemma": "A person who studies data or situations in close detail.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "analyst"
+    },
+    {
+      "id": 2952,
+      "sense_id": 82,
+      "distractor_lemma": "A sudden, violent disaster such as a flood or an earthquake.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "cataclysm"
+    },
+    {
+      "id": 2953,
+      "sense_id": 82,
+      "distractor_lemma": "A complete list of items arranged in a set order.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "catalog"
+    },
+    {
+      "id": 2954,
+      "sense_id": 82,
+      "distractor_lemma": "A machine that hurls heavy objects through the air.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "catapult"
+    },
+    {
+      "id": 2955,
+      "sense_id": 82,
+      "distractor_lemma": "A teacher of religious doctrine who uses questions and answers.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "catechist"
+    },
+    {
+      "id": 2956,
+      "sense_id": 84,
+      "distractor_lemma": "Relating to sound or to the sense of hearing.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "acoustic"
+    },
+    {
+      "id": 2957,
+      "sense_id": 84,
+      "distractor_lemma": "Simple and plain in a way typical of the countryside.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "rustic"
+    },
+    {
+      "id": 2958,
+      "sense_id": 84,
+      "distractor_lemma": "Relaxed and informal rather than careful or planned.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "casual"
+    },
+    {
+      "id": 2959,
+      "sense_id": 84,
+      "distractor_lemma": "Relating to or acting as a cause.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "causal"
+    },
+    {
+      "id": 2960,
+      "sense_id": 84,
+      "distractor_lemma": "Having a spiritual meaning hidden from ordinary understanding.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mystic"
+    },
+    {
+      "id": 2961,
+      "sense_id": 381,
+      "distractor_lemma": "Expect or predict that something will happen.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "anticipate"
+    },
+    {
+      "id": 2962,
+      "sense_id": 381,
+      "distractor_lemma": "Take part in an activity or event.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "participate"
+    },
+    {
+      "id": 2963,
+      "sense_id": 381,
+      "distractor_lemma": "Scatter or fade away gradually.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "dissipate"
+    },
+    {
+      "id": 2964,
+      "sense_id": 381,
+      "distractor_lemma": "Beat rapidly or irregularly, like a racing heart.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "palpitate"
+    },
+    {
+      "id": 2965,
+      "sense_id": 397,
+      "distractor_lemma": "Bringing in money or a financial gain.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "profitable"
+    },
+    {
+      "id": 2966,
+      "sense_id": 397,
+      "distractor_lemma": "Skilled and competent at a particular task.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "proficient"
+    },
+    {
+      "id": 2967,
+      "sense_id": 397,
+      "distractor_lemma": "Showing deep insight or great knowledge.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "profound"
+    },
+    {
+      "id": 2968,
+      "sense_id": 397,
+      "distractor_lemma": "Using too many words, so that it becomes tedious.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prolix"
+    },
+    {
+      "id": 2969,
+      "sense_id": 397,
+      "distractor_lemma": "Recklessly wasteful with money or resources.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "profligate"
+    },
+    {
+      "id": 2970,
+      "sense_id": 399,
+      "distractor_lemma": "The state of being successful and wealthy.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prosperity"
+    },
+    {
+      "id": 2971,
+      "sense_id": 399,
+      "distractor_lemma": "Behavior that follows accepted standards of what is proper.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "propriety"
+    },
+    {
+      "id": 2972,
+      "sense_id": 399,
+      "distractor_lemma": "Nearness in space, time or relationship.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "proximity"
+    },
+    {
+      "id": 2973,
+      "sense_id": 399,
+      "distractor_lemma": "Something that a person owns.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "property"
+    },
+    {
+      "id": 2974,
+      "sense_id": 399,
+      "distractor_lemma": "A claim to importance that is not justified.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "pretension"
+    },
+    {
+      "id": 2975,
+      "sense_id": 402,
+      "distractor_lemma": "Cause something to happen suddenly or sooner than expected.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "precipitate"
+    },
+    {
+      "id": 2976,
+      "sense_id": 402,
+      "distractor_lemma": "Spread an idea widely, or breed plants or animals.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "propagate"
+    },
+    {
+      "id": 2977,
+      "sense_id": 402,
+      "distractor_lemma": "Make something continue for a long time.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "perpetuate"
+    },
+    {
+      "id": 2978,
+      "sense_id": 402,
+      "distractor_lemma": "Increase rapidly in number.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "proliferate"
+    },
+    {
+      "id": 2979,
+      "sense_id": 403,
+      "distractor_lemma": "Successful, especially in making money.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prosperous"
+    },
+    {
+      "id": 2980,
+      "sense_id": 403,
+      "distractor_lemma": "So old that it is no longer in ordinary use.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "archaic"
+    },
+    {
+      "id": 2981,
+      "sense_id": 403,
+      "distractor_lemma": "Accurately predicting what will happen.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prophetic"
+    },
+    {
+      "id": 2982,
+      "sense_id": 403,
+      "distractor_lemma": "Dealing with things in a practical, realistic way.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "pragmatic"
+    },
+    {
+      "id": 2983,
+      "sense_id": 445,
+      "distractor_lemma": "Having happened only a short time ago.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "recent"
+    },
+    {
+      "id": 2984,
+      "sense_id": 445,
+      "distractor_lemma": "Able to recover quickly from difficulty.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "resilient"
+    },
+    {
+      "id": 2985,
+      "sense_id": 445,
+      "distractor_lemma": "Showing deep respect, especially toward something sacred.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "reverent"
+    },
+    {
+      "id": 2986,
+      "sense_id": 445,
+      "distractor_lemma": "Stubbornly refusing to obey rules or authority.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "recalcitrant"
+    },
+    {
+      "id": 2987,
+      "sense_id": 445,
+      "distractor_lemma": "Strongly smelling of something, or strongly suggesting it.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "redolent"
+    },
+    {
+      "id": 2988,
+      "sense_id": 123,
+      "distractor_lemma": "Serving to make something look more attractive.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "decorative"
+    },
+    {
+      "id": 2989,
+      "sense_id": 123,
+      "distractor_lemma": "Final and settled, leaving no room for doubt.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "definitive"
+    },
+    {
+      "id": 2990,
+      "sense_id": 123,
+      "distractor_lemma": "Expressing contempt or ridicule.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "derisive"
+    },
+    {
+      "id": 2991,
+      "sense_id": 123,
+      "distractor_lemma": "Extremely or unusually small.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "diminutive"
+    },
+    {
+      "id": 2992,
+      "sense_id": 123,
+      "distractor_lemma": "Relating to careful discussion before a decision.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "deliberative"
     }
   ],
-  "audio_objects": []
+  "audio_objects": [],
+  "reviews": [
+    {
+      "id": 1,
+      "word_id": 7,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Moved the first sense to beauty; the old one was circular. Wrong answers labeled with their look-alikes."
+    },
+    {
+      "id": 2,
+      "word_id": 23,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Definition no longer names the word; dropped the fragment example."
+    },
+    {
+      "id": 3,
+      "word_id": 40,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 4,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away; definition was a single word."
+    },
+    {
+      "id": 4,
+      "word_id": 41,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away. Replaced an anatomical wrong answer and rare synonyms."
+    },
+    {
+      "id": 5,
+      "word_id": 42,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Switched the first sense from the chemistry meaning to the general one learners need."
+    },
+    {
+      "id": 6,
+      "word_id": 43,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Kept the WordNet definition. Plain no longer gives the answer away; dropped a fragment example."
+    },
+    {
+      "id": 7,
+      "word_id": 221,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "partOfSpeech",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Changed from the chemistry noun to the verb learners need; the noun senses are dropped."
+    },
+    {
+      "id": 8,
+      "word_id": 232,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away. The old hook (PRO + LIFIC) was not real etymology."
+    },
+    {
+      "id": 9,
+      "word_id": 233,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "plain",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away. The old wrong answers were not real look-alike meanings."
+    },
+    {
+      "id": 10,
+      "word_id": 234,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away; definition was thin. The old hook (property owners) was not real etymology."
+    },
+    {
+      "id": 11,
+      "word_id": 235,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away; dropped a fragment example and invented wrong answers."
+    },
+    {
+      "id": 12,
+      "word_id": 257,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Plain no longer gives the answer away; one wrong answer was shared with another word. Avoided reluctant, which people confuse with reticent in meaning."
+    },
+    {
+      "id": 13,
+      "word_id": 68,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-04",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 5,
+        "hook": 4,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "partOfSpeech",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "Changed from the calculus noun to the adjective learners need; the noun senses are dropped."
+    }
+  ]
 }

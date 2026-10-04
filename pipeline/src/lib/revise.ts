@@ -100,6 +100,7 @@ const RawSchema = z.object({
 });
 
 const key = (s: string): string => s.trim().toLowerCase();
+const article = (noun: string): string => `${/^[aeiou]/i.test(noun) ? 'an' : 'a'} ${noun}`;
 const letters = (s: string): string => s.toLowerCase().replace(/[^a-z]/g, '');
 
 /** Parts of speech for a lemma, or null when it is not a known word. */
@@ -114,7 +115,7 @@ export function checkRevised(
 ): string[] {
   const problems: string[] = [];
   const word = item.headword;
-  if (JSON.stringify(raw).includes('—')) problems.push('contains an em dash');
+  if (JSON.stringify(raw).includes('\u2014')) problems.push('contains an em dash');
 
   const seenWords = new Set<string>();
   const seenMeanings = new Set<string>();
@@ -130,7 +131,7 @@ export function checkRevised(
       const pos = lexicon(w);
       if (!pos) problems.push(`look-alike "${d.word}" is not in the dictionary`);
       else if (item.partOfSpeech && !pos.includes(item.partOfSpeech)) {
-        problems.push(`look-alike "${d.word}" is a ${pos.join('/')}, not a ${item.partOfSpeech}`);
+        problems.push(`look-alike "${d.word}" is ${article(pos.join('/'))}, not ${article(item.partOfSpeech)}`);
       }
     }
 

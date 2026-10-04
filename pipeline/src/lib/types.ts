@@ -80,6 +80,23 @@ export interface DistractorRow {
   lookalike?: string;
 }
 
+/**
+ * One curation review of a word (lib/curate.ts). The newest review at the
+ * current rubric version is the word's standing verdict.
+ */
+export interface ReviewRow {
+  id: number;
+  word_id: number;
+  rubric_version: number;
+  /** YYYY-MM-DD. */
+  reviewed_at: string;
+  scores: Record<string, number>;
+  verdict: 'pass' | 'fixed' | 'flagged';
+  /** Content fields this review changed. */
+  changed: string[];
+  notes: string;
+}
+
 export interface AudioObject {
   path: string;
   bytes: number;
@@ -92,6 +109,7 @@ export type NewExample = Omit<ExampleRow, 'id'>;
 export type NewRelation = Omit<RelationRow, 'id'>;
 export type NewMnemonic = Omit<MnemonicRow, 'id'>;
 export type NewDistractor = Omit<DistractorRow, 'id'>;
+export type NewReview = Omit<ReviewRow, 'id'>;
 
 /** Body passed to Store.saveAudio. Real bytes in live mode, an estimate in dry-run. */
 export type AudioBody =

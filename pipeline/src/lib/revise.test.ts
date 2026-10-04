@@ -66,7 +66,7 @@ test('each rule rejects the item', () => {
     ['not a capitalized sentence', [{ word: 'abet', meaning: 'encourage wrongdoing' }, ...goodDistractors.slice(1)]],
     ['mentions the target', [{ word: 'abet', meaning: 'To abate a crime by helping.' }, ...goodDistractors.slice(1)]],
     ['is the correct definition', [{ word: 'lessen', meaning: 'Make less active or intense.' }, ...goodDistractors.slice(1)]],
-    ['em dash', [{ word: 'abet', meaning: 'Encourage — or assist.' }, ...goodDistractors.slice(1)]],
+    ['em dash', [{ word: 'abet', meaning: 'Encourage \u2014 or assist.' }, ...goodDistractors.slice(1)]],
   ];
   for (const [label, distractors] of cases) {
     const out = parseRevisedBatch(

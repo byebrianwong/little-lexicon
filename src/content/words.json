@@ -846,59 +846,53 @@
       "senses": [
         {
           "senseId": 11,
-          "definition": "Relating to or dealing with the subject of aesthetics.",
-          "plainLanguageDefinition": "Connected to the study or principles of art and beauty.",
+          "definition": "Concerned with beauty or the appreciation of beauty.",
+          "plainLanguageDefinition": "Having to do with beauty and how good something looks.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 368,
-              "text": "The architecture critic evaluated the building from a purely aesthetic standpoint.",
+              "exampleId": 2508,
+              "text": "The architects argued that the bridge needed aesthetic appeal as well as strength.",
               "audioUrl": null,
               "clozeTarget": "aesthetic"
             },
             {
-              "exampleId": 369,
-              "text": "Art historians debate the aesthetic value of abstract expressionism.",
+              "exampleId": 2509,
+              "text": "For purely aesthetic reasons, she painted the old radiator the same color as the wall.",
               "audioUrl": null,
               "clozeTarget": "aesthetic"
             },
             {
-              "exampleId": 370,
-              "text": "Her research paper focused on the aesthetic theory of the nineteenth century.",
-              "audioUrl": null,
-              "clozeTarget": "aesthetic"
-            },
-            {
-              "exampleId": 371,
-              "text": "Philosophers have discussed aesthetic principles since the time of ancient Greece.",
+              "exampleId": 2510,
+              "text": "The museum's new wing was a practical success but an aesthetic disappointment.",
               "audioUrl": null,
               "clozeTarget": "aesthetic"
             }
           ],
           "distractors": [
             {
-              "lemma": "Practicing severe self-discipline and abstaining from all physical pleasures.",
+              "lemma": "Practicing strict self-denial and avoiding comfort and pleasure.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Physically strong, active, agile, and proficient in sports.",
+              "lemma": "Physically strong, fit and good at sports.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Inducing a temporary loss of bodily sensation or awareness.",
+              "lemma": "Causing a loss of feeling or awareness.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Of undisputed origin, genuine, and verified as real.",
+              "lemma": "Genuine and of undisputed origin.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Arousing pity, sadness, or compassion through obvious distress.",
+              "lemma": "Arousing pity, especially through weakness or sadness.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -1033,32 +1027,24 @@
       ],
       "relations": [
         {
-          "relatedLemma": "esthetic",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "aesthetical",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "esthetical",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "artistic",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "inaesthetic",
-          "relationType": "antonym"
+          "relatedLemma": "tasteful",
+          "relationType": "synonym"
         },
         {
           "relatedLemma": "tasteless",
           "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "unsightly",
+          "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "Look at the arts to appreciate the aesthetic balance of a painting."
+        "Aesthetic comes from the Greek aisthesis, \"perception\": it is about how things look and feel to the senses."
       ]
     },
     {
@@ -3463,59 +3449,48 @@
       "senses": [
         {
           "senseId": 46,
-          "definition": "Pertaining to or characteristic of an ascetic or the practice of rigorous self-discipline.",
-          "plainLanguageDefinition": "Related to a simple, strict lifestyle that avoids luxury and sensory pleasure.",
+          "definition": "Practicing strict self-denial and giving up comfort and pleasure, often for religious reasons.",
+          "plainLanguageDefinition": "Living very simply and refusing comforts and pleasures on purpose.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 491,
-              "text": "The monastery was renowned for its ascetic architecture, featuring bare stone walls and unadorned wooden benches.",
+              "exampleId": 2511,
+              "text": "The monks kept an ascetic routine of fasting, prayer and long hours of silence.",
               "audioUrl": null,
               "clozeTarget": "ascetic"
             },
             {
-              "exampleId": 492,
-              "text": "He adopted an ascetic routine of daily fasting and silent contemplation to prepare for his ordination.",
+              "exampleId": 2512,
+              "text": "Her apartment was almost ascetic, with one chair, one lamp and nothing on the walls.",
               "audioUrl": null,
               "clozeTarget": "ascetic"
             },
             {
-              "exampleId": 493,
-              "text": "Such ascetic practices were intended to free the mind from terrestrial distractions.",
+              "exampleId": 2513,
+              "text": "He gave up his car and his phone in an ascetic attempt to simplify his life.",
               "audioUrl": null,
               "clozeTarget": "ascetic"
-            },
-            {
-              "exampleId": 23,
-              "text": "Ascetic practices",
-              "audioUrl": null,
-              "clozeTarget": "Ascetic"
             }
           ],
           "distractors": [
             {
-              "lemma": "Concerning or characterized by an appreciation of beauty or good taste.",
+              "lemma": "Relating to beauty or to the enjoyment of beautiful things.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Having the properties of an acid, especially tasting sour.",
+              "lemma": "Relating to or producing vinegar.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Related to the rejection of belief in the existence of deities.",
+              "lemma": "Free from germs that could cause infection.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Conforming to fact and therefore worthy of belief.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Free from living germs or microorganisms.",
+              "lemma": "Denying that any god exists.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -3584,10 +3559,6 @@
       ],
       "relations": [
         {
-          "relatedLemma": "ascetical",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "austere",
           "relationType": "synonym"
         },
@@ -3596,12 +3567,20 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "gluttonous",
+          "relatedLemma": "abstemious",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "self-indulgent",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "hedonistic",
           "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "An ascetic person denies themselves luxury, much like an athlete in rigorous discipline without sweets or extra comforts."
+        "Ascetic comes from the Greek askesis, \"exercise\": an ascetic trains the body to do without comforts."
       ]
     },
     {
@@ -6080,38 +6059,26 @@
       "senses": [
         {
           "senseId": 78,
-          "definition": "Changeable.",
-          "plainLanguageDefinition": "Capricious describes someone or something that changes very quickly and unpredictably.",
+          "definition": "Given to sudden changes of mood or behavior without an obvious reason.",
+          "plainLanguageDefinition": "Likely to change suddenly, so you cannot predict what will happen next.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 612,
-              "text": "The capricious weather ruined our plans for an outdoor picnic.",
+              "exampleId": 2514,
+              "text": "The weather in the mountains is capricious, so hikers pack for both sun and snow.",
               "audioUrl": null,
               "clozeTarget": "capricious"
             },
             {
-              "exampleId": 613,
-              "text": "She grew tired of working for a boss with such capricious moods.",
+              "exampleId": 2515,
+              "text": "Employees never knew which rule their capricious manager would enforce on a given day.",
               "audioUrl": null,
               "clozeTarget": "capricious"
             },
             {
-              "exampleId": 614,
-              "text": "Financial markets are notoriously capricious during times of crisis.",
-              "audioUrl": null,
-              "clozeTarget": "capricious"
-            },
-            {
-              "exampleId": 615,
-              "text": "The capricious fashion trends of the nineties have returned to popularity.",
-              "audioUrl": null,
-              "clozeTarget": "capricious"
-            },
-            {
-              "exampleId": 38,
-              "text": "A capricious summer breeze",
+              "exampleId": 2516,
+              "text": "Investors fled the market, unsettled by capricious swings in interest rates.",
               "audioUrl": null,
               "clozeTarget": "capricious"
             }
@@ -6219,10 +6186,6 @@
       ],
       "relations": [
         {
-          "relatedLemma": "freakish",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "impulsive",
           "relationType": "synonym"
         },
@@ -6231,11 +6194,19 @@
           "relationType": "synonym"
         },
         {
+          "relatedLemma": "fickle",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "erratic",
+          "relationType": "synonym"
+        },
+        {
           "relatedLemma": "predictable",
           "relationType": "antonym"
         },
         {
-          "relatedLemma": "nonarbitrary",
+          "relatedLemma": "steady",
           "relationType": "antonym"
         }
       ],
@@ -6256,31 +6227,25 @@
       "senses": [
         {
           "senseId": 80,
-          "definition": "Censure severely.",
-          "plainLanguageDefinition": "To castigate means to severely scold or criticize someone for their mistakes.",
+          "definition": "Criticize or reprimand someone severely.",
+          "plainLanguageDefinition": "To scold or criticize someone very harshly.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 620,
+              "exampleId": 2517,
               "text": "The coach did not hesitate to castigate the team after their dismal performance.",
               "audioUrl": null,
               "clozeTarget": "castigate"
             },
             {
-              "exampleId": 621,
-              "text": "Editors will often castigate poor writing habits in young authors.",
+              "exampleId": 2518,
+              "text": "In her review, she castigated the museum for hiding its best paintings in a basement.",
               "audioUrl": null,
-              "clozeTarget": "castigate"
+              "clozeTarget": "castigated"
             },
             {
-              "exampleId": 622,
-              "text": "The fierce editorial sought to castigate the corrupt politicians.",
-              "audioUrl": null,
-              "clozeTarget": "castigate"
-            },
-            {
-              "exampleId": 623,
+              "exampleId": 2519,
               "text": "Parents should guide children rather than constantly castigate them.",
               "audioUrl": null,
               "clozeTarget": "castigate"
@@ -6288,27 +6253,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Remove the testicles of a male human or animal.",
+              "lemma": "Bring about or provoke an action or event.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Initiate, provoke, or incite an action or course of events.",
+              "lemma": "Chew food before swallowing it.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Chew food into smaller pieces before swallowing.",
+              "lemma": "Examine the facts of something to find out the truth.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Carry out a formal inquiry to discover facts.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Renounce or surrender a right, claim, or responsibility.",
+              "lemma": "Make something less severe, serious or painful.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -6381,20 +6341,28 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "objurgate",
+          "relatedLemma": "rebuke",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "chasten",
+          "relatedLemma": "reprimand",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "correct",
+          "relatedLemma": "berate",
           "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "praise",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "commend",
+          "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "When authorities castigate a wrongdoer, they cast harsh words and reprimands to punish them."
+        "Castigate comes from the Latin castigare, \"to correct or punish\": to castigate is to correct someone with harsh words."
       ]
     },
     {
@@ -6410,59 +6378,53 @@
       "senses": [
         {
           "senseId": 82,
-          "definition": "(chemistry) a substance that initiates or accelerates a chemical reaction without itself being affected.",
-          "plainLanguageDefinition": "A catalyst is a substance that speeds up a chemical reaction without getting used up itself.",
+          "definition": "Something or someone that causes an important change or event to happen.",
+          "plainLanguageDefinition": "A person or thing that starts or speeds up a big change.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 628,
-              "text": "Platinum is often used as a catalyst in automotive exhaust systems.",
+              "exampleId": 2520,
+              "text": "The factory's closure became the catalyst for a new wave of small businesses in town.",
               "audioUrl": null,
               "clozeTarget": "catalyst"
             },
             {
-              "exampleId": 629,
-              "text": "The enzyme acts as a biological catalyst to digest food.",
+              "exampleId": 2521,
+              "text": "Her blunt question acted as a catalyst, and the meeting finally reached a decision.",
               "audioUrl": null,
               "clozeTarget": "catalyst"
             },
             {
-              "exampleId": 630,
-              "text": "Without the proper catalyst, the mixture failed to react.",
-              "audioUrl": null,
-              "clozeTarget": "catalyst"
-            },
-            {
-              "exampleId": 631,
-              "text": "Scientists searched for a new catalyst to lower industrial production costs.",
+              "exampleId": 2522,
+              "text": "Historians see the printing press as a catalyst for the spread of new ideas.",
               "audioUrl": null,
               "clozeTarget": "catalyst"
             }
           ],
           "distractors": [
             {
-              "lemma": "A specialist who examines data, systems, or behavior in detail.",
+              "lemma": "A person who studies data or situations in close detail.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A doctor who specializes in treating disorders of the feet.",
+              "lemma": "A sudden, violent disaster such as a flood or an earthquake.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A teacher of religious doctrine using questions and answers.",
+              "lemma": "A complete list of items arranged in a set order.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A writer or performer who uses humor to criticize human foolishness.",
+              "lemma": "A machine that hurls heavy objects through the air.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A person who remains faithful to an established government or ruler.",
+              "lemma": "A teacher of religious doctrine who uses questions and answers.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -6537,16 +6499,24 @@
       ],
       "relations": [
         {
-          "relatedLemma": "accelerator",
+          "relatedLemma": "spark",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "anticatalyst",
-          "relationType": "antonym"
+          "relatedLemma": "trigger",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "stimulus",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "impetus",
+          "relationType": "synonym"
         }
       ],
       "mnemonics": [
-        "In chemistry, a catalyst speeds up a reaction without being consumed during the process."
+        "Catalyst comes from the Greek katalysis, \"loosening\": a catalyst loosens things up so that change can happen."
       ]
     },
     {
@@ -6563,64 +6533,52 @@
         {
           "senseId": 84,
           "definition": "Harsh or corrosive in tone.",
-          "plainLanguageDefinition": "Caustic describes speech or writing that is bitterly sarcastic and biting.",
+          "plainLanguageDefinition": "Bitterly sarcastic in a way that is meant to hurt.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 636,
-              "text": "The critic was known for his caustic reviews that devastated opening night plays.",
+              "exampleId": 2523,
+              "text": "The critic was known for caustic reviews that could close a play within a week.",
               "audioUrl": null,
               "clozeTarget": "caustic"
             },
             {
-              "exampleId": 637,
+              "exampleId": 2524,
               "text": "She regretted her caustic remarks as soon as she saw his hurt expression.",
               "audioUrl": null,
               "clozeTarget": "caustic"
             },
             {
-              "exampleId": 638,
+              "exampleId": 2525,
               "text": "His caustic wit made him both feared and admired in the boardroom.",
               "audioUrl": null,
               "clozeTarget": "caustic"
-            },
-            {
-              "exampleId": 639,
-              "text": "The debate grew heated as both candidates exchanged caustic insults.",
-              "audioUrl": null,
-              "clozeTarget": "caustic"
-            },
-            {
-              "exampleId": 42,
-              "text": "Caustic jokes about political assassination, talk-show hosts and medical ethics",
-              "audioUrl": null,
-              "clozeTarget": "Caustic"
             }
           ],
           "distractors": [
             {
-              "lemma": "Relating to sound, hearing, or the properties of an auditorium.",
+              "lemma": "Relating to sound or to the sense of hearing.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Relating to the countryside or characterized by rural simplicity.",
+              "lemma": "Simple and plain in a way typical of the countryside.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Relating to esoteric religious mysteries or spiritual contemplation.",
+              "lemma": "Relaxed and informal rather than careful or planned.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Asserting opinions in an arrogant and unproven manner.",
+              "lemma": "Relating to or acting as a cause.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "In a state of complete disorder and confusion.",
+              "lemma": "Having a spiritual meaning hidden from ordinary understanding.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -6689,40 +6647,32 @@
       ],
       "relations": [
         {
-          "relatedLemma": "acerb",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "acerbic",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "acid",
+          "relatedLemma": "biting",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "acrid",
+          "relatedLemma": "scathing",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "bitter",
+          "relatedLemma": "sarcastic",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "blistering",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "pleasant",
+          "relatedLemma": "mild",
           "relationType": "antonym"
         },
         {
-          "relatedLemma": "constructive",
+          "relatedLemma": "soothing",
           "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "A caustic remark burns and hurts a listener just like a caustic chemical burns the skin."
+        "Caustic comes from the Greek kaustikos, \"burning\": caustic words burn like acid."
       ]
     },
     {
@@ -9794,7 +9744,7 @@
     {
       "wordId": 68,
       "headword": "derivative",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "adjective",
       "ipa": "/dɪˈɹɪvətɪv/",
       "syllables": 4,
       "difficultyTier": 1,
@@ -9804,169 +9754,53 @@
       "senses": [
         {
           "senseId": 123,
-          "definition": "The result of mathematical differentiation; the instantaneous change of one quantity relative to another; df(x)/dx.",
-          "plainLanguageDefinition": "The mathematical rate at which a function changes at any given point.",
+          "definition": "Copied or adapted from the work of others; not original.",
+          "plainLanguageDefinition": "Copying other people's ideas instead of offering something new.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 795,
-              "text": "The student calculated the derivative of the polynomial curve.",
+              "exampleId": 2535,
+              "text": "Critics dismissed the novel as derivative, little more than a rewrite of older thrillers.",
               "audioUrl": null,
               "clozeTarget": "derivative"
             },
             {
-              "exampleId": 796,
-              "text": "In calculus, finding the derivative helps locate maximum values.",
+              "exampleId": 2536,
+              "text": "The band's early songs were derivative, but their second album found its own sound.",
               "audioUrl": null,
               "clozeTarget": "derivative"
             },
             {
-              "exampleId": 797,
-              "text": "The slope of the tangent line is given by the derivative.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 798,
-              "text": "Physics problems often require taking the derivative of position with respect to time.",
+              "exampleId": 2537,
+              "text": "Investors wanted something new, not another derivative app that copied a popular game.",
               "audioUrl": null,
               "clozeTarget": "derivative"
             }
           ],
           "distractors": [
             {
-              "lemma": "A financial instrument of uncertain value.",
+              "lemma": "Serving to make something look more attractive.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "The root word from which other terms are formed.",
+              "lemma": "Final and settled, leaving no room for doubt.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A device used to measure electric current.",
+              "lemma": "Expressing contempt or ridicule.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An automatic process in mechanical engineering.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 124,
-          "definition": "A compound obtained from, or regarded as derived from, another compound.",
-          "plainLanguageDefinition": "A chemical substance made from another chemical substance.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 799,
-              "text": "Aspirin is a well-known derivative of salicylic acid.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 800,
-              "text": "The laboratory synthesized a new petroleum derivative for testing.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 801,
-              "text": "Many modern plastics are created as a chemical derivative of oil.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 802,
-              "text": "The pigment was identified as a plant derivative.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "A logical conclusion drawn from false premises.",
+              "lemma": "Extremely or unusually small.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An artistic work that lacks originality.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A legal document transferring property rights.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A grammatical form based on a foreign root.",
-              "kind": "mc",
-              "difficulty": 1
-            }
-          ]
-        },
-        {
-          "senseId": 125,
-          "definition": "A financial instrument whose value is based on another security.",
-          "plainLanguageDefinition": "A financial contract that gets its value from the price of something else.",
-          "senseOrder": 3,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 803,
-              "text": "The institutional investor placed a substantial hedge using a complex derivative to mitigate market volatility.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 804,
-              "text": "Regulatory bodies increased oversight after risky derivative trading caused massive banking losses.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 805,
-              "text": "Economists debate whether every modern derivative adds liquidity or simply increases systemic risk.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            },
-            {
-              "exampleId": 806,
-              "text": "Her doctoral thesis analyzed how a specific derivative contract prices credit default swaps.",
-              "audioUrl": null,
-              "clozeTarget": "derivative"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "A primary share of stock issued directly by a corporation.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "An official document certifying ownership of physical commodities.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "The profit earned from selling an asset above its purchase price.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A legal claim against a debtor's physical property.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "An initial public offering of company shares.",
+              "lemma": "Relating to careful discussion before a decision.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -9975,28 +9809,32 @@
       ],
       "relations": [
         {
-          "relatedLemma": "derived function",
+          "relatedLemma": "imitative",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "differential coefficient",
+          "relatedLemma": "unoriginal",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "differential",
+          "relatedLemma": "uninspired",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "first derivative",
-          "relationType": "synonym"
+          "relatedLemma": "original",
+          "relationType": "antonym"
         },
         {
-          "relatedLemma": "derivative instrument",
-          "relationType": "synonym"
+          "relatedLemma": "innovative",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "inventive",
+          "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "Derived from math class, the derivative measures change."
+        "Derivative work is derived from someone else's: it repeats rather than creates."
       ]
     },
     {
@@ -31004,7 +30842,7 @@
     {
       "wordId": 221,
       "headword": "precipitate",
-      "partOfSpeech": "noun",
+      "partOfSpeech": "verb",
       "ipa": "/pɹɪˈsɪpɪtət/",
       "syllables": 4,
       "difficultyTier": 1,
@@ -31014,63 +30852,78 @@
       "senses": [
         {
           "senseId": 381,
-          "definition": "A precipitated solid substance in suspension or after settling or filtering.",
-          "plainLanguageDefinition": "A solid that forms and falls to the bottom of a liquid during a chemical reaction.",
+          "definition": "Cause an event, especially a bad one, to happen suddenly or sooner than expected.",
+          "plainLanguageDefinition": "To make something, usually something bad, happen suddenly or too soon.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 1802,
-              "text": "The chemist carefully filtered the red precipitate from the liquid solution.",
+              "exampleId": 2526,
+              "text": "The bank's collapse precipitated a crisis that spread across the whole country.",
+              "audioUrl": null,
+              "clozeTarget": "precipitated"
+            },
+            {
+              "exampleId": 2527,
+              "text": "A single angry post was enough to precipitate a week of protests.",
               "audioUrl": null,
               "clozeTarget": "precipitate"
             },
             {
-              "exampleId": 1803,
-              "text": "After the reagent was added, a heavy precipitate formed at the bottom of the flask.",
-              "audioUrl": null,
-              "clozeTarget": "precipitate"
-            },
-            {
-              "exampleId": 1804,
-              "text": "They collected the fine precipitate to measure its mass on the scale.",
-              "audioUrl": null,
-              "clozeTarget": "precipitate"
-            },
-            {
-              "exampleId": 1805,
-              "text": "The unwanted precipitate was washed away with distilled water.",
+              "exampleId": 2528,
+              "text": "Doctors worried that the long flight might precipitate another heart attack.",
               "audioUrl": null,
               "clozeTarget": "precipitate"
             }
           ],
           "distractors": [
             {
-              "lemma": "A sudden drop in temperature caused by atmospheric pressure.",
+              "lemma": "Expect or predict that something will happen.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "The act of falling steeply from a high elevation.",
+              "lemma": "Take part in an activity or event.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A written order for medication issued by a physician.",
+              "lemma": "Scatter or fade away gradually.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An introductory statement preceding a formal document.",
+              "lemma": "Beat rapidly or irregularly, like a racing heart.",
               "kind": "mc",
               "difficulty": 1
             }
           ]
         }
       ],
-      "relations": [],
+      "relations": [
+        {
+          "relatedLemma": "trigger",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "provoke",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "hasten",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "prevent",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "delay",
+          "relationType": "antonym"
+        }
+      ],
       "mnemonics": [
-        "Think of precipitation like rain or snow falling down from the sky as solid particles drop to the bottom."
+        "Precipitate comes from the Latin praeceps, \"headlong\": to precipitate an event is to send it rushing forward headfirst."
       ]
     },
     {
@@ -32330,65 +32183,53 @@
       "senses": [
         {
           "senseId": 397,
-          "definition": "Intellectually productive.",
-          "plainLanguageDefinition": "Someone who is prolific creates a lot of creative or intellectual work.",
+          "definition": "Producing a large amount of work or many results.",
+          "plainLanguageDefinition": "Making a lot of something, such as books, songs or ideas.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 1866,
+              "exampleId": 2529,
               "text": "As a prolific author, she published three novels in a single year.",
               "audioUrl": null,
               "clozeTarget": "prolific"
             },
             {
-              "exampleId": 1867,
+              "exampleId": 2530,
               "text": "The prolific scientist published dozens of papers before turning thirty.",
               "audioUrl": null,
               "clozeTarget": "prolific"
             },
             {
-              "exampleId": 1868,
-              "text": "His prolific output of essays astonished his academic peers.",
-              "audioUrl": null,
-              "clozeTarget": "prolific"
-            },
-            {
-              "exampleId": 1869,
+              "exampleId": 2531,
               "text": "She remained a prolific composer throughout her long career.",
-              "audioUrl": null,
-              "clozeTarget": "prolific"
-            },
-            {
-              "exampleId": 223,
-              "text": "A prolific writer",
               "audioUrl": null,
               "clozeTarget": "prolific"
             }
           ],
           "distractors": [
             {
-              "lemma": "Relating to high profits.",
+              "lemma": "Bringing in money or a financial gain.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Characterized by professional behavior.",
+              "lemma": "Skilled and competent at a particular task.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Prone to making loud proclamations.",
+              "lemma": "Showing deep insight or great knowledge.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Exhibiting a prolonged hesitation.",
+              "lemma": "Using too many words, so that it becomes tedious.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Possessing profound knowledge.",
+              "lemma": "Recklessly wasteful with money or resources.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -32469,7 +32310,7 @@
       ],
       "relations": [
         {
-          "relatedLemma": "fecund",
+          "relatedLemma": "productive",
           "relationType": "synonym"
         },
         {
@@ -32477,16 +32318,20 @@
           "relationType": "synonym"
         },
         {
+          "relatedLemma": "fruitful",
+          "relationType": "synonym"
+        },
+        {
           "relatedLemma": "unproductive",
           "relationType": "antonym"
         },
         {
-          "relatedLemma": "unfruitful",
+          "relatedLemma": "barren",
           "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "A PRO writer is LIFIC, meaning they produce many books."
+        "Prolific shares the Latin root proles, \"offspring\", with proliferate: both are about producing a lot."
       ]
     },
     {
@@ -32503,7 +32348,7 @@
         {
           "senseId": 399,
           "definition": "An inclination to do something.",
-          "plainLanguageDefinition": "A propensity is a natural urge or tendency to act in a certain way.",
+          "plainLanguageDefinition": "A natural habit or tendency to act in a certain way.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -32534,27 +32379,27 @@
           ],
           "distractors": [
             {
-              "lemma": "A sudden change in direction.",
+              "lemma": "The state of being successful and wealthy.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "An official decree or order.",
+              "lemma": "Behavior that follows accepted standards of what is proper.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A strong barrier or fence.",
+              "lemma": "Nearness in space, time or relationship.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A clever method of solving problems.",
+              "lemma": "Something that a person owns.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A financial investment.",
+              "lemma": "A claim to importance that is not justified.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -32689,11 +32534,11 @@
       ],
       "relations": [
         {
-          "relatedLemma": "leaning",
+          "relatedLemma": "tendency",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "tendency",
+          "relatedLemma": "inclination",
           "relationType": "synonym"
         },
         {
@@ -32701,12 +32546,16 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "aptness",
+          "relatedLemma": "penchant",
           "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "aversion",
+          "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "PROS lean (pensi) toward their goals because of a natural propensity."
+        "Propensity comes from the Latin propensus, \"leaning forward\": a propensity is a leaning toward some kind of behavior."
       ]
     },
     {
@@ -32722,8 +32571,8 @@
       "senses": [
         {
           "senseId": 402,
-          "definition": "Make peace with.",
-          "plainLanguageDefinition": "To propitiate someone is to calm them down or win their favor.",
+          "definition": "Win or regain someone's favor by doing something that pleases them.",
+          "plainLanguageDefinition": "To calm someone's anger or win their goodwill by pleasing them.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -32754,27 +32603,22 @@
           ],
           "distractors": [
             {
-              "lemma": "To provoke an aggressive response.",
+              "lemma": "Cause something to happen suddenly or sooner than expected.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To participate in a formal ceremony.",
+              "lemma": "Spread an idea widely, or breed plants or animals.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To calculate a financial loss.",
+              "lemma": "Make something continue for a long time.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "To investigate a crime scene.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "To postpone a meeting.",
+              "lemma": "Increase rapidly in number.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -32785,10 +32629,30 @@
         {
           "relatedLemma": "appease",
           "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "placate",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "conciliate",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "mollify",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "provoke",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "antagonize",
+          "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "Property owners (propitiate) make peace with their neighbors to avoid disputes."
+        "Propitiate shares a root with propitious, \"favorable\": you propitiate people to make them favorable toward you."
       ]
     },
     {
@@ -32804,65 +32668,48 @@
       "senses": [
         {
           "senseId": 403,
-          "definition": "Not fanciful or imaginative.",
-          "plainLanguageDefinition": "Something prosaic is dull, ordinary, and lacking poetic flair.",
+          "definition": "Ordinary and dull, with no imagination or excitement.",
+          "plainLanguageDefinition": "Plain and everyday, with nothing interesting or poetic about it.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 1890,
+              "exampleId": 2532,
               "text": "They discussed prosaic matters like grocery shopping over dinner.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             },
             {
-              "exampleId": 1891,
+              "exampleId": 2533,
               "text": "The architecture of the office building was thoroughly prosaic.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             },
             {
-              "exampleId": 1892,
-              "text": "He preferred a quiet, prosaic life in the countryside.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 1893,
-              "text": "Her journal entries detailed the prosaic events of daily routines.",
-              "audioUrl": null,
-              "clozeTarget": "prosaic"
-            },
-            {
-              "exampleId": 227,
-              "text": "A prosaic and unimaginative essay",
+              "exampleId": 2534,
+              "text": "Her journal entries recorded the prosaic events of her daily routine.",
               "audioUrl": null,
               "clozeTarget": "prosaic"
             }
           ],
           "distractors": [
             {
-              "lemma": "Relating to prose writing.",
+              "lemma": "Successful, especially in making money.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Extremely loud and chaotic.",
+              "lemma": "So old that it is no longer in ordinary use.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Filled with bright colors.",
+              "lemma": "Accurately predicting what will happen.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Marked by extreme danger.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Exhibiting great wealth.",
+              "lemma": "Dealing with things in a practical, realistic way.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -32986,23 +32833,7 @@
       ],
       "relations": [
         {
-          "relatedLemma": "matter-of-fact",
-          "relationType": "synonym"
-        },
-        {
           "relatedLemma": "pedestrian",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "prosy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "earthbound",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "commonplace",
           "relationType": "synonym"
         },
         {
@@ -33010,11 +32841,15 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "rhetorical",
-          "relationType": "antonym"
+          "relatedLemma": "commonplace",
+          "relationType": "synonym"
         },
         {
-          "relatedLemma": "interesting",
+          "relatedLemma": "mundane",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "imaginative",
           "relationType": "antonym"
         },
         {
@@ -33023,7 +32858,7 @@
         }
       ],
       "mnemonics": [
-        "PROSE is ordinary writing, so PROSAIC means dull and ordinary."
+        "Prosaic comes from prose, the ordinary language of everyday writing rather than poetry."
       ]
     },
     {
@@ -36144,8 +35979,8 @@
       "senses": [
         {
           "senseId": 445,
-          "definition": "Temperamentally disinclined to talk.",
-          "plainLanguageDefinition": "Someone who is reticent prefers to keep quiet and does not share their thoughts easily.",
+          "definition": "Inclined to keep one's thoughts and feelings to oneself.",
+          "plainLanguageDefinition": "Not willing to say much about what you think or feel.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -36176,27 +36011,27 @@
           ],
           "distractors": [
             {
-              "lemma": "Relating to a sudden increase in speed or momentum.",
+              "lemma": "Having happened only a short time ago.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Characterized by sharp and biting sarcasm.",
+              "lemma": "Able to recover quickly from difficulty.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Prone to sudden changes in mood or behavior.",
+              "lemma": "Showing deep respect, especially toward something sacred.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Marked by excessive ornamentation in style.",
+              "lemma": "Stubbornly refusing to obey rules or authority.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Inclined to argue without proper justification.",
+              "lemma": "Strongly smelling of something, or strongly suggesting it.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -36325,7 +36160,11 @@
       ],
       "relations": [
         {
-          "relatedLemma": "untalkative",
+          "relatedLemma": "reserved",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "taciturn",
           "relationType": "synonym"
         },
         {
@@ -36333,32 +36172,24 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "unemotional",
+          "relatedLemma": "uncommunicative",
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "self-effacing",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "retiring",
-          "relationType": "synonym"
+          "relatedLemma": "talkative",
+          "relationType": "antonym"
         },
         {
           "relatedLemma": "voluble",
           "relationType": "antonym"
         },
         {
-          "relatedLemma": "demonstrative",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "assertive",
+          "relatedLemma": "forthcoming",
           "relationType": "antonym"
         }
       ],
       "mnemonics": [
-        "Think of a person holding back words like a net holding fish, staying quiet and reticent."
+        "Reticent comes from the Latin reticere, \"to keep silent\", built on tacere, the same root as tacit."
       ]
     },
     {

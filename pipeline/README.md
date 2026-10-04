@@ -43,6 +43,23 @@ with `--only=<stage>`.
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
 
+## Improving entries without an API key
+
+Word entries are reviewed and improved inside a Claude Code session: the
+session's model writes and scores the content, and these commands pick the
+words, check the work and apply it. The process and the scoring rubric are in
+`.claude/skills/improve-words/SKILL.md`.
+
+```bash
+npx tsx src/curate.ts status                 # what is reviewed, what is left
+npx tsx src/curate.ts next --count=12        # write a worksheet to out/curate/
+npx tsx src/curate.ts check <worksheet>      # run the fixed checks
+npx tsx src/curate.ts apply <worksheet>      # write the record, export words.json
+```
+
+Every review is stored in the record's `reviews` table with its scores. The
+Gemini stages (`generate`, `revise`) skip reviewed words.
+
 ## How to run
 
 ```bash

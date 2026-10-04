@@ -47,8 +47,10 @@ coverage/
 expo-env.d.ts
 # @end expo-cli
 
-# Claude Code local tooling and worktrees
-.claude/
+# Claude Code local tooling and worktrees. Project skills are shared, so they
+# are committed; everything else under .claude/ stays local.
+.claude/*
+!.claude/skills/
 
 # Storybook / Chromatic build output
 storybook-static/

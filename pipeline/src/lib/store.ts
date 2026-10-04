@@ -26,9 +26,11 @@ import type {
   NewExample,
   NewMnemonic,
   NewRelation,
+  NewReview,
   NewSense,
   NewWord,
   RelationRow,
+  ReviewRow,
   SenseRow,
   WordRow,
 } from './types.ts';
@@ -72,6 +74,18 @@ export interface Store {
   /** Swap a word's global (not personalized) mnemonic for a new one. */
   replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void>;
 
+  // Curation (lib/curate.ts) edits a word's first sense in place.
+  updateSense(
+    senseId: number,
+    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
+  ): Promise<void>;
+  replaceExamples(senseId: number, rows: NewExample[]): Promise<void>;
+  replaceRelations(wordId: number, rows: NewRelation[]): Promise<void>;
+  /** Drop a word's other senses and their rows (when its part of speech changes). */
+  removeOtherSenses(wordId: number, keepSenseId: number): Promise<void>;
+  listReviews(): Promise<ReviewRow[]>;
+  addReview(row: NewReview): Promise<ReviewRow>;
+
   hasAudio(path: string): Promise<boolean>;
   saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult>;
   totalAudioBytes(): Promise<number>;
@@ -88,6 +102,8 @@ interface JsonDb {
   mnemonics: MnemonicRow[];
   distractors: DistractorRow[];
   audio_objects: AudioObject[];
+  /** Added with curation; older records have none. */
+  reviews?: ReviewRow[];
 }
 
 const LIVE_NOTE =
@@ -273,6 +289,48 @@ export class JsonFileStore implements Store {
       (m) => !(m.word_id === wordId && m.user_id === null),
     );
     this.db.mnemonics.push({ id: this.nextId('mnemonics'), ...row, word_id: wordId, user_id: null });
+  }
+
+  async updateSense(
+    senseId: number,
+    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
+  ): Promise<void> {
+    const s = this.db.senses.find((x) => x.id === senseId);
+    if (!s) throw new Error(`updateSense: no sense ${senseId}`);
+    Object.assign(s, patch);
+  }
+
+  async replaceExamples(senseId: number, rows: NewExample[]): Promise<void> {
+    this.db.example_sentences = this.db.example_sentences.filter((e) => e.sense_id !== senseId);
+    for (const row of rows) {
+      this.db.example_sentences.push({ id: this.nextId('example_sentences'), ...row, sense_id: senseId });
+    }
+  }
+
+  async replaceRelations(wordId: number, rows: NewRelation[]): Promise<void> {
+    this.db.word_relations = this.db.word_relations.filter((r) => r.word_id !== wordId);
+    for (const row of rows) {
+      this.db.word_relations.push({ id: this.nextId('word_relations'), ...row, word_id: wordId });
+    }
+  }
+
+  async removeOtherSenses(wordId: number, keepSenseId: number): Promise<void> {
+    const drop = new Set(
+      this.db.senses.filter((s) => s.word_id === wordId && s.id !== keepSenseId).map((s) => s.id),
+    );
+    this.db.senses = this.db.senses.filter((s) => !drop.has(s.id));
+    this.db.example_sentences = this.db.example_sentences.filter((e) => !drop.has(e.sense_id));
+    this.db.distractors = this.db.distractors.filter((d) => !drop.has(d.sense_id));
+  }
+
+  async listReviews(): Promise<ReviewRow[]> {
+    return [...(this.db.reviews ?? [])];
+  }
+
+  async addReview(row: NewReview): Promise<ReviewRow> {
+    const review: ReviewRow = { id: this.nextId('reviews'), ...row };
+    (this.db.reviews ??= []).push(review);
+    return review;
   }
 
   async hasAudio(path: string): Promise<boolean> {

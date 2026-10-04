@@ -439,7 +439,12 @@ async function writeGenerated(
 export async function generate(ctx: RunContext): Promise<void> {
   ctx.log.stage('03 generate with an LLM');
   const allWords = await ctx.store.listWords();
-  const words = ctx.limit ? allWords.slice(0, ctx.limit) : allWords;
+  // Words reviewed by curation (.claude/skills/improve-words) are owned by
+  // that process; an LLM stage must not overwrite them.
+  const reviewed = new Set((await ctx.store.listReviews()).map((r) => r.word_id));
+  const words = (ctx.limit ? allWords.slice(0, ctx.limit) : allWords).filter(
+    (w) => !reviewed.has(w.id),
+  );
 
   const items: GenItem[] = [];
   for (const word of words) {
