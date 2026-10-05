@@ -2216,12 +2216,17 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-04:
-  13 of 317 words reviewed, 304 to go. Every unreviewed word lacks look-alike
-  words for its wrong answers, 159 have fragment examples, 3 plain definitions
-  give the answer away (`next` puts those first).
-- Plan for about 12 words per worksheet and up to three second-review rounds.
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-05:
+  113 of 317 words reviewed, 204 to go. Every unreviewed word lacks look-alike
+  words for its wrong answers, 116 have fragment examples, 22 hooks do not
+  name the word.
+- For a request like "improve 100 more words", follow "Big runs" in the
+  skill: `next --count=100 --split=8`, one writer and one reviewer subagent
+  per worksheet, `check` all the worksheets together, then apply them one at
+  a time. Read "Traps found so far" first.
+- Plan for up to three second-review rounds per word. Most words need one.
 - Add a line below for each batch: date, words, verdicts, anything learned.
+  Add new failure patterns to "Traps found so far" in the skill.
 
 ### Curation log
 
@@ -2266,3 +2271,8 @@ in wrong answers. Curation will catch it word by word.
     the second `apply` refuses it. A script over all 8 worksheets found one
     early (an emanate meaning used by both amalgamate and emulate), and it was
     reworded during the review round instead of after a failed apply.
+  - Tooling added afterwards for the next run: `next --split=K` writes K
+    worksheets, `check` takes several worksheets and checks them against each
+    other, and the checks reject markup, code symbols and invisible
+    characters. The skill has a "Big runs" section with the writer prompt and
+    a "Traps found so far" list.

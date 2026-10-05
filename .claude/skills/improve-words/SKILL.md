@@ -21,9 +21,9 @@ A new session picks up where the last one stopped:
 1. `cd pipeline && npm ci` if `node_modules` is missing.
 2. `npx tsx src/curate.ts status`. It shows how many words are reviewed, which
    are flagged for a person, and the most common problems in the rest.
-3. Run the loop below. `next` chooses the words: first any reviewed without a
-   second reviewer, then words that give the answer away, then the rest in
-   record order.
+3. Run the loop below, or "Big runs" for more than about 15 words. `next`
+   chooses the words: first any reviewed without a second reviewer, then words
+   that give the answer away, then the rest in record order.
 4. After `apply`, commit, open or update a pull request, and add a line to the
    "Curation log" at the end of PROGRESS.md (date, words, verdicts, anything new
    you learned).
@@ -47,8 +47,9 @@ missing).
    - Fill in `review.scores`, `review.verdict` and `review.notes`.
 4. Get a second review (see below). `check` and `apply` refuse a word without
    one.
-5. `npx tsx src/curate.ts check <worksheet>` runs the checks. Fix and repeat
-   until every word says `ok`. If you change a word's content after the second
+5. `npx tsx src/curate.ts check <worksheet>` runs the checks. It takes several
+   worksheets at once, which also checks them against each other. Fix and
+   repeat until every word says `ok`. If you change a word's content after the second
    reviewer scored it, clear its `checker.scores` (set them to null) and ask
    again.
 6. `npx tsx src/curate.ts apply <worksheet>` writes the record
@@ -100,13 +101,86 @@ risks") can score 4 with a note. Fix the 3s; do not chase every 4.
 Stop after three review rounds on a word. If it still has a score under 4, flag
 it with notes saying what is left, and move on.
 
-## Batch size
+## Big runs
 
-Worksheets of 10 to 15 words work well. For a big run, split the words into
-several worksheets and give each one to a subagent (the Agent tool) to edit.
-Only the main session runs `check` and `apply`, one worksheet at a time, so two
-runs never write the record at once. A later `apply` can fail because an
-earlier one took a wrong answer it also uses; change it and check again.
+Worksheets of 10 to 15 words work well. For a run of more than about 15 words
+(for example "improve 100 more words"), use one writer subagent and one
+reviewer subagent per worksheet. On 2026-10-05, 100 words went through this way
+in about half an hour, and 15 failed the first review.
+
+1. `npx tsx src/curate.ts next --count=100 --split=8` writes 8 worksheets
+   (`worksheet-<time>-a.json` to `-h.json`) and prints their paths.
+2. Start one writer subagent per worksheet (the Agent tool, `general-purpose`,
+   in the background), all at once, with the writer prompt below.
+3. As each writer finishes, start a new reviewer subagent on that worksheet
+   with the prompt in "The second review". Do not reuse the writer.
+4. When a reviewer reports, fix its findings yourself in the main session. It
+   is usually a few wrong answers or a hook, and a short script edit is faster
+   than another writer round. Clear the `checker` block of each word you
+   changed, add a line to its `review.notes`, and send the changed words back
+   to the same reviewer (SendMessage) to score again.
+5. Before applying, check all the worksheets together:
+   `npx tsx src/curate.ts check <a.json> <b.json> ...`. Checked one at a time,
+   two unapplied worksheets can use the same wrong answer without either
+   check noticing.
+6. Apply the worksheets one at a time as each passes (`apply` takes one
+   file). Only the main session runs `apply`, so two runs never write the
+   record at once.
+
+The writer prompt, with the paths filled in:
+
+> You are the writer for one worksheet of word entries in Little Lexicon, a
+> vocabulary app for adults studying for tests like the GRE. Your worksheet:
+> `<worksheet>`. Read `.claude/skills/improve-words/SKILL.md` in full and
+> follow it, including "Traps found so far". For every word: read `problems`,
+> score the current content on all 7 criteria, rewrite every field that
+> scores under 4, then score the content as it now stands. Fill in
+> `review.scores`, `review.verdict` and `review.notes`. Leave the `checker`
+> block alone; a separate reviewer fills it in. Do not change `wordId`,
+> `headword` or `tier`. Write every definition, wrong answer and other sense
+> from scratch in your own words. When one sounds like a stock definition,
+> search the web for it in quotes and reword it if it matches a commercial
+> dictionary. Then run `npx tsx src/curate.ts check <worksheet>` from
+> `pipeline/` and fix every problem except the missing checker scores. Do not
+> run `apply`, and do not edit any other file (scratch files go in
+> `<scratchpad>/<your batch>/`). When done, reply with a short table: each
+> word, its verdict, the fields you changed, and anything you flagged.
+
+## Traps found so far
+
+The second reviewer has failed entries for these reasons. Check for them
+before handing a worksheet over.
+
+- **Copied wording, mostly in wrong answers.** Models write stock definitions
+  without noticing. Reviewers confirmed copies of Oxford, Oxford Learner's,
+  Longman, Cambridge, Collins COBUILD, Merriam-Webster Learner's and
+  Vocabulary.com, usually whole definitions with one or two words changed.
+  The look-alikes' definitions (massive, salacious, contingent, enunciate,
+  append, disbar, deface) were copied more often than the target words'.
+- **WordNet senses that are the classic misreading.** WordNet gives enervate
+  the sense "disturb the composure of", which is the very mistake tests use
+  the word to catch. Drop senses like this.
+- **A rare or technical first sense.** WordNet led with articulate "provide
+  with a joint", aggrandize "add details to", convoluted "rolled
+  lengthwise" and buttress the noun. Move the meaning a learner needs to the
+  front and keep the old one as an other sense when it is still useful.
+- **False roots and sound-alikes in hooks.** Sagacious does not come from
+  sage (it is Latin sagax, "keen-scented"). Cajole does not sound like
+  jolly. English salute never meant "wish good health" (the Latin greeting
+  did). Check every root; for a sound-alike, check that it really sounds
+  alike.
+- **Related words from another sense.** debacle had "rout" (a military
+  defeat), and deference had "esteem" and "regard" (admiration, not
+  yielding). An antonym built on the word (ambiguous and "unambiguous")
+  gives the answer away in the antonym game.
+- **Examples with no clue.** "Such boorish behavior has no place in a
+  professional workplace." fits rude, loud or lazy just as well. Show the
+  behavior, so the blank can only be the word.
+- **Other senses that repeat the first.** credulous had "showing a lack of
+  judgment or experience" next to "disposed to believe on little evidence".
+- **Junk text from older generation passes.** disseminate's hook ended in
+  markup and invisible characters. The checks now reject code symbols,
+  brackets, braces and invisible characters.
 
 ## What the app shows
 

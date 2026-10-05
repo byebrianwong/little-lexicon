@@ -3,7 +3,8 @@
 //
 //   npx tsx src/curate.ts status
 //   npx tsx src/curate.ts next [--count=N] [--words=a,b,c]   write a worksheet
-//   npx tsx src/curate.ts check <worksheet>                  run the checks
+//   npx tsx src/curate.ts next --count=100 --split=8         write 8 worksheets for a big run
+//   npx tsx src/curate.ts check <worksheet...>               run the checks, on several together
 //   npx tsx src/curate.ts apply <worksheet>                  write it and export
 //
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
@@ -28,6 +29,7 @@ import {
   primarySense,
   problemKind,
   RUBRIC_VERSION,
+  splitIntoParts,
   WORKSHEET_INSTRUCTIONS,
   wrongAnswerOwners,
   type CheckEnv,
@@ -155,19 +157,20 @@ async function next(args: string[]): Promise<void> {
     const entry = buildEntry(rows, w);
     return { ...entry, problems: checkContent(entry, env) };
   });
-  const sheet: Worksheet = {
-    rubricVersion: RUBRIC_VERSION,
-    createdAt: new Date().toISOString(),
-    instructions: WORKSHEET_INSTRUCTIONS,
-    words: entries,
-  };
+  // --split=K writes K worksheets, one per writer subagent in a big run.
+  const parts = splitIntoParts(entries, Number.parseInt(parseOption(args, 'split') ?? '1', 10));
+  const createdAt = new Date().toISOString();
+  const stamp = createdAt.replace(/[-:]/g, '').replace('T', '-').slice(0, 15);
   await mkdir(OUT_DIR, { recursive: true });
-  const stamp = sheet.createdAt.replace(/[-:]/g, '').replace('T', '-').slice(0, 15);
-  const file = join(OUT_DIR, `worksheet-${stamp}.json`);
-  await writeFile(file, JSON.stringify(sheet, null, 2) + '\n', 'utf8');
-  console.log(file);
-  for (const e of entries) {
-    console.log(`  ${e.headword.padEnd(16)} ${e.problems.length} problems${done.has(e.wordId) ? ' (already reviewed)' : ''}`);
+  for (const [i, part] of parts.entries()) {
+    const sheet: Worksheet = { rubricVersion: RUBRIC_VERSION, createdAt, instructions: WORKSHEET_INSTRUCTIONS, words: part };
+    const suffix = parts.length > 1 ? `-${String.fromCharCode(97 + i)}` : '';
+    const file = join(OUT_DIR, `worksheet-${stamp}${suffix}.json`);
+    await writeFile(file, JSON.stringify(sheet, null, 2) + '\n', 'utf8');
+    console.log(file);
+    for (const e of part) {
+      console.log(`  ${e.headword.padEnd(16)} ${e.problems!.length} problems${done.has(e.wordId) ? ' (already reviewed)' : ''}`);
+    }
   }
 }
 
@@ -180,38 +183,50 @@ interface Checked {
   problems: string[];
 }
 
-async function checkSheet(file: string, rows: ContentRows, lexicon: Lexicon): Promise<Checked[]> {
+async function readSheet(file: string): Promise<Worksheet> {
   if (!existsSync(file)) throw new Error(`No worksheet at ${file}`);
   const sheet = JSON.parse(await readFile(file, 'utf8')) as Worksheet;
   if (sheet.rubricVersion !== RUBRIC_VERSION) {
-    throw new Error(`Worksheet uses rubric ${sheet.rubricVersion}; the current rubric is ${RUBRIC_VERSION}. Make a new one.`);
+    throw new Error(`${file} uses rubric ${sheet.rubricVersion}; the current rubric is ${RUBRIC_VERSION}. Make a new one.`);
   }
-  const ids = new Set(sheet.words.map((w) => w.wordId));
-  if (ids.size !== sheet.words.length) throw new Error('A word appears twice in the worksheet');
+  return sheet;
+}
+
+/**
+ * Check one or more worksheets together. Checked together, a wrong answer
+ * that two unapplied worksheets both use is caught before either is applied.
+ */
+async function checkSheets(files: string[], rows: ContentRows, lexicon: Lexicon): Promise<Checked[][]> {
+  const sheets = await Promise.all(files.map(readSheet));
+  const all = sheets.flatMap((s) => s.words);
+  const ids = new Set(all.map((w) => w.wordId));
+  if (ids.size !== all.length) throw new Error('A word appears twice across the worksheets');
   // Wrong answers must be unique across the whole word list, including the
-  // other words in this worksheet.
+  // other words in these worksheets.
   const owners = wrongAnswerOwners(rows, ids);
   const env: CheckEnv = { lexicon, takenWrongAnswers: owners };
+  return sheets.map((sheet) => sheet.words.map((entry) => checkEntry(entry, rows, env)));
+}
 
-  return sheet.words.map((entry) => {
-    const word = rows.words.find((w) => w.id === entry.wordId);
-    if (!word || word.headword !== entry.headword) {
-      return { entry, before: entry, changed: [], problems: [`wordId ${entry.wordId} is not "${entry.headword}" in the record`] };
+/** Check one entry, then claim its wrong answers so later entries cannot reuse them. */
+function checkEntry(entry: WorksheetEntry, rows: ContentRows, env: CheckEnv): Checked {
+  const word = rows.words.find((w) => w.id === entry.wordId);
+  if (!word || word.headword !== entry.headword) {
+    return { entry, before: entry, changed: [], problems: [`wordId ${entry.wordId} is not "${entry.headword}" in the record`] };
+  }
+  const before = buildEntry(rows, word);
+  const changed = changedFields(before, entry);
+  const problems = [...checkContent(entry, env), ...checkReview(entry, changed)];
+  if (changed.includes('partOfSpeech')) {
+    const kept = entry.otherSenses.filter((s) => before.otherSenses.includes(s));
+    if (kept.length > 0) {
+      problems.push(
+        `the part of speech changed, but otherSenses still holds senses of the old one: ${kept.map((s) => `"${s.slice(0, 40)}"`).join(', ')}`,
+      );
     }
-    const before = buildEntry(rows, word);
-    const changed = changedFields(before, entry);
-    const problems = [...checkContent(entry, env), ...checkReview(entry, changed)];
-    if (changed.includes('partOfSpeech')) {
-      const kept = entry.otherSenses.filter((s) => before.otherSenses.includes(s));
-      if (kept.length > 0) {
-        problems.push(
-          `the part of speech changed, but otherSenses still holds senses of the old one: ${kept.map((s) => `"${s.slice(0, 40)}"`).join(', ')}`,
-        );
-      }
-    }
-    for (const wa of entry.wrongAnswers) owners.set(wa.meaning.trim().toLowerCase(), entry.wordId);
-    return { entry, before, changed, problems };
-  });
+  }
+  for (const wa of entry.wrongAnswers) env.takenWrongAnswers.set(wa.meaning.trim().toLowerCase(), entry.wordId);
+  return { entry, before, changed, problems };
 }
 
 function report(checked: Checked[]): number {
@@ -229,16 +244,21 @@ function report(checked: Checked[]): number {
   return failing;
 }
 
-async function check(file: string): Promise<void> {
+async function check(files: string[]): Promise<void> {
   const { rows } = await openRecord();
-  const failing = report(await checkSheet(file, rows, await openLexicon()));
-  console.log(failing ? `\n${failing} words fail. Fix them and check again.` : '\nAll words pass. Apply with: npx tsx src/curate.ts apply <worksheet>');
+  const results = await checkSheets(files, rows, await openLexicon());
+  let failing = 0;
+  for (const [i, checked] of results.entries()) {
+    if (files.length > 1) console.log(`\n${files[i]}`);
+    failing += report(checked);
+  }
+  console.log(failing ? `\n${failing} words fail. Fix them and check again.` : '\nAll words pass. Apply each worksheet with: npx tsx src/curate.ts apply <worksheet>');
   if (failing) process.exitCode = 1;
 }
 
 async function apply(file: string): Promise<void> {
   const { store, rows } = await openRecord();
-  const checked = await checkSheet(file, rows, await openLexicon());
+  const [checked] = await checkSheets([file], rows, await openLexicon());
   const failing = report(checked);
   if (failing) {
     console.log(`\n${failing} words fail. Nothing was written.`);
@@ -343,12 +363,14 @@ async function apply(file: string): Promise<void> {
 
 async function main(): Promise<void> {
   const [command, ...args] = process.argv.slice(2);
-  const fileArg = args.find((a) => !a.startsWith('--'));
+  const fileArgs = args.filter((a) => !a.startsWith('--')).map((a) => resolve(a));
   if (command === 'status') return status();
   if (command === 'next') return next(args);
-  if (command === 'check' && fileArg) return check(resolve(fileArg));
-  if (command === 'apply' && fileArg) return apply(resolve(fileArg));
-  console.log('Usage: npx tsx src/curate.ts <status | next [--count=N] [--words=a,b] | check <file> | apply <file>>');
+  if (command === 'check' && fileArgs.length > 0) return check(fileArgs);
+  if (command === 'apply' && fileArgs.length === 1) return apply(fileArgs[0]!);
+  console.log(
+    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] | check <file...> | apply <file>>',
+  );
   process.exitCode = 1;
 }
 

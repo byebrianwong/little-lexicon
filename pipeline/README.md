@@ -53,7 +53,8 @@ words, check the work and apply it. The process and the scoring rubric are in
 ```bash
 npx tsx src/curate.ts status                 # what is reviewed, what is left
 npx tsx src/curate.ts next --count=12        # write a worksheet to out/curate/
-npx tsx src/curate.ts check <worksheet>      # run the fixed checks
+npx tsx src/curate.ts next --count=100 --split=8   # 8 worksheets for a big run
+npx tsx src/curate.ts check <worksheet...>   # run the fixed checks, on several together
 npx tsx src/curate.ts apply <worksheet>      # write the record, export words.json
 ```
 
