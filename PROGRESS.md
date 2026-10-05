@@ -2229,3 +2229,40 @@ in wrong answers. Curation will catch it word by word.
   caustic, derivative, precipitate, prolific, propensity, propitiate, prosaic,
   reticent). 12 fixed, 1 pass. derivative became the adjective and precipitate
   the verb.
+- 2026-10-05: 100 words, from bolster to esoteric in `next` order: bolster,
+  impassive, reverent, sagacious, salubrious, then abate through esoteric
+  alphabetically. All 100 fixed, 0 flagged. Status now: 113 of 317 reviewed,
+  204 to go.
+  - How it ran: 8 worksheets of 12 or 13 words. A writer subagent edited each
+    one, and a separate reviewer subagent scored it. The main session fixed
+    what the reviewers found, sent the changed words back for a second score,
+    and applied the worksheets one at a time.
+  - The writers were told the last batch's failure list up front: copied
+    dictionary wording, weak look-alikes, clueless examples, wrong-sense
+    related words, false etymology. They searched the web for their own
+    stock-sounding definitions before handing back. On the first review, 15
+    of 100 words failed (on the first batch, 9 of 13 did). All 15 passed on
+    round 2.
+  - What still failed: copied wording, mostly in wrong answers (Oxford,
+    Longman, Cambridge, Merriam-Webster Learner's), on 9 words. Other single
+    failures: false hooks (sage is not the root of sagacious; cajole does not
+    sound like jolly), a near-duplicate other sense (credulous), a rare
+    synonym (misdating for anachronism), and WordNet's clumsy boorish
+    definition.
+  - enervate had kept WordNet's "disturb the composure of" sense. That is
+    the misreading tests use the word to catch, so it was dropped. Check
+    other words for WordNet senses like this.
+  - First senses changed: buttress went from noun to verb ("buttress an
+    argument"), and its old meaning is now a verb other sense. These kept
+    their part of speech but got a new first sense: abstain, admonish,
+    aggrandize, articulate, assuage, audacious, candor, conciliatory,
+    convoluted, dubious. Where the old sense was still useful, it is kept as
+    an other sense.
+  - disseminate's hook ended in stray markup from an earlier generation pass
+    (backticks, braces, "[instruction]"). It is replaced. A scan of
+    words.json found no other text like it.
+  - `check` compares wrong answers only with words already in the record. So
+    two worksheets edited in parallel can use the same wrong answer, and only
+    the second `apply` refuses it. A script over all 8 worksheets found one
+    early (an emanate meaning used by both amalgamate and emulate), and it was
+    reworded during the review round instead of after a failed apply.
