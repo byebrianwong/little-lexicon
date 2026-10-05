@@ -91,6 +91,27 @@ const isSentence = (s: string): boolean => /^[A-Z"']/.test(s.trim()) && /[.!?]["
 const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).length;
 
 /**
+ * Characters that never belong in word content: code and markup symbols,
+ * invisible characters and loose accent marks. A generation pass once left
+ * "}]}```[instruction]@@" and a byte-order mark at the end of a hook.
+ */
+const JUNK = /[`{}<>[\]\\|]|@@|[\u200b-\u200f\u2028\u2029\ufeff\ufffd]|[\u0300-\u036f]/;
+
+/** Every piece of text in an entry that the app can show. */
+function contentTexts(entry: WorksheetEntry): string[] {
+  return [
+    entry.definition,
+    entry.plain,
+    entry.hook,
+    ...entry.otherSenses,
+    ...entry.examples.flatMap((ex) => [ex.text, ex.cloze]),
+    ...entry.wrongAnswers.flatMap((wa) => [wa.lookalike, wa.meaning]),
+    ...entry.synonyms,
+    ...entry.antonyms,
+  ];
+}
+
+/**
  * Whether text uses the word or a word built on it: an inflection
  * ("abated"), or any word that starts with it ("aesthetically",
  * "abatement"). A definition that does this gives the answer away.
@@ -117,6 +138,9 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
 
   const content = { ...entry, problems: undefined, review: undefined, checker: undefined };
   if (JSON.stringify(content).includes('\u2014')) p.push('contains an em dash');
+  for (const text of contentTexts(entry)) {
+    if (JUNK.test(text)) p.push(`"${text.slice(0, 40)}" contains markup, code symbols or invisible characters`);
+  }
   if (!PARTS_OF_SPEECH.includes(entry.partOfSpeech)) {
     p.push(`partOfSpeech must be one of ${PARTS_OF_SPEECH.join(', ')}`);
   }
@@ -326,6 +350,22 @@ export function wrongAnswerOwners(rows: ContentRows, skipWordIds: Set<number>): 
     }
   }
   return owners;
+}
+
+/**
+ * Split items into `parts` runs of near-equal size, in order, for a big
+ * curation run that gives each worksheet to its own subagent.
+ */
+export function splitIntoParts<T>(items: T[], parts: number): T[][] {
+  const n = Math.max(1, Math.min(parts, items.length));
+  const out: T[][] = [];
+  let start = 0;
+  for (let i = 0; i < n; i++) {
+    const size = Math.floor(items.length / n) + (i < items.length % n ? 1 : 0);
+    out.push(items.slice(start, start + size));
+    start += size;
+  }
+  return out;
 }
 
 /** Short problem labels with the quoted text removed, for counting. */

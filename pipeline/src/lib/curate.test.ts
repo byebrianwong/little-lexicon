@@ -7,6 +7,7 @@ import {
   checkContent,
   checkReview,
   problemKind,
+  splitIntoParts,
   wrongAnswerOwners,
   type CheckEnv,
   type WorksheetEntry,
@@ -114,6 +115,25 @@ test('an em dash anywhere in the content fails, but not in review notes', () => 
   const inNotes = goodEntry();
   inNotes.review.notes = 'Fine — no notes.';
   assert.deepEqual(checkContent(inNotes, env()), []);
+});
+
+test('markup, code symbols and invisible characters in the content fail', () => {
+  const bom = String.fromCharCode(0xfeff);
+  const junk = { ...goodEntry(), hook: `Abate sounds like "a bit".}]}\`\`\`[instruction]@@${bom}{` };
+  assert.ok(checkContent(junk, env()).some((p) => p.includes('contains markup')));
+  const hidden = goodEntry();
+  hidden.wrongAnswers[0] = { lookalike: 'abet', meaning: `Help or encourage${String.fromCharCode(0x200b)} someone to do wrong.` };
+  assert.ok(checkContent(hidden, env()).some((p) => p.includes('invisible characters')));
+  // Ordinary punctuation, quotes and accented letters are fine.
+  const fine = { ...goodEntry(), hook: 'Abate sounds like "a bit" (as in a caf\u00e9 that empties a bit at a time).' };
+  assert.deepEqual(checkContent(fine, env()), []);
+});
+
+test('splitIntoParts makes near-equal runs in order', () => {
+  const items = Array.from({ length: 10 }, (_, i) => i);
+  assert.deepEqual(splitIntoParts(items, 3), [[0, 1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+  assert.deepEqual(splitIntoParts(items, 1), [items]);
+  assert.deepEqual(splitIntoParts([1, 2], 5), [[1], [2]]);
 });
 
 test('the review needs every score, and a verdict that matches the scores and changes', () => {
