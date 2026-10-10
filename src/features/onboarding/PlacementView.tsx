@@ -1,5 +1,5 @@
-// The placement question: one word, three honest answers, and a way to skip
-// the whole test. The adaptive tier logic and the word picking live in
+// The placement question: one word, three honest answers, and a way back to
+// the level picker. The adaptive tier logic and the word picking live in
 // app/onboarding/placement.tsx.
 
 import { View } from 'react-native';
@@ -36,8 +36,8 @@ export interface PlacementViewProps {
   total: number;
   onAnswer: (answer: PlacementAnswer) => void;
   onHear: () => void;
-  /** Leaves the test for the home screen, which offers it again later. */
-  onSkip: () => void;
+  /** Leaves the test for the level picker, where it was opened. */
+  onBack: () => void;
 }
 
 export function PlacementView({
@@ -46,13 +46,13 @@ export function PlacementView({
   total,
   onAnswer,
   onHear,
-  onSkip,
+  onBack,
 }: PlacementViewProps) {
   return (
     <Screen>
       <Row className="items-center justify-between pt-2">
         <Label>Placement test</Label>
-        <TextButton label="Skip for now" onPress={onSkip} />
+        <TextButton label="Back to levels" onPress={onBack} />
       </Row>
       <View className="mt-1">
         <ProgressBar fraction={total > 0 ? answeredCount / total : 0} />
@@ -67,8 +67,7 @@ export function PlacementView({
           {word ? <AudioButton onPress={onHear} label="Hear it" /> : null}
         </View>
         <Muted className="mt-6">
-          Be honest. This sets the difficulty of your new words. If you skip it, you
-          can take it later from the Learn tab.
+          Be honest. This sets the difficulty of your new words.
         </Muted>
       </View>
 

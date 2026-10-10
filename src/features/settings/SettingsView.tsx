@@ -22,6 +22,7 @@ import {
   TextField,
 } from '@/components/ui';
 import { colors } from '@/theme/colors';
+import { WORD_LEVELS, levelForEstimate } from '@/features/onboarding/levels';
 import type { Profile } from '@/lib/types';
 
 const GOALS = [10, 15, 20, 30];
@@ -37,6 +38,8 @@ export interface SettingsViewProps {
   soundEnabled: boolean;
   onSaveName: (name: string | null) => void;
   onSelectGoal: (goal: number) => void;
+  /** Saves the chosen level's estimate (see features/onboarding/levels). */
+  onSelectLevel: (levelEstimate: number) => void;
   onSelectRetention: (retention: number) => void;
   onToggleSound: (enabled: boolean) => void;
   /** null turns the daily reminder off. */
@@ -55,6 +58,7 @@ export function SettingsView({
   soundEnabled,
   onSaveName,
   onSelectGoal,
+  onSelectLevel,
   onSelectRetention,
   onToggleSound,
   onSelectReminder,
@@ -65,6 +69,7 @@ export function SettingsView({
   credits,
 }: SettingsViewProps) {
   const [name, setName] = useState(profile.displayName ?? '');
+  const level = levelForEstimate(profile.levelEstimate);
 
   return (
     <Screen scroll edges={['top']}>
@@ -98,6 +103,20 @@ export function SettingsView({
               label={`${g}`}
               selected={profile.dailyGoal === g}
               onPress={() => onSelectGoal(g)}
+            />
+          ))}
+        </ChoiceGroup>
+      </Section>
+
+      <Section label="Word level" className="mt-10">
+        <Muted>Which new words you see first.</Muted>
+        <ChoiceGroup className="mt-3">
+          {WORD_LEVELS.map((l) => (
+            <Choice
+              key={l.id}
+              label={l.label}
+              selected={level?.id === l.id}
+              onPress={() => onSelectLevel(l.levelEstimate)}
             />
           ))}
         </ChoiceGroup>

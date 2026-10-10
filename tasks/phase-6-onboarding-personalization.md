@@ -12,6 +12,8 @@ Get new users to the right starting level quickly and tailor content lightly.
 
 **Acceptance:** placement sets a level estimate and marks known words; the new-word queue afterward starts near the estimated level, not at tier 1.
 
+**Changed 2026-10-10:** first run no longer starts with the placement test. It asks the learner to choose a level (Regular, Advanced or Expert), which sets `level_estimate` to 1, 3 or 5. The placement test stays as an option on that screen ("Not sure? Take a 12-word test") and still marks known words. The level can be changed later in Settings.
+
 ## 6.2 Goals and interests
 
 - Ask for a daily goal and a few interests (stored in `profiles.interests`). Interests feed personalized sentence themes and mnemonics later; for now just capture them.

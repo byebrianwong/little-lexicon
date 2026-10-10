@@ -15,7 +15,7 @@ export default function Index() {
   // Signed in: wait for the profile, then check onboarding.
   if (profileQuery.isLoading) return <Splash />;
   const profile = profileQuery.data;
-  if (profile && !profile.onboardedAt) return <Redirect href="/onboarding/placement" />;
+  if (profile && !profile.onboardedAt) return <Redirect href="/onboarding/level" />;
   return <Redirect href="/(app)" />;
 }
 

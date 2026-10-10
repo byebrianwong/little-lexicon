@@ -15,7 +15,7 @@ import {
   Stat,
 } from '@/components/ui';
 import { levelProgress } from '@/features/gamification/xp';
-import { needsPlacement } from '@/features/onboarding/placement';
+import { needsLevel } from '@/features/onboarding/levels';
 import type { ProgressCounts } from '@/lib/backend/types';
 import type { Profile } from '@/lib/types';
 
@@ -28,8 +28,11 @@ export interface HomeViewProps {
   onStartSession: () => void;
   onPractice: () => void;
   onSpeedRound: () => void;
-  /** Offered only until the placement test is taken, since it can be skipped. */
-  onPlacementTest: () => void;
+  /**
+   * Offered only while no level is saved. Learners who skipped the old
+   * placement test reached home without one.
+   */
+  onChooseLevel: () => void;
 }
 
 export function HomeView({
@@ -40,14 +43,14 @@ export function HomeView({
   onStartSession,
   onPractice,
   onSpeedRound,
-  onPlacementTest,
+  onChooseLevel,
 }: HomeViewProps) {
   const goal = profile?.dailyGoal ?? 15;
   const goalMet = reviewsToday >= goal;
   const toGo = Math.max(0, goal - reviewsToday);
   const lvl = profile ? levelProgress(profile.xpTotal) : null;
   const streak = profile?.streakCount ?? 0;
-  const offerPlacement = profile ? needsPlacement(profile) : false;
+  const offerLevel = profile ? needsLevel(profile) : false;
 
   return (
     <Screen scroll edges={['top']} onRefresh={onRefresh}>
@@ -85,13 +88,13 @@ export function HomeView({
           title="Speed round"
           detail="sixty seconds"
           onPress={onSpeedRound}
-          last={!offerPlacement}
+          last={!offerLevel}
         />
-        {offerPlacement ? (
+        {offerLevel ? (
           <ListRow
-            title="Placement test"
-            detail="find your level"
-            onPress={onPlacementTest}
+            title="Choose your level"
+            detail="Regular to Expert"
+            onPress={onChooseLevel}
             last
           />
         ) : null}

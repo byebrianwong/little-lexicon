@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
 import { CREDITS, NEW_PROFILE, profile } from '@/stories/fixtures';
 import { SettingsLoading, SettingsView } from './SettingsView';
@@ -14,6 +14,7 @@ const meta = {
     credits: CREDITS,
     onSaveName: () => {},
     onSelectGoal: () => {},
+    onSelectLevel: fn(),
     onSelectRetention: () => {},
     onToggleSound: () => {},
     onSelectReminder: () => {},
@@ -38,6 +39,15 @@ export const FeedbackAndRemindersOff: Story = {
 /** A fresh account with no name typed yet. */
 export const NoDisplayName: Story = {
   args: { profile: NEW_PROFILE },
+};
+
+/** Picking a word level saves that level's estimate. */
+export const ChangingLevel: Story = {
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByText('Expert'));
+    await expect(args.onSelectLevel).toHaveBeenCalledWith(5);
+  },
 };
 
 /** Demo builds add a line about where the data lives. */
