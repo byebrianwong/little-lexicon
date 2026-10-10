@@ -2314,3 +2314,41 @@ in wrong answers. Curation will catch it word by word.
     satiate, undulate, upbraid, vacillate, venerate, vex) have it too and
     will meet the check when their turn comes.
   - The skill's "Traps found so far" has the new failure patterns.
+
+## The placement test no longer finishes during render
+
+After the 12th answer, the web build logged "Cannot update a component
+(`NavigationContainerInner`) while rendering a different component
+(`Placement`)". Found 2026-10-10 in demo mode on web.
+
+### Why it happened
+
+`app/onboarding/placement.tsx` had a fallback near the end of the component
+that called `finish()` while rendering. `finish()` saves the level estimate
+and calls `router.replace('/onboarding/goals')`, and React does not allow a
+state change in another component during render. `answer()` already calls
+`finish()` on the 12th answer, so the fallback only ran it a second time. The
+case it seemed meant for, every placement word used before 12 answers, never
+reached it, because its condition needed a current word.
+
+### What changed
+
+- The render-phase call is gone. `answer()` still ends the test at
+  `PLACEMENT_LENGTH`.
+- A `useEffect` ends the test early when the word pool runs out (words
+  loaded, no current word, at least one answer). With no answers at all, for
+  example when the words fail to load, the screen stays up and "Skip for now"
+  still works.
+- `finish()` is guarded by a ref, so it runs once even when `answer()` and
+  the effect both fire, or a second tap lands before the screen leaves.
+
+### Verified
+
+- Web, demo mode, after clearing localStorage, sessionStorage and IndexedDB:
+  answered all 12. One navigation to `/onboarding/goals`, no console errors.
+  The same steps on the old code logged the error above.
+- The pool-runs-out path, with the demo word list cut to 5 for the test only
+  (reverted): the test ended after question 5, went to goals once, and saved
+  a level.
+- `npm run typecheck`, `npx eslint app src` and `npx jest` (199 tests) pass.
+- In practice the pool does not run out: both backends offer all 317 words.
