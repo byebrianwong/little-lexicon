@@ -15,8 +15,12 @@ export interface AuthFormViewProps {
   mode: 'sign-in' | 'sign-up';
   busy: boolean;
   error: string | null;
+  /** Shown after a sign-up that is waiting for the email to be confirmed. */
+  notice: string | null;
   /** Demo builds accept any credentials and keep everything on the device. */
   showDemoNote: boolean;
+  /** Whether "Continue with Google" is offered at all. */
+  showOAuth: boolean;
   onSubmit: (credentials: AuthCredentials) => void;
   onOAuth: () => void;
   onSwitchMode: () => void;
@@ -26,7 +30,9 @@ export function AuthFormView({
   mode,
   busy,
   error,
+  notice,
   showDemoNote,
+  showOAuth,
   onSubmit,
   onOAuth,
   onSwitchMode,
@@ -83,6 +89,12 @@ export function AuthFormView({
       </View>
 
       {error ? <Body className="mt-4 text-accent">{error}</Body> : null}
+      {notice ? (
+        <View className="mt-4 border-t border-rule pt-3">
+          <Label>Check your email</Label>
+          <Body className="mt-1 text-[16px] leading-[23px]">{notice}</Body>
+        </View>
+      ) : null}
 
       <View className="mt-8">
         <Button
@@ -93,17 +105,21 @@ export function AuthFormView({
         />
       </View>
 
-      <Row className="my-6 gap-3">
-        <Rule className="flex-1" />
-        <Note>or</Note>
-        <Rule className="flex-1" />
-      </Row>
-      <Button
-        title="Continue with Google"
-        variant="secondary"
-        onPress={onOAuth}
-        disabled={busy}
-      />
+      {showOAuth ? (
+        <>
+          <Row className="my-6 gap-3">
+            <Rule className="flex-1" />
+            <Note>or</Note>
+            <Rule className="flex-1" />
+          </Row>
+          <Button
+            title="Continue with Google"
+            variant="secondary"
+            onPress={onOAuth}
+            disabled={busy}
+          />
+        </>
+      ) : null}
 
       <View className="mt-6">
         <Button

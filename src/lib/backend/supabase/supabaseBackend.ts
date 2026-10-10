@@ -8,6 +8,7 @@
 
 import { supabase } from '@/lib/supabase';
 import { loadContent } from '@/lib/content';
+import { authRedirectUrl } from '@/lib/authRedirect';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
@@ -160,11 +161,17 @@ export class SupabaseBackend implements Backend {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: displayName ? { display_name: displayName } : undefined },
+      options: {
+        data: displayName ? { display_name: displayName } : undefined,
+        emailRedirectTo: authRedirectUrl(),
+      },
     });
     if (error) return { session: null, error: error.message };
-    const u = data.user;
-    return { session: u ? { userId: u.id, email: u.email ?? null } : null, error: null };
+    // When the project requires email confirmation, Supabase creates the user
+    // but returns no session until the link in the email is opened. Report
+    // that as "no session", not as signed in.
+    const s = data.session;
+    return { session: s ? { userId: s.user.id, email: s.user.email ?? null } : null, error: null };
   }
 
   async signInWithOAuth(provider: OAuthProvider): Promise<AuthResult> {

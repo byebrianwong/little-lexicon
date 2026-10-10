@@ -13,6 +13,7 @@ const mockTables: Record<string, Row[]> = {};
 /** Every table the backend asked for, in order. */
 const mockTouched: string[] = [];
 const mockInvoke = jest.fn();
+const mockSignUp = jest.fn();
 
 class MockQuery implements PromiseLike<Result> {
   private filters: ((r: Row) => boolean)[] = [];
@@ -85,7 +86,10 @@ jest.mock('@/lib/supabase', () => ({
       return new MockQuery(mockTables[table] ?? []);
     },
     functions: { invoke: (...args: unknown[]) => mockInvoke(...args) },
-    auth: { getUser: async () => ({ data: { user: { id: 'user-1' } } }) },
+    auth: {
+      getUser: async () => ({ data: { user: { id: 'user-1' } } }),
+      signUp: (...args: unknown[]) => mockSignUp(...args),
+    },
   },
 }));
 
@@ -121,6 +125,7 @@ beforeEach(() => {
   for (const key of Object.keys(mockTables)) delete mockTables[key];
   mockTouched.length = 0;
   mockInvoke.mockReset();
+  mockSignUp.mockReset();
 });
 
 describe('SupabaseBackend word content', () => {
@@ -272,5 +277,31 @@ describe('SupabaseBackend word reports', () => {
     expect(mockTables.word_reports).toEqual([
       { user_id: 'user-1', word_id: 58, reason: 'definition', note: 'unclear', screen: 'reveal' },
     ]);
+  });
+});
+
+describe('SupabaseBackend sign-up', () => {
+  const user = { id: 'u1', email: 'ada@example.com' };
+
+  it('is not signed in while the email waits for confirmation', async () => {
+    mockSignUp.mockResolvedValue({ data: { user, session: null }, error: null });
+    const res = await new SupabaseBackend().signUp('ada@example.com', 'pw', 'Ada');
+
+    expect(res).toEqual({ session: null, error: null });
+    // The confirmation link must come back to this app, not the shared Site URL.
+    expect(mockSignUp).toHaveBeenCalledWith({
+      email: 'ada@example.com',
+      password: 'pw',
+      options: {
+        data: { display_name: 'Ada' },
+        emailRedirectTo: 'https://little-lexicon.vercel.app/',
+      },
+    });
+  });
+
+  it('is signed in when the project does not require confirmation', async () => {
+    mockSignUp.mockResolvedValue({ data: { user, session: { user } }, error: null });
+    const res = await new SupabaseBackend().signUp('ada@example.com', 'pw');
+    expect(res).toEqual({ session: { userId: 'u1', email: 'ada@example.com' }, error: null });
   });
 });

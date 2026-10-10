@@ -15,6 +15,14 @@ export const env = {
   supabaseUrl: readString(process.env.EXPO_PUBLIC_SUPABASE_URL),
   supabaseAnonKey: readString(process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY),
   demoMode: readBool(process.env.EXPO_PUBLIC_DEMO_MODE, false),
+  /**
+   * The two Claude features ("Make it personal" and the sentence check) need
+   * their Edge Functions deployed with an Anthropic key, and each use costs
+   * money. Off until both are set up.
+   */
+  aiFeatures: readBool(process.env.EXPO_PUBLIC_AI_FEATURES, false),
+  /** "Continue with Google" needs Google set up as a provider in Supabase Auth. */
+  googleSignIn: readBool(process.env.EXPO_PUBLIC_GOOGLE_SIGN_IN, false),
 };
 
 /**
@@ -23,3 +31,7 @@ export const env = {
  * always runnable for review even before a backend exists.
  */
 export const isDemoMode = env.demoMode || env.supabaseUrl === '' || env.supabaseAnonKey === '';
+
+/** Demo mode has local stand-ins for both, so they always work there. */
+export const aiFeaturesAvailable = isDemoMode || env.aiFeatures;
+export const googleSignInAvailable = isDemoMode || env.googleSignIn;
