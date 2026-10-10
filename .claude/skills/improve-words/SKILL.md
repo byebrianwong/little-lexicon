@@ -27,6 +27,11 @@ A new session picks up where the last one stopped:
 4. After `apply`, commit, open or update a pull request, and add a line to the
    "Curation log" at the end of PROGRESS.md (date, words, verdicts, anything new
    you learned).
+5. Before you finish, put what this run taught you into the repo, not into
+   session memory, so the next session gets it. Add each new reason the second
+   reviewer failed an entry to "Traps found so far". Change this skill or
+   `pipeline/src/curate.ts` where the run hit a gap. Update "Where to pick up"
+   in PROGRESS.md with the new counts.
 
 ## The loop
 
