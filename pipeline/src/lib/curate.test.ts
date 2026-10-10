@@ -227,6 +227,22 @@ test('other senses must be clean sentences that do not repeat a sense or name th
   assert.ok(!problems.some((p) => p.includes('Become less in amount')));
 });
 
+test('a wrong answer may not name its own look-alike', () => {
+  const e = goodEntry();
+  e.wrongAnswers[0] = { lookalike: 'abet', meaning: 'Help a thief, as when you abet a robbery.' };
+  const problems = checkContent(e, env());
+  assert.ok(problems.some((p) => p.includes('names its lookalike "abet"')));
+  assert.ok(!checkContent(goodEntry(), env()).some((p) => p.includes('names its lookalike')));
+});
+
+test('wrong answers must start the way the definition does, with or without "To"', () => {
+  const e = goodEntry();
+  e.wrongAnswers[1] = { lookalike: 'abdicate', meaning: 'To give up a throne or high office.' };
+  const problems = checkContent(e, env());
+  assert.ok(problems.some((p) => p.includes('"To give up a throne') && p.includes('start the way the definition does')));
+  assert.ok(!checkContent(goodEntry(), env()).some((p) => p.includes('start the way the definition does')));
+});
+
 test('the second reviewer must score every criterion, and its low scores block the verdict', () => {
   const missing = goodEntry();
   missing.checker.scores = null;

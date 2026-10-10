@@ -2216,10 +2216,11 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-05:
-  113 of 317 words reviewed, 204 to go. Every unreviewed word lacks look-alike
-  words for its wrong answers, 116 have fragment examples, 22 hooks do not
-  name the word.
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-10:
+  213 of 317 words reviewed, 104 to go (pedestrian onward), 1 flagged
+  (corroborate). Every unreviewed
+  word lacks look-alike words for its wrong answers, 64 have fragment
+  examples, 12 hooks do not name the word.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2276,3 +2277,40 @@ in wrong answers. Curation will catch it word by word.
     other, and the checks reject markup, code symbols and invisible
     characters. The skill has a "Big runs" section with the writer prompt and
     a "Traps found so far" list.
+- 2026-10-10: 100 more words, eulogy to penchant in record order. All 100
+  fixed, 0 flagged. Status now: 213 of 317 reviewed, 104 to go.
+  - How it ran: the "Big runs" process, 8 worksheets of 12 or 13 words, one
+    writer and one reviewer subagent each. The main session fixed every
+    finding itself and sent the changed words back. 51 words failed the
+    first review, 9 the second, 1 the third (obtuse, which got a one-word
+    fourth round).
+  - Most failures were copied wording again, about 35 of the 51, mostly in
+    wrong answers. WordUp (dictionary.wordup.com.tw) joined the list of
+    sources the reviewers matched, with Dictionary.com, Webster's New World
+    and American Heritage.
+  - Several of my own fixes took the reviewer's "for example" sentence, and
+    the reviewer then scored its own wording. One of those (morose) opened
+    with Merriam-Webster's phrase. A fresh subagent checked the 9 such texts;
+    1 copy was found (inexcusable, a cut-down WordUp sentence) plus two
+    accuracy points (mollify, malleable). Those were fixed in a follow-up
+    worksheet with its own second review.
+  - First senses changed, keeping the old meaning as an other sense where it
+    was useful: goad (noun to verb), gregarious, iconoclast, impertinent,
+    impervious, inexorable, inimical, insular, inundate, lassitude,
+    mercurial, neophyte, obtuse, opaque, palliate. impertinent's old first
+    sense ("lightly pert and exuberant") was wrong.
+  - Tooling: `check` now rejects a wrong answer that names its own look-alike
+    (it found debunk's bunk option in an earlier batch; eclectic and decorum
+    had near misses and were reworded with it). `curate.ts pos <word...>`
+    prints a word's parts of speech in WordNet; three writers had each
+    written their own script for this. `check` also now requires each
+    wrong answer to start the way the definition does, with or without
+    "To": a follow-up reviewer saw that debunk's options all began "To" and
+    its definition did not, which gave the answer away. corroborate had the
+    same problem; both are fixed. corroborate is now flagged: its WordNet
+    definition is unclear, and my two rewrites each followed a dictionary
+    (Collins COBUILD, then Cambridge) before the review rounds ran out. It
+    needs a definition written by a person. 8 unreviewed verbs (placate, preclude,
+    satiate, undulate, upbraid, vacillate, venerate, vex) have it too and
+    will meet the check when their turn comes.
+  - The skill's "Traps found so far" has the new failure patterns.
