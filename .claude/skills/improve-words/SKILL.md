@@ -52,6 +52,8 @@ missing).
    - Fill in `review.scores`, `review.verdict` and `review.notes`.
 4. Get a second review (see below). `check` and `apply` refuse a word without
    one.
+   `npx tsx src/curate.ts pos <word...>` shows a look-alike's parts of speech
+   in WordNet before you use it.
 5. `npx tsx src/curate.ts check <worksheet>` runs the checks. It takes several
    worksheets at once, which also checks them against each other. Fix and
    repeat until every word says `ok`. If you change a word's content after the second
@@ -105,13 +107,17 @@ risks") can score 4 with a note. Fix the 3s; do not chase every 4.
 
 Stop after three review rounds on a word. If it still has a score under 4, flag
 it with notes saying what is left, and move on.
+(On 2026-10-10 obtuse got a fourth round because the round 3 failure was a
+one-word slip. If you do this, say so in the word's notes.)
 
 ## Big runs
 
 Worksheets of 10 to 15 words work well. For a run of more than about 15 words
 (for example "improve 100 more words"), use one writer subagent and one
 reviewer subagent per worksheet. On 2026-10-05, 100 words went through this way
-in about half an hour, and 15 failed the first review.
+in about half an hour, and 15 failed the first review. On 2026-10-10, 100
+words took about 20 minutes from writing the worksheets to the last apply; 51
+failed the first review, 9 the second, and 1 the third.
 
 1. `npx tsx src/curate.ts next --count=100 --split=8` writes 8 worksheets
    (`worksheet-<time>-a.json` to `-h.json`) and prints their paths.
@@ -162,6 +168,40 @@ before handing a worksheet over.
   Vocabulary.com, usually whole definitions with one or two words changed.
   The look-alikes' definitions (massive, salacious, contingent, enunciate,
   append, disbar, deface) were copied more often than the target words'.
+  On 2026-10-10, 51 of 100 words failed the first review, and about 35 of
+  those failures involved copied wording, again mostly in wrong answers. New sources that run: WordUp (dictionary.wordup.com.tw, a
+  learner's dictionary the reviewers matched often), Dictionary.com and its
+  Random House text, Webster's New World, American Heritage and Britannica.
+  A writer's search for its own text catches about half of these, so expect
+  the reviewer to find the rest.
+- **Copying the reviewer's suggested fix.** A reviewer's note often ends with
+  "for example ...". If you paste that sentence in, the same reviewer then
+  scores its own writing, and its suggestion can itself follow a dictionary
+  (the morose suggestion opened with Merriam-Webster's "sullen and gloomy").
+  Write the fix in your own words. If you did use a suggestion, give that
+  text to a fresh subagent to check.
+- **A wrong answer near the word's own other sense.** compute sits next to
+  impute's accounting sense ("assign a value by estimating"), and augment
+  next to foment's "build up". Read the other senses before choosing
+  look-alikes.
+- **An other sense that is a confusable word's meaning.** exacerbate kept
+  "make a person more annoyed", which is exasperate. Like enervate above,
+  it teaches the mix-up.
+- **Look-alikes that share only an ending.** comical, criminal and cynical
+  for inimical; circular, singular and muscular for insular; verbose and
+  porous for morose. They tempt nobody. Prefer words that share the start or
+  the root (insolent, insubordinate and insufferable for insular).
+- **Wrong answers of the wrong kind.** For a person noun (iconoclast), a bone
+  cell or a computer icon is ruled out at once. For an abstract noun
+  (harangue), a dessert or a greenhouse is too.
+- **A wrong answer that names its look-alike.** "So plentiful that it
+  overflows, as with profuse apologies" tells the learner it defines
+  profuse. The checks now reject this.
+- **Options in a different form from the definition.** debunk's wrong
+  answers began "To debark ...", "To debase ..." while its definition began
+  "Prove that ...". The quiz shows 3 of them beside the definition, so the
+  one option without "To" was the answer. The checks now require every
+  wrong answer to start the way the definition does.
 - **WordNet senses that are the classic misreading.** WordNet gives enervate
   the sense "disturb the composure of", which is the very mistake tests use
   the word to catch. Drop senses like this.
@@ -181,6 +221,10 @@ before handing a worksheet over.
 - **Examples with no clue.** "Such boorish behavior has no place in a
   professional workplace." fits rude, loud or lazy just as well. Show the
   behavior, so the blank can only be the word.
+- **Examples that use another sense.** inundate had two flood examples
+  under an "overwhelm" definition, inimical a "hostile" example under
+  "harmful", and obstinate a stain example under "stubborn". Every example
+  must show the first sense.
 - **Other senses that repeat the first.** credulous had "showing a lack of
   judgment or experience" next to "disposed to believe on little evidence".
 - **Junk text from older generation passes.** disseminate's hook ended in

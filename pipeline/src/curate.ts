@@ -6,6 +6,7 @@
 //   npx tsx src/curate.ts next --count=100 --split=8         write 8 worksheets for a big run
 //   npx tsx src/curate.ts check <worksheet...>               run the checks, on several together
 //   npx tsx src/curate.ts apply <worksheet>                  write it and export
+//   npx tsx src/curate.ts pos <word...>                      parts of speech in WordNet, for look-alikes
 //
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
 // worksheet if any word fails a check, so the record never holds half a batch.
@@ -359,6 +360,12 @@ async function apply(file: string): Promise<void> {
   await exportWords(ctx);
 }
 
+/** Print each word's parts of speech in WordNet, to check a look-alike before using it. */
+async function pos(words: string[]): Promise<void> {
+  const lexicon = await openLexicon();
+  for (const w of words) console.log(`${w}: ${lexicon(w)?.join(', ') ?? 'not in WordNet'}`);
+}
+
 // --- main ---------------------------------------------------------------------
 
 async function main(): Promise<void> {
@@ -368,8 +375,9 @@ async function main(): Promise<void> {
   if (command === 'next') return next(args);
   if (command === 'check' && fileArgs.length > 0) return check(fileArgs);
   if (command === 'apply' && fileArgs.length === 1) return apply(fileArgs[0]!);
+  if (command === 'pos' && args.length > 0) return pos(args);
   console.log(
-    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] | check <file...> | apply <file>>',
+    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] | check <file...> | apply <file> | pos <word...>>',
   );
   process.exitCode = 1;
 }
