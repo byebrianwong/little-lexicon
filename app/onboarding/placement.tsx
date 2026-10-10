@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { router } from 'expo-router';
 import { backend } from '@/lib/backend';
 import { speakWord } from '@/lib/audio';
@@ -21,6 +21,9 @@ export default function Placement() {
   const [tier, setTier] = useState(START_TIER);
   const usedIds = useRef<Set<number>>(new Set());
   const setPlacement = useOnboardingStore((s) => s.setPlacement);
+  // Makes finish() run once, however many times it is called. Never cleared:
+  // the screen is leaving.
+  const finished = useRef(false);
 
   useEffect(() => {
     backend.getPlacementWords().then(setWords).catch(() => setWords([]));
@@ -49,9 +52,25 @@ export default function Placement() {
     if (current) speakWord(current.headword, current.audioUrl);
   }, [current]);
 
-  if (!words) return <PlacementLoading />;
+  const finish = useCallback(
+    (final: PlacementResponse[]) => {
+      if (finished.current) return;
+      finished.current = true;
+      setPlacement(estimateLevel(final), knownWordIds(final));
+      router.replace('/onboarding/goals');
+    },
+    [setPlacement],
+  );
 
-  const done = responses.length >= PLACEMENT_LENGTH || !current;
+  // answer() ends the test at PLACEMENT_LENGTH. This ends it early when every
+  // word has been used first. With no answers (the words failed to load), the
+  // screen stays up and "Back to levels" still works.
+  const poolRanOut = words !== null && current === null && responses.length > 0;
+  useEffect(() => {
+    if (poolRanOut) finish(responses);
+  }, [poolRanOut, finish, responses]);
+
+  if (!words) return <PlacementLoading />;
 
   function answer(a: PlacementAnswer) {
     if (!current) return;
@@ -62,20 +81,10 @@ export default function Placement() {
     if (next.length >= PLACEMENT_LENGTH) finish(next);
   }
 
-  function finish(final: PlacementResponse[]) {
-    setPlacement(estimateLevel(final), knownWordIds(final));
-    router.replace('/onboarding/goals');
-  }
-
   // The test replaced the level picker (see app/onboarding/level.tsx), so
   // going back means opening the picker again.
   function back() {
     router.replace('/onboarding/level');
-  }
-
-  if (done && current) {
-    // Reached length: finish is called in answer(); this is a fallback.
-    finish(responses);
   }
 
   return (

@@ -2277,6 +2277,44 @@ in wrong answers. Curation will catch it word by word.
     characters. The skill has a "Big runs" section with the writer prompt and
     a "Traps found so far" list.
 
+## The placement test no longer finishes during render
+
+After the 12th answer, the web build logged "Cannot update a component
+(`NavigationContainerInner`) while rendering a different component
+(`Placement`)". Found 2026-10-10 in demo mode on web.
+
+### Why it happened
+
+`app/onboarding/placement.tsx` had a fallback near the end of the component
+that called `finish()` while rendering. `finish()` saves the level estimate
+and calls `router.replace('/onboarding/goals')`, and React does not allow a
+state change in another component during render. `answer()` already calls
+`finish()` on the 12th answer, so the fallback only ran it a second time. The
+case it seemed meant for, every placement word used before 12 answers, never
+reached it, because its condition needed a current word.
+
+### What changed
+
+- The render-phase call is gone. `answer()` still ends the test at
+  `PLACEMENT_LENGTH`.
+- A `useEffect` ends the test early when the word pool runs out (words
+  loaded, no current word, at least one answer). With no answers at all, for
+  example when the words fail to load, the screen stays up and "Skip for now"
+  still works.
+- `finish()` is guarded by a ref, so it runs once even when `answer()` and
+  the effect both fire, or a second tap lands before the screen leaves.
+
+### Verified
+
+- Web, demo mode, after clearing localStorage, sessionStorage and IndexedDB:
+  answered all 12. One navigation to `/onboarding/goals`, no console errors.
+  The same steps on the old code logged the error above.
+- The pool-runs-out path, with the demo word list cut to 5 for the test only
+  (reverted): the test ended after question 5, went to goals once, and saved
+  a level.
+- `npm run typecheck`, `npx eslint app src` and `npx jest` (199 tests) pass.
+- In practice the pool does not run out: both backends offer all 317 words.
+
 ## First run asks for a word level instead of the placement test
 
 A new learner now starts by choosing a word level: Regular, Advanced or
@@ -2300,7 +2338,8 @@ Take a 12-word test" link on the same screen. Brian asked for this on
 - Home's "Placement test" row is now "Choose your level". It still shows only
   when no level is saved, which now only happens to learners who skipped the
   old test.
-- The placement test's "Skip for now" is now "Back to levels".
+- The placement test's "Skip for now" is now "Back to levels". It builds on
+  #26, which moved the end of the test out of render.
 - The Discover feed starts over when the level changes. Before, it kept the
   words it had loaded and only later pages used the new level, so a change in
   Settings would not show until the app restarted. Tested in
@@ -2348,9 +2387,3 @@ tier 1. Every tier is test-prep vocabulary, so Regular is not basic English.
   `ChangingLevel` story, and changes to the Settings, Goals,
   Placement and Home stories. Home's `PlacementNotTaken` story is renamed
   `NoLevelChosen`.
-
-### Known issue, not changed here
-
-The placement screen calls `finish` during render once 12 answers are in,
-which logs React's "Cannot update a component while rendering a different
-component". That code predates this change.
