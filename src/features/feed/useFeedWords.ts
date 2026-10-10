@@ -28,7 +28,8 @@ export interface FeedWords {
 
 /**
  * `levelEstimate` is undefined until the profile loads; nothing is fetched
- * before then, because the level decides the order.
+ * before then, because the level decides the order. When the level changes
+ * (in Settings), the feed starts over in the new level's order.
  */
 export function useFeedWords(levelEstimate: number | null | undefined, seed: number): FeedWords {
   const [words, setWords] = useState<WordContent[]>([]);
@@ -40,9 +41,14 @@ export function useFeedWords(levelEstimate: number | null | undefined, seed: num
   const wordsRef = useRef<WordContent[]>([]);
   const busyRef = useRef(false);
   const exhaustedRef = useRef(false);
+  // Bumped when the level changes. A page requested before that is dropped
+  // when it arrives, so old-level words never land in the new feed.
+  const generation = useRef(0);
+  const feedLevel = useRef(levelEstimate);
 
   const load = useCallback(async () => {
     if (levelEstimate === undefined || busyRef.current || exhaustedRef.current) return;
+    const gen = generation.current;
     busyRef.current = true;
     setBusy(true);
     setStarted(true);
@@ -53,6 +59,7 @@ export function useFeedWords(levelEstimate: number | null | undefined, seed: num
         levelEstimate,
         seed,
       });
+      if (gen !== generation.current) return;
       wordsRef.current = [...wordsRef.current, ...page];
       setWords(wordsRef.current);
       setFailed(false);
@@ -61,13 +68,32 @@ export function useFeedWords(levelEstimate: number | null | undefined, seed: num
         setExhausted(true);
       }
     } catch (e) {
+      if (gen !== generation.current) return;
       console.warn('feed: failed to load words', e);
       setFailed(true);
     } finally {
-      busyRef.current = false;
-      setBusy(false);
+      if (gen === generation.current) {
+        busyRef.current = false;
+        setBusy(false);
+      }
     }
   }, [levelEstimate, seed]);
+
+  // The profile arriving is not a change of level. Any later change is.
+  useEffect(() => {
+    const previous = feedLevel.current;
+    feedLevel.current = levelEstimate;
+    if (previous === undefined || previous === levelEstimate) return;
+    generation.current += 1;
+    wordsRef.current = [];
+    busyRef.current = false;
+    exhaustedRef.current = false;
+    setWords([]);
+    setBusy(false);
+    setFailed(false);
+    setExhausted(false);
+    setStarted(false);
+  }, [levelEstimate]);
 
   useEffect(() => {
     if (!started) void load();

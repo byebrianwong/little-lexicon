@@ -19,7 +19,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** Straight after the placement test: the default goal, nothing else picked. */
+/** Straight after choosing Advanced: the default goal, nothing else picked. */
 export const Fresh: Story = {};
 
 /** Interests chosen. Picked chips are outlined and tinted. */
@@ -37,7 +37,7 @@ export const Choosing: Story = {
   },
 };
 
-/** No placement estimate, so the footer falls back to generic copy. */
+/** No level saved, so the footer falls back to generic copy. */
 export const NoLevelEstimate: Story = {
   args: { levelEstimate: null },
 };

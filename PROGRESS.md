@@ -2352,3 +2352,76 @@ reached it, because its condition needed a current word.
   a level.
 - `npm run typecheck`, `npx eslint app src` and `npx jest` (199 tests) pass.
 - In practice the pool does not run out: both backends offer all 317 words.
+
+## First run asks for a word level instead of the placement test
+
+A new learner now starts by choosing a word level: Regular, Advanced or
+Expert. The 12-question placement test is still there, behind a "Not sure?
+Take a 12-word test" link on the same screen. Brian asked for this on
+2026-10-10, so the phase 6 task file now says so.
+
+### What was added
+
+- `src/features/onboarding/levels.ts`: the three levels, the level estimate
+  each one saves, and three sample words each. `levelForEstimate` maps any
+  saved estimate (1 to 5) back to a level. `needsLevel` replaces
+  `needsPlacement`. Unit tested, including a test that each sample word is in
+  `words.json` and inside its level's tiers.
+- The level picker (`LevelView`, route `app/onboarding/level.tsx`). The app's
+  entry route sends a learner who has not finished onboarding here instead of
+  to the placement test. Picking a level goes to the goals screen.
+- A "Word level" choice in Settings.
+- The goals screen says "Starting with Expert words" instead of "Starting
+  around level 5". The old wording read like the XP level on home.
+- Home's "Placement test" row is now "Choose your level". It still shows only
+  when no level is saved, which now only happens to learners who skipped the
+  old test.
+- The placement test's "Skip for now" is now "Back to levels". It builds on
+  #26, which moved the end of the test out of render.
+- The Discover feed starts over when the level changes. Before, it kept the
+  words it had loaded and only later pages used the new level, so a change in
+  Settings would not show until the app restarted. Tested in
+  `src/features/feed/useFeedWords.test.ts`, the first test file for a hook.
+
+### Decisions
+
+**No new column.** A level is saved as `level_estimate`, the number the
+placement test already writes. Regular is 1, Advanced 3 and Expert 5. Through
+`tierWindowForLevel` that gives tiers 1 and 2, tiers 2 to 4, and tiers 4 and
+5. A session's new words start at the low end of the window, so Advanced
+starts at tier 2. That matches how placement estimates already behaved.
+
+**Estimates 2 and 4 read as Regular and Expert.** The placement test can save
+any of 1 to 5. Settings and the goals screen show the nearest level.
+
+**Every onboarding step replaces the one before.** With `router.push` from
+the picker to goals, the browser's back button after finishing reopened
+`/onboarding/level` with the goals screen inside it. Replacing keeps
+onboarding out of the browser history, as the old flow did.
+
+**The level row is local to `LevelView`.** A subtitle on the shared `ListRow`
+would have changed `ui.tsx`, which every story imports, so Chromatic would
+re-snapshot the whole library.
+
+**Levels are only as good as the tiers.** Tiers are five equal groups by
+Datamuse frequency within this word list. They are rough: "debunk",
+"burgeon" and "stymie" are in tier 5, and "hegemony" and "refractory" in
+tier 1. Every tier is test-prep vocabulary, so Regular is not basic English.
+
+### Verified
+
+- `npm run typecheck`, `npx eslint app src` and `npx jest` (27 suites, 208
+  tests) pass.
+- Web, demo mode, at 375 x 812 and desktop width: a cleared first visit opens
+  on the picker; Regular saves 1 and Expert saves 5 with no known words;
+  the test path (open the test, back to levels, take it) saves its estimate
+  and 8 known words; onboarding adds no browser history entries; a profile
+  with no level shows the home row, which opens the picker and returns home
+  with the saved daily goal kept; Settings shows the saved level and
+  switching Advanced to Regular moved the Discover feed from tiers 2 to 4 to
+  tiers 1 and 2.
+- Not run on the iOS simulator or Android emulator.
+- Chromatic: new `Screens/Onboarding Level` stories, a new Settings
+  `ChangingLevel` story, and changes to the Settings, Goals,
+  Placement and Home stories. Home's `PlacementNotTaken` story is renamed
+  `NoLevelChosen`.

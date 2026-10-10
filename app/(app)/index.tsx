@@ -27,7 +27,7 @@ export default function Home() {
       onStartSession={() => pushOnce('/session')}
       onPractice={() => pushOnce('/practice')}
       onSpeedRound={() => pushOnce('/speed')}
-      onPlacementTest={() => pushOnce('/onboarding/placement')}
+      onChooseLevel={() => pushOnce('/onboarding/level')}
     />
   );
 }

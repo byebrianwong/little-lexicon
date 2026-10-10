@@ -14,6 +14,7 @@ import {
   Screen,
   Section,
 } from '@/components/ui';
+import { levelForEstimate } from './levels';
 
 const GOAL_OPTIONS = [10, 15, 20, 30];
 const INTEREST_OPTIONS = [
@@ -32,7 +33,7 @@ const INTEREST_OPTIONS = [
 export interface GoalsViewProps {
   initialGoal: number;
   initialInterests: string[];
-  /** From the placement test, or null when it was skipped. */
+  /** From the level picker or the placement test. */
   levelEstimate: number | null;
   busy: boolean;
   onFinish: (goal: number, interests: string[]) => void;
@@ -47,6 +48,7 @@ export function GoalsView({
 }: GoalsViewProps) {
   const [goal, setGoal] = useState(initialGoal);
   const [interests, setInterests] = useState<string[]>(initialInterests);
+  const level = levelForEstimate(levelEstimate);
 
   function toggleInterest(i: string) {
     setInterests((prev) =>
@@ -97,8 +99,8 @@ export function GoalsView({
           loading={busy}
         />
         <Note className="text-center">
-          {levelEstimate
-            ? `Starting around level ${levelEstimate}.`
+          {level
+            ? `Starting with ${level.label} words. You can change this in Settings.`
             : 'Starting at a comfortable level.'}
         </Note>
       </View>

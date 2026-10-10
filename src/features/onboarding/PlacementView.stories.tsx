@@ -13,7 +13,7 @@ const meta = {
     total: PLACEMENT_LENGTH,
     onAnswer: () => {},
     onHear: () => {},
-    onSkip: () => {},
+    onBack: () => {},
   },
   decorators: [phone],
 } satisfies Meta<typeof PlacementView>;

@@ -14,7 +14,6 @@ import {
 } from '@/features/onboarding/placement';
 import { useOnboardingStore } from '@/features/onboarding/onboardingStore';
 import { PlacementLoading, PlacementView } from '@/features/onboarding/PlacementView';
-import { useProfile, useUpdateProfile } from '@/features/review/queries';
 
 export default function Placement() {
   const [words, setWords] = useState<WordContent[] | null>(null);
@@ -22,11 +21,6 @@ export default function Placement() {
   const [tier, setTier] = useState(START_TIER);
   const usedIds = useRef<Set<number>>(new Set());
   const setPlacement = useOnboardingStore((s) => s.setPlacement);
-  const resetOnboarding = useOnboardingStore((s) => s.reset);
-  const profile = useProfile();
-  const updateProfile = useUpdateProfile();
-  // Blocks a second tap on "Skip for now". Never cleared: the screen is leaving.
-  const skipping = useRef(false);
   // Makes finish() run once, however many times it is called. Never cleared:
   // the screen is leaving.
   const finished = useRef(false);
@@ -70,7 +64,7 @@ export default function Placement() {
 
   // answer() ends the test at PLACEMENT_LENGTH. This ends it early when every
   // word has been used first. With no answers (the words failed to load), the
-  // screen stays up and "Skip for now" still works.
+  // screen stays up and "Back to levels" still works.
   const poolRanOut = words !== null && current === null && responses.length > 0;
   useEffect(() => {
     if (poolRanOut) finish(responses);
@@ -87,24 +81,10 @@ export default function Placement() {
     if (next.length >= PLACEMENT_LENGTH) finish(next);
   }
 
-  // Skipping marks the intro as seen, so the app opens on home from now on. The
-  // level estimate stays empty, and that is what makes home offer the test
-  // again. Taken again from home, the intro is already marked, so this just
-  // leaves.
-  async function skip() {
-    if (skipping.current) return;
-    skipping.current = true;
-    try {
-      if (!profile.data?.onboardedAt) {
-        await updateProfile.mutateAsync({ onboardedAt: new Date().toISOString() });
-      }
-    } catch (e) {
-      // Let them in anyway. The app opens on the test next time, and they can
-      // skip it again then.
-      console.warn('Could not save that the placement test was skipped', e);
-    }
-    resetOnboarding();
-    router.dismissTo('/(app)');
+  // The test replaced the level picker (see app/onboarding/level.tsx), so
+  // going back means opening the picker again.
+  function back() {
+    router.replace('/onboarding/level');
   }
 
   return (
@@ -116,7 +96,7 @@ export default function Placement() {
       onHear={() => {
         if (current) speakWord(current.headword, current.audioUrl);
       }}
-      onSkip={skip}
+      onBack={back}
     />
   );
 }

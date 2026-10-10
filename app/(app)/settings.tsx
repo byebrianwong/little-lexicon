@@ -76,6 +76,7 @@ export default function Settings() {
       soundEnabled={soundEnabled}
       onSaveName={(displayName) => update.mutate({ displayName })}
       onSelectGoal={(dailyGoal) => update.mutate({ dailyGoal })}
+      onSelectLevel={(levelEstimate) => update.mutate({ levelEstimate })}
       onSelectRetention={(desiredRetention) => update.mutate({ desiredRetention })}
       onToggleSound={setSoundEnabled}
       onSelectReminder={setReminder}
