@@ -193,6 +193,14 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     }
     if (!isSentence(m) || m.length < 8 || m.length > 200) p.push(`wrong answer "${m.slice(0, 40)}" must be a capitalized sentence of 8 to 200 characters`);
     if (mentions(m)) p.push(`wrong answer "${m.slice(0, 40)}" names the word`);
+    // An option that names its own look-alike ("...as with profuse apologies")
+    // shows the learner it defines another word.
+    if (lk && findWordToken(m, lk)) p.push(`wrong answer "${m.slice(0, 40)}" names its lookalike "${wa.lookalike}"`);
+    // The options sit beside the definition, so a leading "To" on some and not
+    // the others marks out the correct one.
+    if (/^to\s/i.test(m) !== /^to\s/i.test(entry.definition.trim())) {
+      p.push(`wrong answer "${m.slice(0, 40)}" must start the way the definition does (with or without "To")`);
+    }
     if (correct.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is the correct definition`);
     if (meanings.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is repeated`);
     meanings.add(key(m));
