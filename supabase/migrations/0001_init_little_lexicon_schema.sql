@@ -191,8 +191,11 @@ begin
 end;
 $$;
 
-drop trigger if exists on_auth_user_created on auth.users;
-create trigger on_auth_user_created
+-- auth.users is shared by every app in the games-apps project, so the trigger
+-- name carries this app's prefix. A generic name such as on_auth_user_created
+-- could replace, or be replaced by, another app's trigger.
+drop trigger if exists little_lexicon_on_auth_user_created on auth.users;
+create trigger little_lexicon_on_auth_user_created
   after insert on auth.users
   for each row execute function little_lexicon.handle_new_user();
 
