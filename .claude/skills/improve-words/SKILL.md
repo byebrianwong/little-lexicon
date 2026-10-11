@@ -282,6 +282,32 @@ before handing a worksheet over.
 - **Junk text from older generation passes.** disseminate's hook ended in
   markup and invisible characters. The checks now reject code symbols,
   brackets, braces and invisible characters.
+- **A word's own meaning used as its wrong answer.** unctuous had "covered
+  in oil" (its own oily sense), umbrage had tree shade, and vex had "puzzle
+  someone". Read every wrong answer against all of the word's senses, not
+  only the first.
+- **Other senses that are another word's meaning.** vacillate kept
+  "Move or sway in a rising and falling or wavelike pattern", which is the
+  meaning of undulate. Other senses become fallback wrong answers, so this
+  one could have been shown as a wrong answer for undulate when it is right.
+
+## Pronunciation
+
+Pronunciation (`ipa`) is not part of the rubric or the worksheet. It shows
+under the headword on the new-word card, the browse list and the reveals.
+Every word uses one style: broad General American, as in an American
+learner's dictionary. Use "r" (not "ɹ"), "ɝ" in a stressed syllable and "ɚ"
+in an unstressed one, "oʊ", "əl" and "ən" for syllabic l and n, and "ˈ" and
+"ˌ" for stress. No syllable dots, length marks, tie bars or British forms.
+Match the part of speech: adulterate the verb ends in /-ˌreɪt/, the
+adjective in /-rət/.
+
+To change pronunciations, write a file of `headword<TAB>/ipa/` lines and run
+`npx tsx src/curate.ts ipa <file>` from `pipeline/`. It checks each one
+against the style, sets it and the syllable count, and exports. `status`
+lists any word whose pronunciation is missing or off style. All 317 were
+rewritten on 2026-10-11 and checked by a second reviewer. Have a second
+reviewer check new ones too.
 
 ## What the app shows
 
