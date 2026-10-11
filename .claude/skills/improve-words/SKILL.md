@@ -33,32 +33,6 @@ A new session picks up where the last one stopped:
    `pipeline/src/curate.ts` where the run hit a gap. Update "Where to pick up"
    in PROGRESS.md with the new counts.
 
-## Learners' reports
-
-Learners can report a problem with a word from the new-word card, the answer
-reveal and the word list ("Report a problem"). Each report has a reason
-(definition, example, pronunciation, answers, hook, other), an optional note
-and the screen it came from. Reports are stored in Supabase
-(`little_lexicon.word_reports`, migration 0012). Demo mode keeps them on the
-device, so the live demo site sends none.
-
-Handle open reports before other words. From `pipeline/`:
-
-1. `npx tsx src/curate.ts reports` fetches the open reports, saves them to
-   `out/curate/reports.json` and lists them by word. It needs
-   `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in `pipeline/.env`.
-2. `npx tsx src/curate.ts next --reported` writes a worksheet of the reported
-   words, reviewed or not, oldest report first. Each entry has a read-only
-   `reports` list and the word's `ipa`. Run the loop as usual. Read every
-   report, but judge it: a learner can be wrong. Say in `review.notes` what
-   each report led to, or why it changed nothing. A reported pronunciation is
-   fixed with `curate.ts ipa`, not in the worksheet.
-3. After `apply`, run `npx tsx src/curate.ts resolve <worksheet>`. It marks
-   resolved the reports on words that were applied since the worksheet was
-   made, with the review's notes. Reports filed after the worksheet was made
-   stay open, because they may be about the new text. The learner is not
-   told.
-
 ## The loop
 
 Run these from `pipeline/` (run `npm ci` there first if `node_modules` is
