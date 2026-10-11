@@ -243,6 +243,14 @@ test('wrong answers must start the way the definition does, with or without "To"
   assert.ok(!checkContent(goodEntry(), env()).some((p) => p.includes('start the way the definition does')));
 });
 
+test('wrong answers may not carry an example the definition lacks', () => {
+  const e = goodEntry();
+  e.wrongAnswers[1] = { lookalike: 'abdicate', meaning: 'Give up a throne, like a king who tires of ruling.' };
+  const problems = checkContent(e, env());
+  assert.ok(problems.some((p) => p.includes('"Give up a throne') && p.includes('keep it plain')));
+  assert.ok(!checkContent(goodEntry(), env()).some((p) => p.includes('keep it plain')));
+});
+
 test('the second reviewer must score every criterion, and its low scores block the verdict', () => {
   const missing = goodEntry();
   missing.checker.scores = null;
