@@ -22,6 +22,7 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
+import { ReportProblem } from '@/features/report/ReportProblem';
 import { feedbackCorrect, feedbackIncorrect } from './feedback';
 import { useScrollToReveal } from './RevealScroll';
 
@@ -136,6 +137,13 @@ export function Reveal({
         ) : null}
         <Button title="Continue" onPress={onContinue} />
       </View>
+
+      <ReportProblem
+        wordId={content.wordId}
+        headword={content.headword}
+        screen="reveal"
+        className="mt-4"
+      />
     </View>
   );
 }

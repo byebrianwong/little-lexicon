@@ -2485,3 +2485,72 @@ tier 1. Every tier is test-prep vocabulary, so Regular is not basic English.
   `ChangingLevel` story, and changes to the Settings, Goals,
   Placement and Home stories. Home's `PlacementNotTaken` story is renamed
   `NoLevelChosen`.
+
+## Learners can report a problem with a word
+
+A "Report a problem" link now sits on the new-word card, the answer reveal and
+an open row of the word list. Tapping it opens a short form in place: what
+looks wrong (definition, example sentence, pronunciation, quiz answers, memory
+hook, something else) and an optional note. Brian asked for this on
+2026-10-11, and chose a silent fix: the learner is thanked when they send it
+and is not told when the word is fixed.
+
+### What was added
+
+- `supabase/migrations/0012_word_reports.sql`: the `word_reports` table.
+  Learners can add reports as themselves and read their own; they cannot
+  change or delete them. Only the service role can mark one resolved.
+  Deleting the account removes a learner's reports through the cascade on
+  `user_id`. Numbered 0012 because 0011 is on the unmerged
+  `claude/supabase-go-live` branch; 0012 grants its own access and does not
+  need 0011.
+- `src/features/report/`: the reasons and note cleanup (unit tested), and
+  `ReportProblem`, the form. It calls `backend.reportWord` directly, as
+  `WordIntro` already does for personalized hooks, because the stories have no
+  TanStack Query provider.
+- `Backend.reportWord` in both backends. The Supabase one inserts a row; the
+  demo one keeps reports in its saved state. Both include reports in
+  `exportData`. Tested for both.
+- `database.types.ts`: the new table, hand-written like the rest of the file.
+- Curation (`pipeline/src/curate.ts`, `pipeline/src/lib/reports.ts`):
+  `reports` fetches open reports, `next --reported` makes a worksheet of the
+  reported words with the reports attached, and `resolve <worksheet>` marks
+  them resolved after `apply`. The steps are in the improve-words skill under
+  "Learners' reports". The fetch and resolve use the service role key from
+  `pipeline/.env`.
+
+### Decisions
+
+**The form opens in place.** A session is already a full-screen modal, and a
+second modal on top of it is where earlier layout bugs came from.
+
+**`resolve` compares review ids, not dates.** A worksheet made by `next
+--reported` records the newest review id. A report counts as answered only if
+its word has a newer review, and the report was filed before the worksheet was
+made. With dates alone, a word reviewed earlier the same day counted as
+answered; the first end-to-end run did exactly that.
+
+**A learner's report is not taken as fact.** The writer judges it and says in
+the review notes what it led to.
+
+### Verified
+
+- `npx tsc --noEmit`, lint, and the app and pipeline unit tests pass.
+- Web, demo mode: the form opens on the word list and on the new-word card in
+  a session. Sending saves the report with its word, reason, note and screen,
+  and shows the thank-you line.
+- The migrations 0001 to 0012 on PGlite: the checks reject an unknown reason,
+  an unknown screen and a note over 500 characters. As the `authenticated`
+  role, a user can insert their own report, cannot insert one for someone else
+  or one already resolved, reads only their own, and cannot update or delete.
+  Deleting the user removes their reports.
+- The curation commands against a local fake of Supabase's REST API: `reports`
+  lists and saves; `next --reported` attaches them; `resolve` resolved nothing
+  before `apply` and only the applied word's report after it.
+
+### Not run
+
+- **Nothing ran against the real Supabase project.** The migration is not
+  applied there. Supabase mode is not live yet (see the go-live branch), so
+  reports from the live demo site stay in each visitor's browser.
+- Not run on the iOS simulator or Android emulator.

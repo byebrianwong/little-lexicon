@@ -17,6 +17,7 @@ import {
 import { speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
+import { ReportProblem } from '@/features/report/ReportProblem';
 import { AudioButton } from './Reveal';
 import { useGameContext } from './GameContext';
 
@@ -111,6 +112,13 @@ export function WordIntro({
       <View className="mt-8">
         <Button title="Got it, quiz me" trailingIcon="arrow-right" onPress={onStart} />
       </View>
+
+      <ReportProblem
+        wordId={content.wordId}
+        headword={content.headword}
+        screen="intro"
+        className="mt-4"
+      />
     </View>
   );
 }

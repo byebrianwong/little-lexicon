@@ -7,6 +7,9 @@
 //   npx tsx src/curate.ts check <worksheet...>               run the checks, on several together
 //   npx tsx src/curate.ts apply <worksheet>                  write it and export
 //   npx tsx src/curate.ts pos <word...>                      parts of speech in WordNet, for look-alikes
+//   npx tsx src/curate.ts reports                            fetch learners' open reports (needs Supabase keys)
+//   npx tsx src/curate.ts next --reported                    write a worksheet of the reported words
+//   npx tsx src/curate.ts resolve <worksheet...>             after apply, mark those words' reports resolved
 //
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
 // worksheet if any word fails a check, so the record never holds half a batch.
@@ -37,13 +40,24 @@ import {
   type Worksheet,
   type WorksheetEntry,
 } from './lib/curate.ts';
+import dotenv from 'dotenv';
 import { exportWords } from './stages/05-export.ts';
+import {
+  fetchOpenReports,
+  groupByWord,
+  reportsAnswered,
+  resolveReports,
+  toReportNotes,
+  type OpenReport,
+  type SupabaseAdmin,
+} from './lib/reports.ts';
 import type { ContentRows } from './lib/exportContent.ts';
 import type { ReviewRow, WordRow } from './lib/types.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DB_FILE = join(ROOT, 'data', 'content-db.json');
 const OUT_DIR = join(ROOT, 'out', 'curate');
+const REPORTS_FILE = join(OUT_DIR, 'reports.json');
 const log = new Logger(false);
 
 async function openRecord(): Promise<{ store: JsonFileStore; rows: ContentRows; reviews: ReviewRow[] }> {
@@ -124,8 +138,16 @@ async function next(args: string[]): Promise<void> {
   const named = parseOption(args, 'words')?.split(',').map((w) => w.trim().toLowerCase()).filter(Boolean);
   const done = currentReviews(reviews);
 
+  const reported = args.includes('--reported') ? groupByWord(await readReportsFile()) : null;
+
   let words: WordRow[];
-  if (named) {
+  if (reported) {
+    // Reported words, oldest report first, whether or not they were reviewed.
+    words = [...reported.keys()]
+      .map((id) => rows.words.find((w) => w.id === id))
+      .filter((w): w is WordRow => w !== undefined)
+      .slice(0, count);
+  } else if (named) {
     words = named.map((h) => {
       const w = rows.words.find((x) => x.headword === h);
       if (!w) throw new Error(`No word "${h}" in the record`);
@@ -156,7 +178,9 @@ async function next(args: string[]): Promise<void> {
   };
   const entries = words.map((w) => {
     const entry = buildEntry(rows, w);
-    return { ...entry, problems: checkContent(entry, env) };
+    const withProblems = { ...entry, problems: checkContent(entry, env) };
+    const open = reported?.get(w.id);
+    return open ? { ...withProblems, reports: toReportNotes(open), ipa: w.ipa } : withProblems;
   });
   // --split=K writes K worksheets, one per writer subagent in a big run.
   const parts = splitIntoParts(entries, Number.parseInt(parseOption(args, 'split') ?? '1', 10));
@@ -165,12 +189,16 @@ async function next(args: string[]): Promise<void> {
   await mkdir(OUT_DIR, { recursive: true });
   for (const [i, part] of parts.entries()) {
     const sheet: Worksheet = { rubricVersion: RUBRIC_VERSION, createdAt, instructions: WORKSHEET_INSTRUCTIONS, words: part };
+    if (reported) sheet.lastReviewId = Math.max(0, ...reviews.map((r) => r.id));
     const suffix = parts.length > 1 ? `-${String.fromCharCode(97 + i)}` : '';
     const file = join(OUT_DIR, `worksheet-${stamp}${suffix}.json`);
     await writeFile(file, JSON.stringify(sheet, null, 2) + '\n', 'utf8');
     console.log(file);
     for (const e of part) {
-      console.log(`  ${e.headword.padEnd(16)} ${e.problems!.length} problems${done.has(e.wordId) ? ' (already reviewed)' : ''}`);
+      const reportCount = e.reports ? `, ${e.reports.length} report${e.reports.length === 1 ? '' : 's'}` : '';
+      console.log(
+        `  ${e.headword.padEnd(16)} ${e.problems!.length} problems${reportCount}${done.has(e.wordId) ? ' (already reviewed)' : ''}`,
+      );
     }
   }
 }
@@ -366,6 +394,69 @@ async function pos(words: string[]): Promise<void> {
   for (const w of words) console.log(`${w}: ${lexicon(w)?.join(', ') ?? 'not in WordNet'}`);
 }
 
+// --- learners' reports ------------------------------------------------------
+
+function supabaseAdmin(): SupabaseAdmin {
+  dotenv.config({ path: join(ROOT, '.env') });
+  const url = process.env.SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceRoleKey) {
+    throw new Error('Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in pipeline/.env (see pipeline/.env.example)');
+  }
+  return { url: url.replace(/\/+$/, ''), serviceRoleKey };
+}
+
+async function readReportsFile(): Promise<OpenReport[]> {
+  if (!existsSync(REPORTS_FILE)) throw new Error(`No ${REPORTS_FILE}. Run: npx tsx src/curate.ts reports`);
+  return (JSON.parse(await readFile(REPORTS_FILE, 'utf8')) as { reports: OpenReport[] }).reports;
+}
+
+/** Fetch the open reports, save them for `next --reported`, and list them by word. */
+async function reports(): Promise<void> {
+  const { rows } = await openRecord();
+  const open = await fetchOpenReports(supabaseAdmin());
+  await mkdir(OUT_DIR, { recursive: true });
+  await writeFile(REPORTS_FILE, JSON.stringify({ fetchedAt: new Date().toISOString(), reports: open }, null, 2) + '\n', 'utf8');
+  const groups = groupByWord(open);
+  console.log(`${open.length} open reports on ${groups.size} words. Saved to ${REPORTS_FILE}.`);
+  for (const [wordId, list] of groups) {
+    const headword = rows.words.find((w) => w.id === wordId)?.headword ?? `word ${wordId} (not in the record)`;
+    console.log(`\n${headword}`);
+    for (const r of list) console.log(`  ${r.createdAt.slice(0, 10)} ${r.reason} (${r.screen})${r.note ? `: ${r.note}` : ''}`);
+  }
+  if (groups.size > 0) console.log('\nNext: npx tsx src/curate.ts next --reported');
+}
+
+/**
+ * After a worksheet of reported words is applied, mark the reports it answered
+ * resolved. The learner who filed them is not told.
+ */
+async function resolveCommand(files: string[]): Promise<void> {
+  const { rows, reviews } = await openRecord();
+  const admin = supabaseAdmin();
+  const open = await fetchOpenReports(admin);
+  let resolved = 0;
+  for (const file of files) {
+    const sheet = await readSheet(file);
+    const since = sheet.lastReviewId;
+    if (since === undefined) throw new Error(`${file} was not made with next --reported, so resolve cannot tell what it answered`);
+    const reviewedSince = (wordId: number): boolean => reviews.some((r) => r.word_id === wordId && r.id > since);
+    const answered = groupByWord(
+      reportsAnswered(open, { createdAt: sheet.createdAt, wordIds: sheet.words.map((w) => w.wordId) }, reviewedSince),
+    );
+    for (const [wordId, list] of answered) {
+      const review = currentReviews(reviews).get(wordId)!;
+      const changed = review.changed.length > 0 ? `changed ${review.changed.join(', ')}` : 'no content changes';
+      await resolveReports(admin, list.map((r) => r.id), `Reviewed ${review.reviewed_at}: ${changed}. ${review.notes}`.slice(0, 2000));
+      resolved += list.length;
+      console.log(`${rows.words.find((w) => w.id === wordId)?.headword}: resolved ${list.length}`);
+    }
+    const skipped = sheet.words.filter((w) => open.some((r) => r.wordId === w.wordId) && !answered.has(w.wordId));
+    for (const w of skipped) console.log(`${w.headword}: left open (not applied since the worksheet was made, or filed later)`);
+  }
+  console.log(`\nResolved ${resolved} reports.`);
+}
+
 // --- main ---------------------------------------------------------------------
 
 async function main(): Promise<void> {
@@ -376,8 +467,10 @@ async function main(): Promise<void> {
   if (command === 'check' && fileArgs.length > 0) return check(fileArgs);
   if (command === 'apply' && fileArgs.length === 1) return apply(fileArgs[0]!);
   if (command === 'pos' && args.length > 0) return pos(args);
+  if (command === 'reports') return reports();
+  if (command === 'resolve' && fileArgs.length > 0) return resolveCommand(fileArgs);
   console.log(
-    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] | check <file...> | apply <file> | pos <word...>>',
+    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] [--reported] | check <file...> | apply <file> | pos <word...> | reports | resolve <file...>>',
   );
   process.exitCode = 1;
 }

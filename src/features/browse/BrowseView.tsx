@@ -25,6 +25,7 @@ import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
 import { speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
+import { ReportProblem } from '@/features/report/ReportProblem';
 
 export interface BrowseViewProps {
   words: WordContent[] | undefined;
@@ -185,6 +186,8 @@ function WordRow({
               />
             ) : null}
           </Row>
+
+          <ReportProblem wordId={word.wordId} headword={word.headword} screen="browse" />
         </View>
       ) : null}
     </View>

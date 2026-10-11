@@ -22,4 +22,5 @@ export type {
   LeaderboardEntry,
   SentenceFeedback,
   FeedRequest,
+  WordReportInput,
 } from './types';
