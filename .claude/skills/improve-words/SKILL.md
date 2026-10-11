@@ -106,7 +106,12 @@ source. Short common phrasing that several dictionaries share ("unwilling to tak
 risks") can score 4 with a note. Fix the 3s; do not chase every 4.
 
 Stop after three review rounds on a word. If it still has a score under 4, flag
-it with notes saying what is left, and move on.
+it with notes saying what is left, and move on. One exception: when all that
+is left is one wrong answer, a fourth round that swaps in a different
+look-alike is fine (obtuse on 2026-10-10, puerile on 2026-10-11). If that
+fails too, leave the word out of `apply` (move it to its own worksheet) so
+it stays unreviewed and comes up again next run; preclude went this way on
+2026-10-11.
 (On 2026-10-10 obtuse got a fourth round because the round 3 failure was a
 one-word slip. If you do this, say so in the word's notes.)
 
@@ -173,7 +178,12 @@ before handing a worksheet over.
   learner's dictionary the reviewers matched often), Dictionary.com and its
   Random House text, Webster's New World, American Heritage and Britannica.
   A writer's search for its own text catches about half of these, so expect
-  the reviewer to find the rest.
+  the reviewer to find the rest. On 2026-10-11, 32 of 60 words failed the
+  first review, mostly on copied wording, again mostly in wrong answers.
+  WordUp was matched most. New sources that run: Britannica Learner's,
+  Wordsmyth, Wordiyo and the Word Smart test-prep book. My own fixes in the
+  main session were caught copying too (include, pedantic), so a fix needs
+  the same care as a first draft.
 - **Copying the reviewer's suggested fix.** A reviewer's note often ends with
   "for example ...". If you paste that sentence in, the same reviewer then
   scores its own writing, and its suggestion can itself follow a dictionary
@@ -227,6 +237,31 @@ before handing a worksheet over.
   must show the first sense.
 - **Other senses that repeat the first.** credulous had "showing a lack of
   judgment or experience" next to "disposed to believe on little evidence".
+- **Wrong answers of the wrong kind.** A look-alike can share the part of
+  speech and still be ruled out at a glance. reprobate (a person) had
+  probate (a court process) and prattle (talk) had paddle (a boat oar).
+  Match the kind of thing too: a person for a person, a kind of talk for a
+  kind of talk.
+- **Look-alikes that share only an ending or a letter or two.** acrobat
+  (reprobate), exotic and chaotic (quixotic), squalid and stellar (stolid)
+  tempt nobody. stolid was missing solid, the look-alike learners actually
+  confuse it with. Prefer a shared root, prefix or sound.
+- **An example where a wrong answer fits the blank.** remonstrate's
+  "gathered outside headquarters to remonstrate against the wage cuts"
+  reads better with demonstrate, which was one of its wrong answers. Check
+  each example against the word's own wrong answers.
+- **WordNet first senses that belong to another word.** pugnacious came
+  through as "tough and callous by virtue of experience" (hard-bitten's
+  meaning), and every example followed it. savant led with "initiate".
+  Read the first sense against what the word means before keeping it.
+- **A rewrite that keeps the old frame.** On 2026-10-11 puerile's
+  puritanical option and preclude's include option failed three rounds in
+  a row: each rewrite kept the dictionary's structure with new words. After
+  two failed rewrites of one wrong answer, swap in a different look-alike
+  instead of rewording again, and describe it from an angle dictionaries do
+  not use. preclude's replacement, prescribe, still followed Longman
+  ("say what medicine or treatment a sick person should have") because it
+  described the same act the same way.
 - **Junk text from older generation passes.** disseminate's hook ended in
   markup and invisible characters. The checks now reject code symbols,
   brackets, braces and invisible characters.

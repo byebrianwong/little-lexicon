@@ -2216,11 +2216,11 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-10:
-  213 of 317 words reviewed, 104 to go (pedestrian onward), 1 flagged
-  (corroborate). Every unreviewed
-  word lacks look-alike words for its wrong answers, 64 have fragment
-  examples, 12 hooks do not name the word.
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11:
+  272 of 317 words reviewed, 45 to go (preclude, then strident to
+  zenith, then insidious), 1 flagged (corroborate). Every unreviewed word lacks look-alike
+  words for its wrong answers, 26 have fragment examples, 6 hooks do not
+  name the word.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2314,6 +2314,33 @@ in wrong answers. Curation will catch it word by word.
     satiate, undulate, upbraid, vacillate, venerate, vex) have it too and
     will meet the check when their turn comes.
   - The skill's "Traps found so far" has the new failure patterns.
+- 2026-10-11: 59 more words, penury to stolid in record order except
+  preclude. All 59 fixed, 0 flagged. Status now: 272 of 317 reviewed, 45 to
+  go.
+  - How it ran: the "Big runs" process with 5 worksheets of 12 words. 32 of
+    60 words failed the first review, 6 the second, 3 the third. puerile
+    passed on a fourth round that swapped one look-alike.
+  - preclude was left out of `apply`. Its include wrong answer failed three
+    rounds for following Oxford Learner's, and the prescribe answer that
+    replaced it followed Longman. The record still has preclude's old
+    content, so `next` will pick it up again. The rewrite is only in the
+    git-ignored `pipeline/out/curate/` folder, so start it fresh.
+  - Copied wording was again the main failure, mostly in wrong answers.
+    WordUp was matched most. Britannica Learner's, Wordsmyth, Wordiyo and
+    the Word Smart test-prep book are new on the list. Some of the copies
+    were in fixes I wrote in the main session (include, pedantic), not only
+    in the writers' drafts.
+  - Other failures: wrong answers of the wrong kind (probate for the person
+    noun reprobate, paddle for prattle), look-alikes that share only an
+    ending (acrobat, exotic, chaotic, squalid), and remonstrate examples
+    where demonstrate, one of its own wrong answers, fit the blank better.
+  - First senses changed: pillory (noun to verb, "criticize publicly"),
+    refractory (stubborn first, the medical sense kept as an other sense),
+    relegate, polemic, puerile, saturnine and savant. pugnacious had
+    WordNet's "tough and callous by virtue of experience" (the meaning of
+    hard-bitten) as its first sense, and every example followed it; the
+    whole entry was rewritten. sanction had its own penalty meaning as one
+    of its wrong answers; that meaning is now its other sense.
 
 ## The placement test no longer finishes during render
 
