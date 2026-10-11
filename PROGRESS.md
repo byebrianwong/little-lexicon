@@ -2216,11 +2216,16 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11:
-  272 of 317 words reviewed, 45 to go (preclude, then strident to
-  zenith, then insidious), 1 flagged (corroborate). Every unreviewed word lacks look-alike
-  words for its wrong answers, 26 have fragment examples, 6 hooks do not
-  name the word.
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11
+  (second run): all 317 words reviewed, 0 flagged, 0 to go. Every word has
+  a plain definition, 3 or more examples, 4 or more wrong answers with
+  look-alikes, a hook and a pronunciation. anachronism, euphemism and
+  idolatry have no synonyms on purpose (none fit without giving the word
+  away), so they skip the synonym game.
+- Next passes are optional polish. Reviewers' 4s often carry a note on the
+  weakest point (`reviews[].checker_notes` in the record); those are the
+  place to start. Pronunciations are outside the rubric; see
+  "Pronunciation" in the skill.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2341,6 +2346,35 @@ in wrong answers. Curation will catch it word by word.
     hard-bitten) as its first sense, and every example followed it; the
     whole entry was rewritten. sanction had its own penalty meaning as one
     of its wrong answers; that meaning is now its other sense.
+- 2026-10-11 (second run): the last 45 words (preclude, then strident to
+  zenith, then insidious) and corroborate, which had been flagged. All 46
+  fixed, 0 flagged. Status now: 317 of 317 reviewed.
+  - How it ran: "Big runs" with 4 worksheets of 11 or 12 words. 10 of 45
+    words failed the first review (corroborate too), 3 the second (superfluous, vindicate,
+    zenith), and all passed on the third.
+  - corroborate got a definition written from scratch ("Add separate
+    evidence that agrees with a claim or account already given, making it
+    more believable.") and a new plain line. Both passed with no match to
+    Collins or Cambridge.
+  - Failures: copied wording again (Oxford Learner's for undulate and wave,
+    Collins for venerate and volatile), look-alikes that share only a letter
+    or an ending (truant and tranquil for trenchant, zest and zone for
+    zenith, querulous for zealous), and wrong answers of the wrong kind (a
+    breeze for zenith). Two new traps are in the skill: a word's own sense
+    used as its wrong answer (unctuous, umbrage, vex), and an other sense
+    that is another word's meaning (vacillate had undulate's).
+  - First senses changed: undulate, vapid, tenuous, superfluous, surfeit,
+    virulent, volatile, voracious, waver, zenith and insidious. tenuous had
+    WordNet's "thin consistency" (of fluids) first, and every example
+    followed it.
+  - Pronunciation: all 317 rewritten in broad General American. WordNet's
+    mixed US and UK forms and narrow symbols; 15 words had none; adulterate
+    and precipitate had the adjective's pronunciation; enervate and
+    quiescent had the stress on the wrong syllable. A second reviewer
+    checked the list and changed 3 (urbane, nadir, pristine). It checked 10
+    against Wiktionary and the rest from memory, because Merriam-Webster
+    refused its requests. The syllable counts, which had been guessed from
+    spelling, now come from the pronunciation. The app does not show them.
 
 ## The placement test no longer finishes during render
 
