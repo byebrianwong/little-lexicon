@@ -97,6 +97,9 @@ const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).l
  */
 const JUNK = /[`{}<>[\]\\|]|@@|[\u200b-\u200f\u2028\u2029\ufeff\ufffd]|[\u0300-\u036f]/;
 
+/** An example tacked onto a definition: "..., like a dog that bites", "such as a coupon". */
+const ILLUSTRATION = /,\s*(like|such as|as when|the way)\s|\bsuch as\s/i;
+
 /** Every piece of text in an entry that the app can show. */
 function contentTexts(entry: WorksheetEntry): string[] {
   return [
@@ -200,6 +203,11 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     // the others marks out the correct one.
     if (/^to\s/i.test(m) !== /^to\s/i.test(entry.definition.trim())) {
       p.push(`wrong answer "${m.slice(0, 40)}" must start the way the definition does (with or without "To")`);
+    }
+    // A wrong answer that carries an illustration ("..., like a dog that
+    // bites") next to a plain definition lets the learner pick the plain one.
+    if (ILLUSTRATION.test(m) && !ILLUSTRATION.test(entry.definition)) {
+      p.push(`wrong answer "${m.slice(0, 40)}" has an example ("like ...", "such as ...") that the definition does not; keep it plain`);
     }
     if (correct.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is the correct definition`);
     if (meanings.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is repeated`);

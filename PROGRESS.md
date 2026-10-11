@@ -2217,7 +2217,7 @@ in wrong answers. Curation will catch it word by word.
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
 - `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11
-  (second run): all 317 words reviewed, 0 flagged, 0 to go. Every word has
+  (after the third run): all 317 words reviewed, 0 flagged, 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism and
   idolatry have no synonyms on purpose (none fit without giving the word
@@ -2346,35 +2346,68 @@ in wrong answers. Curation will catch it word by word.
     hard-bitten) as its first sense, and every example followed it; the
     whole entry was rewritten. sanction had its own penalty meaning as one
     of its wrong answers; that meaning is now its other sense.
-- 2026-10-11 (second run): the last 45 words (preclude, then strident to
-  zenith, then insidious) and corroborate, which had been flagged. All 46
-  fixed, 0 flagged. Status now: 317 of 317 reviewed.
-  - How it ran: "Big runs" with 4 worksheets of 11 or 12 words. 10 of 45
-    words failed the first review (corroborate too), 3 the second (superfluous, vindicate,
-    zenith), and all passed on the third.
+- 2026-10-11 (second run): 39 more words, preclude and strident to
+  insidious. All 39 fixed, 0 flagged. Status now: 311 of 317 reviewed, 6 to
+  go.
+  - How it ran: 4 worksheets of 11 or 12 words. 36 of 45 words failed the
+    first review, 14 the second and 8 the third. turpitude and tangential
+    passed on a fourth round that swapped one look-alike; terse failed its
+    fourth.
+  - Left out after three rounds: terse, umbrage, upbraid, vex, waver and
+    zealous. Their failing wrong answers kept following a dictionary
+    (perverse and dense for terse; uproot and braid for upbraid; hex and veto
+    for vex; quaver for waver) or shared only an ending or a letter
+    (homage, courage and mirage for umbrage; zany and credulous for zealous).
+  - Two things I got wrong in the writer prompt. I told the writers to
+    search the web for every text, and the four of them used up the
+    turn's web searches (about 200, shared by all subagents), so the
+    reviewers had none. I also told them to describe look-alikes "through a
+    concrete case". The wrong answers came back with "like ..." pictures
+    beside a plain definition, which gives the answer away; 10 of 11 words
+    in one worksheet failed for that and for copying.
+  - What worked instead: the reviewers downloaded each word's pages from
+    about a dozen dictionaries with curl and compared runs of words with
+    small Python scripts. Merriam-Webster, Collins and Britannica block
+    curl; one reviewer read them through the built-in browser. Running the
+    same scripts on my own fixes before sending them back caught two
+    copies, but not all (dense still followed WordUp and Dictionary.com).
+  - First senses changed: tenuous (weak, not "thin" of a liquid), undulate,
+    vapid, virulent, volatile, voracious, zenith, insidious, superfluous and
+    surfeit. vituperate's WordNet sense ("spread negative information") was
+    wrong and is replaced.
+  - Tooling: `check` now rejects a wrong answer with an example ("like
+    ...", "such as ...") when the definition has none.
+- 2026-10-11 (third run): the 6 words the second run left (terse, umbrage,
+  upbraid, vex, waver, zealous) and corroborate, which had been flagged.
+  All 7 fixed, 0 flagged. Status now: 317 of 317 reviewed.
+  - This run went through all 45 words of the second run in parallel with
+    it, without knowing about it (the second run's branch had no PR yet).
+    The second run merged first as #28, so its versions of the 39 words it
+    passed were kept, and only these 7 were applied.
   - corroborate got a definition written from scratch ("Add separate
     evidence that agrees with a claim or account already given, making it
     more believable.") and a new plain line. Both passed with no match to
     Collins or Cambridge.
-  - Failures: copied wording again (Oxford Learner's for undulate and wave,
-    Collins for venerate and volatile), look-alikes that share only a letter
-    or an ending (truant and tranquil for trenchant, zest and zone for
-    zenith, querulous for zealous), and wrong answers of the wrong kind (a
-    breeze for zenith). Two new traps are in the skill: a word's own sense
-    used as its wrong answer (unctuous, umbrage, vex), and an other sense
-    that is another word's meaning (vacillate had undulate's).
-  - First senses changed: undulate, vapid, tenuous, superfluous, surfeit,
-    virulent, volatile, voracious, waver, zenith and insidious. tenuous had
-    WordNet's "thin consistency" (of fluids) first, and every example
-    followed it.
-  - Pronunciation: all 317 rewritten in broad General American. WordNet's
-    mixed US and UK forms and narrow symbols; 15 words had none; adulterate
-    and precipitate had the adjective's pronunciation; enervate and
-    quiescent had the stress on the wrong syllable. A second reviewer
-    checked the list and changed 3 (urbane, nadir, pristine). It checked 10
-    against Wiktionary and the rest from memory, because Merriam-Webster
-    refused its requests. The syllable counts, which had been guessed from
-    spelling, now come from the pronunciation. The app does not show them.
+  - The 7 failed main's new "like ..." check at first on four wrong answers
+    (trite, tepid and terminal for terse, homage for umbrage, zesty for
+    zealous). The examples were taken out and a fresh reviewer scored the
+    three words again; tepid needed one more round because its new opening
+    matched Oxford.
+  - Two new traps are in the skill: a word's own sense used as its wrong
+    answer (unctuous, umbrage, vex), and an other sense that is another
+    word's meaning (vacillate's wavelike sense is undulate's meaning).
+  - Pronunciation: all 317 rewritten in broad General American with the
+    new `curate.ts ipa` command. WordNet's mixed US and UK forms and narrow
+    symbols; 15 words had none; adulterate and precipitate had the
+    adjective's pronunciation; enervate and quiescent had the stress on the
+    wrong syllable. A second reviewer checked the list and changed 3
+    (urbane, nadir, pristine). It checked 10 against Wiktionary and the rest
+    from memory, because Merriam-Webster refused its requests. The syllable
+    counts, which had been guessed from spelling, now come from the
+    pronunciation. The app does not show them.
+  - Lesson: check for open branches on the same words before a big run.
+    `git branch -r` showed `claude/improve-last-45-words`, but only after
+    this run had started.
 
 ## The placement test no longer finishes during render
 

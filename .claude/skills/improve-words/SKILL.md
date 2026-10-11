@@ -143,6 +143,16 @@ failed the first review, 9 the second, and 1 the third.
    file). Only the main session runs `apply`, so two runs never write the
    record at once.
 
+Web searches are limited to about 200 per turn, shared by every subagent
+started in that turn. On 2026-10-11, four writers told to search every text
+used them all up, and the reviewers had none left. Do not ask writers to
+search everything. Comparing against downloaded dictionary pages works
+without searches and catches more: Oxford Learner's, Cambridge, Longman,
+Dictionary.com, Vocabulary.com, American Heritage and WordUp
+(`https://dictionary.wordup.com.tw/zh-TW/dictionary/<word>`) download with
+curl. Merriam-Webster, Collins and Britannica block curl and WebFetch; the
+built-in browser can read them.
+
 The writer prompt, with the paths filled in:
 
 > You are the writer for one worksheet of word entries in Little Lexicon, a
@@ -262,6 +272,13 @@ before handing a worksheet over.
   not use. preclude's replacement, prescribe, still followed Longman
   ("say what medicine or treatment a sick person should have") because it
   described the same act the same way.
+- **Wrong answers that stand out by style.** On 2026-10-11 the writers were
+  told to describe look-alikes "through a concrete case" to keep away from
+  dictionary wording. The wrong answers came back with "like ..." pictures
+  ("Savage and eager to cause pain, like a dog that bites without warning")
+  while the correct option was a bare WordNet definition, so the right answer
+  could be picked by style alone. Keep wrong answers plain and the same
+  length and style as `definition`.
 - **Junk text from older generation passes.** disseminate's hook ended in
   markup and invisible characters. The checks now reject code symbols,
   brackets, braces and invisible characters.
