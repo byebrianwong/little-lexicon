@@ -5,6 +5,8 @@ import {
   buildEntry,
   changedFields,
   checkContent,
+  checkIpa,
+  ipaSyllables,
   checkReview,
   problemKind,
   splitIntoParts,
@@ -264,4 +266,25 @@ test('namesWord catches inflections and words built on the headword, not look-al
   assert.equal(namesWord('The storm abated.', 'abate'), true);
   assert.equal(namesWord('Help or encourage someone to do wrong.', 'abate'), false);
   assert.equal(namesWord('Practicing strict self-denial.', 'aesthetic'), false);
+});
+
+test('checkIpa accepts the house style', () => {
+  for (const ipa of ['/əˈbeɪt/', '/vɛks/', '/ˈɛnɚˌveɪt/', '/ɪnˈtrænsədʒənt/', '/sɔɪ/', '/flaʊt/']) {
+    assert.deepEqual(checkIpa(ipa), [], ipa);
+  }
+});
+
+test('checkIpa rejects narrow symbols, missing stress and missing slashes', () => {
+  assert.match(checkIpa('/ə.ˈbɛ.ɹənt/')[0]!, /outside the house style: \. ɹ/);
+  assert.match(checkIpa('/waɪ.li/').join(' '), /primary stress/);
+  assert.match(checkIpa('/waɪli/').join(' '), /primary stress/);
+  assert.match(checkIpa('əˈbeɪt')[0]!, /slashes/);
+  assert.match(checkIpa('/ˈvɛks/').join(' '), /needs no stress mark/);
+  assert.match(checkIpa('/əˈvɜː/').join(' '), /outside the house style: ɜ ː/);
+});
+
+test('ipaSyllables counts diphthongs once', () => {
+  assert.equal(ipaSyllables('/ˈkoʊpiəs/'), 3);
+  assert.equal(ipaSyllables('/fɔrˈstɔl/'), 2);
+  assert.equal(ipaSyllables('/ˈmæliəbəl/'), 4);
 });
