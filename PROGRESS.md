@@ -2217,10 +2217,12 @@ in wrong answers. Curation will catch it word by word.
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
 - `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11:
-  272 of 317 words reviewed, 45 to go (preclude, then strident to
-  zenith, then insidious), 1 flagged (corroborate). Every unreviewed word lacks look-alike
-  words for its wrong answers, 26 have fragment examples, 6 hooks do not
-  name the word.
+  311 of 317 words reviewed, 1 flagged (corroborate). 6 are left: terse,
+  umbrage, upbraid, vex, waver and zealous. Each failed three review rounds
+  on its wrong answers, so it was left out of `apply`. Start them fresh with
+  `next --words=terse,umbrage,upbraid,vex,waver,zealous`; the reviewer notes
+  below say what failed. zealous has few real look-alikes (only jealous
+  shares its root), so it may end up flagged.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2341,6 +2343,37 @@ in wrong answers. Curation will catch it word by word.
     hard-bitten) as its first sense, and every example followed it; the
     whole entry was rewritten. sanction had its own penalty meaning as one
     of its wrong answers; that meaning is now its other sense.
+- 2026-10-11 (second run): 39 more words, preclude and strident to
+  insidious. All 39 fixed, 0 flagged. Status now: 311 of 317 reviewed, 6 to
+  go.
+  - How it ran: 4 worksheets of 11 or 12 words. 36 of 45 words failed the
+    first review, 14 the second and 8 the third. turpitude and tangential
+    passed on a fourth round that swapped one look-alike; terse failed its
+    fourth.
+  - Left out after three rounds: terse, umbrage, upbraid, vex, waver and
+    zealous. Their failing wrong answers kept following a dictionary
+    (perverse and dense for terse; uproot and braid for upbraid; hex and veto
+    for vex; quaver for waver) or shared only an ending or a letter
+    (homage, courage and mirage for umbrage; zany and credulous for zealous).
+  - Two things I got wrong in the writer prompt. I told the writers to
+    search the web for every text, and the four of them used up the
+    turn's web searches (about 200, shared by all subagents), so the
+    reviewers had none. I also told them to describe look-alikes "through a
+    concrete case". The wrong answers came back with "like ..." pictures
+    beside a plain definition, which gives the answer away; 10 of 11 words
+    in one worksheet failed for that and for copying.
+  - What worked instead: the reviewers downloaded each word's pages from
+    about a dozen dictionaries with curl and compared runs of words with
+    small Python scripts. Merriam-Webster, Collins and Britannica block
+    curl; one reviewer read them through the built-in browser. Running the
+    same scripts on my own fixes before sending them back caught two
+    copies, but not all (dense still followed WordUp and Dictionary.com).
+  - First senses changed: tenuous (weak, not "thin" of a liquid), undulate,
+    vapid, virulent, volatile, voracious, zenith, insidious, superfluous and
+    surfeit. vituperate's WordNet sense ("spread negative information") was
+    wrong and is replaced.
+  - Tooling: `check` now rejects a wrong answer with an example ("like
+    ...", "such as ...") when the definition has none.
 
 ## The placement test no longer finishes during render
 
