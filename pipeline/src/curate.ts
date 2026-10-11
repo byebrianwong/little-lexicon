@@ -10,6 +10,7 @@
 //   npx tsx src/curate.ts reports                            fetch learners' open reports (needs Supabase keys)
 //   npx tsx src/curate.ts next --reported                    write a worksheet of the reported words
 //   npx tsx src/curate.ts resolve <worksheet...>             after apply, mark those words' reports resolved
+//   npx tsx src/curate.ts ipa <file.tsv>                     set pronunciations (headword<TAB>/ipa/ per line) and export
 //
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
 // worksheet if any word fails a check, so the record never holds half a batch.
@@ -27,9 +28,11 @@ import {
   buildEntry,
   changedFields,
   checkContent,
+  checkIpa,
   checkReview,
   CRITERIA,
   CURATED_REVISION,
+  ipaSyllables,
   primarySense,
   problemKind,
   RUBRIC_VERSION,
@@ -117,6 +120,10 @@ async function status(): Promise<void> {
   for (const r of flagged) {
     const w = rows.words.find((x) => x.id === r.word_id);
     console.log(`  flagged: ${w?.headword}: ${r.notes}`);
+  }
+  const badIpa = rows.words.filter((w) => !w.ipa || checkIpa(w.ipa).length > 0);
+  if (badIpa.length > 0) {
+    console.log(`  pronunciation missing or not in house style: ${badIpa.map((w) => w.headword).join(', ')}`);
   }
   console.log(`\nUnreviewed words failing the checks: ${wordsWithProblems}. Most common problems:`);
   for (const [k, n] of [...kinds].sort((a, b) => b[1] - a[1]).slice(0, 12)) {
@@ -394,6 +401,43 @@ async function pos(words: string[]): Promise<void> {
   for (const w of words) console.log(`${w}: ${lexicon(w)?.join(', ') ?? 'not in WordNet'}`);
 }
 
+/**
+ * Set pronunciations from a file of `headword<TAB>/ipa/` lines, and the
+ * syllable count from each one. Writes nothing if any line fails the check.
+ */
+async function ipa(file: string): Promise<void> {
+  const { store, rows } = await openRecord();
+  const lines = (await readFile(file, 'utf8')).split('\n').filter((l) => l.trim());
+  const problems: string[] = [];
+  const updates: { word: WordRow; ipa: string }[] = [];
+  for (const line of lines) {
+    const [headword = '', value = ''] = line.split('\t').map((x) => x.trim());
+    const word = rows.words.find((w) => w.headword === headword);
+    if (!word) problems.push(`${headword}: not in the record`);
+    for (const p of checkIpa(value)) problems.push(`${headword}: ${p}`);
+    if (word) updates.push({ word, ipa: value });
+  }
+  if (problems.length > 0) {
+    for (const p of problems) console.log(p);
+    console.log(`\n${problems.length} problems. Nothing was written.`);
+    process.exitCode = 1;
+    return;
+  }
+  let changed = 0;
+  for (const { word, ipa: value } of updates) {
+    const syllables = ipaSyllables(value);
+    if (word.ipa === value && word.syllables === syllables) continue;
+    await store.updateWordMeta(word.id, { ipa: value, syllables });
+    changed += 1;
+  }
+  await store.flush();
+  console.log(`Set ${changed} of ${updates.length} pronunciations in ${DB_FILE}.`);
+
+  const ctx = await createContext({ only: 'export', dryRun: false, limit: null, verbose: false });
+  await ctx.store.init();
+  await exportWords(ctx);
+}
+
 // --- learners' reports ------------------------------------------------------
 
 function supabaseAdmin(): SupabaseAdmin {
@@ -467,10 +511,11 @@ async function main(): Promise<void> {
   if (command === 'check' && fileArgs.length > 0) return check(fileArgs);
   if (command === 'apply' && fileArgs.length === 1) return apply(fileArgs[0]!);
   if (command === 'pos' && args.length > 0) return pos(args);
+  if (command === 'ipa' && fileArgs.length === 1) return ipa(fileArgs[0]!);
   if (command === 'reports') return reports();
   if (command === 'resolve' && fileArgs.length > 0) return resolveCommand(fileArgs);
   console.log(
-    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] [--reported] | check <file...> | apply <file> | pos <word...> | reports | resolve <file...>>',
+    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] [--reported] | check <file...> | apply <file> | pos <word...> | ipa <file.tsv> | reports | resolve <file...>>',
   );
   process.exitCode = 1;
 }

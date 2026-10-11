@@ -400,3 +400,40 @@ export function splitIntoParts<T>(items: T[], parts: number): T[][] {
 export function problemKind(problem: string): string {
   return problem.replace(/"[^"]*"/g, '…').replace(/\(has \d+\)/, '').replace(/\d+/g, 'N').trim();
 }
+
+// --- pronunciation ------------------------------------------------------------
+//
+// The app shows `ipa` under the headword. Every word uses one style: broad
+// General American, as in American learner's dictionaries. That means "r" (not
+// "ɹ"), "ɝ" and "ɚ" for stressed and unstressed r-colored vowels, "oʊ", no
+// syllable dots, tie bars, length marks or aspiration. WordNet's pronunciations
+// mixed US and UK forms and narrow symbols, and some were for another part of
+// speech (adulterate the adjective, not the verb), so they were all rewritten
+// on 2026-10-11.
+
+const IPA_VOWEL = /eɪ|aɪ|aʊ|ɔɪ|oʊ|[iɪɛæɑɔʊuʌəɚɝ]/g;
+const IPA_ALLOWED = /^[pbtdkɡfvθðszʃʒhmnŋlrjwiɪɛæɑɔʊuʌəɚɝeaoˈˌ]+$/;
+
+/** Syllables in a pronunciation, counted by vowel. */
+export function ipaSyllables(ipa: string): number {
+  return (ipa.match(IPA_VOWEL) ?? []).length;
+}
+
+/** What is wrong with a pronunciation, or an empty list. */
+export function checkIpa(ipa: string): string[] {
+  const problems: string[] = [];
+  const m = /^\/(.+)\/$/.exec(ipa);
+  if (!m) return [`pronunciation "${ipa}" must be wrapped in slashes`];
+  const body = m[1]!;
+  const bad = [...new Set(body.replace(/tʃ|dʒ/g, '').split('').filter((c) => !IPA_ALLOWED.test(c)))];
+  if (bad.length > 0) problems.push(`pronunciation "${ipa}" uses symbols outside the house style: ${bad.join(' ')}`);
+  if (/[eao](?![ɪʊ])/.test(body.replace(/ɔɪ/g, ''))) {
+    problems.push(`pronunciation "${ipa}" has a bare e, a or o (use eɪ, aɪ, aʊ, oʊ)`);
+  }
+  const primary = (body.match(/ˈ/g) ?? []).length;
+  const syllables = ipaSyllables(body);
+  if (syllables === 0) problems.push(`pronunciation "${ipa}" has no vowel`);
+  if (syllables > 1 && primary !== 1) problems.push(`pronunciation "${ipa}" needs exactly one primary stress mark`);
+  if (syllables === 1 && /[ˈˌ]/.test(body)) problems.push(`pronunciation "${ipa}" has one syllable and needs no stress mark`);
+  return problems;
+}

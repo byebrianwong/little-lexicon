@@ -2216,13 +2216,16 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11:
-  311 of 317 words reviewed, 1 flagged (corroborate). 6 are left: terse,
-  umbrage, upbraid, vex, waver and zealous. Each failed three review rounds
-  on its wrong answers, so it was left out of `apply`. Start them fresh with
-  `next --words=terse,umbrage,upbraid,vex,waver,zealous`; the reviewer notes
-  below say what failed. zealous has few real look-alikes (only jealous
-  shares its root), so it may end up flagged.
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11
+  (after the third run): all 317 words reviewed, 0 flagged, 0 to go. Every word has
+  a plain definition, 3 or more examples, 4 or more wrong answers with
+  look-alikes, a hook and a pronunciation. anachronism, euphemism and
+  idolatry have no synonyms on purpose (none fit without giving the word
+  away), so they skip the synonym game.
+- Next passes are optional polish. Reviewers' 4s often carry a note on the
+  weakest point (`reviews[].checker_notes` in the record); those are the
+  place to start. Pronunciations are outside the rubric; see
+  "Pronunciation" in the skill.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2374,6 +2377,37 @@ in wrong answers. Curation will catch it word by word.
     wrong and is replaced.
   - Tooling: `check` now rejects a wrong answer with an example ("like
     ...", "such as ...") when the definition has none.
+- 2026-10-11 (third run): the 6 words the second run left (terse, umbrage,
+  upbraid, vex, waver, zealous) and corroborate, which had been flagged.
+  All 7 fixed, 0 flagged. Status now: 317 of 317 reviewed.
+  - This run went through all 45 words of the second run in parallel with
+    it, without knowing about it (the second run's branch had no PR yet).
+    The second run merged first as #28, so its versions of the 39 words it
+    passed were kept, and only these 7 were applied.
+  - corroborate got a definition written from scratch ("Add separate
+    evidence that agrees with a claim or account already given, making it
+    more believable.") and a new plain line. Both passed with no match to
+    Collins or Cambridge.
+  - The 7 failed main's new "like ..." check at first on four wrong answers
+    (trite, tepid and terminal for terse, homage for umbrage, zesty for
+    zealous). The examples were taken out and a fresh reviewer scored the
+    three words again; tepid needed one more round because its new opening
+    matched Oxford.
+  - Two new traps are in the skill: a word's own sense used as its wrong
+    answer (unctuous, umbrage, vex), and an other sense that is another
+    word's meaning (vacillate's wavelike sense is undulate's meaning).
+  - Pronunciation: all 317 rewritten in broad General American with the
+    new `curate.ts ipa` command. WordNet's mixed US and UK forms and narrow
+    symbols; 15 words had none; adulterate and precipitate had the
+    adjective's pronunciation; enervate and quiescent had the stress on the
+    wrong syllable. A second reviewer checked the list and changed 3
+    (urbane, nadir, pristine). It checked 10 against Wiktionary and the rest
+    from memory, because Merriam-Webster refused its requests. The syllable
+    counts, which had been guessed from spelling, now come from the
+    pronunciation. The app does not show them.
+  - Lesson: check for open branches on the same words before a big run.
+    `git branch -r` showed `claude/improve-last-45-words`, but only after
+    this run had started.
 
 ## The placement test no longer finishes during render
 
