@@ -13,8 +13,7 @@
 -- The curation process in pipeline/ reads open reports and sets resolved_at
 -- once the word is fixed, using the service role, which bypasses RLS. The
 -- learner is not told. Reports are kept after they are resolved (no hard
--- deletes of user data); deleting the account removes them through the
--- cascade on user_id.
+-- deletes of user data). Delete account in Settings removes them (0013).
 
 create table if not exists little_lexicon.word_reports (
   id              bigint generated always as identity primary key,

@@ -176,25 +176,13 @@ create table if not exists little_lexicon.daily_stats (
 );
 
 -- ---------------------------------------------------------------------------
--- Auto-create a profile row when a new auth user signs up
+-- Profiles are created by the app, not by a trigger
 -- ---------------------------------------------------------------------------
-create or replace function little_lexicon.handle_new_user()
-returns trigger
-language plpgsql
-security definer set search_path = ''
-as $$
-begin
-  insert into little_lexicon.profiles (user_id, display_name)
-  values (new.id, coalesce(new.raw_user_meta_data->>'display_name', null))
-  on conflict (user_id) do nothing;
-  return new;
-end;
-$$;
-
-drop trigger if exists on_auth_user_created on auth.users;
-create trigger on_auth_user_created
-  after insert on auth.users
-  for each row execute function little_lexicon.handle_new_user();
+-- auth.users is shared by every app in the games-apps project. A trigger on it
+-- would run for every app's sign-ups, and if its insert failed, sign-up would
+-- fail for all of them. So the app creates a person's profile the first time
+-- they open Little Lexicon (SupabaseBackend.getProfile), using the "own
+-- profile" policy below.
 
 -- ---------------------------------------------------------------------------
 -- Row Level Security
