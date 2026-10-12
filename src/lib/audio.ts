@@ -1,13 +1,17 @@
 // Audio playback for word and sentence pronunciation (Phase 3.5).
 //
-// Production plays pre-generated MP3s from Storage via expo-audio. When a clip
-// is missing (and always in demo mode), it falls back to on-device speech
-// synthesis (expo-speech) so listening mode and reveals still work. Runtime TTS
-// for content is only ever this local, free, device synthesizer; paid TTS is
-// build-time only (CLAUDE.md guardrail).
+// Clips are made by the pipeline (stage 04, Google Chirp 3 HD voices or a US
+// human recording for headwords) and bundled in the app; src/content/
+// audioClips.ts maps word and example ids to them. A hosted audioUrl is played
+// if a word or sentence has one and no bundled clip. Otherwise the device's
+// speech synthesizer (expo-speech) speaks the text with the most natural voice
+// it has. Runtime TTS for content is only ever this local, free synthesizer;
+// paid TTS is build-time only (CLAUDE.md guardrail).
 
-import { AudioPlayer, createAudioPlayer, setAudioModeAsync } from 'expo-audio';
+import { AudioPlayer, AudioSource, createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import * as Speech from 'expo-speech';
+import { importAudioClips } from './importAudioClips';
+import { pickVoice } from './voice';
 
 let configured = false;
 async function ensureAudioMode(): Promise<void> {
@@ -21,35 +25,66 @@ async function ensureAudioMode(): Promise<void> {
   }
 }
 
+type Clips = Awaited<ReturnType<typeof importAudioClips>>;
+let clipsPromise: Promise<Clips | null> | null = null;
+function loadClips(): Promise<Clips | null> {
+  clipsPromise ??= importAudioClips().catch((e: unknown) => {
+    console.warn('audio: could not load bundled clips, using device speech', e);
+    return null;
+  });
+  return clipsPromise;
+}
+
+// The device voice is chosen in the background and never awaited: on web,
+// expo-speech waits for the browser's voiceschanged event, which never comes
+// in a browser with no voices. Until the list arrives, speech uses the default.
+let voiceId: string | undefined;
+let voiceLookup: Promise<void> | null = null;
+function chooseDeviceVoice(): void {
+  voiceLookup ??= Speech.getAvailableVoicesAsync().then(
+    (voices) => {
+      voiceId = pickVoice(voices);
+    },
+    (e: unknown) => {
+      console.warn('audio: could not list device voices, using the default', e);
+    },
+  );
+}
+
 export interface SpeakOptions {
-  // If provided, play this MP3; otherwise synthesize `fallbackText`.
-  url?: string | null;
+  /** A bundled clip or hosted file to play; otherwise `fallbackText` is spoken. */
+  source?: AudioSource | null;
   fallbackText: string;
   rate?: number;
 }
 
 let currentPlayer: AudioPlayer | null = null;
+// Each call takes a turn number, so a slow call cannot start after a newer one.
+let turn = 0;
 
 function releaseCurrent(): void {
   if (currentPlayer) {
     try {
       currentPlayer.remove();
-    } catch {
-      // ignore
+    } catch (e) {
+      console.warn('audio: could not release the previous player', e);
     }
     currentPlayer = null;
   }
 }
 
-/** Play a clip URL if present, else speak the fallback text. Fire-and-forget. */
+/** Play a clip if there is one, else speak the fallback text. Fire-and-forget. */
 export async function play(opts: SpeakOptions): Promise<void> {
-  await ensureAudioMode();
+  const mine = ++turn;
+  chooseDeviceVoice();
   Speech.stop();
   releaseCurrent();
+  await ensureAudioMode();
+  if (mine !== turn) return;
 
-  if (opts.url) {
+  if (opts.source) {
     try {
-      const player = createAudioPlayer({ uri: opts.url });
+      const player = createAudioPlayer(opts.source);
       currentPlayer = player;
       player.play();
       return;
@@ -57,20 +92,46 @@ export async function play(opts: SpeakOptions): Promise<void> {
       console.warn('audio: clip failed, falling back to speech', e);
     }
   }
-  Speech.speak(opts.fallbackText, { rate: opts.rate ?? 0.95 });
+  Speech.speak(opts.fallbackText, { rate: opts.rate ?? 0.95, voice: voiceId });
 }
 
-/** Convenience: speak a single headword. */
-export function speakWord(headword: string, url?: string | null): Promise<void> {
-  return play({ url, fallbackText: headword, rate: 0.9 });
+function hosted(url: string | null | undefined): AudioSource | null {
+  return url ? { uri: url } : null;
 }
 
-/** Convenience: speak an example sentence. */
-export function speakSentence(text: string, url?: string | null): Promise<void> {
-  return play({ url, fallbackText: text });
+export interface SpeakableWord {
+  wordId: number;
+  headword: string;
+  audioUrl?: string | null;
+}
+
+export interface SpeakableExample {
+  exampleId: number;
+  text: string;
+  audioUrl?: string | null;
+}
+
+/** Speak a headword: its bundled clip, else its hosted clip, else device speech. */
+export async function speakWord(word: SpeakableWord): Promise<void> {
+  const clips = await loadClips();
+  return play({
+    source: clips?.wordClips[word.wordId] ?? hosted(word.audioUrl),
+    fallbackText: word.headword,
+    rate: 0.9,
+  });
+}
+
+/** Speak an example sentence, in the same order of preference as speakWord. */
+export async function speakSentence(example: SpeakableExample): Promise<void> {
+  const clips = await loadClips();
+  return play({
+    source: clips?.sentenceClips[example.exampleId] ?? hosted(example.audioUrl),
+    fallbackText: example.text,
+  });
 }
 
 export function stopAudio(): void {
+  turn += 1;
   Speech.stop();
   releaseCurrent();
 }

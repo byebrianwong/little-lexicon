@@ -69,7 +69,7 @@ export function Reveal({
   useEffect(() => {
     if (correct) feedbackCorrect(soundEnabled);
     else feedbackIncorrect(soundEnabled);
-    speakWord(content.headword, content.audioUrl);
+    speakWord(content);
     // Play once on reveal.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -117,7 +117,7 @@ export function Reveal({
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={`Hear the sentence: ${example.text}`}
-            onPress={() => speakSentence(example.text, example.audioUrl)}
+            onPress={() => speakSentence(example)}
             className="mt-2 active:opacity-60"
           >
             <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
@@ -125,7 +125,7 @@ export function Reveal({
         ) : null}
         <View className="mt-2">
           <AudioButton
-            onPress={() => speakWord(content.headword, content.audioUrl)}
+            onPress={() => speakWord(content)}
             label="Hear it"
           />
         </View>

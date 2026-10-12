@@ -10,13 +10,14 @@
 // listSensesForWord, ...) works the same in both modes, so re-running fills
 // gaps and never duplicates.
 
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import type { Logger } from './logger.ts';
 import type { ContentRows } from './exportContent.ts';
 import type {
   AudioBody,
+  AudioMeta,
   AudioObject,
   AudioSaveResult,
   DistractorRow,
@@ -90,8 +91,13 @@ export interface Store {
   listReviews(): Promise<ReviewRow[]>;
   addReview(row: NewReview): Promise<ReviewRow>;
 
-  hasAudio(path: string): Promise<boolean>;
-  saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult>;
+  getAudio(path: string): Promise<AudioObject | null>;
+  listAudio(): Promise<AudioObject[]>;
+  saveAudio(path: string, body: AudioBody, meta?: AudioMeta): Promise<AudioSaveResult>;
+  /** Forget a clip and delete its file. */
+  removeAudio(path: string): Promise<void>;
+  /** Absolute path of a clip's file. */
+  audioFile(path: string): string;
   totalAudioBytes(): Promise<number>;
 }
 
@@ -358,29 +364,43 @@ export class JsonFileStore implements Store {
     return review;
   }
 
-  async hasAudio(path: string): Promise<boolean> {
-    return this.db.audio_objects.some((a) => a.path === path);
+  async getAudio(path: string): Promise<AudioObject | null> {
+    return this.db.audio_objects.find((a) => a.path === path) ?? null;
+  }
+
+  async listAudio(): Promise<AudioObject[]> {
+    return [...this.db.audio_objects];
+  }
+
+  audioFile(path: string): string {
+    return join(this.audioDir, path);
   }
 
   /**
-   * Record a clip. Real bytes are written under the audio folder; dry-run stubs
-   * only record an estimated size. Nothing is uploaded and no audio_url is set
-   * until an audio host is chosen (see README).
+   * Record a clip. Real bytes are written under the audio folder (assets/audio
+   * in live mode, which the app bundles); dry-run stubs only record an
+   * estimated size.
    */
-  async saveAudio(path: string, body: AudioBody): Promise<AudioSaveResult> {
+  async saveAudio(path: string, body: AudioBody, meta: AudioMeta = {}): Promise<AudioSaveResult> {
     let bytes: number;
     if (body.kind === 'bytes') {
-      const file = join(this.audioDir, path);
+      const file = this.audioFile(path);
       await mkdir(dirname(file), { recursive: true });
       await writeFile(file, body.data);
       bytes = body.data.length;
     } else {
       bytes = body.estimatedBytes;
     }
-    const existing = this.db.audio_objects.find((a) => a.path === path);
-    if (existing) existing.bytes = bytes;
-    else this.db.audio_objects.push({ path, bytes });
+    const row: AudioObject = { path, bytes, ...meta };
+    const index = this.db.audio_objects.findIndex((a) => a.path === path);
+    if (index >= 0) this.db.audio_objects[index] = row;
+    else this.db.audio_objects.push(row);
     return { bytes };
+  }
+
+  async removeAudio(path: string): Promise<void> {
+    this.db.audio_objects = this.db.audio_objects.filter((a) => a.path !== path);
+    await rm(this.audioFile(path), { force: true });
   }
 
   async totalAudioBytes(): Promise<number> {
