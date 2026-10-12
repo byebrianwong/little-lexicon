@@ -4,6 +4,7 @@
 // directly (CLAUDE.md: no raw fetches to Supabase from components).
 
 import type { UserWordStateRow } from '@/srs/srs';
+import type { ReportReason, ReportScreen } from '@/features/report/reasons';
 import type {
   DailyStats,
   ListedWord,
@@ -76,6 +77,14 @@ export interface SentenceFeedback {
   suggestion?: string;
 }
 
+export interface WordReportInput {
+  wordId: number;
+  reason: ReportReason;
+  /** Already cleaned with cleanNote. */
+  note: string | null;
+  screen: ReportScreen;
+}
+
 export interface FeedRequest {
   limit: number;
   exclude: readonly number[];
@@ -133,6 +142,12 @@ export interface Backend {
   addToWordList(wordId: number): Promise<void>;
   /** A soft remove: the entry is kept with a removed time. */
   removeFromWordList(wordId: number): Promise<void>;
+
+  /**
+   * Save a learner's report of a problem with a word's content. The curation
+   * process reads open reports and fixes the word; the learner is not told.
+   */
+  reportWord(input: WordReportInput): Promise<void>;
 
   // Session lifecycle + review commit
   startSession(): Promise<{ sessionId: string }>;

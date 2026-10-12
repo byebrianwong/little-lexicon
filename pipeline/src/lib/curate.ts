@@ -13,6 +13,7 @@ import { findWordToken, isOffensive } from './wordnet.ts';
 import type { Lexicon } from './revise.ts';
 import type { ContentRows } from './exportContent.ts';
 import type { SenseRow, WordRow } from './types.ts';
+import type { ReportNote } from './reports.ts';
 
 /** Bump when the rubric changes in a way that makes old reviews stale. */
 export const RUBRIC_VERSION = 1;
@@ -55,6 +56,10 @@ export interface WorksheetEntry {
   otherSenses: string[];
   /** What the checks found in the record's current content (read-only). */
   problems?: string[];
+  /** Learners' open reports on this word, from `next --reported` (read-only). */
+  reports?: ReportNote[];
+  /** The word's pronunciation, shown with reports (read-only; change it with `ipa`). */
+  ipa?: string | null;
   // Filled in by the reviewer.
   review: {
     scores: Partial<Record<Criterion, number>> | null;
@@ -71,6 +76,13 @@ export interface WorksheetEntry {
 export interface Worksheet {
   rubricVersion: number;
   createdAt: string;
+  /**
+   * The newest review id in the record when the worksheet was made. Set by
+   * `next --reported`; `resolve` counts a word as answered only when it has a
+   * newer review. Review dates alone cannot tell a review from earlier the
+   * same day.
+   */
+  lastReviewId?: number;
   instructions: string;
   words: WorksheetEntry[];
 }

@@ -25,6 +25,7 @@ import type {
   SentenceFeedback,
   SubmitReviewInput,
   SubmitReviewResult,
+  WordReportInput,
 } from '../types';
 import { loadContent, type ContentIndex } from '@/lib/content';
 import { normalizeAnswer } from '@/lib/text';
@@ -45,6 +46,14 @@ interface LogRow {
   word_id: number;
   rating: number;
   reviewed_at: string;
+}
+
+interface ReportRow {
+  word_id: number;
+  reason: string;
+  note: string | null;
+  screen: string;
+  created_at: string;
 }
 
 interface ListRow {
@@ -69,6 +78,11 @@ interface PersistShape {
   logs: LogRow[];
   daily: Record<string, DailyStats>;
   achievements: string[];
+  /**
+   * Problems the learner reported. Demo mode has no server, so they stay on
+   * the device and the curation process never sees them.
+   */
+  reports?: ReportRow[];
   wordIdScheme?: string;
   /** Progress on words that are no longer in the words file. Kept, not shown. */
   retired?: { states: StateRow[]; logs: LogRow[] };
@@ -346,6 +360,21 @@ export class DemoBackend implements Backend {
     await this.persist();
   }
 
+  async reportWord(input: WordReportInput): Promise<void> {
+    await this.ensureLoaded();
+    this.data.reports = [
+      ...(this.data.reports ?? []),
+      {
+        word_id: input.wordId,
+        reason: input.reason,
+        note: input.note,
+        screen: input.screen,
+        created_at: new Date().toISOString(),
+      },
+    ];
+    await this.persist();
+  }
+
   // --- Session + review commit ----------------------------------------------
   async startSession(): Promise<{ sessionId: string }> {
     return { sessionId: `demo-${todayString()}` };
@@ -605,6 +634,7 @@ export class DemoBackend implements Backend {
       reviewLogs: this.data.logs,
       dailyStats: Object.values(this.data.daily),
       achievements: this.data.achievements,
+      wordReports: this.data.reports ?? [],
       retiredProgress: this.data.retired ?? null,
     };
   }
