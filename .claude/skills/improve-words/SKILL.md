@@ -198,6 +198,44 @@ The writer prompt, with the paths filled in:
 > `<scratchpad>/<your batch>/`). When done, reply with a short table: each
 > word, its verdict, the fields you changed, and anything you flagged.
 
+## Adding new words
+
+For a request like "add 100 more words". First done on 2026-10-12 (abjure
+to venal, word ids 318 to 417).
+
+1. Pick the words and check each one before it goes in, because a word's id
+   is permanent once it is in the record. It must not already be in
+   `pipeline/data/seed-words.sample.txt`, and it must be in WordNet (look it
+   up in `pipeline/.cache/oewn/entries-<first letter>.json`). A word WordNet
+   lacks still gets an id but is never exported.
+2. Add the words to the seed file as a dated section above the "messy
+   entries" section.
+3. From `pipeline/`, run `npx tsx src/run.ts --only=words`, then
+   `--only=senses`. Both are free (Datamuse and WordNet). Do not run the
+   `generate` stage; with no API key it skips itself.
+4. `words` re-tiers the whole list into five equal groups, so some existing
+   words move one tier (55 of 291 on 2026-10-12). That is expected. The
+   level picker's sample words are checked by
+   `src/features/onboarding/levels.test.ts`; run it after export.
+5. The new words come out with only WordNet's definition, other senses,
+   examples and synonyms. `next` puts unreviewed words first, so run "Big
+   runs" as usual. Tell the writers the words are new, so they write plain,
+   examples, wrong answers and hook from scratch, and check WordNet's first
+   sense (acerbic, acumen, anodyne, demur, mordant, exhort, foible, lambaste,
+   ossify, peripatetic and rapacious all led with the wrong one).
+6. Have each writer also write its words' pronunciations to a
+   `headword<TAB>/ipa/` file in the scratchpad, and each reviewer check them.
+   Then run `curate.ts ipa` on all of them at once (see "Pronunciation").
+
+A new word that still fails after the last review round cannot be left out
+of `apply` the way an existing word can: it would ship with only WordNet's
+text. Flag it and apply it instead, with notes saying what is left
+(assiduous on 2026-10-12, one weak wrong answer).
+
+The words file only gets the new words' full content as each worksheet is
+applied. Do not commit until every worksheet is applied, or the app ships
+words with no plain definition or wrong answers.
+
 ## Traps found so far
 
 The second reviewer has failed entries for these reasons. Check for them
@@ -316,6 +354,24 @@ before handing a worksheet over.
   "Move or sway in a rising and falling or wavelike pattern", which is the
   meaning of undulate. Other senses become fallback wrong answers, so this
   one could have been shown as a wrong answer for undulate when it is right.
+- **WordNet text is not always safe for wrong answers.** On 2026-10-12 a
+  writer switched many wrong answers to WordNet's glosses to avoid copying.
+  The reviewer found that several WordNet glosses themselves track Random
+  House or American Heritage (conjure, accretion, cavalcade, anomaly,
+  anomalous, insidious, arduous). The terse glosses also made the correct
+  option, written in full prose, stand out by length (arcane). Check WordNet
+  text like any other, and keep every option for a word in one style.
+- **The main session's quick fixes copy too.** On 2026-10-12 three of my
+  replacement wrong answers followed a dictionary (viscous followed WordUp,
+  culpability WordUp, detonate Oxford). What worked: download the new
+  look-alike's pages with a reviewer's fetch script and read them before
+  writing the option, then write from an angle they do not use (vitrified
+  as fired clay, not "turned into glass").
+- **A look-alike only one letter away from the target's own other sense.**
+  fecund's rubicund ("red-faced") sat beside florid's red-face other sense.
+  The reviewer judged it safe: fallback wrong answers come from other words'
+  senses, not from their wrong answers, so neither could be marked wrong
+  when right. Worth a look, not a rule.
 
 ## Pronunciation
 

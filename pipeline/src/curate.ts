@@ -97,6 +97,9 @@ async function status(): Promise<void> {
   const { rows, reviews } = await openRecord();
   const lexicon = await openLexicon();
   const done = currentReviews(reviews);
+  // Retired words keep their reviews but are not counted.
+  const active = new Set(rows.words.map((w) => w.id));
+  for (const id of done.keys()) if (!active.has(id)) done.delete(id);
   const verdicts = { pass: 0, fixed: 0, flagged: 0 };
   for (const r of done.values()) verdicts[r.verdict] += 1;
 
