@@ -172,7 +172,7 @@ function WordRow({
               label="Word"
               accessibilityLabel={`Hear ${word.headword}`}
               onPress={() => {
-                if (soundEnabled) void speakWord(word.headword, word.audioUrl);
+                if (soundEnabled) void speakWord(word);
               }}
             />
             {example ? (
@@ -181,7 +181,7 @@ function WordRow({
                 label="Sentence"
                 accessibilityLabel="Hear the example sentence"
                 onPress={() => {
-                  if (soundEnabled) void speakSentence(example.text, example.audioUrl);
+                  if (soundEnabled) void speakSentence(example);
                 }}
               />
             ) : null}

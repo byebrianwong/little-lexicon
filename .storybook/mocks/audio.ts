@@ -8,17 +8,15 @@
 //
 // The real module is exercised by the app, not by stories: it has no UI.
 
-export interface SpeakOptions {
-  url?: string | null;
-  fallbackText: string;
-  rate?: number;
-}
+import type { SpeakableExample, SpeakableWord, SpeakOptions } from '../../src/lib/audio';
+
+export type { SpeakableExample, SpeakableWord, SpeakOptions };
 
 export async function play(_opts: SpeakOptions): Promise<void> {}
 
-export async function speakWord(_headword: string, _url?: string | null): Promise<void> {}
+export async function speakWord(_word: SpeakableWord): Promise<void> {}
 
-export async function speakSentence(_text: string, _url?: string | null): Promise<void> {}
+export async function speakSentence(_example: SpeakableExample): Promise<void> {}
 
 export function stopAudio(): void {}
 

@@ -64,7 +64,7 @@ const REPORTS_FILE = join(OUT_DIR, 'reports.json');
 const log = new Logger(false);
 
 async function openRecord(): Promise<{ store: JsonFileStore; rows: ContentRows; reviews: ReviewRow[] }> {
-  const store = new JsonFileStore(DB_FILE, join(ROOT, 'out', 'audio'), false, log);
+  const store = new JsonFileStore(DB_FILE, join(ROOT, '..', 'assets', 'audio'), false, log);
   await store.init();
   // Retired words are not taught, so they are not reviewed. Writes go through
   // the store, which still holds every row.

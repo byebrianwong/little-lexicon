@@ -2746,3 +2746,84 @@ enervate, turpitude, desultory, pillory, redoubtable, salubrious.
 Tiers still come from Datamuse frequency of the base form only, so verbs
 look rarer than they are ("burgeon" is tier 5 though "burgeoning" is common).
 Tiering by the modern, all-forms frequency would fix that.
+
+## Natural-sounding word and sentence audio (2026-10-12)
+
+The app spoke every word and sentence with the device's speech synthesizer,
+because pipeline stage 04 had never run and no audio host was chosen. The
+default device voices (iOS compact voices, the browser default) sound robotic.
+
+### Decisions
+
+- **Voice: Google Cloud TTS, Chirp 3 HD** (Brian chose this). Default voice
+  `en-US-Chirp3-HD-Kore`, changeable with `GOOGLE_TTS_VOICE`. 1M free
+  characters a month, then $30 per 1M
+  (https://cloud.google.com/text-to-speech/pricing). The corpus is about
+  129,000 characters (291 words, 1,440 sentences), so a full run is free.
+- **Clips are bundled in the app** (Brian chose this over Supabase Storage and
+  Vercel). Stage 04 writes `assets/audio/words/<wordId>.mp3` and
+  `assets/audio/sentences/<exampleId>.mp3`. Stage 05 writes
+  `src/content/audioClips.ts`, which `require`s each clip so Metro bundles it.
+  Estimated 30 to 50 MB; the stage logs the real total.
+- **The word's IPA is passed to the voice** as a Chirp 3 HD custom
+  pronunciation, so the clip says the word the way the app writes it. This
+  applies to the headword clip and to any sentence that contains the exact
+  headword (1,345 of 1,440 do). Inflected or capitalized forms ("abated",
+  "Abate") are left to the voice, because Google matches the phrase exactly.
+  Ref: https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd
+- **Human headword recordings are US only.** Stage 04 already preferred a
+  Free Dictionary API recording (SPEC section 6). It took the first MP3, which
+  could be a UK or Australian recording that disagrees with the General
+  American IPA. It now takes only `-us.mp3` files, and records each one's
+  Commons source page and license. When any human clip is bundled, the export
+  adds a CC BY-SA credit line to the words file (shown in Settings).
+- **Clips are remade when their inputs change.** Each clip stores a key
+  hashed from its text, the word's IPA and the voice. The improve-words skill
+  rewrites sentences and replaces their rows with new ids, so stage 04 also
+  deletes clips whose word or sentence is gone or retired (not on `--limit`
+  runs).
+- **Better device fallback.** When a word or sentence has no clip, the app
+  picks the most natural English voice the device lists
+  (`src/lib/voice.ts`): iOS premium or enhanced voices, Android network
+  voices, Edge "Natural" or Chrome "Google" voices on web, and never the old
+  novelty voices. The choice runs in the background: on web, expo-speech waits
+  for the browser's `voiceschanged` event, which never fires in a browser with
+  no voices, and awaiting it left speech silent in headless Chromium.
+
+### What changed
+
+- Pipeline: `src/lib/audio.ts` (request body, IPA cleanup, clip key, US
+  recording pick, clip module source) with tests; stage 04 rewritten; stage 05
+  writes the clip module; the store's audio rows carry key, source, voice,
+  source URL and license; live audio goes to `assets/audio`.
+- App: `speakWord(word)` and `speakSentence(example)` take the content object
+  and play, in order, the bundled clip, a hosted `audioUrl`, or device speech.
+  The clip list is loaded with a dynamic import (`src/lib/importAudioClips.ts`)
+  so the web build keeps it out of the first download; Jest swaps it for an
+  empty list. A turn counter stops a slow call from playing after a newer one.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .`, `npx jest` (31 suites, 234 tests) and
+  the pipeline's `npm test` (70 unit tests plus a dry run) pass.
+- Bundling, end to end: two generated test MP3s were added to the record and
+  run through the real export. The web build copied both to
+  `dist/assets/assets/audio/` and put the clip list in its own chunk. In
+  headless Chromium, "Hear abate" and abate's sentence played those MP3s, and
+  another word's "Hear it" fell back to device speech. The test clips were
+  then removed; the committed `audioClips.ts` is empty.
+- Not run: stage 04 against Google (no `GOOGLE_TTS_API_KEY` here), the iOS
+  simulator and the Android emulator. The Free Dictionary API returned
+  Cloudflare 522 errors during this session, so the US-only filter was written
+  against its documented response shape.
+
+### To finish
+
+1. In a Google Cloud project, enable the Cloud Text-to-Speech API and create
+   an API key. Put it in `pipeline/.env` as `GOOGLE_TTS_API_KEY`.
+2. In `pipeline/`, run `npx tsx src/run.ts --only=audio`, then
+   `npx tsx src/run.ts --only=export`.
+3. Listen to a few clips in `assets/audio`. To try another voice, set
+   `GOOGLE_TTS_VOICE` and rerun; every TTS clip is remade.
+4. Commit `assets/audio`, `src/content/audioClips.ts`,
+   `src/content/words.json` and `pipeline/data/content-db.json`.

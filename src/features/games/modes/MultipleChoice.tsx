@@ -81,7 +81,7 @@ export function MultipleChoice({
             {audioFirst ? '…' : content.headword}
           </Headword>
           <AudioButton
-            onPress={() => speakWord(content.headword, content.audioUrl)}
+            onPress={() => speakWord(content)}
             label="Hear it"
           />
         </View>

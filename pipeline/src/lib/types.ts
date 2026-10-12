@@ -108,7 +108,18 @@ export interface ReviewRow {
 export interface AudioObject {
   path: string;
   bytes: number;
+  /** What the clip was made from (see clipKey); a mismatch means make it again. */
+  key?: string;
+  source?: 'tts' | 'human' | 'stub';
+  /** TTS voice name, for TTS clips. */
+  voice?: string;
+  /** Where a human recording came from, and its license, for attribution. */
+  sourceUrl?: string | null;
+  license?: string | null;
 }
+
+/** What Store.saveAudio records next to the bytes. */
+export type AudioMeta = Omit<AudioObject, 'path' | 'bytes'>;
 
 // Insert inputs (id is assigned by the store).
 export type NewWord = Omit<WordRow, 'id'>;

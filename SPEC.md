@@ -28,7 +28,7 @@ Expo universal app (iOS / Android / web, one TS codebase)
 Supabase project "games-apps"
   ├── Postgres  (schema: little_lexicon)            per-user SRS state + logs
   ├── Auth                                 email + OAuth
-  ├── Storage   (bucket: little-lexicon-audio)      reserved for MP3s; audio host not chosen yet
+  ├── Storage   (bucket: little-lexicon-audio)      reserved; audio is bundled in the app (section 6)
   └── Edge Functions (little-lexicon-*)             optional runtime Claude calls, account deletion
 
 Offline build-time pipeline (Node, not shipped in the app)
@@ -100,9 +100,10 @@ Respect licensing: WordNet needs attribution; Wiktionary-derived verbatim text i
 
 ## 6. Audio
 
-- Pre-generate all audio once and serve the MP3s from a file host. Do not generate audio at runtime. The host is not chosen yet: at full size the audio is hundreds of MB, too large to bundle in the app, and Supabase Storage's free 1 GB is shared with other apps. Until then the app speaks words with on-device speech.
-- Prefer human pronunciations for headwords where freely available (Wiktionary/Commons audio surfaced by the Free Dictionary API). Fall back to TTS for coverage and for all sentence audio.
-- TTS provider is a Phase 1 decision. Reasonable options by cost per 1M characters (verify before spending): Google Neural2 and Amazon Polly Neural in the mid range, OpenAI `gpt-4o-mini-tts` and `tts-1` for naturalness, ElevenLabs for the most natural output at higher cost. Google, Polly, and Azure have free monthly tiers that may cover the whole corpus.
+- Pre-generate all audio once and bundle the MP3s in the app (decided 2026-10-12). Do not generate audio at runtime. The corpus is 291 words and 1,440 sentences, an estimated 30 to 50 MB of audio, so bundling avoids a file host and works offline. Revisit if the word list grows toward thousands of words. The pipeline writes the clips to `assets/audio` and a module, `src/content/audioClips.ts`, that maps word and example ids to them.
+- Prefer human pronunciations for headwords where freely available (US Wiktionary/Commons audio surfaced by the Free Dictionary API). Fall back to TTS for coverage and for all sentence audio.
+- TTS provider: Google Cloud Text-to-Speech with Chirp 3 HD voices (decided 2026-10-12; it replaces the earlier Neural2 default, which never ran, and is Google's newer and more natural model). The word's IPA is passed as a custom pronunciation so the voice matches the pronunciation the app shows. Other options considered: OpenAI `gpt-4o-mini-tts`, and ElevenLabs for the most natural output at higher cost.
+- When a word or sentence has no clip, the app speaks it with the device's synthesizer, choosing the most natural English voice the device offers.
 - Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters, a one-time cost in the tens of dollars or free within a provider's monthly free tier.
 
 ## 7. Claude API usage and cost model
