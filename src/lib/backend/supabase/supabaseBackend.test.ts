@@ -25,6 +25,10 @@ class MockQuery implements PromiseLike<Result> {
   select(): this {
     return this;
   }
+  insert(row: Row): this {
+    this.rows.push(row);
+    return this;
+  }
   eq(column: string, value: unknown): this {
     this.filters.push((r) => r[column] === value);
     return this;
@@ -81,6 +85,7 @@ jest.mock('@/lib/supabase', () => ({
       return new MockQuery(mockTables[table] ?? []);
     },
     functions: { invoke: (...args: unknown[]) => mockInvoke(...args) },
+    auth: { getUser: async () => ({ data: { user: { id: 'user-1' } } }) },
   },
 }));
 
@@ -252,5 +257,20 @@ describe('SupabaseBackend personalization', () => {
     expect(mockInvoke).toHaveBeenCalledWith('little-lexicon-generate-personalized', {
       body: input,
     });
+  });
+});
+
+describe('SupabaseBackend word reports', () => {
+  it('saves a report as the signed-in user', async () => {
+    mockTables.word_reports = [];
+    await new SupabaseBackend().reportWord({
+      wordId: 58,
+      reason: 'definition',
+      note: 'unclear',
+      screen: 'reveal',
+    });
+    expect(mockTables.word_reports).toEqual([
+      { user_id: 'user-1', word_id: 58, reason: 'definition', note: 'unclear', screen: 'reveal' },
+    ]);
   });
 });

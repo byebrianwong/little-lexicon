@@ -336,6 +336,32 @@ export interface Database {
         Update: Partial<Database['little_lexicon']['Tables']['word_list']['Insert']>;
         Relationships: [];
       };
+      word_reports: {
+        Row: {
+          id: number;
+          user_id: string;
+          word_id: number;
+          reason: string;
+          note: string | null;
+          screen: string;
+          created_at: string;
+          resolved_at: string | null;
+          resolution_note: string | null;
+        };
+        Insert: {
+          id?: number;
+          user_id: string;
+          word_id: number;
+          reason: string;
+          note?: string | null;
+          screen: string;
+          created_at?: string;
+          resolved_at?: string | null;
+          resolution_note?: string | null;
+        };
+        Update: Partial<Database['little_lexicon']['Tables']['word_reports']['Insert']>;
+        Relationships: [];
+      };
     };
     Views: {
       weekly_leaderboard: {

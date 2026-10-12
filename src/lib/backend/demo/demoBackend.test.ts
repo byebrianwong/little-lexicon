@@ -111,3 +111,18 @@ describe('DemoBackend personalization', () => {
     expect(text).toBe('Picture Science: that scene helps you remember "quixotic".');
   });
 });
+
+describe('DemoBackend word reports', () => {
+  it('keeps reports on the device, survives a reload, and includes them in the export', async () => {
+    const first = new DemoBackend();
+    await first.reportWord({ wordId: 6, reason: 'pronunciation', note: 'stress is wrong', screen: 'intro' });
+    await first.reportWord({ wordId: 40, reason: 'example', note: null, screen: 'reveal' });
+
+    const reloaded = new DemoBackend();
+    const exported = await reloaded.exportData();
+    expect(exported.wordReports).toEqual([
+      expect.objectContaining({ word_id: 6, reason: 'pronunciation', note: 'stress is wrong', screen: 'intro' }),
+      expect.objectContaining({ word_id: 40, reason: 'example', note: null, screen: 'reveal' }),
+    ]);
+  });
+});

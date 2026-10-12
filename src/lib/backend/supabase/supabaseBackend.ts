@@ -28,6 +28,7 @@ import type {
   OAuthProvider,
   ProgressCounts,
   SentenceFeedback,
+  WordReportInput,
   SubmitReviewInput,
   SubmitReviewResult,
 } from '../types';
@@ -370,6 +371,18 @@ export class SupabaseBackend implements Backend {
     if (error) throw new Error(error.message);
   }
 
+  async reportWord(input: WordReportInput): Promise<void> {
+    const userId = await this.requireUserId();
+    const { error } = await supabase.from('word_reports').insert({
+      user_id: userId,
+      word_id: input.wordId,
+      reason: input.reason,
+      note: input.note,
+      screen: input.screen,
+    });
+    if (error) throw new Error(error.message);
+  }
+
   // --- Session + review commit ----------------------------------------------
   async startSession(): Promise<{ sessionId: string }> {
     const userId = await this.requireUserId();
@@ -612,13 +625,14 @@ export class SupabaseBackend implements Backend {
   // --- Account management ---------------------------------------------------
   async exportData(): Promise<Record<string, unknown>> {
     const userId = await this.requireUserId();
-    const [profile, states, list, logs, daily, achievements] = await Promise.all([
+    const [profile, states, list, logs, daily, achievements, reports] = await Promise.all([
       supabase.from('profiles').select('*').eq('user_id', userId).single(),
       supabase.from('user_word_state').select('*'),
       supabase.from('word_list').select('*'),
       supabase.from('review_logs').select('*'),
       supabase.from('daily_stats').select('*'),
       supabase.from('achievements').select('*'),
+      supabase.from('word_reports').select('*'),
     ]);
     return {
       exportedAt: new Date().toISOString(),
@@ -628,6 +642,7 @@ export class SupabaseBackend implements Backend {
       reviewLogs: logs.data ?? [],
       dailyStats: daily.data ?? [],
       achievements: achievements.data ?? [],
+      wordReports: reports.data ?? [],
     };
   }
 
