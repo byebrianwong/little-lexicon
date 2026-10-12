@@ -324,7 +324,7 @@ describe('SupabaseBackend sign-up', () => {
       password: 'pw',
       options: {
         data: { display_name: 'Ada' },
-        emailRedirectTo: 'https://little-lexicon.vercel.app/',
+        emailRedirectTo: 'https://littlelexicon.byebrianwong.com/',
       },
     });
   });

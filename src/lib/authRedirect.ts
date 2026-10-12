@@ -8,7 +8,7 @@
 
 import { Platform } from 'react-native';
 
-export const WEB_APP_URL = 'https://little-lexicon.vercel.app/';
+export const WEB_APP_URL = 'https://littlelexicon.byebrianwong.com/';
 
 export function authRedirectUrl(): string {
   // On web, come back to the same site, so a local or preview build works too.
