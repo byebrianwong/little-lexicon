@@ -51,7 +51,7 @@ export default function Settings() {
   function confirmDelete() {
     Alert.alert(
       'Delete account',
-      'This permanently deletes your account and all your progress. Content is unaffected. This cannot be undone.',
+      'This permanently deletes all your Little Lexicon progress and signs you out. This cannot be undone.',
       [
         { text: 'Cancel', style: 'cancel' },
         {

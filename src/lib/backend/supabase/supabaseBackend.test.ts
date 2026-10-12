@@ -7,19 +7,23 @@ import { loadContent } from '@/lib/content';
 import { SupabaseBackend } from './supabaseBackend';
 
 type Row = Record<string, unknown>;
-type Result = { data: Row[]; error: null };
+type Result = { data: Row[] | Row | null; error: { message: string } | null };
 
 const mockTables: Record<string, Row[]> = {};
 /** Every table the backend asked for, in order. */
 const mockTouched: string[] = [];
 const mockInvoke = jest.fn();
 const mockSignUp = jest.fn();
+const mockRpc = jest.fn();
+const mockSignOut = jest.fn();
+let mockUserMetadata: Record<string, unknown> = {};
 
 class MockQuery implements PromiseLike<Result> {
   private filters: ((r: Row) => boolean)[] = [];
   private orders: { column: string; ascending: boolean }[] = [];
   private window: { from: number; to: number } | null = null;
   private max: number | null = null;
+  private one: 'single' | 'maybe' | null = null;
 
   constructor(private rows: Row[]) {}
 
@@ -28,6 +32,21 @@ class MockQuery implements PromiseLike<Result> {
   }
   insert(row: Row): this {
     this.rows.push(row);
+    return this;
+  }
+  upsert(row: Row, opts: { onConflict: string; ignoreDuplicates?: boolean }): this {
+    const key = opts.onConflict;
+    const existing = this.rows.find((r) => r[key] === row[key]);
+    if (!existing) this.rows.push(row);
+    else if (!opts.ignoreDuplicates) Object.assign(existing, row);
+    return this;
+  }
+  single(): this {
+    this.one = 'single';
+    return this;
+  }
+  maybeSingle(): this {
+    this.one = 'maybe';
     return this;
   }
   eq(column: string, value: unknown): this {
@@ -68,6 +87,12 @@ class MockQuery implements PromiseLike<Result> {
     });
     if (this.window) out = out.slice(this.window.from, this.window.to + 1);
     if (this.max !== null) out = out.slice(0, this.max);
+    if (this.one === 'maybe') return { data: out[0] ?? null, error: null };
+    if (this.one === 'single') {
+      return out.length === 1
+        ? { data: out[0]!, error: null }
+        : { data: null, error: { message: `expected 1 row, got ${out.length}` } };
+    }
     return { data: out, error: null };
   }
 
@@ -86,9 +111,11 @@ jest.mock('@/lib/supabase', () => ({
       return new MockQuery(mockTables[table] ?? []);
     },
     functions: { invoke: (...args: unknown[]) => mockInvoke(...args) },
+    rpc: (...args: unknown[]) => mockRpc(...args),
     auth: {
-      getUser: async () => ({ data: { user: { id: 'user-1' } } }),
+      getUser: async () => ({ data: { user: { id: 'user-1', user_metadata: mockUserMetadata } } }),
       signUp: (...args: unknown[]) => mockSignUp(...args),
+      signOut: (...args: unknown[]) => mockSignOut(...args),
     },
   },
 }));
@@ -126,6 +153,9 @@ beforeEach(() => {
   mockTouched.length = 0;
   mockInvoke.mockReset();
   mockSignUp.mockReset();
+  mockRpc.mockReset();
+  mockSignOut.mockReset().mockResolvedValue({ error: null });
+  mockUserMetadata = {};
 });
 
 describe('SupabaseBackend word content', () => {
@@ -303,5 +333,52 @@ describe('SupabaseBackend sign-up', () => {
     mockSignUp.mockResolvedValue({ data: { user, session: { user } }, error: null });
     const res = await new SupabaseBackend().signUp('ada@example.com', 'pw');
     expect(res).toEqual({ session: { userId: 'u1', email: 'ada@example.com' }, error: null });
+  });
+});
+
+describe('SupabaseBackend profile', () => {
+  it('returns the profile when there is one', async () => {
+    mockTables.profiles = [{ user_id: 'user-1', display_name: 'Ada', daily_goal: 20, interests: [] }];
+    const profile = await new SupabaseBackend().getProfile();
+    expect(profile).toMatchObject({ userId: 'user-1', displayName: 'Ada', dailyGoal: 20 });
+    expect(mockTables.profiles).toHaveLength(1);
+  });
+
+  it('creates one the first time this sign-in opens Little Lexicon', async () => {
+    // Sign-ins are shared with the other apps in games-apps, and there is no
+    // sign-up trigger, so the app makes the profile itself.
+    mockTables.profiles = [];
+    mockUserMetadata = { display_name: 'Ada' };
+    const backend = new SupabaseBackend();
+
+    const [a, b] = await Promise.all([backend.getProfile(), backend.getProfile()]);
+
+    expect(a).toMatchObject({ userId: 'user-1', displayName: 'Ada' });
+    expect(b).toMatchObject({ userId: 'user-1', displayName: 'Ada' });
+    expect(mockTables.profiles).toEqual([{ user_id: 'user-1', display_name: 'Ada' }]);
+  });
+
+  it('ignores a display name that is not a string', async () => {
+    mockTables.profiles = [];
+    mockUserMetadata = { display_name: { nested: true } };
+    const profile = await new SupabaseBackend().getProfile();
+    expect(profile.displayName).toBeNull();
+  });
+});
+
+describe('SupabaseBackend delete account', () => {
+  it("deletes this person's Little Lexicon data, then signs out", async () => {
+    mockRpc.mockResolvedValue({ data: null, error: null });
+    await new SupabaseBackend().deleteAccount();
+    expect(mockRpc).toHaveBeenCalledWith('delete_my_data');
+    expect(mockSignOut).toHaveBeenCalled();
+    // The shared sign-in is not deleted: no Edge Function is called.
+    expect(mockInvoke).not.toHaveBeenCalled();
+  });
+
+  it('stays signed in when the deletion fails', async () => {
+    mockRpc.mockResolvedValue({ data: null, error: { message: 'boom' } });
+    await expect(new SupabaseBackend().deleteAccount()).rejects.toThrow('boom');
+    expect(mockSignOut).not.toHaveBeenCalled();
   });
 });

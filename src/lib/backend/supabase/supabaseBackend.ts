@@ -187,11 +187,34 @@ export class SupabaseBackend implements Backend {
 
   // --- Profile --------------------------------------------------------------
   async getProfile(): Promise<Profile> {
-    const userId = await this.requireUserId();
+    const { data: auth } = await supabase.auth.getUser();
+    const user = auth.user;
+    if (!user) throw new Error('Not authenticated');
+    const existing = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('user_id', user.id)
+      .maybeSingle();
+    if (existing.error) throw new Error(existing.error.message);
+    if (existing.data) return mapProfile(existing.data);
+
+    // No profile yet. Sign-ins are shared with the other apps in the
+    // games-apps project, so this is someone opening Little Lexicon for the
+    // first time, or again after "Delete account". There is no sign-up
+    // trigger (see migration 0001), so create the profile here. Screens ask
+    // for the profile at the same time, so a second insert is ignored.
+    const name: unknown = user.user_metadata?.display_name;
+    const { error: insertError } = await supabase
+      .from('profiles')
+      .upsert(
+        { user_id: user.id, display_name: typeof name === 'string' ? name : null },
+        { onConflict: 'user_id', ignoreDuplicates: true },
+      );
+    if (insertError) throw new Error(insertError.message);
     const { data, error } = await supabase
       .from('profiles')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', user.id)
       .single();
     if (error) throw new Error(error.message);
     return mapProfile(data);
@@ -654,10 +677,10 @@ export class SupabaseBackend implements Backend {
   }
 
   async deleteAccount(): Promise<void> {
-    // Deleting the auth user cascades to every Little Lexicon per-user row via the
-    // on-delete-cascade foreign keys. The client cannot delete an auth user, so
-    // this is routed through an Edge Function holding the service role key.
-    const { error } = await supabase.functions.invoke('little-lexicon-delete-account', { body: {} });
+    // Deletes every Little Lexicon row for this person (migration 0013), then
+    // signs out. The sign-in itself stays: it is shared with the other apps in
+    // the games-apps project, and deleting it would reach their data too.
+    const { error } = await supabase.rpc('delete_my_data');
     if (error) throw new Error(error.message);
     await supabase.auth.signOut();
   }

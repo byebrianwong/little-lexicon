@@ -30,11 +30,3 @@ grant select, insert, update on little_lexicon.achievements    to authenticated;
 grant select, insert         on little_lexicon.mnemonics       to authenticated;
 -- Read only. bump_ai_usage (0006, security definer) does the writes.
 grant select                 on little_lexicon.ai_usage        to authenticated;
-
--- auth.users is shared by every app in the project. The sign-up trigger (0001)
--- gives each new user a profile, but users who existed before this app was
--- applied have none, and getProfile expects exactly one. Give them one now.
-insert into little_lexicon.profiles (user_id, display_name)
-select u.id, u.raw_user_meta_data->>'display_name'
-from auth.users u
-on conflict (user_id) do nothing;
