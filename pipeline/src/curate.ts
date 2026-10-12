@@ -66,7 +66,11 @@ const log = new Logger(false);
 async function openRecord(): Promise<{ store: JsonFileStore; rows: ContentRows; reviews: ReviewRow[] }> {
   const store = new JsonFileStore(DB_FILE, join(ROOT, 'out', 'audio'), false, log);
   await store.init();
-  return { store, rows: await store.snapshot(), reviews: await store.listReviews() };
+  // Retired words are not taught, so they are not reviewed. Writes go through
+  // the store, which still holds every row.
+  const all = await store.snapshot();
+  const rows = { ...all, words: all.words.filter((w) => !w.retired) };
+  return { store, rows, reviews: await store.listReviews() };
 }
 
 async function openLexicon(): Promise<Lexicon> {

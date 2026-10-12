@@ -66,7 +66,7 @@ describe('the committed words file', () => {
   });
 
   it('has hundreds of words', () => {
-    expect(words.length).toBeGreaterThanOrEqual(300);
+    expect(words.length).toBeGreaterThanOrEqual(250);
   });
 
   it('has unique ids and headwords', () => {

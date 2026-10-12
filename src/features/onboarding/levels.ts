@@ -42,7 +42,7 @@ export const WORD_LEVELS: readonly WordLevelOption[] = [
     id: 'expert',
     label: 'Expert',
     levelEstimate: 5,
-    samples: ['obsequious', 'recondite', 'perspicacious'],
+    samples: ['obsequious', 'quotidian', 'perspicacious'],
   },
 ];
 

@@ -137,8 +137,8 @@ export async function ingestWords(ctx: RunContext): Promise<void> {
     ctx.metrics.wordsInserted += 1;
   }
 
-  // Re-tier the whole list relative to itself (see lib/difficulty.ts).
-  const all = await ctx.store.listWords();
+  // Re-tier the taught words relative to each other (see lib/difficulty.ts).
+  const all = (await ctx.store.listWords()).filter((w) => !w.retired);
   let retiered = 0;
   for (const [id, tier] of tiersByFrequencyRank(all)) {
     const word = all.find((w) => w.id === id)!;
