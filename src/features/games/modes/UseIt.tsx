@@ -104,7 +104,7 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
               <TextButton
                 icon="speaker"
                 label="Hear the word"
-                onPress={() => speakWord(content.headword, content.audioUrl)}
+                onPress={() => speakWord(content)}
               />
             </View>
           </Section>

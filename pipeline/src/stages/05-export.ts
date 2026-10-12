@@ -5,14 +5,62 @@
 // write it if any word's id would change compared with the file already there,
 // because saved progress points at word ids. Reports the file size, since the
 // file ships inside the app.
+//
+// Also writes src/content/audioClips.ts, which requires every clip from stage
+// 04 that belongs to an exported word or sentence, so the app bundles them.
 
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
+import { dirname, relative, sep } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import type { RunContext } from '../config.ts';
 import { buildWordsFile, checkIdStability, type WordsFile } from '../lib/exportContent.ts';
 import { OEWN_ATTRIBUTION } from '../lib/wordnet.ts';
+import { buildClipModule, HUMAN_AUDIO_ATTRIBUTION, type ClipEntry } from '../lib/audio.ts';
+
+interface ClipModule {
+  source: string;
+  words: number;
+  sentences: number;
+  bytes: number;
+  human: boolean;
+}
+
+/** The clip module for the exported words: only clips whose file is on disk. */
+async function clipModule(ctx: RunContext, file: WordsFile): Promise<ClipModule> {
+  const clips = new Map((await ctx.store.listAudio()).map((c) => [c.path, c]));
+  const moduleDir = dirname(ctx.paths.clipModuleFile);
+  let bytes = 0;
+  let human = false;
+  const entry = (id: number, path: string): ClipEntry | null => {
+    const clip = clips.get(path);
+    const abs = ctx.store.audioFile(path);
+    if (!clip || clip.source === 'stub' || !existsSync(abs)) return null;
+    bytes += clip.bytes;
+    if (clip.source === 'human') human = true;
+    const rel = relative(moduleDir, abs).split(sep).join('/');
+    return { id, requirePath: rel.startsWith('.') ? rel : `./${rel}` };
+  };
+  const words: ClipEntry[] = [];
+  const sentences: ClipEntry[] = [];
+  for (const w of file.words) {
+    const clip = entry(w.wordId, `words/${w.wordId}.mp3`);
+    if (clip) words.push(clip);
+    for (const s of w.senses) {
+      for (const ex of s.examples) {
+        const sentence = entry(ex.exampleId, `sentences/${ex.exampleId}.mp3`);
+        if (sentence) sentences.push(sentence);
+      }
+    }
+  }
+  return {
+    source: buildClipModule(words, sentences),
+    words: words.length,
+    sentences: sentences.length,
+    bytes,
+    human,
+  };
+}
 
 async function readPrevious(path: string): Promise<WordsFile | null> {
   if (!existsSync(path)) return null;
@@ -27,6 +75,8 @@ export async function exportWords(ctx: RunContext): Promise<void> {
   ctx.log.stage('05 export words file');
   const rows = await ctx.store.snapshot();
   const { file, heldBack } = buildWordsFile(rows, [OEWN_ATTRIBUTION]);
+  const clips = await clipModule(ctx, file);
+  if (clips.human) file.attribution.push(HUMAN_AUDIO_ATTRIBUTION);
 
   const previous = await readPrevious(ctx.paths.exportFile);
   if (previous) {
@@ -55,6 +105,8 @@ export async function exportWords(ctx: RunContext): Promise<void> {
   const json = JSON.stringify(file, null, 2) + '\n';
   await mkdir(dirname(ctx.paths.exportFile), { recursive: true });
   await writeFile(ctx.paths.exportFile, json, 'utf8');
+  await mkdir(dirname(ctx.paths.clipModuleFile), { recursive: true });
+  await writeFile(ctx.paths.clipModuleFile, clips.source, 'utf8');
 
   const m = ctx.metrics;
   m.wordsExported = file.words.length;
@@ -67,5 +119,10 @@ export async function exportWords(ctx: RunContext): Promise<void> {
       `${(m.exportBytes / 1024).toFixed(0)} KB as written, ` +
       `${(m.exportGzipBytes / 1024).toFixed(0)} KB compressed, ` +
       `${(perWord / 1024).toFixed(2)} KB per word.`,
+  );
+  ctx.log.success(
+    `Export: bundled audio for ${clips.words} of ${file.words.length} words and ` +
+      `${clips.sentences} sentences, ${(clips.bytes / (1024 * 1024)).toFixed(2)} MB, ` +
+      `listed in ${ctx.paths.clipModuleFile}.`,
   );
 }

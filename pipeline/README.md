@@ -41,8 +41,8 @@ with `--only=<stage>`.
 | `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
 | `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
 | `generate` | `src/stages/03-generate.ts` | Per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Claude Batch API when `ANTHROPIC_API_KEY` is set; otherwise Gemini when `GEMINI_API_KEY` is set (eight senses per request, saved as each returns). Zod-validated before any write. Skipped with neither key. |
-| `audio` | `src/stages/04-audio.ts` | TTS every headword and example sentence to MP3 under `out/audio`. Not uploaded, and no `audio_url` is set, until an audio host is chosen. Skipped without `GOOGLE_TTS_API_KEY`. |
-| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. |
+| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword and example sentence of the taught words, saved under `assets/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`), which the app bundles. Headwords use a US human recording from the Free Dictionary API when there is one; everything else uses Google Cloud TTS with a Chirp 3 HD voice, given the word's IPA as a custom pronunciation. Skipped without `GOOGLE_TTS_API_KEY`. |
+| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also write `src/content/audioClips.ts`, which requires every clip so Metro bundles it. |
 
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
@@ -116,8 +116,13 @@ the app bundle or any `EXPO_PUBLIC_*` variable (CLAUDE.md > Secrets).
   one at a time and back off on HTTP 429 or 5xx. If no model answers, or every
   model's daily quota is spent, the stage stops with its progress saved and the
   next run continues. Generated rows record `source: 'gemini'`.
-- `GOOGLE_TTS_API_KEY` - text to speech (stage 04). Optional overrides:
-  `GOOGLE_TTS_VOICE`, `GOOGLE_TTS_LANGUAGE`.
+- `GOOGLE_TTS_API_KEY` - text to speech (stage 04). An API key from a Google
+  Cloud project with the Cloud Text-to-Speech API enabled. Optional overrides:
+  `GOOGLE_TTS_VOICE` (default `en-US-Chirp3-HD-Kore`; any Chirp 3 HD name such
+  as `en-US-Chirp3-HD-Charon` works, see
+  https://docs.cloud.google.com/text-to-speech/docs/chirp3-hd) and
+  `GOOGLE_TTS_LANGUAGE` (default `en-US`). Changing the voice remakes every
+  TTS clip on the next run.
 
 Datamuse and WordNet need no key.
 
@@ -130,7 +135,10 @@ Re-running is safe and cheap. Each stage checks the record and only fills gaps:
 - `generate`: a sense that already has its plain definition, three or more
   generated examples, and four or more distractors is skipped; a word that
   already has a mnemonic gets no new one.
-- `audio`: a clip already in the record is never re-synthesized.
+- `audio`: each clip records a key made from its text, the word's IPA and the
+  voice. A clip is made again only when that key changes (a rewritten
+  sentence, a fixed IPA, a new voice). Clips whose word or sentence is gone or
+  retired are deleted, except on a `--limit` run.
 
 Datamuse responses are cached under `.cache/` by URL. Only successful and
 "not found" answers are cached, so a server error is retried on the next run.
@@ -145,9 +153,12 @@ estimates, and the words file size.
   tokens); items that fail validation twice escalate to `claude-sonnet-5`. The
   Batch API is 50% off, and the shared instruction prefix is prompt-cached. The
   dry-run estimate for the 317-word sample is well under a dollar.
-- **TTS provider: Google Cloud Text-to-Speech (Neural2).** About 1M free Neural2
-  characters a month, then about $16 per 1M characters. Human pronunciations
-  from the Free Dictionary API are reused for headwords when available.
+- **TTS provider: Google Cloud Text-to-Speech, Chirp 3 HD voices.** 1M free
+  characters a month, then $30 per 1M characters
+  (https://cloud.google.com/text-to-speech/pricing). The 291 taught words and
+  their 1,440 sentences come to about 129,000 characters, so a full run fits in
+  the free tier. Human pronunciations from the Free Dictionary API are used for
+  headwords when a US recording exists.
 - **Words file size.** 317 words with dictionary content only: 439 KB as
   written, 41 KB compressed. Generated content will add to that; the export
   reports the new size.
@@ -161,8 +172,11 @@ estimates, and the words file size.
   WordNet 2025 (https://en-word.net/), CC BY 4.0. The words file carries the
   credit line and the app shows it on the Settings screen. Provenance is stored
   in the `source` column of every relation and example row.
-- Human headword audio: the Free Dictionary API (Wiktionary-sourced), stage 04
-  only.
+- Human headword audio: US recordings from Wikimedia Commons, found through
+  the Free Dictionary API, stage 04 only. They are CC BY-SA. Each clip's
+  source page and license are kept in the record (`audio_objects`), and when
+  any is bundled the export adds a credit line to the words file, which the
+  Settings screen shows.
 - Claude-generated content (sentences, distractors, mnemonics, plain
   definitions) is owned outright.
 
@@ -175,8 +189,8 @@ pipeline/
   src/run.ts                   orchestrator (flags, stage sequencing, summary)
   src/config.ts                env + flags + RunContext + metrics
   src/stages/                  01-ingest-words, 02-hydrate, 03-generate, 04-audio, 05-export
-  src/lib/                     store, wordnet, datamuse, exportContent, schema (zod),
+  src/lib/                     store, wordnet, datamuse, exportContent, audio, schema (zod),
                                fetch, stubs, difficulty, logger, types, *.test.ts
-  out/                         dry-run output and synthesized audio (git-ignored)
+  out/                         dry-run output (git-ignored)
   .cache/                      WordNet download and Datamuse responses (git-ignored)
 ```

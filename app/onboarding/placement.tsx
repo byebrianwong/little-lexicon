@@ -49,7 +49,7 @@ export default function Placement() {
   );
 
   useEffect(() => {
-    if (current) speakWord(current.headword, current.audioUrl);
+    if (current) speakWord(current);
   }, [current]);
 
   const finish = useCallback(
@@ -94,7 +94,7 @@ export default function Placement() {
       total={PLACEMENT_LENGTH}
       onAnswer={answer}
       onHear={() => {
-        if (current) speakWord(current.headword, current.audioUrl);
+        if (current) speakWord(current);
       }}
       onBack={back}
     />

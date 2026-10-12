@@ -36,7 +36,7 @@ export function WordIntro({
   const [generating, setGenerating] = useState(false);
 
   useEffect(() => {
-    speakWord(content.headword, content.audioUrl);
+    speakWord(content);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -77,7 +77,7 @@ export function WordIntro({
         ) : null}
         <View className="mt-2">
           <AudioButton
-            onPress={() => speakWord(content.headword, content.audioUrl)}
+            onPress={() => speakWord(content)}
             label="Hear it"
           />
         </View>

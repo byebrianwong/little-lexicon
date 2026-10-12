@@ -41,7 +41,7 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
   }, [content.wordId]);
 
   useEffect(() => {
-    speakWord(content.headword, content.audioUrl);
+    speakWord(content);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -50,7 +50,7 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
       <Label>Listen, then choose the word</Label>
       <View className="mt-2">
         <AudioButton
-          onPress={() => speakWord(content.headword, content.audioUrl)}
+          onPress={() => speakWord(content)}
           label="Play again"
         />
       </View>

@@ -51,15 +51,17 @@ function printSummary(ctx: RunContext, elapsedMs: number): void {
     `words revised        ${m.sensesRevised}`,
     `rejected (invalid)   ${m.invalidRejected}   escalated to Sonnet: ${m.escalatedToSonnet}`,
     `LLM tokens           in ${m.llmInputTokens}, out ${m.llmOutputTokens}  (est. $${m.llmCostUsd.toFixed(4)} if billed)`,
-    `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, human reused ${m.audioReusedHuman}`,
+    `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, human recordings ${m.audioReusedHuman}`,
     `TTS characters       ${m.ttsChars}  (est. $${m.ttsCostUsd.toFixed(4)})`,
-    `audio this run       ${m.audioClips} clips, ${mb(m.audioBytes)} (saved under out/audio, not hosted)`,
+    `audio this run       ${m.audioClips} clips, ${mb(m.audioBytes)}`,
     `exported             ${m.wordsExported} words, ${m.wordsHeldBack} held back, ${kb(m.exportBytes)} (${kb(m.exportGzipBytes)} compressed)`,
     `http cache           ${ctx.http.hits} hits, ${ctx.http.misses} misses`,
     `elapsed              ${(elapsedMs / 1000).toFixed(1)}s`,
   ];
   lines.push(`record               ${ctx.paths.dbFile}`);
   lines.push(`words file           ${ctx.paths.exportFile}`);
+  lines.push(`audio folder         ${ctx.paths.audioDir}`);
+  lines.push(`clip module          ${ctx.paths.clipModuleFile}`);
   lines.push('──────────────────────────────────────────────────────────────────────');
   process.stderr.write(lines.join('\n') + '\n');
 }

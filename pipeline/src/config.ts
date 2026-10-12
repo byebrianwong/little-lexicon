@@ -18,6 +18,7 @@ import { Logger } from './lib/logger.ts';
 import { CachedFetcher } from './lib/fetch.ts';
 import { JsonFileStore, type Store } from './lib/store.ts';
 import { GEMINI_DEFAULT_MODELS } from './lib/gemini.ts';
+import { DEFAULT_TTS_LANGUAGE, DEFAULT_TTS_VOICE } from './lib/audio.ts';
 
 export const STAGES = ['words', 'senses', 'generate', 'audio', 'export'] as const;
 /** Stages that run only when named with --only. */
@@ -51,8 +52,10 @@ export interface Paths {
   dbFile: string;
   /** The words file the app bundles (src/content/words.json in live mode). */
   exportFile: string;
-  /** Where synthesized MP3s are written until an audio host is chosen. */
+  /** Where clips are written: assets/audio (bundled by the app) in live mode. */
   audioDir: string;
+  /** The module that requires every bundled clip (src/content/audioClips.ts in live mode). */
+  clipModuleFile: string;
 }
 
 export class Metrics {
@@ -140,8 +143,8 @@ function loadEnv(): Env {
       : GEMINI_DEFAULT_MODELS,
     geminiModelsSet: Boolean(process.env.GEMINI_MODEL),
     googleTtsKey: process.env.GOOGLE_TTS_API_KEY,
-    googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? 'en-US-Neural2-D',
-    googleTtsLanguage: process.env.GOOGLE_TTS_LANGUAGE ?? 'en-US',
+    googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? DEFAULT_TTS_VOICE,
+    googleTtsLanguage: process.env.GOOGLE_TTS_LANGUAGE ?? DEFAULT_TTS_LANGUAGE,
   };
 }
 
@@ -159,13 +162,16 @@ export async function createContext(flags: Flags): Promise<RunContext> {
     exportFile: dryRun
       ? join(out, 'words.dry-run.json')
       : join(PIPELINE_ROOT, '..', 'src', 'content', 'words.json'),
-    audioDir: join(out, 'audio'),
+    audioDir: dryRun ? join(out, 'audio') : join(PIPELINE_ROOT, '..', 'assets', 'audio'),
+    clipModuleFile: dryRun
+      ? join(out, 'audioClips.dry-run.ts')
+      : join(PIPELINE_ROOT, '..', 'src', 'content', 'audioClips.ts'),
   };
 
   if (dryRun) {
     log.info('Mode: DRY-RUN. Offline stubs; writing to out/.');
   } else {
-    log.info('Mode: LIVE. Writing data/content-db.json and src/content/words.json.');
+    log.info('Mode: LIVE. Writing data/content-db.json, src/content/words.json and assets/audio.');
   }
 
   const store: Store = new JsonFileStore(paths.dbFile, paths.audioDir, dryRun, log);
