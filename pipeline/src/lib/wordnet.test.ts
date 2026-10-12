@@ -98,6 +98,8 @@ test('findWordToken finds the word and its inflections, not other words', () => 
   assert.equal(findWordToken('Ephemeral fame', 'ephemeral'), 'Ephemeral');
   assert.equal(findWordToken('a passing fancy', 'ephemeral'), null);
   assert.equal(findWordToken('an abstraction', 'abstract'), null);
+  assert.equal(findWordToken('He demurred at first', 'demur'), 'demurred');
+  assert.equal(findWordToken('abetting the crime', 'abet'), 'abetting');
 });
 
 test('lookupWord keeps only examples that use the headword', () => {

@@ -131,6 +131,14 @@ export function inflections(word: string): string[] {
     forms.add(`${stem}ies`);
     forms.add(`${stem}ied`);
   }
+  // A final consonant after a single vowel is often doubled: demurred,
+  // abetting. Extra forms only let more spellings match, so a word that does
+  // not double ("abandonned") still never appears in real text.
+  if (/[^aeiou][aeiou][b-df-hj-np-tvz]$/.test(word)) {
+    const last = word.slice(-1);
+    forms.add(`${word}${last}ed`);
+    forms.add(`${word}${last}ing`);
+  }
   return [...forms];
 }
 

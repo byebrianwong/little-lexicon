@@ -2216,16 +2216,17 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-11
-  (after the third run): all 317 words reviewed, 0 flagged, 0 to go. Every word has
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
+  (after adding 100 new words): all 417 words reviewed, 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
-  look-alikes, a hook and a pronunciation. anachronism, euphemism and
-  idolatry have no synonyms on purpose (none fit without giving the word
+  look-alikes, a hook and a pronunciation. anachronism, euphemism,
+  idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
   away), so they skip the synonym game.
 - Next passes are optional polish. Reviewers' 4s often carry a note on the
   weakest point (`reviews[].checker_notes` in the record); those are the
   place to start. Pronunciations are outside the rubric; see
   "Pronunciation" in the skill.
+- To add new words, follow "Adding new words" in the skill.
 - For a request like "improve 100 more words", follow "Big runs" in the
   skill: `next --count=100 --split=8`, one writer and one reviewer subagent
   per worksheet, `check` all the worksheets together, then apply them one at
@@ -2408,6 +2409,51 @@ in wrong answers. Curation will catch it word by word.
   - Lesson: check for open branches on the same words before a big run.
     `git branch -r` showed `claude/improve-last-45-words`, but only after
     this run had started.
+- 2026-10-12: added 100 new words (ids 318 to 417), the first new words
+  since the original 317. 99 fixed, 1 flagged (assiduous). Status now: 417
+  of 417 reviewed.
+  - The words: abjure, accolade, acerbic, acumen, adroit, affable, anathema,
+    anodyne, apocryphal, approbation, arcane, assiduous, avarice, bellicose,
+    blithe, brusque, bucolic, callow, canard, capitulate, censure, chary,
+    chimera, circumspect, clandestine, conflate, consternation, culpable,
+    cupidity, decry, demur, denigrate, deprecate, dilettante, discomfit,
+    disingenuous, dissolute, duplicity, egregious, equanimity, eschew,
+    exhort, expiate, fastidious, feckless, fecund, florid, foible, gainsay,
+    garish, germane, grandiloquent, gratuitous, harbinger, hubris,
+    idiosyncrasy, ignominious, impetuous, importune, incorrigible,
+    indefatigable, insouciant, inure, invective, jocular, judicious,
+    lachrymose, lambaste, languid, largesse, lionize, lugubrious,
+    malevolent, mawkish, misanthrope, modicum, mordant, obviate, odious,
+    ossify, panegyric, pariah, pejorative, peripatetic, phlegmatic, plaudit,
+    proscribe, querulous, rapacious, recant, redolent, sanguine, specious,
+    supercilious, tacit, temerity, vicarious, vitriolic, vociferous, venal.
+  - Each was checked against the seed list and WordNet before it went in,
+    because ids are permanent. Then the free `words` and `senses` stages
+    ran, and 8 writer and 8 reviewer subagents wrote everything else. The
+    steps are now "Adding new words" in the skill.
+  - Re-tiering into five equal groups moved 48 of the 317 existing words
+    one tier. The level picker's sample words all stayed inside their
+    levels (audacious went from tier 3 to 2, still in Advanced).
+  - WordNet led with the wrong first sense for 11 words (acerbic as a sour
+    taste, acumen as a leaf tip, anodyne and mordant as nouns, demur as a
+    legal noun, peripatetic as Aristotelian, and others). anodyne, demur
+    and mordant changed part of speech.
+  - Review rounds: 56 of 100 failed the first review, 14 the second and 4
+    the third. Those 4 got a fourth round that swapped in a different
+    look-alike: cupidity, denigrate and anodyne passed, and assiduous was
+    flagged. Its fourth wrong answer (deciduous) is accurate and not copied,
+    but it describes trees, so it tempts nobody. A new word left out of
+    `apply` would ship with no plain definition or wrong answers, so it was
+    flagged and applied instead; its notes say what to fix. Nearly every failure was copied wording in wrong answers,
+    mostly from WordUp, Cambridge, American Heritage and Oxford. New this
+    time: WordNet glosses that a writer used to avoid copying turned out to
+    track Random House or American Heritage themselves.
+  - Pronunciations for all 100 were written by the writers, checked by the
+    reviewers (3 changed: idiosyncrasy, discomfit, eschew) and set with
+    `curate.ts ipa`.
+  - `inflections()` in `pipeline/src/lib/wordnet.ts` now doubles a final
+    consonant ("demurred", "abetting"); the checks had rejected "demurred"
+    as not a form of demur.
 
 ## The placement test no longer finishes during render
 

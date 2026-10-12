@@ -1,7 +1,7 @@
 # Sample GRE/erudite seed list for the Little Lexicon pipeline (bundled so a dry-run
 # needs no network). Lines starting with # and blank lines are ignored.
 # One headword per line. Curated from public-domain GRE word aggregations
-# (treat aggregated lists as seeds, not authoritative content). ~320 words.
+# (treat aggregated lists as seeds, not authoritative content). ~420 words.
 #
 # The last section intentionally contains messy entries so stage 01 has
 # something to normalize, dedupe, and drop (case variants, multiword phrases,
@@ -324,6 +324,108 @@ waver
 wily
 zealous
 zenith
+
+# --- added 2026-10-12: 100 more test-prep words ---
+abjure
+accolade
+acerbic
+acumen
+adroit
+affable
+anathema
+anodyne
+apocryphal
+approbation
+arcane
+assiduous
+avarice
+bellicose
+blithe
+brusque
+bucolic
+callow
+canard
+capitulate
+censure
+chary
+chimera
+circumspect
+clandestine
+conflate
+consternation
+culpable
+cupidity
+decry
+demur
+denigrate
+deprecate
+dilettante
+discomfit
+disingenuous
+dissolute
+duplicity
+egregious
+equanimity
+eschew
+exhort
+expiate
+fastidious
+feckless
+fecund
+florid
+foible
+gainsay
+garish
+germane
+grandiloquent
+gratuitous
+harbinger
+hubris
+idiosyncrasy
+ignominious
+impetuous
+importune
+incorrigible
+indefatigable
+insouciant
+inure
+invective
+jocular
+judicious
+lachrymose
+lambaste
+languid
+largesse
+lionize
+lugubrious
+malevolent
+mawkish
+misanthrope
+modicum
+mordant
+obviate
+odious
+ossify
+panegyric
+pariah
+pejorative
+peripatetic
+phlegmatic
+plaudit
+proscribe
+querulous
+rapacious
+recant
+redolent
+sanguine
+specious
+supercilious
+tacit
+temerity
+vicarious
+vitriolic
+vociferous
+venal
 
 # --- messy entries (exercise normalization/dedupe/drop in stage 01) ---
 Abate
