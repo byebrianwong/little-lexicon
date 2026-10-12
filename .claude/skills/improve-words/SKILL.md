@@ -204,7 +204,12 @@ For a request like "add 100 more words". First done on 2026-10-12 (abjure
 to venal, word ids 318 to 417).
 
 1. Pick the words and check each one before it goes in, because a word's id
-   is permanent once it is in the record. It must not already be in
+   is permanent once it is in the record. Run the frequency check from the
+   "26 rare and fading words retired" entry in PROGRESS.md first: a word
+   under 0.15 per million in modern text (wordfreq, all inflections) whose
+   use has fallen since 1900-1929 (Google Books) is retired, not taught. On
+   2026-10-12, 7 of 100 hand-picked words failed it after they had been
+   written and reviewed. A word must also not already be in
    `pipeline/data/seed-words.sample.txt`, and it must be in WordNet (look it
    up in `pipeline/.cache/oewn/entries-<first letter>.json`). A word WordNet
    lacks still gets an id but is never exported.
@@ -230,7 +235,7 @@ to venal, word ids 318 to 417).
 A new word that still fails after the last review round cannot be left out
 of `apply` the way an existing word can: it would ship with only WordNet's
 text. Flag it and apply it instead, with notes saying what is left
-(assiduous on 2026-10-12, one weak wrong answer).
+(assiduous on 2026-10-12, one weak wrong answer; it was later retired as rare).
 
 The words file only gets the new words' full content as each worksheet is
 applied. Do not commit until every worksheet is applied, or the app ships

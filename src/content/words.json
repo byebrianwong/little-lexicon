@@ -324,7 +324,7 @@
       "partOfSpeech": "verb",
       "ipa": "/əbˈsteɪn/",
       "syllables": 2,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 197583,
       "etymology": null,
       "audioUrl": null,
@@ -3702,7 +3702,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/bɑmˈbæstɪk/",
       "syllables": 3,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1096164,
       "etymology": null,
       "audioUrl": null,
@@ -20355,7 +20355,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈneɪsənt/",
       "syllables": 2,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 198098,
       "etymology": null,
       "audioUrl": null,
@@ -25522,7 +25522,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈprɑflɪɡət/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 619725,
       "etymology": null,
       "audioUrl": null,
@@ -26751,7 +26751,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/kwoʊˈtɪdiən/",
       "syllables": 4,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1063309,
       "etymology": null,
       "audioUrl": null,
@@ -31528,7 +31528,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/tɝs/",
       "syllables": 1,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 330863,
       "etymology": null,
       "audioUrl": null,
@@ -35083,107 +35083,6 @@
       ]
     },
     {
-      "wordId": 318,
-      "headword": "abjure",
-      "partOfSpeech": "verb",
-      "ipa": "/æbˈdʒʊr/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 1397163,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 664,
-          "definition": "Formally reject or disavow a formerly held belief or allegiance.",
-          "plainLanguageDefinition": "To swear off a cause or belief you once held and promise to be done with it.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3829,
-              "text": "Threatened by the court, the old astronomer agreed to abjure the idea that the earth circles the sun.",
-              "audioUrl": null,
-              "clozeTarget": "abjure"
-            },
-            {
-              "exampleId": 3830,
-              "text": "New citizens must abjure loyalty to any foreign ruler before they take the oath.",
-              "audioUrl": null,
-              "clozeTarget": "abjure"
-            },
-            {
-              "exampleId": 3831,
-              "text": "The former militant abjured violence in a signed letter and urged his followers to lay down their arms.",
-              "audioUrl": null,
-              "clozeTarget": "abjured"
-            },
-            {
-              "exampleId": 3832,
-              "text": "Years after leaving the cult, she publicly abjured its teachings in a book about her escape.",
-              "audioUrl": null,
-              "clozeTarget": "abjured"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Call on someone with great seriousness to act, often in the name of something sacred.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Break the law by lying while bound by an oath as a witness.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Hurt someone's body badly enough to leave a wound, a bruise or a break.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Vanish from one's post in secret, typically along with money left in one's care.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "recant",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "forswear",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "retract",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "renounce",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "repudiate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "espouse",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "embrace",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Abjure comes from Latin ab, away, and jurare, to swear: to abjure a belief is to swear it away."
-      ]
-    },
-    {
       "wordId": 319,
       "headword": "accolade",
       "partOfSpeech": "noun",
@@ -35937,7 +35836,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/əˈpɑkrəfəl/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 330036,
       "etymology": null,
       "audioUrl": null,
@@ -36236,111 +36135,6 @@
       ],
       "mnemonics": [
         "Arcane comes from Latin arcanus, secret, related to arca, a chest: arcane knowledge is locked away where few can reach it."
-      ]
-    },
-    {
-      "wordId": 329,
-      "headword": "assiduous",
-      "partOfSpeech": "adjective",
-      "ipa": "/əˈsɪdʒuəs/",
-      "syllables": 4,
-      "difficultyTier": 3,
-      "frequencyRank": 586871,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 679,
-          "definition": "Marked by care and persistent effort.",
-          "plainLanguageDefinition": "Sticking with a task patiently and doing every part of it with care.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3873,
-              "text": "Thanks to her assiduous notes from every lecture, the whole study group passed the final.",
-              "audioUrl": null,
-              "clozeTarget": "assiduous"
-            },
-            {
-              "exampleId": 3874,
-              "text": "The museum's assiduous restorers spent four years removing grime from the ceiling, inch by inch.",
-              "audioUrl": null,
-              "clozeTarget": "assiduous"
-            },
-            {
-              "exampleId": 3875,
-              "text": "An assiduous gardener, he checked every tomato plant for pests each morning before work.",
-              "audioUrl": null,
-              "clozeTarget": "assiduous"
-            },
-            {
-              "exampleId": 3876,
-              "text": "After months of assiduous practice, the boy could play the whole sonata without a single mistake.",
-              "audioUrl": null,
-              "clozeTarget": "assiduous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Requiring sitting or little activity.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Disposed to venture or take risks.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Quick to speak up for oneself and press one's case.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Of trees and shrubs, standing bare through the winter months.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "sedulous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "diligent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "industrious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "painstaking",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "conscientious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "negligent",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "careless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "lax",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Assiduous comes from Latin assidere, to sit down to: an assiduous worker sits down to a task and stays until it is done."
       ]
     },
     {
@@ -37323,115 +37117,6 @@
       ]
     },
     {
-      "wordId": 339,
-      "headword": "chary",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈtʃɛri/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 1366553,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 693,
-          "definition": "Holding back out of caution or distrust.",
-          "plainLanguageDefinition": "Careful, and slow to trust someone or take a risk.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3913,
-              "text": "Having been cheated by a business partner once, she was chary of signing anything without a lawyer.",
-              "audioUrl": null,
-              "clozeTarget": "chary"
-            },
-            {
-              "exampleId": 3914,
-              "text": "Chary investors pulled their money out of the startup after its third change of chief executive in a year.",
-              "audioUrl": null,
-              "clozeTarget": "Chary"
-            },
-            {
-              "exampleId": 3915,
-              "text": "The cat stayed chary of the visitors, watching from under the sofa until they had left.",
-              "audioUrl": null,
-              "clozeTarget": "chary"
-            },
-            {
-              "exampleId": 3916,
-              "text": "Villagers remained chary of the new well until an inspector confirmed that the water was safe to drink.",
-              "audioUrl": null,
-              "clozeTarget": "chary"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Full of good spirits and quick to smile.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Quick to fill quiet moments with small talk.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Sexually pure, or free of showy decoration.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Lightly mocking toward people one should respect.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "wary",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "cautious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "careful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "cagey",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "guarded",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "leery",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "incautious",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "reckless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "rash",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Chary grew from the same Old English root as care: a chary person takes great care before trusting or acting."
-      ]
-    },
-    {
       "wordId": 340,
       "headword": "chimera",
       "partOfSpeech": "noun",
@@ -38052,103 +37737,6 @@
       ],
       "mnemonics": [
         "Culpable comes from Latin culpa, fault, as in mea culpa (my fault): a culpable person is the one at fault."
-      ]
-    },
-    {
-      "wordId": 346,
-      "headword": "cupidity",
-      "partOfSpeech": "noun",
-      "ipa": "/kjuˈpɪdəti/",
-      "syllables": 4,
-      "difficultyTier": 4,
-      "frequencyRank": 947537,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 700,
-          "definition": "Extreme greed for material wealth.",
-          "plainLanguageDefinition": "Wanting more and more money and things, no matter how much you already have.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3941,
-              "text": "Never satisfied with his millions, the tycoon let his cupidity push him into one shady deal after another.",
-              "audioUrl": null,
-              "clozeTarget": "cupidity"
-            },
-            {
-              "exampleId": 3942,
-              "text": "Driven by cupidity, the heir began selling his grandmother's silver before she had even moved out.",
-              "audioUrl": null,
-              "clozeTarget": "cupidity"
-            },
-            {
-              "exampleId": 3943,
-              "text": "The novel's villain is a banker whose cupidity grows with every fortune he squeezes out of his clients.",
-              "audioUrl": null,
-              "clozeTarget": "cupidity"
-            },
-            {
-              "exampleId": 3944,
-              "text": "Each new tax break for the rich only fed the cupidity of men who already owned more than they could ever spend.",
-              "audioUrl": null,
-              "clozeTarget": "cupidity"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Foolishness that comes from failing to think things through.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "The urge to poke into, ask about and explore whatever is new or hidden.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "How finely the eyes, ears or mind can pick out detail.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "The know-how and means to carry out a given task.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "avarice",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "covetousness",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "greed",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "acquisitiveness",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "rapacity",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "generosity",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Cupidity comes from Latin cupere, to desire, the root of Cupid's name, but this desire is for money rather than love."
       ]
     },
     {
@@ -39564,7 +39152,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/fæˈstɪdiəs/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 329992,
       "etymology": null,
       "audioUrl": null,
@@ -39785,7 +39373,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈfɛkənd/",
       "syllables": 2,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1095065,
       "etymology": null,
       "audioUrl": null,
@@ -40112,107 +39700,6 @@
       ],
       "mnemonics": [
         "Foible comes from an old French word for weak, the same word that gave us feeble: a foible is a small weak spot in someone's character."
-      ]
-    },
-    {
-      "wordId": 366,
-      "headword": "gainsay",
-      "partOfSpeech": "verb",
-      "ipa": "/ˌɡeɪnˈseɪ/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 1587332,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 730,
-          "definition": "Say flatly that a claim is wrong, or argue against it.",
-          "plainLanguageDefinition": "To argue that a claim is false.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 4021,
-              "text": "No one could gainsay her results, since three other labs had repeated them.",
-              "audioUrl": null,
-              "clozeTarget": "gainsay"
-            },
-            {
-              "exampleId": 4022,
-              "text": "The general was brave, but few historians would gainsay that his strategy failed.",
-              "audioUrl": null,
-              "clozeTarget": "gainsay"
-            },
-            {
-              "exampleId": 4023,
-              "text": "Several witnesses tried to gainsay the officer's account, but the dashboard camera backed him up.",
-              "audioUrl": null,
-              "clozeTarget": "gainsay"
-            },
-            {
-              "exampleId": 4024,
-              "text": "The data were so clear that even the drug company's own scientists could not gainsay the link to heart damage.",
-              "audioUrl": null,
-              "clozeTarget": "gainsay"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Run tests on ore or metal to find out what it contains.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Make a first, tentative try at a task.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Add to what one already has, whether weight, speed or money.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Read off a size, level or pressure, or make a careful estimate of one.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "contradict",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "deny",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "dispute",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "challenge",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "contest",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "confirm",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "affirm",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Gainsay is built from an old prefix gain-, 'against' (as in against), plus say: to gainsay is to say against."
       ]
     },
     {
@@ -40947,7 +40434,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˌɪɡnəˈmɪniəs/",
       "syllables": 5,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 611736,
       "etymology": null,
       "audioUrl": null,
@@ -41173,103 +40660,6 @@
       ],
       "mnemonics": [
         "Impetuous comes from Latin impetus, 'a rush or attack': an impetuous person rushes ahead before thinking."
-      ]
-    },
-    {
-      "wordId": 376,
-      "headword": "importune",
-      "partOfSpeech": "verb",
-      "ipa": "/ˌɪmpɚˈtun/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 3921138,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 744,
-          "definition": "Beg persistently and urgently.",
-          "plainLanguageDefinition": "Keep asking someone for something in a pushy, tiresome way.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 4061,
-              "text": "Street vendors importuned every tourist who stepped off the ferry, waving postcards and refusing to take no for an answer.",
-              "audioUrl": null,
-              "clozeTarget": "importuned"
-            },
-            {
-              "exampleId": 4062,
-              "text": "She had importuned the city council for months before it finally repaired the broken streetlight.",
-              "audioUrl": null,
-              "clozeTarget": "importuned"
-            },
-            {
-              "exampleId": 4063,
-              "text": "Too proud to importune his wealthy uncle for a loan, he took a second job instead.",
-              "audioUrl": null,
-              "clozeTarget": "importune"
-            },
-            {
-              "exampleId": 4064,
-              "text": "Fans importuned the actor for autographs all the way from the stage door to his car.",
-              "audioUrl": null,
-              "clozeTarget": "importuned"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Bring in goods from another country to be sold or used locally.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Attack a person's motives or a statement as false or dishonest.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Lay the blame or credit for something on a particular person or cause.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Take a car, animal or goods into official custody until a matter is settled.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "beg",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "beseech",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "implore",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "entreat",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "pester",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "badger",
-          "relationType": "synonym"
-        }
-      ],
-      "mnemonics": [
-        "Importune comes from Latin importunus, 'ill-timed' or 'troublesome', the opposite of opportune: someone who importunes asks at every bad moment."
       ]
     },
     {
@@ -42742,103 +42132,6 @@
       ]
     },
     {
-      "wordId": 391,
-      "headword": "mawkish",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈmɔkɪʃ/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 2567368,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 763,
-          "definition": "Effusively or insincerely emotional.",
-          "plainLanguageDefinition": "So sentimental that it feels fake or sickly sweet.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 4121,
-              "text": "The film ruins a strong story with a mawkish ending, in which the dying dog wags its tail once more as violins swell.",
-              "audioUrl": null,
-              "clozeTarget": "mawkish"
-            },
-            {
-              "exampleId": 4122,
-              "text": "Her editor cut the mawkish last paragraph, where the narrator weeps at a sunset and calls it her mother's final gift.",
-              "audioUrl": null,
-              "clozeTarget": "mawkish"
-            },
-            {
-              "exampleId": 4123,
-              "text": "The greeting card's mawkish verse about baby angels crying happy teardrops made him cringe.",
-              "audioUrl": null,
-              "clozeTarget": "mawkish"
-            },
-            {
-              "exampleId": 4124,
-              "text": "Some readers love the novel's tender scenes, but I found them mawkish and manipulative.",
-              "audioUrl": null,
-              "clozeTarget": "mawkish"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Quick to back war or harsh measures in dealing with other nations.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Stubbornly refusing to change course or give in.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "In step with the latest trends and styles.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Scornfully making fun of someone or something.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "maudlin",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "mushy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "schmaltzy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "sappy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "saccharine",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unemotional",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Mawkish grew out of mawke, an old English word for a maggot, and first meant sickly or nauseating. Now it describes sentiment so sugary it turns the stomach."
-      ]
-    },
-    {
       "wordId": 392,
       "headword": "misanthrope",
       "partOfSpeech": "noun",
@@ -43516,7 +42809,7 @@
       "partOfSpeech": "noun",
       "ipa": "/pəˈraɪə/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 617679,
       "etymology": null,
       "audioUrl": null,

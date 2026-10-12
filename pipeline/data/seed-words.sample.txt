@@ -300,7 +300,6 @@ zealous
 zenith
 
 # --- added 2026-10-12: 100 more test-prep words ---
-abjure
 accolade
 acerbic
 acumen
@@ -311,7 +310,6 @@ anodyne
 apocryphal
 approbation
 arcane
-assiduous
 avarice
 bellicose
 blithe
@@ -321,14 +319,12 @@ callow
 canard
 capitulate
 censure
-chary
 chimera
 circumspect
 clandestine
 conflate
 consternation
 culpable
-cupidity
 decry
 demur
 denigrate
@@ -348,7 +344,6 @@ feckless
 fecund
 florid
 foible
-gainsay
 garish
 germane
 grandiloquent
@@ -358,7 +353,6 @@ hubris
 idiosyncrasy
 ignominious
 impetuous
-importune
 incorrigible
 indefatigable
 insouciant
@@ -373,7 +367,6 @@ largesse
 lionize
 lugubrious
 malevolent
-mawkish
 misanthrope
 modicum
 mordant

@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-12T09:29:17.422Z"
+    "updatedAt": "2026-10-12T20:58:12.680Z"
   },
   "counters": {
     "words": 417,
@@ -54,7 +54,7 @@
       "ipa": "/əbˈsteɪn/",
       "syllables": 2,
       "frequency_rank": 197583,
-      "difficulty_tier": 1,
+      "difficulty_tier": 2,
       "etymology": null,
       "audio_url": null
     },
@@ -362,7 +362,7 @@
       "ipa": "/bɑmˈbæstɪk/",
       "syllables": 3,
       "frequency_rank": 1096164,
-      "difficulty_tier": 4,
+      "difficulty_tier": 5,
       "etymology": null,
       "audio_url": null
     },
@@ -2045,7 +2045,7 @@
       "ipa": "/ˈneɪsənt/",
       "syllables": 2,
       "frequency_rank": 198098,
-      "difficulty_tier": 1,
+      "difficulty_tier": 2,
       "etymology": null,
       "audio_url": null
     },
@@ -2564,7 +2564,7 @@
       "ipa": "/ˈprɑflɪɡət/",
       "syllables": 3,
       "frequency_rank": 619725,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": null,
       "audio_url": null
     },
@@ -2709,7 +2709,7 @@
       "ipa": "/kwoʊˈtɪdiən/",
       "syllables": 4,
       "frequency_rank": 1063309,
-      "difficulty_tier": 4,
+      "difficulty_tier": 5,
       "etymology": null,
       "audio_url": null
     },
@@ -3166,7 +3166,7 @@
       "ipa": "/tɝs/",
       "syllables": 1,
       "frequency_rank": 330863,
-      "difficulty_tier": 2,
+      "difficulty_tier": 3,
       "etymology": null,
       "audio_url": null
     },
@@ -3536,7 +3536,8 @@
       "frequency_rank": 1397163,
       "difficulty_tier": 5,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 319,
@@ -3622,7 +3623,7 @@
       "ipa": "/əˈpɑkrəfəl/",
       "syllables": 4,
       "frequency_rank": 330036,
-      "difficulty_tier": 2,
+      "difficulty_tier": 3,
       "etymology": null,
       "audio_url": null
     },
@@ -3657,7 +3658,8 @@
       "frequency_rank": 586871,
       "difficulty_tier": 3,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 330,
@@ -3767,7 +3769,8 @@
       "frequency_rank": 1366553,
       "difficulty_tier": 5,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 340,
@@ -3844,7 +3847,8 @@
       "frequency_rank": 947537,
       "difficulty_tier": 4,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 347,
@@ -4007,7 +4011,7 @@
       "ipa": "/fæˈstɪdiəs/",
       "syllables": 4,
       "frequency_rank": 329992,
-      "difficulty_tier": 2,
+      "difficulty_tier": 3,
       "etymology": null,
       "audio_url": null
     },
@@ -4029,7 +4033,7 @@
       "ipa": "/ˈfɛkənd/",
       "syllables": 2,
       "frequency_rank": 1095065,
-      "difficulty_tier": 4,
+      "difficulty_tier": 5,
       "etymology": null,
       "audio_url": null
     },
@@ -4064,7 +4068,8 @@
       "frequency_rank": 1587332,
       "difficulty_tier": 5,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 367,
@@ -4150,7 +4155,7 @@
       "ipa": "/ˌɪɡnəˈmɪniəs/",
       "syllables": 5,
       "frequency_rank": 611736,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": null,
       "audio_url": null
     },
@@ -4174,7 +4179,8 @@
       "frequency_rank": 3921138,
       "difficulty_tier": 5,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 377,
@@ -4339,7 +4345,8 @@
       "frequency_rank": 2567368,
       "difficulty_tier": 5,
       "etymology": null,
-      "audio_url": null
+      "audio_url": null,
+      "retired": "Rare in modern text and used less than in the early 1900s (frequency audit, 2026-10-12)."
     },
     {
       "id": 392,
@@ -4425,7 +4432,7 @@
       "ipa": "/pəˈraɪə/",
       "syllables": 3,
       "frequency_rank": 617679,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": null,
       "audio_url": null
     },

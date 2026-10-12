@@ -2217,7 +2217,7 @@ in wrong answers. Curation will catch it word by word.
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
 - `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
-  (after adding 100 new words): all 391 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+  (after adding 100 new words and retiring 7 of them): all 384 taught words reviewed (33 more are retired), 0 flagged, 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2410,8 +2410,9 @@ in wrong answers. Curation will catch it word by word.
     `git branch -r` showed `claude/improve-last-45-words`, but only after
     this run had started.
 - 2026-10-12: added 100 new words (ids 318 to 417), the first new words
-  since the original 317. 99 fixed, 1 flagged (assiduous). Status now: 391
-  of 391 taught words reviewed (main retired 26 words in #32 while this ran).
+  since the original 317. 99 fixed, 1 flagged (assiduous). 7 of them were
+  then retired (see below), so 93 are taught. Status now: 384 of 384 taught
+  words reviewed, 0 flagged (main retired 26 words in #32 while this ran).
   - The words: abjure, accolade, acerbic, acumen, adroit, affable, anathema,
     anodyne, apocryphal, approbation, arcane, assiduous, avarice, bellicose,
     blithe, brusque, bucolic, callow, canard, capitulate, censure, chary,
@@ -2448,8 +2449,12 @@ in wrong answers. Curation will catch it word by word.
     since 1900 (Google Books, 2010-2022 over 1900-1929, under 1). Only 7
     meet both: chary 0.40, cupidity 0.46, gainsay 0.58, importune 0.70,
     assiduous 0.74, mawkish 0.91 and abjure 0.99 (borderline). The other 12
-    are steady or rising (insouciant 5.0, lionize 3.4, fecund 2.5). The 7
-    are kept for now; whether to retire them is open.
+    are steady or rising (insouciant 5.0, lionize 3.4, fecund 2.5). Brian
+    chose to retire the 7, the same way as #32: each row has `retired` with
+    the same reason, and the words are out of the seed list. Their ids and
+    reviewed content stay in the record. Retiring them re-tiered 11 words.
+  - For next time: run #32's frequency check before adding words, not
+    after. 7 of 100 hand-picked GRE words failed it.
   - WordNet led with the wrong first sense for 11 words (acerbic as a sour
     taste, acumen as a leaf tip, anodyne and mordant as nouns, demur as a
     legal noun, peripatetic as Aristotelian, and others). anodyne, demur
