@@ -9,6 +9,7 @@
 import { supabase } from '@/lib/supabase';
 import { loadContent } from '@/lib/content';
 import { authRedirectUrl } from '@/lib/authRedirect';
+import type { Database } from '@/lib/database.types';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
@@ -34,6 +35,15 @@ import type {
   SubmitReviewResult,
 } from '../types';
 import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
+
+/**
+ * `supabase gen types` marks every function argument as required and
+ * non-null. Postgres accepts null for any argument of a function that is not
+ * STRICT, and submit_review relies on it: a card's first review has no
+ * last_review, state_before or retrievability.
+ */
+type SubmitReviewArgs = Database['little_lexicon']['Functions']['submit_review']['Args'];
+type WithNulls<T> = { [K in keyof T]: T[K] | null };
 
 /**
  * PostgREST returns at most 1,000 rows per request by default, and a user's
@@ -444,7 +454,7 @@ export class SupabaseBackend implements Backend {
 
   async submitReview(input: SubmitReviewInput): Promise<SubmitReviewResult> {
     const c: UserWordStateRow = input.card;
-    const { data, error } = await supabase.rpc('submit_review', {
+    const args: WithNulls<SubmitReviewArgs> = {
       p_word_id: input.wordId,
       p_due: c.due,
       p_stability: c.stability,
@@ -453,22 +463,19 @@ export class SupabaseBackend implements Backend {
       p_scheduled_days: c.scheduled_days,
       p_reps: c.reps,
       p_lapses: c.lapses,
-      p_state: c.state as 'new' | 'learning' | 'review' | 'relearning',
+      p_state: c.state as SubmitReviewArgs['p_state'],
       p_last_review: c.last_review,
       p_learning_steps: c.learning_steps,
       p_rating: input.rating,
-      p_state_before: (input.stateBefore ?? null) as
-        | 'new'
-        | 'learning'
-        | 'review'
-        | 'relearning'
-        | null,
+      p_state_before: (input.stateBefore ?? null) as SubmitReviewArgs['p_state_before'] | null,
       p_game_mode: input.gameMode,
       p_response_ms: input.responseMs,
       p_retrievability: input.retrievability,
       p_xp: input.xp,
       p_is_new: input.isNew,
-    });
+    };
+    // The nulls are intended; see WithNulls above.
+    const { data, error } = await supabase.rpc('submit_review', args as SubmitReviewArgs);
     if (error) throw new Error(error.message);
     const r = data as {
       goal_met: boolean;
@@ -571,14 +578,22 @@ export class SupabaseBackend implements Backend {
       .select('user_id, display_name, cohort, weekly_xp, rank_in_cohort')
       .order('rank_in_cohort', { ascending: true });
     if (error) throw new Error(error.message);
-    return (data ?? []).map<LeaderboardEntry>((r) => ({
-      userId: r.user_id,
-      displayName: r.display_name,
-      cohort: r.cohort,
-      weeklyXp: Number(r.weekly_xp),
-      rankInCohort: r.rank_in_cohort,
-      isCurrentUser: r.user_id === userId,
-    }));
+    // Generated types make every column of a view nullable. This view never
+    // returns a row without a user, and its numbers are never null in practice.
+    return (data ?? []).flatMap<LeaderboardEntry>((r) =>
+      r.user_id === null
+        ? []
+        : [
+            {
+              userId: r.user_id,
+              displayName: r.display_name,
+              cohort: r.cohort ?? 0,
+              weeklyXp: Number(r.weekly_xp ?? 0),
+              rankInCohort: r.rank_in_cohort ?? 0,
+              isCurrentUser: r.user_id === userId,
+            },
+          ],
+    );
   }
 
   // --- Achievements ---------------------------------------------------------
