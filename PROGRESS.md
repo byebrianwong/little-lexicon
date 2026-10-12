@@ -2589,6 +2589,110 @@ the review notes what it led to.
   reports from the live demo site stay in each visitor's browser.
 - Not run on the iOS simulator or Android emulator.
 
+## Supabase mode is set up in games-apps
+
+Supabase mode now works against the real `games-apps` project. Migrations
+0001 to 0013 are applied there, and the app was run locally against it with a
+real account: sign-in, onboarding, a 13-word session, Progress, Ranks,
+achievements, the word list, a word report and "Delete account" all wrote and
+read the right rows. The hosted site also has a new address,
+https://littlelexicon.byebrianwong.com. It still runs in demo mode.
+
+### What was wrong, and what changed
+
+- **Signed-in users could not reach the tables.** Supabase grants the API
+  roles access only in the `public` schema. Migration 0011 grants `select`,
+  `insert` and `update` (never `delete`) on the per-user tables to
+  `authenticated`. Signed-out users and the old Postgres word tables get
+  nothing.
+- **`little_lexicon` was not an exposed schema.** Brian added it in the
+  dashboard (Integrations, Data API).
+- **No trigger on `auth.users`.** It is shared by every app in the project, so
+  a trigger there runs for all their sign-ups, and a failure in it would block
+  them all. The app creates a person's profile the first time they open Little
+  Lexicon (`SupabaseBackend.getProfile`). 0001 no longer creates the trigger.
+- **"Delete account" no longer deletes the shared sign-in.** Deleting it would
+  cascade into `rotation`, `baby_bean` and `storage_tracker`, and fail for
+  anyone with `storage_tracker` items. Migration 0013 adds `delete_my_data()`,
+  which deletes the caller's rows in all ten per-user tables. The app calls it
+  and signs out. The `little-lexicon-delete-account` Edge Function is removed.
+  Settings and `docs/PRIVACY.md` say the sign-in is kept.
+- **Sign-up handled email confirmation wrongly.** The project requires it, and
+  Supabase returns no session until the link is opened, but the app went home
+  anyway. It now says to check email, and the link comes back to Little
+  Lexicon (`emailRedirectTo`), not to the project's shared Site URL. The
+  message also covers an address that already has an account: Supabase answers
+  that case the same way and sends nothing. Brian hit exactly this, because
+  his address was already used by another app (auth log: `user_repeated_signup`).
+- **Confirmations did nothing on web.** `Alert.alert` is an empty function in
+  react-native-web, so "Delete account" never asked and never ran there.
+  `src/lib/dialogs.ts` uses the browser's `confirm` and `alert` on web.
+- **"Make it personal" and "Continue with Google"** show only when set up
+  (`EXPO_PUBLIC_AI_FEATURES`, `EXPO_PUBLIC_GOOGLE_SIGN_IN`). Demo mode shows
+  both. The two AI Edge Functions are not deployed: each use is a paid call.
+- **`database.types.ts` is generated** (`npm run gen:types`, now pointed at the
+  project). It caught two things the hand-written file hid: `supabase gen
+  types` marks every function argument non-null, but `submit_review` takes
+  nulls on a card's first review, and every view column is nullable.
+
+### How it was applied
+
+The project's migration history already holds hearsay's `0001` to `0005`, so
+`supabase db push` would skip Little Lexicon's first five. The Supabase MCP's
+`apply_migration` was declined twice: it asks a confirmation form for SQL it
+sees as destructive, and this client answered it by itself. Claude Code's auto
+mode then blocked running the SQL through the CLI. Brian ran it himself:
+
+```bash
+supabase db query --linked -o table -f supabase/.temp/little_lexicon_0001_to_0013.sql
+```
+
+That file is migrations 0001 to 0013 from commit 4ff502a in one transaction.
+It is not in the migration history table. The next migration (0014) can be run
+the same way, on its own.
+
+### Domain
+
+`littlelexicon.byebrianwong.com` is a CNAME at Porkbun to
+`b154959b6cb3b3e0.vercel-dns-017.com`, added to the Vercel project and on the
+Supabase redirect list. Sign-up links from the native app go there.
+`little-lexicon.vercel.app` still works and does not redirect, because demo
+progress is kept in each address's browser storage.
+
+### Verified
+
+- `tsc --noEmit`, lint and 230 unit tests pass.
+- PGlite, as the `authenticated` and `anon` roles: 38 of 38 checks, including
+  that "Delete account" removes one user's rows in all ten tables and nothing
+  of another user's.
+- Real project, read-only checks after applying: 15 tables with RLS, the
+  grants above, no trigger on `auth.users`, the other apps' table counts
+  unchanged. Security advisor: three findings for `little_lexicon`, all
+  deliberate (the leaderboard view and `delete_my_data` / `bump_ai_usage` run
+  as their owner and only touch what they should).
+- Local web app against the real project, with every write checked in the
+  database: profile created on first open, 13 reviews with card state and day
+  stats, retention and forecast, leaderboard and achievements, a word added to
+  the list and soft-removed by Undo, a word report, then "Delete account"
+  emptied all ten tables and left the sign-in.
+
+### Not done
+
+- **The hosted site is still in demo mode.** Turn on real accounts by setting
+  `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` in Vercel, only
+  after this PR is merged: the code on `main` before it expects the old
+  trigger and would fail for new users.
+- **Export does not work on most desktop browsers.** It uses the system share
+  sheet (`Share.share`), which they lack. It now says so instead of failing
+  silently. A web download of the JSON would fix it.
+- **No password reset in the app**, and the native app does not handle the
+  confirmation link (the address is confirmed when the link opens, then the
+  person signs in).
+- **Advisor follow-ups:** 16 policies use `auth.uid()` where Supabase suggests
+  `(select auth.uid())`, and `mnemonics.user_id` and `word_reports.user_id`
+  have no index. Both matter only for large tables.
+- Not run on the iOS simulator or Android emulator against the real project.
+
 ## 26 rare and fading words retired (2026-10-12)
 
 The word list came from GRE prep lists, with no check on how often a word

@@ -20,7 +20,9 @@ const meta = {
     mode: 'sign-in',
     busy: false,
     error: null,
+    notice: null,
     showDemoNote: false,
+    showOAuth: true,
     onSubmit: () => {},
     onOAuth: () => {},
     onSwitchMode: () => {},
@@ -57,6 +59,25 @@ export const WithError: Story = {
 /** Submitting: the button spins and the OAuth button is disabled. */
 export const Submitting: Story = {
   args: { busy: true },
+};
+
+/**
+ * After sign-up when the project requires email confirmation. There is no
+ * session yet, so the form stays and says what to do next. Supabase answers
+ * the same way for an address that already has an account, so the text
+ * covers that too.
+ */
+export const CheckEmail: Story = {
+  args: {
+    mode: 'sign-up',
+    notice:
+      'If ada@example.com is new here, we sent it a link. Open it to confirm your address, then sign in. If you already have an account, sign in instead.',
+  },
+};
+
+/** With Google sign-in not set up in Supabase, the form offers email only. */
+export const EmailOnly: Story = {
+  args: { showOAuth: false },
 };
 
 /** Demo builds say up front that any credentials work. */
