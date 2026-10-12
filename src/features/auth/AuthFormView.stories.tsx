@@ -63,12 +63,15 @@ export const Submitting: Story = {
 
 /**
  * After sign-up when the project requires email confirmation. There is no
- * session yet, so the form stays and says what to do next.
+ * session yet, so the form stays and says what to do next. Supabase answers
+ * the same way for an address that already has an account, so the text
+ * covers that too.
  */
 export const CheckEmail: Story = {
   args: {
     mode: 'sign-up',
-    notice: 'We sent a link to ada@example.com. Open it to confirm your address, then sign in.',
+    notice:
+      'If ada@example.com is new here, we sent it a link. Open it to confirm your address, then sign in. If you already have an account, sign in instead.',
   },
 };
 

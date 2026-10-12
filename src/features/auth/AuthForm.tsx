@@ -26,8 +26,14 @@ export function AuthForm({ mode }: { mode: 'sign-in' | 'sign-up' }) {
         return;
       }
       if (!res.session) {
-        // The account exists but waits for its email to be confirmed.
-        setNotice(`We sent a link to ${email.trim()}. Open it to confirm your address, then sign in.`);
+        // Either a new account waiting for its email to be confirmed, or an
+        // address that already has an account. Supabase answers both the same
+        // way (and sends nothing for the second), so the text covers both.
+        // Sign-ins are shared with the developer's other apps, so the second
+        // case is common.
+        setNotice(
+          `If ${email.trim()} is new here, we sent it a link. Open it to confirm your address, then sign in. If you already have an account, sign in instead.`,
+        );
         return;
       }
       router.replace('/');
