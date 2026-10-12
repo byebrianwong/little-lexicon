@@ -2217,7 +2217,7 @@ in wrong answers. Curation will catch it word by word.
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
 - `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
-  (after adding 100 new words): all 417 words reviewed, 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+  (after adding 100 new words): all 391 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2410,8 +2410,8 @@ in wrong answers. Curation will catch it word by word.
     `git branch -r` showed `claude/improve-last-45-words`, but only after
     this run had started.
 - 2026-10-12: added 100 new words (ids 318 to 417), the first new words
-  since the original 317. 99 fixed, 1 flagged (assiduous). Status now: 417
-  of 417 reviewed.
+  since the original 317. 99 fixed, 1 flagged (assiduous). Status now: 391
+  of 391 taught words reviewed (main retired 26 words in #32 while this ran).
   - The words: abjure, accolade, acerbic, acumen, adroit, affable, anathema,
     anodyne, apocryphal, approbation, arcane, assiduous, avarice, bellicose,
     blithe, brusque, bucolic, callow, canard, capitulate, censure, chary,
@@ -2431,9 +2431,21 @@ in wrong answers. Curation will catch it word by word.
     because ids are permanent. Then the free `words` and `senses` stages
     ran, and 8 writer and 8 reviewer subagents wrote everything else. The
     steps are now "Adding new words" in the skill.
-  - Re-tiering into five equal groups moved 48 of the 317 existing words
-    one tier. The level picker's sample words all stayed inside their
-    levels (audacious went from tier 3 to 2, still in Advanced).
+  - Re-tiering into five equal groups moved 55 of the 291 taught words one
+    tier. The level picker's sample words all stayed inside their levels
+    (audacious went from tier 3 to 2, still in Advanced; quotidian from 5
+    to 4, still in Expert).
+  - Merged with #32, which retired 26 rare and fading words. The record was
+    taken from main and the 100 words re-added with the same ids, then the
+    reviewed worksheets re-applied. `curate.ts status` counted the retired
+    words' reviews and showed "To review: -26"; it now counts taught words
+    only.
+  - 19 of the new words are under #32's modern-frequency cutoff (0.15 per
+    million, all inflections, wordfreq): querulous, cupidity, insouciant,
+    chary, grandiloquent, gainsay, lachrymose, importune, mawkish,
+    supercilious, fecund, expiate, lugubrious, discomfit, phlegmatic,
+    lionize, panegyric, abjure, assiduous. #32 also required falling use
+    since 1900; that half was not checked. Whether to keep them is open.
   - WordNet led with the wrong first sense for 11 words (acerbic as a sour
     taste, acumen as a leaf tip, anodyne and mordant as nouns, demur as a
     legal noun, peripatetic as Aristotelian, and others). anodyne, demur
@@ -2634,3 +2646,161 @@ the review notes what it led to.
   applied there. Supabase mode is not live yet (see the go-live branch), so
   reports from the live demo site stay in each visitor's browser.
 - Not run on the iOS simulator or Android emulator.
+
+## Supabase mode is set up in games-apps
+
+Supabase mode now works against the real `games-apps` project. Migrations
+0001 to 0013 are applied there, and the app was run locally against it with a
+real account: sign-in, onboarding, a 13-word session, Progress, Ranks,
+achievements, the word list, a word report and "Delete account" all wrote and
+read the right rows. The hosted site also has a new address,
+https://littlelexicon.byebrianwong.com. It still runs in demo mode.
+
+### What was wrong, and what changed
+
+- **Signed-in users could not reach the tables.** Supabase grants the API
+  roles access only in the `public` schema. Migration 0011 grants `select`,
+  `insert` and `update` (never `delete`) on the per-user tables to
+  `authenticated`. Signed-out users and the old Postgres word tables get
+  nothing.
+- **`little_lexicon` was not an exposed schema.** Brian added it in the
+  dashboard (Integrations, Data API).
+- **No trigger on `auth.users`.** It is shared by every app in the project, so
+  a trigger there runs for all their sign-ups, and a failure in it would block
+  them all. The app creates a person's profile the first time they open Little
+  Lexicon (`SupabaseBackend.getProfile`). 0001 no longer creates the trigger.
+- **"Delete account" no longer deletes the shared sign-in.** Deleting it would
+  cascade into `rotation`, `baby_bean` and `storage_tracker`, and fail for
+  anyone with `storage_tracker` items. Migration 0013 adds `delete_my_data()`,
+  which deletes the caller's rows in all ten per-user tables. The app calls it
+  and signs out. The `little-lexicon-delete-account` Edge Function is removed.
+  Settings and `docs/PRIVACY.md` say the sign-in is kept.
+- **Sign-up handled email confirmation wrongly.** The project requires it, and
+  Supabase returns no session until the link is opened, but the app went home
+  anyway. It now says to check email, and the link comes back to Little
+  Lexicon (`emailRedirectTo`), not to the project's shared Site URL. The
+  message also covers an address that already has an account: Supabase answers
+  that case the same way and sends nothing. Brian hit exactly this, because
+  his address was already used by another app (auth log: `user_repeated_signup`).
+- **Confirmations did nothing on web.** `Alert.alert` is an empty function in
+  react-native-web, so "Delete account" never asked and never ran there.
+  `src/lib/dialogs.ts` uses the browser's `confirm` and `alert` on web.
+- **"Make it personal" and "Continue with Google"** show only when set up
+  (`EXPO_PUBLIC_AI_FEATURES`, `EXPO_PUBLIC_GOOGLE_SIGN_IN`). Demo mode shows
+  both. The two AI Edge Functions are not deployed: each use is a paid call.
+- **`database.types.ts` is generated** (`npm run gen:types`, now pointed at the
+  project). It caught two things the hand-written file hid: `supabase gen
+  types` marks every function argument non-null, but `submit_review` takes
+  nulls on a card's first review, and every view column is nullable.
+
+### How it was applied
+
+The project's migration history already holds hearsay's `0001` to `0005`, so
+`supabase db push` would skip Little Lexicon's first five. The Supabase MCP's
+`apply_migration` was declined twice: it asks a confirmation form for SQL it
+sees as destructive, and this client answered it by itself. Claude Code's auto
+mode then blocked running the SQL through the CLI. Brian ran it himself:
+
+```bash
+supabase db query --linked -o table -f supabase/.temp/little_lexicon_0001_to_0013.sql
+```
+
+That file is migrations 0001 to 0013 from commit 4ff502a in one transaction.
+It is not in the migration history table. The next migration (0014) can be run
+the same way, on its own.
+
+### Domain
+
+`littlelexicon.byebrianwong.com` is a CNAME at Porkbun to
+`b154959b6cb3b3e0.vercel-dns-017.com`, added to the Vercel project and on the
+Supabase redirect list. Sign-up links from the native app go there.
+`little-lexicon.vercel.app` still works and does not redirect, because demo
+progress is kept in each address's browser storage.
+
+### Verified
+
+- `tsc --noEmit`, lint and 230 unit tests pass.
+- PGlite, as the `authenticated` and `anon` roles: 38 of 38 checks, including
+  that "Delete account" removes one user's rows in all ten tables and nothing
+  of another user's.
+- Real project, read-only checks after applying: 15 tables with RLS, the
+  grants above, no trigger on `auth.users`, the other apps' table counts
+  unchanged. Security advisor: three findings for `little_lexicon`, all
+  deliberate (the leaderboard view and `delete_my_data` / `bump_ai_usage` run
+  as their owner and only touch what they should).
+- Local web app against the real project, with every write checked in the
+  database: profile created on first open, 13 reviews with card state and day
+  stats, retention and forecast, leaderboard and achievements, a word added to
+  the list and soft-removed by Undo, a word report, then "Delete account"
+  emptied all ten tables and left the sign-in.
+
+### Not done
+
+- **The hosted site is still in demo mode.** Turn on real accounts by setting
+  `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` in Vercel, only
+  after this PR is merged: the code on `main` before it expects the old
+  trigger and would fail for new users.
+- **Export does not work on most desktop browsers.** It uses the system share
+  sheet (`Share.share`), which they lack. It now says so instead of failing
+  silently. A web download of the JSON would fix it.
+- **No password reset in the app**, and the native app does not handle the
+  confirmation link (the address is confirmed when the link opens, then the
+  person signs in).
+- **Advisor follow-ups:** 16 policies use `auth.uid()` where Supabase suggests
+  `(select auth.uid())`, and `mnemonics.user_id` and `word_reports.user_id`
+  have no index. Both matter only for large tables.
+- Not run on the iOS simulator or Android emulator against the real project.
+
+## 26 rare and fading words retired (2026-10-12)
+
+The word list came from GRE prep lists, with no check on how often a word
+appears. A frequency audit found 26 words that are both rare in modern text
+and used less than they were a century ago. They are no longer taught. The
+app now has 291 words.
+
+### How the audit worked
+
+- Modern frequency: the `wordfreq` dataset (news, Wikipedia, web text, film
+  subtitles, Reddit, Twitter and books, up to about 2021), counting every
+  inflection of a word (vex, vexed, vexing, vexes).
+- Trend: Google Books use in 2010-2022 divided by use in 1900-1929, from the
+  Ngram Viewer's JSON endpoint.
+- A word was retired when it appears under 0.15 times per million words and
+  its trend is under 1. Rare words whose use is rising (perspicacious,
+  saturnine, exculpate, diaphanous, prevaricate, rancorous) were kept, as were
+  beneficent, remonstrate and aver.
+- The audit script is not in the repo. It was a one-off run; a pipeline stage
+  that does this is future work if the word list grows.
+
+Retired: sedulous, vituperate, complaisant, impecunious, lassitude, recondite,
+torpid, fervid, munificent, punctilious, sagacious, timorous, dilatory,
+ingenuous, effrontery, propitiate, obdurate, stolid, inchoate, unctuous,
+enervate, turpitude, desultory, pillory, redoubtable, salubrious.
+
+### What changed
+
+- A word row can carry `retired: "<reason>"`. The export, the difficulty
+  tiers and `curate.ts` skip retired words. The row, its reviewed content and
+  its id stay in the record, so a word can come back by removing the field.
+- The 26 words are marked retired and removed from the seed list. The tiers
+  were recomputed over the 291 remaining words (58 or 59 per tier).
+- The Expert level's sample word "recondite" is now "quotidian".
+- Two tests required at least 300 words. The floor is now 250; it is there
+  to catch an empty or cut-off words file.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .`, `npx jest` (27 suites, 208 tests) and
+  the pipeline's `npm test` (61 tests) pass. A stale, git-ignored
+  `.expo/types/router.d.ts` from before the level screen caused route type
+  errors locally; it was set aside and is regenerated by `expo start`.
+- Web, demo mode: the level picker shows "obsequious, quotidian,
+  perspicacious" for Expert.
+- Not run on the iOS simulator or Android emulator.
+- Chromatic: the Onboarding Level stories show the new sample word.
+
+### For next time
+
+Tiers still come from Datamuse frequency of the base form only, so verbs
+look rarer than they are ("burgeon" is tier 5 though "burgeoning" is common).
+Tiering by the modern, all-forms frequency would fix that.

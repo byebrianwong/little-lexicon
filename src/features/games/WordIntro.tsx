@@ -18,6 +18,7 @@ import { speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
+import { aiFeaturesAvailable } from '@/lib/env';
 import { AudioButton } from './Reveal';
 import { useGameContext } from './GameContext';
 
@@ -92,7 +93,7 @@ export function WordIntro({
         <Section label="For you" rule="hairline" className="mt-6">
           <Body>{personalized}</Body>
         </Section>
-      ) : profile.interests.length > 0 ? (
+      ) : aiFeaturesAvailable && profile.interests.length > 0 ? (
         <View className="mt-4 items-start">
           {generating ? (
             <View className="py-3">

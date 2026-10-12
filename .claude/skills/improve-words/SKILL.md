@@ -214,7 +214,7 @@ to venal, word ids 318 to 417).
    `--only=senses`. Both are free (Datamuse and WordNet). Do not run the
    `generate` stage; with no API key it skips itself.
 4. `words` re-tiers the whole list into five equal groups, so some existing
-   words move one tier (48 of 317 on 2026-10-12). That is expected. The
+   words move one tier (55 of 291 on 2026-10-12). That is expected. The
    level picker's sample words are checked by
    `src/features/onboarding/levels.test.ts`; run it after export.
 5. The new words come out with only WordNet's definition, other senses,

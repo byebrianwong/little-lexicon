@@ -8,6 +8,8 @@
 
 import { supabase } from '@/lib/supabase';
 import { loadContent } from '@/lib/content';
+import { authRedirectUrl } from '@/lib/authRedirect';
+import type { Database } from '@/lib/database.types';
 import type { UserWordStateRow } from '@/srs/srs';
 import type {
   DailyStats,
@@ -33,6 +35,15 @@ import type {
   SubmitReviewResult,
 } from '../types';
 import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
+
+/**
+ * `supabase gen types` marks every function argument as required and
+ * non-null. Postgres accepts null for any argument of a function that is not
+ * STRICT, and submit_review relies on it: a card's first review has no
+ * last_review, state_before or retrievability.
+ */
+type SubmitReviewArgs = Database['little_lexicon']['Functions']['submit_review']['Args'];
+type WithNulls<T> = { [K in keyof T]: T[K] | null };
 
 /**
  * PostgREST returns at most 1,000 rows per request by default, and a user's
@@ -160,11 +171,17 @@ export class SupabaseBackend implements Backend {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: displayName ? { display_name: displayName } : undefined },
+      options: {
+        data: displayName ? { display_name: displayName } : undefined,
+        emailRedirectTo: authRedirectUrl(),
+      },
     });
     if (error) return { session: null, error: error.message };
-    const u = data.user;
-    return { session: u ? { userId: u.id, email: u.email ?? null } : null, error: null };
+    // When the project requires email confirmation, Supabase creates the user
+    // but returns no session until the link in the email is opened. Report
+    // that as "no session", not as signed in.
+    const s = data.session;
+    return { session: s ? { userId: s.user.id, email: s.user.email ?? null } : null, error: null };
   }
 
   async signInWithOAuth(provider: OAuthProvider): Promise<AuthResult> {
@@ -180,11 +197,34 @@ export class SupabaseBackend implements Backend {
 
   // --- Profile --------------------------------------------------------------
   async getProfile(): Promise<Profile> {
-    const userId = await this.requireUserId();
+    const { data: auth } = await supabase.auth.getUser();
+    const user = auth.user;
+    if (!user) throw new Error('Not authenticated');
+    const existing = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('user_id', user.id)
+      .maybeSingle();
+    if (existing.error) throw new Error(existing.error.message);
+    if (existing.data) return mapProfile(existing.data);
+
+    // No profile yet. Sign-ins are shared with the other apps in the
+    // games-apps project, so this is someone opening Little Lexicon for the
+    // first time, or again after "Delete account". There is no sign-up
+    // trigger (see migration 0001), so create the profile here. Screens ask
+    // for the profile at the same time, so a second insert is ignored.
+    const name: unknown = user.user_metadata?.display_name;
+    const { error: insertError } = await supabase
+      .from('profiles')
+      .upsert(
+        { user_id: user.id, display_name: typeof name === 'string' ? name : null },
+        { onConflict: 'user_id', ignoreDuplicates: true },
+      );
+    if (insertError) throw new Error(insertError.message);
     const { data, error } = await supabase
       .from('profiles')
       .select('*')
-      .eq('user_id', userId)
+      .eq('user_id', user.id)
       .single();
     if (error) throw new Error(error.message);
     return mapProfile(data);
@@ -414,7 +454,7 @@ export class SupabaseBackend implements Backend {
 
   async submitReview(input: SubmitReviewInput): Promise<SubmitReviewResult> {
     const c: UserWordStateRow = input.card;
-    const { data, error } = await supabase.rpc('submit_review', {
+    const args: WithNulls<SubmitReviewArgs> = {
       p_word_id: input.wordId,
       p_due: c.due,
       p_stability: c.stability,
@@ -423,22 +463,19 @@ export class SupabaseBackend implements Backend {
       p_scheduled_days: c.scheduled_days,
       p_reps: c.reps,
       p_lapses: c.lapses,
-      p_state: c.state as 'new' | 'learning' | 'review' | 'relearning',
+      p_state: c.state as SubmitReviewArgs['p_state'],
       p_last_review: c.last_review,
       p_learning_steps: c.learning_steps,
       p_rating: input.rating,
-      p_state_before: (input.stateBefore ?? null) as
-        | 'new'
-        | 'learning'
-        | 'review'
-        | 'relearning'
-        | null,
+      p_state_before: (input.stateBefore ?? null) as SubmitReviewArgs['p_state_before'] | null,
       p_game_mode: input.gameMode,
       p_response_ms: input.responseMs,
       p_retrievability: input.retrievability,
       p_xp: input.xp,
       p_is_new: input.isNew,
-    });
+    };
+    // The nulls are intended; see WithNulls above.
+    const { data, error } = await supabase.rpc('submit_review', args as SubmitReviewArgs);
     if (error) throw new Error(error.message);
     const r = data as {
       goal_met: boolean;
@@ -541,14 +578,22 @@ export class SupabaseBackend implements Backend {
       .select('user_id, display_name, cohort, weekly_xp, rank_in_cohort')
       .order('rank_in_cohort', { ascending: true });
     if (error) throw new Error(error.message);
-    return (data ?? []).map<LeaderboardEntry>((r) => ({
-      userId: r.user_id,
-      displayName: r.display_name,
-      cohort: r.cohort,
-      weeklyXp: Number(r.weekly_xp),
-      rankInCohort: r.rank_in_cohort,
-      isCurrentUser: r.user_id === userId,
-    }));
+    // Generated types make every column of a view nullable. This view never
+    // returns a row without a user, and its numbers are never null in practice.
+    return (data ?? []).flatMap<LeaderboardEntry>((r) =>
+      r.user_id === null
+        ? []
+        : [
+            {
+              userId: r.user_id,
+              displayName: r.display_name,
+              cohort: r.cohort ?? 0,
+              weeklyXp: Number(r.weekly_xp ?? 0),
+              rankInCohort: r.rank_in_cohort ?? 0,
+              isCurrentUser: r.user_id === userId,
+            },
+          ],
+    );
   }
 
   // --- Achievements ---------------------------------------------------------
@@ -647,10 +692,10 @@ export class SupabaseBackend implements Backend {
   }
 
   async deleteAccount(): Promise<void> {
-    // Deleting the auth user cascades to every Little Lexicon per-user row via the
-    // on-delete-cascade foreign keys. The client cannot delete an auth user, so
-    // this is routed through an Edge Function holding the service role key.
-    const { error } = await supabase.functions.invoke('little-lexicon-delete-account', { body: {} });
+    // Deletes every Little Lexicon row for this person (migration 0013), then
+    // signs out. The sign-in itself stays: it is shared with the other apps in
+    // the games-apps project, and deleting it would reach their data too.
+    const { error } = await supabase.rpc('delete_my_data');
     if (error) throw new Error(error.message);
     await supabase.auth.signOut();
   }

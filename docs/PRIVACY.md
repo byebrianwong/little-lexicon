@@ -36,8 +36,10 @@ do not send your broader history. These calls are limited per user per day.
 ## Your choices and rights
 
 - **Export.** Settings, Account, Export my data returns your own data as JSON.
-- **Deletion.** Settings, Account, Delete account permanently removes your
-  account and all of your learning data. Shared learning content is unaffected.
+- **Deletion.** Settings, Account, Delete account permanently removes all of
+  your Little Lexicon data and signs you out. Your sign-in itself is kept,
+  because it also works for other apps from the same developer. To have the
+  sign-in removed as well, contact us.
 - **Notifications.** Daily reminders are opt-in and local to your device.
 
 ## Data location and retention

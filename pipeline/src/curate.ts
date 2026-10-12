@@ -66,7 +66,11 @@ const log = new Logger(false);
 async function openRecord(): Promise<{ store: JsonFileStore; rows: ContentRows; reviews: ReviewRow[] }> {
   const store = new JsonFileStore(DB_FILE, join(ROOT, 'out', 'audio'), false, log);
   await store.init();
-  return { store, rows: await store.snapshot(), reviews: await store.listReviews() };
+  // Retired words are not taught, so they are not reviewed. Writes go through
+  // the store, which still holds every row.
+  const all = await store.snapshot();
+  const rows = { ...all, words: all.words.filter((w) => !w.retired) };
+  return { store, rows, reviews: await store.listReviews() };
 }
 
 async function openLexicon(): Promise<Lexicon> {
@@ -93,6 +97,9 @@ async function status(): Promise<void> {
   const { rows, reviews } = await openRecord();
   const lexicon = await openLexicon();
   const done = currentReviews(reviews);
+  // Retired words keep their reviews but are not counted.
+  const active = new Set(rows.words.map((w) => w.id));
+  for (const id of done.keys()) if (!active.has(id)) done.delete(id);
   const verdicts = { pass: 0, fixed: 0, flagged: 0 };
   for (const r of done.values()) verdicts[r.verdict] += 1;
 

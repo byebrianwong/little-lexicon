@@ -118,6 +118,7 @@ export function buildWordsFile(
   const words: ExportWord[] = [];
   const heldBack: HeldBack[] = [];
   for (const word of [...rows.words].sort(byId)) {
+    if (word.retired) continue;
     const senses = [...(sensesByWord.get(word.id) ?? [])].sort(
       (a, b) => a.sense_order - b.sense_order || a.id - b.id,
     );
