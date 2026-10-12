@@ -90,7 +90,7 @@ describe('DemoBackend on a fresh install', () => {
   it('serves words from the words file', async () => {
     const backend = new DemoBackend();
     const all = await backend.getAllWords();
-    expect(all.length).toBeGreaterThanOrEqual(300);
+    expect(all.length).toBeGreaterThanOrEqual(250);
     const fresh = await backend.getNewWords(5, { minTier: 2, maxTier: 2 });
     expect(fresh).toHaveLength(5);
     expect(fresh.every((i) => i.content.difficultyTier === 2 && i.isNew)).toBe(true);

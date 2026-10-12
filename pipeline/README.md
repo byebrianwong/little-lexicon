@@ -24,6 +24,10 @@ Saved progress refers to words by id, so an id must never change or be reused.
   and writes nothing.
 - A word removed from the seed list keeps its row and id in the record. If a
   word stops being exported, the export warns and its id stays retired.
+- To stop teaching a word, set `"retired": "<reason>"` on its row in the
+  record and take it out of the seed list. The export, the difficulty tiers and
+  `curate.ts` skip retired words. The row, its content and its id stay, so the
+  word can come back by removing the field.
 - Never delete `data/content-db.json` once the app has shipped. A fresh record
   would number words from 1 again, and the export would refuse it.
 

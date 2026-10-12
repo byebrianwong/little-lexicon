@@ -68,6 +68,14 @@ test('buildWordsFile orders words by id and holds back words with no senses', ()
   assert.equal(file.formatVersion, 1);
 });
 
+test('buildWordsFile leaves out retired words', () => {
+  const r = rows();
+  r.words = r.words.map((w) => (w.headword === 'laconic' ? { ...w, retired: 'too rare' } : w));
+  const { file, heldBack } = buildWordsFile(r, ['credit']);
+  assert.deepEqual(file.words.map((w) => w.headword), ['abate']);
+  assert.deepEqual(heldBack, [{ headword: 'nosense', reason: 'no senses' }]);
+});
+
 test('buildWordsFile maps rows to the app shape, generated examples first', () => {
   const laconic = buildWordsFile(rows(), []).file.words[1]!;
   assert.equal(laconic.wordId, 2);

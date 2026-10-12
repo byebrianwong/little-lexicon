@@ -2556,7 +2556,7 @@
       "partOfSpeech": "verb",
       "ipa": "/əˈsweɪdʒ/",
       "syllables": 2,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 488087,
       "etymology": null,
       "audioUrl": null,
@@ -3702,7 +3702,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/bɑmˈbæstɪk/",
       "syllables": 3,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1096164,
       "etymology": null,
       "audioUrl": null,
@@ -4061,7 +4061,7 @@
       "partOfSpeech": "verb",
       "ipa": "/ˈbʌtrəs/",
       "syllables": 2,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 300112,
       "etymology": null,
       "audioUrl": null,
@@ -4299,7 +4299,7 @@
       "partOfSpeech": "verb",
       "ipa": "/kəˈdʒoʊl/",
       "syllables": 2,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1114628,
       "etymology": null,
       "audioUrl": null,
@@ -4397,7 +4397,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈkæləs/",
       "syllables": 2,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 287590,
       "etymology": null,
       "audioUrl": null,
@@ -5123,7 +5123,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈkɔstɪk/",
       "syllables": 2,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 159330,
       "etymology": null,
       "audioUrl": null,
@@ -5279,7 +5279,7 @@
       "partOfSpeech": "noun",
       "ipa": "/ʃɪˈkeɪnəri/",
       "syllables": 4,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1031855,
       "etymology": null,
       "audioUrl": null,
@@ -5487,7 +5487,7 @@
       "partOfSpeech": "verb",
       "ipa": "/ˌkoʊəˈlɛs/",
       "syllables": 3,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 292485,
       "etymology": null,
       "audioUrl": null,
@@ -5807,108 +5807,6 @@
       ],
       "mnemonics": [
         "Commensurate shares a root with 'measure'; things that are commensurate have matching measures."
-      ]
-    },
-    {
-      "wordId": 49,
-      "headword": "complaisant",
-      "partOfSpeech": "adjective",
-      "ipa": "/kəmˈpleɪsənt/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 1832831,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 93,
-          "definition": "Showing a cheerful willingness to do favors for others.",
-          "plainLanguageDefinition": "Eager to please others and quick to go along with their wishes.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2728,
-              "text": "The complaisant clerk agreed to every change the customer demanded, even the unreasonable ones.",
-              "audioUrl": null,
-              "clozeTarget": "complaisant"
-            },
-            {
-              "exampleId": 2729,
-              "text": "Eager to avoid conflict, the complaisant board approved the chief executive's plans without a single question.",
-              "audioUrl": null,
-              "clozeTarget": "complaisant"
-            },
-            {
-              "exampleId": 2730,
-              "text": "She was complaisant with her in-laws, cheerfully cooking whatever they requested at every holiday.",
-              "audioUrl": null,
-              "clozeTarget": "complaisant"
-            },
-            {
-              "exampleId": 2731,
-              "text": "The complaisant waiter happily moved us to three different tables until we were satisfied.",
-              "audioUrl": null,
-              "clozeTarget": "complaisant"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "So pleased with oneself or one's situation that one stops watching for risks or trying to improve.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Sharing the guilt for a wrong by having helped to bring it about.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Calm and collected, with feelings kept steady even in a tense moment.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Driven by an inner urge that is hard to resist, often to repeat an act.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Skilled enough to handle a task properly.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "obliging",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "accommodating",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "agreeable",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "amenable",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "uncooperative",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "unaccommodating",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Complaisant comes from French complaire, to please: a complaisant person goes out of the way to please others. Do not confuse it with complacent, meaning smug."
       ]
     },
     {
@@ -6447,7 +6345,7 @@
       "partOfSpeech": "noun",
       "ipa": "/kəˈnʌndrəm/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 481767,
       "etymology": null,
       "audioUrl": null,
@@ -6888,7 +6786,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈkrɛdʒələs/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 520523,
       "etymology": null,
       "audioUrl": null,
@@ -7230,7 +7128,7 @@
       "partOfSpeech": "noun",
       "ipa": "/dɪˈbɑkəl/",
       "syllables": 3,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 283644,
       "etymology": null,
       "audioUrl": null,
@@ -7767,7 +7665,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˌdɛləˈtɪriəs/",
       "syllables": 5,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 155573,
       "etymology": null,
       "audioUrl": null,
@@ -8197,116 +8095,6 @@
       ]
     },
     {
-      "wordId": 70,
-      "headword": "desultory",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈdɛsəlˌtɔri/",
-      "syllables": 4,
-      "difficultyTier": 3,
-      "frequencyRank": 466091,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 129,
-          "definition": "Carried out casually and without method, skipping from one thing to another with little real effort.",
-          "plainLanguageDefinition": "Done without any real plan or focus, jumping randomly from one thing to another.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2553,
-              "text": "Without a syllabus, her desultory reading jumped from Roman history to bird calls to tax law in a single week.",
-              "audioUrl": null,
-              "clozeTarget": "desultory"
-            },
-            {
-              "exampleId": 2554,
-              "text": "The detective made only a desultory search of the room, glancing under the bed and missing the letter in plain sight.",
-              "audioUrl": null,
-              "clozeTarget": "desultory"
-            },
-            {
-              "exampleId": 2555,
-              "text": "Neither stranger really wanted to talk, so their desultory chat about the weather drifted and died within minutes.",
-              "audioUrl": null,
-              "clozeTarget": "desultory"
-            },
-            {
-              "exampleId": 2556,
-              "text": "After a year of desultory practice, ten minutes here and there with no plan, he still could not play a single song.",
-              "audioUrl": null,
-              "clozeTarget": "desultory"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Spending most of the day sitting down and moving very little.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Having a helpful effect, often by teaching a lesson the hard way.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Bare, empty and bleak, with no people or comfort to be found.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Showing a low opinion of someone in an insulting way.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Uncomfortably hot and damp, as on a heavy summer afternoon.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "aimless",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "haphazard",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unsystematic",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fitful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "halfhearted",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "purposeful",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "methodical",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "systematic",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Desultory comes from Latin desultor, a circus rider who leapt from horse to horse, just as desultory work jumps from one thing to another."
-      ]
-    },
-    {
       "wordId": 71,
       "headword": "diaphanous",
       "partOfSpeech": "adjective",
@@ -8720,108 +8508,6 @@
       ],
       "mnemonics": [
         "Diffident shares Latin fidere, to trust, with confident; the dif- (from dis-, not) marks a person who does not trust their own ability."
-      ]
-    },
-    {
-      "wordId": 75,
-      "headword": "dilatory",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈdɪləˌtɔri/",
-      "syllables": 4,
-      "difficultyTier": 4,
-      "frequencyRank": 942678,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 135,
-          "definition": "Slow to act or get things done, or designed to stall and buy time.",
-          "plainLanguageDefinition": "Tending to delay or waste time instead of acting promptly.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2573,
-              "text": "The landlord was dilatory about repairs, letting the broken heater sit for six weeks while the tenants shivered.",
-              "audioUrl": null,
-              "clozeTarget": "dilatory"
-            },
-            {
-              "exampleId": 2574,
-              "text": "Opponents used dilatory tactics, demanding one roll call after another, to keep the bill from coming to a vote.",
-              "audioUrl": null,
-              "clozeTarget": "dilatory"
-            },
-            {
-              "exampleId": 2575,
-              "text": "A dilatory student, he started every essay the night before it was due.",
-              "audioUrl": null,
-              "clozeTarget": "dilatory"
-            },
-            {
-              "exampleId": 2576,
-              "text": "The judge warned both lawyers that further dilatory requests for more time would be denied.",
-              "audioUrl": null,
-              "clozeTarget": "dilatory"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Run-down and falling to pieces after years of neglect.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Full of praise for someone or something.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Watered down so that it is less strong.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Living by hunting and eating other animals.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Dabbling in a subject for fun, without serious study or skill.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "slow",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "tardy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "sluggish",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "poky",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "prompt",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "punctual",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Dilatory comes from Latin dilatus, put off, a form of the verb that also gave English defer: a dilatory person keeps deferring."
       ]
     },
     {
@@ -10588,116 +10274,6 @@
       ]
     },
     {
-      "wordId": 91,
-      "headword": "effrontery",
-      "partOfSpeech": "noun",
-      "ipa": "/ɪˈfrʌntəri/",
-      "syllables": 4,
-      "difficultyTier": 4,
-      "frequencyRank": 997232,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 164,
-          "definition": "Bold, disrespectful behavior from someone who should know they have no right to act that way.",
-          "plainLanguageDefinition": "The nerve to do or say something rude that you have no right to.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2692,
-              "text": "He had the effrontery to ask for a raise after missing every deadline this year.",
-              "audioUrl": null,
-              "clozeTarget": "effrontery"
-            },
-            {
-              "exampleId": 2693,
-              "text": "With breathtaking effrontery, the landlord raised the rent in the same week he stopped fixing the heat.",
-              "audioUrl": null,
-              "clozeTarget": "effrontery"
-            },
-            {
-              "exampleId": 2694,
-              "text": "The stranger had the effrontery to park in our driveway and then complain that we had blocked him in.",
-              "audioUrl": null,
-              "clozeTarget": "effrontery"
-            },
-            {
-              "exampleId": 2695,
-              "text": "Voters were stunned by the effrontery of a candidate who copied his rival's speech and called it his own.",
-              "audioUrl": null,
-              "clozeTarget": "effrontery"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Wild land at the edge of a country's settled area.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Hard work or energy spent on trying to do something.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Compliments that go too far or are not sincerely meant, often to win favor.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "The fizzing of bubbles as gas escapes from a liquid.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Dirty water and waste that pour out of a factory or sewer.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "audacity",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "gall",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "nerve",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "impudence",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "insolence",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "presumption",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "humility",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "deference",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Effrontery contains front, from the Latin frons, \"forehead\" or \"face\": effrontery is showing a bold face when you should feel shame."
-      ]
-    },
-    {
       "wordId": 92,
       "headword": "elegy",
       "partOfSpeech": "noun",
@@ -11203,116 +10779,6 @@
       ]
     },
     {
-      "wordId": 97,
-      "headword": "enervate",
-      "partOfSpeech": "verb",
-      "ipa": "/ˈɛnɚˌveɪt/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 6676459,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 175,
-          "definition": "Sap the strength and vigor of a person, leaving the body or mind weak and listless.",
-          "plainLanguageDefinition": "To make someone feel weak and worn out, with no energy left.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2823,
-              "text": "The muggy August heat seemed to enervate the whole office, and by three o'clock nobody had the strength to do more than stare at a screen.",
-              "audioUrl": null,
-              "clozeTarget": "enervate"
-            },
-            {
-              "exampleId": 2824,
-              "text": "Months of chemotherapy had enervated him so badly that climbing a single flight of stairs left him gasping.",
-              "audioUrl": null,
-              "clozeTarget": "enervated"
-            },
-            {
-              "exampleId": 2825,
-              "text": "Endless committee meetings can enervate even the most eager new teacher, draining the zeal she brought to her first September.",
-              "audioUrl": null,
-              "clozeTarget": "enervate"
-            },
-            {
-              "exampleId": 2826,
-              "text": "Instead of energizing the players, the coach's three-hour practice in the cold rain only enervated them.",
-              "audioUrl": null,
-              "clozeTarget": "enervated"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Treat a person or thing with deep, almost worshipful respect.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Officially declare someone free of blame for a crime or fault.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Run nerve fibers to a body part, such as a muscle or gland.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Name a set of things one by one, as in a list or count.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Sound out every syllable distinctly, as an actor or a speech coach does.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "weaken",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "sap",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "exhaust",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "debilitate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "enfeeble",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "energize",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "invigorate",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "strengthen",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Enervate comes from the Latin e-, out, and nervus, sinew: picture the sinews pulled out, leaving you limp. It is the opposite of energize."
-      ]
-    },
-    {
       "wordId": 98,
       "headword": "engender",
       "partOfSpeech": "verb",
@@ -11480,7 +10946,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪˈfɛmərəl/",
       "syllables": 4,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 156133,
       "etymology": null,
       "audioUrl": null,
@@ -12580,7 +12046,7 @@
       "partOfSpeech": "verb",
       "ipa": "/ɪɡˈzɑnəˌreɪt/",
       "syllables": 4,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1118879,
       "etymology": null,
       "audioUrl": null,
@@ -13517,129 +12983,6 @@
       ],
       "mnemonics": [
         "Fatuous shares a root with infatuated, from Latin fatuus, 'foolish': people who are infatuated often say fatuous things."
-      ]
-    },
-    {
-      "wordId": 118,
-      "headword": "fervid",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈfɝvɪd/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 1209681,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 206,
-          "definition": "Characterized by intense emotion.",
-          "plainLanguageDefinition": "Filled with fiery passion or strong feelings.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3249,
-              "text": "She delivered a fervid speech that galvanized the entire assembly.",
-              "audioUrl": null,
-              "clozeTarget": "fervid"
-            },
-            {
-              "exampleId": 3250,
-              "text": "His fervid devotion to the cause inspired many others to join.",
-              "audioUrl": null,
-              "clozeTarget": "fervid"
-            },
-            {
-              "exampleId": 3251,
-              "text": "Her fervid letters, full of underlined vows and exclamation marks, alarmed her calmer sister.",
-              "audioUrl": null,
-              "clozeTarget": "fervid"
-            },
-            {
-              "exampleId": 3252,
-              "text": "Even after a tenth straight loss, the team's most fervid fans still painted their faces and sang every song.",
-              "audioUrl": null,
-              "clozeTarget": "fervid"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Giving off a strong, rotten smell.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Hanging loose and soft instead of firm.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Having iron as one of its parts.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Producing young, crops or new ideas in great numbers.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Red-faced, as from drink, heat or high blood pressure.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        },
-        {
-          "senseId": 621,
-          "definition": "Burning hot or glowing, a sense now found mostly in older writing.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "ardent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fervent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fiery",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "impassioned",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "passionate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "torrid",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "passionless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "lukewarm",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "indifferent",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Fervid comes from Latin fervere, 'to boil', the same root as fervent: fervid feelings are boiling hot."
       ]
     },
     {
@@ -14878,7 +14221,7 @@
       "partOfSpeech": "verb",
       "ipa": "/ɡoʊd/",
       "syllables": 1,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 582480,
       "etymology": null,
       "audioUrl": null,
@@ -15994,7 +15337,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪˈmjutəbəl/",
       "syllables": 4,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 165760,
       "etymology": null,
       "audioUrl": null,
@@ -16215,115 +15558,6 @@
       ],
       "mnemonics": [
         "Impassive joins im-, not, to the Latin root of passion (pati, to suffer or feel): an impassive face shows no passion."
-      ]
-    },
-    {
-      "wordId": 139,
-      "headword": "impecunious",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˌɪmpɪˈkjuniəs/",
-      "syllables": 5,
-      "difficultyTier": 5,
-      "frequencyRank": 1493331,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 244,
-          "definition": "Not having enough money to pay for necessities.",
-          "plainLanguageDefinition": "Short of money, often barely able to get by.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3225,
-              "text": "As an impecunious student, he lived on rice and beans and walked everywhere to save bus fare.",
-              "audioUrl": null,
-              "clozeTarget": "impecunious"
-            },
-            {
-              "exampleId": 3226,
-              "text": "The impecunious count sold the family paintings one by one to pay for repairs to the roof.",
-              "audioUrl": null,
-              "clozeTarget": "impecunious"
-            },
-            {
-              "exampleId": 3227,
-              "text": "An impecunious traveler arrived at the inn with barely enough coins for a single loaf of bread.",
-              "audioUrl": null,
-              "clozeTarget": "impecunious"
-            },
-            {
-              "exampleId": 3228,
-              "text": "Impecunious young artists in the city often crowd into small apartments to split the rent.",
-              "audioUrl": null,
-              "clozeTarget": "Impecunious"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Acting suddenly, without stopping to think.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Without a single flaw or mistake.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Having to do with money.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Lacking reverence for what is holy.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "poor",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "penniless",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "hard up",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "broke",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "needy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "penurious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "rich",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "wealthy",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "affluent",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Impecunious holds Latin pecunia, \"money\", as in pecuniary; the im- means without, so it means without money."
       ]
     },
     {
@@ -16928,108 +16162,6 @@
       ]
     },
     {
-      "wordId": 145,
-      "headword": "inchoate",
-      "partOfSpeech": "adjective",
-      "ipa": "/ɪnˈkoʊət/",
-      "syllables": 3,
-      "difficultyTier": 3,
-      "frequencyRank": 612805,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 253,
-          "definition": "Not yet fully shaped or organized; still rough and unclear in form.",
-          "plainLanguageDefinition": "Still rough and unformed, like an idea you cannot yet put into words.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3149,
-              "text": "The architect showed an inchoate sketch of the museum, a few loose shapes she would refine into blueprints over the next year.",
-              "audioUrl": null,
-              "clozeTarget": "inchoate"
-            },
-            {
-              "exampleId": 3150,
-              "text": "The author struggled to turn her inchoate thoughts into a clear, ordered chapter.",
-              "audioUrl": null,
-              "clozeTarget": "inchoate"
-            },
-            {
-              "exampleId": 3151,
-              "text": "The protesters shared an inchoate anger that had not yet hardened into specific demands.",
-              "audioUrl": null,
-              "clozeTarget": "inchoate"
-            },
-            {
-              "exampleId": 3152,
-              "text": "Her plan for the business was still inchoate: she had a name and a logo but no idea what to sell.",
-              "audioUrl": null,
-              "clozeTarget": "inchoate"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Present in a person or animal from birth rather than learned.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Not alive, like a stone or a chair.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "In human form; embodied in a living person.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Going well past what good sense would allow, as with an amount of time or money.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Kept safe from harm, attack or change.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "unformed",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "undeveloped",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "rudimentary",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "embryonic",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "developed",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "finished",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Inchoate comes from Latin incohare, 'to begin': an inchoate plan has only just been started and has no shape yet."
-      ]
-    },
-    {
       "wordId": 146,
       "headword": "incipient",
       "partOfSpeech": "adjective",
@@ -17137,7 +16269,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈɪndɪdʒənt/",
       "syllables": 3,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 295169,
       "etymology": null,
       "audioUrl": null,
@@ -17366,7 +16498,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪˈnɛfəbəl/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 304620,
       "etymology": null,
       "audioUrl": null,
@@ -17644,188 +16776,12 @@
       ]
     },
     {
-      "wordId": 151,
-      "headword": "ingenuous",
-      "partOfSpeech": "adjective",
-      "ipa": "/ɪnˈdʒɛnjuəs/",
-      "syllables": 4,
-      "difficultyTier": 3,
-      "frequencyRank": 598222,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 262,
-          "definition": "Openly honest and sincere, without any wish or skill to hide things.",
-          "plainLanguageDefinition": "Honest and trusting, like a child who does not know how to hide things.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3173,
-              "text": "With an ingenuous grin, the boy admitted he had eaten every cookie and asked whether there were more.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 3174,
-              "text": "An ingenuous child cannot hide his disappointment when he unwraps a boring gift.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 3175,
-              "text": "Her ingenuous questions about how the scheme worked made it obvious she had played no part in the fraud.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 3176,
-              "text": "The detective was disarmed by his ingenuous confession, which held nothing back.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Showing a gift for inventing new and clever ways to do things.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Thin and easily broken, as with a weak link or a shaky claim.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Taking a lot of hard physical or mental work.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Winding and bending, like a snake or a mountain road.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Firmly fixed and hard to change, as with a habit.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        },
-        {
-          "senseId": 263,
-          "definition": "Lacking in sophistication or worldliness.",
-          "plainLanguageDefinition": "Being innocent and simple because you have not experienced much of the world yet.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1330,
-              "text": "His ingenuous belief in human goodness faded after living in the metropolis.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 1331,
-              "text": "She held an ingenuous view of how politics actually functioned.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 1332,
-              "text": "The rustic traveler made several ingenuous remarks about city architecture.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 1333,
-              "text": "Youthful enthusiasm often masks an ingenuous understanding of complex economics.",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            },
-            {
-              "exampleId": 139,
-              "text": "His ingenuous explanation that he would not have burned the church if he had not thought the bishop was in it",
-              "audioUrl": null,
-              "clozeTarget": "ingenuous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Possessing vast knowledge of international art and cuisine.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Showing extreme hostility toward unfamiliar customs.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Marked by bitter cynicism born of frequent betrayal.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Endowed with exceptional mathematical prowess.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Characterized by elaborate and expensive tastes.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "artless",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "guileless",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "candid",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "naive",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "innocent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "artful",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "crafty",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "sophisticated",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Ingenuous comes from Latin ingenuus, 'freeborn' and so 'frank'. Hear genuine inside it: an ingenuous person is genuine, with nothing hidden."
-      ]
-    },
-    {
       "wordId": 152,
       "headword": "inimical",
       "partOfSpeech": "adjective",
       "ipa": "/ɪˈnɪmɪkəl/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 288418,
       "etymology": null,
       "audioUrl": null,
@@ -18160,7 +17116,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪnˈsɪpɪd/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 546783,
       "etymology": null,
       "audioUrl": null,
@@ -18476,7 +17432,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪnˈtrænsədʒənt/",
       "syllables": 4,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 536955,
       "etymology": null,
       "audioUrl": null,
@@ -19049,7 +18005,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ləˈkɑnɪk/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 560087,
       "etymology": null,
       "audioUrl": null,
@@ -19154,129 +18110,6 @@
       ],
       "mnemonics": [
         "Laconic comes from Laconia, home of the Spartans, who were famous for short replies. To a king's threat beginning 'If I invade,' they answered only 'If.'"
-      ]
-    },
-    {
-      "wordId": 164,
-      "headword": "lassitude",
-      "partOfSpeech": "noun",
-      "ipa": "/ˈlæsɪˌtud/",
-      "syllables": 3,
-      "difficultyTier": 4,
-      "frequencyRank": 637793,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 284,
-          "definition": "A drained, heavy feeling, physical or mental, that takes away the will to do anything.",
-          "plainLanguageDefinition": "A heavy, tired feeling that makes you not want to do anything.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3081,
-              "text": "Weeks after the fever broke, a lingering lassitude kept him on the sofa, too tired even to read.",
-              "audioUrl": null,
-              "clozeTarget": "lassitude"
-            },
-            {
-              "exampleId": 3082,
-              "text": "The August heat brought a lassitude over the town, and shopkeepers dozed behind their counters.",
-              "audioUrl": null,
-              "clozeTarget": "lassitude"
-            },
-            {
-              "exampleId": 3083,
-              "text": "After the marathon she felt a deep lassitude, as if her legs and her will had both run out.",
-              "audioUrl": null,
-              "clozeTarget": "lassitude"
-            },
-            {
-              "exampleId": 3084,
-              "text": "The long gray winter filled him with a lassitude that made even answering email feel like a chore.",
-              "audioUrl": null,
-              "clozeTarget": "lassitude"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "The amount of freedom a person is allowed within a set of rules.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Time spent alone, away from other people, often by choice.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Lack of strictness or care in applying rules.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "A framework of crossed strips with open spaces between them.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "A gap or missing section, as in a manuscript or argument.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        },
-        {
-          "senseId": 602,
-          "definition": "A deep stupor close to a coma, as in sleeping sickness.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "lethargy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "languor",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "listlessness",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "weariness",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fatigue",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "torpor",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "vigor",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "energy",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "vitality",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Lassitude comes from Latin lassus, weary: lassitude is a weariness so deep that it drains the will to act."
       ]
     },
     {
@@ -19504,7 +18337,7 @@
       "partOfSpeech": "noun",
       "ipa": "/ˈlɛvəti/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 517843,
       "etymology": null,
       "audioUrl": null,
@@ -20195,7 +19028,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈmæliəbəl/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 299127,
       "etymology": null,
       "audioUrl": null,
@@ -21128,7 +19961,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/məˈroʊs/",
       "syllables": 2,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 490997,
       "etymology": null,
       "audioUrl": null,
@@ -21360,126 +20193,12 @@
       ]
     },
     {
-      "wordId": 182,
-      "headword": "munificent",
-      "partOfSpeech": "adjective",
-      "ipa": "/mjuˈnɪfəsənt/",
-      "syllables": 4,
-      "difficultyTier": 5,
-      "frequencyRank": 1483389,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 317,
-          "definition": "Giving money or gifts far more freely and lavishly than most people would.",
-          "plainLanguageDefinition": "Very generous, especially with large gifts of money.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3293,
-              "text": "Thanks to a munificent donation from a former student, the college now offers free tuition to every nursing student.",
-              "audioUrl": null,
-              "clozeTarget": "munificent"
-            },
-            {
-              "exampleId": 3294,
-              "text": "Her munificent gift allowed the museum to buy a collection of rare manuscripts.",
-              "audioUrl": null,
-              "clozeTarget": "munificent"
-            },
-            {
-              "exampleId": 3295,
-              "text": "The host was munificent, paying for every guest's flight and hotel during the week-long wedding.",
-              "audioUrl": null,
-              "clozeTarget": "munificent"
-            },
-            {
-              "exampleId": 3296,
-              "text": "Workers expected a small bonus, so the owner's munificent payout of a full month's salary stunned them.",
-              "audioUrl": null,
-              "clozeTarget": "munificent"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Grand and impressive in size, beauty or style.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Bringing harm or evil on others.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Run by or belonging to the local council of a town.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Expert enough at a skill to do it smoothly.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Missing some part or quality that is needed.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "generous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "lavish",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "bountiful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "openhanded",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unstinting",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "liberal",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "stingy",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "miserly",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "tightfisted",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Munificent comes from Latin munus, gift, and facere, to make: a munificent person makes many gifts."
-      ]
-    },
-    {
       "wordId": 183,
       "headword": "nadir",
       "partOfSpeech": "noun",
       "ipa": "/ˈneɪˌdɪr/",
       "syllables": 2,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 301020,
       "etymology": null,
       "audioUrl": null,
@@ -21873,7 +20592,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/nɪˈfɛriəs/",
       "syllables": 4,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 592789,
       "etymology": null,
       "audioUrl": null,
@@ -22144,124 +20863,6 @@
       ],
       "mnemonics": [
         "Neophyte comes from Greek neos, new, and phytos, planted: a neophyte is newly planted in a field."
-      ]
-    },
-    {
-      "wordId": 188,
-      "headword": "obdurate",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈɑbdərət/",
-      "syllables": 3,
-      "difficultyTier": 4,
-      "frequencyRank": 699978,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 328,
-          "definition": "Hardened against every appeal, so that neither reason nor sympathy can soften one's stand.",
-          "plainLanguageDefinition": "Stubborn and hard-hearted, refusing to give in or change.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3317,
-              "text": "Despite tearful pleas from the family, the obdurate landlord refused to delay the eviction by even a day.",
-              "audioUrl": null,
-              "clozeTarget": "obdurate"
-            },
-            {
-              "exampleId": 3318,
-              "text": "She tried every argument she could think of, but her father remained obdurate about selling the farm.",
-              "audioUrl": null,
-              "clozeTarget": "obdurate"
-            },
-            {
-              "exampleId": 3319,
-              "text": "The committee's obdurate opposition to any change kept the outdated rules in place for decades.",
-              "audioUrl": null,
-              "clozeTarget": "obdurate"
-            },
-            {
-              "exampleId": 3320,
-              "text": "The judge was struck by how obdurate the defendant remained, showing no remorse even as the victims spoke.",
-              "audioUrl": null,
-              "clozeTarget": "obdurate"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Left behind by newer things and no longer used.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Required by a rule, law or custom.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Known to few people, or hard to make out.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Possible to put up with or bear.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        },
-        {
-          "senseId": 628,
-          "definition": "Persisting in wrongdoing and showing no regret for it.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "stubborn",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "obstinate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unyielding",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "inflexible",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "hardhearted",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "intransigent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "softhearted",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "yielding",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "flexible",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Obdurate comes from Latin obdurare, to harden, from durus, hard: an obdurate heart has hardened and will not bend."
       ]
     },
     {
@@ -24926,128 +23527,6 @@
       ]
     },
     {
-      "wordId": 212,
-      "headword": "pillory",
-      "partOfSpeech": "verb",
-      "ipa": "/ˈpɪləri/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 1133196,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 367,
-          "definition": "Attack someone's character or actions publicly so that they become an object of scorn.",
-          "plainLanguageDefinition": "To mock or criticize someone in public so that everyone thinks badly of them.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3417,
-              "text": "Critics pilloried the director after his expensive film flopped at the box office.",
-              "audioUrl": null,
-              "clozeTarget": "pilloried"
-            },
-            {
-              "exampleId": 3418,
-              "text": "The senator was pilloried on talk shows for weeks after the leaked recording aired.",
-              "audioUrl": null,
-              "clozeTarget": "pilloried"
-            },
-            {
-              "exampleId": 3419,
-              "text": "Rather than pillory the intern for the mistake, the manager quietly fixed it and explained what went wrong.",
-              "audioUrl": null,
-              "clozeTarget": "pillory"
-            },
-            {
-              "exampleId": 3420,
-              "text": "Newspapers across the country pilloried the company for hiding the safety defect from customers.",
-              "audioUrl": null,
-              "clozeTarget": "pilloried"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Take items of little value, bit by bit, hoping nobody notices.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Strip a captured town of its valuables by force.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Make a pain or problem feel less severe while leaving its cause in place.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Take the controls of a plane or boat and steer it.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        },
-        {
-          "senseId": 638,
-          "definition": "Lock an offender in a wooden frame in a public place as a punishment.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "lambaste",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "castigate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "vilify",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "denounce",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "excoriate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "deride",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "praise",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "laud",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "extol",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "commend",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "A pillory was a wooden frame in the town square where offenders were locked and jeered at; to pillory someone now is to put them in that frame with words."
-      ]
-    },
-    {
       "wordId": 213,
       "headword": "pithy",
       "partOfSpeech": "adjective",
@@ -27461,103 +25940,6 @@
       ]
     },
     {
-      "wordId": 234,
-      "headword": "propitiate",
-      "partOfSpeech": "verb",
-      "ipa": "/proʊˈpɪʃiˌeɪt/",
-      "syllables": 4,
-      "difficultyTier": 4,
-      "frequencyRank": 965169,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 402,
-          "definition": "Win back the goodwill of an angry person, or of a god, by giving them what they want.",
-          "plainLanguageDefinition": "To calm someone's anger or win their goodwill by pleasing them.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 1886,
-              "text": "Ancient rituals were performed to propitiate the harvest gods.",
-              "audioUrl": null,
-              "clozeTarget": "propitiate"
-            },
-            {
-              "exampleId": 1887,
-              "text": "She brought flowers to propitiate her angry neighbor.",
-              "audioUrl": null,
-              "clozeTarget": "propitiate"
-            },
-            {
-              "exampleId": 1888,
-              "text": "The diplomat offered concessions to propitiate the rival faction.",
-              "audioUrl": null,
-              "clozeTarget": "propitiate"
-            },
-            {
-              "exampleId": 1889,
-              "text": "He apologized immediately to propitiate his offended colleague.",
-              "audioUrl": null,
-              "clozeTarget": "propitiate"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Bring on a crisis or some other event abruptly.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Spread an idea or belief widely among people.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Make something continue for a long time.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Increase rapidly in number.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "appease",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "placate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "conciliate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "mollify",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "provoke",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "antagonize",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Propitiate shares a root with propitious, \"favorable\": you propitiate people to make them favorable toward you."
-      ]
-    },
-    {
       "wordId": 235,
       "headword": "prosaic",
       "partOfSpeech": "adjective",
@@ -28068,113 +26450,6 @@
       ]
     },
     {
-      "wordId": 240,
-      "headword": "punctilious",
-      "partOfSpeech": "adjective",
-      "ipa": "/pʌŋkˈtɪliəs/",
-      "syllables": 4,
-      "difficultyTier": 5,
-      "frequencyRank": 1264114,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 412,
-          "definition": "Taking great pains to get every detail of etiquette, duty, or procedure exactly right.",
-          "plainLanguageDefinition": "Very careful to follow every rule and get each small detail right.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3504,
-              "text": "The editor was so punctilious that she checked every single comma in the manuscript.",
-              "audioUrl": null,
-              "clozeTarget": "punctilious"
-            },
-            {
-              "exampleId": 3505,
-              "text": "He was punctilious about the proper etiquette to observe at formal dinners.",
-              "audioUrl": null,
-              "clozeTarget": "punctilious"
-            },
-            {
-              "exampleId": 3506,
-              "text": "Her punctilious record-keeping ensured that the audit went smoothly.",
-              "audioUrl": null,
-              "clozeTarget": "punctilious"
-            },
-            {
-              "exampleId": 3507,
-              "text": "The commander was punctilious about uniforms, sending soldiers back to fix a single loose button.",
-              "audioUrl": null,
-              "clozeTarget": "punctilious"
-            },
-            {
-              "exampleId": 3508,
-              "text": "A punctilious host, she wrote a thank-you note within a day of every gift.",
-              "audioUrl": null,
-              "clozeTarget": "punctilious"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Never late; always on time for appointments and deadlines.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Coolly scornful of others, with a raised-eyebrow air of superiority.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Delivering opinions in a pompous, know-it-all manner.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Lacking the courage to face danger or take a stand.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "meticulous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "scrupulous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "conscientious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "exacting",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "careless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "slapdash",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "lax",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Punctilious comes from Latin punctum, a point, through Italian puntiglio, a fine point. A punctilious person minds every little point."
-      ]
-    },
-    {
       "wordId": 241,
       "headword": "pungent",
       "partOfSpeech": "adjective",
@@ -28476,7 +26751,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/kwoʊˈtɪdiən/",
       "syllables": 4,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1063309,
       "etymology": null,
       "audioUrl": null,
@@ -28937,197 +27212,6 @@
       ],
       "mnemonics": [
         "Recalcitrant comes from Latin recalcitrare, to kick back with the heels, like a mule that will not budge."
-      ]
-    },
-    {
-      "wordId": 248,
-      "headword": "recondite",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈrɛkənˌdaɪt/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 1172833,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 426,
-          "definition": "Dealing with obscure, specialized matters that lie beyond most people's knowledge.",
-          "plainLanguageDefinition": "Very difficult to understand, known only to a few people.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3349,
-              "text": "The footnotes cite recondite sources, from forgotten pamphlets to letters in private archives that few scholars have seen.",
-              "audioUrl": null,
-              "clozeTarget": "recondite"
-            },
-            {
-              "exampleId": 3350,
-              "text": "His lecture was so full of recondite jargon that the undergraduates gave up taking notes.",
-              "audioUrl": null,
-              "clozeTarget": "recondite"
-            },
-            {
-              "exampleId": 3351,
-              "text": "She has a collector's love of recondite trivia, like the names of every Byzantine tax official.",
-              "audioUrl": null,
-              "clozeTarget": "recondite"
-            },
-            {
-              "exampleId": 3352,
-              "text": "Only a handful of specialists in the world could follow his recondite argument about medieval coinage.",
-              "audioUrl": null,
-              "clozeTarget": "recondite"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Feeling deep regret over one's own misdeed.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Fully deserved and suitable, as a punishment for a wrong.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Bringing strongly to mind a scent, a place, or an earlier time.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Depending on something else happening first.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Speaking to others in a tone that suggests they are beneath one.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "abstruse",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "arcane",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "esoteric",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "obscure",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "exoteric",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "elementary",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Recondite comes from Latin recondere, to put away or hide: recondite knowledge is tucked away where few people find it."
-      ]
-    },
-    {
-      "wordId": 249,
-      "headword": "redoubtable",
-      "partOfSpeech": "adjective",
-      "ipa": "/rɪˈdaʊtəbəl/",
-      "syllables": 4,
-      "difficultyTier": 4,
-      "frequencyRank": 755803,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 427,
-          "definition": "So strong or skilled that rivals approach them with fear or respect.",
-          "plainLanguageDefinition": "So strong or skilled that others feel nervous about facing them.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3353,
-              "text": "After three straight national titles, the Oakhurst debate team was the most redoubtable opponent in the tournament.",
-              "audioUrl": null,
-              "clozeTarget": "redoubtable"
-            },
-            {
-              "exampleId": 3354,
-              "text": "The general was a redoubtable strategist who had not lost a battle in twenty years.",
-              "audioUrl": null,
-              "clozeTarget": "redoubtable"
-            },
-            {
-              "exampleId": 3355,
-              "text": "She built a redoubtable reputation as a litigator whom opposing lawyers dreaded meeting in court.",
-              "audioUrl": null,
-              "clozeTarget": "redoubtable"
-            },
-            {
-              "exampleId": 3356,
-              "text": "Even grandmasters approached the redoubtable eleven-year-old with caution after she beat the defending champion.",
-              "audioUrl": null,
-              "clozeTarget": "redoubtable"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "So certain that no one could reasonably question it.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Repeating something already present, and so not needed.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Feeling unsure whether something is true or will happen.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Able to be turned in for money or a reward, as a coupon or bond is.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "formidable",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fearsome",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "feeble",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "unimpressive",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Redoubtable comes from Old French redouter, to dread; douter once meant fear as well as doubt, so a redoubtable foe is one you dread."
       ]
     },
     {
@@ -29749,7 +27833,7 @@
       "partOfSpeech": "noun",
       "ipa": "/ˈrɛprəˌbeɪt/",
       "syllables": 3,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1106244,
       "etymology": null,
       "audioUrl": null,
@@ -29846,7 +27930,7 @@
       "partOfSpeech": "verb",
       "ipa": "/rɪˈpjudiˌeɪt/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 285772,
       "etymology": null,
       "audioUrl": null,
@@ -30386,231 +28470,6 @@
       ],
       "mnemonics": [
         "Reverent and revere share a Latin root, revereri, to stand in awe: a reverent person reveres what is before them."
-      ]
-    },
-    {
-      "wordId": 259,
-      "headword": "sagacious",
-      "partOfSpeech": "adjective",
-      "ipa": "/səˈɡeɪʃəs/",
-      "syllables": 3,
-      "difficultyTier": 4,
-      "frequencyRank": 690612,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 450,
-          "definition": "Acutely insightful and wise.",
-          "plainLanguageDefinition": "Wise and quick to see what is really going on, so you make good choices.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2607,
-              "text": "The elder statesman gave sagacious advice that helped the young country avoid a costly war.",
-              "audioUrl": null,
-              "clozeTarget": "sagacious"
-            },
-            {
-              "exampleId": 2608,
-              "text": "My grandmother, a sagacious judge of character, distrusted him long before anyone else saw through his charm.",
-              "audioUrl": null,
-              "clozeTarget": "sagacious"
-            },
-            {
-              "exampleId": 2609,
-              "text": "The sagacious investor sold her shares months before the crash, while others kept buying.",
-              "audioUrl": null,
-              "clozeTarget": "sagacious"
-            },
-            {
-              "exampleId": 2610,
-              "text": "Observant and thoughtful, he was known for asking sagacious questions that went straight to the heart of a problem.",
-              "audioUrl": null,
-              "clozeTarget": "sagacious"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Full of sexual detail meant to titillate or shock, like tabloid gossip.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Greedy for money or goods and eager to grab them by force.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Having plenty of room inside.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Fond of talking, often at great length.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Daring and unafraid, ready to try what others would not.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "wise",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "shrewd",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "astute",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "perceptive",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "judicious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "perspicacious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "foolish",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "unwise",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Sagacious comes from Latin sagax, keen-scented, a word Romans used for good hunting dogs: a sagacious person sniffs out the truth."
-      ]
-    },
-    {
-      "wordId": 260,
-      "headword": "salubrious",
-      "partOfSpeech": "adjective",
-      "ipa": "/səˈlubriəs/",
-      "syllables": 4,
-      "difficultyTier": 5,
-      "frequencyRank": 1371276,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 452,
-          "definition": "Good for the health, often said of air, water, climate or surroundings.",
-          "plainLanguageDefinition": "Good for your health, like fresh mountain air or clean water.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2611,
-              "text": "They spent the summer in a salubrious mountain village to escape the polluted city air.",
-              "audioUrl": null,
-              "clozeTarget": "salubrious"
-            },
-            {
-              "exampleId": 2612,
-              "text": "The coastal town is famous for its salubrious climate and healing mineral springs.",
-              "audioUrl": null,
-              "clozeTarget": "salubrious"
-            },
-            {
-              "exampleId": 2613,
-              "text": "Doctors once sent patients with weak lungs to the dry, salubrious air of the Swiss Alps.",
-              "audioUrl": null,
-              "clozeTarget": "salubrious"
-            },
-            {
-              "exampleId": 2614,
-              "text": "After years in a damp, moldy basement apartment, she found the sunny seaside cottage wonderfully salubrious.",
-              "audioUrl": null,
-              "clozeTarget": "salubrious"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Sad and gloomy in a heavy, exaggerated way.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Standing out so clearly that it draws attention at once.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Containing salt, like seawater.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Widely known and honored because of great deeds or work.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Slippery and smooth, like an oiled surface.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        },
-        {
-          "senseId": 565,
-          "definition": "Well kept and respectable, as a neighborhood may be; often used in the negative.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "healthful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "healthy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "wholesome",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "salutary",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unhealthy",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "unwholesome",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "insalubrious",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Salubrious comes from Latin salus, health, also the root of salute: Romans greeted each other by wishing good health."
       ]
     },
     {
@@ -31254,111 +29113,6 @@
       ],
       "mnemonics": [
         "Savant comes from French savoir, 'to know': a savant is someone who knows a great deal."
-      ]
-    },
-    {
-      "wordId": 267,
-      "headword": "sedulous",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈsɛdʒələs/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 4223044,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 464,
-          "definition": "Marked by care and persistent effort.",
-          "plainLanguageDefinition": "Working hard and carefully, and sticking with it for a long time.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3455,
-              "text": "Her sedulous research finally uncovered the missing historical documents.",
-              "audioUrl": null,
-              "clozeTarget": "sedulous"
-            },
-            {
-              "exampleId": 3456,
-              "text": "Through sedulous attention to detail, the restorer brought the painting back to life.",
-              "audioUrl": null,
-              "clozeTarget": "sedulous"
-            },
-            {
-              "exampleId": 3457,
-              "text": "The student made sedulous preparations for the difficult entrance examination.",
-              "audioUrl": null,
-              "clozeTarget": "sedulous"
-            },
-            {
-              "exampleId": 3458,
-              "text": "For three years she made sedulous notes on every bird that visited the marsh, never missing a single morning.",
-              "audioUrl": null,
-              "clozeTarget": "sedulous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Spent mostly in a chair, with hardly any moving about.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Urging people to resist or overthrow the government.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Ready to believe almost anything, even with little proof.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Formed from layers of sand, mud or other material that settled and hardened.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "assiduous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "diligent",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "industrious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "painstaking",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "conscientious",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "negligent",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "careless",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "lazy",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Sedulous sounds a bit like schedule: a sedulous student keeps to a study schedule every day without fail."
       ]
     },
     {
@@ -32010,111 +29764,6 @@
       ],
       "mnemonics": [
         "Staid began as an old spelling of stayed: a staid person has stayed in the same sober habits for years."
-      ]
-    },
-    {
-      "wordId": 273,
-      "headword": "stolid",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈstɑlɪd/",
-      "syllables": 2,
-      "difficultyTier": 3,
-      "frequencyRank": 597429,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 475,
-          "definition": "Having or revealing little emotion or sensibility; not easily aroused or excited.",
-          "plainLanguageDefinition": "Showing little or no emotion, remaining calm and indifferent even in difficult situations.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3480,
-              "text": "The security guard maintained a stolid expression despite the commotion around him.",
-              "audioUrl": null,
-              "clozeTarget": "stolid"
-            },
-            {
-              "exampleId": 3481,
-              "text": "Even during the harsh interrogation, the suspect remained entirely stolid.",
-              "audioUrl": null,
-              "clozeTarget": "stolid"
-            },
-            {
-              "exampleId": 3482,
-              "text": "The villagers faced the approaching storm with stolid acceptance.",
-              "audioUrl": null,
-              "clozeTarget": "stolid"
-            },
-            {
-              "exampleId": 3483,
-              "text": "The farmer heard the news of the flood with a stolid face, then went back to milking his cows.",
-              "audioUrl": null,
-              "clozeTarget": "stolid"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Firm and hard all the way through, not liquid or hollow.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Morally low and shameful, as in a seedy scheme.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Devoted to books and learning, and given to long hours of study.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Loyal and dependable, standing firm in support of a cause.",
-              "kind": "mc",
-              "difficulty": 3
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "impassive",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "phlegmatic",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "unemotional",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "stoical",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "imperturbable",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "emotional",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "excitable",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "demonstrative",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Stolid comes from Latin stolidus, 'slow and dull': a stolid person is slow to show any feeling."
       ]
     },
     {
@@ -33415,7 +31064,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈtæsəˌtɝn/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 591040,
       "etymology": null,
       "audioUrl": null,
@@ -33987,286 +31636,6 @@
       ]
     },
     {
-      "wordId": 286,
-      "headword": "timorous",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈtɪmərəs/",
-      "syllables": 3,
-      "difficultyTier": 4,
-      "frequencyRank": 979666,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 501,
-          "definition": "Quick to feel fear and inclined to hold back because of it.",
-          "plainLanguageDefinition": "Shy and easily scared, so you tend to hold back.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3605,
-              "text": "The timorous kitten hid beneath the sofa every time thunder rumbled outside.",
-              "audioUrl": null,
-              "clozeTarget": "timorous"
-            },
-            {
-              "exampleId": 3606,
-              "text": "Too timorous to ask for a raise, he waited three years for his boss to offer one.",
-              "audioUrl": null,
-              "clozeTarget": "timorous"
-            },
-            {
-              "exampleId": 3607,
-              "text": "Her timorous voice barely carried across the hall, and she apologized twice before making her point.",
-              "audioUrl": null,
-              "clozeTarget": "timorous"
-            },
-            {
-              "exampleId": 3608,
-              "text": "Investors called the bank's timorous plan a retreat, since it avoided every risk and every new market.",
-              "audioUrl": null,
-              "clozeTarget": "timorous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Tied to a particular stretch of time instead of lasting forever.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Still fresh and fitting long after the era that produced it.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Barely holding together, with little substance behind it.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Loud, disorderly and in constant upheaval.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Funny enough to make people laugh or at least smile.",
-              "kind": "mc",
-              "difficulty": 4
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "timid",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fearful",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fainthearted",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "mousy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "bold",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "brave",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "intrepid",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "audacious",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Timorous comes from Latin timor, 'fear', the same root as timid: a timorous person is ruled by fear."
-      ]
-    },
-    {
-      "wordId": 287,
-      "headword": "torpid",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈtɔrpɪd/",
-      "syllables": 2,
-      "difficultyTier": 5,
-      "frequencyRank": 1138247,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 502,
-          "definition": "Sunk in a heavy dullness, so that stirring or concentrating takes real effort.",
-          "plainLanguageDefinition": "Slow and sleepy, with little energy to do anything.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3609,
-              "text": "The August heat left everyone in the office torpid, staring at screens and getting nothing done.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 3610,
-              "text": "After the huge holiday lunch, the whole family lay torpid on the couches until evening.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 3611,
-              "text": "Years of weak demand had left the town's economy torpid, with shops closing and few new jobs.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 3612,
-              "text": "Two cups of coffee did little to rouse his torpid brain before the early exam.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Blazing with a heat that dries out the land and everything on it.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Neither hot nor cold, only faintly warm to the touch.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Grubby and morally low, the sort of thing people try to hide.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Dwelling on death and decay more than is healthy.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        },
-        {
-          "senseId": 503,
-          "definition": "In a condition of biological rest or suspended animation.",
-          "plainLanguageDefinition": "In a state of dormancy or biological hibernation.",
-          "senseOrder": 2,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 2286,
-              "text": "Certain amphibians remain torpid underground throughout the winter months.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 2287,
-              "text": "The seeds stayed torpid in the dry soil until spring rains arrived.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 2288,
-              "text": "Bears enter a torpid condition that conserves energy during freezing weather.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 2289,
-              "text": "Researchers monitored the torpid creatures in their natural habitat.",
-              "audioUrl": null,
-              "clozeTarget": "torpid"
-            },
-            {
-              "exampleId": 294,
-              "text": "Torpid frogs",
-              "audioUrl": null,
-              "clozeTarget": "Torpid"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Extremely toxic to local vegetation.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Covered in thick protective scales.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Capable of rapid flight over long distances.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Found exclusively in deep oceanic trenches.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "sluggish",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "lethargic",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "listless",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "inert",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "languid",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "energetic",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "lively",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "vigorous",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "alert",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Torpid shares a Latin root, torpere, 'to be numb', with torpedo, first the name of a fish whose shock numbs its prey."
-      ]
-    },
-    {
       "wordId": 288,
       "headword": "tortuous",
       "partOfSpeech": "adjective",
@@ -34730,7 +32099,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈtrʌkjələnt/",
       "syllables": 3,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1037611,
       "etymology": null,
       "audioUrl": null,
@@ -34843,7 +32212,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈtɝdʒɪd/",
       "syllables": 2,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1039060,
       "etymology": null,
       "audioUrl": null,
@@ -34999,119 +32368,6 @@
       ],
       "mnemonics": [
         "Turgid comes from Latin turgere, 'to swell': turgid writing is swollen with more words than it needs."
-      ]
-    },
-    {
-      "wordId": 293,
-      "headword": "turpitude",
-      "partOfSpeech": "noun",
-      "ipa": "/ˈtɝpɪˌtud/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 1421343,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 515,
-          "definition": "Depraved conduct, the kind that sinks below every standard of decency.",
-          "plainLanguageDefinition": "Wicked, shameful conduct, such as fraud or cruelty, that decent people condemn.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3633,
-              "text": "Bribes, forged records and threats to witnesses: the trial laid bare years of turpitude in the mayor's office.",
-              "audioUrl": null,
-              "clozeTarget": "turpitude"
-            },
-            {
-              "exampleId": 3634,
-              "text": "Lawyers can lose their licenses for crimes of moral turpitude, such as fraud or bribery.",
-              "audioUrl": null,
-              "clozeTarget": "turpitude"
-            },
-            {
-              "exampleId": 3635,
-              "text": "The novel follows a banker whose turpitude, from cooking the books to betraying his partner, finally catches up with him.",
-              "audioUrl": null,
-              "clozeTarget": "turpitude"
-            },
-            {
-              "exampleId": 3636,
-              "text": "Her memoir describes the turpitude of a boss who stole from the pension fund and lied to grieving families.",
-              "audioUrl": null,
-              "clozeTarget": "turpitude"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Disorder and unrest that leave everything unsettled.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "A drowsy, sluggish stillness in which nothing gets done.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "A sudden swing to the other side on some question.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "A lack of skill that leads to clumsy mistakes.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "depravity",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "wickedness",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "corruption",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "vice",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "iniquity",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "villainy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "virtue",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "integrity",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "probity",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "rectitude",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Turpitude comes from Latin turpis, 'shameful' or 'ugly': turpitude is shamefully ugly conduct."
       ]
     },
     {
@@ -35310,116 +32566,6 @@
       ],
       "mnemonics": [
         "Umbrage comes from Latin umbra, shadow, as in umbrella: when you take umbrage, a slight casts a shadow over your mood."
-      ]
-    },
-    {
-      "wordId": 296,
-      "headword": "unctuous",
-      "partOfSpeech": "adjective",
-      "ipa": "/ˈʌŋktʃuəs/",
-      "syllables": 3,
-      "difficultyTier": 5,
-      "frequencyRank": 1480157,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 518,
-          "definition": "Flattering and agreeable in a slick, overdone way that seems put on to win favor.",
-          "plainLanguageDefinition": "Laying on fake praise and charm so thickly that it feels greasy.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3569,
-              "text": "Rubbing his hands and calling every shopper his dear friend, the unctuous salesman made us want to leave the lot.",
-              "audioUrl": null,
-              "clozeTarget": "unctuous"
-            },
-            {
-              "exampleId": 3570,
-              "text": "The unctuous head waiter praised each diner's taste in wine, then steered them all toward the priciest bottle.",
-              "audioUrl": null,
-              "clozeTarget": "unctuous"
-            },
-            {
-              "exampleId": 3571,
-              "text": "Behind the boss's back he sneered, but to her face he was unctuous, agreeing with every word and admiring her tie.",
-              "audioUrl": null,
-              "clozeTarget": "unctuous"
-            },
-            {
-              "exampleId": 3572,
-              "text": "The donors winced at the candidate's unctuous speech, which thanked each of them by name for their generous hearts.",
-              "audioUrl": null,
-              "clozeTarget": "unctuous"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Fussy about getting each fine point of etiquette or procedure exactly right.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Never behind schedule, always showing up or handing work in when it is due.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Richly furnished or served at obvious expense, with no luxury spared.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Turning out badly or improperly, against what anyone planned or wanted.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        },
-        {
-          "senseId": 649,
-          "definition": "Greasy or oily to the touch, like a salve or a rich sauce.",
-          "plainLanguageDefinition": null,
-          "senseOrder": 2,
-          "register": null,
-          "examples": [],
-          "distractors": []
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "oily",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "smarmy",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "oleaginous",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "fulsome",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "buttery",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "slick",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "sincere",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Unctuous comes from Latin unguere, to anoint with oil, the same root as ointment: an unctuous person is greasy with flattery."
       ]
     },
     {
@@ -35645,7 +32791,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɚˈbeɪn/",
       "syllables": 2,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 518508,
       "etymology": null,
       "audioUrl": null,
@@ -35970,7 +33116,7 @@
       "partOfSpeech": "verb",
       "ipa": "/ˈvɛnəˌreɪt/",
       "syllables": 3,
-      "difficultyTier": 4,
+      "difficultyTier": 5,
       "frequencyRank": 1033545,
       "etymology": null,
       "audioUrl": null,
@@ -37045,111 +34191,6 @@
       ]
     },
     {
-      "wordId": 310,
-      "headword": "vituperate",
-      "partOfSpeech": "verb",
-      "ipa": "/vaɪˈtupəˌreɪt/",
-      "syllables": 4,
-      "difficultyTier": 5,
-      "frequencyRank": 31482181,
-      "etymology": null,
-      "audioUrl": null,
-      "senses": [
-        {
-          "senseId": 543,
-          "definition": "Scold someone savagely, piling insult on insult.",
-          "plainLanguageDefinition": "To heap angry insults on someone, out loud or in writing.",
-          "senseOrder": 1,
-          "register": null,
-          "examples": [
-            {
-              "exampleId": 3653,
-              "text": "For twenty minutes the coach continued to vituperate the referee, calling him blind, corrupt and a disgrace to the sport.",
-              "audioUrl": null,
-              "clozeTarget": "vituperate"
-            },
-            {
-              "exampleId": 3654,
-              "text": "In letter after letter, the aging novelist would vituperate any critic who dared to give him a mixed review.",
-              "audioUrl": null,
-              "clozeTarget": "vituperate"
-            },
-            {
-              "exampleId": 3655,
-              "text": "Rather than answer the question, the candidate chose to vituperate the reporter as a liar and a hack.",
-              "audioUrl": null,
-              "clozeTarget": "vituperate"
-            },
-            {
-              "exampleId": 3656,
-              "text": "The landlord would vituperate tenants who paid late, shouting insults through their doors at all hours.",
-              "audioUrl": null,
-              "clozeTarget": "vituperate"
-            }
-          ],
-          "distractors": [
-            {
-              "lemma": "Return to full health after being sick or hurt.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Grow infected and ooze pus.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Melt and then cool into glass.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Tremble at high speed, often with a hum.",
-              "kind": "mc",
-              "difficulty": 5
-            }
-          ]
-        }
-      ],
-      "relations": [
-        {
-          "relatedLemma": "berate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "revile",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "vilify",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "upbraid",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "castigate",
-          "relationType": "synonym"
-        },
-        {
-          "relatedLemma": "praise",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "extol",
-          "relationType": "antonym"
-        },
-        {
-          "relatedLemma": "laud",
-          "relationType": "antonym"
-        }
-      ],
-      "mnemonics": [
-        "Vituperate comes from Latin vitium, fault, and parare, to prepare: to vituperate is to lay out every fault you can find in someone, loudly."
-      ]
-    },
-    {
       "wordId": 311,
       "headword": "volatile",
       "partOfSpeech": "adjective",
@@ -37877,7 +34918,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪnˈsɪdiəs/",
       "syllables": 4,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 153829,
       "etymology": null,
       "audioUrl": null,

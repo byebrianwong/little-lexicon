@@ -28,6 +28,11 @@ export interface WordRow {
   difficulty_tier: number;
   etymology: string | null;
   audio_url: string | null;
+  /**
+   * Why the word is no longer taught. A retired word keeps its row and id but
+   * is left out of the export, the difficulty tiers and content review.
+   */
+  retired?: string;
 }
 
 export interface SenseRow {
