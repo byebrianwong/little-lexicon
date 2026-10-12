@@ -2445,7 +2445,11 @@ in wrong answers. Curation will catch it word by word.
     chary, grandiloquent, gainsay, lachrymose, importune, mawkish,
     supercilious, fecund, expiate, lugubrious, discomfit, phlegmatic,
     lionize, panegyric, abjure, assiduous. #32 also required falling use
-    since 1900; that half was not checked. Whether to keep them is open.
+    since 1900 (Google Books, 2010-2022 over 1900-1929, under 1). Only 7
+    meet both: chary 0.40, cupidity 0.46, gainsay 0.58, importune 0.70,
+    assiduous 0.74, mawkish 0.91 and abjure 0.99 (borderline). The other 12
+    are steady or rising (insouciant 5.0, lionize 3.4, fecund 2.5). The 7
+    are kept for now; whether to retire them is open.
   - WordNet led with the wrong first sense for 11 words (acerbic as a sour
     taste, acumen as a leaf tip, anodyne and mordant as nouns, demur as a
     legal noun, peripatetic as Aristotelian, and others). anodyne, demur
