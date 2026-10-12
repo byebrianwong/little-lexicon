@@ -2217,7 +2217,7 @@ in wrong answers. Curation will catch it word by word.
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
 - `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
-  (after adding 100 new words): all 391 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+  (after adding 88 more words): all 479 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2470,6 +2470,53 @@ in wrong answers. Curation will catch it word by word.
   - `inflections()` in `pipeline/src/lib/wordnet.ts` now doubles a final
     consonant ("demurred", "abetting"); the checks had rejected "demurred"
     as not a form of demur.
+- 2026-10-12: added 88 more words (ids 418 to 517; 470 to 481 unused).
+  All 88 fixed, 0 flagged. Status now: 479 of 479 taught words reviewed.
+  - The words: acolyte, acquiesce, adulation, aegis, amenable, apostate,
+    apropos, arbiter, ascendancy, attenuate, beguile, bereft, cabal,
+    cavalier, chagrin, circumscribe, concomitant, connive, consummate,
+    contravene, coterie, countenance, craven, deign, demagogue, denizen,
+    disinterested, dour, droll, elucidate, erstwhile, evince, extant,
+    facile, fealty, furtive, gauche, gerrymander, glib, hapless,
+    histrionic, impinge, impugn, incisive, incongruous, inculcate,
+    ingratiate, inscrutable, interlocutor, lampoon, litany, loath,
+    pastiche, pathos, patina, peruse, philistine, pique, plebeian,
+    pontificate, portend, posit, precept, promulgate, putative, qualm,
+    regale, remiss, renege, replete, resplendent, rife, roil, ruminate,
+    salient, subsume, subterfuge, surmise, tantamount, thrall, trope,
+    untenable, untoward, vestige, volition, wanton, welter, wry.
+  - Chosen by modern frequency, not from a GRE list. About 1,000
+    candidates were checked for WordNet entries, frequency (wordfreq, all
+    inflections) and Google Books trend since 1900. 650 fell between 0.3
+    and 4 uses per million; 100 were picked by hand from those, and a
+    subagent review swapped 5 (presage, allay, paean, bemused, enormity
+    out; fealty, myopic, litany, hapless, mores in). The script is now
+    `pipeline/tools/word-frequency.py`, and the method is in the skill's
+    "Adding new words".
+  - 100 went in. 12 (lurid, machination, malfeasance, mettle, milieu,
+    miscreant, mores, moribund, myopic, onus, ostensible, parochial) were
+    written but never second-reviewed: Brian stopped the run before their
+    reviewer scored them. They were taken out of the record and the seed
+    list before anything shipped, so their ids (470 to 481) stay unused.
+    They passed the frequency checks and can be added in a later run with
+    new ids.
+  - WordNet led with the wrong meaning or part of speech for many words:
+    cavalier, craven and pontificate came through as nouns, countenance
+    as a noun (the verb "tolerate" is taught), myopic with eyesight first,
+    regale with food, ruminate with chewing cud, moribund as "stagnant".
+  - Review rounds: 29 of 88 failed the first review (23 of them on wrong
+    answers, mostly copied wording again), 4 the second (cabal's hook,
+    lampoon, roil, welter on wrong answers) and 1 the third (welter, which
+    passed a fourth round with a swapped look-alike). The writers fixed
+    round 2 from the reviewers' notes; the main session wrote rounds 3 and
+    4.
+  - A usage limit stopped 8 subagents mid-run. Each worksheet was checked
+    against the reviewer's saved copy before resuming; none had been
+    half-edited.
+  - Re-tiering moved 9 of the 391 existing words one tier. Pronunciations
+    for the 88 were written by the writers, checked by the reviewers and
+    set with `curate.ts ipa` (arbiter and concomitant use ə, to match the
+    record).
 
 ## The placement test no longer finishes during render
 
