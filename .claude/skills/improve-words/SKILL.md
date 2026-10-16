@@ -161,6 +161,16 @@ failed the first review, 9 the second, and 1 the third.
    than another writer round. Clear the `checker` block of each word you
    changed, add a line to its `review.notes`, and send the changed words back
    to the same reviewer (SendMessage) to score again.
+   When a first review fails many words (often 5 to 8 of 12 on new words),
+   sending the notes back to that worksheet's own writer (SendMessage) also
+   works. It still has the dictionary pages it downloaded. On 2026-10-12
+   the writers fixed round 2 this way, and the main session took over from
+   round 3.
+   If the session hits a usage limit, the running subagents stop mid-task.
+   Before resuming them, check that each worksheet is in the state you
+   think it is. Most reviewers save a copy before they write, so compare
+   the content fields against it. Then resume each agent with SendMessage
+   and tell it what state its worksheet is in.
 5. Before applying, check all the worksheets together:
    `npx tsx src/curate.ts check <a.json> <b.json> ...`. Checked one at a time,
    two unapplied worksheets can use the same wrong answer without either
@@ -201,13 +211,40 @@ The writer prompt, with the paths filled in:
 ## Adding new words
 
 For a request like "add 100 more words". First done on 2026-10-12 (abjure
-to venal, word ids 318 to 417).
+to venal, word ids 318 to 417), then again the same day (acolyte to wry,
+ids 418 to 517; 470 to 481 were held back unused).
 
 1. Pick the words and check each one before it goes in, because a word's id
-   is permanent once it is in the record. It must not already be in
-   `pipeline/data/seed-words.sample.txt`, and it must be in WordNet (look it
-   up in `pipeline/.cache/oewn/entries-<first letter>.json`). A word WordNet
+   is permanent once it is in the record. It must not already be in the
+   record (`pipeline/data/content-db.json`, which also holds the retired
+   words), and it must be in WordNet (look it up in
+   `pipeline/.cache/oewn/entries-<first letter>.json`). A word WordNet
    lacks still gets an id but is never exported.
+
+   Choose by how often the word is used today, not from a GRE list. The
+   app wants words that many people do not fully know but still meet in
+   real reading. `python3 pipeline/tools/word-frequency.py` gives each
+   word's modern frequency (all inflections) and its Google Books trend
+   since 1900. The second run used these cutoffs:
+   - 0.3 to 4 uses per million words. The taught list's middle word is at
+     0.5 and nine in ten are under about 2. Under 0.15 and fading is the
+     retirement rule (see "26 rare and fading words retired" in
+     PROGRESS.md).
+   - A trend of about 0.6 or more, unless the word is plainly current
+     (demagogue 0.56 and parochial 0.47 were kept: they were heavily used
+     around 1900).
+   - Then judgment: drop words most adults know precisely (jubilant,
+     timid) and near-copies of a taught word (contrition next to contrite,
+     presage next to portend).
+   - Treat the frequency of a name or brand with care (cavalier, craven,
+     aegis).
+   - Avoid words whose meaning is disputed today (bemused, enormity): the
+     app shows one first sense, so either choice misleads.
+
+   Start from two or three times as many candidates as you need. On the
+   second run, about 1,000 candidates gave 650 in the band. Have a subagent
+   check the shortlist against these rules before the words go in; it
+   swapped 5 of 100.
 2. Add the words to the seed file as a dated section above the "messy
    entries" section.
 3. From `pipeline/`, run `npx tsx src/run.ts --only=words`, then
@@ -372,6 +409,22 @@ before handing a worksheet over.
   The reviewer judged it safe: fallback wrong answers come from other words'
   senses, not from their wrong answers, so neither could be marked wrong
   when right. Worth a look, not a rule.
+- **Hooks that rest on spelling the ear never hears.** surmise "starts with
+  the letters of sure" (it does not), and cabal "starts with cab" (said
+  kuh-BAHL). Both failed on 2026-10-12. Check a sound-alike by saying the
+  word aloud.
+- **Popular etymology myths.** cabal's first hook told the story that
+  Charles II's ministers' initials made the word. The word is older, from
+  French cabale. Check origin stories that sound too neat.
+- **A look-alike that is one of the target's own older or informal
+  meanings.** untoward once meant unruly, so wayward was defensible;
+  cavalier as a noun is a gallant gentleman, so chivalrous was; welter is
+  informal for a welterweight boxer. Read the full entry in two or three
+  dictionaries, not only WordNet, before choosing look-alikes.
+- **Replacement look-alikes picked in a hurry.** When writers swapped a
+  failed look-alike, several new ones shared only a letter or two (weld,
+  welcome, harpoon) or were the wrong kind of thing. Choose the
+  replacement by the same rules as the first set.
 
 ## Pronunciation
 
