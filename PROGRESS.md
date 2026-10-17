@@ -3008,10 +3008,10 @@ Update to the `preview` channel, and the app applies it the next time it opens
    (account settings, Access tokens; a robot user with the Developer role
    is enough), then run `gh secret set EXPO_TOKEN --repo
    byebrianwong/little-lexicon` and paste it when asked.
-2. **Choose demo mode or Supabase for the phone.** The EAS `preview`
-   environment has no variables today, so builds and updates are both in demo
-   mode. For Supabase, create the two client-safe values in that environment
-   (from the main checkout, which has the working `.env`):
+2. **Put the phone on Supabase.** Brian chose Supabase over demo mode on
+   2026-10-17. The EAS `preview` environment has no variables yet, so builds
+   and updates are both in demo mode until he creates the two client-safe
+   values there (from the main checkout, which has the working `.env`):
 
    ```bash
    eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_URL --visibility plaintext --value "$(grep '^EXPO_PUBLIC_SUPABASE_URL=' .env | cut -d= -f2-)"
@@ -3023,6 +3023,11 @@ Update to the `preview` channel, and the app applies it the next time it opens
    to Supabase without a rebuild. Until the phone downloads that update, for
    example when it opens offline, it runs the demo-mode bundle built into the
    APK. A new build makes both agree.
+
+   After the switch, the app asks the person to sign in. Demo progress stays in
+   the phone's local storage and does not move to the account. The native app
+   does not handle the sign-up confirmation link, so open that link in a
+   browser, then sign in in the app.
 3. **Native changes still need a new build.** After any change to `app.json`,
    `eas.json`, `package.json` scripts or a package with native code, run
    `eas build --profile preview --platform android`, install it, then run the
