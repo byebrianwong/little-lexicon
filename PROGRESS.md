@@ -2936,3 +2936,94 @@ default device voices (iOS compact voices, the browser default) sound robotic.
    `GOOGLE_TTS_VOICE` and rerun; every TTS clip is remade.
 4. Commit `assets/audio`, `src/content/audioClips.ts`,
    `src/content/words.json` and `pipeline/data/content-db.json`.
+
+## Preview builds update after every merge to main (2026-10-17)
+
+An installed Android preview build now picks up JS and asset changes on its
+own. After each push to `main`, a GitHub Actions workflow publishes an EAS
+Update to the `preview` channel, and the app applies it the next time it opens
+(`src/lib/updates.ts`).
+
+### What was set up
+
+- `.github/workflows/eas-update.yml` runs on push to `main`, and by hand from
+  the Actions tab (useful right after a new build). It runs `npm ci`, then
+  `eas update --channel preview --environment preview --message "<commit
+  subject>"`. eas-cli is pinned to 24.10.0 and installed by
+  `expo/expo-github-action@9.0.0`.
+- Before publishing, `.github/scripts/eas-update-platforms.sh` checks each
+  platform. It publishes only for a platform that has a finished preview build
+  with the same runtime version as the code being published. When native code
+  or config has changed since the last build, it publishes nothing for that
+  platform and leaves a warning on the run that says to make a new build.
+  There are no iOS builds, so today this publishes for Android only. It will
+  include iOS once a preview iOS build exists.
+- Without the `EXPO_TOKEN` secret, the publish job is skipped with a notice,
+  so the workflow could merge before the secret exists.
+- Runs go one at a time. A run waiting behind another is replaced by a newer
+  one, so the newest commit is always the last update published.
+
+### Decisions
+
+- **Builds and updates read the same variables.** Both use the EAS `preview`
+  environment. eas-cli picks `preview` for a build profile that has internal
+  distribution and no dev client
+  (`resolveSuggestedEnvironmentForBuildProfileConfiguration` in eas-cli), so
+  `eas.json` needed no `environment` field.
+  When `eas update` gets `--environment`, it also sets `EXPO_NO_DOTENV=1`, so a
+  local `.env` is ignored. Without that flag, a local `eas update` reads
+  `.env`, and Brian's `.env` points at Supabase while the build is in demo
+  mode. **When publishing by hand, always pass `--environment preview`.**
+- **`eas.json` and `package.json` scripts were left alone.** Both are inputs to
+  the fingerprint, along with `app.json`, `.gitignore`, config plugins and
+  packages with native code. Editing either would have stopped the preview
+  build from 2026-10-16 (build `5f524d28`, runtime version `c3f4278…`) from
+  receiving any update.
+- **A match is any finished preview build with the current runtime version**,
+  not only the newest one, since a phone may still have an older build
+  installed.
+- **The workflow does not wait for CI.** `main` only takes merges that passed
+  the required checks, so a second gate seemed unnecessary.
+
+### Verified
+
+- actionlint 1.7.12 with shellcheck 0.11.0: 0 errors across all three
+  workflows. shellcheck passes on the new script.
+- The script, run locally with eas-cli 24.10.0 against the real project (read
+  only): Android matched build `5f524d28`, iOS had no builds, and it wrote
+  `platform=android`. With a one-line change to `eas.json` it warned and wrote
+  `platform=`. With a bad token it failed with exit code 5 instead of guessing.
+- The new files do not change the fingerprint (still `c3f4278…`).
+- `tsc --noEmit`, lint and the unit tests pass.
+- Not run: the workflow on GitHub (it needs the secret and a merge), and any
+  real `eas update`. The fingerprint was computed on a Mac. The runner is
+  Linux, which should give the same hash after `npm ci`, but that is untested.
+  If the first run warns although no native code changed, compare the runtime
+  version in the warning with the build's. `eas fingerprint:compare` shows
+  which input differs.
+
+### What Brian has to do
+
+1. **Add the `EXPO_TOKEN` repository secret.** Create a token at expo.dev
+   (account settings, Access tokens; a robot user with the Developer role
+   is enough), then run `gh secret set EXPO_TOKEN --repo
+   byebrianwong/little-lexicon` and paste it when asked.
+2. **Choose demo mode or Supabase for the phone.** The EAS `preview`
+   environment has no variables today, so builds and updates are both in demo
+   mode. For Supabase, create the two client-safe values in that environment
+   (from the main checkout, which has the working `.env`):
+
+   ```bash
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_URL --visibility plaintext --value "$(grep '^EXPO_PUBLIC_SUPABASE_URL=' .env | cut -d= -f2-)"
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_ANON_KEY --visibility sensitive --value "$(grep '^EXPO_PUBLIC_SUPABASE_ANON_KEY=' .env | cut -d= -f2-)"
+   ```
+
+   Environment variables do not change the fingerprint (checked: setting them
+   leaves it at `c3f4278…`), so the next update switches the installed build
+   to Supabase without a rebuild. Until the phone downloads that update, for
+   example when it opens offline, it runs the demo-mode bundle built into the
+   APK. A new build makes both agree.
+3. **Native changes still need a new build.** After any change to `app.json`,
+   `eas.json`, `package.json` scripts or a package with native code, run
+   `eas build --profile preview --platform android`, install it, then run the
+   EAS Update workflow by hand (or wait for the next merge).
