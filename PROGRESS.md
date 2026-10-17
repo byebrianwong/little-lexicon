@@ -2216,8 +2216,8 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
-  (after adding 88 more words): all 479 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-17
+  (after adding 100 more words): all 579 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2517,6 +2517,65 @@ in wrong answers. Curation will catch it word by word.
     for the 88 were written by the writers, checked by the reviewers and
     set with `curate.ts ipa` (arbiter and concomitant use ə, to match the
     record).
+- 2026-10-17: added 100 more words (ids 518 to 617). All 100 fixed, 0
+  flagged. Status now: 579 of 579 taught words reviewed.
+  - The words: adjudicate, animus, antithesis, bandy, beholden, broach,
+    bulwark, burnish, canny, careen, cede, codify, cognizant, corollary,
+    corporeal, debase, depravity, detritus, disaffected, edify, efface,
+    entreat, espouse, eviscerate, exegesis, expound, extenuating,
+    extricate, feint, foist, forbearance, fraught, frenetic, galling,
+    glean, imbue, impel, impunity, indelible, indomitable, inimitable,
+    inordinate, insinuate, interminable, irrevocable, jettison, lurid,
+    machination, malaise, malfeasance, mete, mettle, milieu, miscreant,
+    misnomer, mores, moribund, myopic, nihilism, oblique, onus,
+    ostensible, panache, parlance, parochial, prodigious, proffer,
+    proselytize, provenance, purview, quagmire, rapprochement,
+    recidivism, recrimination, redress, retinue, riposte, schism,
+    semblance, spate, squalid, stalwart, sunder, supplant, tantalize,
+    titular, travail, tutelage, unassailable, unconscionable,
+    unmitigated, unseemly, unwitting, upshot, usurp, variegated, vaunt,
+    visceral, whet, wrest.
+  - The 12 words held back from the 2026-10-12 run (lurid to parochial)
+    went in with new ids and were written and reviewed from scratch.
+  - Chosen by modern frequency, as in "Adding new words": about 1,100
+    candidates, 759 between 0.3 and 4 uses per million, picked by hand
+    with a trend of about 0.6 or more. A subagent review swapped 7
+    (discursive, rubric, ulterior, nepotism, scathing, artifice,
+    acrimonious out; adjudicate, redress, vaunt, codify, semblance,
+    stalwart, upshot in). Re-tiering moved 12 of the 479 existing words.
+  - WordNet gave bandy as an adjective (bow-legged) and mete as a noun.
+    Both are taught as verbs. WordNet has no verb entry for mete; it
+    still exports, because export needs only a sense row and apply writes
+    the curated definition as one.
+  - Review rounds: 81 of 100 failed the first review, 27 the second and
+    about 8 the third; the last ones passed on rounds 4 and 5. Almost
+    every failure was copied wording, again mostly in wrong answers.
+  - Why so many failed: WordUp keeps its definitions and example
+    sentences inside `<script>` tags, and every writer's text extraction
+    stripped scripts, so no writer compared against WordUp, the source
+    the reviewers matched most. Several examples retold WordUp's or
+    Cambridge's example scenes too. Once the writers read the script text,
+    round 2 went much better.
+  - Eleven options nearly repeated another word's option for the same
+    look-alike (vicarious on visceral was vitriolic's option with one comma
+    removed). `check` compared texts exactly, so it missed them. It now
+    ignores case and punctuation, and rejects an option that shares half
+    its content words with another word's option for the same look-alike.
+    The older record still has 38 such pairs (for example capacious on
+    capricious and on fractious); they show up as problems only when
+    those words are next put on a worksheet.
+  - The main session wrote rounds 3 to 5, and its own rewrites failed
+    on copying six times (metamorphose, cogitate, modify, nepotism,
+    skepticism, a landlord example). Dropping a failed option when the
+    word still has 4 others worked better than rewording it again.
+    `pipeline/tools/dictionary-defs.py` prints seven dictionaries'
+    definitions for a word, WordUp's included, and was used before
+    writing each main-session option.
+  - A usage limit stopped five subagents mid-run. Each was resumed with
+    SendMessage after checking its worksheet's state; none had been
+    half-edited.
+  - Pronunciations for the 100 were written by the writers, checked by
+    the reviewers (none changed) and set with `curate.ts ipa`.
 
 ## The placement test no longer finishes during render
 

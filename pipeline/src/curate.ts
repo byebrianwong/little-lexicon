@@ -39,6 +39,8 @@ import {
   splitIntoParts,
   WORKSHEET_INSTRUCTIONS,
   wrongAnswerOwners,
+  lookalikeOptions,
+  textKey,
   type CheckEnv,
   type Worksheet,
   type WorksheetEntry,
@@ -103,7 +105,11 @@ async function status(): Promise<void> {
   const verdicts = { pass: 0, fixed: 0, flagged: 0 };
   for (const r of done.values()) verdicts[r.verdict] += 1;
 
-  const env: CheckEnv = { lexicon, takenWrongAnswers: wrongAnswerOwners(rows, new Set()) };
+  const env: CheckEnv = {
+    lexicon,
+    takenWrongAnswers: wrongAnswerOwners(rows, new Set()),
+    lookalikeOptions: lookalikeOptions(rows, new Set()),
+  };
   const kinds = new Map<string, number>();
   let wordsWithProblems = 0;
   for (const word of rows.words) {
@@ -169,7 +175,11 @@ async function next(args: string[]): Promise<void> {
     });
   } else {
     // Unreviewed words; ones that give the answer away first, then record order.
-    const env: CheckEnv = { lexicon, takenWrongAnswers: wrongAnswerOwners(rows, new Set()) };
+    const env: CheckEnv = {
+    lexicon,
+    takenWrongAnswers: wrongAnswerOwners(rows, new Set()),
+    lookalikeOptions: lookalikeOptions(rows, new Set()),
+  };
     const unchecked = rows.words.filter((w) => done.has(w.id) && !done.get(w.id)!.checker_scores);
     const candidates = rows.words
       .filter((w) => !done.has(w.id) && primarySense(rows, w.id))
@@ -189,6 +199,7 @@ async function next(args: string[]): Promise<void> {
   const env: CheckEnv = {
     lexicon,
     takenWrongAnswers: wrongAnswerOwners(rows, new Set(words.map((w) => w.id))),
+    lookalikeOptions: lookalikeOptions(rows, new Set(words.map((w) => w.id))),
   };
   const entries = words.map((w) => {
     const entry = buildEntry(rows, w);
@@ -247,7 +258,7 @@ async function checkSheets(files: string[], rows: ContentRows, lexicon: Lexicon)
   // Wrong answers must be unique across the whole word list, including the
   // other words in these worksheets.
   const owners = wrongAnswerOwners(rows, ids);
-  const env: CheckEnv = { lexicon, takenWrongAnswers: owners };
+  const env: CheckEnv = { lexicon, takenWrongAnswers: owners, lookalikeOptions: lookalikeOptions(rows, ids) };
   return sheets.map((sheet) => sheet.words.map((entry) => checkEntry(entry, rows, env)));
 }
 
@@ -268,7 +279,11 @@ function checkEntry(entry: WorksheetEntry, rows: ContentRows, env: CheckEnv): Ch
       );
     }
   }
-  for (const wa of entry.wrongAnswers) env.takenWrongAnswers.set(wa.meaning.trim().toLowerCase(), entry.wordId);
+  for (const wa of entry.wrongAnswers) {
+    env.takenWrongAnswers.set(textKey(wa.meaning), entry.wordId);
+    const look = wa.lookalike.trim().toLowerCase();
+    env.lookalikeOptions?.set(look, [...(env.lookalikeOptions.get(look) ?? []), { meaning: wa.meaning, wordId: entry.wordId }]);
+  }
   return { entry, before, changed, problems };
 }
 

@@ -179,6 +179,10 @@ failed the first review, 9 the second, and 1 the third.
    file). Only the main session runs `apply`, so two runs never write the
    record at once.
 
+On 2026-10-17, 100 new words took up to five review rounds; 81 failed the
+first review, mostly because no writer had compared against WordUp's
+script text (see "Traps found so far").
+
 Web searches are limited to about 200 per turn, shared by every subagent
 started in that turn. On 2026-10-11, four writers told to search every text
 used them all up, and the reviewers had none left. Do not ask writers to
@@ -187,7 +191,10 @@ without searches and catches more: Oxford Learner's, Cambridge, Longman,
 Dictionary.com, Vocabulary.com, American Heritage and WordUp
 (`https://dictionary.wordup.com.tw/zh-TW/dictionary/<word>`) download with
 curl. Merriam-Webster, Collins and Britannica block curl and WebFetch; the
-built-in browser can read them.
+built-in browser can read them. `python3 -I tools/dictionary-defs.py
+<word...>` (from `pipeline/`) prints the seven downloadable dictionaries'
+definitions for each word, WordUp's script text included. Tell writers and
+reviewers about it, and run it yourself before writing any main-session fix.
 
 The writer prompt, with the paths filled in:
 
@@ -212,7 +219,8 @@ The writer prompt, with the paths filled in:
 
 For a request like "add 100 more words". First done on 2026-10-12 (abjure
 to venal, word ids 318 to 417), then again the same day (acolyte to wry,
-ids 418 to 517; 470 to 481 were held back unused).
+ids 418 to 517; 470 to 481 were held back unused), then on 2026-10-17
+(adjudicate to wrest, ids 518 to 617).
 
 1. Pick the words and check each one before it goes in, because a word's id
    is permanent once it is in the record. It must not already be in the
@@ -425,6 +433,34 @@ before handing a worksheet over.
   failed look-alike, several new ones shared only a letter or two (weld,
   welcome, harpoon) or were the wrong kind of thing. Choose the
   replacement by the same rules as the first set.
+
+- **WordUp's text is inside `<script>` tags.** WordUp puts its
+  definitions, usage notes and example sentences in script data. On
+  2026-10-17 every writer's text extraction stripped scripts, so none of
+  them compared against WordUp, and 81 of 100 new words failed the first
+  review, many on WordUp matches. Keep the script contents when you
+  extract a WordUp page (`tools/dictionary-defs.py` does).
+- **Example scenes retold from a dictionary.** Reviewers failed examples
+  that kept a dictionary's example scene with new words: a landlord
+  raising rent (foist), a retired judge settling a builders' dispute
+  (adjudicate), a car skidding across lanes (careen), a company polishing
+  its image (burnish). Read the dictionaries' examples, WordUp's
+  included, and pick a different situation.
+- **Reusing another word's option for the same look-alike.** Writers
+  borrowed the record's wording: vicarious on visceral was vitriolic's
+  option with one comma removed, and cogitate, intermittent, lucid,
+  moratorium, missionary, panorama, benighted and nepotism nearly
+  repeated older options. A learner then sees the same wrong answer
+  under two words. `check` now ignores case and punctuation and rejects
+  an option that shares half its content words with another word's
+  option for the same look-alike. The older record still has 38 such
+  pairs; they show up when those words are next on a worksheet.
+- **Dropping beats a third rewording.** On 2026-10-17 the main session's
+  own rewrites failed six times (metamorphose, cogitate, modify,
+  nepotism, skepticism, a landlord example), each by keeping a
+  dictionary's frame. When a word still has 4 other options, drop the
+  failed one. When it has only 4, swap in a look-alike whose
+  dictionaries you have read first.
 
 ## Pronunciation
 
