@@ -5,6 +5,7 @@ import type { GameOutcome } from '@/srs/srs';
 import type { GameModeId, SessionItem } from '@/lib/types';
 import { MultipleChoice } from './modes/MultipleChoice';
 import { Cloze } from './modes/Cloze';
+import { ClozeChoice } from './modes/ClozeChoice';
 import { Production } from './modes/Production';
 import { RelationMatch } from './modes/RelationMatch';
 import { Listening } from './modes/Listening';
@@ -30,6 +31,8 @@ export function GameHost({
       return <MultipleChoice {...common} mode={effective} />;
     case 'cloze':
       return <Cloze {...common} mode={effective} />;
+    case 'cloze_choice':
+      return <ClozeChoice {...common} mode={effective} />;
     case 'production':
       return <Production {...common} mode={effective} />;
     case 'synonym_match':

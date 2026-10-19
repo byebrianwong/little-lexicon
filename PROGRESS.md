@@ -3029,3 +3029,61 @@ default device voices (iOS compact voices, the browser default) sound robotic.
    `GOOGLE_TTS_VOICE` and rerun; every TTS clip is remade.
 4. Commit `assets/audio`, `src/content/audioClips.ts`,
    `src/content/words.json` and `pipeline/data/content-db.json`.
+
+## Fill-the-blank questions with a choice of words (2026-10-19)
+
+Brian asked for more questions where you see a sentence and pick the word
+that fills the blank. The app had a fill-the-blank mode, but it asked you to
+type the word. This adds a multiple-choice version.
+
+### Decisions
+
+- **New mode `cloze_choice`** ("Choose the missing word"): an example
+  sentence with the word blanked and four words to pick from, with the same
+  50/50 hint as the other multiple-choice questions. The typed cloze stays.
+- **Where it appears.** In sessions it joins the ladders for new, learning
+  and relearning words, which SPEC section 1 gives to recognition and cloze:
+  one of three modes for new words, one of four for learning words, one of
+  three for relearning words. The review ladders are unchanged, so maturing
+  words still move on to typed answers. Practice lists it twice, so it comes
+  up about twice as often as any other mode (2 in 9).
+- **XP 12**, between multiple choice (10) and the typed cloze (16).
+- **Wrong options are chosen so grammar does not give the answer away.**
+  - Same part of speech as the answer.
+  - When "a" or "an" comes right before the blank, every option takes that
+    article, judged by the first sound of its IPA ("a eulogy", "an
+    aberrant").
+  - No word linked to the answer as a synonym or antonym, in either
+    direction or through a shared one, since it could also fit.
+  - Only sentences whose blank is the headword itself. 12% of sentences
+    blank an inflected form ("abated"), which would stand out against
+    base-form options; those stay with the typed cloze. 19 words have only
+    inflected sentences and do not get this mode (belie, glean, regale and
+    others).
+- **Wrong options come from the words being played first, then the rest of
+  the collection.** A session alone often has too few words of one part of
+  speech (of the first 10 words, 3 had no question), so the session now also
+  reads the full word list (the `allWords` query practice already used). It
+  waits for that list before the first question, so a question's mode cannot
+  change when the list arrives.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (31 suites, 254 tests)
+  pass.
+- Against the committed words file: 560 of 579 words can be asked this way.
+  In 610 generated questions with "a" or "an" before the blank, every option
+  took that article.
+- Web, demo mode, at 390 x 844: in a session and in practice the question
+  appeared, the hint dimmed one wrong word, answering showed the reveal with
+  the full sentence, and Continue moved on. No console errors.
+- Not run on the iOS simulator or Android emulator.
+- Chromatic: new `Games/ClozeChoice` stories.
+
+### For next time
+
+- Wrong options are other headwords picked by rule, not written for each
+  sentence. A word of the same type that is not listed as a synonym can still
+  fit a sentence now and then. If learners report that, the improve-words
+  skill can add the missing synonym, or the pipeline could write wrong words
+  for each sentence.

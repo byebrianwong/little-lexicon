@@ -16,6 +16,7 @@ export const MODE_META: Record<GameModeId, ModeMeta> = {
   mc_word_to_def: { id: 'mc_word_to_def', label: 'Choose the meaning', retrievalTier: 1 },
   listening: { id: 'listening', label: 'Listen', retrievalTier: 2 },
   cloze: { id: 'cloze', label: 'Fill the blank', retrievalTier: 2 },
+  cloze_choice: { id: 'cloze_choice', label: 'Pick the missing word', retrievalTier: 1 },
   synonym_match: { id: 'synonym_match', label: 'Pick synonyms', retrievalTier: 2 },
   antonym_match: { id: 'antonym_match', label: 'Pick antonyms', retrievalTier: 2 },
   production: { id: 'production', label: 'Type the word', retrievalTier: 3 },
@@ -25,22 +26,34 @@ export const MODE_META: Record<GameModeId, ModeMeta> = {
 // What content the word has, so the ladder never selects an impossible mode.
 export interface ModeCapabilities {
   hasClozeExample: boolean;
+  // A sentence whose blank can be offered with three wrong words that fit it
+  // grammatically (see buildClozeChoice).
+  hasClozeChoice: boolean;
   hasRelations: { synonym: boolean; antonym: boolean };
   hasAudio: boolean;
 }
 
 // Ordered preference per maturity bucket. The first eligible mode (subject to
 // content) wins, with a deterministic rotation for variety.
-const NEW_LADDER: GameModeId[] = ['mc_def_to_word', 'mc_word_to_def'];
-const LEARNING_LADDER: GameModeId[] = ['cloze', 'mc_word_to_def', 'listening'];
+// Picking the word for a sentence's blank is recognition, so it joins the
+// early ladders and stays out of the review ones, which escalate to recall.
+const NEW_LADDER: GameModeId[] = ['mc_def_to_word', 'cloze_choice', 'mc_word_to_def'];
+const LEARNING_LADDER: GameModeId[] = [
+  'cloze',
+  'cloze_choice',
+  'mc_word_to_def',
+  'listening',
+];
 const YOUNG_LADDER: GameModeId[] = ['production', 'synonym_match', 'cloze'];
 const MATURE_LADDER: GameModeId[] = ['use_it', 'production', 'antonym_match'];
-const RELEARN_LADDER: GameModeId[] = ['cloze', 'mc_def_to_word'];
+const RELEARN_LADDER: GameModeId[] = ['cloze', 'cloze_choice', 'mc_def_to_word'];
 
 function eligible(mode: GameModeId, caps: ModeCapabilities): boolean {
   switch (mode) {
     case 'cloze':
       return caps.hasClozeExample;
+    case 'cloze_choice':
+      return caps.hasClozeChoice;
     case 'listening':
       return caps.hasAudio;
     case 'synonym_match':
