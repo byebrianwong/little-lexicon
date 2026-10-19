@@ -1,13 +1,15 @@
 // Production: recall and type the word from its meaning (Phase 4.1). Highest
 // retrieval demand. Accepts exact spelling and near-miss typos, but only the
-// target headword (a synonym does not count).
+// target headword (a synonym does not count). The first letter and the length
+// are shown for free; the hint shows about a third and downgrades to Hard.
 
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Button, Label, Note, TextField } from '@/components/ui';
-import { gradeAnswer, type AnswerGrade } from '@/lib/text';
+import { FREE_LETTERS, gradeAnswer, hintLetters, type AnswerGrade } from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useNextDueLabel } from '../GameContext';
+import { LetterCue } from '../LetterCue';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { Prompt } from '../Prompt';
@@ -44,10 +46,6 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
     finish(gradeAnswer(value, content.headword));
   }
 
-  const hint = hintUsed
-    ? `${content.headword.slice(0, Math.ceil(content.headword.length / 3))}…  (${content.headword.length} letters)`
-    : null;
-
   return (
     <View>
       <Label>Type the word</Label>
@@ -68,11 +66,11 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
             onSubmitEditing={submit}
             returnKeyType="done"
           />
-          {hint ? (
-            <Note className="mt-2">{hint}</Note>
-          ) : (
-            <Note className="mt-2">Spell the exact word.</Note>
-          )}
+          <LetterCue
+            target={content.headword}
+            shown={hintUsed ? hintLetters(content.headword) : FREE_LETTERS}
+            className="mt-3"
+          />
           <View className="mt-6 gap-2">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button
