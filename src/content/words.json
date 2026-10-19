@@ -1555,22 +1555,17 @@
               "difficulty": 3
             },
             {
-              "lemma": "A brief, memorable saying that sums up a piece of wisdom about life.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
               "lemma": "Ongoing hostility between people or groups who work against each other.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A word made by shuffling the letters of another word, as silent is made from listen.",
+              "lemma": "An idea or practice so hateful to a group that its members reject it on sight.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "A very precise clock, of the kind sailors once used to find their position at sea.",
+              "lemma": "A long account of a kingdom's or family's past, told one year after another.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -2600,22 +2595,17 @@
               "difficulty": 3
             },
             {
-              "lemma": "Attack someone fiercely, with blows or with harsh words.",
+              "lemma": "Rush at an enemy and strike at them again and again.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "Weigh up the value, quality or size of something.",
+              "lemma": "Size up a person, plan or problem and reach a verdict on its merits.",
               "kind": "mc",
               "difficulty": 3
             },
             {
               "lemma": "Treat something as a fact before anyone has shown it to be one.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Test a metal or chemical to find out what it contains.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -2729,27 +2719,22 @@
             {
               "lemma": "Possible to hear, even if only faintly.",
               "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Suggesting that things will turn out well.",
-              "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
               "lemma": "Driven by an endless craving to pile up wealth.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
               "lemma": "Showing deep wisdom and sound judgment.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
               "lemma": "Regularly dishonest, with a habit of saying what is false.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             }
           ]
         },
@@ -3382,12 +3367,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Talk about someone or their work as if it hardly matters.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Go over a point again and again, far longer than needed.",
+              "lemma": "Keep hammering at an argument that everyone has already accepted.",
               "kind": "mc",
               "difficulty": 4
             },
@@ -3402,7 +3382,7 @@
               "difficulty": 4
             },
             {
-              "lemma": "Arrange in a will for someone to receive money or possessions after one's death.",
+              "lemma": "Wear someone down with a constant stream of troubles or demands.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -5657,22 +5637,17 @@
               "difficulty": 2
             },
             {
-              "lemma": "Related by having the same origin, as words in sister languages often are.",
+              "lemma": "Linked by descent from a single older word or language.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Strong and sharp in smell or taste, enough to sting the nose or tongue.",
+              "lemma": "Concerned with how the mind takes in, stores and uses information.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "So poor that one depends on others for food, shelter and other basic needs.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Dependent on a condition that has not yet been settled.",
+              "lemma": "Tied to a condition, so that it stands or falls with another outcome.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -6679,7 +6654,7 @@
       "senses": [
         {
           "senseId": 105,
-          "definition": "Add separate evidence that agrees with a claim or account already given, making it more believable.",
+          "definition": "Confirm a statement independently, so that it no longer rests on one source alone.",
           "plainLanguageDefinition": "To back up what someone has said with proof from a second, separate source.",
           "senseOrder": 1,
           "register": null,
@@ -6711,12 +6686,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Eat away at metal or stone slowly, as rust or acid does.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Bend a flat sheet into a row of folds, as in cardboard or roofing metal.",
+              "lemma": "Slowly weaken a metal surface until it pits and flakes.",
               "kind": "mc",
               "difficulty": 3
             },
@@ -6836,7 +6806,7 @@
               "difficulty": 3
             },
             {
-              "lemma": "Worthy of some respect or approval, as a solid effort is.",
+              "lemma": "Reflecting well on whoever was responsible for it.",
               "kind": "mc",
               "difficulty": 3
             },
@@ -6846,12 +6816,7 @@
               "difficulty": 3
             },
             {
-              "lemma": "Shaky and unsteady, the way a voice or hand gets when someone is scared or frail.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Always grumbling and finding fault, in a fretful tone.",
+              "lemma": "Wavering and unsteady, especially in the voice or hands.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -6876,15 +6841,15 @@
           "relationType": "synonym"
         },
         {
-          "relatedLemma": "incredulous",
-          "relationType": "antonym"
-        },
-        {
           "relatedLemma": "skeptical",
           "relationType": "antonym"
         },
         {
           "relatedLemma": "suspicious",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "distrustful",
           "relationType": "antonym"
         }
       ],
@@ -9102,8 +9067,8 @@
       "senses": [
         {
           "senseId": 143,
-          "definition": "Different from one another in basic nature, so that they are hard to compare or combine.",
-          "plainLanguageDefinition": "So different from each other that they seem to have little in common.",
+          "definition": "Unlike one another in their basic makeup, sharing few or no features.",
+          "plainLanguageDefinition": "Of very different kinds, with almost nothing alike about them.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -9134,7 +9099,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Feeling that all hope is gone and willing to try anything.",
+              "lemma": "Pushed by a lack of options into acting rashly or at great risk.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -9144,12 +9109,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Calm and fair because one is not swayed by strong feelings.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "So unhappy that nothing anyone does can comfort one.",
+              "lemma": "Coolly detached, so that personal feelings play no part in one's view.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -10008,7 +9968,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Rich enough to live in comfort, with money to spare.",
+              "lemma": "Ready to go easy on those who slip up or break the rules.",
               "kind": "mc",
               "difficulty": 4
             },
@@ -10018,17 +9978,12 @@
               "difficulty": 4
             },
             {
-              "lemma": "Ready and eager to fight or argue with others.",
+              "lemma": "Combative in manner, always looking for someone to quarrel with.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Making rough, dry skin feel soft and calm.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Standing out so clearly that it draws attention first.",
+              "lemma": "Restoring moisture and suppleness to chapped skin.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -10192,32 +10147,32 @@
       "senses": [
         {
           "senseId": 163,
-          "definition": "Capacity or power to produce a desired effect.",
+          "definition": "A remedy's or plan's power to bring about the change it aims at.",
           "plainLanguageDefinition": "How well something, like a medicine or plan, actually does the job it is meant to do.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 2688,
+              "exampleId": 5154,
               "text": "Clinical trials showed the new vaccine's efficacy: it prevented illness in nine out of ten people.",
               "audioUrl": null,
               "clozeTarget": "efficacy"
             },
             {
-              "exampleId": 2689,
-              "text": "After sales kept falling, the manager began to doubt the efficacy of the expensive ad campaign.",
+              "exampleId": 5155,
+              "text": "Since sales fell even while the ads ran, the manager doubted the campaign had any efficacy at all.",
               "audioUrl": null,
               "clozeTarget": "efficacy"
             },
             {
-              "exampleId": 2690,
+              "exampleId": 5156,
               "text": "Teachers wanted proof of the reading program's efficacy before using it in every classroom.",
               "audioUrl": null,
               "clozeTarget": "efficacy"
             },
             {
-              "exampleId": 2691,
-              "text": "Economists disagree about the efficacy of cutting interest rates when people are afraid to spend.",
+              "exampleId": 5157,
+              "text": "Economists disagree about the efficacy of rate cuts: some say they revive spending, others say they change nothing.",
               "audioUrl": null,
               "clozeTarget": "efficacy"
             }
@@ -10229,22 +10184,17 @@
               "difficulty": 1
             },
             {
-              "lemma": "A statue or dummy shaped like a real person, sometimes burned or hung to show anger at them.",
+              "lemma": "Outrageous nerve, shown without a trace of embarrassment.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "A gift of money or belongings that a person arranges to pass on after death.",
+              "lemma": "A logical slip that leaves an argument's conclusion unsupported.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "The work of speaking up and campaigning on behalf of a cause or a group.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "A belief that seems sound but rests on faulty reasoning.",
+              "lemma": "Bubbly, sparkling liveliness in a person's manner.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -11389,7 +11339,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Strange in habits or behavior in a harmless, often charming way.",
+              "lemma": "Quirky and offbeat, with personal ways that others find peculiar.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -11399,17 +11349,12 @@
               "difficulty": 1
             },
             {
-              "lemma": "Remembered as important in the story of a nation or the world.",
+              "lemma": "Airy and graceful, with an almost weightless, dreamlike quality.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Wildly happy, as if carried away by joy.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Mixing pieces from many different styles or schools, as a playlist that jumps from jazz to punk does.",
+              "lemma": "Wide-ranging in taste, borrowing freely from unrelated traditions.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -12551,32 +12496,32 @@
           "register": null,
           "examples": [
             {
-              "exampleId": 2993,
+              "exampleId": 5133,
               "text": "The speaker meandered through several extraneous anecdotes that confused the audience.",
               "audioUrl": null,
               "clozeTarget": "extraneous"
             },
             {
-              "exampleId": 2994,
+              "exampleId": 5134,
               "text": "Students should edit out extraneous details to keep their essays concise.",
               "audioUrl": null,
               "clozeTarget": "extraneous"
             },
             {
-              "exampleId": 2995,
+              "exampleId": 5135,
               "text": "The detective dismissed the extraneous clues that led away from the primary suspect.",
               "audioUrl": null,
               "clozeTarget": "extraneous"
             },
             {
-              "exampleId": 2996,
+              "exampleId": 5136,
               "text": "During the negotiation, the mediator asked both parties to ignore extraneous grievances.",
               "audioUrl": null,
               "clozeTarget": "extraneous"
             },
             {
-              "exampleId": 2997,
-              "text": "The judge struck the remark as extraneous to the case and told the jury to ignore it.",
+              "exampleId": 5137,
+              "text": "The meeting ran an hour over because people kept raising extraneous complaints about parking instead of discussing the budget.",
               "audioUrl": null,
               "clozeTarget": "extraneous"
             }
@@ -12588,22 +12533,17 @@
               "difficulty": 1
             },
             {
-              "lemma": "Taking place at exactly the same time as something else.",
+              "lemma": "Far outside the normal run of things, in a way that amazes.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Demanding hard physical or mental work.",
+              "lemma": "Calling for all the energy and force a person can muster.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Far beyond what is usual or expected.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Wrong because it rests on a mistake.",
+              "lemma": "Counting in a wrongdoer's favor, so the blame weighs less.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -12809,29 +12749,24 @@
           ],
           "distractors": [
             {
-              "lemma": "Left unsown for a season so that tired farmland can rest.",
+              "lemma": "Lying idle between plantings, with no crop sown.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Dwelling on sexual matters in a crude or titillating way.",
+              "lemma": "Smutty and suggestive, playing up sex to draw attention.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Daring in a way that surprises people, sometimes rudely so.",
+              "lemma": "Given to wisecracks when the mood calls for gravity.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Greedy and grasping, eager to take what belongs to others.",
+              "lemma": "Touchy and quarrelsome, so that keeping the peace is a struggle.",
               "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Warm and polite toward others, especially guests.",
-              "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             }
           ]
         },
@@ -13784,33 +13719,33 @@
           "register": null,
           "examples": [
             {
-              "exampleId": 3269,
+              "exampleId": 5129,
               "text": "The fractious crew refused to follow the captain's navigation orders during the storm.",
               "audioUrl": null,
               "clozeTarget": "fractious"
             },
             {
-              "exampleId": 3270,
+              "exampleId": 5130,
               "text": "Dealing with a fractious legislature made it nearly impossible to pass new reforms.",
               "audioUrl": null,
               "clozeTarget": "fractious"
             },
             {
-              "exampleId": 3271,
+              "exampleId": 5131,
               "text": "The teacher struggled to maintain order among the most fractious students in the classroom.",
               "audioUrl": null,
               "clozeTarget": "fractious"
             },
             {
-              "exampleId": 3272,
-              "text": "The fractious horse bucked and kicked whenever anyone tried to put on its harness.",
+              "exampleId": 5132,
+              "text": "The fractious horse grazed calmly until someone brought out its harness, then fought every attempt to fit it.",
               "audioUrl": null,
               "clozeTarget": "fractious"
             }
           ],
           "distractors": [
             {
-              "lemma": "Forming only a small part of a whole; tiny.",
+              "lemma": "Amounting to a sliver of the total, often too little to matter.",
               "kind": "mc",
               "difficulty": 5
             },
@@ -13820,17 +13755,12 @@
               "difficulty": 5
             },
             {
-              "lemma": "Giving off a pleasant scent, like flowers.",
+              "lemma": "So panicked that every move becomes hurried and scattered.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Roomy enough to hold a great deal.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Showing the warm loyalty that brothers share.",
+              "lemma": "Felt between brothers, or between comrades who treat each other as kin.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -16107,27 +16037,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Openly question whether a claim or a person's character can be trusted.",
+              "lemma": "Steep someone in a belief or mood until it becomes part of them.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Soak or fill something thoroughly with a feeling, quality or color.",
+              "lemma": "Tell or teach someone something, so they come to know it too.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Pass on knowledge or news to another person.",
+              "lemma": "Act as a drag on a plan or a movement, so it advances only with difficulty.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Slow down or block progress by getting in the way.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Cut off an arm, leg, finger or toe in an operation.",
+              "lemma": "Sever a hand, foot or whole limb from the body as a medical treatment.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -16820,7 +16745,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Unique in a way that no one else can match or imitate.",
+              "lemma": "One of a kind, in a style that others try for and never manage.",
               "kind": "mc",
               "difficulty": 2
             },
@@ -16830,17 +16755,12 @@
               "difficulty": 2
             },
             {
-              "lemma": "Close and personal, as between old friends.",
+              "lemma": "Knowing each other so well that nothing is held back between them.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Full of life, energy and lively movement.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Cool and detached, showing no feeling.",
+              "lemma": "Coming so soon that there is little time left to prepare.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -18700,32 +18620,32 @@
       "senses": [
         {
           "senseId": 295,
-          "definition": "Glowing with its own soft light, so that it stands out against the dark.",
-          "plainLanguageDefinition": "Giving off a gentle, glowing light.",
+          "definition": "Sending out light of its own, whether dim or brilliant.",
+          "plainLanguageDefinition": "Giving off its own light, so it glows or shines.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 3101,
-              "text": "The luminous dial of the antique watch was visible even in total darkness.",
+              "exampleId": 5138,
+              "text": "At midnight the lava flow was still luminous, a slow orange river creeping down the dark slope.",
               "audioUrl": null,
               "clozeTarget": "luminous"
             },
             {
-              "exampleId": 3102,
-              "text": "A luminous crescent moon hung above the dark outline of the mountain range.",
+              "exampleId": 5139,
+              "text": "Paper lanterns, luminous with the candles burning inside them, floated up over the river during the festival.",
               "audioUrl": null,
               "clozeTarget": "luminous"
             },
             {
-              "exampleId": 3103,
-              "text": "The exit signs are coated with luminous paint so people can find the doors during a blackout.",
+              "exampleId": 5140,
+              "text": "On summer evenings the fireflies turned the meadow into a field of tiny luminous specks blinking on and off.",
               "audioUrl": null,
               "clozeTarget": "luminous"
             },
             {
-              "exampleId": 3104,
-              "text": "The deep sea creature had luminous organs that pulsed in the black water far below the surface.",
+              "exampleId": 5141,
+              "text": "Through the fog, the lighthouse lamp was a luminous smudge that grew sharper as the boat drew closer.",
               "audioUrl": null,
               "clozeTarget": "luminous"
             }
@@ -18737,7 +18657,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Stirring a feeling that something sacred or divine is present.",
+              "lemma": "Hinting at a divine power close by, so that people grow hushed and awed.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -18747,20 +18667,15 @@
               "difficulty": 1
             },
             {
-              "lemma": "Mournful and gloomy in a heavy, exaggerated way.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "So costly or destructive that it brings about collapse or bankruptcy.",
+              "lemma": "Bringing in handsome returns to whoever takes it on.",
               "kind": "mc",
               "difficulty": 1
             }
           ]
         },
         {
-          "senseId": 606,
-          "definition": "Very clear and inspiring, as if lit from within; used of writing, art or performances.",
+          "senseId": 1243,
+          "definition": "Of writing or a performance: unusually clear, vivid and beautiful.",
           "plainLanguageDefinition": null,
           "senseOrder": 2,
           "register": null,
@@ -18865,12 +18780,7 @@
               "difficulty": 3
             },
             {
-              "lemma": "Commanding and authoritative, like someone used to giving orders.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Grand and splendid, impressive in size or beauty.",
+              "lemma": "Fond of grand, showy words that sound more impressive than they are.",
               "kind": "mc",
               "difficulty": 3
             },
@@ -19067,27 +18977,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Wanting bad things to happen to others.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
               "lemma": "Awkward and clumsy, in actions or in dealing with people.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Giving off a nasty smell.",
+              "lemma": "Reeking of rot or sweat, so that the air around it turns foul.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Strong or real enough to be felt or touched.",
+              "lemma": "Filled with spite and set on wrecking other people's lives or plans.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Unhappy with the way things are and inclined to complain or rebel.",
+              "lemma": "Restless and resentful, nursing grievances that no change ever seems to settle.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -19738,27 +19643,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Act as a strong force against an outcome, as evidence can against a verdict.",
+              "lemma": "Serve as a strong reason pushing a decision one way or the other.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Take a dispute to court, or argue a case there.",
+              "lemma": "Have a disagreement argued out by lawyers in front of a judge.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Move from one region to another, often with the seasons.",
+              "lemma": "Make a long journey to a new home region, often on a yearly cycle.",
               "kind": "mc",
               "difficulty": 1
             },
             {
-              "lemma": "Set something in motion, especially trouble or unrest.",
-              "kind": "mc",
-              "difficulty": 1
-            },
-            {
-              "lemma": "Damage a body or object badly by cutting off or destroying parts.",
+              "lemma": "Hack at a body or object until it is scarred and misshapen.",
               "kind": "mc",
               "difficulty": 1
             }
@@ -21379,12 +21279,12 @@
           ],
           "distractors": [
             {
-              "lemma": "Approved by, or acting on behalf of, a government or other authority.",
+              "lemma": "Formal and on the record, rather than said privately or off the cuff.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "Working well enough to bring about the result that was wanted.",
+              "lemma": "Getting real results when put into practice.",
               "kind": "mc",
               "difficulty": 4
             },
@@ -21394,12 +21294,7 @@
               "difficulty": 4
             },
             {
-              "lemma": "Joking about a serious matter at a moment when humor is out of place.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "Seeming to promise that things will turn out well.",
+              "lemma": "Dreamed up and passed off as real.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -21696,31 +21591,31 @@
       "senses": [
         {
           "senseId": 343,
-          "definition": "Scornful public blame heaped on a person or group for behavior seen as disgraceful.",
+          "definition": "Scornful public blame aimed at a person or group for behavior seen as disgraceful.",
           "plainLanguageDefinition": "A harsh wave of public shame and criticism directed at someone.",
           "senseOrder": 1,
           "register": null,
           "examples": [
             {
-              "exampleId": 3019,
-              "text": "The corrupt politician faced severe opprobrium after the financial scandal broke.",
+              "exampleId": 5142,
+              "text": "When reporters showed that the charity's donations had paid for his yacht, the director met with such opprobrium that old friends crossed the street to avoid him.",
               "audioUrl": null,
               "clozeTarget": "opprobrium"
             },
             {
-              "exampleId": 3020,
+              "exampleId": 5143,
               "text": "The referee faced the opprobrium of the entire stadium after his call cost the home team the final.",
               "audioUrl": null,
               "clozeTarget": "opprobrium"
             },
             {
-              "exampleId": 3021,
-              "text": "The dictator earned international opprobrium for his human rights abuses.",
+              "exampleId": 5144,
+              "text": "Crossing the picket line earned him the lasting opprobrium of the coworkers who had stayed out on strike.",
               "audioUrl": null,
               "clozeTarget": "opprobrium"
             },
             {
-              "exampleId": 3022,
+              "exampleId": 5145,
               "text": "When diners learned the chef had been serving reheated frozen meals as 'made fresh daily', the opprobrium online forced the restaurant to close.",
               "audioUrl": null,
               "clozeTarget": "opprobrium"
@@ -21728,27 +21623,22 @@
           ],
           "distractors": [
             {
-              "lemma": "Harsh treatment of a group by those in control, denying them fair rights.",
+              "lemma": "Harsh, unjust rule that holds a people down by force.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A state of confused thinking and wild excitement, often caused by fever or illness.",
+              "lemma": "Lavish wealth on which no expense has been spared.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A steady condition where competing pressures cancel out and nothing shifts.",
+              "lemma": "Seizing each passing chance for personal gain, even at others' expense.",
               "kind": "mc",
               "difficulty": 4
             },
             {
-              "lemma": "A grand old shop where you could buy almost anything under one roof.",
-              "kind": "mc",
-              "difficulty": 4
-            },
-            {
-              "lemma": "An agreed pause on an activity for a set period of time.",
+              "lemma": "Cloudiness that keeps light, or meaning, from getting through.",
               "kind": "mc",
               "difficulty": 4
             }
@@ -22331,11 +22221,6 @@
           ],
           "distractors": [
             {
-              "lemma": "Harsh, bitter anger between people who disagree.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
               "lemma": "Marriage, especially when seen as a formal or religious bond.",
               "kind": "mc",
               "difficulty": 3
@@ -22346,12 +22231,17 @@
               "difficulty": 3
             },
             {
-              "lemma": "A comic imitation that mocks the style of a writer, artist or genre.",
+              "lemma": "A balance in which neither side stands above the other.",
               "kind": "mc",
               "difficulty": 3
             },
             {
-              "lemma": "The home where a parish clergyman lives, owned by his church.",
+              "lemma": "A sour hostility that lingers between people who have clashed.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "A preachy air of being more virtuous than everyone else.",
               "kind": "mc",
               "difficulty": 3
             }
@@ -26468,48 +26358,48 @@
           "register": null,
           "examples": [
             {
-              "exampleId": 3509,
-              "text": "The kitchen was filled with the pungent aroma of freshly crushed garlic and onions.",
+              "exampleId": 5146,
+              "text": "Grating fresh horseradish releases fumes so pungent that the cook's eyes start to stream.",
               "audioUrl": null,
               "clozeTarget": "pungent"
             },
             {
-              "exampleId": 3510,
-              "text": "A pungent smoke from the burning tires drifted across the valley and made our eyes water.",
+              "exampleId": 5147,
+              "text": "A pungent whiff of ammonia rose from the janitor's bucket and sent us coughing into the hall.",
               "audioUrl": null,
               "clozeTarget": "pungent"
             },
             {
-              "exampleId": 3511,
+              "exampleId": 5148,
               "text": "Durian is banned on some trains because its pungent smell fills a carriage in minutes.",
               "audioUrl": null,
               "clozeTarget": "pungent"
             },
             {
-              "exampleId": 3512,
-              "text": "She wrinkled her nose at the pungent odor of the old cheese.",
+              "exampleId": 5149,
+              "text": "A skunk had passed under the porch in the night, and its pungent spray still hung in the air at breakfast.",
               "audioUrl": null,
               "clozeTarget": "pungent"
             }
           ],
           "distractors": [
             {
-              "lemma": "Touching the heart in a way that brings sadness or tender memories.",
+              "lemma": "Stirring a tender sadness that lingers after the moment has passed.",
               "kind": "mc",
               "difficulty": 2
             },
             {
-              "lemma": "Ringing out in a deep, sad, lingering way, as a distant bell does.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Persuasive because its reasoning is tight and easy to follow.",
+              "lemma": "Booming and reverberating, with a low, mournful ring.",
               "kind": "mc",
               "difficulty": 2
             },
             {
               "lemma": "Designed to make someone pay a penalty for wrongdoing.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Making sure no formality, however small, is ever left out.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -28144,8 +28034,8 @@
       "senses": [
         {
           "senseId": 445,
-          "definition": "Inclined to keep one's thoughts and feelings to oneself.",
-          "plainLanguageDefinition": "Not willing to say much about what you think or feel.",
+          "definition": "Saying little, especially about private matters, and keeping one's views in reserve.",
+          "plainLanguageDefinition": "Quiet about yourself and slow to share your private thoughts.",
           "senseOrder": 1,
           "register": null,
           "examples": [
@@ -28176,29 +28066,24 @@
           ],
           "distractors": [
             {
-              "lemma": "Having happened only a short time ago.",
+              "lemma": "Feeling remorse for a misdeed and wanting to make amends.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Able to recover quickly from difficulty.",
+              "lemma": "Tough enough to come through hardship and return to normal.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Showing deep respect, especially toward something sacred.",
+              "lemma": "Full of awe and humility before something held sacred.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             },
             {
-              "lemma": "Stubbornly refusing to obey rules or authority.",
+              "lemma": "Openly defiant of those in charge and hard to bring under control.",
               "kind": "mc",
-              "difficulty": 3
-            },
-            {
-              "lemma": "Strongly smelling of something, or strongly suggesting it.",
-              "kind": "mc",
-              "difficulty": 3
+              "difficulty": 2
             }
           ]
         },
@@ -28941,17 +28826,17 @@
               "difficulty": 5
             },
             {
-              "lemma": "Curving back and forth in long bends, the way a snake moves.",
+              "lemma": "Twisting this way and that in long, looping curves.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Holding dissolved salt, like seawater.",
+              "lemma": "Briny all through, from the salt mixed into it.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Stretched out flat on one's back, face toward the ceiling or sky.",
+              "lemma": "Resting with the spine against the ground or a bed, gazing upward.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -35672,7 +35557,7 @@
               "difficulty": 3
             },
             {
-              "lemma": "Wealthy enough to live in comfort, with money to spare.",
+              "lemma": "Prosperous enough to afford far more than life's basics.",
               "kind": "mc",
               "difficulty": 3
             },
@@ -39415,29 +39300,24 @@
           ],
           "distractors": [
             {
-              "lemma": "Squeeze money or favors out of someone through threats.",
-              "kind": "mc",
-              "difficulty": 3
-            },
-            {
               "lemma": "Bring a buried coffin back to the surface, often for a fresh autopsy.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 4
             },
             {
               "lemma": "Breathe out, emptying air from the chest.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 4
             },
             {
               "lemma": "Rid a haunted house or a possessed person of a demon through ritual.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 4
             },
             {
               "lemma": "Fire back a quick, cutting reply to something someone said.",
               "kind": "mc",
-              "difficulty": 3
+              "difficulty": 4
             }
           ]
         }
@@ -39603,7 +39483,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Making jokes about serious things when jokes are out of place.",
+              "lemma": "Prone to flippant wisecracks when a straight answer is called for.",
               "kind": "mc",
               "difficulty": 2
             },
@@ -39618,12 +39498,7 @@
               "difficulty": 2
             },
             {
-              "lemma": "Resting on a false belief or on faulty reasoning.",
-              "kind": "mc",
-              "difficulty": 2
-            },
-            {
-              "lemma": "Hitting just the right note, especially in a choice of words.",
+              "lemma": "Wearisome because it drags on and never varies.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -44910,7 +44785,7 @@
       "senses": [
         {
           "senseId": 795,
-          "definition": "Implied by or inferred from actions or statements.",
+          "definition": "Unspoken, yet understood and observed by everyone involved.",
           "plainLanguageDefinition": "Agreed on or known by all without a single word being said about it.",
           "senseOrder": 1,
           "register": null,
@@ -44947,7 +44822,7 @@
               "difficulty": 1
             },
             {
-              "lemma": "Sensed by touch rather than by sight or sound.",
+              "lemma": "Perceived through contact with the hands or skin.",
               "kind": "mc",
               "difficulty": 1
             },
@@ -46692,17 +46567,12 @@
               "difficulty": 5
             },
             {
-              "lemma": "Weep and moan aloud over a loss or a misfortune.",
+              "lemma": "Sneer at what someone has done and deny it any credit.",
               "kind": "mc",
               "difficulty": 5
             },
             {
-              "lemma": "Talk about a person or their work as if it hardly mattered.",
-              "kind": "mc",
-              "difficulty": 5
-            },
-            {
-              "lemma": "Name in a will who receives one's money or goods after death.",
+              "lemma": "Settle in writing which heirs will get one's estate once one has died.",
               "kind": "mc",
               "difficulty": 5
             }
@@ -49076,25 +48946,25 @@
           "register": null,
           "examples": [
             {
-              "exampleId": 4403,
+              "exampleId": 5150,
               "text": "The report offered the facile conclusion that students fail only because they are lazy.",
               "audioUrl": null,
               "clozeTarget": "facile"
             },
             {
-              "exampleId": 4404,
-              "text": "Blaming the whole recession on one bad law is a facile explanation for a tangled set of causes.",
+              "exampleId": 5151,
+              "text": "Telling someone with depression to \"just cheer up\" is facile advice that ignores how the illness works.",
               "audioUrl": null,
               "clozeTarget": "facile"
             },
             {
-              "exampleId": 4405,
+              "exampleId": 5152,
               "text": "Critics found the film's ending facile, since it settled twenty years of family conflict with a single hug.",
               "audioUrl": null,
               "clozeTarget": "facile"
             },
             {
-              "exampleId": 4406,
+              "exampleId": 5153,
               "text": "The debate coach warned that facile slogans, which skip every hard part of the issue, would cost them points with the judges.",
               "audioUrl": null,
               "clozeTarget": "facile"
@@ -49102,7 +48972,7 @@
           ],
           "distractors": [
             {
-              "lemma": "Bound to fail, no matter how much effort goes into it.",
+              "lemma": "Doomed to come to nothing, however hard anyone tries.",
               "kind": "mc",
               "difficulty": 2
             },
@@ -49117,7 +48987,7 @@
               "difficulty": 2
             },
             {
-              "lemma": "Quick to switch loyalties or opinions for no good reason.",
+              "lemma": "Liable to drop a friend or a cause on a whim and take up another.",
               "kind": "mc",
               "difficulty": 2
             }
@@ -52433,7 +52303,7 @@
               "difficulty": 5
             },
             {
-              "lemma": "Keep an activity in order by setting rules and limits on it.",
+              "lemma": "Set official limits on what a business or process may do.",
               "kind": "mc",
               "difficulty": 5
             }

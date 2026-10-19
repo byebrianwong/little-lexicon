@@ -40,6 +40,7 @@ import {
   WORKSHEET_INSTRUCTIONS,
   wrongAnswerOwners,
   lookalikeOptions,
+  nearRepeats,
   textKey,
   type CheckEnv,
   type Worksheet,
@@ -133,6 +134,12 @@ async function status(): Promise<void> {
   for (const r of flagged) {
     const w = rows.words.find((x) => x.id === r.word_id);
     console.log(`  flagged: ${w?.headword}: ${r.notes}`);
+  }
+  const repeats = nearRepeats(env.lookalikeOptions ?? new Map());
+  if (repeats.length > 0) {
+    const name = (id: number) => rows.words.find((w) => w.id === id)?.headword;
+    const list = repeats.map((r) => `${r.lookalike} (${name(r.wordIds[0])}, ${name(r.wordIds[1])})`).join(', ');
+    console.log(`  ${repeats.length} options nearly repeat another word's option for the same look-alike; fix one of each pair: ${list}`);
   }
   const badIpa = rows.words.filter((w) => !w.ipa || checkIpa(w.ipa).length > 0);
   if (badIpa.length > 0) {

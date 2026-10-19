@@ -436,6 +436,27 @@ export function lookalikeOptions(
 }
 
 /**
+ * Pairs of options for the same look-alike, under two different words, that
+ * nearly repeat each other. `check` rejects these one word at a time; this
+ * lists every pair left in the record, for `status`.
+ */
+export function nearRepeats(
+  options: Map<string, { meaning: string; wordId: number }[]>,
+): { lookalike: string; wordIds: [number, number] }[] {
+  const pairs: { lookalike: string; wordIds: [number, number] }[] = [];
+  for (const [lookalike, list] of options) {
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) {
+        if (list[i].wordId !== list[j].wordId && overlap(list[i].meaning, list[j].meaning) >= NEAR_REPEAT) {
+          pairs.push({ lookalike, wordIds: [list[i].wordId, list[j].wordId] });
+        }
+      }
+    }
+  }
+  return pairs;
+}
+
+/**
  * Split items into `parts` runs of near-equal size, in order, for a big
  * curation run that gives each worksheet to its own subagent.
  */

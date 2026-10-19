@@ -453,14 +453,34 @@ before handing a worksheet over.
   repeated older options. A learner then sees the same wrong answer
   under two words. `check` now ignores case and punctuation and rejects
   an option that shares half its content words with another word's
-  option for the same look-alike. The older record still has 38 such
-  pairs; they show up when those words are next on a worksheet.
+  option for the same look-alike. The 38 older pairs were fixed on
+  2026-10-19, and `status` now lists any pair that remains. Two options
+  for one look-alike will always mean the same thing; that is allowed.
+  Only near-identical wording fails, so tell reviewers this.
 - **Dropping beats a third rewording.** On 2026-10-17 the main session's
   own rewrites failed six times (metamorphose, cogitate, modify,
   nepotism, skepticism, a landlord example), each by keeping a
   dictionary's frame. When a word still has 4 other options, drop the
   failed one. When it has only 4, swap in a look-alike whose
   dictionaries you have read first.
+
+- **Touching an older word means reviewing all of it again.** On
+  2026-10-19, 33 older words went on worksheets only to fix near-repeat
+  options. The second reviewer failed 29 of them in the first round, almost
+  all on older options that follow WordUp, Cambridge or Oxford. Those
+  options were reviewed before WordUp's script text was readable (see
+  above), so earlier reviewers could not catch them. Plan for two or three
+  rounds on any older word you put on a worksheet, even for a one-option
+  change.
+- **A dropped option can leave weak look-alikes.** Dropping the repeated
+  option left cogent, efficacy, esoteric, fallacious and inimical with two
+  look-alikes that share only an ending (pungent and indigent on cogent).
+  Before dropping, check that the 4 options left still tempt. If they do
+  not, bring the dropped look-alike back with new wording instead.
+- **`tools/dictionary-defs.py` showed no real Dictionary.com text before
+  2026-10-19.** Its pattern matched a site-wide line ("deserving respect or
+  admiration") on every page. Text checked against it before then was not
+  compared with Dictionary.com or the Collins text it carries.
 
 ## Pronunciation
 
