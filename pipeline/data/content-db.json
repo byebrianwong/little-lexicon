@@ -2,16 +2,16 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-17T08:25:54.331Z"
+    "updatedAt": "2026-10-19T08:57:17.825Z"
   },
   "counters": {
     "words": 617,
-    "senses": 1242,
-    "example_sentences": 5128,
-    "word_relations": 6544,
-    "distractors": 5728,
+    "senses": 1243,
+    "example_sentences": 5157,
+    "word_relations": 6551,
+    "distractors": 5861,
     "mnemonics": 969,
-    "reviews": 626
+    "reviews": 659
   },
   "words": [
     {
@@ -7220,7 +7220,7 @@
     {
       "id": 105,
       "word_id": 58,
-      "definition": "Add separate evidence that agrees with a claim or account already given, making it more believable.",
+      "definition": "Confirm a statement independently, so that it no longer rests on one source alone.",
       "plain_language_definition": "To back up what someone has said with proof from a second, separate source.",
       "sense_order": 1,
       "register": null
@@ -7428,8 +7428,8 @@
     {
       "id": 143,
       "word_id": 81,
-      "definition": "Different from one another in basic nature, so that they are hard to compare or combine.",
-      "plain_language_definition": "So different from each other that they seem to have little in common.",
+      "definition": "Unlike one another in their basic makeup, sharing few or no features.",
+      "plain_language_definition": "Of very different kinds, with almost nothing alike about them.",
       "sense_order": 1,
       "register": null
     },
@@ -7508,7 +7508,7 @@
     {
       "id": 163,
       "word_id": 90,
-      "definition": "Capacity or power to produce a desired effect.",
+      "definition": "A remedy's or plan's power to bring about the change it aims at.",
       "plain_language_definition": "How well something, like a medicine or plan, actually does the job it is meant to do.",
       "sense_order": 1,
       "register": null
@@ -8260,8 +8260,8 @@
     {
       "id": 295,
       "word_id": 170,
-      "definition": "Glowing with its own soft light, so that it stands out against the dark.",
-      "plain_language_definition": "Giving off a gentle, glowing light.",
+      "definition": "Sending out light of its own, whether dim or brilliant.",
+      "plain_language_definition": "Giving off its own light, so it glows or shines.",
       "sense_order": 1,
       "register": null
     },
@@ -8492,7 +8492,7 @@
     {
       "id": 343,
       "word_id": 196,
-      "definition": "Scornful public blame heaped on a person or group for behavior seen as disgraceful.",
+      "definition": "Scornful public blame aimed at a person or group for behavior seen as disgraceful.",
       "plain_language_definition": "A harsh wave of public shame and criticism directed at someone.",
       "sense_order": 1,
       "register": null
@@ -9060,8 +9060,8 @@
     {
       "id": 445,
       "word_id": 257,
-      "definition": "Inclined to keep one's thoughts and feelings to oneself.",
-      "plain_language_definition": "Not willing to say much about what you think or feel.",
+      "definition": "Saying little, especially about private matters, and keeping one's views in reserve.",
+      "plain_language_definition": "Quiet about yourself and slow to share your private thoughts.",
       "sense_order": 1,
       "register": null
     },
@@ -10111,14 +10111,6 @@
       "definition": "Giving off light, or letting light pass through; bright or see-through.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
-    },
-    {
-      "id": 606,
-      "word_id": 170,
-      "definition": "Very clear and inspiring, as if lit from within; used of writing, art or performances.",
-      "plain_language_definition": null,
-      "sense_order": 2,
       "register": null
     },
     {
@@ -11348,7 +11340,7 @@
     {
       "id": 795,
       "word_id": 412,
-      "definition": "Implied by or inferred from actions or statements.",
+      "definition": "Unspoken, yet understood and observed by everyone involved.",
       "plain_language_definition": "Agreed on or known by all without a single word being said about it.",
       "sense_order": 1,
       "register": null
@@ -13853,6 +13845,14 @@
       "id": 1242,
       "word_id": 527,
       "definition": "Lay a ship over on a beach at low tide to work on the part normally underwater.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1243,
+      "word_id": 170,
+      "definition": "Of writing or a performance: unusually clear, vivid and beautiful.",
       "plain_language_definition": null,
       "sense_order": 2,
       "register": null
@@ -18342,42 +18342,6 @@
       "is_generated": true
     },
     {
-      "id": 2688,
-      "sense_id": 163,
-      "text": "Clinical trials showed the new vaccine's efficacy: it prevented illness in nine out of ten people.",
-      "cloze_target": "efficacy",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 2689,
-      "sense_id": 163,
-      "text": "After sales kept falling, the manager began to doubt the efficacy of the expensive ad campaign.",
-      "cloze_target": "efficacy",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 2690,
-      "sense_id": 163,
-      "text": "Teachers wanted proof of the reading program's efficacy before using it in every classroom.",
-      "cloze_target": "efficacy",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 2691,
-      "sense_id": 163,
-      "text": "Economists disagree about the efficacy of cutting interest rates when people are afraid to spend.",
-      "cloze_target": "efficacy",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
       "id": 2692,
       "sense_id": 164,
       "text": "He had the effrontery to ask for a raise after missing every deadline this year.",
@@ -21087,51 +21051,6 @@
       "is_generated": true
     },
     {
-      "id": 2993,
-      "sense_id": 198,
-      "text": "The speaker meandered through several extraneous anecdotes that confused the audience.",
-      "cloze_target": "extraneous",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 2994,
-      "sense_id": 198,
-      "text": "Students should edit out extraneous details to keep their essays concise.",
-      "cloze_target": "extraneous",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 2995,
-      "sense_id": 198,
-      "text": "The detective dismissed the extraneous clues that led away from the primary suspect.",
-      "cloze_target": "extraneous",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 2996,
-      "sense_id": 198,
-      "text": "During the negotiation, the mediator asked both parties to ignore extraneous grievances.",
-      "cloze_target": "extraneous",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 2997,
-      "sense_id": 198,
-      "text": "The judge struck the remark as extraneous to the case and told the jury to ignore it.",
-      "cloze_target": "extraneous",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
       "id": 2998,
       "sense_id": 201,
       "text": "His facetious remarks during the serious meeting annoyed the board members.",
@@ -21316,42 +21235,6 @@
       "sense_id": 341,
       "text": "The philosopher's prose is so opaque that students read each paragraph three times before it makes sense.",
       "cloze_target": "opaque",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3019,
-      "sense_id": 343,
-      "text": "The corrupt politician faced severe opprobrium after the financial scandal broke.",
-      "cloze_target": "opprobrium",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3020,
-      "sense_id": 343,
-      "text": "The referee faced the opprobrium of the entire stadium after his call cost the home team the final.",
-      "cloze_target": "opprobrium",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3021,
-      "sense_id": 343,
-      "text": "The dictator earned international opprobrium for his human rights abuses.",
-      "cloze_target": "opprobrium",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3022,
-      "sense_id": 343,
-      "text": "When diners learned the chef had been serving reheated frozen meals as 'made fresh daily', the opprobrium online forced the restaurant to close.",
-      "cloze_target": "opprobrium",
       "audio_url": null,
       "source": "claude",
       "is_generated": true
@@ -22054,42 +21937,6 @@
       "sense_id": 292,
       "text": "Even under hostile questioning, the witness gave a lucid, step-by-step account of what she had seen that night.",
       "cloze_target": "lucid",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3101,
-      "sense_id": 295,
-      "text": "The luminous dial of the antique watch was visible even in total darkness.",
-      "cloze_target": "luminous",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3102,
-      "sense_id": 295,
-      "text": "A luminous crescent moon hung above the dark outline of the mountain range.",
-      "cloze_target": "luminous",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3103,
-      "sense_id": 295,
-      "text": "The exit signs are coated with luminous paint so people can find the doors during a blackout.",
-      "cloze_target": "luminous",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3104,
-      "sense_id": 295,
-      "text": "The deep sea creature had luminous organs that pulsed in the black water far below the surface.",
-      "cloze_target": "luminous",
       "audio_url": null,
       "source": "claude",
       "is_generated": true
@@ -23530,42 +23377,6 @@
       "sense_id": 216,
       "text": "A fortuitous gust of wind blew the lost kite back into the boy's arms.",
       "cloze_target": "fortuitous",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3269,
-      "sense_id": 218,
-      "text": "The fractious crew refused to follow the captain's navigation orders during the storm.",
-      "cloze_target": "fractious",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3270,
-      "sense_id": 218,
-      "text": "Dealing with a fractious legislature made it nearly impossible to pass new reforms.",
-      "cloze_target": "fractious",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3271,
-      "sense_id": 218,
-      "text": "The teacher struggled to maintain order among the most fractious students in the classroom.",
-      "cloze_target": "fractious",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3272,
-      "sense_id": 218,
-      "text": "The fractious horse bucked and kicked whenever anyone tried to put on its harness.",
-      "cloze_target": "fractious",
       "audio_url": null,
       "source": "claude",
       "is_generated": true
@@ -25692,42 +25503,6 @@
       "cloze_target": "punctilious",
       "audio_url": null,
       "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3509,
-      "sense_id": 413,
-      "text": "The kitchen was filled with the pungent aroma of freshly crushed garlic and onions.",
-      "cloze_target": "pungent",
-      "audio_url": null,
-      "source": "gemini",
-      "is_generated": true
-    },
-    {
-      "id": 3510,
-      "sense_id": 413,
-      "text": "A pungent smoke from the burning tires drifted across the valley and made our eyes water.",
-      "cloze_target": "pungent",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3511,
-      "sense_id": 413,
-      "text": "Durian is banned on some trains because its pungent smell fills a carriage in minutes.",
-      "cloze_target": "pungent",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 3512,
-      "sense_id": 413,
-      "text": "She wrinkled her nose at the pungent odor of the old cheese.",
-      "cloze_target": "pungent",
-      "audio_url": null,
-      "source": "gemini",
       "is_generated": true
     },
     {
@@ -32274,42 +32049,6 @@
       "is_generated": true
     },
     {
-      "id": 4403,
-      "sense_id": 882,
-      "text": "The report offered the facile conclusion that students fail only because they are lazy.",
-      "cloze_target": "facile",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 4404,
-      "sense_id": 882,
-      "text": "Blaming the whole recession on one bad law is a facile explanation for a tangled set of causes.",
-      "cloze_target": "facile",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 4405,
-      "sense_id": 882,
-      "text": "Critics found the film's ending facile, since it settled twenty years of family conflict with a single hug.",
-      "cloze_target": "facile",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
-      "id": 4406,
-      "sense_id": 882,
-      "text": "The debate coach warned that facile slogans, which skip every hard part of the issue, would cost them points with the judges.",
-      "cloze_target": "facile",
-      "audio_url": null,
-      "source": "claude",
-      "is_generated": true
-    },
-    {
       "id": 4407,
       "sense_id": 885,
       "text": "Kneeling before the king, each knight swore fealty and promised to fight whenever called.",
@@ -38140,6 +37879,267 @@
       "audio_url": null,
       "source": "claude",
       "is_generated": true
+    },
+    {
+      "id": 5129,
+      "sense_id": 218,
+      "text": "The fractious crew refused to follow the captain's navigation orders during the storm.",
+      "cloze_target": "fractious",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5130,
+      "sense_id": 218,
+      "text": "Dealing with a fractious legislature made it nearly impossible to pass new reforms.",
+      "cloze_target": "fractious",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5131,
+      "sense_id": 218,
+      "text": "The teacher struggled to maintain order among the most fractious students in the classroom.",
+      "cloze_target": "fractious",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5132,
+      "sense_id": 218,
+      "text": "The fractious horse grazed calmly until someone brought out its harness, then fought every attempt to fit it.",
+      "cloze_target": "fractious",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5133,
+      "sense_id": 198,
+      "text": "The speaker meandered through several extraneous anecdotes that confused the audience.",
+      "cloze_target": "extraneous",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5134,
+      "sense_id": 198,
+      "text": "Students should edit out extraneous details to keep their essays concise.",
+      "cloze_target": "extraneous",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5135,
+      "sense_id": 198,
+      "text": "The detective dismissed the extraneous clues that led away from the primary suspect.",
+      "cloze_target": "extraneous",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5136,
+      "sense_id": 198,
+      "text": "During the negotiation, the mediator asked both parties to ignore extraneous grievances.",
+      "cloze_target": "extraneous",
+      "audio_url": null,
+      "source": "gemini",
+      "is_generated": true
+    },
+    {
+      "id": 5137,
+      "sense_id": 198,
+      "text": "The meeting ran an hour over because people kept raising extraneous complaints about parking instead of discussing the budget.",
+      "cloze_target": "extraneous",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5138,
+      "sense_id": 295,
+      "text": "At midnight the lava flow was still luminous, a slow orange river creeping down the dark slope.",
+      "cloze_target": "luminous",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5139,
+      "sense_id": 295,
+      "text": "Paper lanterns, luminous with the candles burning inside them, floated up over the river during the festival.",
+      "cloze_target": "luminous",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5140,
+      "sense_id": 295,
+      "text": "On summer evenings the fireflies turned the meadow into a field of tiny luminous specks blinking on and off.",
+      "cloze_target": "luminous",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5141,
+      "sense_id": 295,
+      "text": "Through the fog, the lighthouse lamp was a luminous smudge that grew sharper as the boat drew closer.",
+      "cloze_target": "luminous",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5142,
+      "sense_id": 343,
+      "text": "When reporters showed that the charity's donations had paid for his yacht, the director met with such opprobrium that old friends crossed the street to avoid him.",
+      "cloze_target": "opprobrium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5143,
+      "sense_id": 343,
+      "text": "The referee faced the opprobrium of the entire stadium after his call cost the home team the final.",
+      "cloze_target": "opprobrium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5144,
+      "sense_id": 343,
+      "text": "Crossing the picket line earned him the lasting opprobrium of the coworkers who had stayed out on strike.",
+      "cloze_target": "opprobrium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5145,
+      "sense_id": 343,
+      "text": "When diners learned the chef had been serving reheated frozen meals as 'made fresh daily', the opprobrium online forced the restaurant to close.",
+      "cloze_target": "opprobrium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5146,
+      "sense_id": 413,
+      "text": "Grating fresh horseradish releases fumes so pungent that the cook's eyes start to stream.",
+      "cloze_target": "pungent",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5147,
+      "sense_id": 413,
+      "text": "A pungent whiff of ammonia rose from the janitor's bucket and sent us coughing into the hall.",
+      "cloze_target": "pungent",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5148,
+      "sense_id": 413,
+      "text": "Durian is banned on some trains because its pungent smell fills a carriage in minutes.",
+      "cloze_target": "pungent",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5149,
+      "sense_id": 413,
+      "text": "A skunk had passed under the porch in the night, and its pungent spray still hung in the air at breakfast.",
+      "cloze_target": "pungent",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5150,
+      "sense_id": 882,
+      "text": "The report offered the facile conclusion that students fail only because they are lazy.",
+      "cloze_target": "facile",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5151,
+      "sense_id": 882,
+      "text": "Telling someone with depression to \"just cheer up\" is facile advice that ignores how the illness works.",
+      "cloze_target": "facile",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5152,
+      "sense_id": 882,
+      "text": "Critics found the film's ending facile, since it settled twenty years of family conflict with a single hug.",
+      "cloze_target": "facile",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5153,
+      "sense_id": 882,
+      "text": "The debate coach warned that facile slogans, which skip every hard part of the issue, would cost them points with the judges.",
+      "cloze_target": "facile",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5154,
+      "sense_id": 163,
+      "text": "Clinical trials showed the new vaccine's efficacy: it prevented illness in nine out of ten people.",
+      "cloze_target": "efficacy",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5155,
+      "sense_id": 163,
+      "text": "Since sales fell even while the ads ran, the manager doubted the campaign had any efficacy at all.",
+      "cloze_target": "efficacy",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5156,
+      "sense_id": 163,
+      "text": "Teachers wanted proof of the reading program's efficacy before using it in every classroom.",
+      "cloze_target": "efficacy",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 5157,
+      "sense_id": 163,
+      "text": "Economists disagree about the efficacy of rate cuts: some say they revive spending, others say they change nothing.",
+      "cloze_target": "efficacy",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
     }
   ],
   "word_relations": [
@@ -41276,55 +41276,6 @@
       "id": 1773,
       "word_id": 58,
       "related_lemma": "refute",
-      "relation_type": "antonym",
-      "source": "claude"
-    },
-    {
-      "id": 1774,
-      "word_id": 59,
-      "related_lemma": "gullible",
-      "relation_type": "synonym",
-      "source": "claude"
-    },
-    {
-      "id": 1775,
-      "word_id": 59,
-      "related_lemma": "naive",
-      "relation_type": "synonym",
-      "source": "claude"
-    },
-    {
-      "id": 1776,
-      "word_id": 59,
-      "related_lemma": "trusting",
-      "relation_type": "synonym",
-      "source": "claude"
-    },
-    {
-      "id": 1777,
-      "word_id": 59,
-      "related_lemma": "unsuspecting",
-      "relation_type": "synonym",
-      "source": "claude"
-    },
-    {
-      "id": 1778,
-      "word_id": 59,
-      "related_lemma": "incredulous",
-      "relation_type": "antonym",
-      "source": "wordnet"
-    },
-    {
-      "id": 1779,
-      "word_id": 59,
-      "related_lemma": "skeptical",
-      "relation_type": "antonym",
-      "source": "claude"
-    },
-    {
-      "id": 1780,
-      "word_id": 59,
-      "related_lemma": "suspicious",
       "relation_type": "antonym",
       "source": "claude"
     },
@@ -67374,6 +67325,55 @@
       "related_lemma": "career",
       "relation_type": "synonym",
       "source": "claude"
+    },
+    {
+      "id": 6545,
+      "word_id": 59,
+      "related_lemma": "gullible",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6546,
+      "word_id": 59,
+      "related_lemma": "naive",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6547,
+      "word_id": 59,
+      "related_lemma": "trusting",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6548,
+      "word_id": 59,
+      "related_lemma": "unsuspecting",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6549,
+      "word_id": 59,
+      "related_lemma": "skeptical",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6550,
+      "word_id": 59,
+      "related_lemma": "suspicious",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6551,
+      "word_id": 59,
+      "related_lemma": "distrustful",
+      "relation_type": "antonym",
+      "source": "claude"
     }
   ],
   "mnemonics": [
@@ -74619,56 +74619,6 @@
       "lookalike": "profligate"
     },
     {
-      "id": 2983,
-      "sense_id": 445,
-      "distractor_lemma": "Having happened only a short time ago.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "recent"
-    },
-    {
-      "id": 2984,
-      "sense_id": 445,
-      "distractor_lemma": "Able to recover quickly from difficulty.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "resilient"
-    },
-    {
-      "id": 2985,
-      "sense_id": 445,
-      "distractor_lemma": "Showing deep respect, especially toward something sacred.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "reverent"
-    },
-    {
-      "id": 2986,
-      "sense_id": 445,
-      "distractor_lemma": "Stubbornly refusing to obey rules or authority.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "recalcitrant"
-    },
-    {
-      "id": 2987,
-      "sense_id": 445,
-      "distractor_lemma": "Strongly smelling of something, or strongly suggesting it.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "redolent"
-    },
-    {
       "id": 2993,
       "sense_id": 11,
       "distractor_lemma": "Practicing strict self-denial and avoiding comfort and pleasure.",
@@ -76409,56 +76359,6 @@
       "lookalike": "disprove"
     },
     {
-      "id": 3167,
-      "sense_id": 143,
-      "distractor_lemma": "Feeling that all hope is gone and willing to try anything.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "desperate"
-    },
-    {
-      "id": 3168,
-      "sense_id": 143,
-      "distractor_lemma": "Spoken in a way meant to make someone seem unimportant or bad.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "disparaging"
-    },
-    {
-      "id": 3169,
-      "sense_id": 143,
-      "distractor_lemma": "Calm and fair because one is not swayed by strong feelings.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "dispassionate"
-    },
-    {
-      "id": 3170,
-      "sense_id": 143,
-      "distractor_lemma": "So unhappy that nothing anyone does can comfort one.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "disconsolate"
-    },
-    {
-      "id": 3171,
-      "sense_id": 143,
-      "distractor_lemma": "Having a bad name because of dishonest or shabby behavior.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "disreputable"
-    },
-    {
       "id": 3172,
       "sense_id": 145,
       "distractor_lemma": "Take a machine or structure apart piece by piece.",
@@ -76759,106 +76659,6 @@
       "lookalike": "fastidious"
     },
     {
-      "id": 3202,
-      "sense_id": 161,
-      "distractor_lemma": "Rich enough to live in comfort, with money to spare.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "affluent"
-    },
-    {
-      "id": 3203,
-      "sense_id": 161,
-      "distractor_lemma": "Able to speak or write clearly and movingly.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "eloquent"
-    },
-    {
-      "id": 3204,
-      "sense_id": 161,
-      "distractor_lemma": "Ready and eager to fight or argue with others.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "belligerent"
-    },
-    {
-      "id": 3205,
-      "sense_id": 161,
-      "distractor_lemma": "Making rough, dry skin feel soft and calm.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "emollient"
-    },
-    {
-      "id": 3206,
-      "sense_id": 161,
-      "distractor_lemma": "Standing out so clearly that it draws attention first.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "salient"
-    },
-    {
-      "id": 3212,
-      "sense_id": 163,
-      "distractor_lemma": "The quality of using little time, energy or money for a given amount of work.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "efficiency"
-    },
-    {
-      "id": 3213,
-      "sense_id": 163,
-      "distractor_lemma": "A statue or dummy shaped like a real person, sometimes burned or hung to show anger at them.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "effigy"
-    },
-    {
-      "id": 3214,
-      "sense_id": 163,
-      "distractor_lemma": "A gift of money or belongings that a person arranges to pass on after death.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "legacy"
-    },
-    {
-      "id": 3215,
-      "sense_id": 163,
-      "distractor_lemma": "The work of speaking up and campaigning on behalf of a cause or a group.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "advocacy"
-    },
-    {
-      "id": 3216,
-      "sense_id": 163,
-      "distractor_lemma": "A belief that seems sound but rests on faulty reasoning.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fallacy"
-    },
-    {
       "id": 3217,
       "sense_id": 164,
       "distractor_lemma": "Wild land at the edge of a country's settled area.",
@@ -77157,56 +76957,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "coerce"
-    },
-    {
-      "id": 3247,
-      "sense_id": 91,
-      "distractor_lemma": "Aware of something and keeping it in mind.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "cognizant"
-    },
-    {
-      "id": 3248,
-      "sense_id": 91,
-      "distractor_lemma": "Related by having the same origin, as words in sister languages often are.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "cognate"
-    },
-    {
-      "id": 3249,
-      "sense_id": 91,
-      "distractor_lemma": "Strong and sharp in smell or taste, enough to sting the nose or tongue.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "pungent"
-    },
-    {
-      "id": 3250,
-      "sense_id": 91,
-      "distractor_lemma": "So poor that one depends on others for food, shelter and other basic needs.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "indigent"
-    },
-    {
-      "id": 3251,
-      "sense_id": 91,
-      "distractor_lemma": "Dependent on a condition that has not yet been settled.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "contingent"
     },
     {
       "id": 3252,
@@ -77707,56 +77457,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "pious"
-    },
-    {
-      "id": 3307,
-      "sense_id": 108,
-      "distractor_lemma": "Believable because it seems honest or likely to be true.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "credible"
-    },
-    {
-      "id": 3308,
-      "sense_id": 108,
-      "distractor_lemma": "Worthy of some respect or approval, as a solid effort is.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "creditable"
-    },
-    {
-      "id": 3309,
-      "sense_id": 108,
-      "distractor_lemma": "Working steadily and carefully without letting up.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "sedulous"
-    },
-    {
-      "id": 3310,
-      "sense_id": 108,
-      "distractor_lemma": "Shaky and unsteady, the way a voice or hand gets when someone is scared or frail.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "tremulous"
-    },
-    {
-      "id": 3311,
-      "sense_id": 108,
-      "distractor_lemma": "Always grumbling and finding fault, in a fretful tone.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "querulous"
     },
     {
       "id": 3312,
@@ -78559,156 +78259,6 @@
       "lookalike": "irate"
     },
     {
-      "id": 3402,
-      "sense_id": 183,
-      "distractor_lemma": "Strange in habits or behavior in a harmless, often charming way.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "eccentric"
-    },
-    {
-      "id": 3403,
-      "sense_id": 183,
-      "distractor_lemma": "Strikingly foreign and unfamiliar, as if brought from a distant land.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "exotic"
-    },
-    {
-      "id": 3404,
-      "sense_id": 183,
-      "distractor_lemma": "Remembered as important in the story of a nation or the world.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "historic"
-    },
-    {
-      "id": 3405,
-      "sense_id": 183,
-      "distractor_lemma": "Wildly happy, as if carried away by joy.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "ecstatic"
-    },
-    {
-      "id": 3406,
-      "sense_id": 183,
-      "distractor_lemma": "Mixing pieces from many different styles or schools, as a playlist that jumps from jazz to punk does.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "eclectic"
-    },
-    {
-      "id": 3407,
-      "sense_id": 48,
-      "distractor_lemma": "Talk someone out of a plan or course of action.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "dissuade"
-    },
-    {
-      "id": 3408,
-      "sense_id": 48,
-      "distractor_lemma": "Attack someone fiercely, with blows or with harsh words.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "assail"
-    },
-    {
-      "id": 3409,
-      "sense_id": 48,
-      "distractor_lemma": "Weigh up the value, quality or size of something.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "assess"
-    },
-    {
-      "id": 3410,
-      "sense_id": 48,
-      "distractor_lemma": "Treat something as a fact before anyone has shown it to be one.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "assume"
-    },
-    {
-      "id": 3411,
-      "sense_id": 48,
-      "distractor_lemma": "Test a metal or chemical to find out what it contains.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "assay"
-    },
-    {
-      "id": 3412,
-      "sense_id": 51,
-      "distractor_lemma": "Possible to hear, even if only faintly.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "audible"
-    },
-    {
-      "id": 3413,
-      "sense_id": 51,
-      "distractor_lemma": "Suggesting that things will turn out well.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "auspicious"
-    },
-    {
-      "id": 3414,
-      "sense_id": 51,
-      "distractor_lemma": "Driven by an endless craving to pile up wealth.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "avaricious"
-    },
-    {
-      "id": 3415,
-      "sense_id": 51,
-      "distractor_lemma": "Showing deep wisdom and sound judgment.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "sagacious"
-    },
-    {
-      "id": 3416,
-      "sense_id": 51,
-      "distractor_lemma": "Regularly dishonest, with a habit of saying what is false.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "mendacious"
-    },
-    {
       "id": 3417,
       "sense_id": 54,
       "distractor_lemma": "Sharp and shrewd in judging people and situations.",
@@ -78837,56 +78387,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "renal"
-    },
-    {
-      "id": 3430,
-      "sense_id": 60,
-      "distractor_lemma": "Talk about someone or their work as if it hardly matters.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "belittle"
-    },
-    {
-      "id": 3431,
-      "sense_id": 60,
-      "distractor_lemma": "Go over a point again and again, far longer than needed.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "belabor"
-    },
-    {
-      "id": 3432,
-      "sense_id": 60,
-      "distractor_lemma": "Grieve aloud over a loss or misfortune.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "bewail"
-    },
-    {
-      "id": 3433,
-      "sense_id": 60,
-      "distractor_lemma": "Beg someone earnestly for help or mercy.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "beseech"
-    },
-    {
-      "id": 3434,
-      "sense_id": 60,
-      "distractor_lemma": "Arrange in a will for someone to receive money or possessions after one's death.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "bequeath"
     },
     {
       "id": 3435,
@@ -79487,56 +78987,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "amortize"
-    },
-    {
-      "id": 3495,
-      "sense_id": 25,
-      "distractor_lemma": "The political view that people should live without any state or ruling authority.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "anarchism"
-    },
-    {
-      "id": 3496,
-      "sense_id": 25,
-      "distractor_lemma": "A brief, memorable saying that sums up a piece of wisdom about life.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "aphorism"
-    },
-    {
-      "id": 3497,
-      "sense_id": 25,
-      "distractor_lemma": "Ongoing hostility between people or groups who work against each other.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "antagonism"
-    },
-    {
-      "id": 3498,
-      "sense_id": 25,
-      "distractor_lemma": "A word made by shuffling the letters of another word, as silent is made from listen.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "anagram"
-    },
-    {
-      "id": 3499,
-      "sense_id": 25,
-      "distractor_lemma": "A very precise clock, of the kind sailors once used to find their position at sea.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "chronometer"
     },
     {
       "id": 3500,
@@ -80329,56 +79779,6 @@
       "lookalike": "exult"
     },
     {
-      "id": 3579,
-      "sense_id": 198,
-      "distractor_lemma": "Delivered on the spot, with no script or rehearsal.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "extemporaneous"
-    },
-    {
-      "id": 3580,
-      "sense_id": 198,
-      "distractor_lemma": "Taking place at exactly the same time as something else.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "simultaneous"
-    },
-    {
-      "id": 3581,
-      "sense_id": 198,
-      "distractor_lemma": "Demanding hard physical or mental work.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "strenuous"
-    },
-    {
-      "id": 3582,
-      "sense_id": 198,
-      "distractor_lemma": "Far beyond what is usual or expected.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "extraordinary"
-    },
-    {
-      "id": 3583,
-      "sense_id": 198,
-      "distractor_lemma": "Wrong because it rests on a mistake.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "erroneous"
-    },
-    {
       "id": 3584,
       "sense_id": 201,
       "distractor_lemma": "Glib and shallow, treating a hard question as if it were easy.",
@@ -80427,106 +79827,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "felicitous"
-    },
-    {
-      "id": 3589,
-      "sense_id": 202,
-      "distractor_lemma": "Left unsown for a season so that tired farmland can rest.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fallow"
-    },
-    {
-      "id": 3590,
-      "sense_id": 202,
-      "distractor_lemma": "Dwelling on sexual matters in a crude or titillating way.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "salacious"
-    },
-    {
-      "id": 3591,
-      "sense_id": 202,
-      "distractor_lemma": "Daring in a way that surprises people, sometimes rudely so.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "audacious"
-    },
-    {
-      "id": 3592,
-      "sense_id": 202,
-      "distractor_lemma": "Greedy and grasping, eager to take what belongs to others.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "rapacious"
-    },
-    {
-      "id": 3593,
-      "sense_id": 202,
-      "distractor_lemma": "Warm and polite toward others, especially guests.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "gracious"
-    },
-    {
-      "id": 3594,
-      "sense_id": 339,
-      "distractor_lemma": "Approved by, or acting on behalf of, a government or other authority.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "official"
-    },
-    {
-      "id": 3595,
-      "sense_id": 339,
-      "distractor_lemma": "Working well enough to bring about the result that was wanted.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "efficacious"
-    },
-    {
-      "id": 3596,
-      "sense_id": 339,
-      "distractor_lemma": "Fawning, and keen to obey or flatter people with power.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "obsequious"
-    },
-    {
-      "id": 3597,
-      "sense_id": 339,
-      "distractor_lemma": "Joking about a serious matter at a moment when humor is out of place.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "facetious"
-    },
-    {
-      "id": 3598,
-      "sense_id": 339,
-      "distractor_lemma": "Seeming to promise that things will turn out well.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "auspicious"
     },
     {
       "id": 3599,
@@ -80627,56 +79927,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "operatic"
-    },
-    {
-      "id": 3609,
-      "sense_id": 343,
-      "distractor_lemma": "Harsh treatment of a group by those in control, denying them fair rights.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "oppression"
-    },
-    {
-      "id": 3610,
-      "sense_id": 343,
-      "distractor_lemma": "A state of confused thinking and wild excitement, often caused by fever or illness.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "delirium"
-    },
-    {
-      "id": 3611,
-      "sense_id": 343,
-      "distractor_lemma": "A steady condition where competing pressures cancel out and nothing shifts.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "equilibrium"
-    },
-    {
-      "id": 3612,
-      "sense_id": 343,
-      "distractor_lemma": "A grand old shop where you could buy almost anything under one roof.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "emporium"
-    },
-    {
-      "id": 3613,
-      "sense_id": 343,
-      "distractor_lemma": "An agreed pause on an activity for a set period of time.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "moratorium"
     },
     {
       "id": 3614,
@@ -80877,56 +80127,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "paraffin"
-    },
-    {
-      "id": 3634,
-      "sense_id": 352,
-      "distractor_lemma": "Harsh, bitter anger between people who disagree.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "acrimony"
-    },
-    {
-      "id": 3635,
-      "sense_id": 352,
-      "distractor_lemma": "Marriage, especially when seen as a formal or religious bond.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "matrimony"
-    },
-    {
-      "id": 3636,
-      "sense_id": 352,
-      "distractor_lemma": "Wealth or traditions handed down from a father or earlier forebears.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "patrimony"
-    },
-    {
-      "id": 3637,
-      "sense_id": 352,
-      "distractor_lemma": "A comic imitation that mocks the style of a writer, artist or genre.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "parody"
-    },
-    {
-      "id": 3638,
-      "sense_id": 352,
-      "distractor_lemma": "The home where a parish clergyman lives, owned by his church.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "parsonage"
     },
     {
       "id": 3639,
@@ -81659,106 +80859,6 @@
       "lookalike": "placid"
     },
     {
-      "id": 3712,
-      "sense_id": 295,
-      "distractor_lemma": "Taking up a lot of space, or made of a large amount of material.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "voluminous"
-    },
-    {
-      "id": 3713,
-      "sense_id": 295,
-      "distractor_lemma": "Stirring a feeling that something sacred or divine is present.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "numinous"
-    },
-    {
-      "id": 3714,
-      "sense_id": 295,
-      "distractor_lemma": "Giving a sign that trouble or danger is on its way.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "ominous"
-    },
-    {
-      "id": 3715,
-      "sense_id": 295,
-      "distractor_lemma": "Mournful and gloomy in a heavy, exaggerated way.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "lugubrious"
-    },
-    {
-      "id": 3716,
-      "sense_id": 295,
-      "distractor_lemma": "So costly or destructive that it brings about collapse or bankruptcy.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "ruinous"
-    },
-    {
-      "id": 3717,
-      "sense_id": 296,
-      "distractor_lemma": "Backed by every single member, with not one voice against.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "unanimous"
-    },
-    {
-      "id": 3718,
-      "sense_id": 296,
-      "distractor_lemma": "Too timid to take a stand or face danger.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "pusillanimous"
-    },
-    {
-      "id": 3719,
-      "sense_id": 296,
-      "distractor_lemma": "Commanding and authoritative, like someone used to giving orders.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "magisterial"
-    },
-    {
-      "id": 3720,
-      "sense_id": 296,
-      "distractor_lemma": "Grand and splendid, impressive in size or beauty.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "magnificent"
-    },
-    {
-      "id": 3721,
-      "sense_id": 296,
-      "distractor_lemma": "Lively and full of energy, especially in speech or movement.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "animated"
-    },
-    {
       "id": 3722,
       "sense_id": 298,
       "distractor_lemma": "Stay on somewhere after the reason for being there has passed.",
@@ -81807,56 +80907,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "mingle"
-    },
-    {
-      "id": 3727,
-      "sense_id": 299,
-      "distractor_lemma": "Wanting bad things to happen to others.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "malevolent"
-    },
-    {
-      "id": 3728,
-      "sense_id": 299,
-      "distractor_lemma": "Awkward and clumsy, in actions or in dealing with people.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "maladroit"
-    },
-    {
-      "id": 3729,
-      "sense_id": 299,
-      "distractor_lemma": "Giving off a nasty smell.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "malodorous"
-    },
-    {
-      "id": 3730,
-      "sense_id": 299,
-      "distractor_lemma": "Strong or real enough to be felt or touched.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "palpable"
-    },
-    {
-      "id": 3731,
-      "sense_id": 299,
-      "distractor_lemma": "Unhappy with the way things are and inclined to complain or rebel.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "malcontent"
     },
     {
       "id": 3732,
@@ -82059,56 +81109,6 @@
       "lookalike": "meritorious"
     },
     {
-      "id": 3752,
-      "sense_id": 308,
-      "distractor_lemma": "Act as a strong force against an outcome, as evidence can against a verdict.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "militate"
-    },
-    {
-      "id": 3753,
-      "sense_id": 308,
-      "distractor_lemma": "Take a dispute to court, or argue a case there.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "litigate"
-    },
-    {
-      "id": 3754,
-      "sense_id": 308,
-      "distractor_lemma": "Move from one region to another, often with the seasons.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "migrate"
-    },
-    {
-      "id": 3755,
-      "sense_id": 308,
-      "distractor_lemma": "Set something in motion, especially trouble or unrest.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "instigate"
-    },
-    {
-      "id": 3756,
-      "sense_id": 308,
-      "distractor_lemma": "Damage a body or object badly by cutting off or destroying parts.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "mutilate"
-    },
-    {
       "id": 3762,
       "sense_id": 313,
       "distractor_lemma": "Wordy, saying in twenty words what could be said in five.",
@@ -82157,56 +81157,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "porous"
-    },
-    {
-      "id": 3767,
-      "sense_id": 251,
-      "distractor_lemma": "Openly question whether a claim or a person's character can be trusted.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "impugn"
-    },
-    {
-      "id": 3768,
-      "sense_id": 251,
-      "distractor_lemma": "Soak or fill something thoroughly with a feeling, quality or color.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "imbue"
-    },
-    {
-      "id": 3769,
-      "sense_id": 251,
-      "distractor_lemma": "Pass on knowledge or news to another person.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "impart"
-    },
-    {
-      "id": 3770,
-      "sense_id": 251,
-      "distractor_lemma": "Slow down or block progress by getting in the way.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "impede"
-    },
-    {
-      "id": 3771,
-      "sense_id": 251,
-      "distractor_lemma": "Cut off an arm, leg, finger or toe in an operation.",
-      "kind": "mc",
-      "difficulty": 4,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "amputate"
     },
     {
       "id": 3772,
@@ -82507,56 +81457,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "ingrained"
-    },
-    {
-      "id": 3807,
-      "sense_id": 264,
-      "distractor_lemma": "Unique in a way that no one else can match or imitate.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "inimitable"
-    },
-    {
-      "id": 3808,
-      "sense_id": 264,
-      "distractor_lemma": "Kept to the smallest amount needed.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "minimal"
-    },
-    {
-      "id": 3809,
-      "sense_id": 264,
-      "distractor_lemma": "Close and personal, as between old friends.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "intimate"
-    },
-    {
-      "id": 3810,
-      "sense_id": 264,
-      "distractor_lemma": "Full of life, energy and lively movement.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "animated"
-    },
-    {
-      "id": 3811,
-      "sense_id": 264,
-      "distractor_lemma": "Cool and detached, showing no feeling.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "clinical"
     },
     {
       "id": 3812,
@@ -83639,56 +82539,6 @@
       "lookalike": "iniquitous"
     },
     {
-      "id": 3920,
-      "sense_id": 218,
-      "distractor_lemma": "Forming only a small part of a whole; tiny.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fractional"
-    },
-    {
-      "id": 3921,
-      "sense_id": 218,
-      "distractor_lemma": "Likely to break, crack or fail under slight pressure.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fragile"
-    },
-    {
-      "id": 3922,
-      "sense_id": 218,
-      "distractor_lemma": "Giving off a pleasant scent, like flowers.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fragrant"
-    },
-    {
-      "id": 3923,
-      "sense_id": 218,
-      "distractor_lemma": "Roomy enough to hold a great deal.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "capacious"
-    },
-    {
-      "id": 3924,
-      "sense_id": 218,
-      "distractor_lemma": "Showing the warm loyalty that brothers share.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fraternal"
-    },
-    {
       "id": 3925,
       "sense_id": 221,
       "distractor_lemma": "Icy cold, as in polar air.",
@@ -84717,56 +83567,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "forum"
-    },
-    {
-      "id": 4028,
-      "sense_id": 105,
-      "distractor_lemma": "Eat away at metal or stone slowly, as rust or acid does.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "corrode"
-    },
-    {
-      "id": 4029,
-      "sense_id": 105,
-      "distractor_lemma": "Bend a flat sheet into a row of folds, as in cardboard or roofing metal.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "corrugate"
-    },
-    {
-      "id": 4030,
-      "sense_id": 105,
-      "distractor_lemma": "Team up with others on a shared piece of work.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "collaborate"
-    },
-    {
-      "id": 4031,
-      "sense_id": 105,
-      "distractor_lemma": "Add more detail to an idea, plan or explanation.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "elaborate"
-    },
-    {
-      "id": 4032,
-      "sense_id": 105,
-      "distractor_lemma": "Lead someone into dishonest or immoral behavior, often with bribes.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "corrupt"
     },
     {
       "id": 4033,
@@ -85899,46 +84699,6 @@
       "lookalike": "salivate"
     },
     {
-      "id": 4146,
-      "sense_id": 461,
-      "distractor_lemma": "Soaked through, so that no more liquid can be taken in.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "saturated"
-    },
-    {
-      "id": 4147,
-      "sense_id": 461,
-      "distractor_lemma": "Curving back and forth in long bends, the way a snake moves.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "serpentine"
-    },
-    {
-      "id": 4148,
-      "sense_id": 461,
-      "distractor_lemma": "Holding dissolved salt, like seawater.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "saline"
-    },
-    {
-      "id": 4149,
-      "sense_id": 461,
-      "distractor_lemma": "Stretched out flat on one's back, face toward the ceiling or sky.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "supine"
-    },
-    {
       "id": 4150,
       "sense_id": 463,
       "distractor_lemma": "Someone hired to cook, clean or wait on others in a household.",
@@ -86537,46 +85297,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "pusillanimous"
-    },
-    {
-      "id": 4210,
-      "sense_id": 413,
-      "distractor_lemma": "Touching the heart in a way that brings sadness or tender memories.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "poignant"
-    },
-    {
-      "id": 4211,
-      "sense_id": 413,
-      "distractor_lemma": "Ringing out in a deep, sad, lingering way, as a distant bell does.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "plangent"
-    },
-    {
-      "id": 4212,
-      "sense_id": 413,
-      "distractor_lemma": "Persuasive because its reasoning is tight and easy to follow.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "cogent"
-    },
-    {
-      "id": 4213,
-      "sense_id": 413,
-      "distractor_lemma": "Designed to make someone pay a penalty for wrongdoing.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "punitive"
     },
     {
       "id": 4214,
@@ -89209,46 +87929,6 @@
       "lookalike": "ardent"
     },
     {
-      "id": 4477,
-      "sense_id": 671,
-      "distractor_lemma": "So vast or sacred that no words can describe it fully.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "ineffable"
-    },
-    {
-      "id": 4478,
-      "sense_id": 671,
-      "distractor_lemma": "Wealthy enough to live in comfort, with money to spare.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "affluent"
-    },
-    {
-      "id": 4479,
-      "sense_id": 671,
-      "distractor_lemma": "Showy and unnatural, adopted for effect rather than truly felt.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "affected"
-    },
-    {
-      "id": 4480,
-      "sense_id": 671,
-      "distractor_lemma": "Able to get things wrong now and then, since no person or method is perfect.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fallible"
-    },
-    {
       "id": 4481,
       "sense_id": 672,
       "distractor_lemma": "A thing out of step with its time, placed in an era where it does not fit.",
@@ -90679,56 +89359,6 @@
       "lookalike": "skew"
     },
     {
-      "id": 4624,
-      "sense_id": 716,
-      "distractor_lemma": "Squeeze money or favors out of someone through threats.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "extort"
-    },
-    {
-      "id": 4625,
-      "sense_id": 716,
-      "distractor_lemma": "Bring a buried coffin back to the surface, often for a fresh autopsy.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "exhume"
-    },
-    {
-      "id": 4626,
-      "sense_id": 716,
-      "distractor_lemma": "Breathe out, emptying air from the chest.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "exhale"
-    },
-    {
-      "id": 4627,
-      "sense_id": 716,
-      "distractor_lemma": "Rid a haunted house or a possessed person of a demon through ritual.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "exorcise"
-    },
-    {
-      "id": 4628,
-      "sense_id": 716,
-      "distractor_lemma": "Fire back a quick, cutting reply to something someone said.",
-      "kind": "mc",
-      "difficulty": 3,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "retort"
-    },
-    {
       "id": 4629,
       "sense_id": 718,
       "distractor_lemma": "Go on at length about a subject in speech or writing.",
@@ -90777,56 +89407,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "extirpate"
-    },
-    {
-      "id": 4634,
-      "sense_id": 719,
-      "distractor_lemma": "Making jokes about serious things when jokes are out of place.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "facetious"
-    },
-    {
-      "id": 4635,
-      "sense_id": 719,
-      "distractor_lemma": "So empty-headed that it borders on the idiotic.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fatuous"
-    },
-    {
-      "id": 4636,
-      "sense_id": 719,
-      "distractor_lemma": "Always ready to bicker, rebel or throw a tantrum.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fractious"
-    },
-    {
-      "id": 4637,
-      "sense_id": 719,
-      "distractor_lemma": "Resting on a false belief or on faulty reasoning.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fallacious"
-    },
-    {
-      "id": 4638,
-      "sense_id": 719,
-      "distractor_lemma": "Hitting just the right note, especially in a choice of words.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "felicitous"
     },
     {
       "id": 4639,
@@ -92969,46 +91549,6 @@
       "lookalike": "punctilious"
     },
     {
-      "id": 4853,
-      "sense_id": 795,
-      "distractor_lemma": "Seldom willing to talk, and quiet by nature.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "taciturn"
-    },
-    {
-      "id": 4854,
-      "sense_id": 795,
-      "distractor_lemma": "Sensed by touch rather than by sight or sound.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "tactile"
-    },
-    {
-      "id": 4855,
-      "sense_id": 795,
-      "distractor_lemma": "Chosen for its immediate advantage in a fight, game or contest.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "tactical"
-    },
-    {
-      "id": 4856,
-      "sense_id": 795,
-      "distractor_lemma": "Skilled at handling touchy matters without hurting anyone's feelings.",
-      "kind": "mc",
-      "difficulty": 1,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "tactful"
-    },
-    {
       "id": 4857,
       "sense_id": 796,
       "distractor_lemma": "Stubborn persistence in pursuing a goal despite setbacks.",
@@ -93749,56 +92289,6 @@
       "lookalike": "actuate"
     },
     {
-      "id": 4931,
-      "sense_id": 844,
-      "distractor_lemma": "Feel bitter that someone else got a reward or a lucky break.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "begrudge"
-    },
-    {
-      "id": 4932,
-      "sense_id": 844,
-      "distractor_lemma": "Produce a child as its father, or bring a result into being.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "beget"
-    },
-    {
-      "id": 4933,
-      "sense_id": 844,
-      "distractor_lemma": "Weep and moan aloud over a loss or a misfortune.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "bewail"
-    },
-    {
-      "id": 4934,
-      "sense_id": 844,
-      "distractor_lemma": "Talk about a person or their work as if it hardly mattered.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "belittle"
-    },
-    {
-      "id": 4935,
-      "sense_id": 844,
-      "distractor_lemma": "Name in a will who receives one's money or goods after death.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "bequeath"
-    },
-    {
       "id": 4936,
       "sense_id": 869,
       "distractor_lemma": "A schoolteacher, often one who insists on rules and corrects every small slip in a lesson.",
@@ -94167,46 +92657,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "exorbitant"
-    },
-    {
-      "id": 4973,
-      "sense_id": 882,
-      "distractor_lemma": "Bound to fail, no matter how much effort goes into it.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "futile"
-    },
-    {
-      "id": 4974,
-      "sense_id": 882,
-      "distractor_lemma": "Delicate enough that a knock or a drop would ruin it.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fragile"
-    },
-    {
-      "id": 4975,
-      "sense_id": 882,
-      "distractor_lemma": "Making light of things at a moment that calls for seriousness.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "facetious"
-    },
-    {
-      "id": 4976,
-      "sense_id": 882,
-      "distractor_lemma": "Quick to switch loyalties or opinions for no good reason.",
-      "kind": "mc",
-      "difficulty": 2,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "fickle"
     },
     {
       "id": 4977,
@@ -94907,46 +93357,6 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "squall"
-    },
-    {
-      "id": 5047,
-      "sense_id": 953,
-      "distractor_lemma": "Shunt someone or something aside into a minor, less valued role.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "relegate"
-    },
-    {
-      "id": 5048,
-      "sense_id": 953,
-      "distractor_lemma": "Attack someone with harsh, insulting words.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "revile"
-    },
-    {
-      "id": 5049,
-      "sense_id": 953,
-      "distractor_lemma": "Lose ground and fall back toward an earlier stage of growth.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "regress"
-    },
-    {
-      "id": 5050,
-      "sense_id": 953,
-      "distractor_lemma": "Keep an activity in order by setting rules and limits on it.",
-      "kind": "mc",
-      "difficulty": 5,
-      "source": "claude",
-      "revision": 3,
-      "lookalike": "regulate"
     },
     {
       "id": 5051,
@@ -101727,6 +100137,1336 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "cater"
+    },
+    {
+      "id": 5729,
+      "sense_id": 299,
+      "distractor_lemma": "Awkward and clumsy, in actions or in dealing with people.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "maladroit"
+    },
+    {
+      "id": 5730,
+      "sense_id": 299,
+      "distractor_lemma": "Reeking of rot or sweat, so that the air around it turns foul.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "malodorous"
+    },
+    {
+      "id": 5731,
+      "sense_id": 299,
+      "distractor_lemma": "Filled with spite and set on wrecking other people's lives or plans.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "malignant"
+    },
+    {
+      "id": 5732,
+      "sense_id": 299,
+      "distractor_lemma": "Restless and resentful, nursing grievances that no change ever seems to settle.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "malcontent"
+    },
+    {
+      "id": 5733,
+      "sense_id": 25,
+      "distractor_lemma": "The political view that people should live without any state or ruling authority.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "anarchism"
+    },
+    {
+      "id": 5734,
+      "sense_id": 25,
+      "distractor_lemma": "Ongoing hostility between people or groups who work against each other.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "antagonism"
+    },
+    {
+      "id": 5735,
+      "sense_id": 25,
+      "distractor_lemma": "An idea or practice so hateful to a group that its members reject it on sight.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "anathema"
+    },
+    {
+      "id": 5736,
+      "sense_id": 25,
+      "distractor_lemma": "A long account of a kingdom's or family's past, told one year after another.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "chronicle"
+    },
+    {
+      "id": 5737,
+      "sense_id": 48,
+      "distractor_lemma": "Talk someone out of a plan or course of action.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "dissuade"
+    },
+    {
+      "id": 5738,
+      "sense_id": 48,
+      "distractor_lemma": "Rush at an enemy and strike at them again and again.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "assail"
+    },
+    {
+      "id": 5739,
+      "sense_id": 48,
+      "distractor_lemma": "Size up a person, plan or problem and reach a verdict on its merits.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "assess"
+    },
+    {
+      "id": 5740,
+      "sense_id": 48,
+      "distractor_lemma": "Treat something as a fact before anyone has shown it to be one.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "assume"
+    },
+    {
+      "id": 5741,
+      "sense_id": 51,
+      "distractor_lemma": "Possible to hear, even if only faintly.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "audible"
+    },
+    {
+      "id": 5742,
+      "sense_id": 51,
+      "distractor_lemma": "Driven by an endless craving to pile up wealth.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "avaricious"
+    },
+    {
+      "id": 5743,
+      "sense_id": 51,
+      "distractor_lemma": "Showing deep wisdom and sound judgment.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "sagacious"
+    },
+    {
+      "id": 5744,
+      "sense_id": 51,
+      "distractor_lemma": "Regularly dishonest, with a habit of saying what is false.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mendacious"
+    },
+    {
+      "id": 5745,
+      "sense_id": 339,
+      "distractor_lemma": "Formal and on the record, rather than said privately or off the cuff.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "official"
+    },
+    {
+      "id": 5746,
+      "sense_id": 339,
+      "distractor_lemma": "Getting real results when put into practice.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "efficacious"
+    },
+    {
+      "id": 5747,
+      "sense_id": 339,
+      "distractor_lemma": "Fawning, and keen to obey or flatter people with power.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "obsequious"
+    },
+    {
+      "id": 5748,
+      "sense_id": 339,
+      "distractor_lemma": "Dreamed up and passed off as real.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fictitious"
+    },
+    {
+      "id": 5749,
+      "sense_id": 719,
+      "distractor_lemma": "Prone to flippant wisecracks when a straight answer is called for.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "facetious"
+    },
+    {
+      "id": 5750,
+      "sense_id": 719,
+      "distractor_lemma": "So empty-headed that it borders on the idiotic.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fatuous"
+    },
+    {
+      "id": 5751,
+      "sense_id": 719,
+      "distractor_lemma": "Always ready to bicker, rebel or throw a tantrum.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fractious"
+    },
+    {
+      "id": 5752,
+      "sense_id": 719,
+      "distractor_lemma": "Wearisome because it drags on and never varies.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tedious"
+    },
+    {
+      "id": 5753,
+      "sense_id": 60,
+      "distractor_lemma": "Keep hammering at an argument that everyone has already accepted.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "belabor"
+    },
+    {
+      "id": 5754,
+      "sense_id": 60,
+      "distractor_lemma": "Grieve aloud over a loss or misfortune.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "bewail"
+    },
+    {
+      "id": 5755,
+      "sense_id": 60,
+      "distractor_lemma": "Beg someone earnestly for help or mercy.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "beseech"
+    },
+    {
+      "id": 5756,
+      "sense_id": 60,
+      "distractor_lemma": "Wear someone down with a constant stream of troubles or demands.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "beleaguer"
+    },
+    {
+      "id": 5757,
+      "sense_id": 844,
+      "distractor_lemma": "Feel bitter that someone else got a reward or a lucky break.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "begrudge"
+    },
+    {
+      "id": 5758,
+      "sense_id": 844,
+      "distractor_lemma": "Produce a child as its father, or bring a result into being.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "beget"
+    },
+    {
+      "id": 5759,
+      "sense_id": 844,
+      "distractor_lemma": "Sneer at what someone has done and deny it any credit.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "belittle"
+    },
+    {
+      "id": 5760,
+      "sense_id": 844,
+      "distractor_lemma": "Settle in writing which heirs will get one's estate once one has died.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "bequeath"
+    },
+    {
+      "id": 5761,
+      "sense_id": 296,
+      "distractor_lemma": "Backed by every single member, with not one voice against.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unanimous"
+    },
+    {
+      "id": 5762,
+      "sense_id": 296,
+      "distractor_lemma": "Too timid to take a stand or face danger.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "pusillanimous"
+    },
+    {
+      "id": 5763,
+      "sense_id": 296,
+      "distractor_lemma": "Fond of grand, showy words that sound more impressive than they are.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "magniloquent"
+    },
+    {
+      "id": 5764,
+      "sense_id": 296,
+      "distractor_lemma": "Lively and full of energy, especially in speech or movement.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "animated"
+    },
+    {
+      "id": 5765,
+      "sense_id": 264,
+      "distractor_lemma": "One of a kind, in a style that others try for and never manage.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "inimitable"
+    },
+    {
+      "id": 5766,
+      "sense_id": 264,
+      "distractor_lemma": "Kept to the smallest amount needed.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "minimal"
+    },
+    {
+      "id": 5767,
+      "sense_id": 264,
+      "distractor_lemma": "Knowing each other so well that nothing is held back between them.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "intimate"
+    },
+    {
+      "id": 5768,
+      "sense_id": 264,
+      "distractor_lemma": "Coming so soon that there is little time left to prepare.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "imminent"
+    },
+    {
+      "id": 5769,
+      "sense_id": 218,
+      "distractor_lemma": "Amounting to a sliver of the total, often too little to matter.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fractional"
+    },
+    {
+      "id": 5770,
+      "sense_id": 218,
+      "distractor_lemma": "Likely to break, crack or fail under slight pressure.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fragile"
+    },
+    {
+      "id": 5771,
+      "sense_id": 218,
+      "distractor_lemma": "So panicked that every move becomes hurried and scattered.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "frantic"
+    },
+    {
+      "id": 5772,
+      "sense_id": 218,
+      "distractor_lemma": "Felt between brothers, or between comrades who treat each other as kin.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fraternal"
+    },
+    {
+      "id": 5773,
+      "sense_id": 251,
+      "distractor_lemma": "Steep someone in a belief or mood until it becomes part of them.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "imbue"
+    },
+    {
+      "id": 5774,
+      "sense_id": 251,
+      "distractor_lemma": "Tell or teach someone something, so they come to know it too.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "impart"
+    },
+    {
+      "id": 5775,
+      "sense_id": 251,
+      "distractor_lemma": "Act as a drag on a plan or a movement, so it advances only with difficulty.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "impede"
+    },
+    {
+      "id": 5776,
+      "sense_id": 251,
+      "distractor_lemma": "Sever a hand, foot or whole limb from the body as a medical treatment.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "amputate"
+    },
+    {
+      "id": 5777,
+      "sense_id": 716,
+      "distractor_lemma": "Bring a buried coffin back to the surface, often for a fresh autopsy.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "exhume"
+    },
+    {
+      "id": 5778,
+      "sense_id": 716,
+      "distractor_lemma": "Breathe out, emptying air from the chest.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "exhale"
+    },
+    {
+      "id": 5779,
+      "sense_id": 716,
+      "distractor_lemma": "Rid a haunted house or a possessed person of a demon through ritual.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "exorcise"
+    },
+    {
+      "id": 5780,
+      "sense_id": 716,
+      "distractor_lemma": "Fire back a quick, cutting reply to something someone said.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "retort"
+    },
+    {
+      "id": 5781,
+      "sense_id": 198,
+      "distractor_lemma": "Delivered on the spot, with no script or rehearsal.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extemporaneous"
+    },
+    {
+      "id": 5782,
+      "sense_id": 198,
+      "distractor_lemma": "Far outside the normal run of things, in a way that amazes.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extraordinary"
+    },
+    {
+      "id": 5783,
+      "sense_id": 198,
+      "distractor_lemma": "Calling for all the energy and force a person can muster.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "strenuous"
+    },
+    {
+      "id": 5784,
+      "sense_id": 198,
+      "distractor_lemma": "Counting in a wrongdoer's favor, so the blame weighs less.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extenuating"
+    },
+    {
+      "id": 5785,
+      "sense_id": 352,
+      "distractor_lemma": "Marriage, especially when seen as a formal or religious bond.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "matrimony"
+    },
+    {
+      "id": 5786,
+      "sense_id": 352,
+      "distractor_lemma": "Wealth or traditions handed down from a father or earlier forebears.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "patrimony"
+    },
+    {
+      "id": 5787,
+      "sense_id": 352,
+      "distractor_lemma": "A balance in which neither side stands above the other.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "parity"
+    },
+    {
+      "id": 5788,
+      "sense_id": 352,
+      "distractor_lemma": "A sour hostility that lingers between people who have clashed.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "acrimony"
+    },
+    {
+      "id": 5789,
+      "sense_id": 352,
+      "distractor_lemma": "A preachy air of being more virtuous than everyone else.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "sanctimony"
+    },
+    {
+      "id": 5790,
+      "sense_id": 445,
+      "distractor_lemma": "Feeling remorse for a misdeed and wanting to make amends.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "repentant"
+    },
+    {
+      "id": 5791,
+      "sense_id": 445,
+      "distractor_lemma": "Tough enough to come through hardship and return to normal.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "resilient"
+    },
+    {
+      "id": 5792,
+      "sense_id": 445,
+      "distractor_lemma": "Full of awe and humility before something held sacred.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "reverent"
+    },
+    {
+      "id": 5793,
+      "sense_id": 445,
+      "distractor_lemma": "Openly defiant of those in charge and hard to bring under control.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "recalcitrant"
+    },
+    {
+      "id": 5794,
+      "sense_id": 295,
+      "distractor_lemma": "Taking up a lot of space, or made of a large amount of material.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "voluminous"
+    },
+    {
+      "id": 5795,
+      "sense_id": 295,
+      "distractor_lemma": "Hinting at a divine power close by, so that people grow hushed and awed.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "numinous"
+    },
+    {
+      "id": 5796,
+      "sense_id": 295,
+      "distractor_lemma": "Giving a sign that trouble or danger is on its way.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "ominous"
+    },
+    {
+      "id": 5797,
+      "sense_id": 295,
+      "distractor_lemma": "Bringing in handsome returns to whoever takes it on.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "lucrative"
+    },
+    {
+      "id": 5798,
+      "sense_id": 343,
+      "distractor_lemma": "Harsh, unjust rule that holds a people down by force.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "oppression"
+    },
+    {
+      "id": 5799,
+      "sense_id": 343,
+      "distractor_lemma": "Lavish wealth on which no expense has been spared.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "opulence"
+    },
+    {
+      "id": 5800,
+      "sense_id": 343,
+      "distractor_lemma": "Seizing each passing chance for personal gain, even at others' expense.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "opportunism"
+    },
+    {
+      "id": 5801,
+      "sense_id": 343,
+      "distractor_lemma": "Cloudiness that keeps light, or meaning, from getting through.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "opacity"
+    },
+    {
+      "id": 5802,
+      "sense_id": 413,
+      "distractor_lemma": "Stirring a tender sadness that lingers after the moment has passed.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "poignant"
+    },
+    {
+      "id": 5803,
+      "sense_id": 413,
+      "distractor_lemma": "Booming and reverberating, with a low, mournful ring.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "plangent"
+    },
+    {
+      "id": 5804,
+      "sense_id": 413,
+      "distractor_lemma": "Designed to make someone pay a penalty for wrongdoing.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "punitive"
+    },
+    {
+      "id": 5805,
+      "sense_id": 413,
+      "distractor_lemma": "Making sure no formality, however small, is ever left out.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "punctilious"
+    },
+    {
+      "id": 5806,
+      "sense_id": 953,
+      "distractor_lemma": "Shunt someone or something aside into a minor, less valued role.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "relegate"
+    },
+    {
+      "id": 5807,
+      "sense_id": 953,
+      "distractor_lemma": "Attack someone with harsh, insulting words.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "revile"
+    },
+    {
+      "id": 5808,
+      "sense_id": 953,
+      "distractor_lemma": "Lose ground and fall back toward an earlier stage of growth.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "regress"
+    },
+    {
+      "id": 5809,
+      "sense_id": 953,
+      "distractor_lemma": "Set official limits on what a business or process may do.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "regulate"
+    },
+    {
+      "id": 5810,
+      "sense_id": 461,
+      "distractor_lemma": "Soaked through, so that no more liquid can be taken in.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "saturated"
+    },
+    {
+      "id": 5811,
+      "sense_id": 461,
+      "distractor_lemma": "Twisting this way and that in long, looping curves.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "serpentine"
+    },
+    {
+      "id": 5812,
+      "sense_id": 461,
+      "distractor_lemma": "Briny all through, from the salt mixed into it.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "saline"
+    },
+    {
+      "id": 5813,
+      "sense_id": 461,
+      "distractor_lemma": "Resting with the spine against the ground or a bed, gazing upward.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "supine"
+    },
+    {
+      "id": 5814,
+      "sense_id": 882,
+      "distractor_lemma": "Doomed to come to nothing, however hard anyone tries.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "futile"
+    },
+    {
+      "id": 5815,
+      "sense_id": 882,
+      "distractor_lemma": "Delicate enough that a knock or a drop would ruin it.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fragile"
+    },
+    {
+      "id": 5816,
+      "sense_id": 882,
+      "distractor_lemma": "Making light of things at a moment that calls for seriousness.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "facetious"
+    },
+    {
+      "id": 5817,
+      "sense_id": 882,
+      "distractor_lemma": "Liable to drop a friend or a cause on a whim and take up another.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fickle"
+    },
+    {
+      "id": 5818,
+      "sense_id": 202,
+      "distractor_lemma": "Lying idle between plantings, with no crop sown.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fallow"
+    },
+    {
+      "id": 5819,
+      "sense_id": 202,
+      "distractor_lemma": "Smutty and suggestive, playing up sex to draw attention.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "salacious"
+    },
+    {
+      "id": 5820,
+      "sense_id": 202,
+      "distractor_lemma": "Given to wisecracks when the mood calls for gravity.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "facetious"
+    },
+    {
+      "id": 5821,
+      "sense_id": 202,
+      "distractor_lemma": "Touchy and quarrelsome, so that keeping the peace is a struggle.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fractious"
+    },
+    {
+      "id": 5822,
+      "sense_id": 308,
+      "distractor_lemma": "Serve as a strong reason pushing a decision one way or the other.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "militate"
+    },
+    {
+      "id": 5823,
+      "sense_id": 308,
+      "distractor_lemma": "Have a disagreement argued out by lawyers in front of a judge.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "litigate"
+    },
+    {
+      "id": 5824,
+      "sense_id": 308,
+      "distractor_lemma": "Make a long journey to a new home region, often on a yearly cycle.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "migrate"
+    },
+    {
+      "id": 5825,
+      "sense_id": 308,
+      "distractor_lemma": "Hack at a body or object until it is scarred and misshapen.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mutilate"
+    },
+    {
+      "id": 5826,
+      "sense_id": 105,
+      "distractor_lemma": "Slowly weaken a metal surface until it pits and flakes.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "corrode"
+    },
+    {
+      "id": 5827,
+      "sense_id": 105,
+      "distractor_lemma": "Team up with others on a shared piece of work.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "collaborate"
+    },
+    {
+      "id": 5828,
+      "sense_id": 105,
+      "distractor_lemma": "Add more detail to an idea, plan or explanation.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "elaborate"
+    },
+    {
+      "id": 5829,
+      "sense_id": 105,
+      "distractor_lemma": "Lead someone into dishonest or immoral behavior, often with bribes.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "corrupt"
+    },
+    {
+      "id": 5830,
+      "sense_id": 91,
+      "distractor_lemma": "Aware of something and keeping it in mind.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "cognizant"
+    },
+    {
+      "id": 5831,
+      "sense_id": 91,
+      "distractor_lemma": "Linked by descent from a single older word or language.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "cognate"
+    },
+    {
+      "id": 5832,
+      "sense_id": 91,
+      "distractor_lemma": "Concerned with how the mind takes in, stores and uses information.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "cognitive"
+    },
+    {
+      "id": 5833,
+      "sense_id": 91,
+      "distractor_lemma": "Tied to a condition, so that it stands or falls with another outcome.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "contingent"
+    },
+    {
+      "id": 5834,
+      "sense_id": 108,
+      "distractor_lemma": "Believable because it seems honest or likely to be true.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "credible"
+    },
+    {
+      "id": 5835,
+      "sense_id": 108,
+      "distractor_lemma": "Reflecting well on whoever was responsible for it.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "creditable"
+    },
+    {
+      "id": 5836,
+      "sense_id": 108,
+      "distractor_lemma": "Working steadily and carefully without letting up.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "sedulous"
+    },
+    {
+      "id": 5837,
+      "sense_id": 108,
+      "distractor_lemma": "Wavering and unsteady, especially in the voice or hands.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tremulous"
+    },
+    {
+      "id": 5838,
+      "sense_id": 795,
+      "distractor_lemma": "Seldom willing to talk, and quiet by nature.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "taciturn"
+    },
+    {
+      "id": 5839,
+      "sense_id": 795,
+      "distractor_lemma": "Perceived through contact with the hands or skin.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tactile"
+    },
+    {
+      "id": 5840,
+      "sense_id": 795,
+      "distractor_lemma": "Chosen for its immediate advantage in a fight, game or contest.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tactical"
+    },
+    {
+      "id": 5841,
+      "sense_id": 795,
+      "distractor_lemma": "Skilled at handling touchy matters without hurting anyone's feelings.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tactful"
+    },
+    {
+      "id": 5842,
+      "sense_id": 143,
+      "distractor_lemma": "Pushed by a lack of options into acting rashly or at great risk.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "desperate"
+    },
+    {
+      "id": 5843,
+      "sense_id": 143,
+      "distractor_lemma": "Spoken in a way meant to make someone seem unimportant or bad.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "disparaging"
+    },
+    {
+      "id": 5844,
+      "sense_id": 143,
+      "distractor_lemma": "Coolly detached, so that personal feelings play no part in one's view.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "dispassionate"
+    },
+    {
+      "id": 5845,
+      "sense_id": 143,
+      "distractor_lemma": "Having a bad name because of dishonest or shabby behavior.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "disreputable"
+    },
+    {
+      "id": 5846,
+      "sense_id": 161,
+      "distractor_lemma": "Ready to go easy on those who slip up or break the rules.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "lenient"
+    },
+    {
+      "id": 5847,
+      "sense_id": 161,
+      "distractor_lemma": "Able to speak or write clearly and movingly.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "eloquent"
+    },
+    {
+      "id": 5848,
+      "sense_id": 161,
+      "distractor_lemma": "Combative in manner, always looking for someone to quarrel with.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "belligerent"
+    },
+    {
+      "id": 5849,
+      "sense_id": 161,
+      "distractor_lemma": "Restoring moisture and suppleness to chapped skin.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "emollient"
+    },
+    {
+      "id": 5850,
+      "sense_id": 671,
+      "distractor_lemma": "So vast or sacred that no words can describe it fully.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "ineffable"
+    },
+    {
+      "id": 5851,
+      "sense_id": 671,
+      "distractor_lemma": "Prosperous enough to afford far more than life's basics.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "affluent"
+    },
+    {
+      "id": 5852,
+      "sense_id": 671,
+      "distractor_lemma": "Showy and unnatural, adopted for effect rather than truly felt.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "affected"
+    },
+    {
+      "id": 5853,
+      "sense_id": 671,
+      "distractor_lemma": "Able to get things wrong now and then, since no person or method is perfect.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fallible"
+    },
+    {
+      "id": 5854,
+      "sense_id": 183,
+      "distractor_lemma": "Quirky and offbeat, with personal ways that others find peculiar.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "eccentric"
+    },
+    {
+      "id": 5855,
+      "sense_id": 183,
+      "distractor_lemma": "Strikingly foreign and unfamiliar, as if brought from a distant land.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "exotic"
+    },
+    {
+      "id": 5856,
+      "sense_id": 183,
+      "distractor_lemma": "Airy and graceful, with an almost weightless, dreamlike quality.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "ethereal"
+    },
+    {
+      "id": 5857,
+      "sense_id": 183,
+      "distractor_lemma": "Wide-ranging in taste, borrowing freely from unrelated traditions.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "eclectic"
+    },
+    {
+      "id": 5858,
+      "sense_id": 163,
+      "distractor_lemma": "The quality of using little time, energy or money for a given amount of work.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "efficiency"
+    },
+    {
+      "id": 5859,
+      "sense_id": 163,
+      "distractor_lemma": "Outrageous nerve, shown without a trace of embarrassment.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "effrontery"
+    },
+    {
+      "id": 5860,
+      "sense_id": 163,
+      "distractor_lemma": "A logical slip that leaves an argument's conclusion unsupported.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fallacy"
+    },
+    {
+      "id": 5861,
+      "sense_id": 163,
+      "distractor_lemma": "Bubbly, sparkling liveliness in a person's manner.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "effervescence"
     }
   ],
   "audio_objects": [],
@@ -123972,6 +123712,1015 @@
         "related": 4
       },
       "checker_notes": "Round 4: with the market scene dropped, the three remaining examples (canoe, skier, sleds) match no example in Oxford, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage, Wordsmyth or WordUp's script data, and each gives a clear clue for the cloze game. Weakest point: only 3 examples, the minimum, and all are outdoor sport or water scenes; none shows the common vehicle use, so a fourth example in another setting would help."
+    },
+    {
+      "id": 627,
+      "word_id": 173,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the malevolent option: it nearly repeated ambivalent's option for malevolent (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the malcontent option from a new angle (Cambridge's frame), lengthened the malodorous option so the correct option no longer stands out by length, and replaced palpable (shared only -able) with malignant (shares mal-).",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the new malodorous, malignant and malcontent options match no dictionary in the tool or a web search, and the lengths now sit close to the definition's. malignant (mal-, a person's character) is a better look-alike than palpable. Weakest: maladroit 'Awkward and clumsy, in actions or in dealing with people' still sits near Cambridge's 'awkward in movement or unskilled in behaviour'; the definition's 'plans that give way under pressure' is an odd fit."
+    },
+    {
+      "id": 628,
+      "word_id": 15,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the aphorism option: it nearly repeated euphemism's option for aphorism (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced chronometer (followed Oxford and WordUp) with chronicle, which shares the chron- root, and anagram (kept the dictionaries' frame and a worked example) with anathema, which shares ana-; both written from dictionaries read first.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: anathema (ana-) and chronicle (chron-) are good look-alikes, and neither option copies a dictionary. Weakest: chronicle 'A long account of ... past, told one year after another' shares the idea of AHD's 'An extended account ... of historical events ... in chronological order', though not its words. The examples are all film or novel slips (little variety). No synonyms or antonyms is acceptable."
+    },
+    {
+      "id": 629,
+      "word_id": 24,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the assay option: it nearly repeated gainsay's option for assay (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the assess and assail options from new angles, dropping the list frame (Cambridge) and the blows-or-words frame (Oxford).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the new assail and assess options no longer follow Oxford's or Cambridge's frames. Weakest: assail 'Rush at an enemy and strike at them again and again' now covers only physical attack, which reads more like charge or assault; still accurate."
+    },
+    {
+      "id": 630,
+      "word_id": 25,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the auspicious option: it nearly repeated officious's option for auspicious (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Weakest: sagacious shares only the -acious ending, and 'Showing deep wisdom and sound judgment' sits close to Oxford 'showing good judgement and understanding' and AHD 'sound judgment'. The other three options are fine."
+    },
+    {
+      "id": 631,
+      "word_id": 193,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the facetious option: it nearly repeated fatuous's option for facetious (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the official option (Longman's frame) and the efficacious option (Oxford's wording) from new angles, and replaced auspicious (shared only -icious) with fictitious, which shares the -fici- sound.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the official, efficacious and fictitious options match no dictionary; fictitious (-fici- sound) beats auspicious. Weakest: 'Intrusive in a meddling or offensive manner' is WordNet's terse gloss, and 'offensive' is vague; efficacious 'Getting real results when put into practice' is a little loose."
+    },
+    {
+      "id": 632,
+      "word_id": 361,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the fallacious option: it nearly repeated fatuous's option for fallacious (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: reworded the facetious option so it no longer shares the frame of fatuous's and facile's facetious options, and replaced felicitous (shared only f- and -ous) with tedious, which shares the -tedious sound.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: facetious now has its own wording, and tedious (shares the -tidious sound) tempts much more than felicitous. Weakest: tedious 'Wearisome because it drags on and never varies' has the same shape as AHD's 'Tiresome by reason of length, slowness, or dullness' (a synonym, then length and dullness), but no shared words."
+    },
+    {
+      "id": 633,
+      "word_id": 29,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the belittle option: it nearly repeated beguile's option for belittle (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the belabor option (near WordUp) from a new angle, and replaced bequeath (Longman's frame, and the same wrong answer as beguile's) with beleaguer, which shares bel-.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: the belabor and beleaguer options copy no dictionary (the tool, WordUp included, and a web search). Weakest: the first example (a cheerful smile belying anxiety) is the stock dictionary scene of a calm face hiding fear; the antonyms are thin."
+    },
+    {
+      "id": 634,
+      "word_id": 428,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the bewail option: it nearly repeated belie's option for bewail (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the belittle option (echoed WordUp) and the bequeath option (leaned on WordUp; belie no longer uses bequeath) from new angles.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: the belittle and bequeath options are new wording, and bequeath is no longer shared with belie. Weakest: all four examples are swindles; cajole means coax, not deceive; beget's option joins two meanings and is longer than the rest."
+    },
+    {
+      "id": 635,
+      "word_id": 171,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the magnificent option: it nearly repeated beneficent and the retired munificent's option for magnificent (near-repeat rule from PR #37). 4 options remain. Rewrote the magisterial option because it carried a \"like ...\" example; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: after two failed rewrites of the magisterial option, swapped in magniloquent, which shares magn-, written after reading its dictionary entries.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: magniloquent (magn-) is a good swap, and 'Fond of grand, showy words that sound more impressive than they are' does not follow Dictionary.com, AHD, Vocabulary.com, WordUp or Merriam-Webster's grandiloquence entry. Weakest: magniloquent describes a style more often than a person, as some dictionaries note; 'magnanimous in victory' is a stock phrase."
+    },
+    {
+      "id": 636,
+      "word_id": 152,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the animated option: it nearly repeated magnanimous's option for animated (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the inimitable option without imitate (it pointed at the look-alike and followed WordUp), removed the example from the intimate option, and replaced clinical (shared only -ical) with imminent, which shares the imi- sound.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: inimitable no longer says 'imitate', the intimate example is gone, and imminent (imi- sound) replaces clinical. No option follows a dictionary. Weakest: minimal is the only option under 7 words; 'hostile' among the synonyms leans to the ill-will other sense."
+    },
+    {
+      "id": 637,
+      "word_id": 124,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the capacious option: it nearly repeated capricious and loquacious's option for capacious (near-repeat rule from PR #37). 4 options remain. Rewrote the fractional option because it nearly repeated refractory's option; read its dictionary entries first and wrote it from a different angle. Rewrote the fragrant option because it carried a \"like ...\" example; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced fragrant (followed Wiktionary and described a smell) with frantic, which shares fra- and describes a person's state, and rewrote the fraternal option (followed WordUp) from a new angle. Rewrote the horse example so frantic no longer fits the blank: the horse is calm until the harness comes out.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the frantic and fraternal options copy no dictionary. frantic's option combines the panic and hurried-disorder senses that WordUp and Oxford give separately, but in its own words. The horse example now rules out frantic. Weakest: the storm example ('The ___ crew refused to follow the captain's orders during the storm') could still be read with frantic, though fractious fits better; the WordNet definition leaves out the quarrelsome side of modern use; plain uses the British 'quarrelling'."
+    },
+    {
+      "id": 638,
+      "word_id": 144,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the impugn option: it nearly repeated expunge and lampoon's option for impugn (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote all four wrong answers (imbue, impart, impede, amputate) from new angles after reading the seven dictionaries; impart no longer shares wording with impinge's impart option.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all four rewritten options are clear of the seven dictionaries. Weakest: the impart option's 'so they come to know it too' echoes WordUp's 'helping them to know or do the same things'. The amputate option still lists body parts plus 'medical', as Oxford does, but its wording is its own."
+    },
+    {
+      "id": 639,
+      "word_id": 359,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the extort option: it nearly repeated extol's option for extort (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Weakest: with extort dropped, retort is the only option outside the ex- group and it shares only the -ort ending. exhume's 'often for a fresh autopsy' narrows the word. All four options are clean against the seven dictionaries."
+    },
+    {
+      "id": 640,
+      "word_id": 114,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the strenuous option: it nearly repeated the retired ingenuous's option for strenuous (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: dropped simultaneous and erroneous (they shared only an ending, and erroneous repeated onerous's option); brought back strenuous with new wording and added extenuating; rewrote the extraordinary option; replaced the judge example, which sat close to Oxford.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 5
+      },
+      "checker_notes": "Round 2: extenuating, extraordinary and the new parking-complaints example are clean. Weakest: strenuous shares only the sound of the ending (-aneous/-enuous), and 'Calling for all the energy and force' echoes Vocabulary.com's 'requires all your effort and strength' (an echo, not a copy)."
+    },
+    {
+      "id": 641,
+      "word_id": 201,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the acrimony option: it nearly repeated hegemony's option for acrimony (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced parody and parsonage (a work and a building, the wrong kind beside a quality) with three abstract nouns: parity, acrimony (new wording) and sanctimony.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: parity and sanctimony are clean, and all five options are now abstract nouns. Weakest: the acrimony option ('between people who have clashed') keeps Longman's frame ('between people who disagree strongly'). acrimony, sanctimony and matrimony share only -imony, but that rhyme is the set learners actually confuse."
+    },
+    {
+      "id": 642,
+      "word_id": 257,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the redolent option: it nearly repeated indolent's option for redolent (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: wrote a new definition from scratch (the old one followed American Heritage) and a new plain definition (the old one was close to Cambridge); replaced recent (a time word, the wrong kind for a person) with repentant; rewrote resilient, reverent and recalcitrant from new angles.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the new definition and plain are clean; 'private matters' appears only in a Merriam-Webster usage example. repentant and reverent are clean. Weakest: the recalcitrant option ('defiant of those in charge and hard to bring under control') pairs the two halves of Oxford's definition ('unwilling to obey rules ...; difficult to control'), and resilient's 'return to normal' echoes WordUp's 'return to a normal, healthy state'. Both are reworded enough to pass."
+    },
+    {
+      "id": 643,
+      "word_id": 170,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the lugubrious option: it nearly repeated the retired salubrious's option for lugubrious (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the definition (dropped \"soft\", which ruled out bright sources, and the WordUp frame), the plain definition and the other sense; replaced all four examples with sources that give their own light (the moon example was wrong, and the dial, paint and deep-sea scenes followed Oxford and WordUp); rewrote the numinous option and swapped ruinous (rhyme only) for lucrative.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: the definition, plain, other sense and all four examples are clean; the lava, lantern, firefly and lighthouse scenes match no dictionary. Weakest: lucrative shares only 'lu-'. The numinous option ('Hinting at a divine power close by') keeps Vocabulary.com's and WordUp's 'suggesting the presence of a divine power' frame. 'Light of its own' leaves out the reflected-light uses the dictionaries list, which is acceptable for the core sense."
+    },
+    {
+      "id": 644,
+      "word_id": 196,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the moratorium option: it nearly repeated modicum's option for moratorium (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced the corrupt-politician and dictator examples (generic, and close to Oxford and Cambridge); changed \"heaped on\" to \"aimed at\" in the definition; replaced delirium, equilibrium and emporium (shared only -ium) with opulence, opportunism and opacity, which share the op- start; rewrote the oppression option. Round 3 (main session): rewrote the opulence option again after reading all seven dictionaries; the round 2 text kept WordUp's list frame.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 3: the new opulence option ('Lavish wealth on which no expense has been spared.') matches none of the seven dictionaries or the record's opulent option, and a web search found no source for it. It leans toward how the money was spent rather than the visible display, but it still identifies opulence. Weakest: the opportunism option ('Seizing each passing chance for personal gain, even at others' expense') still blends Longman's 'using every opportunity to gain power, money' with Oxford's 'without thinking about how your actions will affect other people'. It is borderline, not a copy."
+    },
+    {
+      "id": 645,
+      "word_id": 241,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the poignant option because it nearly repeated ponderous's option; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced the garlic, burning-tires and old-cheese examples (stock scenes, one close to Oxford) with horseradish, ammonia and skunk; swapped cogent (ending only, and near exigent's option) for punctilious, which shares the punct root; rewrote plangent without the bell picture.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: the horseradish, ammonia and skunk examples are clean; 'pungent whiff' is only a collocation Cambridge also uses. Weakest: the plangent option ('Booming and reverberating, with a low, mournful ring') maps term by term onto Oxford's 'loud, deep and sad' and Dictionary.com's 'resonant and mournful', with synonyms rather than shared words. The punctilious option's 'however small' echoes Vocabulary.com's 'no detail too small'. punctilious is a good look-alike, since it shares the pungere root."
+    },
+    {
+      "id": 646,
+      "word_id": 496,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the regulate option because it nearly repeated relegate's option; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "checker_notes": "Weakest: the rewritten regulate option is clean (no dictionary match), but it narrows regulate to official limits on a business, and 'official' echoes WordUp's 'official rules or laws'. All three examples are funny stories told to a group; the first (Uncle Ray at dessert) is close to Cambridge's 'Grandpa regaled us with tales'. The gale hook is a sound-alike that happens to match the real root (Old French gale, merriment)."
+    },
+    {
+      "id": 647,
+      "word_id": 265,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the saline option because it nearly repeated the retired salubrious's option and carried a \"like ...\" example; read its dictionary entries first and wrote it from a different angle. Rewrote the serpentine option because it carried a \"the way ...\" example; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the saline option so it shares less with salient's saline option and no longer opens with \"With a\"; rewrote the supine option, which followed WordUp.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the new saline and supine options are clean against the dictionaries and WordUp. Weakest: the saturated option ('so that no more liquid can be taken in') keeps Cambridge's 'so that no more can be added' frame. 'Briny' is a slightly literary word for an option."
+    },
+    {
+      "id": 648,
+      "word_id": 451,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the futile option because it nearly repeated volatile's option; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced the recession example, which retold Oxford's scene; reworded the fickle option so it no longer shares wording with feckless's fickle option.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: the new depression example and the fickle option are clean. Weakest: the facetious option ('at a moment that calls for seriousness') is close in frame to Oxford's 'at a time when ... it would be better to be serious'."
+    },
+    {
+      "id": 649,
+      "word_id": 116,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the rapacious option: it nearly repeated capricious's option for rapacious (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the fallow and salacious options from new angles; replaced audacious and gracious (shared only the ending) with facetious and fractious, which share the sound; audacious no longer fits example 1.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2 options are clean against all seven dictionaries: fallow, salacious, facetious ('Given to wisecracks when the mood calls for gravity.') and fractious ('Touchy and quarrelsome, so that keeping the peace is a struggle.'). facetious and fractious share the sound and are good look-alikes. Weakest point: example 1 ('rested on fallacious assumptions about consumer behavior') gives only a light clue; flawed, outdated or rosy would fit as well."
+    },
+    {
+      "id": 650,
+      "word_id": 178,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the instigate option: it nearly repeated castigate's option for instigate (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote all four wrong answers (militate, litigate, migrate, mutilate) from angles the seven dictionaries do not use, and dropped the \"as evidence can\" tail.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All four rewritten options are clean against the seven dictionaries, and the 'as evidence can' tail is gone. Weakest point: litigate ('Have a disagreement argued out by lawyers in front of a judge.') still has the outline of Cambridge's 'to cause a disagreement to be discussed in a court of law', but the wording is different enough to pass."
+    },
+    {
+      "id": 651,
+      "word_id": 58,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the corrugate option: it nearly repeated coagulate's option for corrugate (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the definition from scratch (it tracked WordUp) and the corrode option (it stitched three dictionaries and had an \"as ... does\" tail).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new definition ('Confirm a statement independently, so that it no longer rests on one source alone.') is not a copy. It shares the ideas 'confirm' and 'independent source' with WordUp's second sense ('strengthen or confirm ... with supporting evidence that comes from an independent source'), but not its frame. The new corrode option is clean. Weakest point: the corrupt option's 'dishonest or immoral' pair also appears in Cambridge ('to make someone or something become dishonest or immoral')."
+    },
+    {
+      "id": 652,
+      "word_id": 47,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the contingent option: it nearly repeated tangential's option for contingent (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the cognate option (it followed American Heritage); replaced pungent and indigent (shared only -gent) with cognitive and contingent, which share the start; contingent has new wording unlike tangential's option. Round 3 (main session): rewrote the contingent option again from a new angle after reading all seven dictionaries; the round 2 text kept a dictionary frame.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new contingent option ('Tied to a condition, so that it stands or falls with another outcome.') is clean against the seven dictionaries and a web search. 'Tied to a condition' is generic, and 'stands or falls with' appears in no entry. Weakest point: the cognate option ('Linked by descent from a single older word or language.') stays near Dictionary.com's 'descended from the same language or form', but it passes."
+    },
+    {
+      "id": 653,
+      "word_id": 59,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers",
+        "antonyms"
+      ],
+      "notes": "Dropped the querulous option: it nearly repeated quiescent's option for querulous (near-repeat rule from PR #37). 4 options remain. Rewrote the tremulous option because it carried a \"the way ...\" example; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: dropped the antonym incredulous (built on the word) and added distrustful; rewrote the creditable option without Vocabulary.com's \"solid effort\" and the \"as ... is\" tail. Round 3 (main session): rewrote the creditable option again from a new angle after reading all seven dictionaries; the round 2 text kept a dictionary frame.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new creditable option ('Reflecting well on whoever was responsible for it.') passes. It does not follow any creditable entry in the seven dictionaries. 'Reflect well upon' does appear in Dictionary.com, but under the verb credit, as a common idiom, so it is not a copied definition. Weakest point: the option drops creditable's usual shade of 'decent but not outstanding'. That is acceptable for a wrong answer."
+    },
+    {
+      "id": 654,
+      "word_id": 412,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the tactile option because it nearly repeated taciturn's and tractable's options; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced the WordNet definition (American Heritage sense 2 word for word) with a new one written from scratch that leads with \"unspoken\".",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new definition ('Unspoken, yet understood and observed by everyone involved.') is clean. It is not in the seven dictionaries, and a web search found no match. Weakest point: 'observed by everyone involved' fits a tacit agreement or rule but not tacit approval or consent from one party, as in examples 1 and 3. The plain ('known by all') narrows it the same way. Small accuracy nit, not a fail."
+    },
+    {
+      "id": 655,
+      "word_id": 81,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the disconsolate option: it nearly repeated discordant's option for disconsolate (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the definition and plain (they followed WordUp and Oxford) and the desperate and dispassionate options (Cambridge, WordUp and AHD frames).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new definition ('Unlike one another in their basic makeup, sharing few or no features.') and plain ('Of very different kinds, with almost nothing alike about them.') are clean. The definition opens like WordNet's 'unlike in nature, quality, form, or degree', but WordNet is licensed and the rest differs. The new desperate and dispassionate options are clean. Weakest point: dispassionate's 'personal feelings' sits near Longman's 'personal emotions'."
+    },
+    {
+      "id": 656,
+      "word_id": 88,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the salient option: it nearly repeated the retired salubrious's option for salient (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the belligerent option (Cambridge's \"eager to fight or argue\") and the emollient option; replaced affluent (weak look-alike, also used under affable) with lenient, which shares the -lient sound and describes a person.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "The new lenient, belligerent and emollient options are clean against the seven dictionaries. Weakest point: lenient is a moderate look-alike. It shares only the -lient sound, and LEE-nee-ent does not sound much like ih-BUL-yent. It is the right kind of word, a trait of a person."
+    },
+    {
+      "id": 657,
+      "word_id": 323,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Rewrote the affluent option because it nearly repeated ebullient's option; read its dictionary entries first and wrote it from a different angle. Other fields unchanged since the last review; their scores are carried over.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 5,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 5
+      },
+      "checker_notes": "The rewritten affluent option ('Prosperous enough to afford far more than life's basics.') is clean against all seven dictionaries and a web search. Weakest points: fallible ('Able to get things wrong now and then, since no person or method is perfect') opens like Oxford/Longman's 'able to make mistakes or be wrong' and at 15 words is longer than the 9-word definition. Example 3 (hotel clerk) gives little clue. The plain drops 'easy to talk to', which the definition and hook rest on."
+    },
+    {
+      "id": 658,
+      "word_id": 103,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the ecstatic option: it nearly repeated eclectic's option for ecstatic (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: rewrote the eccentric option (Cambridge frame) and the eclectic option (now plain, without the playlist picture); replaced historic (shared only -ic) with ethereal, which shares the start and sound. Round 3 (main session): rewrote the eclectic option again from a new angle after reading all seven dictionaries; the round 2 text kept a dictionary frame.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "The new eclectic option ('Wide-ranging in taste, borrowing freely from unrelated traditions.') is clean. It drops Cambridge's 'combine whatever ... from many' frame, and a web search found 'borrowing freely' in no dictionary entry. Weakest points: the only antonym, exoteric, is rare and one letter from the word. Example 1 (a physicist's notation) is the generic scientist case."
+    },
+    {
+      "id": 659,
+      "word_id": 90,
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-19",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "examples",
+        "wrongAnswers"
+      ],
+      "notes": "Dropped the fallacy option: it nearly repeated fealty's option for fallacy (near-repeat rule from PR #37). 4 options remain. Other fields unchanged since the last review; their scores are carried over. Round 2: replaced the WordNet definition (American Heritage with two words swapped) with a new one; replaced effigy (an object, WordUp wording), legacy and advocacy (shared only -acy) with effrontery, fallacy (new wording) and effervescence, all abstract nouns of about the definition's length; rewrote examples 2 and 4 so efficiency does not fit the blank. Round 3 (main session): rewrote the definition again after reading all seven dictionaries; the round 2 text kept the Collins frame. Round 4 (main session, outside the usual three rounds; the round 3 failure was mostly the word 'real-world', which got the trial sense wrong): rewrote the definition with a possessive structure, no list of three and no 'degree to which', 'ability to produce' or 'intended result'.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "checker_notes": "The new definition ('A remedy's or plan's power to bring about the change it aims at.') passes. It drops the clash with the trial sense and the list-of-three frame. It does not follow Oxford, Cambridge or Longman ('ability of something to produce'), Collins ('quality of being successful in producing an intended result'), Vocabulary.com ('degree to which a method or medicine brings about a specific result') or WordUp. Weakest point: it keeps the outline of AHD's 'Power or capacity to produce a desired effect' (power to + verb + the result wanted). Every word after 'power to' differs, and this meaning leaves few other shapes, so I do not count it as copied. Small nit: 'change' fits a cure or a sales lift but fits a vaccine that prevents illness (example 1) less well. The definition and plain agree without repeating each other. The examples still give clear clues, and efficiency does not fit their blanks."
     }
   ]
 }

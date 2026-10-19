@@ -11,6 +11,7 @@ import {
   problemKind,
   splitIntoParts,
   wrongAnswerOwners,
+  nearRepeats,
   overlap,
   textKey,
   type CheckEnv,
@@ -119,6 +120,20 @@ test('a wrong answer that nearly repeats another word\'s option for the same loo
   // A different look-alike with similar words is fine.
   const other = new Map([['abase', [{ meaning: 'Wear something away by steady rubbing.', wordId: 7 }]]]);
   assert.deepEqual(checkContent(goodEntry(), { ...env(), lookalikeOptions: other }), []);
+});
+
+test('nearRepeats lists pairs of near-identical options for one look-alike under two words', () => {
+  const options = new Map([
+    [
+      'abrade',
+      [
+        { meaning: 'Wear something away by steady rubbing.', wordId: 7 },
+        { meaning: 'Wear something away by rubbing.', wordId: 9 },
+        { meaning: 'Scrape a surface until it is rough.', wordId: 11 },
+      ],
+    ],
+  ]);
+  assert.deepEqual(nearRepeats(options), [{ lookalike: 'abrade', wordIds: [7, 9] }]);
 });
 
 test('overlap compares content words and ignores case and punctuation', () => {

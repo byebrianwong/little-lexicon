@@ -2576,6 +2576,40 @@ in wrong answers. Curation will catch it word by word.
     half-edited.
   - Pronunciations for the 100 were written by the writers, checked by
     the reviewers (none changed) and set with `curate.ts ipa`.
+- 2026-10-19: fixed the 38 older near-repeat pairs (two words showing
+  nearly the same wrong answer for one look-alike). 33 words re-reviewed,
+  all fixed, 0 flagged. No pair at 0.5 overlap or more is left, retired
+  words included.
+  - The words: affable, anachronism, assuage, audacious, beguile, belie,
+    cogent, corroborate, credulous, disparate, ebullient, efficacy,
+    esoteric, exhort, extraneous, facile, fallacious, fastidious,
+    fractious, impute, inimical, luminous, magnanimous, malleable,
+    mitigate, officious, opprobrium, parsimony, pungent, reticent,
+    regale, saturnine, tacit. One word per pair was changed; the other
+    word kept its option.
+  - First pass: 26 words dropped the repeated option (each still had 4
+    others) and 7 had it rewritten. Five of the pairs involved a retired
+    word, which `check` ignores; they were fixed anyway.
+  - The second reviewer then failed 29 of the 33 in round 1, nearly all
+    on older options and definitions that follow WordUp, Cambridge,
+    Oxford or American Heritage. These were reviewed before WordUp's
+    script text was readable, so earlier reviewers could not see the
+    match. Writers fixed round 2 (one per worksheet); 6 words failed
+    again and the main session wrote round 3. efficacy's definition
+    needed a fourth round: round 3 said "real-world", but efficacy is
+    the result under trial conditions (effectiveness is the real-world
+    result).
+  - Several drops left two look-alikes that share only an ending (cogent,
+    efficacy, esoteric, fallacious, inimical). The writers replaced them,
+    sometimes by bringing back the dropped look-alike with new wording.
+  - Reviewers objected that two options for one look-alike under
+    different words mean the same thing. That cannot be avoided, and it
+    is allowed; only near-identical wording fails. The skill now says so.
+  - `tools/dictionary-defs.py` had shown the same site-wide line for
+    Dictionary.com on every word. It now reads the definition list,
+    which also carries Collins text.
+  - `curate.ts status` now lists any near-repeat pair left in the record
+    (`nearRepeats` in `pipeline/src/lib/curate.ts`).
 
 ## The placement test no longer finishes during render
 

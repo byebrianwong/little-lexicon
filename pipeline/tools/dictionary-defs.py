@@ -34,7 +34,9 @@ PATTERNS = {
     'oxford': [r'<span class="def"[^>]*>(.*?)</span>\s*(?:</span>|<)'],
     'cambridge': [r'<div class="def ddef_d db">(.*?)</div>'],
     'longman': [r'<span class="DEF">(.*?)</span>\s*(?:<span class="(?:EXAMPLE|GramExa|ColloExa)|</span>|<)'],
-    'dictionary.com': [r'"definition":"([^"]{10,300})"'],
+    # The page's "definition" JSON field is site-wide text ("deserving respect
+    # or admiration") that appears on every page, so read the definition list.
+    'dictionary.com': [r'class="item-definition">\s*<p class="txt-variant-label-short">(.*?)</p>'],
     'vocabulary.com': [r'<p class="short">(.*?)</p>', r'<p class="long">(.*?)</p>', r'<div class="definition">(.*?)</div>'],
     'ahd': [r'<div class="ds-(?:list|single)">(.*?)</div>'],
     'wordup': [r'\\?"(?:definition|meaning)\\?":\\?"([^"\\]{10,300})'],
