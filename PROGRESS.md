@@ -3087,3 +3087,44 @@ type the word. This adds a multiple-choice version.
   fit a sentence now and then. If learners report that, the improve-words
   skill can add the missing synonym, or the pipeline could write wrong words
   for each sentence.
+
+## UI Tests replaces Visual tests as the required visual check (2026-10-20)
+
+Brian chose to make Chromatic's own `UI Tests` commit status the required
+check for visual changes, in place of the `Visual tests` Actions job. Before
+this, accepting a change in Chromatic left `Visual tests` red until someone
+re-ran the job. `UI Tests` turns green when the change is accepted. Chromatic
+documents both setups
+(https://www.chromatic.com/docs/github-actions/,
+https://www.chromatic.com/docs/mandatory-pr-checks/).
+
+### What changed
+
+- `.github/workflows/chromatic.yml`: `exitZeroOnChanges` is `true` again, so
+  visual changes no longer fail the `Visual tests` job. A story that errors or
+  fails its play function still fails the build, and `UI Tests` with it. The
+  job still runs, because it is what publishes Storybook to Chromatic.
+- `.github/scripts/check-ui-tests-status.sh` is removed. It read the
+  `UI Tests` status from inside the job, to catch builds that TurboSnap
+  bypassed (see "A bypassed Chromatic build no longer passes Visual tests").
+  Requiring the status directly covers that case.
+
+### Manual step
+
+The `main` ruleset is a GitHub setting and was not changed from this session.
+In Settings, Rules, Rulesets, `main`, under "Require status checks to pass",
+add `UI Tests` (source: Chromatic) and remove `Visual tests`.
+
+### Trade-offs
+
+- **Fork pull requests.** The job is skipped for forks, so Chromatic posts no
+  `UI Tests` status and a fork pull request waits until an admin bypasses the
+  ruleset. This is why the status was not required before (see "Visual diffs
+  now block").
+- **Turning Chromatic off.** If `CHROMATIC_ENABLED` stops being `true`, or the
+  Chromatic project is unlinked from the repository, no pull request gets the
+  status, so `UI Tests` has to come off the ruleset too.
+- **Not yet verified:** whether, on a commit whose build TurboSnap bypassed,
+  the carried-over pending status turns green once the earlier build is
+  accepted. The commit with this change touches no story files, so PR #40
+  should show it when build 108 is accepted.
