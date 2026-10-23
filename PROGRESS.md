@@ -3092,8 +3092,8 @@ the learner knows.
   `knownWordFrequency`; exports include practice answers.
 - Migration `0014_saved_words_tracker.sql`: `practice_logs` with owner-only
   RLS, `profiles.known_word_frequency`, and `delete_my_data` covering the new
-  table. `database.types.ts` was edited by hand to match, because
-  `npm run gen:types` reads the live project and 0014 is not applied yet.
+  table. `database.types.ts` was edited by hand first, then checked against
+  the types generated from the project after 0014 was applied: identical.
 - Settings: "Words you know, in practice". PRIVACY.md mentions practice
   answers and saved words.
 
@@ -3111,9 +3111,13 @@ the learner knows.
   changed stories.
 - Not run: the iOS simulator, the Android emulator and Supabase mode.
 
-### To finish
+### Applied (2026-10-23)
 
-1. Apply `supabase/migrations/0014_saved_words_tracker.sql` to the games-apps
-   project, the same way as 0001 to 0013.
-2. Run `npm run gen:types` and commit `src/lib/database.types.ts` if it
-   differs from the hand-written entry.
+0014 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same raw-SQL route as 0001 to 0013, so it
+is not in the CLI's migration history). Checked afterwards: `practice_logs`
+has RLS on, the two owner policies, and only select and insert for
+`authenticated`; `profiles.known_word_frequency` defaults to 'rarely' with its
+check; `delete_my_data` covers `practice_logs` and is still security definer.
+The types generated from the project match the committed
+`database.types.ts` byte for byte.
