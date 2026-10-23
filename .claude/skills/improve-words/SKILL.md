@@ -193,8 +193,11 @@ Dictionary.com, Vocabulary.com, American Heritage and WordUp
 curl. Merriam-Webster, Collins and Britannica block curl and WebFetch; the
 built-in browser can read them. `python3 -I tools/dictionary-defs.py
 <word...>` (from `pipeline/`) prints the seven downloadable dictionaries'
-definitions for each word, WordUp's script text included. Tell writers and
-reviewers about it, and run it yourself before writing any main-session fix.
+definitions for each word, WordUp's script text included. With
+`--examples` it prints Oxford's, Cambridge's, Longman's and WordUp's
+example sentences instead, for checking example scenes. Pass each word as
+its own argument. Tell writers and reviewers about both, and run them
+yourself before writing any main-session fix.
 
 The writer prompt, with the paths filled in:
 
@@ -481,6 +484,34 @@ before handing a worksheet over.
   2026-10-19.** Its pattern matched a site-wide line ("deserving respect or
   admiration") on every page. Text checked against it before then was not
   compared with Dictionary.com or the Collins text it carries.
+
+- **A main-session fix that swaps a list item by item.** On 2026-10-23
+  engender's round 3 definition, "Act as the seed of a feeling, attitude
+  or condition", kept WordUp's "a feeling, attitude, or situation" with
+  one word changed. A list of three kinds of thing is a frame too. Drop
+  the list or cut it to a different pair.
+- **What counts as a shared frame.** Reviewers differ on this. On
+  2026-10-23 one reviewer failed "to become less strong, or make
+  something do that" because Longman uses it, though every dictionary
+  frames abate that way. Tell reviewers the line: text that three or more
+  dictionaries share as the plain meaning scores 4 with a note; only one
+  dictionary's own frame, list or detail scores 3.
+- **A look-alike that reads as the antonym.** sympathy on apathy and
+  confident on diffident (as an antonym) can be ruled out because they
+  are the opposite feeling. Choose look-alikes whose meaning is unrelated,
+  not opposite.
+- **A look-alike that shares the target's whole subject.** assiduous on
+  arduous (both about long, hard effort) and euphony next to a hook that
+  glosses euphemism as "good-sounding words" sit too close. Check the hook
+  and every example against each new look-alike.
+- **Older examples can be wrong in fact.** desiccate had "Museum staff
+  desiccate insect specimens before pinning them" (dried insects shatter,
+  so they are pinned fresh or relaxed first), and conundrum's corundum was
+  "ground into emery" (emery is a rock that contains corundum).
+- **Stale `problems` lists.** A worksheet's `problems` is written when the
+  worksheet is made and is not updated. Reviewers kept reporting old
+  "like ..." problems that a writer had already fixed. `check` is the
+  current list.
 
 ## Pronunciation
 

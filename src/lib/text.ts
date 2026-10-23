@@ -120,3 +120,45 @@ export function indefiniteArticle(word: string, ipa: string | null = null): 'a' 
   if (sound !== '') return IPA_VOWEL.test(sound) ? 'an' : 'a';
   return /^[aeiou]/i.test(word.trim()) ? 'an' : 'a';
 }
+
+/**
+ * Letters the typed modes show before any hint: the first one. It is part of
+ * the question, so it costs nothing; recalling a word from its meaning alone
+ * proved too hard.
+ */
+export const FREE_LETTERS = 1;
+
+/**
+ * Letters shown once the hint is used: about a third of the word, at least one
+ * more than the free first letter, and never the whole word.
+ */
+export function hintLetters(target: string): number {
+  const n = [...target.trim()].length;
+  const third = Math.max(FREE_LETTERS + 1, Math.ceil(n / 3));
+  return Math.max(FREE_LETTERS, Math.min(third, n - 1));
+}
+
+/** One place in a word's outline. */
+export interface LetterSlot {
+  /** The character to show, or null for a blank the user has to recall. */
+  char: string | null;
+  /** True for a letter (shown or blank); false for a space or a hyphen. */
+  letter: boolean;
+}
+
+/**
+ * The outline of a word: its first `shown` letters, then a blank for each
+ * letter left. Anything that is not a letter (a space, a hyphen) is shown as
+ * it is, so a two-word answer reads as two words.
+ */
+export function letterSlots(target: string, shown: number): LetterSlot[] {
+  return [...target.trim().toLowerCase()].map((c, i) => {
+    const letter = /\p{L}/u.test(c);
+    return { char: i < shown || !letter ? c : null, letter };
+  });
+}
+
+/** How many letters a word has, for the outline's spoken label. */
+export function letterCount(target: string): number {
+  return [...target].filter((c) => /\p{L}/u.test(c)).length;
+}

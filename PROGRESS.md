@@ -2610,6 +2610,39 @@ in wrong answers. Curation will catch it word by word.
     which also carries Collins text.
   - `curate.ts status` now lists any near-repeat pair left in the record
     (`nearRepeats` in `pipeline/src/lib/curate.ts`).
+- 2026-10-23: re-review of older words, batch 1 of 5: the 90 words from
+  abate to evanescent in record order, all last reviewed before 2026-10-17
+  (before WordUp's script text and Dictionary.com's real text were
+  readable). All 90 fixed, 0 flagged. The 446 such words are split into five
+  batches, one PR each.
+  - The words: abate, aberrant, abscond, abstain, admonish, adulterate,
+    aesthetic, aggrandize, alacrity, alleviate, amalgamate, ambiguous,
+    ambivalent, ameliorate, analogous, anomaly, antipathy, apathy, appease,
+    arduous, articulate, ascetic, austere, aver, banal, beneficent, bolster,
+    bombastic, boorish, burgeon, buttress, cacophony, cajole, callous,
+    candor, capricious, castigate, catalyst, caustic, chicanery, coagulate,
+    coalesce, commensurate, conciliatory, condone, conflagration,
+    connoisseur, contrite, conundrum, convoluted, copious, cursory, dearth,
+    debacle, debunk, decorum, deference, deleterious, deride, derivative,
+    desiccate, diaphanous, diatribe, didactic, diffident, dirge, disabuse,
+    discordant, discrepancy, disparage, dissemble, disseminate, dissonance,
+    distend, dogmatic, dubious, eclectic, elegy, eloquent, embellish,
+    empirical, emulate, engender, ephemeral, epigram, equivocate, erudite,
+    eulogy, euphemism, evanescent.
+  - The writers found copied wording in nearly every word, and the second
+    reviewer still failed 65 of 90 in round 1 (worksheet a 12 of 12, h 10
+    of 11, e 10 of 11). Round 2 (by the writers) left 11; the main session
+    wrote round 3. engender's definition needed a fourth round: round 3
+    swapped WordUp's "feeling, attitude, or situation" list item by item.
+  - Example scenes retold from WordUp were the second most common failure.
+    `tools/dictionary-defs.py --examples` now prints Oxford, Cambridge,
+    Longman and WordUp example sentences, so agents no longer write their
+    own extractors (one missed WordUp sentences).
+  - Many older words had two or three look-alikes that share only an ending
+    (girth and mirth on dearth, studious and tedious on dubious). Most were
+    replaced by look-alikes that share the start.
+  - Two older examples were wrong in fact: dried insects are not pinned
+    (desiccate), and corundum is not "ground into emery".
 
 ## The placement test no longer finishes during render
 
@@ -3224,3 +3257,40 @@ add `UI Tests` (source: Chromatic) and remove `Visual tests`.
   the carried-over pending status turns green once the earlier build is
   accepted. The commit with this change touches no story files, so PR #40
   should show it when build 108 is accepted.
+
+## First letter shown when typing a word (2026-10-19)
+
+Typing a word from its meaning alone was too hard. "Fill the blank" (cloze)
+and "Type the word" (production) now show the word's outline under the
+answer box from the start: the first letter, an underlined slot for each
+letter, and the length ("9 letters").
+
+### Decisions
+
+- The first letter is part of the question, not a hint. It does not set
+  `hintUsed`, so a fast correct answer can still earn Easy.
+- The Hint button still exists and still downgrades to Hard. It now fills in
+  about a third of the word (at least two letters, never the whole word).
+  Before, cloze's hint showed only the first letter and production's showed
+  the first third. The two modes now match.
+- Production dropped its "Spell the exact word." line. The outline already
+  says which word is wanted, so a synonym rarely fits it.
+- Each slot is its own underline. The serif's underscores run together and
+  made the blanks hard to count.
+
+### What changed
+
+- `src/lib/text.ts`: `FREE_LETTERS`, `hintLetters`, `letterSlots`,
+  `letterCount`, with tests.
+- `src/features/games/LetterCue.tsx`: the outline, with a spoken label
+  ("Starts with "e", 9 letters").
+- `Cloze.tsx` and `Production.tsx` use it; their stories check the label
+  before and after the hint.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` pass. Storybook builds;
+  the cloze and production stories ran in headless Chromium with their play
+  checks passing, and the screenshots show the outline before and after the
+  hint.
+- Not run: iOS simulator and Android emulator.
