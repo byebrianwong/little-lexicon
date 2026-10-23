@@ -2643,6 +2643,33 @@ in wrong answers. Curation will catch it word by word.
     replaced by look-alikes that share the start.
   - Two older examples were wrong in fact: dried insects are not pinned
     (desiccate), and corundum is not "ground into emery".
+- 2026-10-23: re-review of older words, batch 2 of 5: the 89 words from
+  exacerbate to platitude. All 89 fixed, 0 flagged.
+  - The words: exacerbate, exculpate, exigent, exonerate, expedient,
+    expunge, extol, facetious, fatuous, fickle, flout, foment, forestall,
+    fortuitous, frugal, garrulous, goad, gregarious, guile, hackneyed,
+    harangue, hedonist, hegemony, heresy, iconoclast, idolatry, immutable,
+    impassive, imperious, impertinent, impervious, implacable, incipient,
+    indigent, indolent, ineffable, inexorable, iniquity, innocuous,
+    insipid, insular, intractable, intransigent, inundate, inveterate,
+    irascible, itinerant, laconic, laud, lethargic, levity, loquacious,
+    lucid, malinger, maudlin, mendacious, mercurial, meticulous, mollify,
+    morose, mundane, nadir, nascent, nebulous, nefarious, neophyte,
+    obfuscate, obsequious, obstinate, obtuse, onerous, opaque,
+    ostentatious, palliate, panacea, paragon, paucity, pedantic, penchant,
+    penury, perfidious, perfunctory, pernicious, perspicacious, pervasive,
+    petulant, pithy, placate, platitude.
+  - The second reviewer failed 56 of 89 in round 1. The main session wrote
+    round 3 for 11 words; fickle's last wrong answer took a fourth round
+    (feckless, feeble and freckled all failed before fiery passed).
+  - Once reviewers ran `--examples`, they failed six words on worksheet b
+    that had passed on examples in round 1 (guile had scored 5). Batch 1's
+    reviewers mostly pulled WordUp's examples with their own scripts, but
+    not all of them, so a few batch-1 examples may still retell a scene.
+  - Three hooks named one of the word's own wrong answers or described its
+    meaning (rancorous named rancid, remonstrate named demonstrate, and
+    proclivity's downhill-slope hook is what declivity means). They were
+    rewritten. This is now a trap in the skill.
 
 ## The placement test no longer finishes during render
 
