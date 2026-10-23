@@ -4,7 +4,9 @@ import { expect, userEvent, within } from 'storybook/test';
 import { Screen } from '@/components/ui';
 import { AuthFormView } from './AuthFormView';
 
-// The form fills a screen, and both auth routes wrap it in <Screen scroll>.
+// Both auth routes wrap the form in <Screen scroll>, so the stories do too.
+// Storybook renders in a browser, so it cannot show native layout bugs: the
+// form's old flex-1 looked fine here but collapsed on iOS and Android.
 const screen: Decorator = (Story) => (
   <View style={{ width: 390, height: 780 }}>
     <Screen scroll>
