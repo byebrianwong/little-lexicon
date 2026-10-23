@@ -100,11 +100,11 @@ Respect licensing: WordNet needs attribution; Wiktionary-derived verbatim text i
 
 ## 6. Audio
 
-- Pre-generate all audio once and bundle the MP3s in the app (decided 2026-10-12). Do not generate audio at runtime. The corpus is 291 words and 1,440 sentences, an estimated 30 to 50 MB of audio, so bundling avoids a file host and works offline. Revisit if the word list grows toward thousands of words. The pipeline writes the clips to `assets/audio` and a module, `src/content/audioClips.ts`, that maps word and example ids to them.
+- Pre-generate all audio once and bundle the MP3s in the app (decided 2026-10-12). Do not generate audio at runtime. On 2026-10-22 the corpus was 579 words and 2,583 sentences, 62.6 MB of audio at 32 kbps, so bundling avoids a file host and works offline. Revisit if the word list grows toward thousands of words. The pipeline writes the clips to `assets/audio` and a module, `src/content/audioClips.ts`, that maps word and example ids to them.
 - Prefer human pronunciations for headwords where freely available (US Wiktionary/Commons audio surfaced by the Free Dictionary API). Fall back to TTS for coverage and for all sentence audio.
-- TTS provider: Google Cloud Text-to-Speech with Chirp 3 HD voices (decided 2026-10-12; it replaces the earlier Neural2 default, which never ran, and is Google's newer and more natural model). The word's IPA is passed as a custom pronunciation so the voice matches the pronunciation the app shows. Other options considered: OpenAI `gpt-4o-mini-tts`, and ElevenLabs for the most natural output at higher cost.
+- TTS provider: Kokoro-82M, an open model under the Apache 2.0 license, run on the developer's computer by the pipeline (decided 2026-10-22). It replaces Google Cloud Text-to-Speech with Chirp 3 HD voices (decided 2026-10-12), which never ran because it needed a Google Cloud project, billing and an API key. Kokoro needs no account and costs nothing. The word's IPA is converted to Kokoro's phoneme letters and pinned in the text, so the voice matches the pronunciation the app shows. Not compared by ear with Chirp 3 HD, which may sound more natural. Other options considered: OpenAI `gpt-4o-mini-tts`, and ElevenLabs for the most natural output at higher cost.
 - When a word or sentence has no clip, the app speaks it with the device's synthesizer, choosing the most natural English voice the device offers.
-- Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters, a one-time cost in the tens of dollars or free within a provider's monthly free tier.
+- Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters. With Kokoro there is no charge; the limits are run time (about 30 minutes per 3,000 clips on an Apple M5) and app size (about 20 KB per clip).
 
 ## 7. Claude API usage and cost model
 

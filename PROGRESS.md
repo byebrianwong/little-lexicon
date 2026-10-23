@@ -3128,3 +3128,86 @@ add `UI Tests` (source: Chromatic) and remove `Visual tests`.
   the carried-over pending status turns green once the earlier build is
   accepted. The commit with this change touches no story files, so PR #40
   should show it when build 108 is accepted.
+
+## Word and sentence audio made with Kokoro (2026-10-22)
+
+The audio stage now speaks with Kokoro, an open voice model that runs on the
+developer's computer, instead of Google Cloud Text-to-Speech. The Google
+version never ran because it needed a Google Cloud project, billing and an API
+key. Every taught word and sentence now has a clip: 3,162 clips (579 words,
+2,583 sentences), 62.6 MB, bundled in the app.
+
+### Decisions
+
+- **Voice: Kokoro-82M, voice `af_heart`** (Brian chose Kokoro on 2026-10-22,
+  after a 7-word sample was made). Apache 2.0, so the clips can ship. No account, key or
+  charge. Kokoro's best-rated US voice. Not compared by ear with Google's
+  Chirp 3 HD. Change it with `KOKORO_VOICE`; every TTS clip is then remade.
+- **32 kbps mono MP3 at 24 kHz.** About 20 KB per clip. At 64 kbps the set
+  would be about 125 MB.
+- **The word's IPA is pinned**, as before with Google. `ipaToKokoro` turns the
+  words file's IPA into Kokoro's phoneme letters, and `kokoroText` wraps the
+  headword in Kokoro's markup, `[abate](/əbˈAt/)`. It also matches the
+  headword with a capital first letter (Google's custom pronunciation matched
+  the exact phrase only). All 579 IPA strings convert. For 248 words the IPA
+  differs from Kokoro's own guess. Most differences are small, but some are
+  real errors the pin fixes: "banal" as "BAY-nul", "debacle" as
+  "day-BAH-kul", "erudite" as "AIR-yuh-dite".
+- **A Python script runs Kokoro** (`pipeline/tools/kokoro-tts.py`). Stage 04
+  calls it once per run with every clip it needs. The script writes each clip
+  to `pipeline/.cache/tts/<key>.mp3` and skips clips already there, so a run
+  that stops partway continues. The model files are pinned to one Hugging
+  Face commit, and the Python packages to `tools/kokoro-requirements.txt`.
+- **The env lives at `~/.cache/little-lexicon-tts`**, outside the repo, so all
+  worktrees share it. espeak-ng (which Kokoro uses for words missing from its
+  dictionary) cuts its data path at 160 characters. An env in this session's
+  scratch folder (a 223-character path) failed with "Error processing file
+  .../phontab"; the error path was cut at exactly 159 characters. The script
+  now checks the length and stops with a clear message.
+- **The export leaves out clips that no longer match their text.** It checks
+  each clip's key against the current sentence and IPA (`clipMatches`). A
+  clip made before a `curate.ts apply` or `ipa` change is dropped from
+  `audioClips.ts`, and the app speaks that text with the device's voice until
+  stage 04 runs again. The improve-words skill now says to run
+  `--only=audio`, then `--only=export`, after applying changes.
+
+### Free Dictionary API is down
+
+Every lookup returned HTTP 530 (a Cloudflare error) on 2026-10-22, even for
+"cat", so no human recordings were bundled and every headword is Kokoro.
+Stage 04 now warns once with the count of failed lookups. A later run keeps
+the Kokoro word clips while they match, so it will not fetch human
+recordings even when the API is back. To try again, delete the word clips'
+rows from `audio_objects` (or their files) and rerun stage 04.
+
+### Verified
+
+- Pipeline: 79 unit tests, `tsc`, and the dry run pass. The live audio
+  stage made all 3,152 remaining clips in 30 minutes on an Apple M5, after
+  3.5 minutes of dictionary lookups. A first `--limit=2` run made the other 10.
+- Clip lengths match their text: sentences run 8.5 to 18 characters a
+  second, word clips 1.0 to 1.9 seconds. None is silent or cut short.
+- Speech-to-text check (Whisper `small.en`, in a throwaway env), since
+  nobody listened to the full set:
+  - 600 random sentences: 500 transcribed word for word, mean word error
+    rate 1.6%, worst 22%. The misses are numbers written as digits, compound
+    words ("co-workers") and sound-alikes ("strident whale", "stayed
+    parents"). No sentence dropped or garbled words.
+  - All 579 word clips: 416 transcribed exactly. Rare words on their own are
+    hard for speech recognition. For each of the other 163, one sentence
+    using the exact headword was transcribed. 133 were recognized there, 9
+    have no such sentence (their sentences use inflected forms), and 21
+    came back as a sound-alike or a variant spelling: pique as "peak",
+    mete as "meet", mettle as "medal", feint as "faint", chary as "cherry",
+    largesse as "largess", rarefy as "rarify". Each transcript sounds like
+    the word's IPA, so none of them points to a wrong pronunciation.
+- App: `tsc`, lint, and 254 jest tests pass. On web (demo mode, dev server),
+  "Hear it" and "Sentence" on the Discover screen played
+  `words/117.mp3` and `sentences/3245.mp3` from the bundle (fatuous). The
+  sentence clip played to 1.9 of 6.5 seconds with no error, and the browser's
+  own speech was not used.
+- iOS simulator (Expo Go, iPhone 17 Pro): "Hear it" on acerbic loaded the
+  clip list (3,164 modules) with no audio warning, and the system log shows
+  the player stopping at the end of a 1.515-second item, the length of
+  `words/320.mp3`.
+- Not run: the Android emulator (no Android SDK on this Mac).
