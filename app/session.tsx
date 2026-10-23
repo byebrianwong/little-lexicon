@@ -11,7 +11,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { router } from 'expo-router';
-import { useQueryClient } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import type { GameModeId, SessionItem } from '@/lib/types';
 import type { GameOutcome } from '@/srs/srs';
 import { useProfile, useSessionPlan } from '@/features/review/queries';
@@ -90,7 +90,17 @@ export default function SessionScreen() {
   const itemsRef = useRef<SessionItem[]>([]);
   itemsRef.current = items;
 
-  const pool = useMemo(() => buildOptionPool(items), [items]);
+  // Every word, as wrong answers for the sentence questions: those need three
+  // words of the answer's part of speech, which a session alone often lacks.
+  // Practice reads the same query.
+  const allWordsQuery = useQuery({
+    queryKey: ['allWords'],
+    queryFn: () => backend.getAllWords(),
+  });
+  const pool = useMemo(
+    () => buildOptionPool(items, allWordsQuery.data),
+    [items, allWordsQuery.data],
+  );
   const profile = profileQuery.data;
 
   // Lets the reveal say when the word comes back, using the same scheduler
@@ -118,11 +128,11 @@ export default function SessionScreen() {
       state: current.state?.state ?? 'new',
       reps: current.state?.reps ?? 0,
       stability: current.state?.stability ?? 0,
-      caps: capsForWord(current.content),
+      caps: capsForWord(current.content, pool),
       variantSeed: current.content.wordId + (current.state?.reps ?? 0),
     });
     return chosen;
-  }, [current, profile]);
+  }, [current, profile, pool]);
 
   /**
    * Pull another page and append whatever is genuinely new. Returns how many
@@ -331,7 +341,11 @@ export default function SessionScreen() {
   );
 
   // --- Render states ---
-  if (profileQuery.isLoading || planQuery.isLoading) return <SessionLoading />;
+  // Wait for the word list too, so a question's mode does not change when it
+  // arrives. If it fails, the session's own words are the pool.
+  if (profileQuery.isLoading || planQuery.isLoading || allWordsQuery.isLoading) {
+    return <SessionLoading />;
+  }
 
   if (items.length === 0) {
     return (

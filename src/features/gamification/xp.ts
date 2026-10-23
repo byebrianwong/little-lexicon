@@ -7,9 +7,11 @@ import { Rating } from '@/srs/srs';
 
 // Base XP per mode. Production and "use it" (full recall / generation) reward
 // most; cloze and relation-matching sit in the middle; multiple choice least.
+// Picking a sentence's missing word is multiple choice with context.
 export const BASE_XP: Record<GameModeId, number> = {
   mc_def_to_word: 10,
   mc_word_to_def: 10,
+  cloze_choice: 12,
   listening: 12,
   synonym_match: 14,
   antonym_match: 14,

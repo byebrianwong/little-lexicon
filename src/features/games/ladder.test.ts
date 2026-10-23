@@ -2,12 +2,14 @@ import { chooseMode, MODE_META, type ModeCapabilities, type LadderInput } from '
 
 const fullCaps: ModeCapabilities = {
   hasClozeExample: true,
+  hasClozeChoice: true,
   hasRelations: { synonym: true, antonym: true },
   hasAudio: true,
 };
 
 const noCaps: ModeCapabilities = {
   hasClozeExample: false,
+  hasClozeChoice: false,
   hasRelations: { synonym: false, antonym: false },
   hasAudio: false,
 };
@@ -56,5 +58,25 @@ describe('chooseMode', () => {
     const a = chooseMode(input({ state: 'review', reps: 2, stability: 3, variantSeed: 7 }));
     const b = chooseMode(input({ state: 'review', reps: 2, stability: 3, variantSeed: 7 }));
     expect(a).toBe(b);
+  });
+
+  it('asks some new and learning words to pick the word for a sentence', () => {
+    const seeds = Array.from({ length: 12 }, (_, i) => i);
+    const newModes = seeds.map((s) =>
+      chooseMode(input({ isNew: true, state: 'new', variantSeed: s })),
+    );
+    const learningModes = seeds.map((s) =>
+      chooseMode(input({ state: 'learning', variantSeed: s })),
+    );
+    expect(newModes).toContain('cloze_choice');
+    expect(learningModes).toContain('cloze_choice');
+  });
+
+  it('skips the sentence choice when one cannot be built', () => {
+    const caps = { ...fullCaps, hasClozeChoice: false };
+    for (let s = 0; s < 12; s++) {
+      const mode = chooseMode(input({ isNew: true, state: 'new', caps, variantSeed: s }));
+      expect(mode).not.toBe('cloze_choice');
+    }
   });
 });

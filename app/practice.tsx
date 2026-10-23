@@ -58,8 +58,11 @@ export default function PracticeScreen() {
   const current = queue[index];
   const mode = useMemo(() => {
     if (!current) return null;
-    return practiceMode(capsForWord(current.content), current.content.wordId + index);
-  }, [current, index]);
+    return practiceMode(
+      capsForWord(current.content, pool),
+      current.content.wordId + index,
+    );
+  }, [current, index, pool]);
 
   const onOutcome = useCallback(
     (outcome: GameOutcome) => {
