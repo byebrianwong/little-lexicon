@@ -11,6 +11,9 @@ import {
   problemKind,
   splitIntoParts,
   wrongAnswerOwners,
+  nearRepeats,
+  overlap,
+  textKey,
   type CheckEnv,
   type WorksheetEntry,
 } from './curate.ts';
@@ -99,8 +102,50 @@ test('wrong answers need real look-alikes with the same part of speech', () => {
 });
 
 test('a wrong answer used by another word is rejected', () => {
-  const problems = checkContent(goodEntry(), env([['wear away by rubbing.', 7]]));
+  const problems = checkContent(goodEntry(), env([[textKey('Wear away by rubbing.'), 7]]));
   assert.ok(problems.some((p) => p.includes('already used by word 7')));
+});
+
+test('a wrong answer that differs from another word\'s only by punctuation is rejected', () => {
+  const e = goodEntry();
+  e.wrongAnswers[3] = { lookalike: 'abrade', meaning: 'Wear away, by rubbing.' };
+  const problems = checkContent(e, env([[textKey('Wear away by rubbing.'), 7]]));
+  assert.ok(problems.some((p) => p.includes('already used by word 7')));
+});
+
+test('a wrong answer that nearly repeats another word\'s option for the same look-alike is rejected', () => {
+  const taken = new Map([['abrade', [{ meaning: 'Wear something away by steady rubbing.', wordId: 7 }]]]);
+  const problems = checkContent(goodEntry(), { ...env(), lookalikeOptions: taken });
+  assert.ok(problems.some((p) => p.includes("nearly repeats word 7's option for abrade")));
+  // A different look-alike with similar words is fine.
+  const other = new Map([['abase', [{ meaning: 'Wear something away by steady rubbing.', wordId: 7 }]]]);
+  assert.deepEqual(checkContent(goodEntry(), { ...env(), lookalikeOptions: other }), []);
+});
+
+test('nearRepeats lists pairs of near-identical options for one look-alike under two words', () => {
+  const options = new Map([
+    [
+      'abrade',
+      [
+        { meaning: 'Wear something away by steady rubbing.', wordId: 7 },
+        { meaning: 'Wear something away by rubbing.', wordId: 9 },
+        { meaning: 'Scrape a surface until it is rough.', wordId: 11 },
+      ],
+    ],
+  ]);
+  assert.deepEqual(nearRepeats(options), [{ lookalike: 'abrade', wordIds: [7, 9] }]);
+});
+
+test('overlap compares content words and ignores case and punctuation', () => {
+  assert.equal(overlap('Wear away by rubbing.', 'wear AWAY, by rubbing'), 1);
+  assert.equal(overlap('Help someone do wrong.', 'Lower someone in rank.'), 1 / 5);
+});
+
+test('a hyphenated related word is not changed by the text comparison', () => {
+  const lex = (w: string) => (w === 'self-control' ? ['noun'] : lexicon(w));
+  const e = { ...goodEntry(), synonyms: ['lessen', 'self-control'] };
+  const problems = checkContent(e, { ...env(), lexicon: lex });
+  assert.ok(!problems.some((p) => p.includes('self-control')));
 });
 
 test('the hook must name the word, and related words must be real', () => {
@@ -217,7 +262,7 @@ test('buildEntry reads the first sense, generated examples first, and the newest
 
 test('wrongAnswerOwners covers first senses only and skips the given words', () => {
   const owners = wrongAnswerOwners(rows(), new Set([2]));
-  assert.deepEqual([...owners.entries()], [['help a crime along.', 1]]);
+  assert.deepEqual([...owners.entries()], [['help a crime along', 1]]);
 });
 
 test('other senses must be clean sentences that do not repeat a sense or name the word', () => {

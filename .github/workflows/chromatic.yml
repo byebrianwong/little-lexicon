@@ -2,6 +2,14 @@
 # baseline. Turn this on by setting the repository variable
 # CHROMATIC_ENABLED to "true" and adding the CHROMATIC_PROJECT_TOKEN secret.
 # Until then the job is skipped, so the workflow is safe to merge early.
+#
+# This job does not gate merges on visual changes. Chromatic's GitHub app
+# posts a "UI Tests" status on each commit, and the main ruleset requires
+# that status. It stays pending until every change is accepted or denied in
+# Chromatic, then turns green with no re-run. When TurboSnap bypasses a
+# commit's build, Chromatic carries the earlier build's pending status over
+# to that commit. A pull request from a fork gets no status, because this job
+# is skipped for it, so the ruleset holds it until an admin bypasses it.
 name: Chromatic
 
 on:
@@ -21,8 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      # The last step reads the "UI Tests" status Chromatic posts on the commit.
-      statuses: read
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,21 +46,8 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           # Only snapshot stories whose code actually changed.
           onlyChanged: true
-          # An unreviewed visual change fails this job. "Visual tests" is a
-          # required check on main, so the pull request cannot merge until
-          # someone accepts or denies the diff in the Chromatic UI. Re-run the
-          # job after accepting to turn it green.
-          exitZeroOnChanges: false
-      # The step above can pass with changes still unreviewed. When a commit
-      # touches no story's files, TurboSnap bypasses the build and the CLI
-      # exits 0 without checking anything, even if an earlier build on the
-      # branch is still waiting for review or still running. Chromatic carries
-      # that earlier result over to its "UI Tests" status on the commit, so
-      # this step waits for that status and passes only when it is success.
-      # Forks never reach this step, because the whole job is skipped for them.
-      - name: Check Chromatic's UI Tests status
-        if: github.event_name == 'pull_request'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          SHA: ${{ github.event.pull_request.head.sha }}
-        run: bash .github/scripts/check-ui-tests-status.sh
+          # Visual changes are reviewed through the required "UI Tests"
+          # status (see the top of this file), so they do not fail this job.
+          # A story that errors or fails its play function still fails the
+          # build, and the status with it.
+          exitZeroOnChanges: true

@@ -2216,8 +2216,8 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-12
-  (after adding 88 more words): all 479 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-17
+  (after adding 100 more words): all 579 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2517,6 +2517,99 @@ in wrong answers. Curation will catch it word by word.
     for the 88 were written by the writers, checked by the reviewers and
     set with `curate.ts ipa` (arbiter and concomitant use ə, to match the
     record).
+- 2026-10-17: added 100 more words (ids 518 to 617). All 100 fixed, 0
+  flagged. Status now: 579 of 579 taught words reviewed.
+  - The words: adjudicate, animus, antithesis, bandy, beholden, broach,
+    bulwark, burnish, canny, careen, cede, codify, cognizant, corollary,
+    corporeal, debase, depravity, detritus, disaffected, edify, efface,
+    entreat, espouse, eviscerate, exegesis, expound, extenuating,
+    extricate, feint, foist, forbearance, fraught, frenetic, galling,
+    glean, imbue, impel, impunity, indelible, indomitable, inimitable,
+    inordinate, insinuate, interminable, irrevocable, jettison, lurid,
+    machination, malaise, malfeasance, mete, mettle, milieu, miscreant,
+    misnomer, mores, moribund, myopic, nihilism, oblique, onus,
+    ostensible, panache, parlance, parochial, prodigious, proffer,
+    proselytize, provenance, purview, quagmire, rapprochement,
+    recidivism, recrimination, redress, retinue, riposte, schism,
+    semblance, spate, squalid, stalwart, sunder, supplant, tantalize,
+    titular, travail, tutelage, unassailable, unconscionable,
+    unmitigated, unseemly, unwitting, upshot, usurp, variegated, vaunt,
+    visceral, whet, wrest.
+  - The 12 words held back from the 2026-10-12 run (lurid to parochial)
+    went in with new ids and were written and reviewed from scratch.
+  - Chosen by modern frequency, as in "Adding new words": about 1,100
+    candidates, 759 between 0.3 and 4 uses per million, picked by hand
+    with a trend of about 0.6 or more. A subagent review swapped 7
+    (discursive, rubric, ulterior, nepotism, scathing, artifice,
+    acrimonious out; adjudicate, redress, vaunt, codify, semblance,
+    stalwart, upshot in). Re-tiering moved 12 of the 479 existing words.
+  - WordNet gave bandy as an adjective (bow-legged) and mete as a noun.
+    Both are taught as verbs. WordNet has no verb entry for mete; it
+    still exports, because export needs only a sense row and apply writes
+    the curated definition as one.
+  - Review rounds: 81 of 100 failed the first review, 27 the second and
+    about 8 the third; the last ones passed on rounds 4 and 5. Almost
+    every failure was copied wording, again mostly in wrong answers.
+  - Why so many failed: WordUp keeps its definitions and example
+    sentences inside `<script>` tags, and every writer's text extraction
+    stripped scripts, so no writer compared against WordUp, the source
+    the reviewers matched most. Several examples retold WordUp's or
+    Cambridge's example scenes too. Once the writers read the script text,
+    round 2 went much better.
+  - Eleven options nearly repeated another word's option for the same
+    look-alike (vicarious on visceral was vitriolic's option with one comma
+    removed). `check` compared texts exactly, so it missed them. It now
+    ignores case and punctuation, and rejects an option that shares half
+    its content words with another word's option for the same look-alike.
+    The older record still has 38 such pairs (for example capacious on
+    capricious and on fractious); they show up as problems only when
+    those words are next put on a worksheet.
+  - The main session wrote rounds 3 to 5, and its own rewrites failed
+    on copying six times (metamorphose, cogitate, modify, nepotism,
+    skepticism, a landlord example). Dropping a failed option when the
+    word still has 4 others worked better than rewording it again.
+    `pipeline/tools/dictionary-defs.py` prints seven dictionaries'
+    definitions for a word, WordUp's included, and was used before
+    writing each main-session option.
+  - A usage limit stopped five subagents mid-run. Each was resumed with
+    SendMessage after checking its worksheet's state; none had been
+    half-edited.
+  - Pronunciations for the 100 were written by the writers, checked by
+    the reviewers (none changed) and set with `curate.ts ipa`.
+- 2026-10-19: fixed the 38 older near-repeat pairs (two words showing
+  nearly the same wrong answer for one look-alike). 33 words re-reviewed,
+  all fixed, 0 flagged. No pair at 0.5 overlap or more is left, retired
+  words included.
+  - The words: affable, anachronism, assuage, audacious, beguile, belie,
+    cogent, corroborate, credulous, disparate, ebullient, efficacy,
+    esoteric, exhort, extraneous, facile, fallacious, fastidious,
+    fractious, impute, inimical, luminous, magnanimous, malleable,
+    mitigate, officious, opprobrium, parsimony, pungent, reticent,
+    regale, saturnine, tacit. One word per pair was changed; the other
+    word kept its option.
+  - First pass: 26 words dropped the repeated option (each still had 4
+    others) and 7 had it rewritten. Five of the pairs involved a retired
+    word, which `check` ignores; they were fixed anyway.
+  - The second reviewer then failed 29 of the 33 in round 1, nearly all
+    on older options and definitions that follow WordUp, Cambridge,
+    Oxford or American Heritage. These were reviewed before WordUp's
+    script text was readable, so earlier reviewers could not see the
+    match. Writers fixed round 2 (one per worksheet); 6 words failed
+    again and the main session wrote round 3. efficacy's definition
+    needed a fourth round: round 3 said "real-world", but efficacy is
+    the result under trial conditions (effectiveness is the real-world
+    result).
+  - Several drops left two look-alikes that share only an ending (cogent,
+    efficacy, esoteric, fallacious, inimical). The writers replaced them,
+    sometimes by bringing back the dropped look-alike with new wording.
+  - Reviewers objected that two options for one look-alike under
+    different words mean the same thing. That cannot be avoided, and it
+    is allowed; only near-identical wording fails. The skill now says so.
+  - `tools/dictionary-defs.py` had shown the same site-wide line for
+    Dictionary.com on every word. It now reads the definition list,
+    which also carries Collins text.
+  - `curate.ts status` now lists any near-repeat pair left in the record
+    (`nearRepeats` in `pipeline/src/lib/curate.ts`).
 
 ## The placement test no longer finishes during render
 
@@ -3032,3 +3125,102 @@ Update to the `preview` channel, and the app applies it the next time it opens
    `eas.json`, `package.json` scripts or a package with native code, run
    `eas build --profile preview --platform android`, install it, then run the
    EAS Update workflow by hand (or wait for the next merge).
+
+## Fill-the-blank questions with a choice of words (2026-10-19)
+
+Brian asked for more questions where you see a sentence and pick the word
+that fills the blank. The app had a fill-the-blank mode, but it asked you to
+type the word. This adds a multiple-choice version.
+
+### Decisions
+
+- **New mode `cloze_choice`** ("Choose the missing word"): an example
+  sentence with the word blanked and four words to pick from, with the same
+  50/50 hint as the other multiple-choice questions. The typed cloze stays.
+- **Where it appears.** In sessions it joins the ladders for new, learning
+  and relearning words, which SPEC section 1 gives to recognition and cloze:
+  one of three modes for new words, one of four for learning words, one of
+  three for relearning words. The review ladders are unchanged, so maturing
+  words still move on to typed answers. Practice lists it twice, so it comes
+  up about twice as often as any other mode (2 in 9).
+- **XP 12**, between multiple choice (10) and the typed cloze (16).
+- **Wrong options are chosen so grammar does not give the answer away.**
+  - Same part of speech as the answer.
+  - When "a" or "an" comes right before the blank, every option takes that
+    article, judged by the first sound of its IPA ("a eulogy", "an
+    aberrant").
+  - No word linked to the answer as a synonym or antonym, in either
+    direction or through a shared one, since it could also fit.
+  - Only sentences whose blank is the headword itself. 12% of sentences
+    blank an inflected form ("abated"), which would stand out against
+    base-form options; those stay with the typed cloze. 19 words have only
+    inflected sentences and do not get this mode (belie, glean, regale and
+    others).
+- **Wrong options come from the words being played first, then the rest of
+  the collection.** A session alone often has too few words of one part of
+  speech (of the first 10 words, 3 had no question), so the session now also
+  reads the full word list (the `allWords` query practice already used). It
+  waits for that list before the first question, so a question's mode cannot
+  change when the list arrives.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (31 suites, 254 tests)
+  pass.
+- Against the committed words file: 560 of 579 words can be asked this way.
+  In 610 generated questions with "a" or "an" before the blank, every option
+  took that article.
+- Web, demo mode, at 390 x 844: in a session and in practice the question
+  appeared, the hint dimmed one wrong word, answering showed the reveal with
+  the full sentence, and Continue moved on. No console errors.
+- Not run on the iOS simulator or Android emulator.
+- Chromatic: new `Games/ClozeChoice` stories.
+
+### For next time
+
+- Wrong options are other headwords picked by rule, not written for each
+  sentence. A word of the same type that is not listed as a synonym can still
+  fit a sentence now and then. If learners report that, the improve-words
+  skill can add the missing synonym, or the pipeline could write wrong words
+  for each sentence.
+
+## UI Tests replaces Visual tests as the required visual check (2026-10-20)
+
+Brian chose to make Chromatic's own `UI Tests` commit status the required
+check for visual changes, in place of the `Visual tests` Actions job. Before
+this, accepting a change in Chromatic left `Visual tests` red until someone
+re-ran the job. `UI Tests` turns green when the change is accepted. Chromatic
+documents both setups
+(https://www.chromatic.com/docs/github-actions/,
+https://www.chromatic.com/docs/mandatory-pr-checks/).
+
+### What changed
+
+- `.github/workflows/chromatic.yml`: `exitZeroOnChanges` is `true` again, so
+  visual changes no longer fail the `Visual tests` job. A story that errors or
+  fails its play function still fails the build, and `UI Tests` with it. The
+  job still runs, because it is what publishes Storybook to Chromatic.
+- `.github/scripts/check-ui-tests-status.sh` is removed. It read the
+  `UI Tests` status from inside the job, to catch builds that TurboSnap
+  bypassed (see "A bypassed Chromatic build no longer passes Visual tests").
+  Requiring the status directly covers that case.
+
+### Manual step
+
+The `main` ruleset is a GitHub setting and was not changed from this session.
+In Settings, Rules, Rulesets, `main`, under "Require status checks to pass",
+add `UI Tests` (source: Chromatic) and remove `Visual tests`.
+
+### Trade-offs
+
+- **Fork pull requests.** The job is skipped for forks, so Chromatic posts no
+  `UI Tests` status and a fork pull request waits until an admin bypasses the
+  ruleset. This is why the status was not required before (see "Visual diffs
+  now block").
+- **Turning Chromatic off.** If `CHROMATIC_ENABLED` stops being `true`, or the
+  Chromatic project is unlinked from the repository, no pull request gets the
+  status, so `UI Tests` has to come off the ruleset too.
+- **Not yet verified:** whether, on a commit whose build TurboSnap bypassed,
+  the carried-over pending status turns green once the earlier build is
+  accepted. The commit with this change touches no story files, so PR #40
+  should show it when build 108 is accepted.

@@ -97,6 +97,31 @@ export const WORKSHEET_INSTRUCTIONS =
 export const PARTS_OF_SPEECH = ['noun', 'verb', 'adjective', 'adverb'];
 
 const key = (s: string): string => s.trim().toLowerCase();
+
+// For comparing sentences: case and punctuation are ignored, so two texts that
+// differ only by a comma count as the same text.
+export const textKey = (s: string): string =>
+  s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+
+/**
+ * Share of content words (3 letters or more) two texts have in common, from 0
+ * to 1. Used to catch a wrong answer that nearly repeats another word's option
+ * for the same look-alike.
+ */
+export function overlap(a: string, b: string): number {
+  const words = (s: string) => new Set(textKey(s).split(' ').filter((w) => w.length > 2));
+  const x = words(a);
+  const y = words(b);
+  const shared = [...x].filter((w) => y.has(w)).length;
+  const all = x.size + y.size - shared;
+  return all === 0 ? 0 : shared / all;
+}
+
+/** At this overlap or more, two options for the same look-alike read as one. */
+export const NEAR_REPEAT = 0.5;
 const article = (noun: string): string => `${/^[aeiou]/i.test(noun) ? 'an' : 'a'} ${noun}`;
 const letters = (s: string): string => s.toLowerCase().replace(/[^a-z]/g, '');
 const isSentence = (s: string): boolean => /^[A-Z"']/.test(s.trim()) && /[.!?]["']?$/.test(s.trim());
@@ -143,6 +168,8 @@ export interface CheckEnv {
   lexicon: Lexicon;
   /** Wrong answers (lowercased) already used by words outside this worksheet, to their word id. */
   takenWrongAnswers: Map<string, number>;
+  /** Other words' options, by look-alike, to catch near repeats. */
+  lookalikeOptions?: Map<string, { meaning: string; wordId: number }[]>;
 }
 
 /** Content problems: anything that would be wrong to ship. */
@@ -170,7 +197,7 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     p.push('plain must be one sentence of 10 to 180 characters, capitalized, ending in a period');
   }
   if (mentions(entry.plain)) p.push('plain names the word, which gives away the "which word means" question');
-  if (key(entry.plain) === key(entry.definition)) p.push('plain is the same as definition');
+  if (textKey(entry.plain) === textKey(entry.definition)) p.push('plain is the same as definition');
 
   // Examples feed the cloze game: the target is blanked out of the sentence.
   if (entry.examples.length < 3 || entry.examples.length > 5) p.push('need 3 to 5 examples');
@@ -183,15 +210,15 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     const token = findWordToken(ex.text, word);
     if (!token) p.push(`${where} does not use the word`);
     else if (ex.cloze !== token) p.push(`${where}: cloze must be "${token}", the word as written`);
-    if (texts.has(key(ex.text))) p.push(`${where} is repeated`);
-    texts.add(key(ex.text));
+    if (texts.has(textKey(ex.text))) p.push(`${where} is repeated`);
+    texts.add(textKey(ex.text));
   }
 
   // Wrong answers: real meanings of real look-alike words, same part of speech.
   if (entry.wrongAnswers.length < 4 || entry.wrongAnswers.length > 6) p.push('need 4 to 6 wrong answers');
   const lookalikes = new Set<string>();
   const meanings = new Set<string>();
-  const correct = new Set([key(entry.definition), key(entry.plain)]);
+  const correct = new Set([textKey(entry.definition), textKey(entry.plain)]);
   for (const wa of entry.wrongAnswers) {
     const lk = key(wa.lookalike);
     const m = wa.meaning.trim();
@@ -221,11 +248,19 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     if (ILLUSTRATION.test(m) && !ILLUSTRATION.test(entry.definition)) {
       p.push(`wrong answer "${m.slice(0, 40)}" has an example ("like ...", "such as ...") that the definition does not; keep it plain`);
     }
-    if (correct.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is the correct definition`);
-    if (meanings.has(key(m))) p.push(`wrong answer "${m.slice(0, 40)}" is repeated`);
-    meanings.add(key(m));
-    const owner = env.takenWrongAnswers.get(key(m));
+    if (correct.has(textKey(m))) p.push(`wrong answer "${m.slice(0, 40)}" is the correct definition`);
+    if (meanings.has(textKey(m))) p.push(`wrong answer "${m.slice(0, 40)}" is repeated`);
+    meanings.add(textKey(m));
+    const owner = env.takenWrongAnswers.get(textKey(m));
     if (owner !== undefined && owner !== entry.wordId) p.push(`wrong answer "${m.slice(0, 40)}" is already used by word ${owner}`);
+    // A learner who meets the same look-alike under two words should not see
+    // the same sentence twice with a word or two changed.
+    for (const other of env.lookalikeOptions?.get(key(wa.lookalike ?? '')) ?? []) {
+      if (other.wordId !== entry.wordId && owner !== other.wordId && overlap(m, other.meaning) >= NEAR_REPEAT) {
+        p.push(`wrong answer "${m.slice(0, 40)}" nearly repeats word ${other.wordId}'s option for ${wa.lookalike}`);
+        break;
+      }
+    }
   }
 
   // Memory hook.
@@ -236,15 +271,15 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
   // Other senses: not shown on most screens, but their definitions become
   // fallback wrong answers for other words, so they must be clean too.
   if (entry.otherSenses.length > 3) p.push('at most 3 other senses');
-  const senseTexts = new Set([key(entry.definition)]);
+  const senseTexts = new Set([textKey(entry.definition)]);
   for (const other of entry.otherSenses) {
     const where = `other sense "${other.slice(0, 40)}"`;
     if (!isSentence(other) || other.length < 10 || other.length > 220) {
       p.push(`${where} must be one sentence of 10 to 220 characters, capitalized, ending in a period`);
     }
     if (mentions(other)) p.push(`${where} names the word`);
-    if (senseTexts.has(key(other))) p.push(`${where} repeats another sense`);
-    senseTexts.add(key(other));
+    if (senseTexts.has(textKey(other))) p.push(`${where} repeats another sense`);
+    senseTexts.add(textKey(other));
   }
 
   // Related words appear as answer options in the synonym and antonym games.
@@ -374,10 +409,51 @@ export function wrongAnswerOwners(rows: ContentRows, skipWordIds: Set<number>): 
     const primary = primarySense(rows, word.id);
     if (!primary) continue;
     for (const d of rows.distractors) {
-      if (d.sense_id === primary.id) owners.set(key(d.distractor_lemma), word.id);
+      if (d.sense_id === primary.id) owners.set(textKey(d.distractor_lemma), word.id);
     }
   }
   return owners;
+}
+
+/** Each look-alike's options in the record, for words outside `skipWordIds`. */
+export function lookalikeOptions(
+  rows: ContentRows,
+  skipWordIds: Set<number>,
+): Map<string, { meaning: string; wordId: number }[]> {
+  const options = new Map<string, { meaning: string; wordId: number }[]>();
+  for (const word of rows.words) {
+    if (skipWordIds.has(word.id)) continue;
+    const primary = primarySense(rows, word.id);
+    if (!primary) continue;
+    for (const d of rows.distractors) {
+      if (d.sense_id !== primary.id || !d.lookalike) continue;
+      const list = options.get(key(d.lookalike)) ?? [];
+      list.push({ meaning: d.distractor_lemma, wordId: word.id });
+      options.set(key(d.lookalike), list);
+    }
+  }
+  return options;
+}
+
+/**
+ * Pairs of options for the same look-alike, under two different words, that
+ * nearly repeat each other. `check` rejects these one word at a time; this
+ * lists every pair left in the record, for `status`.
+ */
+export function nearRepeats(
+  options: Map<string, { meaning: string; wordId: number }[]>,
+): { lookalike: string; wordIds: [number, number] }[] {
+  const pairs: { lookalike: string; wordIds: [number, number] }[] = [];
+  for (const [lookalike, list] of options) {
+    for (let i = 0; i < list.length; i++) {
+      for (let j = i + 1; j < list.length; j++) {
+        if (list[i].wordId !== list[j].wordId && overlap(list[i].meaning, list[j].meaning) >= NEAR_REPEAT) {
+          pairs.push({ lookalike, wordIds: [list[i].wordId, list[j].wordId] });
+        }
+      }
+    }
+  }
+  return pairs;
 }
 
 /**

@@ -2,25 +2,64 @@
 // tested. Modes pull from the word's own distractors first, then from a
 // session-wide pool assembled from the other words in the plan.
 
-import type { SenseContent, SessionItem, WordContent } from '@/lib/types';
+import type { ExampleContent, SenseContent, SessionItem, WordContent } from '@/lib/types';
+import { articleBefore, indefiniteArticle } from '@/lib/text';
+import type { ModeCapabilities } from './ladder';
+
+/** A word that can be offered as a wrong answer for a sentence's blank. */
+export interface ClozeWord {
+  wordId: number;
+  headword: string;
+  partOfSpeech: WordContent['partOfSpeech'];
+  article: 'a' | 'an';
+  /** Its synonyms and antonyms, lowercased. */
+  related: string[];
+  /** One of the words being played, rather than from the wider collection. */
+  inSession: boolean;
+}
 
 export interface OptionPool {
   words: { wordId: number; headword: string }[];
   definitions: { wordId: number; text: string }[];
   lemmas: string[]; // synonyms/antonyms from other words, for relation distractors
+  /**
+   * Wrong answers for the sentence-choice cloze: the words being played, then
+   * the rest of the collection. A blank needs three words of the answer's part
+   * of speech, and a session alone often has too few.
+   */
+  clozeWords: ClozeWord[];
 }
 
-export function buildOptionPool(items: SessionItem[]): OptionPool {
+export function buildOptionPool(
+  items: SessionItem[],
+  collection: readonly WordContent[] = [],
+): OptionPool {
   const words: OptionPool['words'] = [];
   const definitions: OptionPool['definitions'] = [];
   const lemmas = new Set<string>();
+  const clozeWords: ClozeWord[] = [];
+  const inCloze = new Set<number>();
+  const addClozeWord = (c: WordContent, inSession: boolean) => {
+    if (inCloze.has(c.wordId)) return;
+    inCloze.add(c.wordId);
+    clozeWords.push({
+      wordId: c.wordId,
+      headword: c.headword,
+      partOfSpeech: c.partOfSpeech,
+      article: indefiniteArticle(c.headword, c.ipa),
+      related: c.relations.map((r) => r.relatedLemma.toLowerCase()),
+      inSession,
+    });
+  };
   for (const it of items) {
     const c = it.content;
     words.push({ wordId: c.wordId, headword: c.headword });
     for (const s of c.senses) definitions.push({ wordId: c.wordId, text: s.definition });
     for (const r of c.relations) lemmas.add(r.relatedLemma.toLowerCase());
+    addClozeWord(c, true);
   }
-  return { words, definitions, lemmas: [...lemmas] };
+  for (const c of collection) addClozeWord(c, false);
+  return { words, definitions, lemmas: [...lemmas], clozeWords };
 }
 
 // Deterministic PRNG so option order is stable per (word, mode) and testable.
@@ -132,12 +171,93 @@ export function buildOptions(
   return shuffle(opts, rng);
 }
 
+/**
+ * Sentences that can be offered with a choice of words: the blank holds the
+ * headword itself. In "the storm abated" every wrong option would be a base
+ * form beside the one past tense, so inflected blanks are left to the typed
+ * cloze.
+ */
+export function clozeChoiceExamples(content: WordContent): ExampleContent[] {
+  const headword = content.headword.trim().toLowerCase();
+  return content.senses
+    .flatMap((s) => s.examples)
+    .filter((e) => (e.clozeTarget ?? '').trim().toLowerCase() === headword);
+}
+
+/**
+ * Words that can stand in the blank as wrong answers. Each has the answer's
+ * part of speech and takes the same "a" or "an" when one comes before the
+ * blank, so grammar gives nothing away. A word linked to the answer as a
+ * synonym or antonym, in either direction or through a shared one, is left
+ * out: it could make sense in the sentence too.
+ */
+function clozeCandidates(
+  content: WordContent,
+  article: 'a' | 'an' | null,
+  pool: OptionPool,
+): ClozeWord[] {
+  const headword = content.headword.toLowerCase();
+  const related = new Set(content.relations.map((r) => r.relatedLemma.toLowerCase()));
+  return pool.clozeWords.filter(
+    (w) =>
+      w.wordId !== content.wordId &&
+      w.partOfSpeech === content.partOfSpeech &&
+      (article === null || w.article === article) &&
+      !related.has(w.headword.toLowerCase()) &&
+      !w.related.some((l) => l === headword || related.has(l)),
+  );
+}
+
+export const CLOZE_CHOICE_DISTRACTORS = 3;
+
+export interface ClozeChoice {
+  example: ExampleContent;
+  options: Option[];
+}
+
+/**
+ * A sentence with the word blanked and four words to fill it, or null when no
+ * sentence has enough wrong answers. Wrong answers come from the words being
+ * played first, which the learner has at least seen, so the right answer does
+ * not stand out as the only familiar one.
+ */
+export function buildClozeChoice(
+  content: WordContent,
+  pool: OptionPool,
+  rng: () => number,
+): ClozeChoice | null {
+  const exclude = new Set([content.headword.toLowerCase()]);
+  for (const example of shuffle(clozeChoiceExamples(content), rng)) {
+    const candidates = clozeCandidates(
+      content,
+      articleBefore(example.text, example.clozeTarget ?? content.headword),
+      pool,
+    );
+    const fromSession = uniqueTake(
+      candidates.filter((w) => w.inSession).map((w) => w.headword),
+      exclude,
+      CLOZE_CHOICE_DISTRACTORS,
+      rng,
+    );
+    const need = CLOZE_CHOICE_DISTRACTORS - fromSession.length;
+    const fromCollection =
+      need > 0
+        ? uniqueTake(
+            candidates.filter((w) => !w.inSession).map((w) => w.headword),
+            new Set([...exclude, ...fromSession.map((h) => h.toLowerCase())]),
+            need,
+            rng,
+          )
+        : [];
+    const distractors = [...fromSession, ...fromCollection];
+    if (distractors.length < CLOZE_CHOICE_DISTRACTORS) continue;
+    return { example, options: buildOptions(content.headword, distractors, rng) };
+  }
+  return null;
+}
+
 // A helper the ladder uses to know what content a word supports.
-export function capsForWord(content: WordContent): {
-  hasClozeExample: boolean;
-  hasRelations: { synonym: boolean; antonym: boolean };
-  hasAudio: boolean;
-} {
+export function capsForWord(content: WordContent, pool: OptionPool): ModeCapabilities {
   const hasClozeExample = content.senses.some((s) =>
     s.examples.some((e) => (e.clozeTarget ?? '').trim() !== ''),
   );
@@ -145,5 +265,8 @@ export function capsForWord(content: WordContent): {
     synonym: content.relations.some((r) => r.relationType === 'synonym'),
     antonym: content.relations.some((r) => r.relationType === 'antonym'),
   };
-  return { hasClozeExample, hasRelations, hasAudio: true };
+  // Whether a choice can be built does not depend on the seed: every sentence
+  // is tried.
+  const hasClozeChoice = buildClozeChoice(content, pool, mulberry32(0)) !== null;
+  return { hasClozeExample, hasClozeChoice, hasRelations, hasAudio: true };
 }
