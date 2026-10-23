@@ -23,8 +23,10 @@ import {
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
 import { ReportProblem } from '@/features/report/ReportProblem';
+import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import { feedbackCorrect, feedbackIncorrect } from './feedback';
 import { useScrollToReveal } from './RevealScroll';
+import { useGameSavedWords } from './GameContext';
 
 export function AudioButton({
   onPress,
@@ -65,6 +67,7 @@ export function Reveal({
 }) {
   const scrollToReveal = useScrollToReveal();
   const scrolled = useRef(false);
+  const saved = useGameSavedWords();
 
   useEffect(() => {
     if (correct) feedbackCorrect(soundEnabled);
@@ -123,12 +126,19 @@ export function Reveal({
             <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           </Pressable>
         ) : null}
-        <View className="mt-2">
+        <Row className="mt-2 flex-wrap gap-x-6">
           <AudioButton
             onPress={() => speakWord(content)}
             label="Hear it"
           />
-        </View>
+          {saved ? (
+            <SaveWordButton
+              headword={content.headword}
+              saved={saved.savedIds.has(content.wordId)}
+              onPress={() => saved.toggle(content)}
+            />
+          ) : null}
+        </Row>
       </View>
 
       <View className="mt-6 gap-3">

@@ -32,7 +32,7 @@ describe('applyFeedAction', () => {
     );
   });
 
-  it('switching from a pending "I know it" to "Learn this" stores only the add', () => {
+  it('switching from a pending "I know it" to "Save for later" stores only the add', () => {
     const r = applyFeedAction(marks({ pendingKnown: [1] }), { type: 'learn', wordId: 1 });
     expect(r.pendingKnown.has(1)).toBe(false);
     expect(r.effects).toEqual([{ type: 'add', wordId: 1 }]);

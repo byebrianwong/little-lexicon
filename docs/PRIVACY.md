@@ -10,11 +10,12 @@ to hide behind legalese.
 
 - **Account data.** When you sign up we store your email address and an optional
   display name, handled by our authentication provider (Supabase Auth).
-- **Learning data.** Your review history, spaced-repetition card state, daily
-  activity, streak, XP, and settings. This is what makes scheduling and progress
-  work. It is tied to your account and readable only by you.
-- **Your word list.** The words you choose to learn from the Discover feed, and
-  when you added or removed them.
+- **Learning data.** Your review history, your answers in practice,
+  spaced-repetition card state, daily activity, streak, XP, and settings. This
+  is what makes scheduling, practice and progress work. It is tied to your
+  account and readable only by you.
+- **Your saved words.** The words you save to learn later, and when you added
+  or removed them.
 
 We do not sell your data. We do not send your word-level performance to
 advertising networks.

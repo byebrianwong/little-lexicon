@@ -1,12 +1,14 @@
 // Session-scoped context available to every game mode: the distractor pool,
-// the user's profile (for gating), and, in a scheduled session, a way to
-// preview when a word comes back. Set once by the session runner.
+// the user's profile (for gating), the saved words, and, in a scheduled
+// session, a way to preview when a word comes back. Set once by the session
+// runner.
 
 import { createContext, useContext, useMemo } from 'react';
 import type { Profile, SessionItem } from '@/lib/types';
 import type { GameOutcome } from '@/srs/srs';
 import { formatNextDue } from '@/lib/date';
 import { reviewTime } from '@/features/review/nextDue';
+import type { SavedWords } from '@/features/feed/queries';
 import type { OptionPool } from './optionPool';
 
 export interface GameContextValue {
@@ -18,6 +20,8 @@ export interface GameContextValue {
    * word, and the reveal then shows no "next review" line.
    */
   previewNextDue?: (item: SessionItem, outcome: GameOutcome) => Date;
+  /** For the Save control on the new-word card and the reveal. */
+  saved?: SavedWords;
 }
 
 const GameContext = createContext<GameContextValue | null>(null);
@@ -28,6 +32,14 @@ export function useGameContext(): GameContextValue {
   const v = useContext(GameContext);
   if (!v) throw new Error('useGameContext must be used within a GameProvider');
   return v;
+}
+
+/**
+ * The saved words, when the screen supplies them. Unlike useGameContext it
+ * works outside a provider, so the reveal can be shown on its own.
+ */
+export function useGameSavedWords(): SavedWords | undefined {
+  return useContext(GameContext)?.saved;
 }
 
 /**

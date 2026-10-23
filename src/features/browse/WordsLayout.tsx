@@ -2,7 +2,7 @@
 //
 // - Discover: a feed of unseen words, one per screen, for picking what to
 //   learn next.
-// - Your list: the words picked, waiting for a session.
+// - Saved: every word the user saved, with how each one is going.
 // - All words: the whole collection, searchable.
 //
 // The switch is drawn like the tab bar, as text with a short red rule under
@@ -16,14 +16,14 @@ export type WordsViewId = 'discover' | 'list' | 'all';
 
 const VIEWS: { id: WordsViewId; label: string }[] = [
   { id: 'discover', label: 'Discover' },
-  { id: 'list', label: 'Your list' },
+  { id: 'list', label: 'Saved' },
   { id: 'all', label: 'All words' },
 ];
 
 export interface WordsLayoutProps {
   view: WordsViewId;
   onChangeView: (view: WordsViewId) => void;
-  /** Words waiting on the list. Undefined while it loads. */
+  /** How many words are saved. Undefined while the list loads. */
   listCount: number | undefined;
   children: React.ReactNode;
 }

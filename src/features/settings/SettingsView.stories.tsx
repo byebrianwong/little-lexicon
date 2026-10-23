@@ -16,6 +16,7 @@ const meta = {
     onSelectGoal: () => {},
     onSelectLevel: fn(),
     onSelectRetention: () => {},
+    onSelectKnownFrequency: fn(),
     onToggleSound: () => {},
     onSelectReminder: () => {},
     onExport: () => {},
@@ -47,6 +48,15 @@ export const ChangingLevel: Story = {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('Expert'));
     await expect(args.onSelectLevel).toHaveBeenCalledWith(5);
+  },
+};
+
+/** Picking how often practice shows known words saves that choice. */
+export const ChangingKnownWordFrequency: Story = {
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByText('Sometimes'));
+    await expect(args.onSelectKnownFrequency).toHaveBeenCalledWith('sometimes');
   },
 };
 

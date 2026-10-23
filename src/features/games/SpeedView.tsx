@@ -18,6 +18,7 @@ import {
   Spinner,
 } from '@/components/ui';
 import { FAST_THRESHOLD_MS } from '@/srs/srs';
+import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import type { Option } from './optionPool';
 import { OptionButton, OptionList } from './modes/OptionButton';
 
@@ -54,6 +55,9 @@ export interface SpeedRoundViewProps {
   /** Seconds left in the round. Clamped at zero for display. */
   remaining: number;
   answeredCount: number;
+  /** Whether the word on screen is saved. Saving does not stop the clock. */
+  saved: boolean;
+  onToggleSave: () => void;
   onChoose: (option: Option) => void;
   onClose: () => void;
 }
@@ -64,6 +68,8 @@ export function SpeedRoundView({
   chosen,
   remaining,
   answeredCount,
+  saved,
+  onToggleSave,
   onChoose,
   onClose,
 }: SpeedRoundViewProps) {
@@ -82,8 +88,11 @@ export function SpeedRoundView({
           <Label tone="ink">{`${answeredCount} answered`}</Label>
         </Row>
         <Headword className="mt-2">{headword}</Headword>
+        {headword ? (
+          <SaveWordButton headword={headword} saved={saved} onPress={onToggleSave} />
+        ) : null}
 
-        <View className="mt-5">
+        <View className="mt-3">
           <OptionList>
             {options.map((opt, i) => {
               const state = !chosen

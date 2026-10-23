@@ -29,4 +29,5 @@ export const qk = {
   achievements: ['achievements'] as const,
   wordContent: (wordId: number) => ['wordContent', wordId] as const,
   wordList: ['wordList'] as const,
+  answerHistory: ['answerHistory'] as const,
 };

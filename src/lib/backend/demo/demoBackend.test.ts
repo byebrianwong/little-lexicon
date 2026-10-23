@@ -126,3 +126,76 @@ describe('DemoBackend word reports', () => {
     ]);
   });
 });
+
+describe('DemoBackend saved words and the tracker', () => {
+  const card = {
+    due: '2026-10-21T10:00:00.000Z',
+    stability: 1,
+    difficulty: 5,
+    elapsed_days: 0,
+    scheduled_days: 1,
+    reps: 1,
+    lapses: 0,
+    state: 'learning',
+    last_review: '2026-10-20T10:00:00.000Z',
+    learning_steps: 0,
+  };
+
+  it('keeps a saved word after a session has shown it', async () => {
+    const backend = new DemoBackend();
+    await backend.addToWordList(6);
+    await backend.submitReview({
+      wordId: 6,
+      card,
+      rating: 3,
+      stateBefore: 'new',
+      gameMode: 'mc_word_to_def',
+      responseMs: 3000,
+      retrievability: null,
+      xp: 5,
+      isNew: true,
+    });
+
+    expect((await backend.getWordList()).map((w) => w.content.wordId)).toEqual([6]);
+    // It is no longer new, so a session does not introduce it again.
+    expect((await backend.getNewWords(3)).map((i) => i.content.wordId)).not.toContain(6);
+  });
+
+  it('builds the history from reviews and practice answers, and keeps it on reload', async () => {
+    const first = new DemoBackend();
+    await first.submitReview({
+      wordId: 6,
+      card,
+      rating: 1,
+      stateBefore: 'new',
+      gameMode: 'cloze',
+      responseMs: 3000,
+      retrievability: null,
+      xp: 0,
+      isNew: true,
+    });
+    await first.logPracticeAnswer({ wordId: 6, correct: true, gameMode: 'production' });
+
+    const history = await new DemoBackend().getAnswerHistory();
+    expect(history.map((a) => [a.wordId, a.correct])).toEqual([
+      [6, false],
+      [6, true],
+    ]);
+    const exported = await new DemoBackend().exportData();
+    expect(exported.practiceLogs).toEqual([
+      expect.objectContaining({ word_id: 6, correct: true, game_mode: 'production' }),
+    ]);
+  });
+
+  it('gives a profile saved by an older version the default for known words', async () => {
+    await AsyncStorage.setItem(
+      KEY,
+      JSON.stringify({
+        wordIdScheme: 'words-file',
+        profile: { userId: 'demo-user', displayName: 'Old', dailyGoal: 20 },
+      }),
+    );
+    const profile = await new DemoBackend().getProfile();
+    expect(profile).toMatchObject({ displayName: 'Old', dailyGoal: 20, knownWordFrequency: 'rarely' });
+  });
+});
