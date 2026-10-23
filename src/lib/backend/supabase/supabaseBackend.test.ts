@@ -24,6 +24,7 @@ class MockQuery implements PromiseLike<Result> {
   private window: { from: number; to: number } | null = null;
   private max: number | null = null;
   private one: 'single' | 'maybe' | null = null;
+  private patch: Row | null = null;
 
   constructor(private rows: Row[]) {}
 
@@ -39,6 +40,11 @@ class MockQuery implements PromiseLike<Result> {
     const existing = this.rows.find((r) => r[key] === row[key]);
     if (!existing) this.rows.push(row);
     else if (!opts.ignoreDuplicates) Object.assign(existing, row);
+    return this;
+  }
+  /** Applied to the rows the filters match, when the query runs. */
+  update(patch: Row): this {
+    this.patch = patch;
     return this;
   }
   single(): this {
@@ -77,6 +83,7 @@ class MockQuery implements PromiseLike<Result> {
 
   private run(): Result {
     let out = this.rows.filter((r) => this.filters.every((f) => f(r)));
+    if (this.patch) for (const r of out) Object.assign(r, this.patch);
     out = [...out].sort((a, b) => {
       for (const { column, ascending } of this.orders) {
         const x = String(a[column]).padStart(30, '0');
@@ -266,11 +273,52 @@ describe('SupabaseBackend new words, feed and list', () => {
     expect(feed.every((w) => w.difficultyTier <= 3)).toBe(true);
   });
 
-  it('lists active picks that no session has shown, oldest first', async () => {
+  it('lists every saved word, seen or not, oldest first, without removed ones', async () => {
     const list = await new SupabaseBackend().getWordList();
     expect(list.map((w) => [w.content.wordId, w.addedAt])).toEqual([
       [3, '2026-01-01T00:00:00.000Z'],
       [7, '2026-01-02T00:00:00.000Z'],
+      [2, '2026-01-06T00:00:00.000Z'],
+    ]);
+  });
+});
+
+describe('SupabaseBackend answer history', () => {
+  it('merges reviews and practice answers, with only Again counted wrong', async () => {
+    mockTables.review_logs = [
+      { id: 1, word_id: 5, rating: 1, reviewed_at: '2026-10-01T10:00:00.000Z' },
+      { id: 2, word_id: 5, rating: 2, reviewed_at: '2026-10-02T10:00:00.000Z' },
+      { id: 3, word_id: 6, rating: 4, reviewed_at: '2026-10-03T10:00:00.000Z' },
+    ];
+    mockTables.practice_logs = [
+      { id: 1, word_id: 5, correct: false, answered_at: '2026-10-04T10:00:00.000Z' },
+    ];
+
+    const history = await new SupabaseBackend().getAnswerHistory();
+
+    expect(history).toEqual([
+      { wordId: 5, correct: false, at: '2026-10-01T10:00:00.000Z' },
+      { wordId: 5, correct: true, at: '2026-10-02T10:00:00.000Z' },
+      { wordId: 6, correct: true, at: '2026-10-03T10:00:00.000Z' },
+      { wordId: 5, correct: false, at: '2026-10-04T10:00:00.000Z' },
+    ]);
+  });
+
+  it('reads past the first page of a long history', async () => {
+    mockTables.review_logs = Array.from({ length: 1500 }, (_, i) => ({
+      id: i + 1,
+      word_id: 5,
+      rating: 3,
+      reviewed_at: '2026-10-01T10:00:00.000Z',
+    }));
+    expect(await new SupabaseBackend().getAnswerHistory()).toHaveLength(1500);
+  });
+
+  it('logs a practice answer as the signed-in user', async () => {
+    mockTables.practice_logs = [];
+    await new SupabaseBackend().logPracticeAnswer({ wordId: 9, correct: true, gameMode: 'cloze' });
+    expect(mockTables.practice_logs).toEqual([
+      { user_id: 'user-1', word_id: 9, correct: true, game_mode: 'cloze' },
     ]);
   });
 });
@@ -356,6 +404,23 @@ describe('SupabaseBackend profile', () => {
     expect(a).toMatchObject({ userId: 'user-1', displayName: 'Ada' });
     expect(b).toMatchObject({ userId: 'user-1', displayName: 'Ada' });
     expect(mockTables.profiles).toEqual([{ user_id: 'user-1', display_name: 'Ada' }]);
+  });
+
+  it('reads how often practice shows known words, with rarely as the default', async () => {
+    mockTables.profiles = [
+      { user_id: 'user-1', known_word_frequency: 'sometimes', interests: [] },
+    ];
+    expect((await new SupabaseBackend().getProfile()).knownWordFrequency).toBe('sometimes');
+
+    mockTables.profiles = [{ user_id: 'user-1', known_word_frequency: 'hourly', interests: [] }];
+    expect((await new SupabaseBackend().getProfile()).knownWordFrequency).toBe('rarely');
+  });
+
+  it('saves a new setting for known words', async () => {
+    mockTables.profiles = [{ user_id: 'user-1', known_word_frequency: 'rarely', interests: [] }];
+    const profile = await new SupabaseBackend().updateProfile({ knownWordFrequency: 'often' });
+    expect(profile.knownWordFrequency).toBe('often');
+    expect(mockTables.profiles[0]).toMatchObject({ known_word_frequency: 'often' });
   });
 
   it('ignores a display name that is not a string', async () => {

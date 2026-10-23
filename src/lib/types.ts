@@ -74,12 +74,20 @@ export interface SessionItem {
   isNew: boolean;
 }
 
-// A word the user picked in the Discover feed that no session has shown yet.
-// Once a session shows it, the word is being learned and leaves the list.
+// A word the user saved, from any screen that shows a word. It stays saved
+// until the user removes it. Sessions introduce saved words they have not
+// shown yet before any other new word, and practice shows saved words more
+// often.
 export interface ListedWord {
   content: WordContent;
   addedAt: string; // ISO
 }
+
+/**
+ * How often endless practice shows a word the user knows (see
+ * features/tracker), against a word they are still learning.
+ */
+export type KnownWordFrequency = 'rarely' | 'sometimes' | 'often';
 
 export interface Profile {
   userId: string;
@@ -87,6 +95,7 @@ export interface Profile {
   levelEstimate: number | null;
   dailyGoal: number;
   desiredRetention: number;
+  knownWordFrequency: KnownWordFrequency;
   interests: string[];
   streakCount: number;
   streakFreezeCount: number;

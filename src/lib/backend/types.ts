@@ -5,6 +5,7 @@
 
 import type { UserWordStateRow } from '@/srs/srs';
 import type { ReportReason, ReportScreen } from '@/features/report/reasons';
+import type { AnswerRecord } from '@/features/tracker/tracker';
 import type {
   DailyStats,
   ListedWord,
@@ -85,6 +86,12 @@ export interface WordReportInput {
   screen: ReportScreen;
 }
 
+export interface PracticeAnswerInput {
+  wordId: number;
+  correct: boolean;
+  gameMode: string;
+}
+
 export interface FeedRequest {
   limit: number;
   exclude: readonly number[];
@@ -126,22 +133,30 @@ export interface Backend {
     opts?: { minTier?: number; maxTier?: number },
   ): Promise<SessionItem[]>;
 
-  // Discover feed and the word list
+  // Discover feed and the saved words
   /**
    * The next words for the Discover feed: never seen, not marked known, not
-   * on the list and not in `exclude`, near the user's level, shuffled by
-   * `seed`. Pass the ids already shown as `exclude` to get the next page.
+   * saved and not in `exclude`, near the user's level, shuffled by `seed`.
+   * Pass the ids already shown as `exclude` to get the next page.
    */
   getFeedWords(input: FeedRequest): Promise<WordContent[]>;
   /**
-   * The user's list, oldest first, minus words a session has already shown.
-   * Those are being learned, and keeping them would make the list grow for
-   * good.
+   * Every word the user saved, oldest first. A word stays until the user
+   * removes it, including after a session has introduced it.
    */
   getWordList(): Promise<ListedWord[]>;
   addToWordList(wordId: number): Promise<void>;
   /** A soft remove: the entry is kept with a removed time. */
   removeFromWordList(wordId: number): Promise<void>;
+
+  // The word tracker (features/tracker)
+  /**
+   * Every answer the user has given, in any mode: reviews from sessions and
+   * speed rounds, and practice answers. Not in any order.
+   */
+  getAnswerHistory(): Promise<AnswerRecord[]>;
+  /** Log a practice answer. It does not touch the review schedule. */
+  logPracticeAnswer(input: PracticeAnswerInput): Promise<void>;
 
   /**
    * Save a learner's report of a problem with a word's content. The curation

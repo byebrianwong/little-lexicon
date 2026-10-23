@@ -1,9 +1,10 @@
-// Server-state hooks for the word list. The list is ordinary server data, so it
-// lives in TanStack Query with optimistic updates: a tap on "Learn this" shows
-// at once and rolls back if the write fails.
+// Server-state hooks for the saved words. The list is ordinary server data, so
+// it lives in TanStack Query with optimistic updates: a tap on "Save for later"
+// shows at once and rolls back if the write fails.
 //
 // The feed's own words are not here. See useFeedWords for why.
 
+import { useCallback, useMemo } from 'react';
 import { useMutation, useQuery, useQueryClient, type QueryClient } from '@tanstack/react-query';
 import { backend } from '@/lib/backend';
 import { qk } from '@/lib/queryClient';
@@ -61,6 +62,36 @@ export function useRemoveFromList() {
     },
     onSettled: () => invalidateAfterListChange(qc),
   });
+}
+
+/**
+ * Which words are saved, and a toggle for the Save control on any screen.
+ * The toggle does nothing until the list has loaded, so a tap cannot save a
+ * word again and move it to the end of the list.
+ */
+export function useSavedWords(): SavedWords {
+  const list = useWordList();
+  const { mutate: add } = useAddToList();
+  const { mutate: remove } = useRemoveFromList();
+  const loaded = list.data !== undefined;
+  const savedIds = useMemo(
+    () => new Set((list.data ?? []).map((w) => w.content.wordId)) as ReadonlySet<number>,
+    [list.data],
+  );
+  const toggle = useCallback(
+    (word: WordContent) => {
+      if (!loaded) return;
+      if (savedIds.has(word.wordId)) remove(word.wordId);
+      else add(word);
+    },
+    [loaded, savedIds, add, remove],
+  );
+  return { savedIds, toggle };
+}
+
+export interface SavedWords {
+  savedIds: ReadonlySet<number>;
+  toggle: (word: WordContent) => void;
 }
 
 export function useMarkKnown() {

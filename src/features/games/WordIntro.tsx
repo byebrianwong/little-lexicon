@@ -11,6 +11,7 @@ import {
   Label,
   Muted,
   Note,
+  Row,
   Section,
   Spinner,
 } from '@/components/ui';
@@ -18,6 +19,7 @@ import { speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
+import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import { aiFeaturesAvailable } from '@/lib/env';
 import { AudioButton } from './Reveal';
 import { useGameContext } from './GameContext';
@@ -31,7 +33,7 @@ export function WordIntro({
 }) {
   const sense = content.senses[0];
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
-  const { profile } = useGameContext();
+  const { profile, saved } = useGameContext();
   const [personalized, setPersonalized] = useState<string | null>(null);
   const [generating, setGenerating] = useState(false);
 
@@ -75,12 +77,19 @@ export function WordIntro({
         {sense?.examples[0] ? (
           <Note className="mt-3 text-[17px] leading-[25px]">{`“${sense.examples[0].text}”`}</Note>
         ) : null}
-        <View className="mt-2">
+        <Row className="mt-2 flex-wrap gap-x-6">
           <AudioButton
             onPress={() => speakWord(content)}
             label="Hear it"
           />
-        </View>
+          {saved ? (
+            <SaveWordButton
+              headword={content.headword}
+              saved={saved.savedIds.has(content.wordId)}
+              onPress={() => saved.toggle(content)}
+            />
+          ) : null}
+        </Row>
       </View>
 
       {content.mnemonics[0] ? (
