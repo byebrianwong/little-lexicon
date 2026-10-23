@@ -2670,6 +2670,32 @@ in wrong answers. Curation will catch it word by word.
     meaning (rancorous named rancid, remonstrate named demonstrate, and
     proclivity's downhill-slope hook is what declivity means). They were
     rewritten. This is now a trap in the skill.
+- 2026-10-23: re-review of older words, batch 3 of 5: the 89 words from
+  plethora to acerbic in record order. All 89 fixed, 0 flagged.
+  - The words: plethora, polemic, ponderous, pragmatic, prattle,
+    precipitate, preclude, precocious, predilection, prescient,
+    prevaricate, pristine, probity, proclivity, prodigal, profligate,
+    prolific, propensity, prosaic, protean, prudent, puerile, pugnacious,
+    quiescent, quixotic, quotidian, rancorous, rarefy, recalcitrant,
+    refractory, refute, relegate, remonstrate, reprobate, repudiate,
+    rescind, reverent, sanction, sanctimonious, sardonic, satiate, savant,
+    servile, soporific, spurious, squander, staid, strident, stymie,
+    sublime, substantiate, superfluous, surfeit, surreptitious, sycophant,
+    taciturn, tangential, tenuous, terse, tortuous, tractable, trenchant,
+    truculent, turgid, ubiquitous, umbrage, undulate, upbraid, urbane,
+    vacillate, vapid, venerate, veracity, verbose, vex, vilify, vindicate,
+    virulent, viscous, volatile, voracious, waver, wily, zealous, zenith,
+    insidious, abjure, accolade, acerbic.
+  - The second reviewer failed 40 of 89 in round 1, fewer than batches 1
+    and 2: writers now ran `--examples` and avoided the known traps.
+    Writers fixed round 2; the main session finished refute (its last
+    wrong answer took five rounds) and savant (four).
+  - A usage limit cut this batch off after the writers finished. The
+    reviewers were resumed later with SendMessage and lost no work.
+  - `tools/dictionary-defs.py` cut each line at 220 characters. Two
+    main-session fixes followed text that was past the cut (Cambridge's
+    note that saints' names are given to places, WordUp's car/plane/ship
+    list for refuel). Lines now run to 400 characters.
 
 ## The placement test no longer finishes during render
 

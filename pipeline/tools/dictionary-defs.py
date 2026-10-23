@@ -95,7 +95,7 @@ def main():
                     if len(text) > 6 and text not in found:
                         found.append(text)
             for text in found[:limit]:
-                print(f'  {source}: {text[:220]}')
+                print(f'  {source}: {text[:400]}')
 
 
 if __name__ == '__main__':
