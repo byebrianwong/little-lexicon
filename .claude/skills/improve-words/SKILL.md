@@ -89,8 +89,15 @@ missing).
    (`pipeline/data/content-db.json`) and exports `src/content/words.json`. It
    writes nothing if any word fails.
 7. From the repo root, run `npx jest src/lib/content` to check the exported
-   file. Commit the record and the words file together, and list the words in
-   the commit message.
+   file.
+8. Remake the audio for the changed text: from `pipeline/`, run
+   `npx tsx src/run.ts --only=audio`, then `--only=export`. It needs the
+   Kokoro env (`pipeline/README.md` > Audio); a few changed words take
+   seconds. Until it runs, the export leaves out clips whose sentence or IPA
+   changed, and the app speaks those with the device's voice.
+9. Commit the record, the words file, `assets/audio` and
+   `src/content/audioClips.ts` together, and list the words in the commit
+   message.
 
 ## The second review
 
@@ -536,7 +543,9 @@ adjective in /-rət/.
 
 To change pronunciations, write a file of `headword<TAB>/ipa/` lines and run
 `npx tsx src/curate.ts ipa <file>` from `pipeline/`. It checks each one
-against the style, sets it and the syllable count, and exports. `status`
+against the style, sets it and the syllable count, and exports. Then remake
+the audio as in step 8 of "The loop", since the clips pin each word's IPA.
+`status`
 lists any word whose pronunciation is missing or off style. All 317 were
 rewritten on 2026-10-11 and checked by a second reviewer. Have a second
 reviewer check new ones too.

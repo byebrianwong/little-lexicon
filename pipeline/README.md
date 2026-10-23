@@ -137,8 +137,8 @@ Stage 04 speaks the words and sentences with Kokoro-82M
 (https://huggingface.co/hexgrad/Kokoro-82M), an open text-to-speech model under
 the Apache 2.0 license, so its clips can ship in the app. It runs on this
 computer's CPU through `tools/kokoro-tts.py`. There is no account, key or
-charge. On an Apple M5 the 3,162 clips for 579 words took 30 minutes, after
-3.5 minutes of Free Dictionary lookups. They come to 62.6 MB.
+charge. On an Apple M5 a full run of 3,162 clips took 30 minutes, after 3.5
+minutes of Free Dictionary lookups. Clips average about 20 KB.
 
 Set it up once (macOS):
 

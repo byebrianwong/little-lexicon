@@ -3505,8 +3505,13 @@ still grey until both fields have text, which is intended.
 The audio stage now speaks with Kokoro, an open voice model that runs on the
 developer's computer, instead of Google Cloud Text-to-Speech. The Google
 version never ran because it needed a Google Cloud project, billing and an API
-key. Every taught word and sentence now has a clip: 3,162 clips (579 words,
-2,583 sentences), 62.6 MB, bundled in the app.
+key. Every taught word and sentence now has a clip: 2,976 clips (579 words,
+2,397 sentences), 61.4 MB, bundled in the app.
+
+The first run made 3,162 clips. Merging main then brought in #44, which
+rewrote about 1,000 sentences, so a second run remade 1,009 sentence clips
+and deleted the 1,195 for sentences that were gone. The checks below were run
+on the first set; the second run used the same code and settings.
 
 ### Decisions
 
@@ -3572,7 +3577,7 @@ rows from `audio_objects` (or their files) and rerun stage 04.
     mete as "meet", mettle as "medal", feint as "faint", chary as "cherry",
     largesse as "largess", rarefy as "rarify". Each transcript sounds like
     the word's IPA, so none of them points to a wrong pronunciation.
-- App: `tsc`, lint, and 254 jest tests pass. On web (demo mode, dev server),
+- App: `tsc`, lint, and 294 jest tests pass (after merging main). On web (demo mode, dev server),
   "Hear it" and "Sentence" on the Discover screen played
   `words/117.mp3` and `sentences/3245.mp3` from the bundle (fatuous). The
   sentence clip played to 1.9 of 6.5 seconds with no error, and the browser's
