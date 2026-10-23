@@ -2610,6 +2610,39 @@ in wrong answers. Curation will catch it word by word.
     which also carries Collins text.
   - `curate.ts status` now lists any near-repeat pair left in the record
     (`nearRepeats` in `pipeline/src/lib/curate.ts`).
+- 2026-10-23: re-review of older words, batch 1 of 5: the 90 words from
+  abate to evanescent in record order, all last reviewed before 2026-10-17
+  (before WordUp's script text and Dictionary.com's real text were
+  readable). All 90 fixed, 0 flagged. The 446 such words are split into five
+  batches, one PR each.
+  - The words: abate, aberrant, abscond, abstain, admonish, adulterate,
+    aesthetic, aggrandize, alacrity, alleviate, amalgamate, ambiguous,
+    ambivalent, ameliorate, analogous, anomaly, antipathy, apathy, appease,
+    arduous, articulate, ascetic, austere, aver, banal, beneficent, bolster,
+    bombastic, boorish, burgeon, buttress, cacophony, cajole, callous,
+    candor, capricious, castigate, catalyst, caustic, chicanery, coagulate,
+    coalesce, commensurate, conciliatory, condone, conflagration,
+    connoisseur, contrite, conundrum, convoluted, copious, cursory, dearth,
+    debacle, debunk, decorum, deference, deleterious, deride, derivative,
+    desiccate, diaphanous, diatribe, didactic, diffident, dirge, disabuse,
+    discordant, discrepancy, disparage, dissemble, disseminate, dissonance,
+    distend, dogmatic, dubious, eclectic, elegy, eloquent, embellish,
+    empirical, emulate, engender, ephemeral, epigram, equivocate, erudite,
+    eulogy, euphemism, evanescent.
+  - The writers found copied wording in nearly every word, and the second
+    reviewer still failed 65 of 90 in round 1 (worksheet a 12 of 12, h 10
+    of 11, e 10 of 11). Round 2 (by the writers) left 11; the main session
+    wrote round 3. engender's definition needed a fourth round: round 3
+    swapped WordUp's "feeling, attitude, or situation" list item by item.
+  - Example scenes retold from WordUp were the second most common failure.
+    `tools/dictionary-defs.py --examples` now prints Oxford, Cambridge,
+    Longman and WordUp example sentences, so agents no longer write their
+    own extractors (one missed WordUp sentences).
+  - Many older words had two or three look-alikes that share only an ending
+    (girth and mirth on dearth, studious and tedious on dubious). Most were
+    replaced by look-alikes that share the start.
+  - Two older examples were wrong in fact: dried insects are not pinned
+    (desiccate), and corundum is not "ground into emery".
 
 ## The placement test no longer finishes during render
 
