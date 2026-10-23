@@ -3347,3 +3347,30 @@ letter, and the length ("9 letters").
   checks passing, and the screenshots show the outline before and after the
   hint.
 - Not run: iOS simulator and Android emulator.
+
+## GitHub Actions moved off the Node 20 action runtime (2026-10-23)
+
+Every workflow run logged GitHub's warning that `actions/checkout@v4` and
+`actions/setup-node@v4` target Node 20, which GitHub now forces onto Node 24.
+All three workflows (`ci.yml`, `chromatic.yml`, `eas-update.yml`) now use
+`actions/checkout@v7` and `actions/setup-node@v7`. Both run on Node 24.
+
+### Decisions
+
+- v7 is the newest major of both. Pinned by major tag, as before. Today `@v7`
+  resolves to checkout v7.0.1 (2026-07-20) and setup-node v7.1.0 (2026-10-08).
+- No inputs changed. The breaking changes from v5 to v7 do not apply here:
+  - checkout v6 stores the git credentials in a file under `$RUNNER_TEMP`
+    instead of `.git/config`. Nothing here runs an authenticated git command.
+    `fetch-depth: 0` still fetches the full history for Chromatic.
+  - checkout v7 refuses to check out a fork's pull request under
+    `pull_request_target` or `workflow_run`. These workflows use neither.
+  - setup-node v5 and v6 turn npm caching on by themselves when
+    `package.json` has a `packageManager` field set to npm. Neither
+    `package.json` has one, so caching works as before: on where a job sets
+    `cache: npm`, off in the pipeline job.
+  - setup-node v7 dropped its placeholder `NODE_AUTH_TOKEN`. That matters only
+    with `registry-url`, which no workflow sets.
+- `node-version: 20` (the Node that runs `npm ci` and the app's scripts) is
+  unchanged. Node 20 is past end of life, so moving to 22 or 24 is a separate
+  decision.
