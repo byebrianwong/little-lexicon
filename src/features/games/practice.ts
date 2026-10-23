@@ -21,12 +21,18 @@ import type { WordTracker } from '@/features/tracker/tracker';
 import type { ModeCapabilities } from './ladder';
 import { mulberry32 } from './optionPool';
 
-/** Modes practice rotates through, easiest retrieval first. */
+/**
+ * Modes practice rotates through, easiest retrieval first. Picking the word
+ * for a sentence's blank is listed twice, so it comes up twice as often as
+ * any other mode.
+ */
 export const PRACTICE_MODES: readonly GameModeId[] = [
   'mc_word_to_def',
+  'cloze_choice',
   'cloze',
   'mc_def_to_word',
   'synonym_match',
+  'cloze_choice',
   'production',
   'listening',
   'antonym_match',
@@ -37,6 +43,8 @@ export function isPlayable(mode: GameModeId, caps: ModeCapabilities): boolean {
   switch (mode) {
     case 'cloze':
       return caps.hasClozeExample;
+    case 'cloze_choice':
+      return caps.hasClozeChoice;
     case 'listening':
       return caps.hasAudio;
     case 'synonym_match':

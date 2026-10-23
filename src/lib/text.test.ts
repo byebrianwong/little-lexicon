@@ -5,6 +5,12 @@ import {
   gradeAnswer,
   isNearMatch,
   makeClozeBlank,
+  articleBefore,
+  indefiniteArticle,
+  FREE_LETTERS,
+  hintLetters,
+  letterSlots,
+  letterCount,
 } from './text';
 
 describe('normalizeAnswer', () => {
@@ -86,5 +92,83 @@ describe('makeClozeBlank', () => {
   });
   it('appends a blank when the target is absent', () => {
     expect(makeClozeBlank('No match here.', 'zzz')).toBe('No match here. (_____)');
+  });
+});
+
+describe('articleBefore', () => {
+  it('finds the article right before the target', () => {
+    expect(articleBefore('The scan showed an aberrant heart.', 'aberrant')).toBe('an');
+    expect(articleBefore('He is a philistine about opera.', 'philistine')).toBe('a');
+  });
+  it('reads a capitalized article at the start of the sentence', () => {
+    expect(articleBefore('An ambiguous answer helped no one.', 'ambiguous')).toBe('an');
+  });
+  it('is null when no article comes right before the target', () => {
+    expect(articleBefore('The storm began to abate.', 'abate')).toBeNull();
+    expect(articleBefore('A storm that would not abate.', 'abate')).toBeNull();
+  });
+  it('does not read the end of another word as an article', () => {
+    expect(articleBefore('Her bandana aberrant pattern.', 'aberrant')).toBeNull();
+  });
+  it('is null when the target is not in the sentence', () => {
+    expect(articleBefore('Nothing here.', 'zzz')).toBeNull();
+  });
+});
+
+describe('indefiniteArticle', () => {
+  it('goes by the first sound in the IPA', () => {
+    expect(indefiniteArticle('aberrant', '/æˈbɛrənt/')).toBe('an');
+    expect(indefiniteArticle('eulogy', '/ˈjulədʒi/')).toBe('a');
+    expect(indefiniteArticle('ubiquitous', '/juˈbɪkwɪtəs/')).toBe('a');
+    expect(indefiniteArticle('hour', '/ˈaʊər/')).toBe('an');
+    expect(indefiniteArticle('sanguine', '/ˈsæŋɡwɪn/')).toBe('a');
+  });
+  it('falls back to the first letter without IPA', () => {
+    expect(indefiniteArticle('ephemeral')).toBe('an');
+    expect(indefiniteArticle('laconic', null)).toBe('a');
+  });
+});
+
+describe('hintLetters', () => {
+  it('shows about a third of the word', () => {
+    expect(hintLetters('ephemeral')).toBe(3);
+    expect(hintLetters('obfuscate')).toBe(3);
+    expect(hintLetters('laconic')).toBe(3);
+    expect(hintLetters('abate')).toBe(2);
+  });
+  it('always shows more than the free first letter', () => {
+    expect(hintLetters('vex')).toBe(FREE_LETTERS + 1);
+    expect(hintLetters('aver')).toBe(FREE_LETTERS + 1);
+  });
+  it('never shows the whole word', () => {
+    expect(hintLetters('ox')).toBe(1);
+  });
+});
+
+describe('letterSlots', () => {
+  // Shorthand: shown characters as themselves, blanks as "_".
+  const outline = (target: string, shown: number) =>
+    letterSlots(target, shown)
+      .map((s) => s.char ?? '_')
+      .join('');
+
+  it('shows the first letters and a blank for each one left', () => {
+    expect(outline('ephemeral', 1)).toBe('e________');
+    expect(outline('ephemeral', 3)).toBe('eph______');
+  });
+  it('lowercases a target taken from the start of a sentence', () => {
+    expect(outline('Abated', 1)).toBe('a_____');
+  });
+  it('keeps spaces and hyphens visible and marks them as not letters', () => {
+    expect(outline('ad hoc', 1)).toBe('a_ ___');
+    expect(outline('well-read', 2)).toBe('we__-____');
+    expect(letterSlots('ad hoc', 1)[2]).toEqual({ char: ' ', letter: false });
+  });
+});
+
+describe('letterCount', () => {
+  it('counts letters only', () => {
+    expect(letterCount('ephemeral')).toBe(9);
+    expect(letterCount('well-read')).toBe(8);
   });
 });

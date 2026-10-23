@@ -111,6 +111,7 @@ export type GameModeId =
   | 'mc_def_to_word'
   | 'mc_word_to_def'
   | 'cloze'
+  | 'cloze_choice'
   | 'production'
   | 'synonym_match'
   | 'antonym_match'
