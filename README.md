@@ -29,6 +29,8 @@ npx expo start            # run on iOS / Android / web
 
 The web build is hosted at https://littlelexicon.byebrianwong.com (also reachable at https://little-lexicon.vercel.app). It runs in demo mode and updates on every push to `main`.
 
+Installed preview builds also update on every push to `main`: a workflow publishes the new JS and assets to the `preview` channel with EAS Update (`.github/workflows/eas-update.yml`). A change to native code or native config still needs a new `eas build --profile preview`.
+
 The app runs in **demo mode** by default (a bundled in-memory corpus, no network) so it is playable immediately. To use the real backend, set `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY`, apply the migrations, deploy the Edge Functions, and regenerate `src/lib/database.types.ts` with `npm run gen:types`. Word content ships in the app (`src/content/words.json`) in both modes, so Supabase needs no content loaded.
 
 ## What this app is

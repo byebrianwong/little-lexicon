@@ -1,0 +1,82 @@
+# Publishes an EAS Update to the preview channel after each merge to main. An
+# installed preview build downloads it the next time the app opens and reloads
+# straight away (src/lib/updates.ts).
+#
+# Only JS and assets travel this way. A change to native code or native config
+# needs a new `eas build --profile preview`. Until that build exists, this
+# workflow publishes nothing for that platform and leaves a warning saying so
+# (.github/scripts/eas-update-platforms.sh).
+#
+# Needs the EXPO_TOKEN repository secret. Until it is added, the publish job is
+# skipped, so the workflow is safe to merge early.
+name: EAS Update
+
+on:
+  push:
+    branches: [main]
+  # For publishing by hand, for example right after a new preview build.
+  workflow_dispatch:
+
+# One publish at a time. A run waiting behind another is replaced by a newer
+# one, so the newest commit on main is always the last update published.
+concurrency:
+  group: eas-update-preview
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  token:
+    name: Check for EXPO_TOKEN
+    runs-on: ubuntu-latest
+    outputs:
+      present: ${{ steps.check.outputs.present }}
+    steps:
+      - id: check
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          if [ -n "$EXPO_TOKEN" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice title=No update published::The EXPO_TOKEN repository secret is not set."
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  publish:
+    name: Publish preview update
+    needs: token
+    if: needs.token.outputs.present == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          cache: npm
+      - uses: expo/expo-github-action@9.0.0
+        with:
+          eas-version: 24.10.0
+          packager: npm
+          token: ${{ secrets.EXPO_TOKEN }}
+      - run: npm ci
+      - name: Find platforms with a matching build
+        id: match
+        env:
+          CHANNEL: preview
+        run: bash .github/scripts/eas-update-platforms.sh
+      # --environment preview loads the EAS "preview" environment variables,
+      # the same ones `eas build --profile preview` uses, so the update and the
+      # installed build agree on demo mode or Supabase.
+      - name: Publish
+        if: steps.match.outputs.platform != ''
+        env:
+          PLATFORM: ${{ steps.match.outputs.platform }}
+        run: |
+          eas update \
+            --channel preview \
+            --environment preview \
+            --platform "$PLATFORM" \
+            --message "$(git log -1 --format=%s)" \
+            --non-interactive

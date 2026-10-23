@@ -2643,6 +2643,59 @@ in wrong answers. Curation will catch it word by word.
     replaced by look-alikes that share the start.
   - Two older examples were wrong in fact: dried insects are not pinned
     (desiccate), and corundum is not "ground into emery".
+- 2026-10-23: re-review of older words, batch 2 of 5: the 89 words from
+  exacerbate to platitude. All 89 fixed, 0 flagged.
+  - The words: exacerbate, exculpate, exigent, exonerate, expedient,
+    expunge, extol, facetious, fatuous, fickle, flout, foment, forestall,
+    fortuitous, frugal, garrulous, goad, gregarious, guile, hackneyed,
+    harangue, hedonist, hegemony, heresy, iconoclast, idolatry, immutable,
+    impassive, imperious, impertinent, impervious, implacable, incipient,
+    indigent, indolent, ineffable, inexorable, iniquity, innocuous,
+    insipid, insular, intractable, intransigent, inundate, inveterate,
+    irascible, itinerant, laconic, laud, lethargic, levity, loquacious,
+    lucid, malinger, maudlin, mendacious, mercurial, meticulous, mollify,
+    morose, mundane, nadir, nascent, nebulous, nefarious, neophyte,
+    obfuscate, obsequious, obstinate, obtuse, onerous, opaque,
+    ostentatious, palliate, panacea, paragon, paucity, pedantic, penchant,
+    penury, perfidious, perfunctory, pernicious, perspicacious, pervasive,
+    petulant, pithy, placate, platitude.
+  - The second reviewer failed 56 of 89 in round 1. The main session wrote
+    round 3 for 11 words; fickle's last wrong answer took a fourth round
+    (feckless, feeble and freckled all failed before fiery passed).
+  - Once reviewers ran `--examples`, they failed six words on worksheet b
+    that had passed on examples in round 1 (guile had scored 5). Batch 1's
+    reviewers mostly pulled WordUp's examples with their own scripts, but
+    not all of them, so a few batch-1 examples may still retell a scene.
+  - Three hooks named one of the word's own wrong answers or described its
+    meaning (rancorous named rancid, remonstrate named demonstrate, and
+    proclivity's downhill-slope hook is what declivity means). They were
+    rewritten. This is now a trap in the skill.
+- 2026-10-23: re-review of older words, batch 3 of 5: the 89 words from
+  plethora to acerbic in record order. All 89 fixed, 0 flagged.
+  - The words: plethora, polemic, ponderous, pragmatic, prattle,
+    precipitate, preclude, precocious, predilection, prescient,
+    prevaricate, pristine, probity, proclivity, prodigal, profligate,
+    prolific, propensity, prosaic, protean, prudent, puerile, pugnacious,
+    quiescent, quixotic, quotidian, rancorous, rarefy, recalcitrant,
+    refractory, refute, relegate, remonstrate, reprobate, repudiate,
+    rescind, reverent, sanction, sanctimonious, sardonic, satiate, savant,
+    servile, soporific, spurious, squander, staid, strident, stymie,
+    sublime, substantiate, superfluous, surfeit, surreptitious, sycophant,
+    taciturn, tangential, tenuous, terse, tortuous, tractable, trenchant,
+    truculent, turgid, ubiquitous, umbrage, undulate, upbraid, urbane,
+    vacillate, vapid, venerate, veracity, verbose, vex, vilify, vindicate,
+    virulent, viscous, volatile, voracious, waver, wily, zealous, zenith,
+    insidious, abjure, accolade, acerbic.
+  - The second reviewer failed 40 of 89 in round 1, fewer than batches 1
+    and 2: writers now ran `--examples` and avoided the known traps.
+    Writers fixed round 2; the main session finished refute (its last
+    wrong answer took five rounds) and savant (four).
+  - A usage limit cut this batch off after the writers finished. The
+    reviewers were resumed later with SendMessage and lost no work.
+  - `tools/dictionary-defs.py` cut each line at 220 characters. Two
+    main-session fixes followed text that was past the cut (Cambridge's
+    note that saints' names are given to places, WordUp's car/plane/ship
+    list for refuel). Lines now run to 400 characters.
 
 ## The placement test no longer finishes during render
 
@@ -3063,6 +3116,102 @@ default device voices (iOS compact voices, the browser default) sound robotic.
 4. Commit `assets/audio`, `src/content/audioClips.ts`,
    `src/content/words.json` and `pipeline/data/content-db.json`.
 
+## Preview builds update after every merge to main (2026-10-17)
+
+An installed Android preview build now picks up JS and asset changes on its
+own. After each push to `main`, a GitHub Actions workflow publishes an EAS
+Update to the `preview` channel, and the app applies it the next time it opens
+(`src/lib/updates.ts`).
+
+### What was set up
+
+- `.github/workflows/eas-update.yml` runs on push to `main`, and by hand from
+  the Actions tab (useful right after a new build). It runs `npm ci`, then
+  `eas update --channel preview --environment preview --message "<commit
+  subject>"`. eas-cli is pinned to 24.10.0 and installed by
+  `expo/expo-github-action@9.0.0`.
+- Before publishing, `.github/scripts/eas-update-platforms.sh` checks each
+  platform. It publishes only for a platform that has a finished preview build
+  with the same runtime version as the code being published. When native code
+  or config has changed since the last build, it publishes nothing for that
+  platform and leaves a warning on the run that says to make a new build.
+  There are no iOS builds, so today this publishes for Android only. It will
+  include iOS once a preview iOS build exists.
+- Without the `EXPO_TOKEN` secret, the publish job is skipped with a notice,
+  so the workflow could merge before the secret exists.
+- Runs go one at a time. A run waiting behind another is replaced by a newer
+  one, so the newest commit is always the last update published.
+
+### Decisions
+
+- **Builds and updates read the same variables.** Both use the EAS `preview`
+  environment. eas-cli picks `preview` for a build profile that has internal
+  distribution and no dev client
+  (`resolveSuggestedEnvironmentForBuildProfileConfiguration` in eas-cli), so
+  `eas.json` needed no `environment` field.
+  When `eas update` gets `--environment`, it also sets `EXPO_NO_DOTENV=1`, so a
+  local `.env` is ignored. Without that flag, a local `eas update` reads
+  `.env`, and Brian's `.env` points at Supabase while the build is in demo
+  mode. **When publishing by hand, always pass `--environment preview`.**
+- **`eas.json` and `package.json` scripts were left alone.** Both are inputs to
+  the fingerprint, along with `app.json`, `.gitignore`, config plugins and
+  packages with native code. Editing either would have stopped the preview
+  build from 2026-10-16 (build `5f524d28`, runtime version `c3f4278…`) from
+  receiving any update.
+- **A match is any finished preview build with the current runtime version**,
+  not only the newest one, since a phone may still have an older build
+  installed.
+- **The workflow does not wait for CI.** `main` only takes merges that passed
+  the required checks, so a second gate seemed unnecessary.
+
+### Verified
+
+- actionlint 1.7.12 with shellcheck 0.11.0: 0 errors across all three
+  workflows. shellcheck passes on the new script.
+- The script, run locally with eas-cli 24.10.0 against the real project (read
+  only): Android matched build `5f524d28`, iOS had no builds, and it wrote
+  `platform=android`. With a one-line change to `eas.json` it warned and wrote
+  `platform=`. With a bad token it failed with exit code 5 instead of guessing.
+- The new files do not change the fingerprint (still `c3f4278…`).
+- `tsc --noEmit`, lint and the unit tests pass.
+- Not run: the workflow on GitHub (it needs the secret and a merge), and any
+  real `eas update`. The fingerprint was computed on a Mac. The runner is
+  Linux, which should give the same hash after `npm ci`, but that is untested.
+  If the first run warns although no native code changed, compare the runtime
+  version in the warning with the build's. `eas fingerprint:compare` shows
+  which input differs.
+
+### What Brian has to do
+
+1. **Add the `EXPO_TOKEN` repository secret.** Create a token at expo.dev
+   (account settings, Access tokens; a robot user with the Developer role
+   is enough), then run `gh secret set EXPO_TOKEN --repo
+   byebrianwong/little-lexicon` and paste it when asked.
+2. **Put the phone on Supabase.** Brian chose Supabase over demo mode on
+   2026-10-17. The EAS `preview` environment has no variables yet, so builds
+   and updates are both in demo mode until he creates the two client-safe
+   values there (from the main checkout, which has the working `.env`):
+
+   ```bash
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_URL --visibility plaintext --value "$(grep '^EXPO_PUBLIC_SUPABASE_URL=' .env | cut -d= -f2-)"
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_ANON_KEY --visibility sensitive --value "$(grep '^EXPO_PUBLIC_SUPABASE_ANON_KEY=' .env | cut -d= -f2-)"
+   ```
+
+   Environment variables do not change the fingerprint (checked: setting them
+   leaves it at `c3f4278…`), so the next update switches the installed build
+   to Supabase without a rebuild. Until the phone downloads that update, for
+   example when it opens offline, it runs the demo-mode bundle built into the
+   APK. A new build makes both agree.
+
+   After the switch, the app asks the person to sign in. Demo progress stays in
+   the phone's local storage and does not move to the account. The native app
+   does not handle the sign-up confirmation link, so open that link in a
+   browser, then sign in in the app.
+3. **Native changes still need a new build.** After any change to `app.json`,
+   `eas.json`, `package.json` scripts or a package with native code, run
+   `eas build --profile preview --platform android`, install it, then run the
+   EAS Update workflow by hand (or wait for the next merge).
+
 ## Fill-the-blank questions with a choice of words (2026-10-19)
 
 Brian asked for more questions where you see a sentence and pick the word
@@ -3198,6 +3347,33 @@ letter, and the length ("9 letters").
   checks passing, and the screenshots show the outline before and after the
   hint.
 - Not run: iOS simulator and Android emulator.
+
+## GitHub Actions moved off the Node 20 action runtime (2026-10-23)
+
+Every workflow run logged GitHub's warning that `actions/checkout@v4` and
+`actions/setup-node@v4` target Node 20, which GitHub now forces onto Node 24.
+All three workflows (`ci.yml`, `chromatic.yml`, `eas-update.yml`) now use
+`actions/checkout@v7` and `actions/setup-node@v7`. Both run on Node 24.
+
+### Decisions
+
+- v7 is the newest major of both. Pinned by major tag, as before. Today `@v7`
+  resolves to checkout v7.0.1 (2026-07-20) and setup-node v7.1.0 (2026-10-08).
+- No inputs changed. The breaking changes from v5 to v7 do not apply here:
+  - checkout v6 stores the git credentials in a file under `$RUNNER_TEMP`
+    instead of `.git/config`. Nothing here runs an authenticated git command.
+    `fetch-depth: 0` still fetches the full history for Chromatic.
+  - checkout v7 refuses to check out a fork's pull request under
+    `pull_request_target` or `workflow_run`. These workflows use neither.
+  - setup-node v5 and v6 turn npm caching on by themselves when
+    `package.json` has a `packageManager` field set to npm. Neither
+    `package.json` has one, so caching works as before: on where a job sets
+    `cache: npm`, off in the pipeline job.
+  - setup-node v7 dropped its placeholder `NODE_AUTH_TOKEN`. That matters only
+    with `registry-url`, which no workflow sets.
+- `node-version: 20` (the Node that runs `npm ci` and the app's scripts) is
+  unchanged. Node 20 is past end of life, so moving to 22 or 24 is a separate
+  decision.
 
 ## Saved words in every mode, and a tracker on each word (2026-10-23)
 
