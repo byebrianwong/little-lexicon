@@ -1,12 +1,20 @@
 // Cloze: fill the blank in an example sentence (Phase 3.4). Typed answer with
-// typo tolerance; a hint shows the first letter and downgrades to Hard.
+// typo tolerance. The first letter and the length are shown for free; the hint
+// shows about a third of the word and downgrades to Hard.
 
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
-import { Button, Label, Note, TextField } from '@/components/ui';
-import { gradeAnswer, makeClozeBlank, type AnswerGrade } from '@/lib/text';
+import { Button, Label, TextField } from '@/components/ui';
+import {
+  FREE_LETTERS,
+  gradeAnswer,
+  hintLetters,
+  makeClozeBlank,
+  type AnswerGrade,
+} from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
+import { LetterCue } from '../LetterCue';
 import { mulberry32 } from '../optionPool';
 import { Reveal } from '../Reveal';
 import { Prompt } from '../Prompt';
@@ -54,10 +62,6 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
     finish('wrong');
   }
 
-  // The hint sits under the box rather than in its placeholder, so it stays
-  // readable after the user has started typing.
-  const hint = hintUsed ? `Starts with "${target[0]}", ${target.length} letters` : null;
-
   return (
     <View>
       <Label>Fill in the missing word</Label>
@@ -77,7 +81,13 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
             onSubmitEditing={submit}
             returnKeyType="done"
           />
-          {hint ? <Note className="mt-2">{hint}</Note> : null}
+          {/* Under the box rather than in its placeholder, so it stays readable
+              after the user has started typing. */}
+          <LetterCue
+            target={target}
+            shown={hintUsed ? hintLetters(target) : FREE_LETTERS}
+            className="mt-3"
+          />
           <View className="mt-6 gap-2">
             <Button title="Check" onPress={submit} disabled={value.trim() === ''} />
             <Button

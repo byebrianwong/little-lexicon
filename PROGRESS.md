@@ -3128,3 +3128,40 @@ add `UI Tests` (source: Chromatic) and remove `Visual tests`.
   the carried-over pending status turns green once the earlier build is
   accepted. The commit with this change touches no story files, so PR #40
   should show it when build 108 is accepted.
+
+## First letter shown when typing a word (2026-10-19)
+
+Typing a word from its meaning alone was too hard. "Fill the blank" (cloze)
+and "Type the word" (production) now show the word's outline under the
+answer box from the start: the first letter, an underlined slot for each
+letter, and the length ("9 letters").
+
+### Decisions
+
+- The first letter is part of the question, not a hint. It does not set
+  `hintUsed`, so a fast correct answer can still earn Easy.
+- The Hint button still exists and still downgrades to Hard. It now fills in
+  about a third of the word (at least two letters, never the whole word).
+  Before, cloze's hint showed only the first letter and production's showed
+  the first third. The two modes now match.
+- Production dropped its "Spell the exact word." line. The outline already
+  says which word is wanted, so a synonym rarely fits it.
+- Each slot is its own underline. The serif's underscores run together and
+  made the blanks hard to count.
+
+### What changed
+
+- `src/lib/text.ts`: `FREE_LETTERS`, `hintLetters`, `letterSlots`,
+  `letterCount`, with tests.
+- `src/features/games/LetterCue.tsx`: the outline, with a spoken label
+  ("Starts with "e", 9 letters").
+- `Cloze.tsx` and `Production.tsx` use it; their stories check the label
+  before and after the hint.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` pass. Storybook builds;
+  the cloze and production stories ran in headless Chromium with their play
+  checks passing, and the screenshots show the outline before and after the
+  hint.
+- Not run: iOS simulator and Android emulator.
