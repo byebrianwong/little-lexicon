@@ -508,6 +508,11 @@ before handing a worksheet over.
   desiccate insect specimens before pinning them" (dried insects shatter,
   so they are pinned fresh or relaxed first), and conundrum's corundum was
   "ground into emery" (emery is a rock that contains corundum).
+- **A hook that points at a wrong answer.** rancorous's hook named
+  rancid, remonstrate's named demonstrate, and proclivity's hook explained
+  the word through a downhill slope, which is what declivity (one of its
+  wrong answers) means. A learner who remembers the hook then picks the
+  wrong option. Read each hook against the word's look-alikes.
 - **Stale `problems` lists.** A worksheet's `problems` is written when the
   worksheet is made and is not updated. Reviewers kept reporting old
   "like ..." problems that a writer had already fixed. `check` is the
