@@ -1,5 +1,6 @@
 import { buildContentIndex, loadContent, WORDS_FILE_FORMAT, type WordsFile } from './index';
 import type { WordContent } from '@/lib/types';
+import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 
 function makeWord(wordId: number, headword: string, tier: number, rank: number | null): WordContent {
   return {
@@ -99,6 +100,14 @@ describe('the committed words file', () => {
         }
       }
     }
+  });
+
+  it('lets nearly every word be asked as a sentence with a choice of words', () => {
+    // A word qualifies when one of its sentences blanks the headword itself.
+    // The rest (only "belied", "gleaned" and the like) get the other modes.
+    const pool = buildOptionPool([], words);
+    const askable = words.filter((w) => capsForWord(w, pool).hasClozeChoice).length;
+    expect(askable / words.length).toBeGreaterThanOrEqual(0.9);
   });
 
   it('only has relation types the games know', () => {

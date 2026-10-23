@@ -4,12 +4,14 @@ import type { WordContent } from '@/lib/types';
 
 const fullCaps: ModeCapabilities = {
   hasClozeExample: true,
+  hasClozeChoice: true,
   hasRelations: { synonym: true, antonym: true },
   hasAudio: true,
 };
 
 const bareCaps: ModeCapabilities = {
   hasClozeExample: false,
+  hasClozeChoice: false,
   hasRelations: { synonym: false, antonym: false },
   hasAudio: false,
 };
@@ -34,6 +36,7 @@ function word(id: number): WordContent {
 describe('isPlayable', () => {
   it('blocks modes whose content is missing', () => {
     expect(isPlayable('cloze', bareCaps)).toBe(false);
+    expect(isPlayable('cloze_choice', bareCaps)).toBe(false);
     expect(isPlayable('listening', bareCaps)).toBe(false);
     expect(isPlayable('synonym_match', bareCaps)).toBe(false);
     expect(isPlayable('antonym_match', bareCaps)).toBe(false);
@@ -60,6 +63,18 @@ describe('practiceMode', () => {
 
   it('is deterministic for a given seed', () => {
     expect(practiceMode(fullCaps, 7)).toBe(practiceMode(fullCaps, 7));
+  });
+
+  it('picks the word for a sentence more often than any other mode', () => {
+    const counts = new Map<string, number>();
+    for (let seed = 0; seed < 90; seed++) {
+      const m = practiceMode(fullCaps, seed);
+      counts.set(m, (counts.get(m) ?? 0) + 1);
+    }
+    const choice = counts.get('cloze_choice') ?? 0;
+    for (const [mode, n] of counts) {
+      if (mode !== 'cloze_choice') expect(choice).toBeGreaterThan(n);
+    }
   });
 
   it('handles a negative seed without crashing', () => {
