@@ -85,6 +85,17 @@ Per-user (RLS: owner only):
 - `review_logs` (user_id, word_id, rating, state_before, game_mode, response_ms, scheduled_days, retrievability, reviewed_at).
 - `game_sessions` (user_id, started_at, ended_at, words_reviewed, new_words, xp_earned, accuracy).
 - `daily_stats` (user_id, day, reviews_done, new_learned, xp, goal_met). Drives streak and heatmap.
+- `word_list` (user_id, word_id, added_at, removed_at). The saved words. A word stays saved until the user removes it (a soft remove). Sessions introduce saved words they have not shown yet before any other new word.
+- `practice_logs` (user_id, word_id, correct, game_mode, answered_at). Answers in endless practice, which never writes `review_logs` or reschedules a card.
+- `profiles.known_word_frequency` ('rarely', 'sometimes' or 'often'): how often practice shows a known word.
+
+### Saved words and the word tracker
+
+Every screen that shows a word has a Save for later control: the Discover feed, the new-word card, the answer reveal in sessions and practice, the speed round, and All words. The Saved view lists every saved word, newest first, with a tracker line.
+
+The tracker is built on the device from `review_logs` and `practice_logs` (`src/features/tracker`). Per word: answers in the past 7 days, how many of the last 5 answers were right, and whether the word is known. A word is known once it has been answered right on 5 separate days (local time) with no mistake since; any mistake, in any mode, starts the count again.
+
+Endless practice draws from the whole collection, weighted per word (`src/features/games/practice.ts`). Saved words fill about half of the picks when every word has the same weight. A word with a mistake in the past 7 days has twice the weight. A known word has 0.2 (Rarely, the default), 0.5 (Sometimes) or 1 (As often as others) of the weight. A word does not come back within 8 picks. Sessions stay on FSRS and do not read the tracker.
 
 ## 5. Content pipeline (Phase 1)
 

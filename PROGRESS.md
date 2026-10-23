@@ -3375,6 +3375,98 @@ All three workflows (`ci.yml`, `chromatic.yml`, `eas-update.yml`) now use
   unchanged. Node 20 is past end of life, so moving to 22 or 24 is a separate
   decision.
 
+## Saved words in every mode, and a tracker on each word (2026-10-23)
+
+Brian asked to be able to save a word to learn later from any mode, including
+endless practice. The list of saved words should keep everything until the
+learner removes it. Each word should track how often it came up lately and how
+the learner did, and a setting should control how often practice shows words
+the learner knows.
+
+### Decisions (Brian chose each of these)
+
+- **The tracker and the setting control endless practice only.** Sessions
+  already space words by FSRS, which pushes a word further out after each right
+  answer and brings it back soon after a mistake. Desired retention already
+  tunes that. Answers from every mode (sessions, speed rounds, practice) feed
+  the tracker.
+- **Practice draws from the whole collection, with saved words weighted up.**
+  The weights are listed in SPEC section 4.
+- **Known means right on 5 separate days with no mistake since.** The days do
+  not have to be in a row. Any mistake, in any mode, starts the count again.
+- **The setting is Rarely (default), Sometimes or As often as others.** A
+  known word has weight 0.2, 0.5 or 1 against 1 for a word being learned.
+
+### Other decisions
+
+- **"Your list" is now "Saved", and "Learn this" is "Save for later".** The
+  list keeps a word after a session has introduced it. It shows newest first.
+  `word_list` rows already stayed after a session (0009); only the read
+  changed. Sessions still introduce saved words they have not shown yet first.
+- **Practice answers go to a new table, `practice_logs` (0014).** Practice
+  still never writes `review_logs` or reschedules a card. Writing practice into
+  `review_logs` would have mixed it into retention stats and future FSRS weight
+  fitting.
+- **The setting is on the profile** (`known_word_frequency`), like desired
+  retention, so it follows the account across devices.
+- **The tracker is computed on the device** from the full answer history,
+  read a page at a time. This keeps one tested implementation for both
+  backends. CLAUDE.md prefers server-computed values, so if histories grow
+  large, a SQL function that returns one row per word should replace
+  `getAnswerHistory`.
+- **Saved-word weight scales with the collection.** A fixed multiplier would
+  leave a handful of saved words lost among 579. The boost is set so saved
+  words fill half of picks when every word has the same weight, and it drops
+  to 1 once saved words outnumber the rest.
+- **No repeat within 8 picks.** Practice used to play every word once per
+  shuffled round. Weighted picks can repeat, so a word waits 8 picks (fewer in
+  a tiny collection) before it can come back.
+
+### What changed
+
+- `src/features/tracker/`: `buildTrackers` and `describeTracker` (unit
+  tested), and the answer-history query.
+- `src/features/games/practice.ts`: `buildPracticeChunk`, `practiceWeight` and
+  the setting's values (unit tested). The shuffled rounds are gone.
+  `app/practice.tsx` picks 20 words at a time and logs each answer.
+- `SaveWordButton` on the reveal and the new-word card (through
+  `GameContext.saved`), the speed round and open rows in All words.
+  `useSavedWords` holds the state for every screen.
+- Backend: `getAnswerHistory` and `logPracticeAnswer` in both backends;
+  `getWordList` no longer drops words a session has shown; the profile carries
+  `knownWordFrequency`; exports include practice answers.
+- Migration `0014_saved_words_tracker.sql`: `practice_logs` with owner-only
+  RLS, `profiles.known_word_frequency`, and `delete_my_data` covering the new
+  table. `database.types.ts` was edited by hand first, then checked against
+  the types generated from the project after 0014 was applied: identical.
+- Settings: "Words you know, in practice". PRIVACY.md mentions practice
+  answers and saved words.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (32 suites, 267 tests)
+  pass.
+- The web build in headless Chromium, demo mode: saved a word from the
+  practice reveal, toggled it in the speed round, saw it as the first word of
+  a session, saved a word from All words, and saw both in Saved with their
+  tracker lines. Six practice answers were stored, and the setting saved as
+  "sometimes". No console errors.
+- Storybook: all 169 stories render in a static build with no errors, and
+  the new and changed interaction tests pass. axe finds no violations on the
+  changed stories.
+- Not run: the iOS simulator, the Android emulator and Supabase mode.
+
+### Applied (2026-10-23)
+
+0014 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same raw-SQL route as 0001 to 0013, so it
+is not in the CLI's migration history). Checked afterwards: `practice_logs`
+has RLS on, the two owner policies, and only select and insert for
+`authenticated`; `profiles.known_word_frequency` defaults to 'rarely' with its
+check; `delete_my_data` covers `practice_logs` and is still security definer.
+The types generated from the project match the committed
+`database.types.ts` byte for byte.
+
 ## Sign-in and sign-up screens collapsed on phones (2026-10-23)
 
 Once the phone build switched to Supabase mode, its first screen is sign-in.

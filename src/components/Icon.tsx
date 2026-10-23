@@ -14,9 +14,13 @@ export type IconName =
   | 'speaker'
   | 'chevron-down'
   | 'chevron-up'
-  | 'search';
+  | 'search'
+  | 'bookmark'
+  | 'bookmark-filled';
 
-const PATHS: Record<Exclude<IconName, 'search'>, string[]> = {
+const BOOKMARK = 'M7 4h10v16l-5-4-5 4z';
+
+const PATHS: Record<Exclude<IconName, 'search' | 'bookmark-filled'>, string[]> = {
   'arrow-right': ['M5 12h14', 'M13 6l6 6-6 6'],
   'arrow-left': ['M19 12H5', 'M11 6l-6 6 6 6'],
   close: ['M6 6l12 12', 'M18 6 6 18'],
@@ -29,6 +33,7 @@ const PATHS: Record<Exclude<IconName, 'search'>, string[]> = {
   ],
   'chevron-down': ['M6 9l6 6 6-6'],
   'chevron-up': ['M6 15l6-6 6 6'],
+  bookmark: [BOOKMARK],
 };
 
 export function Icon({
@@ -63,6 +68,8 @@ export function Icon({
           <Circle cx={11} cy={11} r={6.5} />
           <Path d="M20 20l-4.2-4.2" />
         </>
+      ) : name === 'bookmark-filled' ? (
+        <Path d={BOOKMARK} fill={color} />
       ) : (
         PATHS[name].map((d) => <Path key={d} d={d} />)
       )}

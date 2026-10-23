@@ -5,7 +5,7 @@
 //
 // Each row is set like a dictionary entry: the word, its pronunciation and
 // part of speech, then the definition. Opening a row adds the example, the
-// memory hook and audio.
+// memory hook, audio and the Save control.
 
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, View } from 'react-native';
@@ -26,14 +26,23 @@ import { colors } from '@/theme/colors';
 import { speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { ReportProblem } from '@/features/report/ReportProblem';
+import { SaveWordButton } from '@/features/feed/SaveWordButton';
 
 export interface BrowseViewProps {
   words: WordContent[] | undefined;
   isLoading: boolean;
   soundEnabled: boolean;
+  savedIds: ReadonlySet<number>;
+  onToggleSave: (word: WordContent) => void;
 }
 
-export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) {
+export function BrowseView({
+  words,
+  isLoading,
+  soundEnabled,
+  savedIds,
+  onToggleSave,
+}: BrowseViewProps) {
   const [query, setQuery] = useState('');
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -95,6 +104,8 @@ export function BrowseView({ words, isLoading, soundEnabled }: BrowseViewProps) 
               expanded={openId === item.wordId}
               onToggle={() => setOpenId(openId === item.wordId ? null : item.wordId)}
               soundEnabled={soundEnabled}
+              saved={savedIds.has(item.wordId)}
+              onToggleSave={() => onToggleSave(item)}
             />
           )}
         />
@@ -109,12 +120,16 @@ function WordRow({
   expanded,
   onToggle,
   soundEnabled,
+  saved,
+  onToggleSave,
 }: {
   word: WordContent;
   first: boolean;
   expanded: boolean;
   onToggle: () => void;
   soundEnabled: boolean;
+  saved: boolean;
+  onToggleSave: () => void;
 }) {
   const sense = word.senses[0];
   const example = sense?.examples[0];
@@ -186,6 +201,8 @@ function WordRow({
               />
             ) : null}
           </Row>
+
+          <SaveWordButton headword={word.headword} saved={saved} onPress={onToggleSave} />
 
           <ReportProblem wordId={word.wordId} headword={word.headword} screen="browse" />
         </View>

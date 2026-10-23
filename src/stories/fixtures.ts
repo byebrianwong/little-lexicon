@@ -105,6 +105,7 @@ export function profile(overrides: Partial<Profile> = {}): Profile {
     levelEstimate: 3,
     dailyGoal: 15,
     desiredRetention: 0.9,
+    knownWordFrequency: 'rarely',
     interests: ['Science', 'Literature'],
     streakCount: 7,
     streakFreezeCount: 1,

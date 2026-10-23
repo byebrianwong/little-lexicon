@@ -1,5 +1,5 @@
-// The Words tab: Discover (a feed of unseen words), Your list (the words
-// picked there) and All words (the whole collection).
+// The Words tab: Discover (a feed of unseen words), Saved (every word saved,
+// from here or any game) and All words (the whole collection).
 //
 // This screen owns the feed's state and runs every write. What each button
 // does is decided in features/feed/feedState.ts; this file applies the result
@@ -25,8 +25,10 @@ import {
   useAddToList,
   useMarkKnown,
   useRemoveFromList,
+  useSavedWords,
   useWordList,
 } from '@/features/feed/queries';
+import { useWordTrackers } from '@/features/tracker/queries';
 import { useFeedWords } from '@/features/feed/useFeedWords';
 import { useProfile } from '@/features/review/queries';
 import { useSettingsStore } from '@/features/settings/settingsStore';
@@ -56,6 +58,8 @@ export default function Words() {
   const [seed] = useState(() => Math.floor(Math.random() * 2 ** 31));
   const feed = useFeedWords(profile.data ? profile.data.levelEstimate : undefined, seed);
   const list = useWordList();
+  const saved = useSavedWords();
+  const trackers = useWordTrackers();
   const allWords = useQuery({
     queryKey: ['allWords'],
     queryFn: () => backend.getAllWords(),
@@ -71,16 +75,9 @@ export default function Words() {
 
   const [pendingKnown, setPendingKnown] = useState(EMPTY);
   const [known, setKnown] = useState(EMPTY);
-  // Words added during this visit. Once a session shows a word it drops off
-  // the server's list, but its card here should still say it was added.
-  const [addedHere, setAddedHere] = useState(EMPTY);
   const [notice, setNotice] = useState<string | null>(null);
 
-  const listed = useMemo(() => {
-    const ids = new Set(addedHere);
-    for (const w of list.data ?? []) ids.add(w.content.wordId);
-    return ids as ReadonlySet<number>;
-  }, [list.data, addedHere]);
+  const listed = saved.savedIds;
 
   // Actions can arrive faster than renders (a tap and a scroll together), and
   // settling runs on blur and unmount, so the latest marks are kept in a ref
@@ -104,19 +101,14 @@ export default function Words() {
         if (effect.type === 'add' && word) {
           const id = effect.wordId;
           marksRef.current = { ...marksRef.current, listed: plus(marksRef.current.listed, id) };
-          setAddedHere((s) => plus(s, id));
           addWord(word, {
-            onError: () => {
-              setAddedHere((s) => minus(s, [id]));
-              setNotice(`Could not add “${word.headword}” to your list. Try again.`);
-            },
+            onError: () => setNotice(`Could not save “${word.headword}”. Try again.`),
           });
         } else if (effect.type === 'remove') {
           const id = effect.wordId;
           marksRef.current = { ...marksRef.current, listed: minus(marksRef.current.listed, [id]) };
-          setAddedHere((s) => minus(s, [id]));
           removeWord(id, {
-            onError: () => setNotice('Could not take that word off your list. Try again.'),
+            onError: () => setNotice('Could not take that word off saved words. Try again.'),
           });
         } else if (effect.type === 'markKnown') {
           const ids = effect.wordIds;
@@ -197,8 +189,13 @@ export default function Words() {
         <WordListView
           entries={list.data}
           isLoading={list.isLoading}
+          trackers={trackers}
           onRemove={(wordId) => run({ type: 'unlearn', wordId })}
           onStartSession={startSession}
+          onPractice={() => {
+            settle(null);
+            pushOnce('/practice');
+          }}
           onDiscover={() => changeView('discover')}
         />
       ) : null}
@@ -207,6 +204,8 @@ export default function Words() {
           words={allWords.data}
           isLoading={allWords.isLoading}
           soundEnabled={soundEnabled}
+          savedIds={saved.savedIds}
+          onToggleSave={saved.toggle}
         />
       ) : null}
     </WordsLayout>

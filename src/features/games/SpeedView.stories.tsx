@@ -19,6 +19,8 @@ const meta = {
     chosen: null,
     remaining: 47,
     answeredCount: 6,
+    saved: false,
+    onToggleSave: () => {},
     onChoose: () => {},
     onClose: () => {},
   },
@@ -30,6 +32,11 @@ type Story = StoryObj<typeof meta>;
 
 /** Mid-round, question open. */
 export const Question: Story = {};
+
+/** The word on screen is saved; the round carries on. */
+export const SavedWord: Story = {
+  args: { saved: true },
+};
 
 /** The start of a round: full timer, nothing answered. */
 export const RoundStart: Story = {

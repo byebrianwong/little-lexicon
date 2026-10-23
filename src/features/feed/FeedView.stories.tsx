@@ -64,23 +64,23 @@ export const FirstWord: Story = {
   },
 };
 
-/** Tapping Learn this passes the word up; the screen does the writing. */
-export const TapLearnThis: Story = {
+/** Tapping Save for later passes the word up; the screen does the writing. */
+export const TapSaveForLater: Story = {
   play: async ({ canvasElement, args }) => {
     const canvas = await showsFirstWord(canvasElement);
-    await userEvent.click(canvas.getByRole('button', { name: `Learn this: ${FIRST.headword}` }));
+    await userEvent.click(canvas.getByRole('button', { name: `Save for later: ${FIRST.headword}` }));
     await expect(args.onLearn).toHaveBeenCalledWith(FIRST);
   },
 };
 
-/** Added to the list: the buttons give way to a line and an Undo. */
-export const OnYourList: Story = {
+/** Saved: the buttons give way to a line and an Undo. */
+export const SavedForLater: Story = {
   args: { statuses: { [FIRST.wordId]: 'listed' }, listCount: 1 },
   play: async ({ canvasElement, args }) => {
     const canvas = await showsFirstWord(canvasElement);
-    await expect(canvas.getByText('On your list')).toBeInTheDocument();
+    await expect(canvas.getByText('Saved for later')).toBeInTheDocument();
     await userEvent.click(
-      canvas.getByRole('button', { name: `Undo: take ${FIRST.headword} off your list` }),
+      canvas.getByRole('button', { name: `Undo: take ${FIRST.headword} off saved words` }),
     );
     await expect(args.onUnlearn).toHaveBeenCalledWith(FIRST);
   },
@@ -109,10 +109,10 @@ export const KnownSaved: Story = {
 
 /** A write failed. The message sits over the top of the page. */
 export const SaveFailed: Story = {
-  args: { notice: `Could not add “${FIRST.headword}” to your list. Try again.` },
+  args: { notice: `Could not save “${FIRST.headword}”. Try again.` },
   play: async ({ canvasElement }) => {
     const canvas = await showsFirstWord(canvasElement);
-    await expect(canvas.getByText(/Could not add/)).toBeInTheDocument();
+    await expect(canvas.getByText(/Could not save/)).toBeInTheDocument();
   },
 };
 

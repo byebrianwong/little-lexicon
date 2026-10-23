@@ -1,6 +1,9 @@
-// "Your list": the words picked in Discover that no session has shown yet.
-// Sessions take them first, oldest first, so this is also what comes next. A
-// word leaves the list when a session introduces it.
+// "Saved": every word the user saved, newest first, to look back at whenever
+// they like. A word stays until the user removes it. Under each one, the
+// tracker says how it is going (features/tracker).
+//
+// Saved words also feed the games: a session introduces the ones it has not
+// shown yet before any other new word, and practice shows them more often.
 
 import { FlatList, View } from 'react-native';
 import {
@@ -13,20 +16,26 @@ import {
   TextButton,
 } from '@/components/ui';
 import type { ListedWord } from '@/lib/types';
+import { describeTracker, type WordTracker } from '@/features/tracker/tracker';
 
 export interface WordListViewProps {
+  /** Oldest first, as the backend returns them. The view shows newest first. */
   entries: ListedWord[] | undefined;
   isLoading: boolean;
+  trackers: ReadonlyMap<number, WordTracker>;
   onRemove: (wordId: number) => void;
   onStartSession: () => void;
+  onPractice: () => void;
   onDiscover: () => void;
 }
 
 export function WordListView({
   entries,
   isLoading,
+  trackers,
   onRemove,
   onStartSession,
+  onPractice,
   onDiscover,
 }: WordListViewProps) {
   if (isLoading || !entries) {
@@ -40,10 +49,10 @@ export function WordListView({
   if (entries.length === 0) {
     return (
       <View className="flex-1 w-full max-w-[640px] self-center px-6 pt-8">
-        <Body>Your list is empty.</Body>
+        <Body>No saved words yet.</Body>
         <Muted className="mt-2">
-          Tap Learn this on a word in Discover and it waits here until a session
-          introduces it.
+          Tap Save for later on any word, in Discover, a session, practice or All words.
+          It stays here until you remove it.
         </Muted>
         <View className="mt-6">
           <Button title="Go to Discover" variant="secondary" onPress={onDiscover} />
@@ -52,9 +61,12 @@ export function WordListView({
     );
   }
 
+  const newestFirst = [...entries].reverse();
+  const now = new Date();
+
   return (
     <FlatList
-      data={entries}
+      data={newestFirst}
       keyExtractor={(e) => String(e.content.wordId)}
       contentContainerStyle={{
         width: '100%',
@@ -66,8 +78,12 @@ export function WordListView({
       }}
       ListHeaderComponent={
         <View className="mb-4 gap-4">
-          <Muted>Your next session starts with these, in this order.</Muted>
+          <Muted>
+            Sessions start with saved words you have not learned yet, and practice shows
+            saved words more often.
+          </Muted>
           <Button title="Start a session" trailingIcon="arrow-right" onPress={onStartSession} />
+          <Button title="Practice" variant="secondary" onPress={onPractice} />
         </View>
       }
       renderItem={({ item, index }) => {
@@ -86,11 +102,14 @@ export function WordListView({
               </View>
               <TextButton
                 label="Remove"
-                accessibilityLabel={`Remove ${item.content.headword} from your list`}
+                accessibilityLabel={`Remove ${item.content.headword} from saved words`}
                 onPress={() => onRemove(item.content.wordId)}
               />
             </Row>
             <Body className="mt-1">{definition}</Body>
+            <Note className="mt-2 text-[15px]">
+              {describeTracker(trackers.get(item.content.wordId), now)}
+            </Note>
           </View>
         );
       }}

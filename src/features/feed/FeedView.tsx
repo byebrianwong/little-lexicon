@@ -1,5 +1,5 @@
 // The Discover feed: unseen words, one per screen, scrolled like a stack of
-// pages. For each word the reader can add it to their list, say they know it,
+// pages. For each word the reader can save it for later, say they know it,
 // or scroll on, which records nothing.
 //
 // Two problems with feeds like this shaped the design:
@@ -301,8 +301,8 @@ function Actions({
           onPress={() => onKnow(word)}
         />
         <Button
-          title="Learn this"
-          accessibilityLabel={`Learn this: ${word.headword}`}
+          title="Save for later"
+          accessibilityLabel={`Save for later: ${word.headword}`}
           className="flex-1"
           onPress={() => onLearn(word)}
         />
@@ -310,11 +310,11 @@ function Actions({
     );
   }
 
-  const message = status === 'listed' ? 'On your list' : 'Marked as known';
+  const message = status === 'listed' ? 'Saved for later' : 'Marked as known';
   // A stored "known" has no undo: see feedState for why.
   const undo =
     status === 'listed'
-      ? { label: `Undo: take ${word.headword} off your list`, run: () => onUnlearn(word) }
+      ? { label: `Undo: take ${word.headword} off saved words`, run: () => onUnlearn(word) }
       : status === 'pendingKnown'
         ? { label: `Undo: ${word.headword} is not known`, run: () => onUnknow(word) }
         : null;
@@ -376,7 +376,7 @@ function EndPage({
         <View className="mt-8 gap-3">
           <Button title="Start a session" trailingIcon="arrow-right" onPress={onStartSession} />
           <Button
-            title={`See your list (${listCount})`}
+            title={`See saved words (${listCount})`}
             variant="secondary"
             onPress={onOpenList}
           />
