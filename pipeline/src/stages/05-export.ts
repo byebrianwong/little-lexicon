@@ -16,7 +16,7 @@ import { gzipSync } from 'node:zlib';
 import type { RunContext } from '../config.ts';
 import { buildWordsFile, checkIdStability, type WordsFile } from '../lib/exportContent.ts';
 import { OEWN_ATTRIBUTION } from '../lib/wordnet.ts';
-import { buildClipModule, HUMAN_AUDIO_ATTRIBUTION, type ClipEntry } from '../lib/audio.ts';
+import { buildClipModule, clipMatches, HUMAN_AUDIO_ATTRIBUTION, type ClipEntry } from '../lib/audio.ts';
 
 interface ClipModule {
   source: string;
@@ -24,18 +24,35 @@ interface ClipModule {
   sentences: number;
   bytes: number;
   human: boolean;
+  /** Clips left out because their text or IPA changed after they were made. */
+  stale: number;
 }
 
-/** The clip module for the exported words: only clips whose file is on disk. */
+/**
+ * The clip module for the exported words: only clips whose file is on disk
+ * and that were made from the current text and IPA, so the app never plays a
+ * clip that says something else. A word or sentence without one falls back to
+ * the device's speech until stage 04 runs again.
+ */
 async function clipModule(ctx: RunContext, file: WordsFile): Promise<ClipModule> {
   const clips = new Map((await ctx.store.listAudio()).map((c) => [c.path, c]));
   const moduleDir = dirname(ctx.paths.clipModuleFile);
   let bytes = 0;
   let human = false;
-  const entry = (id: number, path: string): ClipEntry | null => {
+  let stale = 0;
+  const entry = (
+    id: number,
+    path: string,
+    word: { headword: string; ipa: string | null },
+    sentence: string | null,
+  ): ClipEntry | null => {
     const clip = clips.get(path);
     const abs = ctx.store.audioFile(path);
     if (!clip || clip.source === 'stub' || !existsSync(abs)) return null;
+    if (!clipMatches(clip, word, sentence)) {
+      stale += 1;
+      return null;
+    }
     bytes += clip.bytes;
     if (clip.source === 'human') human = true;
     const rel = relative(moduleDir, abs).split(sep).join('/');
@@ -44,11 +61,11 @@ async function clipModule(ctx: RunContext, file: WordsFile): Promise<ClipModule>
   const words: ClipEntry[] = [];
   const sentences: ClipEntry[] = [];
   for (const w of file.words) {
-    const clip = entry(w.wordId, `words/${w.wordId}.mp3`);
+    const clip = entry(w.wordId, `words/${w.wordId}.mp3`, w, null);
     if (clip) words.push(clip);
     for (const s of w.senses) {
       for (const ex of s.examples) {
-        const sentence = entry(ex.exampleId, `sentences/${ex.exampleId}.mp3`);
+        const sentence = entry(ex.exampleId, `sentences/${ex.exampleId}.mp3`, w, ex.text);
         if (sentence) sentences.push(sentence);
       }
     }
@@ -59,6 +76,7 @@ async function clipModule(ctx: RunContext, file: WordsFile): Promise<ClipModule>
     sentences: sentences.length,
     bytes,
     human,
+    stale,
   };
 }
 
@@ -125,4 +143,10 @@ export async function exportWords(ctx: RunContext): Promise<void> {
       `${clips.sentences} sentences, ${(clips.bytes / (1024 * 1024)).toFixed(2)} MB, ` +
       `listed in ${ctx.paths.clipModuleFile}.`,
   );
+  if (clips.stale > 0) {
+    ctx.log.warn(
+      `Export: left out ${clips.stale} clips whose text or IPA changed after they were made. ` +
+        'Run `npx tsx src/run.ts --only=audio`, then `--only=export`, to remake them.',
+    );
+  }
 }

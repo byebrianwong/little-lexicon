@@ -1,6 +1,6 @@
 // Audio playback for word and sentence pronunciation (Phase 3.5).
 //
-// Clips are made by the pipeline (stage 04, Google Chirp 3 HD voices or a US
+// Clips are made by the pipeline (stage 04, the Kokoro voice model or a US
 // human recording for headwords) and bundled in the app; src/content/
 // audioClips.ts maps word and example ids to them. A hosted audioUrl is played
 // if a word or sentence has one and no bundled clip. Otherwise the device's

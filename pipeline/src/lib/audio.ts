@@ -6,53 +6,94 @@
 
 import { createHash } from 'node:crypto';
 
-export const DEFAULT_TTS_VOICE = 'en-US-Chirp3-HD-Kore';
-export const DEFAULT_TTS_LANGUAGE = 'en-US';
+export const DEFAULT_TTS_VOICE = 'af_heart';
+/** MP3 bit rate of TTS clips. Mono speech at 24 kHz stays clear at 32 kbps. */
+export const TTS_KBPS = 32;
 
-/** IPA from the words file ("/əˈbeɪt/") in the form Google expects ("əˈbeɪt"). */
-export function ipaForTts(ipa: string | null): string | null {
+/**
+ * What a TTS clip records as its voice: model, voice and bit rate. It is part
+ * of the clip's key, so changing any of them remakes every TTS clip.
+ */
+export function ttsVoiceLabel(voice: string): string {
+  return `kokoro-82m/${voice}/${TTS_KBPS}k`;
+}
+
+// IPA spellings Kokoro writes differently. Longer sequences come first, so a
+// diphthong is replaced before its parts are.
+const IPA_TO_KOKORO: [string, string][] = [
+  ['eɪ', 'A'],
+  ['aɪ', 'I'],
+  ['aʊ', 'W'],
+  ['ɔɪ', 'Y'],
+  ['oʊ', 'O'],
+  ['dʒ', 'ʤ'],
+  ['tʃ', 'ʧ'],
+  ['ɚ', 'əɹ'],
+  ['ɝ', 'ɜɹ'],
+  ['r', 'ɹ'],
+  ['g', 'ɡ'],
+  ['e', 'A'],
+  ['o', 'O'],
+  ['a', 'ɑ'],
+];
+/** Kokoro's US English vowels; A, I, O, W and Y stand for diphthongs. */
+const KOKORO_VOWELS = new Set('AIOWYaiuæɑɔəɛɜɪʊʌᵻᵊɐ');
+/** Every letter Kokoro reads in US English, with the two stress marks. */
+const KOKORO_US = new Set([...KOKORO_VOWELS, ...'bdfhjklmnpstvwzɡŋɹʃʒðθʤʧɾʔ', 'ˈ', 'ˌ']);
+
+/**
+ * The words file's General American IPA ("/əˈbeɪt/") in the phoneme letters
+ * Kokoro reads ("əbˈAt"), or null when there is no IPA or it uses a symbol
+ * Kokoro has no letter for (the voice then says the word its own way).
+ *
+ * Diphthongs become single letters. IPA puts a stress mark at the start of
+ * its syllable; Kokoro's own dictionary puts it just before the vowel, so the
+ * mark moves there. IPA leaves one-syllable words unmarked, but without a mark
+ * the voice says the word unstressed inside a sentence, so they get one.
+ */
+export function ipaToKokoro(ipa: string | null): string | null {
   if (!ipa) return null;
-  const bare = ipa.trim().replace(/^\/+|\/+$/g, '').trim();
-  return bare.length > 0 ? bare : null;
-}
-
-function containsWord(text: string, word: string): boolean {
-  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(^|[^\\p{L}])${escaped}($|[^\\p{L}])`, 'u').test(text);
-}
-
-export interface TtsRequestInput {
-  text: string;
-  voice: string;
-  language: string;
-  /** The word whose pronunciation is pinned, with its IPA (no slashes). */
-  pin?: { headword: string; ipa: string } | null;
+  let p = ipa.trim().replace(/^\/+|\/+$/g, '').trim();
+  for (const [from, to] of IPA_TO_KOKORO) p = p.split(from).join(to);
+  let out = '';
+  let stress = '';
+  for (const ch of p) {
+    if (ch === 'ˈ' || ch === 'ˌ') {
+      stress = ch;
+    } else {
+      if (stress && KOKORO_VOWELS.has(ch)) {
+        out += stress;
+        stress = '';
+      }
+      out += ch;
+    }
+  }
+  if (!out.includes('ˈ')) {
+    const first = [...out].findIndex((ch) => KOKORO_VOWELS.has(ch));
+    if (first >= 0) {
+      const chars = [...out];
+      chars.splice(first, 0, 'ˈ');
+      out = chars.join('');
+    }
+  }
+  if (out.length === 0 || [...out].some((ch) => !KOKORO_US.has(ch))) return null;
+  return out;
 }
 
 /**
- * Body for Google's v1 text:synthesize. When the text contains the headword
- * exactly, the word's IPA goes in as a custom pronunciation so the voice says
- * it the way the app shows it. Google matches the phrase exactly, so a
- * capitalized or inflected form ("Abated") is left to the voice.
+ * Text for Kokoro with the headword's pronunciation pinned, in Kokoro's
+ * markup: "Her fear began to [abate](/əbˈAt/)." The headword is matched as a
+ * whole word, as written or with a capital first letter. Inflected forms
+ * ("abated") are left to the voice's own dictionary.
  */
-export function buildTtsRequest(input: TtsRequestInput): Record<string, unknown> {
-  const synthesisInput: Record<string, unknown> = { text: input.text };
-  if (input.pin && containsWord(input.text, input.pin.headword)) {
-    synthesisInput.customPronunciations = {
-      pronunciations: [
-        {
-          phrase: input.pin.headword,
-          phoneticEncoding: 'PHONETIC_ENCODING_IPA',
-          pronunciation: input.pin.ipa,
-        },
-      ],
-    };
-  }
-  return {
-    input: synthesisInput,
-    voice: { languageCode: input.language, name: input.voice },
-    audioConfig: { audioEncoding: 'MP3' },
-  };
+export function kokoroText(text: string, pin: { headword: string; phonemes: string } | null): string {
+  if (!pin) return text;
+  const { headword, phonemes } = pin;
+  const forms = [headword, headword.charAt(0).toUpperCase() + headword.slice(1)]
+    .map((f) => f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|');
+  const pattern = new RegExp(`(^|[^\\p{L}])(${forms})(?=$|[^\\p{L}])`, 'gu');
+  return text.replace(pattern, (_m, before: string, word: string) => `${before}[${word}](/${phonemes}/)`);
 }
 
 /**
@@ -61,6 +102,45 @@ export function buildTtsRequest(input: TtsRequestInput): Record<string, unknown>
  */
 export function clipKey(parts: Record<string, string | null>): string {
   return createHash('sha256').update(JSON.stringify(parts)).digest('hex').slice(0, 16);
+}
+
+interface KeyWord {
+  headword: string;
+  ipa: string | null;
+}
+
+/** Key of a human recording of the headword: it depends on the headword only. */
+export function humanClipKey(word: KeyWord): string {
+  return clipKey({ kind: 'human', headword: word.headword });
+}
+
+/** Key of a TTS clip of the headword. `voice` is a ttsVoiceLabel. */
+export function wordClipKey(word: KeyWord, voice: string): string {
+  return clipKey({ kind: 'word', text: word.headword, ipa: word.ipa, voice });
+}
+
+/** Key of a TTS clip of an example sentence. `voice` is a ttsVoiceLabel. */
+export function sentenceClipKey(text: string, word: KeyWord, voice: string): string {
+  return clipKey({ kind: 'sentence', text, headword: word.headword, ipa: word.ipa, voice });
+}
+
+/**
+ * True when a saved clip was made from the content it is filed under now.
+ * `sentence` is the example's text, or null for the headword clip. A clip goes
+ * out of date when its sentence is rewritten in place or its word's IPA is
+ * fixed, until stage 04 runs again. The clip's own voice is used, so changing
+ * KOKORO_VOICE alone does not make a clip count as out of date here.
+ */
+export function clipMatches(
+  clip: { key?: string; source?: string; voice?: string },
+  word: KeyWord,
+  sentence: string | null,
+): boolean {
+  if (clip.source === 'human') return sentence === null && clip.key === humanClipKey(word);
+  if (clip.source !== 'tts' || !clip.voice) return false;
+  const expected =
+    sentence === null ? wordClipKey(word, clip.voice) : sentenceClipKey(sentence, word, clip.voice);
+  return clip.key === expected;
 }
 
 export interface FdPhonetic {
