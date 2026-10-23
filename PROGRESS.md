@@ -3374,3 +3374,36 @@ All three workflows (`ci.yml`, `chromatic.yml`, `eas-update.yml`) now use
 - `node-version: 20` (the Node that runs `npm ci` and the app's scripts) is
   unchanged. Node 20 is past end of life, so moving to 22 or 24 is a separate
   decision.
+
+## Sign-in and sign-up screens collapsed on phones (2026-10-23)
+
+Once the phone build switched to Supabase mode, its first screen is sign-in.
+On Android the screen was broken: no heading or subtitle, the email and
+password fields squashed to their underlines, and the "Sign in" button drawn
+over "New here? Create an account".
+
+### Cause
+
+`AuthFormView`'s outer view had `flex-1 justify-center`. Both routes wrap the
+form in `<Screen scroll>`, whose inner column takes its height from its
+content. On iOS and Android, a `flex-1` child of a column like that gets zero
+height, so everything inside it collapsed and overlapped. Browsers size that
+child from its content instead, so web and the Storybook stories (which render
+in a browser) looked right, and Chromatic could not catch it.
+
+### Fix
+
+The outer view keeps only its padding. Phones now get the same layout the web
+always showed: the form at the top of the screen. The "Sign in" button is
+still grey until both fields have text, which is intended.
+
+### Verified
+
+- Reproduced in the iOS simulator (Expo Go, Supabase mode): the same collapse
+  as Brian's Android screenshot. After the fix, sign-in and sign-up both lay
+  out correctly, typing enables the button, and the switch between them works.
+- Web at phone width looks the same as before.
+- `tsc --noEmit`, lint and 261 unit tests pass.
+- Not run on an Android emulator (none on this Mac). The cause is in the
+  layout engine iOS and Android share, so the iOS check covers it. Android is
+  confirmed once the update reaches the phone.
