@@ -513,6 +513,11 @@ before handing a worksheet over.
   the word through a downhill slope, which is what declivity (one of its
   wrong answers) means. A learner who remembers the hook then picks the
   wrong option. Read each hook against the word's look-alikes.
+- **Reading only part of the dictionary output.** On 2026-10-23 two
+  main-session fixes copied text that sat past the end of a line the
+  main session had cut short (`head`, and the tool's own 220-character
+  limit, now 400). Read the whole output for a look-alike before writing
+  its option.
 - **Stale `problems` lists.** A worksheet's `problems` is written when the
   worksheet is made and is not updated. Reviewers kept reporting old
   "like ..." problems that a writer had already fixed. `check` is the
