@@ -22,16 +22,24 @@ type Story = StoryObj<typeof meta>;
 /**
  * Recall the word from a cue. The hardest mode in the ladder. The cue is either
  * the definition or a synonym, chosen per word by a seeded draw; this one draws
- * the synonym.
+ * the synonym. The first letter and the length show under the box from the start.
  */
-export const Unanswered: Story = {};
+export const Unanswered: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByLabelText('Starts with "l", 7 letters')).toBeInTheDocument();
+  },
+};
 
-/** The hint shows the first third of the word and its length. */
+/** The hint shows the first third of the word and turns Hint into Show answer. */
 export const HintUsed: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('Hint'));
-    await expect(await canvas.findByText(/letters/)).toBeInTheDocument();
+    await expect(
+      await canvas.findByLabelText('Starts with "lac", 7 letters'),
+    ).toBeInTheDocument();
+    await expect(canvas.getByText('Show answer')).toBeInTheDocument();
   },
 };
 

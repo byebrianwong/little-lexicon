@@ -28,6 +28,7 @@ import type {
   ForecastDay,
   LeaderboardEntry,
   OAuthProvider,
+  PracticeAnswerInput,
   ProgressCounts,
   SentenceFeedback,
   WordReportInput,
@@ -35,6 +36,8 @@ import type {
   SubmitReviewResult,
 } from '../types';
 import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
+import { parseKnownWordFrequency } from '@/features/games/practice';
+import type { AnswerRecord } from '@/features/tracker/tracker';
 
 /**
  * `supabase gen types` marks every function argument as required and
@@ -112,6 +115,7 @@ function mapProfile(row: {
   level_estimate: number | null;
   daily_goal: number;
   desired_retention: number;
+  known_word_frequency: string;
   interests: string[];
   streak_count: number;
   streak_freeze_count: number;
@@ -126,6 +130,7 @@ function mapProfile(row: {
     levelEstimate: row.level_estimate,
     dailyGoal: row.daily_goal,
     desiredRetention: row.desired_retention,
+    knownWordFrequency: parseKnownWordFrequency(row.known_word_frequency),
     interests: row.interests ?? [],
     streakCount: row.streak_count,
     streakFreezeCount: row.streak_freeze_count,
@@ -237,6 +242,9 @@ export class SupabaseBackend implements Backend {
     if (patch.levelEstimate !== undefined) update.level_estimate = patch.levelEstimate;
     if (patch.dailyGoal !== undefined) update.daily_goal = patch.dailyGoal;
     if (patch.desiredRetention !== undefined) update.desired_retention = patch.desiredRetention;
+    if (patch.knownWordFrequency !== undefined) {
+      update.known_word_frequency = patch.knownWordFrequency;
+    }
     if (patch.interests !== undefined) update.interests = patch.interests;
     if (patch.streakCount !== undefined) update.streak_count = patch.streakCount;
     if (patch.streakFreezeCount !== undefined) {
@@ -371,13 +379,8 @@ export class SupabaseBackend implements Backend {
   }
 
   async getWordList(): Promise<ListedWord[]> {
-    const [content, listed, seen] = await Promise.all([
-      loadContent(),
-      this.getListedRows(),
-      this.getSeenIds(),
-    ]);
+    const [content, listed] = await Promise.all([loadContent(), this.getListedRows()]);
     return listed
-      .filter((r) => !seen.has(r.word_id))
       .map((r) => {
         const word = content.byId.get(r.word_id);
         return word ? { content: word, addedAt: r.added_at } : null;
@@ -408,6 +411,46 @@ export class SupabaseBackend implements Backend {
       .eq('user_id', userId)
       .eq('word_id', wordId)
       .is('removed_at', null);
+    if (error) throw new Error(error.message);
+  }
+
+  // --- The word tracker -----------------------------------------------------
+  // The whole history is read and summarized on the device by the same tested
+  // code as demo mode (features/tracker). Each row is three short columns. If
+  // histories grow large, a SQL function that returns one row per word would
+  // replace this.
+  async getAnswerHistory(): Promise<AnswerRecord[]> {
+    const [reviews, practice] = await Promise.all([
+      fetchAllRows((from, to) =>
+        supabase
+          .from('review_logs')
+          .select('word_id, rating, reviewed_at')
+          .order('id', { ascending: true })
+          .range(from, to),
+      ),
+      fetchAllRows((from, to) =>
+        supabase
+          .from('practice_logs')
+          .select('word_id, correct, answered_at')
+          .order('id', { ascending: true })
+          .range(from, to),
+      ),
+    ]);
+    return [
+      // Again (1) is the only wrong answer; see submitReview.
+      ...reviews.map((r) => ({ wordId: r.word_id, correct: r.rating > 1, at: r.reviewed_at })),
+      ...practice.map((r) => ({ wordId: r.word_id, correct: r.correct, at: r.answered_at })),
+    ];
+  }
+
+  async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {
+    const userId = await this.requireUserId();
+    const { error } = await supabase.from('practice_logs').insert({
+      user_id: userId,
+      word_id: input.wordId,
+      correct: input.correct,
+      game_mode: input.gameMode,
+    });
     if (error) throw new Error(error.message);
   }
 
@@ -670,11 +713,12 @@ export class SupabaseBackend implements Backend {
   // --- Account management ---------------------------------------------------
   async exportData(): Promise<Record<string, unknown>> {
     const userId = await this.requireUserId();
-    const [profile, states, list, logs, daily, achievements, reports] = await Promise.all([
+    const [profile, states, list, logs, practice, daily, achievements, reports] = await Promise.all([
       supabase.from('profiles').select('*').eq('user_id', userId).single(),
       supabase.from('user_word_state').select('*'),
       supabase.from('word_list').select('*'),
       supabase.from('review_logs').select('*'),
+      supabase.from('practice_logs').select('*'),
       supabase.from('daily_stats').select('*'),
       supabase.from('achievements').select('*'),
       supabase.from('word_reports').select('*'),
@@ -685,6 +729,7 @@ export class SupabaseBackend implements Backend {
       wordStates: states.data ?? [],
       wordList: list.data ?? [],
       reviewLogs: logs.data ?? [],
+      practiceLogs: practice.data ?? [],
       dailyStats: daily.data ?? [],
       achievements: achievements.data ?? [],
       wordReports: reports.data ?? [],

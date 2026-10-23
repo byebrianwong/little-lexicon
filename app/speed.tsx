@@ -19,11 +19,13 @@ import {
   SpeedRoundView,
 } from '@/features/games/SpeedView';
 import { useSessionResult } from '@/features/session/sessionResult';
+import { useSavedWords } from '@/features/feed/queries';
 
 export default function SpeedRound() {
   const profileQuery = useProfile();
   const setSummary = useSessionResult((s) => s.setSummary);
   const qc = useQueryClient();
+  const saved = useSavedWords();
 
   const [items, setItems] = useState<SessionItem[] | null>(null);
   const [index, setIndex] = useState(0);
@@ -140,6 +142,10 @@ export default function SpeedRound() {
       chosen={chosen}
       remaining={remaining}
       answeredCount={totals.current.reviewed}
+      saved={current ? saved.savedIds.has(current.content.wordId) : false}
+      onToggleSave={() => {
+        if (current) saved.toggle(current.content);
+      }}
       onChoose={choose}
       onClose={() => router.replace('/(app)')}
     />

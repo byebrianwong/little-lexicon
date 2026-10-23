@@ -74,6 +74,7 @@ export default function Settings() {
       onSelectGoal={(dailyGoal) => update.mutate({ dailyGoal })}
       onSelectLevel={(levelEstimate) => update.mutate({ levelEstimate })}
       onSelectRetention={(desiredRetention) => update.mutate({ desiredRetention })}
+      onSelectKnownFrequency={(knownWordFrequency) => update.mutate({ knownWordFrequency })}
       onToggleSound={setSoundEnabled}
       onSelectReminder={setReminder}
       onExport={exportData}

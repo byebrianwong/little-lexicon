@@ -7,6 +7,12 @@ from inside its <script> tags, which a plain text extraction throws away.
 Usage, from `pipeline/`:
 
     python3 -I tools/dictionary-defs.py ossify quietus
+    python3 -I tools/dictionary-defs.py --examples ossify quietus
+
+`--examples` prints the example sentences of Oxford, Cambridge, Longman and
+WordUp instead, so you can check that an example does not retell one of
+their scenes. Pass each word as its own argument (in zsh, an unquoted
+variable holding several words stays one argument).
 
 Pages are cached in `.cache/dict/` (git-ignored). Merriam-Webster, Collins
 and Britannica block curl, so they are not covered; search for those.
@@ -43,6 +49,15 @@ PATTERNS = {
 }
 
 
+# Example sentences. WordUp's are in its script data, like its definitions.
+EXAMPLE_PATTERNS = {
+    'oxford': [r'<span class="x">(.*?)</span>'],
+    'cambridge': [r'<span class="eg deg">(.*?)</span>'],
+    'longman': [r'<span class="EXAMPLE">(.*?)</span>\s*</span>'],
+    'wordup': [r'\\"text\\":\\"(.{10,400}?)\\",\\"'],
+}
+
+
 def fetch(source, word):
     os.makedirs(CACHE, exist_ok=True)
     path = os.path.join(CACHE, f'{source}-{word}.html')
@@ -63,18 +78,24 @@ def clean(text):
 
 
 def main():
-    for word in sys.argv[1:]:
+    args = sys.argv[1:]
+    examples = '--examples' in args
+    patterns, limit = (EXAMPLE_PATTERNS, 12) if examples else (PATTERNS, 5)
+    for word in [a for a in args if a != '--examples']:
         print(f'=== {word}')
-        for source in SOURCES:
+        for source in patterns:
             page = fetch(source, word)
             found = []
-            for pattern in PATTERNS[source]:
+            for pattern in patterns[source]:
                 for match in re.findall(pattern, page, flags=re.S):
-                    text = clean(match)
+                    text = clean(match.replace('\\"', '"'))
+                    # WordUp's verb-form table uses the same "text" key.
+                    if examples and ('"label"' in text or len(text.split()) < 3):
+                        continue
                     if len(text) > 6 and text not in found:
                         found.append(text)
-            for text in found[:5]:
-                print(f'  {source}: {text[:220]}')
+            for text in found[:limit]:
+                print(f'  {source}: {text[:400]}')
 
 
 if __name__ == '__main__':

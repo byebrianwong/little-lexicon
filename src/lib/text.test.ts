@@ -7,6 +7,10 @@ import {
   makeClozeBlank,
   articleBefore,
   indefiniteArticle,
+  FREE_LETTERS,
+  hintLetters,
+  letterSlots,
+  letterCount,
 } from './text';
 
 describe('normalizeAnswer', () => {
@@ -122,5 +126,49 @@ describe('indefiniteArticle', () => {
   it('falls back to the first letter without IPA', () => {
     expect(indefiniteArticle('ephemeral')).toBe('an');
     expect(indefiniteArticle('laconic', null)).toBe('a');
+  });
+});
+
+describe('hintLetters', () => {
+  it('shows about a third of the word', () => {
+    expect(hintLetters('ephemeral')).toBe(3);
+    expect(hintLetters('obfuscate')).toBe(3);
+    expect(hintLetters('laconic')).toBe(3);
+    expect(hintLetters('abate')).toBe(2);
+  });
+  it('always shows more than the free first letter', () => {
+    expect(hintLetters('vex')).toBe(FREE_LETTERS + 1);
+    expect(hintLetters('aver')).toBe(FREE_LETTERS + 1);
+  });
+  it('never shows the whole word', () => {
+    expect(hintLetters('ox')).toBe(1);
+  });
+});
+
+describe('letterSlots', () => {
+  // Shorthand: shown characters as themselves, blanks as "_".
+  const outline = (target: string, shown: number) =>
+    letterSlots(target, shown)
+      .map((s) => s.char ?? '_')
+      .join('');
+
+  it('shows the first letters and a blank for each one left', () => {
+    expect(outline('ephemeral', 1)).toBe('e________');
+    expect(outline('ephemeral', 3)).toBe('eph______');
+  });
+  it('lowercases a target taken from the start of a sentence', () => {
+    expect(outline('Abated', 1)).toBe('a_____');
+  });
+  it('keeps spaces and hyphens visible and marks them as not letters', () => {
+    expect(outline('ad hoc', 1)).toBe('a_ ___');
+    expect(outline('well-read', 2)).toBe('we__-____');
+    expect(letterSlots('ad hoc', 1)[2]).toEqual({ char: ' ', letter: false });
+  });
+});
+
+describe('letterCount', () => {
+  it('counts letters only', () => {
+    expect(letterCount('ephemeral')).toBe(9);
+    expect(letterCount('well-read')).toBe(8);
   });
 });

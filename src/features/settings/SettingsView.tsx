@@ -23,7 +23,9 @@ import {
 } from '@/components/ui';
 import { colors } from '@/theme/colors';
 import { WORD_LEVELS, levelForEstimate } from '@/features/onboarding/levels';
-import type { Profile } from '@/lib/types';
+import { KNOWN_WORD_FREQUENCIES } from '@/features/games/practice';
+import { KNOWN_AFTER_DAYS } from '@/features/tracker/tracker';
+import type { KnownWordFrequency, Profile } from '@/lib/types';
 
 const GOALS = [10, 15, 20, 30];
 
@@ -32,6 +34,11 @@ const GOALS = [10, 15, 20, 30];
 const webSwitchProps = Platform.OS === 'web' ? { activeThumbColor: colors.paper } : {};
 const RETENTIONS = [0.8, 0.85, 0.9, 0.95];
 const REMINDER_HOURS = [8, 12, 18, 21];
+const FREQUENCY_LABELS: Record<KnownWordFrequency, string> = {
+  rarely: 'Rarely',
+  sometimes: 'Sometimes',
+  often: 'As often as others',
+};
 
 export interface SettingsViewProps {
   profile: Profile;
@@ -41,6 +48,8 @@ export interface SettingsViewProps {
   /** Saves the chosen level's estimate (see features/onboarding/levels). */
   onSelectLevel: (levelEstimate: number) => void;
   onSelectRetention: (retention: number) => void;
+  /** How often practice shows words the user knows. */
+  onSelectKnownFrequency: (frequency: KnownWordFrequency) => void;
   onToggleSound: (enabled: boolean) => void;
   /** null turns the daily reminder off. */
   onSelectReminder: (hour: number | null) => void;
@@ -60,6 +69,7 @@ export function SettingsView({
   onSelectGoal,
   onSelectLevel,
   onSelectRetention,
+  onSelectKnownFrequency,
   onToggleSound,
   onSelectReminder,
   onExport,
@@ -134,6 +144,22 @@ export function SettingsView({
               label={`${Math.round(r * 100)}%`}
               selected={profile.desiredRetention === r}
               onPress={() => onSelectRetention(r)}
+            />
+          ))}
+        </ChoiceGroup>
+      </Section>
+
+      <Section label="Words you know, in practice" className="mt-10">
+        <Muted>
+          {`A word counts as known once you get it right on ${KNOWN_AFTER_DAYS} separate days with no mistake since. A mistake makes it come up often again. Sessions follow your review schedule instead.`}
+        </Muted>
+        <ChoiceGroup className="mt-3">
+          {KNOWN_WORD_FREQUENCIES.map((f) => (
+            <Choice
+              key={f}
+              label={FREQUENCY_LABELS[f]}
+              selected={profile.knownWordFrequency === f}
+              onPress={() => onSelectKnownFrequency(f)}
             />
           ))}
         </ChoiceGroup>

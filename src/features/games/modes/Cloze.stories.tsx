@@ -19,8 +19,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** The blanked sentence and an empty box. Check is disabled until something is typed. */
-export const Unanswered: Story = {};
+/**
+ * The blanked sentence and an empty box, with the first letter and the length
+ * under it. Check is disabled until something is typed.
+ */
+export const Unanswered: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(canvas.getByLabelText('Starts with "e", 9 letters')).toBeInTheDocument();
+  },
+};
 
 /** A typed answer enables Check. */
 export const Typing: Story = {
@@ -31,14 +39,16 @@ export const Typing: Story = {
 };
 
 /**
- * The hint shows the first letter and the length under the box, where it stays
+ * The hint shows the first third of the word under the box, where it stays
  * visible after typing starts, and turns Hint into Show answer.
  */
 export const HintUsed: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('Hint'));
-    await expect(await canvas.findByText(/Starts with "e"/)).toBeInTheDocument();
+    await expect(
+      await canvas.findByLabelText('Starts with "eph", 9 letters'),
+    ).toBeInTheDocument();
     await expect(canvas.getByText('Show answer')).toBeInTheDocument();
   },
 };

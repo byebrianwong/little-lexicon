@@ -21,6 +21,7 @@ import type {
   FeedRequest,
   ForecastDay,
   LeaderboardEntry,
+  PracticeAnswerInput,
   ProgressCounts,
   SentenceFeedback,
   SubmitReviewInput,
@@ -31,6 +32,8 @@ import { loadContent, type ContentIndex } from '@/lib/content';
 import { normalizeAnswer } from '@/lib/text';
 import { legacyIdMap, remapWordIds } from './legacyWordIds';
 import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
+import { DEFAULT_KNOWN_WORD_FREQUENCY } from '@/features/games/practice';
+import type { AnswerRecord } from '@/features/tracker/tracker';
 
 const STORAGE_KEY = 'little_lexicon.demo.v1';
 const DEMO_USER_ID = 'demo-user';
@@ -46,6 +49,13 @@ interface LogRow {
   word_id: number;
   rating: number;
   reviewed_at: string;
+}
+
+interface PracticeLogRow {
+  word_id: number;
+  correct: boolean;
+  game_mode: string;
+  answered_at: string;
 }
 
 interface ReportRow {
@@ -71,11 +81,13 @@ interface PersistShape {
   profile: Profile;
   states: Record<number, StateRow>;
   /**
-   * The Discover list, keyed by word id. Removed entries stay, soft-deleted.
+   * The saved words, keyed by word id. Removed entries stay, soft-deleted.
    * It shipped after the words file, so it is never in the old numbering.
    */
   list: Record<number, ListRow>;
   logs: LogRow[];
+  /** Practice answers, for the word tracker. Added after the words file too. */
+  practiceLogs?: PracticeLogRow[];
   daily: Record<string, DailyStats>;
   achievements: string[];
   /**
@@ -95,6 +107,7 @@ function defaultProfile(): Profile {
     levelEstimate: null,
     dailyGoal: 15,
     desiredRetention: 0.9,
+    knownWordFrequency: DEFAULT_KNOWN_WORD_FREQUENCY,
     interests: [],
     streakCount: 0,
     streakFreezeCount: 2,
@@ -174,6 +187,8 @@ export class DemoBackend implements Backend {
         const saved = JSON.parse(raw) as Partial<PersistShape>;
         // Data saved before the scheme field existed uses the old numbering.
         this.data = { ...emptyState(), wordIdScheme: undefined, ...saved };
+        // A profile saved by an older version lacks the newer fields.
+        this.data.profile = { ...defaultProfile(), ...saved.profile };
       }
     } catch (e) {
       console.warn('demo backend: failed to load persisted state', e);
@@ -336,9 +351,7 @@ export class DemoBackend implements Backend {
   async getWordList(): Promise<ListedWord[]> {
     await this.ensureLoaded();
     const content = await loadContent();
-    const seen = this.seenIds();
     return this.listedIds()
-      .filter((id) => !seen.has(id))
       .map((id) => {
         const word = content.byId.get(id);
         return word ? { content: word, addedAt: this.data.list[id]!.added_at } : null;
@@ -357,6 +370,34 @@ export class DemoBackend implements Backend {
     const row = this.data.list[wordId];
     if (!row || row.removed_at !== null) return;
     this.data.list[wordId] = { ...row, removed_at: new Date().toISOString() };
+    await this.persist();
+  }
+
+  // --- The word tracker -----------------------------------------------------
+  async getAnswerHistory(): Promise<AnswerRecord[]> {
+    await this.ensureLoaded();
+    return [
+      // Again (1) is the only wrong answer; see submitReview.
+      ...this.data.logs.map((l) => ({ wordId: l.word_id, correct: l.rating > 1, at: l.reviewed_at })),
+      ...(this.data.practiceLogs ?? []).map((l) => ({
+        wordId: l.word_id,
+        correct: l.correct,
+        at: l.answered_at,
+      })),
+    ];
+  }
+
+  async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {
+    await this.ensureLoaded();
+    this.data.practiceLogs = [
+      ...(this.data.practiceLogs ?? []),
+      {
+        word_id: input.wordId,
+        correct: input.correct,
+        game_mode: input.gameMode,
+        answered_at: new Date().toISOString(),
+      },
+    ];
     await this.persist();
   }
 
@@ -632,6 +673,7 @@ export class DemoBackend implements Backend {
         ...row,
       })),
       reviewLogs: this.data.logs,
+      practiceLogs: this.data.practiceLogs ?? [],
       dailyStats: Object.values(this.data.daily),
       achievements: this.data.achievements,
       wordReports: this.data.reports ?? [],

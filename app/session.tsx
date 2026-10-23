@@ -27,6 +27,7 @@ import { GameProvider } from '@/features/games/GameContext';
 import { GameHost } from '@/features/games/GameHost';
 import { WordIntro } from '@/features/games/WordIntro';
 import { useSettingsStore } from '@/features/settings/settingsStore';
+import { useSavedWords } from '@/features/feed/queries';
 import { useSessionResult } from '@/features/session/sessionResult';
 import {
   SessionLoading,
@@ -55,6 +56,7 @@ export default function SessionScreen() {
   const soundEnabled = useSettingsStore((s) => s.soundEnabled);
   const setSummary = useSessionResult((s) => s.setSummary);
   const qc = useQueryClient();
+  const saved = useSavedWords();
 
   const [index, setIndex] = useState(0);
   const [introduced, setIntroduced] = useState<Set<number>>(new Set());
@@ -383,7 +385,7 @@ export default function SessionScreen() {
       submitting={submitting}
       onClose={close}
     >
-      <GameProvider value={{ pool, profile, previewNextDue }}>
+      <GameProvider value={{ pool, profile, previewNextDue, saved }}>
         {showIntro ? (
           <WordIntro
             content={current.content}

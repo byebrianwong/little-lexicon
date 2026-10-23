@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-native-web-vite';
-import { column } from '@/stories/decorators';
+import { game } from '@/stories/decorators';
 import { word } from '@/stories/fixtures';
 import { Reveal } from './Reveal';
 
@@ -15,7 +15,8 @@ const meta = {
     soundEnabled: false,
     onContinue: () => {},
   },
-  decorators: [column],
+  // The game decorator supplies the saved words, so the Save control shows.
+  decorators: [game],
 } satisfies Meta<typeof Reveal>;
 
 export default meta;

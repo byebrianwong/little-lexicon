@@ -2610,6 +2610,92 @@ in wrong answers. Curation will catch it word by word.
     which also carries Collins text.
   - `curate.ts status` now lists any near-repeat pair left in the record
     (`nearRepeats` in `pipeline/src/lib/curate.ts`).
+- 2026-10-23: re-review of older words, batch 1 of 5: the 90 words from
+  abate to evanescent in record order, all last reviewed before 2026-10-17
+  (before WordUp's script text and Dictionary.com's real text were
+  readable). All 90 fixed, 0 flagged. The 446 such words are split into five
+  batches, one PR each.
+  - The words: abate, aberrant, abscond, abstain, admonish, adulterate,
+    aesthetic, aggrandize, alacrity, alleviate, amalgamate, ambiguous,
+    ambivalent, ameliorate, analogous, anomaly, antipathy, apathy, appease,
+    arduous, articulate, ascetic, austere, aver, banal, beneficent, bolster,
+    bombastic, boorish, burgeon, buttress, cacophony, cajole, callous,
+    candor, capricious, castigate, catalyst, caustic, chicanery, coagulate,
+    coalesce, commensurate, conciliatory, condone, conflagration,
+    connoisseur, contrite, conundrum, convoluted, copious, cursory, dearth,
+    debacle, debunk, decorum, deference, deleterious, deride, derivative,
+    desiccate, diaphanous, diatribe, didactic, diffident, dirge, disabuse,
+    discordant, discrepancy, disparage, dissemble, disseminate, dissonance,
+    distend, dogmatic, dubious, eclectic, elegy, eloquent, embellish,
+    empirical, emulate, engender, ephemeral, epigram, equivocate, erudite,
+    eulogy, euphemism, evanescent.
+  - The writers found copied wording in nearly every word, and the second
+    reviewer still failed 65 of 90 in round 1 (worksheet a 12 of 12, h 10
+    of 11, e 10 of 11). Round 2 (by the writers) left 11; the main session
+    wrote round 3. engender's definition needed a fourth round: round 3
+    swapped WordUp's "feeling, attitude, or situation" list item by item.
+  - Example scenes retold from WordUp were the second most common failure.
+    `tools/dictionary-defs.py --examples` now prints Oxford, Cambridge,
+    Longman and WordUp example sentences, so agents no longer write their
+    own extractors (one missed WordUp sentences).
+  - Many older words had two or three look-alikes that share only an ending
+    (girth and mirth on dearth, studious and tedious on dubious). Most were
+    replaced by look-alikes that share the start.
+  - Two older examples were wrong in fact: dried insects are not pinned
+    (desiccate), and corundum is not "ground into emery".
+- 2026-10-23: re-review of older words, batch 2 of 5: the 89 words from
+  exacerbate to platitude. All 89 fixed, 0 flagged.
+  - The words: exacerbate, exculpate, exigent, exonerate, expedient,
+    expunge, extol, facetious, fatuous, fickle, flout, foment, forestall,
+    fortuitous, frugal, garrulous, goad, gregarious, guile, hackneyed,
+    harangue, hedonist, hegemony, heresy, iconoclast, idolatry, immutable,
+    impassive, imperious, impertinent, impervious, implacable, incipient,
+    indigent, indolent, ineffable, inexorable, iniquity, innocuous,
+    insipid, insular, intractable, intransigent, inundate, inveterate,
+    irascible, itinerant, laconic, laud, lethargic, levity, loquacious,
+    lucid, malinger, maudlin, mendacious, mercurial, meticulous, mollify,
+    morose, mundane, nadir, nascent, nebulous, nefarious, neophyte,
+    obfuscate, obsequious, obstinate, obtuse, onerous, opaque,
+    ostentatious, palliate, panacea, paragon, paucity, pedantic, penchant,
+    penury, perfidious, perfunctory, pernicious, perspicacious, pervasive,
+    petulant, pithy, placate, platitude.
+  - The second reviewer failed 56 of 89 in round 1. The main session wrote
+    round 3 for 11 words; fickle's last wrong answer took a fourth round
+    (feckless, feeble and freckled all failed before fiery passed).
+  - Once reviewers ran `--examples`, they failed six words on worksheet b
+    that had passed on examples in round 1 (guile had scored 5). Batch 1's
+    reviewers mostly pulled WordUp's examples with their own scripts, but
+    not all of them, so a few batch-1 examples may still retell a scene.
+  - Three hooks named one of the word's own wrong answers or described its
+    meaning (rancorous named rancid, remonstrate named demonstrate, and
+    proclivity's downhill-slope hook is what declivity means). They were
+    rewritten. This is now a trap in the skill.
+- 2026-10-23: re-review of older words, batch 3 of 5: the 89 words from
+  plethora to acerbic in record order. All 89 fixed, 0 flagged.
+  - The words: plethora, polemic, ponderous, pragmatic, prattle,
+    precipitate, preclude, precocious, predilection, prescient,
+    prevaricate, pristine, probity, proclivity, prodigal, profligate,
+    prolific, propensity, prosaic, protean, prudent, puerile, pugnacious,
+    quiescent, quixotic, quotidian, rancorous, rarefy, recalcitrant,
+    refractory, refute, relegate, remonstrate, reprobate, repudiate,
+    rescind, reverent, sanction, sanctimonious, sardonic, satiate, savant,
+    servile, soporific, spurious, squander, staid, strident, stymie,
+    sublime, substantiate, superfluous, surfeit, surreptitious, sycophant,
+    taciturn, tangential, tenuous, terse, tortuous, tractable, trenchant,
+    truculent, turgid, ubiquitous, umbrage, undulate, upbraid, urbane,
+    vacillate, vapid, venerate, veracity, verbose, vex, vilify, vindicate,
+    virulent, viscous, volatile, voracious, waver, wily, zealous, zenith,
+    insidious, abjure, accolade, acerbic.
+  - The second reviewer failed 40 of 89 in round 1, fewer than batches 1
+    and 2: writers now ran `--examples` and avoided the known traps.
+    Writers fixed round 2; the main session finished refute (its last
+    wrong answer took five rounds) and savant (four).
+  - A usage limit cut this batch off after the writers finished. The
+    reviewers were resumed later with SendMessage and lost no work.
+  - `tools/dictionary-defs.py` cut each line at 220 characters. Two
+    main-session fixes followed text that was past the cut (Cambridge's
+    note that saints' names are given to places, WordUp's car/plane/ship
+    list for refuel). Lines now run to 400 characters.
 
 ## The placement test no longer finishes during render
 
@@ -3030,6 +3116,102 @@ default device voices (iOS compact voices, the browser default) sound robotic.
 4. Commit `assets/audio`, `src/content/audioClips.ts`,
    `src/content/words.json` and `pipeline/data/content-db.json`.
 
+## Preview builds update after every merge to main (2026-10-17)
+
+An installed Android preview build now picks up JS and asset changes on its
+own. After each push to `main`, a GitHub Actions workflow publishes an EAS
+Update to the `preview` channel, and the app applies it the next time it opens
+(`src/lib/updates.ts`).
+
+### What was set up
+
+- `.github/workflows/eas-update.yml` runs on push to `main`, and by hand from
+  the Actions tab (useful right after a new build). It runs `npm ci`, then
+  `eas update --channel preview --environment preview --message "<commit
+  subject>"`. eas-cli is pinned to 24.10.0 and installed by
+  `expo/expo-github-action@9.0.0`.
+- Before publishing, `.github/scripts/eas-update-platforms.sh` checks each
+  platform. It publishes only for a platform that has a finished preview build
+  with the same runtime version as the code being published. When native code
+  or config has changed since the last build, it publishes nothing for that
+  platform and leaves a warning on the run that says to make a new build.
+  There are no iOS builds, so today this publishes for Android only. It will
+  include iOS once a preview iOS build exists.
+- Without the `EXPO_TOKEN` secret, the publish job is skipped with a notice,
+  so the workflow could merge before the secret exists.
+- Runs go one at a time. A run waiting behind another is replaced by a newer
+  one, so the newest commit is always the last update published.
+
+### Decisions
+
+- **Builds and updates read the same variables.** Both use the EAS `preview`
+  environment. eas-cli picks `preview` for a build profile that has internal
+  distribution and no dev client
+  (`resolveSuggestedEnvironmentForBuildProfileConfiguration` in eas-cli), so
+  `eas.json` needed no `environment` field.
+  When `eas update` gets `--environment`, it also sets `EXPO_NO_DOTENV=1`, so a
+  local `.env` is ignored. Without that flag, a local `eas update` reads
+  `.env`, and Brian's `.env` points at Supabase while the build is in demo
+  mode. **When publishing by hand, always pass `--environment preview`.**
+- **`eas.json` and `package.json` scripts were left alone.** Both are inputs to
+  the fingerprint, along with `app.json`, `.gitignore`, config plugins and
+  packages with native code. Editing either would have stopped the preview
+  build from 2026-10-16 (build `5f524d28`, runtime version `c3f4278…`) from
+  receiving any update.
+- **A match is any finished preview build with the current runtime version**,
+  not only the newest one, since a phone may still have an older build
+  installed.
+- **The workflow does not wait for CI.** `main` only takes merges that passed
+  the required checks, so a second gate seemed unnecessary.
+
+### Verified
+
+- actionlint 1.7.12 with shellcheck 0.11.0: 0 errors across all three
+  workflows. shellcheck passes on the new script.
+- The script, run locally with eas-cli 24.10.0 against the real project (read
+  only): Android matched build `5f524d28`, iOS had no builds, and it wrote
+  `platform=android`. With a one-line change to `eas.json` it warned and wrote
+  `platform=`. With a bad token it failed with exit code 5 instead of guessing.
+- The new files do not change the fingerprint (still `c3f4278…`).
+- `tsc --noEmit`, lint and the unit tests pass.
+- Not run: the workflow on GitHub (it needs the secret and a merge), and any
+  real `eas update`. The fingerprint was computed on a Mac. The runner is
+  Linux, which should give the same hash after `npm ci`, but that is untested.
+  If the first run warns although no native code changed, compare the runtime
+  version in the warning with the build's. `eas fingerprint:compare` shows
+  which input differs.
+
+### What Brian has to do
+
+1. **Add the `EXPO_TOKEN` repository secret.** Create a token at expo.dev
+   (account settings, Access tokens; a robot user with the Developer role
+   is enough), then run `gh secret set EXPO_TOKEN --repo
+   byebrianwong/little-lexicon` and paste it when asked.
+2. **Put the phone on Supabase.** Brian chose Supabase over demo mode on
+   2026-10-17. The EAS `preview` environment has no variables yet, so builds
+   and updates are both in demo mode until he creates the two client-safe
+   values there (from the main checkout, which has the working `.env`):
+
+   ```bash
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_URL --visibility plaintext --value "$(grep '^EXPO_PUBLIC_SUPABASE_URL=' .env | cut -d= -f2-)"
+   eas env:create --environment preview --name EXPO_PUBLIC_SUPABASE_ANON_KEY --visibility sensitive --value "$(grep '^EXPO_PUBLIC_SUPABASE_ANON_KEY=' .env | cut -d= -f2-)"
+   ```
+
+   Environment variables do not change the fingerprint (checked: setting them
+   leaves it at `c3f4278…`), so the next update switches the installed build
+   to Supabase without a rebuild. Until the phone downloads that update, for
+   example when it opens offline, it runs the demo-mode bundle built into the
+   APK. A new build makes both agree.
+
+   After the switch, the app asks the person to sign in. Demo progress stays in
+   the phone's local storage and does not move to the account. The native app
+   does not handle the sign-up confirmation link, so open that link in a
+   browser, then sign in in the app.
+3. **Native changes still need a new build.** After any change to `app.json`,
+   `eas.json`, `package.json` scripts or a package with native code, run
+   `eas build --profile preview --platform android`, install it, then run the
+   EAS Update workflow by hand (or wait for the next merge).
+
 ## Fill-the-blank questions with a choice of words (2026-10-19)
 
 Brian asked for more questions where you see a sentence and pick the word
@@ -3128,6 +3310,195 @@ add `UI Tests` (source: Chromatic) and remove `Visual tests`.
   the carried-over pending status turns green once the earlier build is
   accepted. The commit with this change touches no story files, so PR #40
   should show it when build 108 is accepted.
+
+## First letter shown when typing a word (2026-10-19)
+
+Typing a word from its meaning alone was too hard. "Fill the blank" (cloze)
+and "Type the word" (production) now show the word's outline under the
+answer box from the start: the first letter, an underlined slot for each
+letter, and the length ("9 letters").
+
+### Decisions
+
+- The first letter is part of the question, not a hint. It does not set
+  `hintUsed`, so a fast correct answer can still earn Easy.
+- The Hint button still exists and still downgrades to Hard. It now fills in
+  about a third of the word (at least two letters, never the whole word).
+  Before, cloze's hint showed only the first letter and production's showed
+  the first third. The two modes now match.
+- Production dropped its "Spell the exact word." line. The outline already
+  says which word is wanted, so a synonym rarely fits it.
+- Each slot is its own underline. The serif's underscores run together and
+  made the blanks hard to count.
+
+### What changed
+
+- `src/lib/text.ts`: `FREE_LETTERS`, `hintLetters`, `letterSlots`,
+  `letterCount`, with tests.
+- `src/features/games/LetterCue.tsx`: the outline, with a spoken label
+  ("Starts with "e", 9 letters").
+- `Cloze.tsx` and `Production.tsx` use it; their stories check the label
+  before and after the hint.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` pass. Storybook builds;
+  the cloze and production stories ran in headless Chromium with their play
+  checks passing, and the screenshots show the outline before and after the
+  hint.
+- Not run: iOS simulator and Android emulator.
+
+## GitHub Actions moved off the Node 20 action runtime (2026-10-23)
+
+Every workflow run logged GitHub's warning that `actions/checkout@v4` and
+`actions/setup-node@v4` target Node 20, which GitHub now forces onto Node 24.
+All three workflows (`ci.yml`, `chromatic.yml`, `eas-update.yml`) now use
+`actions/checkout@v7` and `actions/setup-node@v7`. Both run on Node 24.
+
+### Decisions
+
+- v7 is the newest major of both. Pinned by major tag, as before. Today `@v7`
+  resolves to checkout v7.0.1 (2026-07-20) and setup-node v7.1.0 (2026-10-08).
+- No inputs changed. The breaking changes from v5 to v7 do not apply here:
+  - checkout v6 stores the git credentials in a file under `$RUNNER_TEMP`
+    instead of `.git/config`. Nothing here runs an authenticated git command.
+    `fetch-depth: 0` still fetches the full history for Chromatic.
+  - checkout v7 refuses to check out a fork's pull request under
+    `pull_request_target` or `workflow_run`. These workflows use neither.
+  - setup-node v5 and v6 turn npm caching on by themselves when
+    `package.json` has a `packageManager` field set to npm. Neither
+    `package.json` has one, so caching works as before: on where a job sets
+    `cache: npm`, off in the pipeline job.
+  - setup-node v7 dropped its placeholder `NODE_AUTH_TOKEN`. That matters only
+    with `registry-url`, which no workflow sets.
+- `node-version: 20` (the Node that runs `npm ci` and the app's scripts) is
+  unchanged. Node 20 is past end of life, so moving to 22 or 24 is a separate
+  decision.
+
+## Saved words in every mode, and a tracker on each word (2026-10-23)
+
+Brian asked to be able to save a word to learn later from any mode, including
+endless practice. The list of saved words should keep everything until the
+learner removes it. Each word should track how often it came up lately and how
+the learner did, and a setting should control how often practice shows words
+the learner knows.
+
+### Decisions (Brian chose each of these)
+
+- **The tracker and the setting control endless practice only.** Sessions
+  already space words by FSRS, which pushes a word further out after each right
+  answer and brings it back soon after a mistake. Desired retention already
+  tunes that. Answers from every mode (sessions, speed rounds, practice) feed
+  the tracker.
+- **Practice draws from the whole collection, with saved words weighted up.**
+  The weights are listed in SPEC section 4.
+- **Known means right on 5 separate days with no mistake since.** The days do
+  not have to be in a row. Any mistake, in any mode, starts the count again.
+- **The setting is Rarely (default), Sometimes or As often as others.** A
+  known word has weight 0.2, 0.5 or 1 against 1 for a word being learned.
+
+### Other decisions
+
+- **"Your list" is now "Saved", and "Learn this" is "Save for later".** The
+  list keeps a word after a session has introduced it. It shows newest first.
+  `word_list` rows already stayed after a session (0009); only the read
+  changed. Sessions still introduce saved words they have not shown yet first.
+- **Practice answers go to a new table, `practice_logs` (0014).** Practice
+  still never writes `review_logs` or reschedules a card. Writing practice into
+  `review_logs` would have mixed it into retention stats and future FSRS weight
+  fitting.
+- **The setting is on the profile** (`known_word_frequency`), like desired
+  retention, so it follows the account across devices.
+- **The tracker is computed on the device** from the full answer history,
+  read a page at a time. This keeps one tested implementation for both
+  backends. CLAUDE.md prefers server-computed values, so if histories grow
+  large, a SQL function that returns one row per word should replace
+  `getAnswerHistory`.
+- **Saved-word weight scales with the collection.** A fixed multiplier would
+  leave a handful of saved words lost among 579. The boost is set so saved
+  words fill half of picks when every word has the same weight, and it drops
+  to 1 once saved words outnumber the rest.
+- **No repeat within 8 picks.** Practice used to play every word once per
+  shuffled round. Weighted picks can repeat, so a word waits 8 picks (fewer in
+  a tiny collection) before it can come back.
+
+### What changed
+
+- `src/features/tracker/`: `buildTrackers` and `describeTracker` (unit
+  tested), and the answer-history query.
+- `src/features/games/practice.ts`: `buildPracticeChunk`, `practiceWeight` and
+  the setting's values (unit tested). The shuffled rounds are gone.
+  `app/practice.tsx` picks 20 words at a time and logs each answer.
+- `SaveWordButton` on the reveal and the new-word card (through
+  `GameContext.saved`), the speed round and open rows in All words.
+  `useSavedWords` holds the state for every screen.
+- Backend: `getAnswerHistory` and `logPracticeAnswer` in both backends;
+  `getWordList` no longer drops words a session has shown; the profile carries
+  `knownWordFrequency`; exports include practice answers.
+- Migration `0014_saved_words_tracker.sql`: `practice_logs` with owner-only
+  RLS, `profiles.known_word_frequency`, and `delete_my_data` covering the new
+  table. `database.types.ts` was edited by hand first, then checked against
+  the types generated from the project after 0014 was applied: identical.
+- Settings: "Words you know, in practice". PRIVACY.md mentions practice
+  answers and saved words.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (32 suites, 267 tests)
+  pass.
+- The web build in headless Chromium, demo mode: saved a word from the
+  practice reveal, toggled it in the speed round, saw it as the first word of
+  a session, saved a word from All words, and saw both in Saved with their
+  tracker lines. Six practice answers were stored, and the setting saved as
+  "sometimes". No console errors.
+- Storybook: all 169 stories render in a static build with no errors, and
+  the new and changed interaction tests pass. axe finds no violations on the
+  changed stories.
+- Not run: the iOS simulator, the Android emulator and Supabase mode.
+
+### Applied (2026-10-23)
+
+0014 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same raw-SQL route as 0001 to 0013, so it
+is not in the CLI's migration history). Checked afterwards: `practice_logs`
+has RLS on, the two owner policies, and only select and insert for
+`authenticated`; `profiles.known_word_frequency` defaults to 'rarely' with its
+check; `delete_my_data` covers `practice_logs` and is still security definer.
+The types generated from the project match the committed
+`database.types.ts` byte for byte.
+
+## Sign-in and sign-up screens collapsed on phones (2026-10-23)
+
+Once the phone build switched to Supabase mode, its first screen is sign-in.
+On Android the screen was broken: no heading or subtitle, the email and
+password fields squashed to their underlines, and the "Sign in" button drawn
+over "New here? Create an account".
+
+### Cause
+
+`AuthFormView`'s outer view had `flex-1 justify-center`. Both routes wrap the
+form in `<Screen scroll>`, whose inner column takes its height from its
+content. On iOS and Android, a `flex-1` child of a column like that gets zero
+height, so everything inside it collapsed and overlapped. Browsers size that
+child from its content instead, so web and the Storybook stories (which render
+in a browser) looked right, and Chromatic could not catch it.
+
+### Fix
+
+The outer view keeps only its padding. Phones now get the same layout the web
+always showed: the form at the top of the screen. The "Sign in" button is
+still grey until both fields have text, which is intended.
+
+### Verified
+
+- Reproduced in the iOS simulator (Expo Go, Supabase mode): the same collapse
+  as Brian's Android screenshot. After the fix, sign-in and sign-up both lay
+  out correctly, typing enables the button, and the switch between them works.
+- Web at phone width looks the same as before.
+- `tsc --noEmit`, lint and 261 unit tests pass.
+- Not run on an Android emulator (none on this Mac). The cause is in the
+  layout engine iOS and Android share, so the iOS check covers it. Android is
+  confirmed once the update reaches the phone.
 
 ## Word and sentence audio made with Kokoro (2026-10-22)
 

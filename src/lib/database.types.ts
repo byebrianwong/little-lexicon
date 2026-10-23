@@ -216,6 +216,33 @@ export type Database = {
         }
         Relationships: []
       }
+      practice_logs: {
+        Row: {
+          answered_at: string
+          correct: boolean
+          game_mode: string
+          id: number
+          user_id: string
+          word_id: number
+        }
+        Insert: {
+          answered_at?: string
+          correct: boolean
+          game_mode: string
+          id?: never
+          user_id: string
+          word_id: number
+        }
+        Update: {
+          answered_at?: string
+          correct?: boolean
+          game_mode?: string
+          id?: never
+          user_id?: string
+          word_id?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -224,6 +251,7 @@ export type Database = {
           display_name: string | null
           fsrs_weights: Json | null
           interests: string[]
+          known_word_frequency: string
           last_goal_met_day: string | null
           level_estimate: number | null
           onboarded_at: string | null
@@ -242,6 +270,7 @@ export type Database = {
           display_name?: string | null
           fsrs_weights?: Json | null
           interests?: string[]
+          known_word_frequency?: string
           last_goal_met_day?: string | null
           level_estimate?: number | null
           onboarded_at?: string | null
@@ -260,6 +289,7 @@ export type Database = {
           display_name?: string | null
           fsrs_weights?: Json | null
           interests?: string[]
+          known_word_frequency?: string
           last_goal_met_day?: string | null
           level_estimate?: number | null
           onboarded_at?: string | null

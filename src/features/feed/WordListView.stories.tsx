@@ -4,6 +4,7 @@ import { WordsLayout } from '@/features/browse/WordsLayout';
 import { phone } from '@/stories/decorators';
 import { word } from '@/stories/fixtures';
 import type { ListedWord } from '@/lib/types';
+import type { WordTracker } from '@/features/tracker/tracker';
 import { WordListView } from './WordListView';
 
 const ENTRIES: ListedWord[] = [
@@ -12,7 +13,37 @@ const ENTRIES: ListedWord[] = [
   { content: word('capricious'), addedAt: '2026-01-19T09:05:00.000Z' },
 ];
 
-const yourList: Decorator = (Story, { args }) => {
+// Answers in the past week, so the line does not depend on today's date.
+const TRACKERS = new Map<number, WordTracker>([
+  [
+    word('quixotic').wordId,
+    {
+      wordId: word('quixotic').wordId,
+      status: 'learning',
+      cleanDays: 2,
+      answeredRecently: 4,
+      mistakeRecently: true,
+      latestRight: 3,
+      latestCount: 4,
+      lastAnsweredAt: new Date().toISOString(),
+    },
+  ],
+  [
+    word('sycophant').wordId,
+    {
+      wordId: word('sycophant').wordId,
+      status: 'known',
+      cleanDays: 6,
+      answeredRecently: 1,
+      mistakeRecently: false,
+      latestRight: 5,
+      latestCount: 5,
+      lastAnsweredAt: new Date().toISOString(),
+    },
+  ],
+]);
+
+const saved: Decorator = (Story, { args }) => {
   const entries = (args as { entries?: ListedWord[] }).entries;
   return (
     <WordsLayout view="list" onChangeView={() => {}} listCount={entries?.length}>
@@ -22,22 +53,27 @@ const yourList: Decorator = (Story, { args }) => {
 };
 
 const meta = {
-  title: 'Screens/Words/Your list',
+  title: 'Screens/Words/Saved',
   component: WordListView,
   args: {
     entries: ENTRIES,
     isLoading: false,
+    trackers: TRACKERS,
     onRemove: fn(),
     onStartSession: fn(),
+    onPractice: fn(),
     onDiscover: fn(),
   },
-  decorators: [yourList, phone],
+  decorators: [saved, phone],
 } satisfies Meta<typeof WordListView>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** Words waiting for a session, oldest pick first. The count shows on the switch. */
+/**
+ * Saved words, newest first, each with its tracker: one known, one being
+ * learned, one not tested yet. The count shows on the switch.
+ */
 export const ThreeWords: Story = {};
 
 /** Remove passes the word's id up; the screen does the writing. */
@@ -45,13 +81,13 @@ export const RemoveAWord: Story = {
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement);
     await userEvent.click(
-      canvas.getByRole('button', { name: 'Remove quixotic from your list' }),
+      canvas.getByRole('button', { name: 'Remove quixotic from saved words' }),
     );
     await expect(args.onRemove).toHaveBeenCalledWith(ENTRIES[1]!.content.wordId);
   },
 };
 
-/** Nothing picked yet: says how the list fills and links back to Discover. */
+/** Nothing saved yet: says how the list fills and links back to Discover. */
 export const Empty: Story = {
   args: { entries: [] },
   play: async ({ canvasElement, args }) => {

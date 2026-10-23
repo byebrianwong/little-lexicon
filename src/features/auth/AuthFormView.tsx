@@ -42,8 +42,13 @@ export function AuthFormView({
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
 
+  // No flex-1 here. Both routes put the form in <Screen scroll>, whose inner
+  // column takes its height from its content. On iOS and Android a flex-1
+  // child of that column gets zero height, so the heading and fields
+  // collapsed and the buttons drew on top of each other. Browsers size it
+  // from its content instead, which is why web and Storybook looked right.
   return (
-    <View className="flex-1 justify-center py-8">
+    <View className="py-8">
       <Label>Little Lexicon</Label>
       <H1 className="mt-3 text-[40px] leading-[46px]">
         {isSignUp ? 'Create your account' : 'Welcome back'}

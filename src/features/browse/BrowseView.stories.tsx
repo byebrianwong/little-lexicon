@@ -1,5 +1,5 @@
 import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite';
-import { expect, userEvent, within } from 'storybook/test';
+import { expect, fn, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
 import { WORDS } from '@/stories/fixtures';
 import { BrowseView } from './BrowseView';
@@ -18,6 +18,8 @@ const meta = {
     words: WORDS,
     isLoading: false,
     soundEnabled: true,
+    savedIds: new Set<number>(),
+    onToggleSave: fn(),
   },
   decorators: [allWords, phone],
 } satisfies Meta<typeof BrowseView>;
@@ -34,6 +36,20 @@ export const RowExpanded: Story = {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('ephemeral'));
     await expect(await canvas.findByText('Memory hook')).toBeInTheDocument();
+  },
+};
+
+/** An open row can save its word; the screen does the writing. */
+export const SavingFromRow: Story = {
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByText('ephemeral'));
+    await userEvent.click(
+      await canvas.findByRole('button', { name: 'Save for later: ephemeral' }),
+    );
+    await expect(args.onToggleSave).toHaveBeenCalledWith(
+      expect.objectContaining({ headword: 'ephemeral' }),
+    );
   },
 };
 
