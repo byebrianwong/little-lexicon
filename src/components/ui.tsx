@@ -495,10 +495,13 @@ export function Choice({
   label,
   selected,
   onPress,
+  accessibilityLabel,
 }: {
   label: string;
   selected: boolean;
   onPress: () => void;
+  /** For a label that is unclear read alone, such as a bare number. */
+  accessibilityLabel?: string;
 }) {
   return (
     <Pressable
@@ -506,6 +509,7 @@ export function Choice({
       // Which option is on matters, and fill alone does not reach a screen
       // reader.
       accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel ?? label}
       accessibilityState={{ selected }}
       className={cx(
         'min-h-[44px] justify-center rounded-[3px] border px-4',

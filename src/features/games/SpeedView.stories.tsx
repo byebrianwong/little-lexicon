@@ -15,6 +15,7 @@ const meta = {
   component: SpeedRoundView,
   args: {
     headword: 'ubiquitous',
+    tier: 2,
     options: OPTIONS,
     chosen: null,
     remaining: 47,

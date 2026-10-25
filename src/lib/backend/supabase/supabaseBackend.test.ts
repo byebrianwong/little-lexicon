@@ -246,15 +246,16 @@ describe('SupabaseBackend new words, feed and list', () => {
     ];
   });
 
-  it('puts listed words first, then unseen words from the tier range, easiest first', async () => {
+  it('puts listed words first, then unseen words leaning toward the level', async () => {
     const { words } = await loadContent();
-    const fresh = await new SupabaseBackend().getNewWords(5, { minTier: 2, maxTier: 2 });
+    const fresh = await new SupabaseBackend().getNewWords(5, { levelEstimate: 2 });
 
-    const unseenTier2 = words
-      .filter((w) => w.difficultyTier === 2 && w.wordId !== 2 && w.wordId !== 4)
-      .slice(0, 3)
-      .map((w) => w.wordId);
-    expect(fresh.map((i) => i.content.wordId)).toEqual([3, 7, ...unseenTier2]);
+    // After the list, the most frequent unseen tier 2 word comes first.
+    const firstTier2 = words.find(
+      (w) => w.difficultyTier === 2 && w.wordId !== 2 && w.wordId !== 4,
+    )!.wordId;
+    expect(fresh.map((i) => i.content.wordId).slice(0, 3)).toEqual([3, 7, firstTier2]);
+    expect(fresh).toHaveLength(5);
     expect(fresh.every((i) => i.isNew && i.state === null)).toBe(true);
   });
 
@@ -269,8 +270,8 @@ describe('SupabaseBackend new words, feed and list', () => {
     expect(feed).toHaveLength(20);
     const ids = feed.map((w) => w.wordId);
     for (const id of [2, 4, 3, 7, 10, 12]) expect(ids).not.toContain(id);
-    // Level 2 prefers tiers 1 to 3, and those hold far more than 20 words.
-    expect(feed.every((w) => w.difficultyTier <= 3)).toBe(true);
+    // Level 2 leans hard toward tiers 1 to 3.
+    expect(feed.filter((w) => w.difficultyTier <= 3).length).toBeGreaterThanOrEqual(15);
   });
 
   it('lists every saved word, seen or not, oldest first, without removed ones', async () => {

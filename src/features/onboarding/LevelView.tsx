@@ -20,7 +20,7 @@ export function LevelView({ onPick, onTakeTest }: LevelViewProps) {
       <Label className="pt-6">Getting started</Label>
       <H1 className="mt-2">Choose your level</H1>
       <Muted className="mt-2">
-        This sets which words you see first. You can change it anytime in Settings.
+        This sets which words you see most. You can change it anytime in Settings.
       </Muted>
 
       <View className="mt-8">

@@ -9,6 +9,7 @@ import { FlatList, View } from 'react-native';
 import {
   Body,
   Button,
+  Label,
   Muted,
   Note,
   Row,
@@ -99,6 +100,7 @@ export function WordListView({
                 {item.content.partOfSpeech ? (
                   <Note className="text-[15px]">{item.content.partOfSpeech}</Note>
                 ) : null}
+                <Label>{`Tier ${item.content.difficultyTier}`}</Label>
               </View>
               <TextButton
                 label="Remove"

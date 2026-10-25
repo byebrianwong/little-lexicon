@@ -225,9 +225,10 @@ function WordPage({
           <Headword>{word.headword}</Headword>
           {word.ipa ? <Muted>{word.ipa}</Muted> : null}
         </View>
-        {word.partOfSpeech ? (
-          <Note className="mt-1 text-[17px]">{word.partOfSpeech}</Note>
-        ) : null}
+        <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
+          {word.partOfSpeech ? <Note className="text-[17px]">{word.partOfSpeech}</Note> : null}
+          <Label>{`Tier ${word.difficultyTier}`}</Label>
+        </View>
 
         <View className="mt-6 border-t border-ink pt-4">
           <Body className="text-[20px] leading-[29px]">{definition}</Body>

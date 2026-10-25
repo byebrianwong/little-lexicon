@@ -49,6 +49,8 @@ export function SpeedEmpty({ onBack }: { onBack: () => void }) {
 
 export interface SpeedRoundViewProps {
   headword: string;
+  /** The word's difficulty tier, 1 to 5. */
+  tier: number | null;
   options: Option[];
   /** The option just tapped, or null while the question is open. */
   chosen: Option | null;
@@ -64,6 +66,7 @@ export interface SpeedRoundViewProps {
 
 export function SpeedRoundView({
   headword,
+  tier,
   options,
   chosen,
   remaining,
@@ -88,6 +91,7 @@ export function SpeedRoundView({
           <Label tone="ink">{`${answeredCount} answered`}</Label>
         </Row>
         <Headword className="mt-2">{headword}</Headword>
+        {tier !== null ? <Label className="mt-1">{`Tier ${tier}`}</Label> : null}
         {headword ? (
           <SaveWordButton headword={headword} saved={saved} onPress={onToggleSave} />
         ) : null}
@@ -116,7 +120,7 @@ export function SpeedRoundView({
           </OptionList>
         </View>
         <Note className="mt-4">
-          {`Answers under ${Math.round(FAST_THRESHOLD_MS / 1000)} seconds earn bonus XP.`}
+          {`Due and new words earn XP, with a bonus for answers under ${Math.round(FAST_THRESHOLD_MS / 1000)} seconds.`}
         </Note>
       </Column>
     </FullScreen>

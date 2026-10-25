@@ -3587,3 +3587,66 @@ rows from `audio_objects` (or their files) and rerun stage 04.
   the player stopping at the end of a 1.515-second item, the length of
   `words/320.mp3`.
 - Not run: the Android emulator (no Android SDK on this Mac).
+
+## Word levels lean toward a tier instead of fencing words in (2026-10-25)
+
+A learner's level used to pick a window of tiers (Advanced: tiers 2 to 4).
+Discover showed every word in the window before any word outside it, and a
+session took new words easiest tier first, so an Advanced learner got all of
+tier 2 before any tier 3.
+
+### What changed
+
+- **New words lean toward the learner's tier.** `tierWeight` in
+  `src/features/feed/wordOrder.ts` weighs a tier 10 at the learner's own tier,
+  4 one tier away, 1 two away, 0.5 three away and 0.25 four away. Tiers hold
+  the same number of words, so for Advanced (tier 3) about 50% of new words
+  are tier 3, 20% each are tiers 2 and 4, and 5% each are tiers 1 and 5.
+  - Discover draws words at random by those weights (`weightedOrder`,
+    the Efraimidis-Spirakis method). Each word's place depends only on the
+    seed, its id and its weight, so paging still never moves the words after
+    a page.
+  - A session takes new words from each tier in turn by weight (smooth
+    weighted round robin), most frequent first within a tier. Every 20 new
+    words for tier 3 hold 10, 4, 4, 1 and 1. Saved words still come first.
+  - `getNewWords` takes `{ levelEstimate }` instead of `{ minTier, maxTier }`,
+    and session refills now pass the level too.
+  - On the real word list, the first 40 new words for Advanced are 20 tier 3,
+    8 each of tiers 2 and 4, and 2 each of tiers 1 and 5.
+- **The Speed round uses the learner's own words** (`src/features/games/speedRound.ts`).
+  About 3 in 4 words are due, saved or being learned (due words twice as
+  often), and 1 in 4 come from the rest of the collection with the same lean
+  toward the learner's tier. Known words come up by the "words you know"
+  setting. Answers now go to one of two places:
+  - Due words are graded on the review schedule and earn XP, as before.
+  - Unseen words are introduced and earn XP, up to 15 a round, as before.
+  - Any other word is logged like a practice answer: the tracker sees it,
+    the schedule does not move, and it earns no XP. Before, the fallback
+    path (fewer than 5 words to race) graded every word as a brand new card,
+    which would have reset the schedule of a word already being learned.
+- **The tier shows wherever a word does:** Discover, Saved, the new-word
+  intro, the answer reveal and the Speed round. All words already showed it.
+  Question prompts do not, so the question stays uncluttered; the reveal
+  right after it does. The placement test does not either, since it picks
+  words by tier.
+- **All words has filters:** tier (any of 1 to 5), status (saved, learning,
+  known, not tested) and part of speech. Status comes from the word tracker,
+  so a word marked "I know it" in Discover with no answers counts as "not
+  tested". The logic is in `src/features/browse/wordFilters.ts`.
+- **Settings explains the levels.** It says what tiers are, and under the
+  level buttons it says the mix for the saved level ("Mostly tier 3, often
+  tiers 2 and 4, and now and then tiers 1 and 5"). The sentence comes from
+  the saved number, so a placement score of 2 or 4 reads correctly too.
+
+### Verified
+
+- `tsc`, lint and 320 jest tests pass. New tests cover the tier weights and
+  shares, paging stability, the session rotation, the Speed round mix and
+  which answers are graded, and the All words filters.
+- Web (demo mode, dev server), as an Advanced learner: Discover, the reveal
+  and the Speed round show the tier. The All words filters for tiers 3 and 5
+  plus adjectives gave 86 entries, which matches the word list. Twenty Speed
+  round answers on a fresh profile created 15 review cards and 5 practice
+  logs, and their tiers were 11 tier 3, 4 tier 4, 3 tier 5, 1 tier 2 and
+  1 tier 1. The filter panel fits a 375-pixel-wide phone screen.
+- Not run: the iOS simulator and the Android emulator.

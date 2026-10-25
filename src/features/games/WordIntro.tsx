@@ -68,9 +68,12 @@ export function WordIntro({
         <Headword>{content.headword}</Headword>
         {content.ipa ? <Muted>{content.ipa}</Muted> : null}
       </View>
-      {content.partOfSpeech ? (
-        <Note className="mt-1 text-[17px]">{content.partOfSpeech}</Note>
-      ) : null}
+      <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
+        {content.partOfSpeech ? (
+          <Note className="text-[17px]">{content.partOfSpeech}</Note>
+        ) : null}
+        <Label>{`Tier ${content.difficultyTier}`}</Label>
+      </View>
 
       <View className="mt-6 border-t border-ink pt-4">
         <Body className="text-[20px] leading-[29px]">{definition}</Body>

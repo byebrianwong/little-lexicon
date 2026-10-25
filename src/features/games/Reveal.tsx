@@ -114,6 +114,7 @@ export function Reveal({
           <Headword size="md">{content.headword}</Headword>
           {content.ipa ? <Muted>{content.ipa}</Muted> : null}
           {content.partOfSpeech ? <Note>{content.partOfSpeech}</Note> : null}
+          <Label>{`Tier ${content.difficultyTier}`}</Label>
         </View>
         <Body className="mt-2 text-[19px] leading-[27px]">{primaryDef}</Body>
         {example ? (

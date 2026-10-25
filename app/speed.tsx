@@ -20,6 +20,12 @@ import {
 } from '@/features/games/SpeedView';
 import { useSessionResult } from '@/features/session/sessionResult';
 import { useSavedWords } from '@/features/feed/queries';
+import {
+  buildSpeedRound,
+  gradesOnSchedule,
+  SPEED_ROUND_SIZE,
+} from '@/features/games/speedRound';
+import { buildTrackers } from '@/features/tracker/tracker';
 
 export default function SpeedRound() {
   const profileQuery = useProfile();
@@ -36,25 +42,38 @@ export default function SpeedRound() {
   const totals = useRef({ reviewed: 0, correct: 0, xp: 0 });
   const finished = useRef(false);
 
+  // The round mixes the learner's own words with others near their level
+  // (features/games/speedRound). It draws from the whole collection, so it is
+  // always playable.
   useEffect(() => {
     (async () => {
-      const due = await backend.getDueQueue(40);
-      const fresh = due.length < 10 ? await backend.getNewWords(15) : [];
-      let pool = [...due, ...fresh];
-      // Nothing due and nothing new does not mean nothing to race. Fall back to
-      // the whole collection so the speed round is always playable.
-      if (pool.length < 5) {
-        const all = await backend.getAllWords();
-        const have = new Set(pool.map((i) => i.content.wordId));
-        pool = [
-          ...pool,
-          ...all
-            .filter((c) => !have.has(c.wordId))
-            .map<SessionItem>((content) => ({ content, state: null, isNew: false })),
-        ];
-      }
-      setItems(pool);
-    })().catch(() => setItems([]));
+      const allWords = backend.getAllWords();
+      const [profile, words, due, unseen, list, history] = await Promise.all([
+        backend.getProfile(),
+        allWords,
+        backend.getDueQueue(SPEED_ROUND_SIZE),
+        // Every unseen word, only to know which words have no review state.
+        allWords.then((w) => backend.getNewWords(w.length)),
+        backend.getWordList(),
+        backend.getAnswerHistory(),
+      ]);
+      setItems(
+        buildSpeedRound({
+          words,
+          due,
+          unseenIds: new Set(unseen.map((i) => i.content.wordId)),
+          savedIds: new Set(list.map((w) => w.content.wordId)),
+          trackers: buildTrackers(history),
+          levelEstimate: profile.levelEstimate,
+          frequency: profile.knownWordFrequency,
+          seed: Math.floor(Math.random() * 2 ** 31),
+          count: SPEED_ROUND_SIZE,
+        }),
+      );
+    })().catch((e: unknown) => {
+      console.warn('speed: failed to build the round', e);
+      setItems([]);
+    });
   }, []);
 
   const pool = useMemo(() => buildOptionPool(items ?? []), [items]);
@@ -101,25 +120,40 @@ export default function SpeedRound() {
     if (chosen || !current || !profileQuery.data) return;
     setChosen(opt);
     const responseMs = Date.now() - itemStart.current;
-    try {
-      const commit = await submitReview({
-        item: current,
-        outcome: {
-          correct: opt.correct,
-          firstAttempt: true,
-          hintUsed: false,
-          responseMs,
-        },
-        mode: 'mc_word_to_def',
-        profile: profileQuery.data,
-      });
+    if (!gradesOnSchedule(current)) {
+      // Seen and not due: logged like practice, so the schedule stays put.
+      const wordId = current.content.wordId;
       totals.current = {
+        ...totals.current,
         reviewed: totals.current.reviewed + 1,
-        correct: totals.current.correct + (commit.correct ? 1 : 0),
-        xp: totals.current.xp + commit.xp,
+        correct: totals.current.correct + (opt.correct ? 1 : 0),
       };
-    } catch {
-      totals.current.reviewed += 1;
+      backend
+        .logPracticeAnswer({ wordId, correct: opt.correct, gameMode: 'mc_word_to_def' })
+        .catch((e: unknown) =>
+          console.warn(`speed: failed to log the answer for word ${wordId}`, e),
+        );
+    } else {
+      try {
+        const commit = await submitReview({
+          item: current,
+          outcome: {
+            correct: opt.correct,
+            firstAttempt: true,
+            hintUsed: false,
+            responseMs,
+          },
+          mode: 'mc_word_to_def',
+          profile: profileQuery.data,
+        });
+        totals.current = {
+          reviewed: totals.current.reviewed + 1,
+          correct: totals.current.correct + (commit.correct ? 1 : 0),
+          xp: totals.current.xp + commit.xp,
+        };
+      } catch {
+        totals.current.reviewed += 1;
+      }
     }
     // Auto-advance quickly for the lightning feel.
     setTimeout(() => {
@@ -138,6 +172,7 @@ export default function SpeedRound() {
   return (
     <SpeedRoundView
       headword={current?.content.headword ?? ''}
+      tier={current?.content.difficultyTier ?? null}
       options={options}
       chosen={chosen}
       remaining={remaining}

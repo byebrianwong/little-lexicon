@@ -91,9 +91,11 @@ describe('DemoBackend on a fresh install', () => {
     const backend = new DemoBackend();
     const all = await backend.getAllWords();
     expect(all.length).toBeGreaterThanOrEqual(250);
-    const fresh = await backend.getNewWords(5, { minTier: 2, maxTier: 2 });
+    const fresh = await backend.getNewWords(5, { levelEstimate: 2 });
     expect(fresh).toHaveLength(5);
-    expect(fresh.every((i) => i.content.difficultyTier === 2 && i.isNew)).toBe(true);
+    expect(fresh.every((i) => i.isNew)).toBe(true);
+    // The first new word comes from the learner's tier.
+    expect(fresh[0]!.content.difficultyTier).toBe(2);
   });
 });
 

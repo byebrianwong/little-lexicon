@@ -22,7 +22,7 @@ import {
   TextField,
 } from '@/components/ui';
 import { colors } from '@/theme/colors';
-import { WORD_LEVELS, levelForEstimate } from '@/features/onboarding/levels';
+import { WORD_LEVELS, describeTierMix, levelForEstimate } from '@/features/onboarding/levels';
 import { KNOWN_WORD_FREQUENCIES } from '@/features/games/practice';
 import { KNOWN_AFTER_DAYS } from '@/features/tracker/tracker';
 import type { KnownWordFrequency, Profile } from '@/lib/types';
@@ -119,7 +119,10 @@ export function SettingsView({
       </Section>
 
       <Section label="Word level" className="mt-10">
-        <Muted>Which new words you see first.</Muted>
+        <Muted>
+          Words are sorted into tiers, from tier 1 (the most common) to tier 5 (the rarest).
+          Your level decides which tiers come up most.
+        </Muted>
         <ChoiceGroup className="mt-3">
           {WORD_LEVELS.map((l) => (
             <Choice
@@ -130,6 +133,9 @@ export function SettingsView({
             />
           ))}
         </ChoiceGroup>
+        {profile.levelEstimate !== null ? (
+          <Note className="mt-3">{describeTierMix(profile.levelEstimate)}</Note>
+        ) : null}
       </Section>
 
       <Section label="Desired retention" className="mt-10">
