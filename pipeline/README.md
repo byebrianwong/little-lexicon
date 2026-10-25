@@ -59,7 +59,7 @@ npx tsx src/curate.ts status                 # what is reviewed, what is left
 npx tsx src/curate.ts next --count=12        # write a worksheet to out/curate/
 npx tsx src/curate.ts next --count=100 --split=8   # 8 worksheets for a big run
 npx tsx src/curate.ts check <worksheet...>   # run the fixed checks, on several together
-npx tsx src/curate.ts apply <worksheet>      # write the record, export words.json
+npx tsx src/curate.ts apply <worksheet>      # write the record, remake its clips, export
 ```
 
 Every review is stored in the record's `reviews` table with its scores. The
@@ -86,9 +86,12 @@ npx tsx src/run.ts --only=export         # re-export after editing the record
 npm run build                 # tsc --noEmit
 ```
 
-After changing content (a `curate.ts apply` or `ipa`, or new words), run
-`npx tsx src/run.ts --only=audio`, then `--only=export`, so the clips match the
-new text.
+`curate.ts apply` and `curate.ts ipa` remake the clips their changes made
+stale, then export. After other content changes (new words, or editing the
+record by hand), run `npx tsx src/run.ts --only=audio`, then `--only=export`.
+A clip whose text or IPA changed is left out of the export until it is
+remade, and the app's test `src/content/audioClips.test.ts` fails in CI while
+any word or sentence has no clip.
 
 The first live run downloads Open English WordNet (about 10 MB zipped, 80 MB
 unpacked) into `.cache/oewn`, checks its SHA-256, and unpacks it with the

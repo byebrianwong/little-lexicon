@@ -86,16 +86,16 @@ missing).
    reviewer scored it, clear its `checker.scores` (set them to null) and ask
    again.
 6. `npx tsx src/curate.ts apply <worksheet>` writes the record
-   (`pipeline/data/content-db.json`) and exports `src/content/words.json`. It
-   writes nothing if any word fails.
-7. From the repo root, run `npx jest src/lib/content` to check the exported
-   file.
-8. Remake the audio for the changed text: from `pipeline/`, run
-   `npx tsx src/run.ts --only=audio`, then `--only=export`. It needs the
-   Kokoro env (`pipeline/README.md` > Audio); a few changed words take
-   seconds. Until it runs, the export leaves out clips whose sentence or IPA
-   changed, and the app speaks those with the device's voice.
-9. Commit the record, the words file, `assets/audio` and
+   (`pipeline/data/content-db.json`), remakes the clips for the changed
+   sentences, and exports `src/content/words.json` and
+   `src/content/audioClips.ts`. It writes nothing if any word fails. The
+   clips need the Kokoro env (`pipeline/README.md` > Audio); a dozen words
+   take about a minute. Without the env, `apply` warns and skips them.
+7. From the repo root, run `npx jest src/lib/content src/content` to check
+   the exported file and that every word and sentence has a clip. If the clip
+   test fails, run `npx tsx src/run.ts --only=audio`, then `--only=export`,
+   from `pipeline/`. CI runs the same test.
+8. Commit the record, the words file, `assets/audio` and
    `src/content/audioClips.ts` together, and list the words in the commit
    message.
 
@@ -543,9 +543,8 @@ adjective in /-rət/.
 
 To change pronunciations, write a file of `headword<TAB>/ipa/` lines and run
 `npx tsx src/curate.ts ipa <file>` from `pipeline/`. It checks each one
-against the style, sets it and the syllable count, and exports. Then remake
-the audio as in step 8 of "The loop", since the clips pin each word's IPA.
-`status`
+against the style, sets it and the syllable count, remakes the clips of the
+changed words (they pin each word's IPA), and exports. `status`
 lists any word whose pronunciation is missing or off style. All 317 were
 rewritten on 2026-10-11 and checked by a second reviewer. Have a second
 reviewer check new ones too.
