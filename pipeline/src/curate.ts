@@ -5,15 +5,17 @@
 //   npx tsx src/curate.ts next [--count=N] [--words=a,b,c]   write a worksheet
 //   npx tsx src/curate.ts next --count=100 --split=8         write 8 worksheets for a big run
 //   npx tsx src/curate.ts check <worksheet...>               run the checks, on several together
-//   npx tsx src/curate.ts apply <worksheet>                  write it and export
+//   npx tsx src/curate.ts apply <worksheet>                  write it, remake its clips and export
 //   npx tsx src/curate.ts pos <word...>                      parts of speech in WordNet, for look-alikes
 //   npx tsx src/curate.ts reports                            fetch learners' open reports (needs Supabase keys)
 //   npx tsx src/curate.ts next --reported                    write a worksheet of the reported words
 //   npx tsx src/curate.ts resolve <worksheet...>             after apply, mark those words' reports resolved
-//   npx tsx src/curate.ts ipa <file.tsv>                     set pronunciations (headword<TAB>/ipa/ per line) and export
+//   npx tsx src/curate.ts ipa <file.tsv>                     set pronunciations (headword<TAB>/ipa/ per line), remake clips and export
 //
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
 // worksheet if any word fails a check, so the record never holds half a batch.
+// `apply` and `ipa` then remake the clips their changes made stale (stage 04),
+// when the Kokoro env is set up, and export.
 
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -47,6 +49,7 @@ import {
   type WorksheetEntry,
 } from './lib/curate.ts';
 import dotenv from 'dotenv';
+import { audio } from './stages/04-audio.ts';
 import { exportWords } from './stages/05-export.ts';
 import {
   fetchOpenReports,
@@ -417,11 +420,7 @@ async function apply(file: string): Promise<void> {
   }
   await store.flush();
   console.log(`\nApplied ${checked.length} words to ${DB_FILE}.`);
-
-  // Export the app's words file from the updated record.
-  const ctx = await createContext({ only: 'export', dryRun: false, limit: null, verbose: false });
-  await ctx.store.init();
-  await exportWords(ctx);
+  await remakeAudioAndExport();
 }
 
 /** Print each word's parts of speech in WordNet, to check a look-alike before using it. */
@@ -461,9 +460,29 @@ async function ipa(file: string): Promise<void> {
   }
   await store.flush();
   console.log(`Set ${changed} of ${updates.length} pronunciations in ${DB_FILE}.`);
+  await remakeAudioAndExport();
+}
 
+/**
+ * After the record changes: remake the clips that no longer match their text
+ * or IPA (stage 04 makes only those), then export the words file and the clip
+ * list. Without the Kokoro env the audio step warns and is skipped, and the
+ * export leaves the stale clips out, so the app speaks that text with the
+ * device's voice until the clips are made.
+ */
+async function remakeAudioAndExport(): Promise<void> {
   const ctx = await createContext({ only: 'export', dryRun: false, limit: null, verbose: false });
   await ctx.store.init();
+  try {
+    await audio(ctx);
+  } catch (err) {
+    // The record is already written, so export it anyway and say what is left.
+    ctx.log.error(
+      `Audio: ${(err as Error).message} The words file is exported without the missing clips. ` +
+        'From pipeline/, run `npx tsx src/run.ts --only=audio`, then `--only=export`.',
+    );
+    process.exitCode = 1;
+  }
   await exportWords(ctx);
 }
 

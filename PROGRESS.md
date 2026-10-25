@@ -3588,6 +3588,43 @@ rows from `audio_objects` (or their files) and rerun stage 04.
   `words/320.mp3`.
 - Not run: the Android emulator (no Android SDK on this Mac).
 
+## Clips remade automatically after content changes (2026-10-25)
+
+Before this, clips were remade only when someone ran the audio stage by hand
+after a content change. Until then the export left the stale clips out and
+the app spoke that text with the device's voice.
+
+### What changed
+
+- `curate.ts apply` and `curate.ts ipa` now run stage 04 after writing the
+  record, then export. Stage 04 makes only the clips whose text or IPA no
+  longer matches, so a small change takes seconds: changing one word's IPA
+  remade its 5 clips in 8.7 seconds, including loading the model.
+- Without the Kokoro env, the audio step warns and is skipped, and the export
+  runs as before. If Kokoro fails partway, the command logs what to run,
+  still exports (the record is already written), and exits with code 1.
+- `src/content/audioClips.test.ts` fails when any exported word or example
+  sentence has no clip in `audioClips.ts`, or a clip file is missing. Its
+  message names the words and the command to fix it. CI runs it with the
+  app's tests.
+
+### Verified
+
+- On a scratch change to abate's IPA, reverted afterwards: with no Kokoro
+  env, `ipa` warned, the export left out abate's 5 clips, and the new test
+  failed naming them. Running `ipa` again with the env remade the 5 clips and
+  the test passed. With `KOKORO_PYTHON=/usr/bin/false` the command printed
+  the fix, exported, and exited with code 1.
+- App: `tsc`, lint, 298 jest tests. Pipeline: `tsc`, 79 tests, dry run.
+
+### For next time
+
+The Free Dictionary API answered again on 2026-10-25 (HTTP 200 for "abate").
+The bundled word clips are all Kokoro and stay as they are, because stage 04
+keeps a clip while it matches. Using human recordings for headwords would
+mean deleting the word clips and rerunning stage 04, and deciding whether a
+different voice for the word than for its sentences is wanted.
+
 ## Word levels lean toward a tier instead of fencing words in (2026-10-25)
 
 A learner's level used to pick a window of tiers (Advanced: tiers 2 to 4).
