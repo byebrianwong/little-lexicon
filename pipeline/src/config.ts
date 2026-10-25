@@ -3,14 +3,16 @@
 //
 // Live (the default) reads real sources and writes the committed pipeline
 // record, data/content-db.json, then exports src/content/words.json for the
-// app. Paid stages run only when their key is set; without it they are skipped,
-// never filled with stub text.
+// app. Paid stages run only when their key is set, and the audio stage only
+// when the Kokoro env exists; otherwise they are skipped, never filled with
+// stub text.
 //
 // Dry-run (--dry-run) uses the bundled seed list and stub generators, writes
 // out/dry-run.json and out/words.dry-run.json, and never touches the network or
 // the committed files.
 
 import { existsSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import dotenv from 'dotenv';
@@ -18,7 +20,7 @@ import { Logger } from './lib/logger.ts';
 import { CachedFetcher } from './lib/fetch.ts';
 import { JsonFileStore, type Store } from './lib/store.ts';
 import { GEMINI_DEFAULT_MODELS } from './lib/gemini.ts';
-import { DEFAULT_TTS_LANGUAGE, DEFAULT_TTS_VOICE } from './lib/audio.ts';
+import { DEFAULT_TTS_VOICE } from './lib/audio.ts';
 
 export const STAGES = ['words', 'senses', 'generate', 'audio', 'export'] as const;
 /** Stages that run only when named with --only. */
@@ -39,9 +41,10 @@ export interface Env {
   geminiModels: string[];
   /** True when GEMINI_MODEL chose the models, rather than the default list. */
   geminiModelsSet: boolean;
-  googleTtsKey: string | undefined;
-  googleTtsVoice: string;
-  googleTtsLanguage: string;
+  /** Python of the Kokoro env that stage 04 runs (README > Audio). */
+  kokoroPython: string;
+  /** Kokoro voice for TTS clips, such as af_heart. */
+  ttsVoice: string;
 }
 
 export interface Paths {
@@ -76,7 +79,6 @@ export class Metrics {
   llmOutputTokens = 0;
   llmCostUsd = 0;
   ttsChars = 0;
-  ttsCostUsd = 0;
   audioWordsSynthed = 0;
   audioSentencesSynthed = 0;
   audioReusedHuman = 0;
@@ -142,9 +144,9 @@ function loadEnv(): Env {
       ? process.env.GEMINI_MODEL.split(',').map((m) => m.trim()).filter(Boolean)
       : GEMINI_DEFAULT_MODELS,
     geminiModelsSet: Boolean(process.env.GEMINI_MODEL),
-    googleTtsKey: process.env.GOOGLE_TTS_API_KEY,
-    googleTtsVoice: process.env.GOOGLE_TTS_VOICE ?? DEFAULT_TTS_VOICE,
-    googleTtsLanguage: process.env.GOOGLE_TTS_LANGUAGE ?? DEFAULT_TTS_LANGUAGE,
+    kokoroPython:
+      process.env.KOKORO_PYTHON ?? join(homedir(), '.cache', 'little-lexicon-tts', '.venv', 'bin', 'python'),
+    ttsVoice: process.env.KOKORO_VOICE ?? DEFAULT_TTS_VOICE,
   };
 }
 
@@ -183,7 +185,7 @@ export async function createContext(flags: Flags): Promise<RunContext> {
       : env.geminiKey
         ? 'gemini'
         : null;
-  const useTts = !dryRun && Boolean(env.googleTtsKey);
+  const useTts = !dryRun && existsSync(env.kokoroPython);
 
   if (llm === 'claude') {
     log.info('Stage 03 writes with Claude (ANTHROPIC_API_KEY).');
@@ -192,8 +194,8 @@ export async function createContext(flags: Flags): Promise<RunContext> {
   } else if (!dryRun) {
     log.warn('Neither ANTHROPIC_API_KEY nor GEMINI_API_KEY is set: stage 03 will be skipped.');
   }
-  if (!dryRun && !env.googleTtsKey) {
-    log.warn('GOOGLE_TTS_API_KEY not set: stage 04 will be skipped.');
+  if (!dryRun && !useTts) {
+    log.warn(`No Kokoro env at ${env.kokoroPython}: stage 04 will be skipped. See README > Audio.`);
   }
 
   const http = new CachedFetcher({ cacheDir: paths.cacheDir, logger: log });

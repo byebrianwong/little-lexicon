@@ -1,46 +1,87 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildClipModule, buildTtsRequest, clipKey, ipaForTts, pickUsRecording } from './audio.ts';
+import {
+  buildClipModule,
+  clipKey,
+  clipMatches,
+  humanClipKey,
+  ipaToKokoro,
+  kokoroText,
+  pickUsRecording,
+  sentenceClipKey,
+  ttsVoiceLabel,
+  wordClipKey,
+} from './audio.ts';
 
-test('ipaForTts strips the slashes the words file uses', () => {
-  assert.equal(ipaForTts('/əˈbeɪt/'), 'əˈbeɪt');
-  assert.equal(ipaForTts(' /kwiˈɛsənt/ '), 'kwiˈɛsənt');
-  assert.equal(ipaForTts('//'), null);
-  assert.equal(ipaForTts(null), null);
+test('ipaToKokoro turns IPA into Kokoro letters with stress before the vowel', () => {
+  assert.equal(ipaToKokoro('/əˈbeɪt/'), 'əbˈAt');
+  assert.equal(ipaToKokoro(' /əbˈsikwiəs/ '), 'əbsˈikwiəs');
+  assert.equal(ipaToKokoro('/ˈɛrəˌdaɪt/'), 'ˈɛɹədˌIt');
+  assert.equal(ipaToKokoro('/ˈbɝdʒən/'), 'bˈɜɹʤən');
+  assert.equal(ipaToKokoro('/ˈfætʃuəs/'), 'fˈæʧuəs');
+  assert.equal(ipaToKokoro('/ˈsʌmɚ/'), 'sˈʌməɹ');
+  assert.equal(ipaToKokoro('/ˈaʊtˌkraɪ/'), 'ˈWtkɹˌI');
+  assert.equal(ipaToKokoro('/ɪkˈspɔɪl/'), 'ɪkspˈYl');
 });
 
-test('buildTtsRequest pins the headword when the text contains it exactly', () => {
-  const body = buildTtsRequest({
-    text: 'Her fear began to abate once the plane leveled off.',
-    voice: 'en-US-Chirp3-HD-Kore',
-    language: 'en-US',
-    pin: { headword: 'abate', ipa: 'əˈbeɪt' },
-  });
-  assert.deepEqual(body, {
-    input: {
-      text: 'Her fear began to abate once the plane leveled off.',
-      customPronunciations: {
-        pronunciations: [
-          { phrase: 'abate', phoneticEncoding: 'PHONETIC_ENCODING_IPA', pronunciation: 'əˈbeɪt' },
-        ],
-      },
-    },
-    voice: { languageCode: 'en-US', name: 'en-US-Chirp3-HD-Kore' },
-    audioConfig: { audioEncoding: 'MP3' },
-  });
+test('ipaToKokoro stresses one-syllable words, which IPA leaves unmarked', () => {
+  assert.equal(ipaToKokoro('/ɡoʊʃ/'), 'ɡˈOʃ');
+  assert.equal(ipaToKokoro('/stɔɪk/'), 'stˈYk');
 });
 
-test('buildTtsRequest leaves inflected or embedded forms to the voice', () => {
-  const pin = { headword: 'abate', ipa: 'əˈbeɪt' };
-  const base = { voice: 'v', language: 'en-US', pin };
-  const inflected = buildTtsRequest({ ...base, text: 'The storm abated.' });
-  assert.equal((inflected.input as Record<string, unknown>).customPronunciations, undefined);
-  const capitalized = buildTtsRequest({ ...base, text: 'Abate the noise.' });
-  assert.equal((capitalized.input as Record<string, unknown>).customPronunciations, undefined);
-  const headwordAlone = buildTtsRequest({ ...base, text: 'abate' });
-  assert.ok((headwordAlone.input as Record<string, unknown>).customPronunciations);
-  const unpinned = buildTtsRequest({ ...base, pin: null, text: 'abate' });
-  assert.equal((unpinned.input as Record<string, unknown>).customPronunciations, undefined);
+test('ipaToKokoro gives null for no IPA or a symbol Kokoro cannot read', () => {
+  assert.equal(ipaToKokoro(null), null);
+  assert.equal(ipaToKokoro('//'), null);
+  assert.equal(ipaToKokoro('/ˈbɑːθ/'), null);
+  assert.equal(ipaToKokoro('/ˈbɒtəl/'), null);
+});
+
+test('kokoroText pins the headword, also with a capital first letter', () => {
+  const pin = { headword: 'abate', phonemes: 'əbˈAt' };
+  assert.equal(
+    kokoroText('Her fear began to abate once the plane leveled off.', pin),
+    'Her fear began to [abate](/əbˈAt/) once the plane leveled off.',
+  );
+  assert.equal(kokoroText('Abate the noise, abate it.', pin), '[Abate](/əbˈAt/) the noise, [abate](/əbˈAt/) it.');
+  assert.equal(kokoroText('abate', pin), '[abate](/əbˈAt/)');
+});
+
+test('kokoroText leaves inflected and embedded forms to the voice', () => {
+  const pin = { headword: 'abate', phonemes: 'əbˈAt' };
+  assert.equal(kokoroText('The storm abated.', pin), 'The storm abated.');
+  assert.equal(kokoroText('It was unabate.', pin), 'It was unabate.');
+  assert.equal(kokoroText('ABATE now.', pin), 'ABATE now.');
+  assert.equal(kokoroText('abate', null), 'abate');
+});
+
+test('clip keys change with the inputs each kind of clip depends on', () => {
+  const word = { headword: 'abate', ipa: '/əˈbeɪt/' };
+  const fixed = { headword: 'abate', ipa: '/əˈbet/' };
+  const voice = ttsVoiceLabel('af_heart');
+  assert.equal(voice, 'kokoro-82m/af_heart/32k');
+  assert.equal(humanClipKey(word), humanClipKey(fixed));
+  assert.notEqual(wordClipKey(word, voice), wordClipKey(fixed, voice));
+  assert.notEqual(wordClipKey(word, voice), wordClipKey(word, ttsVoiceLabel('af_bella')));
+  const text = 'The storm abated.';
+  assert.notEqual(sentenceClipKey(text, word, voice), sentenceClipKey('The storm passed.', word, voice));
+  assert.notEqual(sentenceClipKey(text, word, voice), sentenceClipKey(text, fixed, voice));
+});
+
+test('clipMatches accepts only clips made from the current text and IPA', () => {
+  const word = { headword: 'abate', ipa: '/əˈbeɪt/' };
+  const fixed = { headword: 'abate', ipa: '/əˈbet/' };
+  const voice = ttsVoiceLabel('af_heart');
+  const wordClip = { source: 'tts', voice, key: wordClipKey(word, voice) };
+  assert.equal(clipMatches(wordClip, word, null), true);
+  assert.equal(clipMatches(wordClip, fixed, null), false);
+  const text = 'The storm abated.';
+  const sentenceClip = { source: 'tts', voice, key: sentenceClipKey(text, word, voice) };
+  assert.equal(clipMatches(sentenceClip, word, text), true);
+  assert.equal(clipMatches(sentenceClip, word, 'The storm passed.'), false);
+  const human = { source: 'human', key: humanClipKey(word) };
+  assert.equal(clipMatches(human, fixed, null), true);
+  assert.equal(clipMatches({ source: 'tts', key: wordClip.key }, word, null), false);
+  assert.equal(clipMatches({ source: 'stub', key: wordClip.key }, word, null), false);
 });
 
 test('clipKey changes when any input changes', () => {

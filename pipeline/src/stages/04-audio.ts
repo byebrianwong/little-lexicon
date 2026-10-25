@@ -6,43 +6,47 @@
 // writes src/content/audioClips.ts, which requires each one.
 //
 // Headwords use a US human recording from the Free Dictionary API when there
-// is one, and Google Cloud TTS otherwise. Sentences always use TTS. The
-// default voice is Chirp 3 HD, and the word's IPA is passed as a custom
-// pronunciation so the voice says the word the way the app writes it.
+// is one, and text to speech otherwise. Sentences always use text to speech.
+// The voice is Kokoro (an open model, run on this computer by
+// tools/kokoro-tts.py), and the word's IPA pins how it says the headword, so
+// the clip matches the pronunciation the app shows.
 //
 // Each clip records a key made from its text, IPA and voice. A clip is made
 // again when its key changes (a rewritten sentence, a fixed IPA, a new voice),
 // and clips for removed words or sentences are deleted. Dry-run records stub
-// objects with estimated sizes. A live run without GOOGLE_TTS_API_KEY skips
-// this stage.
+// objects with estimated sizes. A live run without the Kokoro env skips this
+// stage.
 
+import { spawn } from 'node:child_process';
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
 import type { RunContext } from '../config.ts';
-import type { AudioBody, AudioMeta, WordRow } from '../lib/types.ts';
+import type { WordRow } from '../lib/types.ts';
 import { estimateAudioBytes } from '../lib/stubs.ts';
 import {
-  buildTtsRequest,
-  clipKey,
-  ipaForTts,
+  humanClipKey,
+  ipaToKokoro,
+  kokoroText,
   pickUsRecording,
+  sentenceClipKey,
+  TTS_KBPS,
+  ttsVoiceLabel,
+  wordClipKey,
   type FdEntry,
 } from '../lib/audio.ts';
 
 const MB = 1024 * 1024;
-const TTS_USD_PER_MILLION_CHARS = 30; // Google Chirp 3 HD list price past the 1M free characters
 
-async function googleTts(ctx: RunContext, body: Record<string, unknown>): Promise<Uint8Array> {
-  const url = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${ctx.env.googleTtsKey!}`;
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) {
-    throw new Error(`Google TTS ${res.status}: ${await res.text()}`);
-  }
-  const json = (await res.json()) as { audioContent?: string };
-  if (!json.audioContent) throw new Error('Google TTS returned no audioContent');
-  return new Uint8Array(Buffer.from(json.audioContent, 'base64'));
+/** One clip for Kokoro to make. */
+interface TtsJob {
+  /** Where the clip goes under assets/audio. */
+  path: string;
+  kind: 'word' | 'sentence';
+  /** The plain text, as the app shows it. */
+  text: string;
+  /** The text with the headword's pronunciation pinned, as Kokoro reads it. */
+  kokoroText: string;
+  key: string;
 }
 
 interface HumanClip {
@@ -51,10 +55,14 @@ interface HumanClip {
   license: string | null;
 }
 
-/** A US human MP3 of the headword (live mode only), or null. */
+/**
+ * A US human MP3 of the headword (live mode only), or null when the Free
+ * Dictionary has none. Throws when the service itself fails.
+ */
 async function humanHeadwordMp3(ctx: RunContext, word: string): Promise<HumanClip | null> {
   const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`;
   const { status, data } = await ctx.http.getJson<FdEntry[]>(url);
+  if (status >= 500) throw new Error(`HTTP ${status}`);
   if (status !== 200) return null;
   const recording = pickUsRecording(data);
   if (!recording) return null;
@@ -75,30 +83,6 @@ function account(ctx: RunContext, bytes: number): void {
   ctx.metrics.audioClips += 1;
 }
 
-/** TTS for one text: stub in dry-run, real bytes in live mode. */
-async function synthesizeTts(
-  ctx: RunContext,
-  text: string,
-  word: WordRow,
-): Promise<AudioBody> {
-  if (!ctx.useTts) {
-    return { kind: 'stub', estimatedBytes: estimateAudioBytes(text.length) };
-  }
-  const ipa = ipaForTts(word.ipa);
-  const body = buildTtsRequest({
-    text,
-    voice: ctx.env.googleTtsVoice,
-    language: ctx.env.googleTtsLanguage,
-    pin: ipa ? { headword: word.headword, ipa } : null,
-  });
-  const data = await googleTts(ctx, body);
-  return { kind: 'bytes', data, contentType: 'audio/mpeg' };
-}
-
-function ttsMeta(ctx: RunContext, key: string): AudioMeta {
-  return ctx.useTts ? { key, source: 'tts', voice: ctx.env.googleTtsVoice } : { key, source: 'stub' };
-}
-
 /** True when the clip at `path` exists and was made from the same inputs. */
 async function isCurrent(ctx: RunContext, path: string, key: string): Promise<boolean> {
   const existing = await ctx.store.getAudio(path);
@@ -108,19 +92,39 @@ async function isCurrent(ctx: RunContext, path: string, key: string): Promise<bo
   return existing.key === key;
 }
 
-async function audioWords(ctx: RunContext, words: WordRow[], wanted: Set<string>): Promise<void> {
+type Pin = { headword: string; phonemes: string } | null;
+
+/** Each word's IPA in Kokoro's letters, to pin how the voice says it. */
+function pinsFor(ctx: RunContext, words: WordRow[]): Map<number, Pin> {
+  const pins = new Map<number, Pin>();
+  for (const word of words) {
+    const phonemes = ipaToKokoro(word.ipa);
+    if (!phonemes && ctx.useTts) {
+      ctx.log.warn(`Audio: IPA ${word.ipa ?? '(none)'} of "${word.headword}" has no Kokoro spelling; the voice guesses.`);
+    }
+    pins.set(word.id, phonemes ? { headword: word.headword, phonemes } : null);
+  }
+  return pins;
+}
+
+async function audioWords(
+  ctx: RunContext,
+  words: WordRow[],
+  pins: Map<number, Pin>,
+  wanted: Set<string>,
+  jobs: TtsJob[],
+): Promise<void> {
+  const voice = ttsVoiceLabel(ctx.env.ttsVoice);
+  // Lookups that failed, with the first error, reported once after the loop.
+  let lookupErrors = 0;
+  let firstError = '';
   for (const word of words) {
     const path = `words/${word.id}.mp3`;
     wanted.add(path);
     // A human recording depends on the headword only; a TTS clip also on the
     // IPA and the voice. Either key keeps a clip that still matches.
-    const humanKey = clipKey({ kind: 'human', headword: word.headword });
-    const ttsKey = clipKey({
-      kind: 'word',
-      text: word.headword,
-      ipa: word.ipa,
-      voice: ctx.env.googleTtsVoice,
-    });
+    const humanKey = humanClipKey(word);
+    const ttsKey = wordClipKey(word, voice);
     if ((await isCurrent(ctx, path, humanKey)) || (await isCurrent(ctx, path, ttsKey))) continue;
 
     if (ctx.useTts) {
@@ -128,7 +132,8 @@ async function audioWords(ctx: RunContext, words: WordRow[], wanted: Set<string>
       try {
         human = await humanHeadwordMp3(ctx, word.headword);
       } catch (err) {
-        ctx.log.warn(`Audio: Free Dictionary lookup failed for "${word.headword}" (${(err as Error).message}); using TTS.`);
+        lookupErrors += 1;
+        firstError ||= `"${word.headword}": ${(err as Error).message}`;
       }
       if (human) {
         const { bytes } = await ctx.store.saveAudio(
@@ -141,38 +146,107 @@ async function audioWords(ctx: RunContext, words: WordRow[], wanted: Set<string>
         continue;
       }
     }
-    const body = await synthesizeTts(ctx, word.headword, word);
-    ctx.metrics.ttsChars += word.headword.length;
-    ctx.metrics.audioWordsSynthed += 1;
-    const { bytes } = await ctx.store.saveAudio(path, body, ttsMeta(ctx, ttsKey));
-    account(ctx, bytes);
+    jobs.push({
+      path,
+      kind: 'word',
+      text: word.headword,
+      kokoroText: kokoroText(word.headword, pins.get(word.id) ?? null),
+      key: ttsKey,
+    });
+  }
+  if (lookupErrors > 0) {
+    ctx.log.warn(
+      `Audio: the Free Dictionary lookup failed for ${lookupErrors} headwords (first, ${firstError}); ` +
+        'they use TTS. A later run keeps those TTS clips while they match, so delete a clip to try again.',
+    );
   }
 }
 
-async function audioSentences(ctx: RunContext, words: WordRow[], wanted: Set<string>): Promise<void> {
+async function audioSentences(
+  ctx: RunContext,
+  words: WordRow[],
+  pins: Map<number, Pin>,
+  wanted: Set<string>,
+  jobs: TtsJob[],
+): Promise<void> {
+  const voice = ttsVoiceLabel(ctx.env.ttsVoice);
   for (const word of words) {
+    const pin = pins.get(word.id) ?? null;
     const senses = await ctx.store.listSensesForWord(word.id);
     for (const sense of senses) {
       const examples = await ctx.store.listExamplesForSense(sense.id);
       for (const ex of examples) {
         const path = `sentences/${ex.id}.mp3`;
         wanted.add(path);
-        const key = clipKey({
-          kind: 'sentence',
-          text: ex.text,
-          headword: word.headword,
-          ipa: word.ipa,
-          voice: ctx.env.googleTtsVoice,
-        });
+        const key = sentenceClipKey(ex.text, word, voice);
         if (await isCurrent(ctx, path, key)) continue;
-        const body = await synthesizeTts(ctx, ex.text, word);
-        ctx.metrics.ttsChars += ex.text.length;
-        ctx.metrics.audioSentencesSynthed += 1;
-        const { bytes } = await ctx.store.saveAudio(path, body, ttsMeta(ctx, key));
-        account(ctx, bytes);
+        jobs.push({ path, kind: 'sentence', text: ex.text, kokoroText: kokoroText(ex.text, pin), key });
       }
     }
   }
+}
+
+/** Run tools/kokoro-tts.py on a jobs file; it writes one MP3 per job. */
+function runKokoro(ctx: RunContext, jobsFile: string): Promise<void> {
+  const script = join(ctx.paths.root, 'tools', 'kokoro-tts.py');
+  const args = [script, '--voice', ctx.env.ttsVoice, '--kbps', String(TTS_KBPS), jobsFile];
+  return new Promise((resolve, reject) => {
+    const child = spawn(ctx.env.kokoroPython, args, { stdio: ['ignore', 'inherit', 'inherit'] });
+    child.on('error', (err) => reject(new Error(`Could not start ${ctx.env.kokoroPython}: ${err.message}`)));
+    child.on('exit', (code, signal) => {
+      if (code === 0) resolve();
+      else reject(new Error(`kokoro-tts.py stopped (${signal ?? `exit code ${code}`}). Clips made so far are kept; run again to continue.`));
+    });
+  });
+}
+
+/** Make every queued clip: stubs in dry-run, Kokoro MP3s in live mode. */
+async function synthesize(ctx: RunContext, jobs: TtsJob[]): Promise<void> {
+  const record = (job: TtsJob, bytes: number) => {
+    ctx.metrics.ttsChars += job.text.length;
+    if (job.kind === 'word') ctx.metrics.audioWordsSynthed += 1;
+    else ctx.metrics.audioSentencesSynthed += 1;
+    account(ctx, bytes);
+  };
+  if (!ctx.useTts) {
+    for (const job of jobs) {
+      const { bytes } = await ctx.store.saveAudio(
+        job.path,
+        { kind: 'stub', estimatedBytes: estimateAudioBytes(job.text.length) },
+        { key: job.key, source: 'stub' },
+      );
+      record(job, bytes);
+    }
+    return;
+  }
+  if (jobs.length === 0) return;
+
+  // Kokoro writes each clip to the cache under its key, so a run that stops
+  // partway reuses what it made. The clips move into the store afterwards.
+  const dir = join(ctx.paths.cacheDir, 'tts');
+  await mkdir(dir, { recursive: true });
+  const cached = (job: TtsJob) => join(dir, `${job.key}.mp3`);
+  const jobsFile = join(dir, 'jobs.json');
+  await writeFile(
+    jobsFile,
+    JSON.stringify(jobs.map((job) => ({ text: job.kokoroText, out: cached(job) }))),
+    'utf8',
+  );
+  ctx.log.info(`Audio: Kokoro is making ${jobs.length} clips with voice ${ctx.env.ttsVoice}.`);
+  await runKokoro(ctx, jobsFile);
+
+  const voice = ttsVoiceLabel(ctx.env.ttsVoice);
+  for (const job of jobs) {
+    const data = new Uint8Array(await readFile(cached(job)));
+    const { bytes } = await ctx.store.saveAudio(
+      job.path,
+      { kind: 'bytes', data, contentType: 'audio/mpeg' },
+      { key: job.key, source: 'tts', voice },
+    );
+    record(job, bytes);
+  }
+  await ctx.store.flush();
+  await rm(dir, { recursive: true, force: true });
 }
 
 /** Delete clips whose word or sentence is gone or retired. */
@@ -189,32 +263,32 @@ async function pruneAudio(ctx: RunContext, wanted: Set<string>): Promise<number>
 export async function audio(ctx: RunContext): Promise<void> {
   ctx.log.stage('04 audio generation');
   if (!ctx.dryRun && !ctx.useTts) {
-    ctx.log.warn('Audio: skipped. GOOGLE_TTS_API_KEY is not set in pipeline/.env.');
+    ctx.log.warn(`Audio: skipped. No Kokoro env at ${ctx.env.kokoroPython} (README > Audio).`);
     return;
   }
   ctx.log.info(
     `Audio so far: ${((await ctx.store.totalAudioBytes()) / MB).toFixed(2)} MB. ` +
-      `Provider: ${ctx.useTts ? `Google Cloud TTS (${ctx.env.googleTtsVoice})` : 'dry-run stub'}.`,
+      `Voice: ${ctx.useTts ? ttsVoiceLabel(ctx.env.ttsVoice) : 'dry-run stub'}.`,
   );
 
   const taught = (await ctx.store.listWords()).filter((w) => !w.retired);
   const words = ctx.limit ? taught.slice(0, ctx.limit) : taught;
   const wanted = new Set<string>();
+  const jobs: TtsJob[] = [];
 
-  await audioWords(ctx, words, wanted);
-  await audioSentences(ctx, words, wanted);
+  const pins = pinsFor(ctx, words);
+  await audioWords(ctx, words, pins, wanted, jobs);
+  await audioSentences(ctx, words, pins, wanted, jobs);
+  await synthesize(ctx, jobs);
   // With --limit only some words were visited, so nothing else can be judged unused.
   const pruned = ctx.limit ? 0 : await pruneAudio(ctx, wanted);
-
-  ctx.metrics.ttsCostUsd = (ctx.metrics.ttsChars / 1e6) * TTS_USD_PER_MILLION_CHARS;
   await ctx.store.flush();
 
   const total = await ctx.store.totalAudioBytes();
   const average = ctx.metrics.audioClips ? ctx.metrics.audioBytes / ctx.metrics.audioClips : 0;
   ctx.log.success(
     `Audio: +${ctx.metrics.audioWordsSynthed} word clips, +${ctx.metrics.audioSentencesSynthed} sentence clips, ` +
-      `${ctx.metrics.audioReusedHuman} human recordings, ${pruned} removed. ${ctx.metrics.ttsChars} chars, ` +
-      `est. TTS cost $${ctx.metrics.ttsCostUsd.toFixed(4)} before the free tier. ` +
+      `${ctx.metrics.audioReusedHuman} human recordings, ${pruned} removed, ${ctx.metrics.ttsChars} chars. ` +
       `This run ${(average / 1024).toFixed(1)} KB per clip; all audio ${(total / MB).toFixed(2)} MB.`,
   );
 }
