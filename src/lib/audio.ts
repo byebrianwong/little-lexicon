@@ -3,20 +3,19 @@
 // Clips are made by the pipeline (stage 04, the Kokoro voice model or a US
 // human recording for headwords) and served by the web app's site; each word
 // and sentence in the words file has the audioUrl of its clip (src/lib/
-// clipUrl.ts). When there is no clip, or it cannot load, the device's speech
+// clipUrl.ts). Native apps play the copy in the offline pack when it has one
+// (src/lib/audioPack), and otherwise the one on the site. When there is no
+// clip, or it cannot load, the device's speech
 // synthesizer (expo-speech) speaks the text with the most natural voice it
 // has. Runtime TTS for content is only ever this local, free synthesizer; paid
 // TTS is build-time only (CLAUDE.md guardrail).
 
 import { AudioPlayer, AudioSource, createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import * as Speech from 'expo-speech';
-import { Platform } from 'react-native';
-import { DEFAULT_AUDIO_HOST, resolveClipUrl } from './clipUrl';
+import { AUDIO_HOST } from './audioHost';
+import { localClip } from './audioPack';
+import { resolveClipUrl } from './clipUrl';
 import { pickVoice } from './voice';
-
-// Web plays clips from its own site; native apps from the production site.
-const AUDIO_HOST =
-  Platform.OS === 'web' ? '' : (process.env.EXPO_PUBLIC_AUDIO_HOST ?? DEFAULT_AUDIO_HOST);
 // A clip that has not loaded by then (offline, or not on the site yet) is
 // given up, and the text is spoken instead. expo-audio reports no load errors.
 const LOAD_TIMEOUT_MS = 4000;
@@ -50,7 +49,7 @@ function chooseDeviceVoice(): void {
 }
 
 export interface SpeakOptions {
-  /** A bundled clip or hosted file to play; otherwise `fallbackText` is spoken. */
+  /** A clip on the phone or the site; otherwise `fallbackText` is spoken. */
   source?: AudioSource | null;
   fallbackText: string;
   rate?: number;
@@ -103,7 +102,10 @@ function speak(opts: SpeakOptions): void {
   Speech.speak(opts.fallbackText, { rate: opts.rate ?? 0.95, voice: voiceId });
 }
 
-function hosted(url: string | null | undefined): AudioSource | null {
+/** The clip in the offline pack, else the one on the site, else null. */
+function clip(url: string | null | undefined): AudioSource | null {
+  const local = localClip(url);
+  if (local) return local;
   const uri = resolveClipUrl(url, AUDIO_HOST);
   return uri ? { uri } : null;
 }
@@ -123,7 +125,7 @@ export interface SpeakableExample {
 /** Speak a headword: its clip, else device speech. */
 export async function speakWord(word: SpeakableWord): Promise<void> {
   return play({
-    source: hosted(word.audioUrl),
+    source: clip(word.audioUrl),
     fallbackText: word.headword,
     rate: 0.9,
   });
@@ -132,7 +134,7 @@ export async function speakWord(word: SpeakableWord): Promise<void> {
 /** Speak an example sentence, in the same order of preference as speakWord. */
 export async function speakSentence(example: SpeakableExample): Promise<void> {
   return play({
-    source: hosted(example.audioUrl),
+    source: clip(example.audioUrl),
     fallbackText: example.text,
   });
 }

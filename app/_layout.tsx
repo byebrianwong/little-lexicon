@@ -14,6 +14,7 @@ import { useAuthStore } from '@/features/auth/authStore';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 import { flushReviewQueue } from '@/features/offline/reviewQueue';
 import { applyUpdateOnStartup } from '@/lib/updates';
+import { syncAudioPack } from '@/lib/audioPack';
 import { fontFaces } from '@/theme/fonts';
 import { colors } from '@/theme/colors';
 
@@ -59,6 +60,11 @@ export default function RootLayout() {
     // Apply a published OTA update straight away rather than on the next
     // launch. No-op in dev and on web; handles its own failures.
     applyUpdateOnStartup();
+    // Download pronunciation clips for offline use, on Wi-Fi, once the first
+    // screens and the update check have had a few seconds. No-op on web; logs
+    // its own failures.
+    const audioPack = setTimeout(() => void syncAudioPack(), 5000);
+    return () => clearTimeout(audioPack);
   }, [init, hydrateSettings]);
 
   if (!fontsSettled) return null;
