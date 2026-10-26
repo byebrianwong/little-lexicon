@@ -1,9 +1,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  buildClipModule,
   clipKey,
   clipMatches,
+  clipUrl,
   humanClipKey,
   ipaToKokoro,
   kokoroText,
@@ -118,17 +118,9 @@ test('pickUsRecording takes only US clips', () => {
   );
 });
 
-test('buildClipModule sorts entries by id and requires each file', () => {
-  const source = buildClipModule(
-    [
-      { id: 12, requirePath: '../../assets/audio/words/12.mp3' },
-      { id: 3, requirePath: '../../assets/audio/words/3.mp3' },
-    ],
-    [],
-  );
-  assert.match(
-    source,
-    /wordClips: Record<number, AudioSource> = \{\n {2}3: require\('\.\.\/\.\.\/assets\/audio\/words\/3\.mp3'\),\n {2}12: /,
-  );
-  assert.match(source, /sentenceClips: Record<number, AudioSource> = \{\n\};/);
+test('clipUrl names the file and a hash of its bytes', () => {
+  const a = clipUrl('words/12.mp3', new Uint8Array([1, 2, 3]));
+  assert.match(a, /^audio\/words\/12\.mp3\?v=[0-9a-f]{12}$/);
+  assert.equal(a, clipUrl('words/12.mp3', new Uint8Array([1, 2, 3])));
+  assert.notEqual(a, clipUrl('words/12.mp3', new Uint8Array([1, 2, 4])));
 });

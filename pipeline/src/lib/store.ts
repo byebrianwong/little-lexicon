@@ -377,8 +377,8 @@ export class JsonFileStore implements Store {
   }
 
   /**
-   * Record a clip. Real bytes are written under the audio folder (assets/audio
-   * in live mode, which the app bundles); dry-run stubs only record an
+   * Record a clip. Real bytes are written under the audio folder (public/audio
+   * in live mode, which the web export copies to the site); dry-run stubs only record an
    * estimated size.
    */
   async saveAudio(path: string, body: AudioBody, meta: AudioMeta = {}): Promise<AudioSaveResult> {

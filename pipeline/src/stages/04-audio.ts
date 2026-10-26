@@ -1,9 +1,9 @@
 // Stage 04 (task 1.4): audio generation.
 //
 // Make an MP3 for every headword and every example sentence of the words still
-// taught, and save it under assets/audio at deterministic paths
-// (words/<id>.mp3, sentences/<id>.mp3). The app bundles these files: stage 05
-// writes src/content/audioClips.ts, which requires each one.
+// taught, and save it under public/audio at deterministic paths
+// (words/<id>.mp3, sentences/<id>.mp3). The web export copies public/audio to
+// the site, and stage 05 gives each word and sentence the URL of its clip.
 //
 // Headwords use a US human recording from the Free Dictionary API when there
 // is one, and text to speech otherwise. Sentences always use text to speech.
@@ -39,7 +39,7 @@ const MB = 1024 * 1024;
 
 /** One clip for Kokoro to make. */
 interface TtsJob {
-  /** Where the clip goes under assets/audio. */
+  /** Where the clip goes under public/audio. */
   path: string;
   kind: 'word' | 'sentence';
   /** The plain text, as the app shows it. */

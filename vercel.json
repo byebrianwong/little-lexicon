@@ -4,7 +4,7 @@
   "installCommand": "npm ci",
   "buildCommand": "EXPO_PUBLIC_DEMO_MODE=true npm run build:web",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/((?!audio/).*)", "destination": "/index.html" }],
   "headers": [
     {
       "source": "/_expo/static/(.*)",

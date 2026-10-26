@@ -1,17 +1,25 @@
 // Audio playback for word and sentence pronunciation (Phase 3.5).
 //
 // Clips are made by the pipeline (stage 04, the Kokoro voice model or a US
-// human recording for headwords) and bundled in the app; src/content/
-// audioClips.ts maps word and example ids to them. A hosted audioUrl is played
-// if a word or sentence has one and no bundled clip. Otherwise the device's
-// speech synthesizer (expo-speech) speaks the text with the most natural voice
-// it has. Runtime TTS for content is only ever this local, free synthesizer;
-// paid TTS is build-time only (CLAUDE.md guardrail).
+// human recording for headwords) and served by the web app's site; each word
+// and sentence in the words file has the audioUrl of its clip (src/lib/
+// clipUrl.ts). When there is no clip, or it cannot load, the device's speech
+// synthesizer (expo-speech) speaks the text with the most natural voice it
+// has. Runtime TTS for content is only ever this local, free synthesizer; paid
+// TTS is build-time only (CLAUDE.md guardrail).
 
 import { AudioPlayer, AudioSource, createAudioPlayer, setAudioModeAsync } from 'expo-audio';
 import * as Speech from 'expo-speech';
-import { importAudioClips } from './importAudioClips';
+import { Platform } from 'react-native';
+import { DEFAULT_AUDIO_HOST, resolveClipUrl } from './clipUrl';
 import { pickVoice } from './voice';
+
+// Web plays clips from its own site; native apps from the production site.
+const AUDIO_HOST =
+  Platform.OS === 'web' ? '' : (process.env.EXPO_PUBLIC_AUDIO_HOST ?? DEFAULT_AUDIO_HOST);
+// A clip that has not loaded by then (offline, or not on the site yet) is
+// given up, and the text is spoken instead. expo-audio reports no load errors.
+const LOAD_TIMEOUT_MS = 4000;
 
 let configured = false;
 async function ensureAudioMode(): Promise<void> {
@@ -23,16 +31,6 @@ async function ensureAudioMode(): Promise<void> {
     // Non-fatal; playback can still proceed on most platforms.
     console.warn('audio: could not set audio mode', e);
   }
-}
-
-type Clips = Awaited<ReturnType<typeof importAudioClips>>;
-let clipsPromise: Promise<Clips | null> | null = null;
-function loadClips(): Promise<Clips | null> {
-  clipsPromise ??= importAudioClips().catch((e: unknown) => {
-    console.warn('audio: could not load bundled clips, using device speech', e);
-    return null;
-  });
-  return clipsPromise;
 }
 
 // The device voice is chosen in the background and never awaited: on web,
@@ -87,16 +85,27 @@ export async function play(opts: SpeakOptions): Promise<void> {
       const player = createAudioPlayer(opts.source);
       currentPlayer = player;
       player.play();
+      setTimeout(() => {
+        if (mine !== turn || currentPlayer !== player || player.isLoaded) return;
+        console.warn('audio: clip did not load, falling back to speech', opts.source);
+        releaseCurrent();
+        speak(opts);
+      }, LOAD_TIMEOUT_MS);
       return;
     } catch (e) {
       console.warn('audio: clip failed, falling back to speech', e);
     }
   }
+  speak(opts);
+}
+
+function speak(opts: SpeakOptions): void {
   Speech.speak(opts.fallbackText, { rate: opts.rate ?? 0.95, voice: voiceId });
 }
 
 function hosted(url: string | null | undefined): AudioSource | null {
-  return url ? { uri: url } : null;
+  const uri = resolveClipUrl(url, AUDIO_HOST);
+  return uri ? { uri } : null;
 }
 
 export interface SpeakableWord {
@@ -111,11 +120,10 @@ export interface SpeakableExample {
   audioUrl?: string | null;
 }
 
-/** Speak a headword: its bundled clip, else its hosted clip, else device speech. */
+/** Speak a headword: its clip, else device speech. */
 export async function speakWord(word: SpeakableWord): Promise<void> {
-  const clips = await loadClips();
   return play({
-    source: clips?.wordClips[word.wordId] ?? hosted(word.audioUrl),
+    source: hosted(word.audioUrl),
     fallbackText: word.headword,
     rate: 0.9,
   });
@@ -123,9 +131,8 @@ export async function speakWord(word: SpeakableWord): Promise<void> {
 
 /** Speak an example sentence, in the same order of preference as speakWord. */
 export async function speakSentence(example: SpeakableExample): Promise<void> {
-  const clips = await loadClips();
   return play({
-    source: clips?.sentenceClips[example.exampleId] ?? hosted(example.audioUrl),
+    source: hosted(example.audioUrl),
     fallbackText: example.text,
   });
 }

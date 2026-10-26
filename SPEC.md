@@ -28,7 +28,7 @@ Expo universal app (iOS / Android / web, one TS codebase)
 Supabase project "games-apps"
   ├── Postgres  (schema: little_lexicon)            per-user SRS state + logs
   ├── Auth                                 email + OAuth
-  ├── Storage   (bucket: little-lexicon-audio)      reserved; audio is bundled in the app (section 6)
+  ├── Storage   (bucket: little-lexicon-audio)      reserved; audio is served by the web app's site (section 6)
   └── Edge Functions (little-lexicon-*)             optional runtime Claude calls, account deletion
 
 Offline build-time pipeline (Node, not shipped in the app)
@@ -111,11 +111,12 @@ Respect licensing: WordNet needs attribution; Wiktionary-derived verbatim text i
 
 ## 6. Audio
 
-- Pre-generate all audio once and bundle the MP3s in the app (decided 2026-10-12). Do not generate audio at runtime. On 2026-10-23 the corpus was 579 words and 2,397 sentences, 61.4 MB of audio at 32 kbps, so bundling avoids a file host and works offline. Revisit if the word list grows toward thousands of words. The pipeline writes the clips to `assets/audio` and a module, `src/content/audioClips.ts`, that maps word and example ids to them.
+- Pre-generate all audio once (decided 2026-10-12). Do not generate audio at runtime. On 2026-10-23 the corpus was 579 words and 2,397 sentences, 61.4 MB at 32 kbps.
+- The clips are files on the web app's site, not bundled in the app (decided 2026-10-25, replacing bundling from 2026-10-12). Bundling them broke over-the-air updates: EAS Update allows at most 1,000 assets per update for each platform, and there are 2,976 clips. The pipeline writes them to `public/audio`, the web export copies them to the site, and the words file gives each word and sentence the URL of its clip with a hash of its bytes. The web app plays clips from its own site; native apps play them from the production site (`src/lib/clipUrl.ts`), so audio needs a connection. A clip that has not loaded after 4 seconds is replaced by the device's speech.
 - Prefer human pronunciations for headwords where freely available (US Wiktionary/Commons audio surfaced by the Free Dictionary API). Fall back to TTS for coverage and for all sentence audio.
 - TTS provider: Kokoro-82M, an open model under the Apache 2.0 license, run on the developer's computer by the pipeline (decided 2026-10-22). It replaces Google Cloud Text-to-Speech with Chirp 3 HD voices (decided 2026-10-12), which never ran because it needed a Google Cloud project, billing and an API key. Kokoro needs no account and costs nothing. The word's IPA is converted to Kokoro's phoneme letters and pinned in the text, so the voice matches the pronunciation the app shows. Not compared by ear with Chirp 3 HD, which may sound more natural. Other options considered: OpenAI `gpt-4o-mini-tts`, and ElevenLabs for the most natural output at higher cost.
 - When a word or sentence has no clip, the app speaks it with the device's synthesizer, choosing the most natural English voice the device offers.
-- Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters. With Kokoro there is no charge; the limits are run time (about 30 minutes per 3,000 clips on an Apple M5) and app size (about 20 KB per clip).
+- Corpus size is small and finite. Roughly 8,000 words plus 3 to 5 sentences each is on the order of a few million characters. With Kokoro there is no charge; the limits are run time (about 30 minutes per 3,000 clips on an Apple M5) and download size (about 20 KB per clip).
 
 ## 7. Claude API usage and cost model
 

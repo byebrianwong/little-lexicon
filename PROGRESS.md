@@ -3723,3 +3723,58 @@ tier 2 before any tier 3.
   logs, and their tiers were 11 tier 3, 4 tier 4, 3 tier 5, 1 tier 2 and
   1 tier 1. The filter panel fits a 375-pixel-wide phone screen.
 - Not run: the iOS simulator and the Android emulator.
+
+## Clips served from the site instead of bundled (2026-10-25)
+
+Bundling one MP3 per clip (#47) broke over-the-air updates. EAS Update allows
+at most 1,000 assets per update for each platform, and the app had 2,976
+clips plus 38 other assets. The `EAS Update` workflow failed on every merge
+from #47 on, so the Android preview build stayed on #46. iOS has no preview
+build, so it was not affected.
+
+### What changed
+
+- The clips moved from `assets/audio` to `public/audio`. The web export
+  copies `public/` to the site, so they are served at `/audio/...` on
+  littlelexicon.byebrianwong.com.
+- `src/content/audioClips.ts` is gone. The export instead gives each word and
+  sentence in `words.json` an `audioUrl` (`audio/words/1.mp3?v=<hash>`); the
+  hash is of the clip's bytes, so a remade clip gets a new URL. The words file
+  grew from 308 KB to 353 KB compressed.
+- The app plays the clip from that URL: the web app from its own site, native
+  apps from the production site (`EXPO_PUBLIC_AUDIO_HOST` can override it).
+  expo-audio reports no load errors, so a clip that has not loaded after 4
+  seconds is dropped and the text is spoken with the device's voice.
+- `src/content/audio.test.ts` replaces `audioClips.test.ts`. It fails when a
+  word or sentence has no `audioUrl`, its file is missing, or the hash does
+  not match the file.
+
+### Decisions
+
+- **Host: the web app's Vercel site.** It needs no new account or key, it
+  deploys with every merge to main (the same trigger as EAS Update), and the
+  Hobby plan includes 100 GB of transfer a month (about 1,600 full sets of
+  clips). The reserved Supabase bucket was the other choice; its free tier
+  allows 5 GB of egress a month, shared by four apps, and uploading needs the
+  service role key.
+- **Two pull requests.** Keeping clips on the phone needs `expo-file-system`.
+  It is already in the build, but only as a dependency of `expo`. Listing it
+  directly moves it from `node_modules/expo/node_modules/` to
+  `node_modules/`, which changes the Android fingerprint (c3f4278 to 176d123),
+  so the installed preview build would stop taking updates until a new one is
+  made. This change keeps the fingerprint at c3f4278, so the installed build
+  takes it. Downloading the clips for offline use comes next, with a new
+  preview build.
+
+### Verified
+
+- `npx expo export --platform android` lists 40 assets, none of them MP3s
+  (it was over 3,000). The Android fingerprint is still c3f4278.
+- The web export has 579 word clips and 2,397 sentence clips under `audio/`.
+- On web (demo mode, dev server), "Hear it" and "Sentence" played
+  `/audio/words/186.mp3` and `/audio/sentences/5736.mp3` (both HTTP 206). With
+  the clip's address replaced by a missing file, the sentence was spoken by
+  the device after 4 seconds, and not before.
+- App: `tsc`, lint, jest. Pipeline: `tsc`, unit tests, dry run.
+- Not yet: the iOS and Android apps against the production site, which only
+  has the clips once this is merged and deployed.

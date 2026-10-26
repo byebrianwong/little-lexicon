@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-26T02:42:14.645Z"
+    "updatedAt": "2026-10-26T09:21:21.749Z"
   },
   "counters": {
     "words": 617,
