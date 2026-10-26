@@ -313,7 +313,7 @@ export class SupabaseBackend implements Backend {
 
   async getNewWords(
     limit: number,
-    opts?: { minTier?: number; maxTier?: number },
+    opts?: { levelEstimate?: number | null },
   ): Promise<SessionItem[]> {
     // Ordering is done here rather than in SQL so it shares the tested logic
     // in features/feed/wordOrder with demo mode. It also avoids sending every
@@ -328,8 +328,7 @@ export class SupabaseBackend implements Backend {
       catalog: content.words,
       seen,
       listed: listed.map((r) => r.word_id),
-      minTier: opts?.minTier,
-      maxTier: opts?.maxTier,
+      levelEstimate: opts?.levelEstimate,
       limit,
     });
     return pickWords(content.byId, ids).map<SessionItem>((word) => ({

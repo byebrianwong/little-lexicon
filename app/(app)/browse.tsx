@@ -205,6 +205,7 @@ export default function Words() {
           isLoading={allWords.isLoading}
           soundEnabled={soundEnabled}
           savedIds={saved.savedIds}
+          trackers={trackers}
           onToggleSave={saved.toggle}
         />
       ) : null}

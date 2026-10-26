@@ -1,7 +1,8 @@
 import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { expect, fn, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
-import { WORDS } from '@/stories/fixtures';
+import { WORDS, word } from '@/stories/fixtures';
+import type { WordTracker } from '@/features/tracker/tracker';
 import { BrowseView } from './BrowseView';
 import { WordsLayout } from './WordsLayout';
 
@@ -19,6 +20,7 @@ const meta = {
     isLoading: false,
     soundEnabled: true,
     savedIds: new Set<number>(),
+    trackers: new Map(),
     onToggleSave: fn(),
   },
   decorators: [allWords, phone],
@@ -68,6 +70,61 @@ export const NoMatches: Story = {
     const canvas = within(canvasElement);
     await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'zzzz');
     await expect(await canvas.findByText('No word matches that search.')).toBeInTheDocument();
+  },
+};
+
+/** The filters, open: tier, status and part of speech. */
+export const FiltersOpen: Story = {
+  args: { initialFiltersOpen: true },
+};
+
+/** Choosing tier 2 keeps only the tier 2 words, and the button counts it. */
+export const FilteredByTier: Story = {
+  args: { initialFiltersOpen: true },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Tier 2' }));
+    await expect(await canvas.findByText('Filters (1)')).toBeInTheDocument();
+    await expect(canvas.getByText('pragmatic')).toBeInTheDocument();
+    await expect(canvas.getByText('eloquent')).toBeInTheDocument();
+    await expect(canvas.queryByText('ephemeral')).not.toBeInTheDocument();
+  },
+};
+
+const learning: WordTracker = {
+  wordId: word('laconic').wordId,
+  status: 'learning',
+  cleanDays: 2,
+  answeredRecently: 3,
+  mistakeRecently: false,
+  latestRight: 3,
+  latestCount: 3,
+  lastAnsweredAt: '2026-01-18T09:00:00.000Z',
+};
+
+/** The status filter reads saved words and the word tracker. */
+export const FilteredByStatus: Story = {
+  args: {
+    initialFiltersOpen: true,
+    savedIds: new Set([word('quixotic').wordId]),
+    trackers: new Map([[learning.wordId, learning]]),
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Learning' }));
+    await expect(await canvas.findByText('laconic')).toBeInTheDocument();
+    await expect(canvas.queryByText('quixotic')).not.toBeInTheDocument();
+  },
+};
+
+/** Filters that match nothing say so, and can be cleared. */
+export const NoFilterMatches: Story = {
+  args: { initialFiltersOpen: true },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'Tier 1' }));
+    await expect(await canvas.findByText('No word matches these filters.')).toBeInTheDocument();
+    await expect(canvas.getByRole('button', { name: 'Clear filters' })).toBeInTheDocument();
   },
 };
 

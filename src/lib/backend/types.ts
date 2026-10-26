@@ -126,17 +126,16 @@ export interface Backend {
   getDueQueue(limit: number): Promise<SessionItem[]>;
   /**
    * Words never seen, for a session. Words on the user's list come first,
-   * oldest pick first and regardless of tier; the rest follow easiest first.
+   * oldest pick first and regardless of tier. The rest lean toward
+   * `levelEstimate` without being limited to it (features/feed/wordOrder).
    */
-  getNewWords(
-    limit: number,
-    opts?: { minTier?: number; maxTier?: number },
-  ): Promise<SessionItem[]>;
+  getNewWords(limit: number, opts?: { levelEstimate?: number | null }): Promise<SessionItem[]>;
 
   // Discover feed and the saved words
   /**
    * The next words for the Discover feed: never seen, not marked known, not
-   * saved and not in `exclude`, near the user's level, shuffled by `seed`.
+   * saved and not in `exclude`, drawn at random by `seed` and weighted toward
+   * the user's level.
    * Pass the ids already shown as `exclude` to get the next page.
    */
   getFeedWords(input: FeedRequest): Promise<WordContent[]>;

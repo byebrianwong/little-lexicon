@@ -91,6 +91,9 @@ export default function SessionScreen() {
   // Read the live queue from inside async callbacks without re-creating them.
   const itemsRef = useRef<SessionItem[]>([]);
   itemsRef.current = items;
+  // The same for the level that new words lean toward.
+  const levelRef = useRef<number | null>(null);
+  levelRef.current = profileQuery.data?.levelEstimate ?? null;
 
   // Every word, as wrong answers for the sentence questions: those need three
   // words of the answer's part of speech, which a session alone often lacks.
@@ -151,7 +154,7 @@ export default function SessionScreen() {
     try {
       const [due, fresh] = await Promise.all([
         backend.getDueQueue(REFILL_PAGE),
-        backend.getNewWords(REFILL_PAGE),
+        backend.getNewWords(REFILL_PAGE, { levelEstimate: levelRef.current }),
       ]);
       const chunk = buildRefill({ queue: itemsRef.current, due, newWords: fresh });
       if (chunk.length === 0) {

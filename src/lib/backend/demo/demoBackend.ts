@@ -301,7 +301,7 @@ export class DemoBackend implements Backend {
 
   async getNewWords(
     limit: number,
-    opts?: { minTier?: number; maxTier?: number },
+    opts?: { levelEstimate?: number | null },
   ): Promise<SessionItem[]> {
     await this.ensureLoaded();
     const content = await loadContent();
@@ -309,8 +309,7 @@ export class DemoBackend implements Backend {
       catalog: catalogOf(content),
       seen: this.seenIds(),
       listed: this.listedIds(),
-      minTier: opts?.minTier,
-      maxTier: opts?.maxTier,
+      levelEstimate: opts?.levelEstimate,
       limit,
     });
     return ids
