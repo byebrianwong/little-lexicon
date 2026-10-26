@@ -6,20 +6,19 @@
 // because saved progress points at word ids. Reports the file size, since the
 // file ships inside the app.
 //
-// Also writes src/content/audioClips.ts, which requires every clip from stage
-// 04 that belongs to an exported word or sentence, so the app bundles them.
+// Also gives each exported word and sentence the audioUrl of its clip from
+// stage 04 (public/audio, which the web export copies to the site).
 
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname, relative, sep } from 'node:path';
+import { dirname } from 'node:path';
 import { gzipSync } from 'node:zlib';
 import type { RunContext } from '../config.ts';
 import { buildWordsFile, checkIdStability, type WordsFile } from '../lib/exportContent.ts';
 import { OEWN_ATTRIBUTION } from '../lib/wordnet.ts';
-import { buildClipModule, clipMatches, HUMAN_AUDIO_ATTRIBUTION, type ClipEntry } from '../lib/audio.ts';
+import { clipMatches, clipUrl, HUMAN_AUDIO_ATTRIBUTION } from '../lib/audio.ts';
 
-interface ClipModule {
-  source: string;
+interface ClipUrls {
   words: number;
   sentences: number;
   bytes: number;
@@ -29,55 +28,44 @@ interface ClipModule {
 }
 
 /**
- * The clip module for the exported words: only clips whose file is on disk
- * and that were made from the current text and IPA, so the app never plays a
- * clip that says something else. A word or sentence without one falls back to
- * the device's speech until stage 04 runs again.
+ * Give each exported word and sentence the audioUrl of its clip. Only clips
+ * whose file is on disk and that were made from the current text and IPA get
+ * one, so the app never plays a clip that says something else. A word or
+ * sentence without one is spoken with the device's voice until stage 04 runs
+ * again.
  */
-async function clipModule(ctx: RunContext, file: WordsFile): Promise<ClipModule> {
+async function attachClipUrls(ctx: RunContext, file: WordsFile): Promise<ClipUrls> {
   const clips = new Map((await ctx.store.listAudio()).map((c) => [c.path, c]));
-  const moduleDir = dirname(ctx.paths.clipModuleFile);
-  let bytes = 0;
-  let human = false;
-  let stale = 0;
-  const entry = (
-    id: number,
+  const counts: ClipUrls = { words: 0, sentences: 0, bytes: 0, human: false, stale: 0 };
+  const urlFor = async (
     path: string,
     word: { headword: string; ipa: string | null },
     sentence: string | null,
-  ): ClipEntry | null => {
+  ): Promise<string | null> => {
     const clip = clips.get(path);
     const abs = ctx.store.audioFile(path);
     if (!clip || clip.source === 'stub' || !existsSync(abs)) return null;
     if (!clipMatches(clip, word, sentence)) {
-      stale += 1;
+      counts.stale += 1;
       return null;
     }
-    bytes += clip.bytes;
-    if (clip.source === 'human') human = true;
-    const rel = relative(moduleDir, abs).split(sep).join('/');
-    return { id, requirePath: rel.startsWith('.') ? rel : `./${rel}` };
+    counts.bytes += clip.bytes;
+    if (clip.source === 'human') counts.human = true;
+    return clipUrl(path, new Uint8Array(await readFile(abs)));
   };
-  const words: ClipEntry[] = [];
-  const sentences: ClipEntry[] = [];
   for (const w of file.words) {
-    const clip = entry(w.wordId, `words/${w.wordId}.mp3`, w, null);
-    if (clip) words.push(clip);
+    const url = await urlFor(`words/${w.wordId}.mp3`, w, null);
+    if (url) counts.words += 1;
+    w.audioUrl = url ?? w.audioUrl;
     for (const s of w.senses) {
       for (const ex of s.examples) {
-        const sentence = entry(ex.exampleId, `sentences/${ex.exampleId}.mp3`, w, ex.text);
-        if (sentence) sentences.push(sentence);
+        const sentenceUrl = await urlFor(`sentences/${ex.exampleId}.mp3`, w, ex.text);
+        if (sentenceUrl) counts.sentences += 1;
+        ex.audioUrl = sentenceUrl ?? ex.audioUrl;
       }
     }
   }
-  return {
-    source: buildClipModule(words, sentences),
-    words: words.length,
-    sentences: sentences.length,
-    bytes,
-    human,
-    stale,
-  };
+  return counts;
 }
 
 async function readPrevious(path: string): Promise<WordsFile | null> {
@@ -93,7 +81,7 @@ export async function exportWords(ctx: RunContext): Promise<void> {
   ctx.log.stage('05 export words file');
   const rows = await ctx.store.snapshot();
   const { file, heldBack } = buildWordsFile(rows, [OEWN_ATTRIBUTION]);
-  const clips = await clipModule(ctx, file);
+  const clips = await attachClipUrls(ctx, file);
   if (clips.human) file.attribution.push(HUMAN_AUDIO_ATTRIBUTION);
 
   const previous = await readPrevious(ctx.paths.exportFile);
@@ -123,8 +111,6 @@ export async function exportWords(ctx: RunContext): Promise<void> {
   const json = JSON.stringify(file, null, 2) + '\n';
   await mkdir(dirname(ctx.paths.exportFile), { recursive: true });
   await writeFile(ctx.paths.exportFile, json, 'utf8');
-  await mkdir(dirname(ctx.paths.clipModuleFile), { recursive: true });
-  await writeFile(ctx.paths.clipModuleFile, clips.source, 'utf8');
 
   const m = ctx.metrics;
   m.wordsExported = file.words.length;
@@ -139,9 +125,8 @@ export async function exportWords(ctx: RunContext): Promise<void> {
       `${(perWord / 1024).toFixed(2)} KB per word.`,
   );
   ctx.log.success(
-    `Export: bundled audio for ${clips.words} of ${file.words.length} words and ` +
-      `${clips.sentences} sentences, ${(clips.bytes / (1024 * 1024)).toFixed(2)} MB, ` +
-      `listed in ${ctx.paths.clipModuleFile}.`,
+    `Export: clips for ${clips.words} of ${file.words.length} words and ` +
+      `${clips.sentences} sentences, ${(clips.bytes / (1024 * 1024)).toFixed(2)} MB in ${ctx.paths.audioDir}.`,
   );
   if (clips.stale > 0) {
     ctx.log.warn(

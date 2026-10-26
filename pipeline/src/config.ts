@@ -55,10 +55,11 @@ export interface Paths {
   dbFile: string;
   /** The words file the app bundles (src/content/words.json in live mode). */
   exportFile: string;
-  /** Where clips are written: assets/audio (bundled by the app) in live mode. */
+  /**
+   * Where clips are written: public/audio in live mode. The web export copies
+   * it to the site, and the app plays clips from there.
+   */
   audioDir: string;
-  /** The module that requires every bundled clip (src/content/audioClips.ts in live mode). */
-  clipModuleFile: string;
 }
 
 export class Metrics {
@@ -164,16 +165,13 @@ export async function createContext(flags: Flags): Promise<RunContext> {
     exportFile: dryRun
       ? join(out, 'words.dry-run.json')
       : join(PIPELINE_ROOT, '..', 'src', 'content', 'words.json'),
-    audioDir: dryRun ? join(out, 'audio') : join(PIPELINE_ROOT, '..', 'assets', 'audio'),
-    clipModuleFile: dryRun
-      ? join(out, 'audioClips.dry-run.ts')
-      : join(PIPELINE_ROOT, '..', 'src', 'content', 'audioClips.ts'),
+    audioDir: dryRun ? join(out, 'audio') : join(PIPELINE_ROOT, '..', 'public', 'audio'),
   };
 
   if (dryRun) {
     log.info('Mode: DRY-RUN. Offline stubs; writing to out/.');
   } else {
-    log.info('Mode: LIVE. Writing data/content-db.json, src/content/words.json and assets/audio.');
+    log.info('Mode: LIVE. Writing data/content-db.json, src/content/words.json and public/audio.');
   }
 
   const store: Store = new JsonFileStore(paths.dbFile, paths.audioDir, dryRun, log);

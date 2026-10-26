@@ -61,7 +61,6 @@ function printSummary(ctx: RunContext, elapsedMs: number): void {
   lines.push(`record               ${ctx.paths.dbFile}`);
   lines.push(`words file           ${ctx.paths.exportFile}`);
   lines.push(`audio folder         ${ctx.paths.audioDir}`);
-  lines.push(`clip module          ${ctx.paths.clipModuleFile}`);
   lines.push('──────────────────────────────────────────────────────────────────────');
   process.stderr.write(lines.join('\n') + '\n');
 }
