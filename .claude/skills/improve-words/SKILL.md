@@ -525,6 +525,18 @@ before handing a worksheet over.
   main session had cut short (`head`, and the tool's own 220-character
   limit, now 400). Read the whole output for a look-alike before writing
   its option.
+- **A look-alike with a minor sense that matches the target.** brisk is
+  usually about pace, but AHD and Dictionary.com also give it "curt", so
+  it fit three of brusque's example blanks even though its option used the
+  pace sense. Read every sense of a new look-alike, not only the one you
+  plan to write.
+- **An option that defines another part of speech.** sanguine's saline
+  option described saline solution (the noun), though the look-alike was
+  the adjective. `check` verifies the look-alike's part of speech, not the
+  option's. Define the sense that matches the target's part of speech.
+- **Two look-alikes that mean the same thing.** lucid and limpid on languid
+  both meant "clear", so a learner could rule out both at once. Give each
+  option a different meaning.
 - **Stale `problems` lists.** A worksheet's `problems` is written when the
   worksheet is made and is not updated. Reviewers kept reporting old
   "like ..." problems that a writer had already fixed. `check` is the
