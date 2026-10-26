@@ -3663,8 +3663,10 @@ tier 2 before any tier 3.
     which would have reset the schedule of a word already being learned.
 - **The tier shows wherever a word does:** Discover, Saved, the new-word
   intro, the answer reveal and the Speed round. All words already showed it.
-  Question prompts do not, so the question stays uncluttered; the reveal
-  right after it does. The placement test does not either, since it picks
+  In the reveal it sits at the right end of the "Correct" or "Not quite"
+  line: after the word, a long word and its part of speech pushed it onto a
+  line of its own (seen in Chromatic build 138). Question prompts do not
+  show it, so the question stays uncluttered; the reveal right after it does. The placement test does not either, since it picks
   words by tier.
 - **All words has filters:** tier (any of 1 to 5), status (saved, learning,
   known, not tested) and part of speech. Status comes from the word tracker,

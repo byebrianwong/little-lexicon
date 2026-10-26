@@ -99,14 +99,19 @@ export function Reveal({
     // inset from the question above it, and a calm page suits it better.
     <View onLayout={onLayout}>
       <View className="mt-8 border-t border-ink pt-4">
-        <Row className="gap-2">
-          <Icon
-            name={correct ? 'check' : 'cross'}
-            size={16}
-            color={colors.accent}
-            strokeWidth={2.25}
-          />
-          <Label tone="accent">{title}</Label>
+        {/* The tier sits at the end of this line, not after the word, where a
+            long word and its part of speech would push it onto a line alone. */}
+        <Row className="justify-between gap-2">
+          <Row className="gap-2">
+            <Icon
+              name={correct ? 'check' : 'cross'}
+              size={16}
+              color={colors.accent}
+              strokeWidth={2.25}
+            />
+            <Label tone="accent">{title}</Label>
+          </Row>
+          <Label>{`Tier ${content.difficultyTier}`}</Label>
         </Row>
         {typed !== '' ? <Note className="mt-2">{`You typed "${typed}"`}</Note> : null}
 
@@ -114,7 +119,6 @@ export function Reveal({
           <Headword size="md">{content.headword}</Headword>
           {content.ipa ? <Muted>{content.ipa}</Muted> : null}
           {content.partOfSpeech ? <Note>{content.partOfSpeech}</Note> : null}
-          <Label>{`Tier ${content.difficultyTier}`}</Label>
         </View>
         <Body className="mt-2 text-[19px] leading-[27px]">{primaryDef}</Body>
         {example ? (
