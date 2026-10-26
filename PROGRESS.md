@@ -3778,3 +3778,61 @@ build, so it was not affected.
 - App: `tsc`, lint, jest. Pipeline: `tsc`, unit tests, dry run.
 - Not yet: the iOS and Android apps against the production site, which only
   has the clips once this is merged and deployed.
+
+## Clips kept on the phone for offline use (2026-10-25)
+
+Native apps now download every pronunciation clip once and keep it, so
+words and sentences play without a connection. This needs a new Android
+preview build: see "For next time".
+
+### What changed
+
+- `src/lib/audioPack` (native; `index.web.ts` does nothing on web). Five
+  seconds after launch, `syncAudioPack` lists the files it has, compares
+  them with the clips `words.json` uses, deletes the unused ones and, on
+  Wi-Fi or Ethernet, downloads the missing ones, four at a time. Files are
+  named by the hash in the clip's URL, so a remade clip is a new file.
+- A download is written as `<hash>.part` and renamed only when its first
+  bytes look like an MP3. A Wi-Fi login page can answer any address with
+  HTML and status 200. Half-written files are deleted at the next launch.
+  After 10 failed downloads the sync stops until the next launch.
+- `src/lib/audio` plays the copy on the phone when there is one, else the
+  one on the site, else the device's speech.
+- The site now returns 404 for a missing clip instead of the app page
+  (`vercel.json`), so a download of a clip that is not deployed yet fails
+  instead of saving HTML. This change is in the previous PR.
+- New dependencies, pinned: `expo-file-system` 19.0.23 (already in the build
+  as part of `expo`) and `expo-network` 8.0.8.
+
+### Decisions
+
+- **Cache folder, not documents.** Apple asks apps not to keep files they
+  can download again in the backed-up documents folder. The system may clear
+  the cache when the phone is short of space; the next launch downloads the
+  clips again.
+- **Wi-Fi only.** The first download is about 61 MB. On a cellular
+  connection clips keep playing from the site.
+- **No progress shown.** The download runs in the background; a Settings
+  line with the count could come later.
+
+### Verified
+
+- iOS simulator (Expo Go), with `EXPO_PUBLIC_AUDIO_HOST` pointed at the dev
+  server in a git-ignored `.env.local`: the pack filled to 2,976 files
+  (67 MB on disk) about 24 seconds after launch, in
+  `Library/Caches/.../audio-pack`. Every file's SHA-256 matched its name.
+- With the host pointed at an address where nothing answers
+  (`127.0.0.1:9`) and the app restarted: "Hear it" on distend opened a local
+  `file://` MP3, and the player stopped at 1.593 seconds, the length of
+  `words/85.mp3` (1.5935 s). The pack still held all 2,976 files.
+- 9 unit tests for the plan (hashes, what to download and delete, the MP3
+  check, the download limit). App: `tsc`, lint, 334 jest tests.
+- Not run: Android, which needs the new build.
+
+### For next time
+
+The Android fingerprint changes from c3f4278 to 2dc6d90, because listing
+`expo-file-system` directly moves it in `node_modules` and `expo-network` is
+new. After this merges, the `EAS Update` workflow publishes nothing for
+Android until a new preview build exists:
+`eas build --profile preview --platform android`, then install it.
