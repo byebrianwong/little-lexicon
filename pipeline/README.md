@@ -41,8 +41,8 @@ with `--only=<stage>`.
 | `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
 | `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
 | `generate` | `src/stages/03-generate.ts` | Per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Claude Batch API when `ANTHROPIC_API_KEY` is set; otherwise Gemini when `GEMINI_API_KEY` is set (eight senses per request, saved as each returns). Zod-validated before any write. Skipped with neither key. |
-| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword and example sentence of the taught words, saved under `assets/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`), which the app bundles. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
-| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also write `src/content/audioClips.ts`, which requires every clip so Metro bundles it. A clip whose sentence or IPA changed after it was made is left out (the app uses the device's speech for it) until `audio` runs again. |
+| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword and example sentence of the taught words, saved under `public/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`), which the web export copies to the site. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
+| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also give each word and sentence the `audioUrl` of its clip: its path under the site's `audio/` folder and a hash of its bytes (`audio/words/1.mp3?v=f6a11b644f7b`). A clip whose sentence or IPA changed after it was made gets no URL (the app uses the device's speech for it) until `audio` runs again. |
 
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
@@ -90,7 +90,7 @@ npm run build                 # tsc --noEmit
 stale, then export. After other content changes (new words, or editing the
 record by hand), run `npx tsx src/run.ts --only=audio`, then `--only=export`.
 A clip whose text or IPA changed is left out of the export until it is
-remade, and the app's test `src/content/audioClips.test.ts` fails in CI while
+remade, and the app's test `src/content/audio.test.ts` fails in CI while
 any word or sentence has no clip.
 
 The first live run downloads Open English WordNet (about 10 MB zipped, 80 MB
@@ -200,8 +200,8 @@ estimates, and the words file size.
   Batch API is 50% off, and the shared instruction prefix is prompt-cached. The
   dry-run estimate for the 317-word sample is well under a dollar.
 - **Text to speech: Kokoro, run locally.** Free. The cost is time (about half
-  an hour for a full run) and app size: the clips are bundled, so the summary
-  reports their total. Human pronunciations from the Free Dictionary API are
+  an hour for a full run) and download size: learners fetch the clips from the
+  site, so the summary reports their total. Human pronunciations from the Free Dictionary API are
   used for headwords when a US recording exists.
 - **Words file size.** 317 words with dictionary content only: 439 KB as
   written, 41 KB compressed. Generated content will add to that; the export

@@ -87,17 +87,16 @@ missing).
    again.
 6. `npx tsx src/curate.ts apply <worksheet>` writes the record
    (`pipeline/data/content-db.json`), remakes the clips for the changed
-   sentences, and exports `src/content/words.json` and
-   `src/content/audioClips.ts`. It writes nothing if any word fails. The
+   sentences in `public/audio`, and exports `src/content/words.json` with
+   each clip's URL. It writes nothing if any word fails. The
    clips need the Kokoro env (`pipeline/README.md` > Audio); a dozen words
    take about a minute. Without the env, `apply` warns and skips them.
 7. From the repo root, run `npx jest src/lib/content src/content` to check
    the exported file and that every word and sentence has a clip. If the clip
    test fails, run `npx tsx src/run.ts --only=audio`, then `--only=export`,
    from `pipeline/`. CI runs the same test.
-8. Commit the record, the words file, `assets/audio` and
-   `src/content/audioClips.ts` together, and list the words in the commit
-   message.
+8. Commit the record, the words file and `public/audio` together, and list
+   the words in the commit message.
 
 ## The second review
 
