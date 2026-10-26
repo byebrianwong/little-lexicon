@@ -2216,8 +2216,10 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-17
-  (after adding 100 more words): all 579 taught words reviewed (26 more are retired), 1 flagged (assiduous, one weak wrong answer), 0 to go. Every word has
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-25
+  (after re-review batch 4): all 579 taught words reviewed (26 more are
+  retired), 0 flagged, 0 to go. Batch 5 of the re-review of older words
+  (the last 89 last reviewed before 2026-10-17) is still to do. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
   idolatry and misanthrope have no synonyms on purpose (none fit without giving the word
@@ -2696,6 +2698,38 @@ in wrong answers. Curation will catch it word by word.
     main-session fixes followed text that was past the cut (Cambridge's
     note that saints' names are given to places, WordUp's car/plane/ship
     list for refuel). Lines now run to 400 characters.
+- 2026-10-25: re-review of older words, batch 4 of 5: the 89 words from
+  acumen to temerity. All 89 fixed, 0 flagged. assiduous, flagged since
+  2026-10-12, is now fixed: its tree option (deciduous) is gone, replaced
+  by acidulous and asinine, which describe people.
+  - The words: acumen, adroit, anathema, anodyne, apocryphal, approbation,
+    arcane, assiduous, avarice, bellicose, blithe, brusque, bucolic, callow,
+    canard, capitulate, censure, chary, chimera, circumspect, clandestine,
+    conflate, consternation, culpable, cupidity, decry, demur, denigrate,
+    deprecate, dilettante, discomfit, disingenuous, dissolute, duplicity,
+    egregious, equanimity, eschew, expiate, feckless, fecund, florid,
+    foible, gainsay, garish, germane, grandiloquent, gratuitous, harbinger,
+    hubris, idiosyncrasy, ignominious, impetuous, importune, incorrigible,
+    indefatigable, insouciant, inure, invective, jocular, judicious,
+    lachrymose, lambaste, languid, largesse, lionize, lugubrious,
+    malevolent, mawkish, misanthrope, modicum, mordant, obviate, odious,
+    ossify, panegyric, pariah, pejorative, peripatetic, phlegmatic,
+    plaudit, proscribe, querulous, rapacious, recant, redolent, sanguine,
+    specious, supercilious, temerity.
+  - The second reviewer failed 35 of 89 in round 1 and 4 in round 2. The
+    main session wrote round 3 for those 4 (harbinger's definition, and one
+    wrong answer each on judicious, peripatetic and sanguine).
+  - The most common round 1 failure was an example whose blank a wrong
+    answer also fits (stupidity on cupidity, archaic on arcane, brisk on
+    brusque, specific on specious and about ten more). Copied wrong answers
+    came second.
+  - Three look-alikes read as the target's opposite (paragon on pariah,
+    patronize on lionize, ludicrous on judicious), and sanguinary is an old
+    sense of sanguine itself. All were swapped.
+  - The run was paused for two days. Main gained six commits meanwhile,
+    and `apply` now remakes Kokoro clips. The uncommitted apply was undone,
+    the branch brought up to date, and every worksheet applied again. The
+    paused agents resumed with SendMessage and lost no work.
 
 ## The placement test no longer finishes during render
 
