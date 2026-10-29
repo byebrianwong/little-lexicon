@@ -10,6 +10,7 @@ const meta = {
     profile: profile(),
     reviewsToday: 9,
     counts: counts(),
+    onOpenWords: () => {},
     onRefresh: () => {},
     onStartSession: () => {},
     onPractice: () => {},
@@ -61,6 +62,6 @@ export const LongRunningAccount: Story = {
   args: {
     profile: VETERAN_PROFILE,
     reviewsToday: 22,
-    counts: counts({ known: 1240, learning: 68, due: 152, knownTotal: 1240, total: 1500 }),
+    counts: counts({ known: 1240, learning: 68, due: 152 }),
   },
 };

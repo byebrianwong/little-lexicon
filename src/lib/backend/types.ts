@@ -12,6 +12,7 @@ import type {
   Profile,
   SessionItem,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
 
 export interface AuthSession {
@@ -156,6 +157,11 @@ export interface Backend {
   getAnswerHistory(): Promise<AnswerRecord[]>;
   /** Log a practice answer. It does not touch the review schedule. */
   logPracticeAnswer(input: PracticeAnswerInput): Promise<void>;
+  /**
+   * When the review schedule brings back each word it holds, for the Learning
+   * view (features/learning). Not in any order.
+   */
+  getWordSchedules(): Promise<WordSchedule[]>;
 
   /**
    * Save a learner's report of a problem with a word's content. The curation

@@ -3,13 +3,15 @@ import { useCallback } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { HomeView } from '@/features/home/HomeView';
 import { useProfile } from '@/features/review/queries';
-import { useProgressCounts, useTodayStats } from '@/features/stats/queries';
+import { openWords } from '@/features/learning/links';
+import { useYourWords } from '@/features/learning/queries';
+import { useTodayStats } from '@/features/stats/queries';
 import { pushOnce } from '@/lib/navigation';
 
 export default function Home() {
   const qc = useQueryClient();
   const profile = useProfile();
-  const counts = useProgressCounts();
+  const { counts } = useYourWords();
   const today = useTodayStats();
 
   useFocusEffect(
@@ -22,7 +24,8 @@ export default function Home() {
     <HomeView
       profile={profile.data}
       reviewsToday={today.data?.reviewsDone ?? 0}
-      counts={counts.data}
+      counts={counts}
+      onOpenWords={openWords}
       onRefresh={() => qc.invalidateQueries()}
       onStartSession={() => pushOnce('/session')}
       onPractice={() => pushOnce('/practice')}

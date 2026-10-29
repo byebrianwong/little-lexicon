@@ -12,18 +12,21 @@ import {
   Row,
   Screen,
   Section,
-  Stat,
 } from '@/components/ui';
 import { levelProgress } from '@/features/gamification/xp';
 import { needsLevel } from '@/features/onboarding/levels';
-import type { ProgressCounts } from '@/lib/backend/types';
+import { WordStat } from '@/features/learning/WordStat';
+import type { WordCounts, WordStatus } from '@/features/learning/wordProgress';
 import type { Profile } from '@/lib/types';
 
 export interface HomeViewProps {
   /** Undefined until the profile query resolves. */
   profile: Profile | undefined;
   reviewsToday: number;
-  counts: ProgressCounts | undefined;
+  /** Learning and Known from the word tracker, Due from the schedule. */
+  counts: WordCounts | undefined;
+  /** Open the Learning view of the Words tab on one list. */
+  onOpenWords: (status: WordStatus) => void;
   onRefresh: () => void;
   onStartSession: () => void;
   onPractice: () => void;
@@ -39,6 +42,7 @@ export function HomeView({
   profile,
   reviewsToday,
   counts,
+  onOpenWords,
   onRefresh,
   onStartSession,
   onPractice,
@@ -101,9 +105,17 @@ export function HomeView({
       </View>
 
       <Row className="mt-9 items-start gap-4">
-        <Stat value={counts?.due ?? 0} label="Due now" />
-        <Stat value={counts?.learning ?? 0} label="Learning" />
-        <Stat value={counts?.knownTotal ?? 0} label="Known" />
+        <WordStat
+          value={counts?.due}
+          label="Due now"
+          onPress={() => onOpenWords('due')}
+        />
+        <WordStat
+          value={counts?.learning}
+          label="Learning"
+          onPress={() => onOpenWords('learning')}
+        />
+        <WordStat value={counts?.known} label="Known" onPress={() => onOpenWords('known')} />
       </Row>
 
       {lvl ? (

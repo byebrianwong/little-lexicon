@@ -16,6 +16,7 @@ const meta = {
   args: {
     profile: profile(),
     counts: counts(),
+    onOpenWords: () => {},
     retention: 0.87,
     daily: dailyStats(84),
     forecast: forecast(14),

@@ -87,6 +87,15 @@ describe('buildTrackers', () => {
     expect(t.lastAnsweredAt).toBe(at(1));
   });
 
+  it('counts every answer, the right ones, and the first and last times', () => {
+    const history = [answer(1, true, 9), answer(1, false, 4), answer(1, true, 2), answer(1, true, 0)];
+    const t = buildTrackers(history.reverse(), NOW).get(1)!;
+    expect(t.answers).toBe(4);
+    expect(t.rightAnswers).toBe(3);
+    expect(t.firstAnsweredAt).toBe(at(9));
+    expect(t.lastAnsweredAt).toBe(at(0));
+  });
+
   it('keeps words apart', () => {
     const trackers = buildTrackers([answer(1, false, 0), ...cleanRun(2, 5)], NOW);
     expect(trackers.get(1)!.status).toBe('learning');

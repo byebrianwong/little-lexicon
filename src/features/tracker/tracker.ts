@@ -41,6 +41,11 @@ export interface WordTracker {
   latestRight: number;
   /** How many answers `latestRight` covers. */
   latestCount: number;
+  /** Every answer to the word, in any mode. */
+  answers: number;
+  /** How many of `answers` were right. */
+  rightAnswers: number;
+  firstAnsweredAt: string;
   lastAnsweredAt: string;
 }
 
@@ -86,6 +91,9 @@ export function buildTrackers(
       mistakeRecently: lastMistake >= 0 && Date.parse(answers[lastMistake]!.at) >= recentFrom,
       latestRight: latest.filter((a) => a.correct).length,
       latestCount: latest.length,
+      answers: answers.length,
+      rightAnswers: answers.filter((a) => a.correct).length,
+      firstAnsweredAt: answers[0]!.at,
       lastAnsweredAt: answers[answers.length - 1]!.at,
     });
   }

@@ -12,6 +12,7 @@ import type {
   SessionItem,
   UserWordState,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
 import { todayString, toDayString, addDays } from '@/lib/date';
 import type {
@@ -384,6 +385,16 @@ export class DemoBackend implements Backend {
         at: l.answered_at,
       })),
     ];
+  }
+
+  async getWordSchedules(): Promise<WordSchedule[]> {
+    await this.ensureLoaded();
+    return Object.values(this.data.states).map((r) => ({
+      wordId: r.word_id,
+      due: r.due,
+      isKnown: r.is_known,
+      isSuspended: r.is_suspended,
+    }));
   }
 
   async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {
