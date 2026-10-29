@@ -3875,12 +3875,16 @@ pending change until someone reviewed it.
   runs all ended at 613, including runs with fonts delayed by 100 to 400 ms
   and the CPU slowed four times. Before the change, 6 normal runs gave 613
   four times and 614 twice.
+- Chromatic build 156 (this change, all 177 stories recaptured) and build
+  157 (a comment-only change to the story file, so TurboSnap recaptured the
+  Settings stories) both produced `capture-c6c61c46` for this story and
+  passed with no changes.
 - `tsc`, lint, 334 jest tests.
 
 ### For next time
 
-- The first Chromatic build with this change shows the story as changed
-  against the old baseline. The new image should match build 149's pending
-  capture. Accepting it on main once clears it for every branch.
+- Main's build 149 still holds this story as a pending change, and branches
+  cut from d5ad2a3 inherit it. Merging main into such a branch after this
+  lands, or accepting the one change on build 149, clears it.
 - Any play function that scrolls is exposed to the same race. The loader now
   covers all stories.
