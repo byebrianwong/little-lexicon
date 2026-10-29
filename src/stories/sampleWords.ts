@@ -63,6 +63,7 @@ function buildWord(word: SeedWord, index: number): WordContent {
     watchOut: word.watchOut ?? null,
     pairings: word.pairings ?? [],
     audioUrl: null, // the app speaks the word on the device when there is no clip
+    hookAudioUrl: null,
     senses,
     relations,
     mnemonics: [word.mnemonic],

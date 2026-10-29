@@ -27,7 +27,7 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
-import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakHook, speakSentence, speakWord } from '@/lib/audio';
 import { pickExample } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
 import { ReportProblem } from '@/features/report/ReportProblem';
@@ -312,6 +312,16 @@ function WordRow({
                 accessibilityLabel="Hear the example sentence"
                 onPress={() => {
                   if (soundEnabled) void speakSentence(example);
+                }}
+              />
+            ) : null}
+            {word.mnemonics[0] ? (
+              <TextButton
+                icon="speaker"
+                label="Hook"
+                accessibilityLabel="Memory hook: hear it read out"
+                onPress={() => {
+                  if (soundEnabled) void speakHook(word);
                 }}
               />
             ) : null}

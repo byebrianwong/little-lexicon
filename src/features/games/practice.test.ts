@@ -42,6 +42,7 @@ function word(id: number): WordContent {
     watchOut: null,
     pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [],
     relations: [],
     mnemonics: [],

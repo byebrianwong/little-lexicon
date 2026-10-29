@@ -1,9 +1,10 @@
-// The offline audio pack: every pronunciation clip, downloaded once and kept
-// on the phone, so words and sentences play without a connection.
+// The offline audio pack: every clip, downloaded once and kept on the phone,
+// so words, sentences, definitions and memory hooks play without a
+// connection.
 //
 // On each launch, syncAudioPack compares the clips the words file uses with
 // the files on the phone. It deletes the ones no longer used and, on Wi-Fi,
-// downloads the missing ones: about 61 MB the first time, then only new or
+// downloads the missing ones: about 93 MB the first time, then only new or
 // remade clips. Until a clip is on the phone, src/lib/audio plays it from the
 // site.
 //

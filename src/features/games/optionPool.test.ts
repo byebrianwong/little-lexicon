@@ -38,6 +38,7 @@ function word(id: number, headword: string, def: string, distractors: string[]):
     watchOut: null,
     pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [sense],
     relations: [{ relatedLemma: `syn${id}`, relationType: 'synonym' }],
     mnemonics: [],

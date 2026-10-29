@@ -38,6 +38,8 @@ export interface WordContent {
   /** 2 to 4 common pairings of the first sense ("tensions abate"), or none. */
   pairings: string[];
   audioUrl: string | null;
+  /** Clip that reads the memory hook the app shows (`mnemonics[0]`). */
+  hookAudioUrl: string | null;
   senses: SenseContent[];
   relations: RelationContent[];
   mnemonics: string[];

@@ -71,6 +71,8 @@ export interface ExportWord {
   watchOut: string | null;
   pairings: string[];
   audioUrl: string | null;
+  /** The clip that reads the memory hook the app shows; stage 05 fills it in. */
+  hookAudioUrl: string | null;
   senses: ExportSense[];
   relations: ExportRelation[];
   mnemonics: string[];
@@ -156,6 +158,7 @@ export function buildWordsFile(
       watchOut: word.watch_out ?? null,
       pairings: word.pairings ?? [],
       audioUrl: word.audio_url,
+      hookAudioUrl: null,
       senses: senses.map((s, i) => ({
         senseId: s.id,
         definition: s.definition,

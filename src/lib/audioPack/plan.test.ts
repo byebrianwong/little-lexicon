@@ -20,6 +20,7 @@ function word(
     watchOut: null,
     pairings: [],
     audioUrl,
+    hookAudioUrl: null,
     senses: [
       {
         senseId: id * 10,
@@ -72,6 +73,13 @@ describe('wantedClips', () => {
       ['dddddd', 'audio/definitions/10.mp3?v=dddddd'],
       ['bbbbbb', 'audio/sentences/100.mp3?v=bbbbbb'],
       ['cccccc', 'audio/sentences/200.mp3?v=cccccc'],
+    ]);
+  });
+
+  it('collects memory hook clips too', () => {
+    const hooked = { ...word(3, null, []), hookAudioUrl: 'audio/hooks/3.mp3?v=eeeeee' };
+    expect([...wantedClips([hooked, word(4, null, [])])]).toEqual([
+      ['eeeeee', 'audio/hooks/3.mp3?v=eeeeee'],
     ]);
   });
 });

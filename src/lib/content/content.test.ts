@@ -16,6 +16,7 @@ function makeWord(wordId: number, headword: string, tier: number, rank: number |
     watchOut: null,
     pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [
       {
         senseId: wordId * 10,

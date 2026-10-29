@@ -29,6 +29,7 @@ function word(
     watchOut: null,
     pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [
       {
         senseId: wordId,
