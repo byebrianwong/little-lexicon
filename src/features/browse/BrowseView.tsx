@@ -26,7 +26,7 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
-import { speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { ReportProblem } from '@/features/report/ReportProblem';
 import { SaveWordButton } from '@/features/feed/SaveWordButton';
@@ -266,7 +266,7 @@ function WordRow({
             </Section>
           ) : null}
 
-          <Row className="gap-6">
+          <Row className="flex-wrap gap-x-6">
             <TextButton
               icon="speaker"
               label="Word"
@@ -275,6 +275,16 @@ function WordRow({
                 if (soundEnabled) void speakWord(word);
               }}
             />
+            {sense ? (
+              <TextButton
+                icon="speaker"
+                label="Definition"
+                accessibilityLabel="Definition: hear it read out"
+                onPress={() => {
+                  if (soundEnabled) void speakDefinition(sense);
+                }}
+              />
+            ) : null}
             {example ? (
               <TextButton
                 icon="speaker"

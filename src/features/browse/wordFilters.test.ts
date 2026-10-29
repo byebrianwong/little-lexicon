@@ -33,6 +33,7 @@ function word(
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        audioUrl: null,
         examples: [],
         distractors: [],
       },

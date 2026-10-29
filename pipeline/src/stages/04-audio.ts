@@ -1,19 +1,22 @@
 // Stage 04 (task 1.4): audio generation.
 //
-// Make an MP3 for every headword and every example sentence of the words still
-// taught, and save it under public/audio at deterministic paths
-// (words/<id>.mp3, sentences/<id>.mp3). The web export copies public/audio to
-// the site, and stage 05 gives each word and sentence the URL of its clip.
+// Make an MP3 for every headword, example sentence and definition of the
+// words still taught, and save it under public/audio at deterministic paths
+// (words/<id>.mp3, sentences/<id>.mp3, definitions/<sense id>.mp3). The web
+// export copies public/audio to the site, and stage 05 gives each word,
+// sentence and definition the URL of its clip.
 //
 // Headwords use a US human recording from the Free Dictionary API when there
-// is one, and text to speech otherwise. Sentences always use text to speech.
+// is one, and text to speech otherwise. Sentences and definitions always use
+// text to speech. A definition clip reads the definition the app shows: the
+// plain one when the sense has it.
 // The voice is Kokoro (an open model, run on this computer by
 // tools/kokoro-tts.py), and the word's IPA pins how it says the headword, so
 // the clip matches the pronunciation the app shows.
 //
 // Each clip records a key made from its text, IPA and voice. A clip is made
-// again when its key changes (a rewritten sentence, a fixed IPA, a new voice),
-// and clips for removed words or sentences are deleted. Dry-run records stub
+// again when its key changes (a rewritten sentence or definition, a fixed IPA,
+// a new voice), and clips for removed words, sentences or senses are deleted. Dry-run records stub
 // objects with estimated sizes. A live run without the Kokoro env skips this
 // stage.
 
@@ -24,11 +27,13 @@ import type { RunContext } from '../config.ts';
 import type { WordRow } from '../lib/types.ts';
 import { estimateAudioBytes } from '../lib/stubs.ts';
 import {
+  definitionClipKey,
   humanClipKey,
   ipaToKokoro,
   kokoroText,
   pickUsRecording,
   sentenceClipKey,
+  spokenDefinition,
   TTS_KBPS,
   ttsVoiceLabel,
   wordClipKey,
@@ -41,7 +46,7 @@ const MB = 1024 * 1024;
 interface TtsJob {
   /** Where the clip goes under public/audio. */
   path: string;
-  kind: 'word' | 'sentence';
+  kind: 'word' | 'sentence' | 'definition';
   /** The plain text, as the app shows it. */
   text: string;
   /** The text with the headword's pronunciation pinned, as Kokoro reads it. */
@@ -186,6 +191,27 @@ async function audioSentences(
   }
 }
 
+async function audioDefinitions(
+  ctx: RunContext,
+  words: WordRow[],
+  pins: Map<number, Pin>,
+  wanted: Set<string>,
+  jobs: TtsJob[],
+): Promise<void> {
+  const voice = ttsVoiceLabel(ctx.env.ttsVoice);
+  for (const word of words) {
+    const pin = pins.get(word.id) ?? null;
+    for (const sense of await ctx.store.listSensesForWord(word.id)) {
+      const path = `definitions/${sense.id}.mp3`;
+      wanted.add(path);
+      const text = spokenDefinition(sense.plain_language_definition, sense.definition);
+      const key = definitionClipKey(text, word, voice);
+      if (await isCurrent(ctx, path, key)) continue;
+      jobs.push({ path, kind: 'definition', text, kokoroText: kokoroText(text, pin), key });
+    }
+  }
+}
+
 /** Run tools/kokoro-tts.py on a jobs file; it writes one MP3 per job. */
 function runKokoro(ctx: RunContext, jobsFile: string): Promise<void> {
   const script = join(ctx.paths.root, 'tools', 'kokoro-tts.py');
@@ -205,7 +231,8 @@ async function synthesize(ctx: RunContext, jobs: TtsJob[]): Promise<void> {
   const record = (job: TtsJob, bytes: number) => {
     ctx.metrics.ttsChars += job.text.length;
     if (job.kind === 'word') ctx.metrics.audioWordsSynthed += 1;
-    else ctx.metrics.audioSentencesSynthed += 1;
+    else if (job.kind === 'sentence') ctx.metrics.audioSentencesSynthed += 1;
+    else ctx.metrics.audioDefinitionsSynthed += 1;
     account(ctx, bytes);
   };
   if (!ctx.useTts) {
@@ -249,7 +276,7 @@ async function synthesize(ctx: RunContext, jobs: TtsJob[]): Promise<void> {
   await rm(dir, { recursive: true, force: true });
 }
 
-/** Delete clips whose word or sentence is gone or retired. */
+/** Delete clips whose word, sentence or sense is gone or retired. */
 async function pruneAudio(ctx: RunContext, wanted: Set<string>): Promise<number> {
   let removed = 0;
   for (const clip of await ctx.store.listAudio()) {
@@ -279,6 +306,7 @@ export async function audio(ctx: RunContext): Promise<void> {
   const pins = pinsFor(ctx, words);
   await audioWords(ctx, words, pins, wanted, jobs);
   await audioSentences(ctx, words, pins, wanted, jobs);
+  await audioDefinitions(ctx, words, pins, wanted, jobs);
   await synthesize(ctx, jobs);
   // With --limit only some words were visited, so nothing else can be judged unused.
   const pruned = ctx.limit ? 0 : await pruneAudio(ctx, wanted);
@@ -288,6 +316,7 @@ export async function audio(ctx: RunContext): Promise<void> {
   const average = ctx.metrics.audioClips ? ctx.metrics.audioBytes / ctx.metrics.audioClips : 0;
   ctx.log.success(
     `Audio: +${ctx.metrics.audioWordsSynthed} word clips, +${ctx.metrics.audioSentencesSynthed} sentence clips, ` +
+      `+${ctx.metrics.audioDefinitionsSynthed} definition clips, ` +
       `${ctx.metrics.audioReusedHuman} human recordings, ${pruned} removed, ${ctx.metrics.ttsChars} chars. ` +
       `This run ${(average / 1024).toFixed(1)} KB per clip; all audio ${(total / MB).toFixed(2)} MB.`,
   );

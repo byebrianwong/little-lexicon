@@ -3836,3 +3836,66 @@ The Android fingerprint changes from c3f4278 to 2dc6d90, because listing
 new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
+
+## Definitions read out loud (2026-10-29)
+
+Every screen that shows a word's definition now has a "Definition" button
+that reads it out: the Discover feed, an open row in All words, the new-word
+card and the answer panel. It reads the definition the screen shows, which
+is the plain one when the sense has it, else the dictionary one.
+
+### What changed
+
+- Pipeline stage 04 makes a Kokoro clip for every sense's definition, at
+  `public/audio/definitions/<sense id>.mp3`, the same way it makes sentence
+  clips: same voice, the headword's IPA pinned if the text uses it, and a key
+  made from the text, the IPA and the voice. A rewritten definition makes its
+  clip stale, so `curate.ts apply` remakes it like a sentence clip.
+- Stage 05 gives each sense in `words.json` an `audioUrl` for its definition
+  clip. `SenseContent` in `src/lib/types.ts` has the new field.
+- `speakDefinition` in `src/lib/audio.ts` plays the clip (offline pack first,
+  then the site), and falls back to the device's voice when there is none.
+- The offline pack downloads the definition clips too.
+- `src/content/audio.test.ts` now fails CI when any definition has no clip.
+
+### Decisions
+
+- **Clips, not device speech alone.** The device voice would have needed no
+  pipeline work, but it sounds different from the word and sentence clips and
+  varies by phone. Clips keep one voice throughout and work offline.
+- **A clip for every sense, not only the first.** Screens show only the first
+  sense today. Clipping all 841 senses instead of 579 keeps the pipeline free
+  of a rule about which sense a screen shows, for about 4 MB more.
+- **A separate button.** Tapping "Hear it" still says only the word.
+- **The row wraps.** At 375 px the feed and All words fit "Hear it",
+  "Definition" and "Sentence" on one line with 18 px to spare. On the answer
+  panel and the new-word card, "Save for later" moves to a second line on a
+  phone; it shares the line on wider screens.
+
+### Size
+
+841 clips, 13.3 MB (about 16 KB each); Kokoro took 8 minutes on the M5. All
+audio on the site is now 75 MB, which is also the first offline-pack download
+on Wi-Fi (it was about 62 MB). The clips are served by the site, not bundled,
+so EAS Update's asset limit is not affected, and there is no native change:
+an OTA update is enough once the site has deployed the clips.
+
+### Verified
+
+- Web (demo mode, 375 px): "Definition" in All words played
+  `audio/definitions/170.mp3` (empirical; 200, audio/mpeg, 15.7 KB) with no
+  device-speech fallback. Before the clips were exported, the same button
+  spoke the shown definition with the device voice.
+- Whisper (`small.en`) on 10 clips spread across the file: each said its
+  definition. The only differences were two short unstressed words Whisper
+  misheard.
+- App: `tsc`, lint, 334 jest tests (the clip test now covers definitions and
+  failed with 841 missing before the export). Pipeline: `tsc`, 80 unit tests,
+  and the dry run.
+- iOS simulator (Expo Go), with `EXPO_PUBLIC_AUDIO_HOST` pointed at the dev
+  server in a git-ignored `.env.local` (removed afterwards): the button row
+  fits on one line in the feed. The offline pack downloaded the definition
+  clips and held 3,815 files (579 words, 2,395 sentences, 841 definitions).
+  "Definition" on insouciant played the stored `file://` MP3 to the end,
+  about 4.5 seconds for the 4.39-second `definitions/748.mp3`.
+- Not run: Android.

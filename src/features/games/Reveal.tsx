@@ -1,5 +1,5 @@
 // Shared reveal shown after every answer: correctness, the correct answer, one
-// example, and audio (Phase 3.1). Modes render this in their answered state so
+// example, and audio for the word and its definition (Phase 3.1). Modes render this in their answered state so
 // audio-on-reveal and the continue affordance are consistent everywhere.
 //
 // It is set like a dictionary entry under an ink rule: the verdict in small
@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react';
 import { Pressable, View } from 'react-native';
 import type { ExampleContent, WordContent } from '@/lib/types';
 import type { AnswerGrade } from '@/lib/text';
-import { speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
 import {
   Body,
   Button,
@@ -31,11 +31,20 @@ import { useGameSavedWords } from './GameContext';
 export function AudioButton({
   onPress,
   label = 'Play audio',
+  accessibilityLabel,
 }: {
   onPress: () => void;
   label?: string;
+  accessibilityLabel?: string;
 }) {
-  return <TextButton icon="speaker" label={label} onPress={onPress} />;
+  return (
+    <TextButton
+      icon="speaker"
+      label={label}
+      accessibilityLabel={accessibilityLabel}
+      onPress={onPress}
+    />
+  );
 }
 
 /**
@@ -86,8 +95,8 @@ export function Reveal({
     requestAnimationFrame(scrollToReveal);
   }
 
-  const primaryDef =
-    content.senses[0]?.plainLanguageDefinition ?? content.senses[0]?.definition ?? '';
+  const sense = content.senses[0];
+  const primaryDef = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
 
   const nearMiss = correct && attempt?.grade === 'near';
   const title = !correct ? 'Not quite' : nearMiss ? 'Close enough' : 'Correct';
@@ -136,6 +145,13 @@ export function Reveal({
             onPress={() => speakWord(content)}
             label="Hear it"
           />
+          {sense ? (
+            <AudioButton
+              onPress={() => speakDefinition(sense)}
+              label="Definition"
+              accessibilityLabel="Definition: hear it read out"
+            />
+          ) : null}
           {saved ? (
             <SaveWordButton
               headword={content.headword}

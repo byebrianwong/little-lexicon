@@ -20,6 +20,7 @@ function word(id: number, headword: string, def: string, distractors: string[]):
     plainLanguageDefinition: def,
     senseOrder: 1,
     register: null,
+    audioUrl: null,
     examples: [{ exampleId: id * 1000, text: `${headword} used here.`, audioUrl: null, clozeTarget: headword }],
     distractors: distractors.map((d) => ({ lemma: d, kind: 'mc', difficulty: 3 })),
   };
@@ -109,6 +110,7 @@ function clozeWord(
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        audioUrl: null,
         examples: sentences.map((s, i) => ({
           exampleId: id * 1000 + i,
           text: typeof s === 'string' ? s : s.text,

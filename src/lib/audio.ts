@@ -1,9 +1,9 @@
-// Audio playback for word and sentence pronunciation (Phase 3.5).
+// Audio playback for words, example sentences and definitions (Phase 3.5).
 //
 // Clips are made by the pipeline (stage 04, the Kokoro voice model or a US
-// human recording for headwords) and served by the web app's site; each word
-// and sentence in the words file has the audioUrl of its clip (src/lib/
-// clipUrl.ts). Native apps play the copy in the offline pack when it has one
+// human recording for headwords) and served by the web app's site; each word,
+// sentence and definition in the words file has the audioUrl of its clip
+// (src/lib/clipUrl.ts). Native apps play the copy in the offline pack when it has one
 // (src/lib/audioPack), and otherwise the one on the site. When there is no
 // clip, or it cannot load, the device's speech
 // synthesizer (expo-speech) speaks the text with the most natural voice it
@@ -136,6 +136,23 @@ export async function speakSentence(example: SpeakableExample): Promise<void> {
   return play({
     source: clip(example.audioUrl),
     fallbackText: example.text,
+  });
+}
+
+export interface SpeakableSense {
+  definition: string;
+  plainLanguageDefinition: string | null;
+  audioUrl?: string | null;
+}
+
+/**
+ * Read out the definition the app shows (the plain one when the sense has it),
+ * in the same order of preference as speakWord.
+ */
+export async function speakDefinition(sense: SpeakableSense): Promise<void> {
+  return play({
+    source: clip(sense.audioUrl),
+    fallbackText: sense.plainLanguageDefinition ?? sense.definition,
   });
 }
 

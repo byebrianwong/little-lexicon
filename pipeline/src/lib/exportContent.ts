@@ -36,6 +36,8 @@ export interface ExportSense {
   plainLanguageDefinition: string | null;
   senseOrder: number;
   register: string | null;
+  /** The clip that reads the definition; stage 05 fills it in. */
+  audioUrl: string | null;
   examples: ExportExample[];
   distractors: ExportDistractor[];
 }
@@ -142,6 +144,7 @@ export function buildWordsFile(
         plainLanguageDefinition: s.plain_language_definition,
         senseOrder: s.sense_order,
         register: s.register,
+        audioUrl: null,
         examples: [...(examplesBySense.get(s.id) ?? [])]
           .sort((a, b) => Number(b.is_generated) - Number(a.is_generated) || a.id - b.id)
           .map((e) => ({

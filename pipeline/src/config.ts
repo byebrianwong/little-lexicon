@@ -82,6 +82,7 @@ export class Metrics {
   ttsChars = 0;
   audioWordsSynthed = 0;
   audioSentencesSynthed = 0;
+  audioDefinitionsSynthed = 0;
   audioReusedHuman = 0;
   audioBytes = 0;
   audioClips = 0;

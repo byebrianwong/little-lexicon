@@ -35,7 +35,7 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
-import { speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import type { FeedStatus } from './feedState';
 
@@ -235,7 +235,7 @@ function WordPage({
           {example ? (
             <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           ) : null}
-          <Row className="mt-2 gap-6">
+          <Row className="mt-2 flex-wrap gap-x-6">
             <TextButton
               icon="speaker"
               label="Hear it"
@@ -244,6 +244,16 @@ function WordPage({
                 if (soundEnabled) void speakWord(word);
               }}
             />
+            {sense ? (
+              <TextButton
+                icon="speaker"
+                label="Definition"
+                accessibilityLabel="Definition: hear it read out"
+                onPress={() => {
+                  if (soundEnabled) void speakDefinition(sense);
+                }}
+              />
+            ) : null}
             {example ? (
               <TextButton
                 icon="speaker"

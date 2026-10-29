@@ -1,6 +1,7 @@
 // Compact introduction shown once before a new word is first quizzed
 // (Phase 3.2). Brief per the copy rules: word, part of speech, IPA, plain
-// definition, one example, audio, optional mnemonic.
+// definition, one example, audio for the word and the definition, optional
+// mnemonic.
 
 import { useEffect, useState } from 'react';
 import { View } from 'react-native';
@@ -15,7 +16,7 @@ import {
   Section,
   Spinner,
 } from '@/components/ui';
-import { speakWord } from '@/lib/audio';
+import { speakDefinition, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
@@ -85,6 +86,13 @@ export function WordIntro({
             onPress={() => speakWord(content)}
             label="Hear it"
           />
+          {sense ? (
+            <AudioButton
+              onPress={() => speakDefinition(sense)}
+              label="Definition"
+              accessibilityLabel="Definition: hear it read out"
+            />
+          ) : null}
           {saved ? (
             <SaveWordButton
               headword={content.headword}

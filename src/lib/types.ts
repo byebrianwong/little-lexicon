@@ -25,6 +25,8 @@ export interface SenseContent {
   plainLanguageDefinition: string | null;
   senseOrder: number;
   register: string | null;
+  /** Clip that reads the definition the app shows (the plain one when there is one). */
+  audioUrl: string | null;
   examples: ExampleContent[];
   distractors: DistractorContent[];
 }
