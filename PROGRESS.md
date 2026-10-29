@@ -3837,6 +3837,44 @@ new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
 
+## Word audio moved next to the pronunciation (2026-10-28)
+
+Brian asked for the "Hear it" button to become an icon beside the word and
+its pronunciation guide, since the label did not need spelling out.
+
+### What changed
+
+- New `Pronunciation` in `src/components/ui.tsx`: the IPA with a 44 px
+  speaker `IconButton` right after it. Screen readers hear "Hear <word>".
+- It replaces the "Hear it" button on Discover, the new-word card, the answer
+  reveal and the placement test. Multiple choice puts the same icon beside
+  the headword; when the word is hidden, its label is "Hear the word" so it
+  does not give the answer away.
+- Placement now sets the IPA on the headword's line, as the other screens do.
+- "Use it" drops the "Hear the word" button from its feedback section. The
+  answer reveal right below it now has the icon beside the same word.
+- "Sentence" on Discover keeps its label: it sits under the example, away
+  from the word.
+
+### Decisions
+
+- **All words left as it was.** Its headword line is part of the
+  expand/collapse button, and a button inside a button is invalid HTML on
+  web. Its "Word" and "Sentence" buttons stay in the open row.
+- **Listening keeps "Play again".** The word is hidden there and the button
+  is the whole question, so it keeps a label.
+
+### Verified
+
+- Storybook on web: Discover, Reveal, WordIntro, MultipleChoice and both
+  placement stories (with and without IPA). On a narrow column the IPA and
+  icon wrap to the next line together.
+- Chromatic build 153: 45 changes, all from this branch, accepted. On the
+  reveal, a long word with its IPA and the icon can push the part of speech
+  onto the next line (seen on "pragmatic" in the Use it stories).
+- `tsc`, lint, 334 jest tests.
+- Not run: iOS or Android.
+
 ## Storybook waits for fonts before rendering a story (2026-10-29)
 
 The Chromatic snapshot of `Screens/Settings` → `ChangingKnownWordFrequency`
