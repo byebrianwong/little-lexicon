@@ -3837,6 +3837,44 @@ new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
 
+## Word audio moved next to the pronunciation (2026-10-28)
+
+Brian asked for the "Hear it" button to become an icon beside the word and
+its pronunciation guide, since the label did not need spelling out.
+
+### What changed
+
+- New `Pronunciation` in `src/components/ui.tsx`: the IPA with a 44 px
+  speaker `IconButton` right after it. Screen readers hear "Hear <word>".
+- It replaces the "Hear it" button on Discover, the new-word card, the answer
+  reveal and the placement test. Multiple choice puts the same icon beside
+  the headword; when the word is hidden, its label is "Hear the word" so it
+  does not give the answer away.
+- Placement now sets the IPA on the headword's line, as the other screens do.
+- "Use it" drops the "Hear the word" button from its feedback section. The
+  answer reveal right below it now has the icon beside the same word.
+- "Sentence" on Discover keeps its label: it sits under the example, away
+  from the word.
+
+### Decisions
+
+- **All words left as it was.** Its headword line is part of the
+  expand/collapse button, and a button inside a button is invalid HTML on
+  web. Its "Word" and "Sentence" buttons stay in the open row.
+- **Listening keeps "Play again".** The word is hidden there and the button
+  is the whole question, so it keeps a label.
+
+### Verified
+
+- Storybook on web: Discover, Reveal, WordIntro, MultipleChoice and both
+  placement stories (with and without IPA). On a narrow column the IPA and
+  icon wrap to the next line together.
+- Chromatic build 153: 45 changes, all from this branch, accepted. On the
+  reveal, a long word with its IPA and the icon can push the part of speech
+  onto the next line (seen on "pragmatic" in the Use it stories).
+- `tsc`, lint, 334 jest tests.
+- Not run: iOS or Android.
+
 ## Storybook waits for fonts before rendering a story (2026-10-29)
 
 The Chromatic snapshot of `Screens/Settings` → `ChangingKnownWordFrequency`
@@ -3890,6 +3928,47 @@ pending change until someone reviewed it.
 - Any play function that scrolls is exposed to the same race. The loader now
   covers all stories.
 
+## Words no longer said twice on Android (2026-10-29)
+
+On Android every word was spoken twice: first the clip, then, 4 seconds
+later, the device's speech voice. If you had moved on by then, the second
+one played on the next screen. After a new word's intro, that screen is
+often "Which word means", so the voice said the answer.
+
+### Cause
+
+`play()` in `src/lib/audio` (added in #50) gives a clip 4 seconds to load
+and speaks the text if `player.isLoaded` is still false. On Android,
+expo-audio 1.0.13 reports `isLoaded` as "the player is in the ready state".
+A word clip lasts about a second, so by the check it has ended, the state
+is "ended", and `isLoaded` reads false. iOS and web keep `isLoaded` true
+after a clip ends, so only Android was affected.
+
+### What changed
+
+- `clipLoaded()` in `src/lib/audio` also counts a clip whose duration is
+  known. The duration stays set after the clip ends. A clip that never
+  loaded has none (0 on Android, NaN on iOS and web), so a real failure
+  still falls back to speech.
+- The new-word intro, the answer reveal and Listening each call
+  `stopAudio()` when they close. The word they played, or its speech
+  fallback, can no longer play on the next screen. React runs these
+  cleanups before the next screen's own audio starts, so that audio is not
+  cut off.
+
+### Verified
+
+- 6 unit tests in `src/lib/audio.test.ts`, with expo-audio and expo-speech
+  mocked. The two Android cases fail on the old check. App: `tsc`, lint,
+  340 jest tests.
+- Web demo, with clip plays and device speech logged: leaving the intro
+  for abate paused its clip, and nothing played during 5.5 seconds on the
+  question. Continue on the reveal paused abate before the next intro
+  played consummate. Device speech never ran.
+- Not run: Android. There is no Android SDK on this Mac. The cause comes
+  from reading expo-audio's Android source (`AudioModule.kt`,
+  `AudioPlayer.kt`).
+
 ## Definitions read out loud (2026-10-29)
 
 Every screen that shows a word's definition now has a "Definition" button
@@ -3919,11 +3998,14 @@ is the plain one when the sense has it, else the dictionary one.
 - **A clip for every sense, not only the first.** Screens show only the first
   sense today. Clipping all 841 senses instead of 579 keeps the pipeline free
   of a rule about which sense a screen shows, for about 4 MB more.
-- **A separate button.** Tapping "Hear it" still says only the word.
-- **The row wraps.** At 375 px the feed and All words fit "Hear it",
-  "Definition" and "Sentence" on one line with 18 px to spare. On the answer
-  panel and the new-word card, "Save for later" moves to a second line on a
-  phone; it shares the line on wider screens.
+- **A separate button.** The speaker beside the pronunciation still says
+  only the word.
+- **Where the button sits.** It joins the row under the definition and
+  example: with "Sentence" on Discover, with "Word" and "Sentence" in All
+  words, and with "Save for later" on the answer panel and the new-word card.
+  The rows wrap, so a narrow phone moves the last button to a second line.
+  Merging #53 (the word's speaker moved next to its pronunciation) removed
+  "Hear it" from these rows.
 
 ### Size
 

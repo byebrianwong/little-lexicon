@@ -85,7 +85,7 @@ export async function play(opts: SpeakOptions): Promise<void> {
       currentPlayer = player;
       player.play();
       setTimeout(() => {
-        if (mine !== turn || currentPlayer !== player || player.isLoaded) return;
+        if (mine !== turn || currentPlayer !== player || clipLoaded(player)) return;
         console.warn('audio: clip did not load, falling back to speech', opts.source);
         releaseCurrent();
         speak(opts);
@@ -96,6 +96,17 @@ export async function play(opts: SpeakOptions): Promise<void> {
     }
   }
   speak(opts);
+}
+
+/**
+ * Whether a clip loaded, even if it has already finished. On Android,
+ * isLoaded is true only while the player is ready, so it turns false again
+ * when a word clip (about a second long) ends, well before the timeout. The
+ * device voice then said the word a second time. A known duration stays set
+ * after the clip ends, and a clip that never loaded has none (0 or NaN).
+ */
+export function clipLoaded(player: Pick<AudioPlayer, 'isLoaded' | 'duration'>): boolean {
+  return player.isLoaded || player.duration > 0;
 }
 
 function speak(opts: SpeakOptions): void {

@@ -15,11 +15,9 @@ import {
   Note,
   Section,
   Spinner,
-  TextButton,
   TextField,
 } from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
-import { speakWord } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
 import { useNextDueLabel } from '../GameContext';
 import { Reveal } from '../Reveal';
@@ -100,13 +98,6 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
             {feedback.suggestion ? (
               <Note className="mt-2">{feedback.suggestion}</Note>
             ) : null}
-            <View className="mt-1">
-              <TextButton
-                icon="speaker"
-                label="Hear the word"
-                onPress={() => speakWord(content)}
-              />
-            </View>
           </Section>
           <Reveal
             correct={correct}

@@ -11,12 +11,12 @@ import {
   Muted,
   Note,
   ProgressBar,
+  Pronunciation,
   Row,
   Screen,
   Spinner,
   TextButton,
 } from '@/components/ui';
-import { AudioButton } from '@/features/games/Reveal';
 import type { WordContent } from '@/lib/types';
 import type { PlacementAnswer } from './placement';
 
@@ -61,10 +61,11 @@ export function PlacementView({
 
       <View className="flex-1 justify-center">
         <Note className="text-[17px]">Do you know this word?</Note>
-        <Headword className="mt-1">{word?.headword}</Headword>
-        {word?.ipa ? <Muted className="mt-1">{word.ipa}</Muted> : null}
-        <View className="mt-2">
-          {word ? <AudioButton onPress={onHear} label="Hear it" /> : null}
+        <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
+          <Headword>{word?.headword}</Headword>
+          {word ? (
+            <Pronunciation ipa={word.ipa} headword={word.headword} onPress={onHear} />
+          ) : null}
         </View>
         <Muted className="mt-6">
           Be honest. This sets the difficulty of your new words.

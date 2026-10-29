@@ -29,6 +29,7 @@ import {
   Label,
   Muted,
   Note,
+  Pronunciation,
   Row,
   Spinner,
   TextButton,
@@ -223,7 +224,13 @@ function WordPage({
       <View className="flex-1 justify-center">
         <View className="flex-row flex-wrap items-baseline gap-x-3">
           <Headword>{word.headword}</Headword>
-          {word.ipa ? <Muted>{word.ipa}</Muted> : null}
+          <Pronunciation
+            ipa={word.ipa}
+            headword={word.headword}
+            onPress={() => {
+              if (soundEnabled) void speakWord(word);
+            }}
+          />
         </View>
         <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
           {word.partOfSpeech ? <Note className="text-[17px]">{word.partOfSpeech}</Note> : null}
@@ -236,14 +243,6 @@ function WordPage({
             <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           ) : null}
           <Row className="mt-2 flex-wrap gap-x-6">
-            <TextButton
-              icon="speaker"
-              label="Hear it"
-              accessibilityLabel={`Hear ${word.headword}`}
-              onPress={() => {
-                if (soundEnabled) void speakWord(word);
-              }}
-            />
             {sense ? (
               <TextButton
                 icon="speaker"

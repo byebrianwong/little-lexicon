@@ -5,7 +5,7 @@
 
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
-import { Button, Headword, Label, Note } from '@/components/ui';
+import { Button, Headword, IconButton, Label, Note, Row } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
@@ -16,7 +16,7 @@ import {
   pickWordDistractors,
   type Option,
 } from '../optionPool';
-import { AudioButton, Reveal } from '../Reveal';
+import { Reveal } from '../Reveal';
 import { OptionButton, OptionList } from './OptionButton';
 import { Prompt } from '../Prompt';
 import { makeOutcome, type GameModeProps } from '../modeTypes';
@@ -76,15 +76,17 @@ export function MultipleChoice({
       {isDefToWord ? (
         <Prompt className="mt-2">{prompt}</Prompt>
       ) : (
-        <View className="mt-1">
+        <Row className="mt-1 flex-wrap">
           <Headword size="md" accessibilityLabel={audioFirst ? 'Hidden word' : undefined}>
             {audioFirst ? '…' : content.headword}
           </Headword>
-          <AudioButton
+          <IconButton
+            icon="speaker"
+            // A hidden word must stay hidden from screen readers too.
+            label={audioFirst ? 'Hear the word' : `Hear ${content.headword}`}
             onPress={() => speakWord(content)}
-            label="Hear it"
           />
-        </View>
+        </Row>
       )}
 
       <View className="mt-5">

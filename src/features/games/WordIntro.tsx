@@ -10,13 +10,13 @@ import {
   Button,
   Headword,
   Label,
-  Muted,
   Note,
+  Pronunciation,
   Row,
   Section,
   Spinner,
 } from '@/components/ui';
-import { speakDefinition, speakWord } from '@/lib/audio';
+import { speakDefinition, speakWord, stopAudio } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
@@ -40,6 +40,9 @@ export function WordIntro({
 
   useEffect(() => {
     speakWord(content);
+    // Stop on Start: the first question often asks for this word, so the
+    // audio must not still be playing there.
+    return stopAudio;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -67,7 +70,11 @@ export function WordIntro({
       <Label tone="accent">New word</Label>
       <View className="mt-2 flex-row flex-wrap items-baseline gap-x-3">
         <Headword>{content.headword}</Headword>
-        {content.ipa ? <Muted>{content.ipa}</Muted> : null}
+        <Pronunciation
+          ipa={content.ipa}
+          headword={content.headword}
+          onPress={() => speakWord(content)}
+        />
       </View>
       <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
         {content.partOfSpeech ? (
@@ -82,10 +89,6 @@ export function WordIntro({
           <Note className="mt-3 text-[17px] leading-[25px]">{`“${sense.examples[0].text}”`}</Note>
         ) : null}
         <Row className="mt-2 flex-wrap gap-x-6">
-          <AudioButton
-            onPress={() => speakWord(content)}
-            label="Hear it"
-          />
           {sense ? (
             <AudioButton
               onPress={() => speakDefinition(sense)}
