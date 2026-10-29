@@ -178,12 +178,13 @@ export function today(overrides: Partial<DailyStats> = {}): DailyStats {
 }
 
 // Review load that rises and falls, including two quiet days, so the bar chart
-// shows both a full bar and an empty one.
-const FORECAST = [14, 9, 0, 22, 18, 5, 11, 0, 7, 26, 13, 4, 16, 8];
+// shows both a full bar and an empty one. The first day is today, and its bar
+// holds the overdue words, so it is at least counts().due (23).
+const FORECAST = [27, 9, 0, 22, 18, 5, 11, 0, 7, 26, 13, 4, 16, 8];
 
 export function forecast(days = 14): ForecastDay[] {
   return Array.from({ length: days }, (_, i) => ({
-    day: isoDay(i + 1),
+    day: isoDay(i),
     dueCount: FORECAST[i % FORECAST.length] ?? 0,
   }));
 }

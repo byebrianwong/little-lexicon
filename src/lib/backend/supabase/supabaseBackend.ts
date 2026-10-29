@@ -37,6 +37,7 @@ import type {
 } from '../types';
 import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
 import { parseKnownWordFrequency } from '@/features/games/practice';
+import { forecastWindow } from '@/features/stats/forecast';
 import type { AnswerRecord } from '@/features/tracker/tracker';
 
 /**
@@ -574,12 +575,15 @@ export class SupabaseBackend implements Backend {
   }
 
   async getForecast(days: number): Promise<ForecastDay[]> {
-    const { data, error } = await supabase.rpc('due_forecast', { p_days: days });
+    // The device sends its own day boundaries, so the days are local days,
+    // as in demo mode, and not the database's (UTC) days.
+    const window = forecastWindow(days);
+    const { data, error } = await supabase.rpc('due_forecast_local', {
+      p_day_ends: window.map((d) => d.end.toISOString()),
+    });
     if (error) throw new Error(error.message);
-    return (data ?? []).map((r: { day: string; due_count: number }) => ({
-      day: r.day,
-      dueCount: Number(r.due_count),
-    }));
+    const counts = new Map((data ?? []).map((r) => [r.day_index, Number(r.due_count)]));
+    return window.map((d, i) => ({ day: d.day, dueCount: counts.get(i) ?? 0 }));
   }
 
   async getDailyStatsRange(days: number): Promise<DailyStats[]> {
