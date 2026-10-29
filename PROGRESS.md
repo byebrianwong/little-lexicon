@@ -3869,8 +3869,61 @@ its pronunciation guide, since the label did not need spelling out.
 - Storybook on web: Discover, Reveal, WordIntro, MultipleChoice and both
   placement stories (with and without IPA). On a narrow column the IPA and
   icon wrap to the next line together.
-- Chromatic build 150: 45 changes, all from this branch. On the reveal, a
-  long word with its IPA and the icon can push the part of speech onto the
-  next line (seen on "pragmatic" in the Use it stories).
+- Chromatic build 153: 45 changes, all from this branch, accepted. On the
+  reveal, a long word with its IPA and the icon can push the part of speech
+  onto the next line (seen on "pragmatic" in the Use it stories).
 - `tsc`, lint, 334 jest tests.
 - Not run: iOS or Android.
+
+## Storybook waits for fonts before rendering a story (2026-10-29)
+
+The Chromatic snapshot of `Screens/Settings` → `ChangingKnownWordFrequency`
+no longer moves by a pixel from run to run. It had come back changed on main's
+build 149 with no Settings change, and every pull request showed the same
+pending change until someone reviewed it.
+
+### Cause
+
+- The story's play function clicks "Sometimes". Focusing the chip makes
+  Chrome scroll the settings list so the chip sits in the middle.
+- The Newsreader faces download only when text first uses them, and the play
+  function runs about 100 ms after the page loads, at the same moment. When
+  `400Regular_Italic` or `500Medium` arrived after the scroll, Chrome's
+  scroll anchoring moved the list by 1 CSS pixel to keep the line at the top
+  of the view (the italic "tiers 1 and 5." note) in place. Safari does not do
+  this, which is why its snapshot never changed.
+- Found by loading the built Storybook in Chromium many times and logging
+  the scroll position, the layout and the font status. Fonts loaded before
+  the click: scroll position 613. Fonts loaded after: 614. Delaying the font
+  files gave 614 every time.
+- In Chromatic the baseline accepted before build 149 (`capture-d7ed9f4b`)
+  is the late-font state. Build 149's capture (`capture-c6c61c46`) is the
+  fonts-first state, the one this change produces every time.
+
+### What changed
+
+- `.storybook/preview.tsx` has a global loader that loads every Newsreader
+  face listed in `document.fonts` before a story renders. A face that fails to
+  load fails the story instead of letting Chromatic capture the fallback
+  serif.
+
+### Verified
+
+- Built Storybook in headless Chromium at 1200 px and device scale 2: 26
+  runs all ended at 613, including runs with fonts delayed by 100 to 400 ms
+  and the CPU slowed four times. Before the change, 6 normal runs gave 613
+  four times and 614 twice.
+- Chromatic build 156 (this change, all 177 stories recaptured) and build
+  157 (a comment-only change to the story file, so TurboSnap recaptured the
+  Settings stories) both produced `capture-c6c61c46` for this story and
+  passed with no changes.
+- `tsc`, lint, 334 jest tests.
+
+### For next time
+
+- Brian accepted this story's change on main's build 149 the same day, so
+  main's baseline is now `capture-c6c61c46`, the image this change
+  produces. A branch whose build still shows it as pending clears once main
+  is merged into it, or once its Chromatic job is re-run.
+- Any play function that scrolls is exposed to the same race. The loader now
+  covers all stories.
