@@ -16,6 +16,9 @@ function word(
     difficultyTier: 1,
     frequencyRank: null,
     etymology: null,
+    roots: [],
+    watchOut: null,
+    pairings: [],
     audioUrl,
     senses: [
       {
@@ -24,6 +27,7 @@ function word(
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        alsoMeans: false,
         audioUrl: definitionUrl,
         examples: examples.map((url, i) => ({
           exampleId: id * 100 + i,

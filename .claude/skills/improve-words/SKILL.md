@@ -1,6 +1,6 @@
 ---
 name: improve-words
-description: Review and improve Little Lexicon's word entries (dictionary definition, plain definition, example sentences, quiz wrong answers, memory hook, synonyms and antonyms) inside a Claude Code session, with no paid API. Use when asked to improve, review, fix or curate word content, or when a word shows wrong or weak content in the app.
+description: Review and improve Little Lexicon's word entries (dictionary definition, plain definition, example sentences, quiz wrong answers, memory hook, synonyms and antonyms) and their extras (origin, roots, tone, watch-out note, pairings, other meanings) inside a Claude Code session, with no paid API. Use when asked to improve, review, fix or curate word content, write word origins or extras, or when a word shows wrong or weak content in the app.
 ---
 
 # Improve word entries
@@ -24,6 +24,8 @@ A new session picks up where the last one stopped:
 3. Run the loop below, or "Big runs" for more than about 15 words. `next`
    chooses the words: first any reviewed without a second reviewer, then words
    that give the answer away, then the rest in record order.
+   Origins, roots, tone, watch-out notes, pairings and other meanings have
+   their own worksheets and rubric: see "Extras" at the end.
 4. After `apply`, commit, open or update a pull request, and add a line to the
    "Curation log" at the end of PROGRESS.md (date, words, verdicts, anything new
    you learned).
@@ -717,3 +719,339 @@ Synonyms and antonyms for the first sense.
   unreviewed again. Say why in PROGRESS.md.
 - Every review is kept in the record (`reviews`), with its scores, the fields it
   changed and the notes. The next session reads them through `status`.
+- The extras rubric has its own version, `EXTRAS_RUBRIC_VERSION` in
+  `pipeline/src/lib/extras.ts`. Bump it, not `RUBRIC_VERSION`, when the extras
+  criteria change.
+
+## Extras
+
+Extras are the parts of an entry that help a learner remember and use a word
+beyond its meaning: where it comes from, the roots it shares with other words
+in the list, its tone, a warning about a common mix-up, the words it usually
+goes with, and other meanings worth knowing. They are written and reviewed on
+their own worksheets, with their own rubric and second review, so this work
+never reopens a word's main review. (An older word on a main worksheet has to
+be reviewed again in full: 29 of 33 such words failed the first round on
+2026-10-19.)
+
+An extras review is stored in the record's `reviews` with `rubric: "extras"`.
+`status`, `next`, `check`, `apply` and `resolve` ignore extras reviews, and the
+`extras` commands ignore main reviews: a word with only an extras review is
+still unreviewed on the main rubric, and the other way round.
+
+### What each field is, and where the app will show it
+
+The screens for these fields are being built. Write for these places:
+
+| Worksheet field | Record | Words file | Shown as |
+| --- | --- | --- | --- |
+| `origin` | `words.etymology` | `etymology` | An "Origin" line on the word's card. |
+| `roots` | `words.roots` | `roots` | Links to the other words in the list that share a root (prolific and proliferate share Latin proles). Not shown as text. |
+| `register` and each other sense's `register` | `senses.register` | `senses[].register` | A small tone label next to the definition (disapproving, formal ...). |
+| `watchOut` | `words.watch_out` | `watchOut` | A "Watch out" note under the definition. |
+| `pairings` | `words.pairings` | `pairings` | A short list of common pairings ("fever abates"). |
+| each other sense's `alsoMeans` and `plain` | `senses.also_means`, `senses.plain_language_definition` | `senses[].alsoMeans`, `senses[].plainLanguageDefinition` | Under "Also means", below the first definition: the plain definition only. |
+| `hook` | `mnemonics` | `mnemonics` | The memory hook, as on the main worksheet. |
+
+The words file format went to 2 when these fields were added. Once any word
+has an origin, the export adds a credit line for Wiktionary to the words
+file's `attribution`, which Settings shows with the other credits.
+
+### Commands
+
+Run these from `pipeline/`.
+
+- `npx tsx src/curate.ts extras status` counts the words with an extras
+  review (and their verdicts), with an origin, roots, each tone label, a
+  watch-out note, pairings, and the senses shown under Also means. It lists the
+  flagged words and the roots that link two or more words.
+- `npx tsx src/curate.ts extras next --count=12` writes
+  `out/curate/extras-<time>.json` with the next words that have no extras
+  review, in record order. `--split=K` writes K worksheets for a big run, and
+  `--words=abate,insular` picks words by name.
+- `npx tsx src/curate.ts extras check <worksheet...>` runs the fixed checks
+  below and the verdict rules. With several worksheets it also lists each
+  root they use with every word that has it, so a shared root is spelled the
+  same way everywhere.
+- `npx tsx src/curate.ts extras apply <worksheet>` writes the worksheet into
+  the record and adds the reviews, then remakes the clips the changes made
+  stale (a new plain definition on an other sense changes its definition
+  clip; a corrected hook changes its clip) and exports the words file, the
+  same step `apply` runs. It writes nothing if any word fails.
+
+Each worksheet entry shows, read-only: `wordId`, `headword`, `tier`,
+`partOfSpeech`, `ipa`, `definition`, `plain`, `examples`, `synonyms` and
+`antonyms`. The editable fields are `origin` (empty at first), `roots`,
+`register` (the first sense's tone), `watchOut` (a string or null),
+`pairings`, `hook`, and `otherSenses`, a list of `{ senseId, definition, plain,
+register, alsoMeans }`. An other sense's `definition` is read-only: other words
+use it as a fallback wrong answer. If an other sense is wrong or repeats the
+first, say so in `review.notes` and fix it on a main worksheet. `review` and
+`checker` work as on the main worksheet, with the criteria `origin`, `hook`,
+`tone`, `watchOut`, `pairings` and `alsoMeans`.
+
+### The tools
+
+Both are free and need no key or web search. Run them from `pipeline/` and
+pass each word as its own argument.
+
+- `python3 -I tools/etymology.py abate supercilious` prints the English
+  etymology sections of each word's Wiktionary page as readable text, such as
+  `From Latin prōlificus, from prōlēs ("offspring") + -ficus ("making")`, with
+  the parts of speech each section covers. Greek words get a transliteration
+  in the form used for roots. When Wiktionary hedges ("possibly",
+  "uncertain"), it prints a note. Templates it cannot read are listed, so you
+  can open the page for those. Pages are cached in `.cache/wiktionary/`.
+  Wiktionary limits requests from one address, and on 2026-10-29 it asked for
+  waits of 15 to 52 seconds after a few requests. The tool waits and goes on,
+  so a dozen words can take a few minutes. Wiktionary's text is CC BY-SA: use
+  it to check facts, and write every origin in your own words.
+- `python3 -I tools/collocations.py abate insular` prints, from Datamuse, the
+  words most often found right before and right after each form of the word,
+  and the nouns an adjective most often describes (or the adjectives most
+  often used with a noun). `--check "storm abated" "abate the *"` prints how
+  often each phrase appears in Google Books from 2010 to 2022, per billion
+  phrases of the same length; a `*` lists the most common words in that slot.
+  The numbers matter: "storm abated" is about 17 per billion, while "tensions
+  abate", which sounds natural, is 0.14.
+
+### Fixed checks
+
+`extras check` and `extras apply` reject:
+
+- origin: empty, over 220 characters, more than two sentences, not starting
+  with a capital letter or not ending with a period, an em dash, brackets,
+  braces, markup, a URL or invisible characters. "Of unknown origin." is
+  fine.
+- roots: more than 3; anything but lowercase ASCII letters; under 3 letters;
+  a bare prefix or suffix (pro, con, dis, per, sub, trans, -ous, -ate and
+  others in `AFFIX_STOPLIST`); a root that does not appear as a whole word in
+  the origin, compared without case or diacritics (so "prōlēs" in the origin
+  names the root `proles`); the same root twice.
+- register, on any sense: anything but null or one of `formal`, `informal`,
+  `literary`, `disapproving`, `approving`, `humorous`, `old-fashioned`,
+  `technical`.
+- watchOut: an empty string (use null), over 160 characters, not starting with
+  a capital letter or not ending with a period, an em dash, markup or a URL.
+- pairings: 1 or more than 4 (none is fine); a pairing under 2 or over 4
+  words; punctuation; no form of the headword; a capital letter on the first
+  word or on the headword, or anywhere but a proper noun later in the phrase;
+  the same pairing twice.
+- other senses: a changed `definition`; a list of senses that no longer
+  matches the record; an unknown register; more than 2 shown under Also
+  means; a shown sense without a plain definition; a shown or changed plain
+  definition that is not one capitalized sentence ending with a period, is
+  over 20 words, names the word, or repeats the first sense.
+- hook, when changed: the main worksheet's hook checks (20 to 240 characters,
+  names the word), an em dash or markup.
+- read-only fields that differ from the record.
+- review and checker: every criterion scored 1 to 5, and the verdict rules of
+  the main worksheet (`pass` or `fixed` needs every score from both at 4 or
+  more; `flagged` needs notes).
+
+### The extras rubric
+
+Score every criterion from 1 to 5, on the same scale as the main rubric:
+
+- 5: as good as a published learner's dictionary.
+- 4: good. Small style nits at most.
+- 3: usable, but a careful editor would change it.
+- 2: misleading.
+- 1: wrong.
+
+The verdict rules are the same as on the main worksheet. For a word with
+nothing to add in a field (no common mix-up, no pairing, no other meaning
+worth showing), the right answer is the empty field, and it scores 5.
+
+#### origin
+
+One or two short sentences in plain words: the source language, the root
+form and what it meant, and how that led to today's meaning when the link is
+not obvious. `roots` is scored here too.
+
+- It must be true. Run `tools/etymology.py` on every word and check every
+  claim against it. Treat neat stories as suspect: popular etymology myths
+  are a known trap in this repo (cabal's initials story, sagacious from sage;
+  see "Traps found so far"). Wiktionary's sycophant entry itself tells the
+  "showing the fig" story as a story; say no more than the sources support.
+- If Wiktionary marks an origin as uncertain or unknown, say so ("Of
+  uncertain origin, perhaps from ...", "Of unknown origin.").
+- Never copy Wiktionary, Etymonline or any dictionary's wording. Take the
+  facts and write the sentence yourself. Short shared facts ("from Latin
+  insula, island") are not copying; a source's whole sentence or its order of
+  clauses is.
+- Repeating what the hook says is fine (the owner's decision).
+- Keep the language names plain: "Latin", "Old French", "Ancient Greek". Use
+  the source's spelling for the source word, with macrons if you like; the
+  roots check ignores them.
+- Good: "From Latin prolificus, from proles ("offspring") and facere ("to
+  make"): a prolific writer turns out many works." (prolific)
+- Low: "From the Latin." (too thin), or an origin that skips the step that
+  explains today's meaning when it is not obvious (supercilious goes back to
+  Latin supercilium, "eyebrow": the raised eyebrow of a haughty person).
+- Low, 1: a made-up root or a folk story given as fact.
+
+Roots:
+
+- Only stems a learner could spot in other English words: `proles`
+  (prolific, proliferate), `loqui` (eloquent, loquacious), `grex`
+  (gregarious, egregious, congregate). Leave out stems that nothing else in
+  English shows, and leave the list empty when there are none.
+- Use the linking form: a Latin verb's infinitive (`loqui`, `ferre`,
+  `facere`), a Latin noun or adjective's nominative (`proles`, `insula`), a
+  Greek word transliterated the way English dictionaries spell it, with k, ch,
+  y, ph, th, and e and o for eta and omega (`chronos`, `pathos`, `phobos`).
+  Lowercase, no diacritics.
+- Name the same form in `origin`, so the link is explained. Spell a root the
+  way other words already have it: `extras status` lists the roots in the
+  record, and `extras check` lists each root with the words that have it.
+- A root counts toward the origin score: a wrong or bare-prefix root makes
+  the origin 3 or lower.
+
+#### hook
+
+Score only whether every origin claim in the hook agrees with the checked
+origin. The owner chose to keep the hooks, so do not otherwise rewrite them.
+
+- 5: every claim about where the word comes from is true, or the hook makes
+  no such claim (a sound-alike hook).
+- 3: a claim that is loose but not false ("comes from" for a word that is
+  only related).
+- 1: a false root ("Sagacious comes from sage").
+- Fix a false or loose claim with the smallest change that makes it true, and
+  say what you changed and why in `review.notes`. The fixed hook goes through
+  the main hook checks, and its clip is remade on apply.
+
+#### tone
+
+The `register` of the first sense, and of each other sense.
+
+- Set a label only when it matters for using the word correctly: sycophant
+  and supercilious are disapproving, and some words are formal or literary.
+  Most words stay null.
+- Check the labels Oxford Learner's, Cambridge and Longman give. The pages
+  `tools/dictionary-defs.py` downloads are cached in `.cache/dict/`; search
+  them for words such as formal, disapproving, literary. Use a label two of
+  them agree on.
+- `technical` is for an other sense from a specialist field (insular's
+  "relating to the insula of the brain").
+- 5: the label matches the learner's dictionaries, or null rightly. 3: a
+  label that is defensible but not needed, or a missing label that matters.
+  2: a label that misleads (approving on a disapproving word). 1: wrong.
+
+#### watchOut
+
+A note for words people commonly misread or misuse, roughly 40 to 80 of the
+579: enervate (it does not mean energize), noisome, nonplussed, fulsome, and
+the like. Most words get null.
+
+- One sentence: say what the word does not mean and what it does.
+- It must be true. When usage is disputed (nonplussed meaning "unfazed",
+  fulsome meaning "generous"), describe it as a dispute, not as a settled
+  error or a settled meaning.
+- Write it yourself. Usage notes in Merriam-Webster, Oxford and Cambridge are
+  dictionary text like any other.
+- 5: a real, common mix-up, stated correctly and briefly; or null on a word
+  with no common mix-up. 3: a note on a word nobody confuses, a wordy note,
+  or no note on a classic misreading. 2: a dispute stated as settled. 1:
+  wrong.
+
+#### pairings
+
+2 to 4 common collocations of the first sense, in lowercase: "fever abates",
+"the storm abated", "supercilious smile", "prolific writer".
+
+- Each must rest on real usage: the collocations tool's lists, or a phrase
+  `--check` shows is common. Do not invent them. A phrase that sounds natural
+  can be rare ("tensions abate").
+- Each uses the word in its first sense, and is 2 to 4 words.
+- Prefer partners that show the meaning (a noun, a verb) over ones that fit
+  any word ("abated somewhat").
+- Empty is fine when nothing is common.
+- 5: common pairings that show the first sense. 4: common, but one is
+  generic. 3: one is rare or belongs to another sense. 2: invented or
+  unnatural. 1: ungrammatical or wrong.
+
+#### alsoMeans
+
+Which other senses to show under "Also means", and their plain definitions.
+
+- Show an other sense only when it is a current meaning a learner will meet:
+  insular's "relating to islands". At most 2.
+- Do not show near-repeats of the first sense, rare or technical senses, or
+  senses that are another word's meaning (see "Other senses that are another
+  word's meaning" in "Traps found so far").
+- Write the `plain` definition in everyday words, at most 20 words, without
+  naming the word. Never copy a dictionary's definition.
+- 5: the right senses (or none) with clear plain definitions. 3: shows a rare
+  sense, misses a common one, or a plain definition a careful editor would
+  change. 2: shows a sense that teaches a mix-up. 1: a wrong meaning.
+
+### Extras runs
+
+Use the "Big runs" layout: worksheets of 10 to 15 words, one writer subagent
+and one reviewer subagent per worksheet, only the main session runs `apply`.
+
+1. `npx tsx src/curate.ts extras next --count=100 --split=8` writes 8
+   worksheets.
+2. Fill the Wiktionary cache before starting the writers, so eight writers do
+   not wait on the rate limit at once:
+
+   ```
+   python3 -I -c "import json,sys; print('\n'.join(w['headword'] for f in sys.argv[1:] for w in json.load(open(f))['words']))" out/curate/extras-<time>-*.json | xargs python3 -I tools/etymology.py > /dev/null
+   ```
+
+3. Start one writer per worksheet with the writer prompt below. As each
+   finishes, start a new reviewer on that worksheet with the reviewer prompt.
+4. Fix what the reviewers find, clear the `checker` block of each changed
+   word, and send those words back to the same reviewer.
+5. Check all the worksheets together (`extras check a.json b.json ...`), so
+   roots are spelled the same way across them, then apply them one at a time.
+
+The writer prompt, with the paths filled in:
+
+> You are the writer for one extras worksheet in Little Lexicon, a vocabulary
+> app for adults studying for tests like the GRE. Your worksheet:
+> `<worksheet>`. Read the "Extras" section of
+> `.claude/skills/improve-words/SKILL.md` in full and follow it, and read
+> "False roots and sound-alikes in hooks" and "Popular etymology myths" in
+> "Traps found so far". From `pipeline/`, run `python3 -I tools/etymology.py`
+> and `python3 -I tools/collocations.py` on all your words (each word as its
+> own argument). For every word: write `origin` in your own words from the
+> facts the tool shows, never from Wiktionary's or a dictionary's sentences,
+> and say so when Wiktionary hedges; set `roots`, `register`, `watchOut` and
+> `pairings`; and for each other sense set `plain`, `register` and
+> `alsoMeans`. Change `hook` only if it makes a false origin claim, with the
+> smallest change that makes it true. Score all 6 criteria, then fill in
+> `review.scores`, `review.verdict` and `review.notes` (what you checked each
+> origin against, and any hook change). Leave the `checker` block alone. Do
+> not change the read-only fields or any other sense's `definition`. Then run
+> `npx tsx src/curate.ts extras check <worksheet>` from `pipeline/` and fix
+> every problem except the missing checker scores. Do not run `apply`, and do
+> not edit any other file (scratch files go in `<scratchpad>/<your batch>/`).
+> When done, reply with a short table: each word, its verdict, its roots and
+> tone, whether it has a watch-out note, and anything you flagged.
+
+The reviewer prompt, with the paths filled in:
+
+> You are the independent second reviewer for an extras worksheet in Little
+> Lexicon, a vocabulary app for adults studying for tests like the GRE.
+> Another session wrote it. Score it honestly and strictly. Read the "Extras"
+> section of `.claude/skills/improve-words/SKILL.md`. Then, for each word in
+> `<worksheet>`: do not read the `review` block (the writer's own scores);
+> run `python3 -I tools/etymology.py` and `python3 -I tools/collocations.py`
+> on the word from `pipeline/`; score the 6 criteria from 1 to 5 from the
+> content fields alone. Check that every claim in the origin and the hook
+> matches what Wiktionary supports (a neat story it does not support is
+> wrong, and a hedge it makes must be kept), that the origin does not copy
+> Wiktionary's or a dictionary's sentences, that each root is a stem a
+> learner could spot in other English words and is in the linking form, that
+> each tone label matches what learner's dictionaries mark, that each
+> watch-out note is about a real, common mix-up and is true, that the
+> pairings are common in the tool's data, and that each sense shown under
+> Also means is a current meaning with a correct plain definition. Write only
+> each word's `checker.scores` (keys: origin, hook, tone, watchOut, pairings,
+> alsoMeans) and `checker.notes` (what is wrong for every score under 4,
+> otherwise the weakest point). Do not edit anything else. Then run
+> `npx tsx src/curate.ts extras check <worksheet>` from `pipeline/` and
+> report a table of scores and every note under 4.

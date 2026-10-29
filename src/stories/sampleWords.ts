@@ -30,6 +30,7 @@ function buildSense(word: SeedWord, wordId: number, senseIndex: number): SenseCo
     plainLanguageDefinition: seed.plain,
     senseOrder: senseIndex + 1,
     register: seed.register ?? null,
+    alsoMeans: false,
     audioUrl: null,
     examples,
     distractors,
@@ -58,6 +59,9 @@ function buildWord(word: SeedWord, index: number): WordContent {
     difficultyTier: word.difficultyTier,
     frequencyRank: word.frequencyRank,
     etymology: word.etymology,
+    roots: word.roots ?? [],
+    watchOut: word.watchOut ?? null,
+    pairings: word.pairings ?? [],
     audioUrl: null, // the app speaks the word on the device when there is no clip
     senses,
     relations,

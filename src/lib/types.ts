@@ -4,6 +4,20 @@
 
 export type PartOfSpeech = string;
 
+/**
+ * A sense's tone label. Null (on SenseContent.register) means the word is
+ * neutral, which most are.
+ */
+export type Register =
+  | 'formal'
+  | 'informal'
+  | 'literary'
+  | 'disapproving'
+  | 'approving'
+  | 'humorous'
+  | 'old-fashioned'
+  | 'technical';
+
 export interface WordContent {
   wordId: number;
   headword: string;
@@ -12,7 +26,17 @@ export interface WordContent {
   syllables: number | null;
   difficultyTier: number;
   frequencyRank: number | null;
+  /** Where the word comes from, in one or two sentences, for an "Origin" line. */
   etymology: string | null;
+  /**
+   * Root forms, lowercase ASCII ("proles"). Words that share one are related
+   * (prolific and proliferate), and each root is named in `etymology`.
+   */
+  roots: string[];
+  /** A "Watch out" note on a common misreading or misuse, or null. */
+  watchOut: string | null;
+  /** 2 to 4 common pairings of the first sense ("tensions abate"), or none. */
+  pairings: string[];
   audioUrl: string | null;
   senses: SenseContent[];
   relations: RelationContent[];
@@ -24,7 +48,12 @@ export interface SenseContent {
   definition: string;
   plainLanguageDefinition: string | null;
   senseOrder: number;
-  register: string | null;
+  register: Register | null;
+  /**
+   * Show this sense under "Also means". Only a sense after the first, and only
+   * one with a plain definition, has it.
+   */
+  alsoMeans: boolean;
   /** Clip that reads the definition the app shows (the plain one when there is one). */
   audioUrl: string | null;
   examples: ExampleContent[];

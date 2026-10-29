@@ -39,8 +39,21 @@ import type {
 export type WordMetaPatch = Partial<
   Pick<
     WordRow,
-    'part_of_speech' | 'ipa' | 'syllables' | 'etymology' | 'frequency_rank' | 'difficulty_tier'
+    | 'part_of_speech'
+    | 'ipa'
+    | 'syllables'
+    | 'etymology'
+    | 'frequency_rank'
+    | 'difficulty_tier'
+    | 'roots'
+    | 'watch_out'
+    | 'pairings'
   >
+>;
+
+/** What curation may change on a sense in place. */
+export type SensePatch = Partial<
+  Pick<SenseRow, 'definition' | 'plain_language_definition' | 'register' | 'also_means'>
 >;
 
 export interface Store {
@@ -75,11 +88,9 @@ export interface Store {
   /** Swap a word's global (not personalized) mnemonic for a new one. */
   replaceGlobalMnemonic(wordId: number, row: NewMnemonic): Promise<void>;
 
-  // Curation (lib/curate.ts) edits a word's first sense in place.
-  updateSense(
-    senseId: number,
-    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
-  ): Promise<void>;
+  // Curation (lib/curate.ts) edits a word's first sense in place, and extras
+  // worksheets (lib/extras.ts) edit the tone and plain text of any sense.
+  updateSense(senseId: number, patch: SensePatch): Promise<void>;
   replaceExamples(senseId: number, rows: NewExample[]): Promise<void>;
   replaceRelations(wordId: number, rows: NewRelation[]): Promise<void>;
   /**
@@ -301,10 +312,7 @@ export class JsonFileStore implements Store {
     this.db.mnemonics.push({ id: this.nextId('mnemonics'), ...row, word_id: wordId, user_id: null });
   }
 
-  async updateSense(
-    senseId: number,
-    patch: Partial<Pick<SenseRow, 'definition' | 'plain_language_definition'>>,
-  ): Promise<void> {
+  async updateSense(senseId: number, patch: SensePatch): Promise<void> {
     const s = this.db.senses.find((x) => x.id === senseId);
     if (!s) throw new Error(`updateSense: no sense ${senseId}`);
     Object.assign(s, patch);

@@ -25,6 +25,9 @@ function word(
     difficultyTier,
     frequencyRank: null,
     etymology: null,
+    roots: [],
+    watchOut: null,
+    pairings: [],
     audioUrl: null,
     senses: [
       {
@@ -33,6 +36,7 @@ function word(
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        alsoMeans: false,
         audioUrl: null,
         examples: [],
         distractors: [],

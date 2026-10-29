@@ -14,7 +14,16 @@ import type {
   WordRow,
 } from './types.ts';
 
-export const WORDS_FILE_FORMAT = 1;
+/**
+ * Version of the words file's shape. The app refuses a file in a format it
+ * does not know. 2 added roots, watchOut and pairings on words and alsoMeans
+ * on senses.
+ */
+export const WORDS_FILE_FORMAT = 2;
+
+/** Credit added to the words file once any word has an origin. */
+export const ETYMOLOGY_ATTRIBUTION =
+  'Word origins checked against Wiktionary (https://en.wiktionary.org/), licensed CC BY-SA.';
 
 export interface ExportExample {
   exampleId: number;
@@ -36,6 +45,8 @@ export interface ExportSense {
   plainLanguageDefinition: string | null;
   senseOrder: number;
   register: string | null;
+  /** Show this sense under "Also means". Never true on the first sense. */
+  alsoMeans: boolean;
   /** The clip that reads the definition; stage 05 fills it in. */
   audioUrl: string | null;
   examples: ExportExample[];
@@ -56,6 +67,9 @@ export interface ExportWord {
   difficultyTier: number;
   frequencyRank: number | null;
   etymology: string | null;
+  roots: string[];
+  watchOut: string | null;
+  pairings: string[];
   audioUrl: string | null;
   senses: ExportSense[];
   relations: ExportRelation[];
@@ -100,9 +114,10 @@ const byId = (a: { id: number }, b: { id: number }): number => a.id - b.id;
 /**
  * Build the words file. A word is exported when it has at least one sense;
  * everything else (plain definition, generated examples, distractors,
- * mnemonic) is optional, and the app works around what is missing.
- * Generated example sentences come before dictionary examples, because the app
- * shows a sense's first example.
+ * mnemonic, the extras from lib/extras.ts) is optional, and the app works
+ * around what is missing. Generated example sentences come before dictionary
+ * examples, because the app shows a sense's first example. Once any word has
+ * an origin, the Wiktionary credit is added to `attribution`.
  */
 export function buildWordsFile(
   rows: ContentRows,
@@ -137,13 +152,18 @@ export function buildWordsFile(
       difficultyTier: word.difficulty_tier,
       frequencyRank: word.frequency_rank,
       etymology: word.etymology,
+      roots: word.roots ?? [],
+      watchOut: word.watch_out ?? null,
+      pairings: word.pairings ?? [],
       audioUrl: word.audio_url,
-      senses: senses.map((s) => ({
+      senses: senses.map((s, i) => ({
         senseId: s.id,
         definition: s.definition,
         plainLanguageDefinition: s.plain_language_definition,
         senseOrder: s.sense_order,
         register: s.register,
+        // Only a later sense with a plain definition can be shown this way.
+        alsoMeans: i > 0 && s.also_means === true && Boolean(s.plain_language_definition),
         audioUrl: null,
         examples: [...(examplesBySense.get(s.id) ?? [])]
           .sort((a, b) => Number(b.is_generated) - Number(a.is_generated) || a.id - b.id)
@@ -167,7 +187,8 @@ export function buildWordsFile(
     });
   }
 
-  return { file: { formatVersion: WORDS_FILE_FORMAT, attribution, words }, heldBack };
+  const credits = words.some((w) => w.etymology) ? [...attribution, ETYMOLOGY_ATTRIBUTION] : attribution;
+  return { file: { formatVersion: WORDS_FILE_FORMAT, attribution: credits, words }, heldBack };
 }
 
 /**
