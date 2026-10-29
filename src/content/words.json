@@ -17,6 +17,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/1.mp3?v=f6a11b644f7b",
+      "hookAudioUrl": "audio/hooks/1.mp3?v=ffe8e5c90378",
       "senses": [
         {
           "senseId": 1,
@@ -127,6 +128,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/2.mp3?v=43c381e27c8c",
+      "hookAudioUrl": "audio/hooks/2.mp3?v=ca961169e262",
       "senses": [
         {
           "senseId": 3,
@@ -238,6 +240,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/3.mp3?v=931cda652d5a",
+      "hookAudioUrl": "audio/hooks/3.mp3?v=90a27561675a",
       "senses": [
         {
           "senseId": 4,
@@ -336,6 +339,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/4.mp3?v=98deec2cd488",
+      "hookAudioUrl": "audio/hooks/4.mp3?v=7f13d3a59897",
       "senses": [
         {
           "senseId": 5,
@@ -454,6 +458,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/5.mp3?v=fc8e249a3e64",
+      "hookAudioUrl": "audio/hooks/5.mp3?v=5c4f8fa5f573",
       "senses": [
         {
           "senseId": 7,
@@ -576,6 +581,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/6.mp3?v=f0c5a2037f2b",
+      "hookAudioUrl": "audio/hooks/6.mp3?v=1307bbfc6177",
       "senses": [
         {
           "senseId": 10,
@@ -678,6 +684,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/7.mp3?v=da9cbd05ebb2",
+      "hookAudioUrl": "audio/hooks/7.mp3?v=c353679f70d8",
       "senses": [
         {
           "senseId": 11,
@@ -771,6 +778,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/8.mp3?v=07e5cb99590d",
+      "hookAudioUrl": "audio/hooks/8.mp3?v=af706d43d5d7",
       "senses": [
         {
           "senseId": 14,
@@ -886,6 +894,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/9.mp3?v=e3660e7de2eb",
+      "hookAudioUrl": "audio/hooks/9.mp3?v=a8f84465a0c4",
       "senses": [
         {
           "senseId": 15,
@@ -992,6 +1001,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/10.mp3?v=5f4bc5360918",
+      "hookAudioUrl": "audio/hooks/10.mp3?v=bb0305e2c854",
       "senses": [
         {
           "senseId": 16,
@@ -1111,6 +1121,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/11.mp3?v=f8a7736b65c9",
+      "hookAudioUrl": "audio/hooks/11.mp3?v=3cce7c9787ca",
       "senses": [
         {
           "senseId": 18,
@@ -1225,6 +1236,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/12.mp3?v=da2f9c21979d",
+      "hookAudioUrl": "audio/hooks/12.mp3?v=2b0d4784f4ce",
       "senses": [
         {
           "senseId": 19,
@@ -1339,6 +1351,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/13.mp3?v=624da5461b07",
+      "hookAudioUrl": "audio/hooks/13.mp3?v=764600e51452",
       "senses": [
         {
           "senseId": 22,
@@ -1450,6 +1463,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/14.mp3?v=53a77ffcadee",
+      "hookAudioUrl": "audio/hooks/14.mp3?v=5793a009b09d",
       "senses": [
         {
           "senseId": 23,
@@ -1557,6 +1571,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/15.mp3?v=aca4f655a7cb",
+      "hookAudioUrl": "audio/hooks/15.mp3?v=f87f858b4f86",
       "senses": [
         {
           "senseId": 25,
@@ -1645,6 +1660,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/16.mp3?v=e3a7b7e1428f",
+      "hookAudioUrl": "audio/hooks/16.mp3?v=a4a58f673c12",
       "senses": [
         {
           "senseId": 28,
@@ -1771,6 +1787,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/17.mp3?v=acd2e24341f1",
+      "hookAudioUrl": "audio/hooks/17.mp3?v=fb2b8deec09e",
       "senses": [
         {
           "senseId": 30,
@@ -1893,6 +1910,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/18.mp3?v=43beb00c3e51",
+      "hookAudioUrl": "audio/hooks/18.mp3?v=591d53ef4cce",
       "senses": [
         {
           "senseId": 33,
@@ -2018,6 +2036,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/19.mp3?v=a986900e60a5",
+      "hookAudioUrl": "audio/hooks/19.mp3?v=41464686955c",
       "senses": [
         {
           "senseId": 35,
@@ -2128,6 +2147,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/20.mp3?v=3159de779b4a",
+      "hookAudioUrl": "audio/hooks/20.mp3?v=0d276f312487",
       "senses": [
         {
           "senseId": 37,
@@ -2258,6 +2278,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/21.mp3?v=f0f548d7b38e",
+      "hookAudioUrl": "audio/hooks/21.mp3?v=1bd81d9609f3",
       "senses": [
         {
           "senseId": 40,
@@ -2372,6 +2393,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/22.mp3?v=ddf33fa6c9dc",
+      "hookAudioUrl": "audio/hooks/22.mp3?v=4eb13f88a996",
       "senses": [
         {
           "senseId": 43,
@@ -2486,6 +2508,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/23.mp3?v=2a286c2c2cda",
+      "hookAudioUrl": "audio/hooks/23.mp3?v=2c4eb7e5ada3",
       "senses": [
         {
           "senseId": 46,
@@ -2578,6 +2601,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/24.mp3?v=df003aad6165",
+      "hookAudioUrl": "audio/hooks/24.mp3?v=dcb9b1dbfe91",
       "senses": [
         {
           "senseId": 48,
@@ -2714,6 +2738,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/25.mp3?v=a78db60e5864",
+      "hookAudioUrl": "audio/hooks/25.mp3?v=76fa7bf84abc",
       "senses": [
         {
           "senseId": 51,
@@ -2894,6 +2919,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/26.mp3?v=4d079161d5e7",
+      "hookAudioUrl": "audio/hooks/26.mp3?v=b13218fd8dbd",
       "senses": [
         {
           "senseId": 54,
@@ -3027,6 +3053,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/27.mp3?v=48e299460200",
+      "hookAudioUrl": "audio/hooks/27.mp3?v=7b02d66d4ae4",
       "senses": [
         {
           "senseId": 57,
@@ -3148,6 +3175,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/28.mp3?v=62f85dcf5f13",
+      "hookAudioUrl": "audio/hooks/28.mp3?v=d5dc86cdf326",
       "senses": [
         {
           "senseId": 59,
@@ -3262,6 +3290,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/29.mp3?v=d4e2c48ec308",
+      "hookAudioUrl": "audio/hooks/29.mp3?v=d33b42cc898b",
       "senses": [
         {
           "senseId": 60,
@@ -3375,6 +3404,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/30.mp3?v=5121cfea5e96",
+      "hookAudioUrl": "audio/hooks/30.mp3?v=8f4ac008e53c",
       "senses": [
         {
           "senseId": 62,
@@ -3496,6 +3526,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/31.mp3?v=ffa43dcc91e6",
+      "hookAudioUrl": "audio/hooks/31.mp3?v=4ebe0ceec254",
       "senses": [
         {
           "senseId": 64,
@@ -3628,6 +3659,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/32.mp3?v=a42f864bd2d5",
+      "hookAudioUrl": "audio/hooks/32.mp3?v=151ee46b93be",
       "senses": [
         {
           "senseId": 67,
@@ -3747,6 +3779,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/33.mp3?v=a9f806891e33",
+      "hookAudioUrl": "audio/hooks/33.mp3?v=798daa9f0fd5",
       "senses": [
         {
           "senseId": 68,
@@ -3865,6 +3898,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/34.mp3?v=c395309f051c",
+      "hookAudioUrl": "audio/hooks/34.mp3?v=2f094dba94bb",
       "senses": [
         {
           "senseId": 69,
@@ -3994,6 +4028,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/35.mp3?v=594b129af73e",
+      "hookAudioUrl": "audio/hooks/35.mp3?v=01d680f2684d",
       "senses": [
         {
           "senseId": 70,
@@ -4108,6 +4143,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/36.mp3?v=fe2350d6b767",
+      "hookAudioUrl": "audio/hooks/36.mp3?v=104b2e228158",
       "senses": [
         {
           "senseId": 71,
@@ -4225,6 +4261,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/37.mp3?v=e8e231a169aa",
+      "hookAudioUrl": "audio/hooks/37.mp3?v=fd0c33fa0e15",
       "senses": [
         {
           "senseId": 73,
@@ -4323,6 +4360,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/38.mp3?v=0139719ded4d",
+      "hookAudioUrl": "audio/hooks/38.mp3?v=d18131b32e99",
       "senses": [
         {
           "senseId": 74,
@@ -4448,6 +4486,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/39.mp3?v=8c2b84fccdc9",
+      "hookAudioUrl": "audio/hooks/39.mp3?v=e8019fa4d443",
       "senses": [
         {
           "senseId": 76,
@@ -4574,6 +4613,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/40.mp3?v=d83ffab021ac",
+      "hookAudioUrl": "audio/hooks/40.mp3?v=407bcaffa76c",
       "senses": [
         {
           "senseId": 78,
@@ -4754,6 +4794,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/41.mp3?v=761e7d6e8cab",
+      "hookAudioUrl": "audio/hooks/41.mp3?v=cc4987470962",
       "senses": [
         {
           "senseId": 80,
@@ -4918,6 +4959,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/42.mp3?v=d0891228c2a6",
+      "hookAudioUrl": "audio/hooks/42.mp3?v=87e4cf131630",
       "senses": [
         {
           "senseId": 82,
@@ -5017,6 +5059,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/43.mp3?v=f91df4e167ec",
+      "hookAudioUrl": "audio/hooks/43.mp3?v=613b557a058a",
       "senses": [
         {
           "senseId": 84,
@@ -5135,6 +5178,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/44.mp3?v=ed53219864e1",
+      "hookAudioUrl": "audio/hooks/44.mp3?v=254ad3bfa2fd",
       "senses": [
         {
           "senseId": 86,
@@ -5241,6 +5285,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/45.mp3?v=ed8b55124bae",
+      "hookAudioUrl": "audio/hooks/45.mp3?v=5a8272282d69",
       "senses": [
         {
           "senseId": 87,
@@ -5348,6 +5393,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/46.mp3?v=c518e2a509a1",
+      "hookAudioUrl": "audio/hooks/46.mp3?v=78aba96aa5cb",
       "senses": [
         {
           "senseId": 89,
@@ -5467,6 +5513,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/47.mp3?v=30e47a066e53",
+      "hookAudioUrl": "audio/hooks/47.mp3?v=0faf67872f48",
       "senses": [
         {
           "senseId": 91,
@@ -5579,6 +5626,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/48.mp3?v=164be0faf815",
+      "hookAudioUrl": "audio/hooks/48.mp3?v=2cfdc488e386",
       "senses": [
         {
           "senseId": 92,
@@ -5669,6 +5717,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/50.mp3?v=88fa1cd6dc85",
+      "hookAudioUrl": "audio/hooks/50.mp3?v=95419da7501f",
       "senses": [
         {
           "senseId": 94,
@@ -5787,6 +5836,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/51.mp3?v=d717b6d27b4c",
+      "hookAudioUrl": "audio/hooks/51.mp3?v=cbb4ee3deeac",
       "senses": [
         {
           "senseId": 96,
@@ -5898,6 +5948,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/52.mp3?v=ce101db55ffc",
+      "hookAudioUrl": "audio/hooks/52.mp3?v=91e7ea9c8bd1",
       "senses": [
         {
           "senseId": 97,
@@ -6004,6 +6055,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/53.mp3?v=67b371cf7617",
+      "hookAudioUrl": "audio/hooks/53.mp3?v=ff276954c82b",
       "senses": [
         {
           "senseId": 98,
@@ -6107,6 +6159,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/54.mp3?v=cb507a86533d",
+      "hookAudioUrl": "audio/hooks/54.mp3?v=6f4c26ec2f17",
       "senses": [
         {
           "senseId": 99,
@@ -6222,6 +6275,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/55.mp3?v=fcc45c4074d1",
+      "hookAudioUrl": "audio/hooks/55.mp3?v=ef88287a5eec",
       "senses": [
         {
           "senseId": 100,
@@ -6320,6 +6374,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/56.mp3?v=55ab3659ff46",
+      "hookAudioUrl": "audio/hooks/56.mp3?v=e4de6b535d8a",
       "senses": [
         {
           "senseId": 101,
@@ -6450,6 +6505,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/57.mp3?v=8db38d9cee1c",
+      "hookAudioUrl": "audio/hooks/57.mp3?v=a4369ea11643",
       "senses": [
         {
           "senseId": 103,
@@ -6565,6 +6621,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/58.mp3?v=e63fe68fe121",
+      "hookAudioUrl": "audio/hooks/58.mp3?v=56e50f07bf91",
       "senses": [
         {
           "senseId": 105,
@@ -6679,6 +6736,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/59.mp3?v=8923cad6c251",
+      "hookAudioUrl": "audio/hooks/59.mp3?v=e99883ec4ba1",
       "senses": [
         {
           "senseId": 108,
@@ -6791,6 +6849,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/60.mp3?v=652f925be0f3",
+      "hookAudioUrl": "audio/hooks/60.mp3?v=21315eb5b3af",
       "senses": [
         {
           "senseId": 110,
@@ -6911,6 +6970,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/61.mp3?v=705ba9ee1e03",
+      "hookAudioUrl": "audio/hooks/61.mp3?v=3c45feda2e54",
       "senses": [
         {
           "senseId": 111,
@@ -7021,6 +7081,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/62.mp3?v=c91fdaa5d49a",
+      "hookAudioUrl": "audio/hooks/62.mp3?v=f9fdb247fa08",
       "senses": [
         {
           "senseId": 113,
@@ -7185,6 +7246,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/63.mp3?v=0282df6638c0",
+      "hookAudioUrl": "audio/hooks/63.mp3?v=1e03de0954b7",
       "senses": [
         {
           "senseId": 116,
@@ -7287,6 +7349,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/64.mp3?v=89da5dc86f2b",
+      "hookAudioUrl": "audio/hooks/64.mp3?v=71afd9df3903",
       "senses": [
         {
           "senseId": 117,
@@ -7389,6 +7452,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/65.mp3?v=d8fbc53575d9",
+      "hookAudioUrl": "audio/hooks/65.mp3?v=2a247ba9b978",
       "senses": [
         {
           "senseId": 118,
@@ -7567,6 +7631,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/66.mp3?v=39f920926fea",
+      "hookAudioUrl": "audio/hooks/66.mp3?v=863793a72e51",
       "senses": [
         {
           "senseId": 121,
@@ -7686,6 +7751,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/67.mp3?v=ff4d6c075e8b",
+      "hookAudioUrl": "audio/hooks/67.mp3?v=ffc2ff4149e6",
       "senses": [
         {
           "senseId": 122,
@@ -7797,6 +7863,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/68.mp3?v=9b005e50ef64",
+      "hookAudioUrl": "audio/hooks/68.mp3?v=8881015ea029",
       "senses": [
         {
           "senseId": 123,
@@ -7904,6 +7971,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/69.mp3?v=edc1695b8709",
+      "hookAudioUrl": "audio/hooks/69.mp3?v=8887eebe9251",
       "senses": [
         {
           "senseId": 126,
@@ -8030,6 +8098,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/71.mp3?v=6681a1fb11e4",
+      "hookAudioUrl": "audio/hooks/71.mp3?v=fbc6787eca33",
       "senses": [
         {
           "senseId": 130,
@@ -8145,6 +8214,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/72.mp3?v=d74eb04ec911",
+      "hookAudioUrl": "audio/hooks/72.mp3?v=b7d7a3a66f2b",
       "senses": [
         {
           "senseId": 131,
@@ -8256,6 +8326,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/73.mp3?v=889793331fff",
+      "hookAudioUrl": "audio/hooks/73.mp3?v=0200b397bbbe",
       "senses": [
         {
           "senseId": 132,
@@ -8351,6 +8422,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/74.mp3?v=be0a9c04e91c",
+      "hookAudioUrl": "audio/hooks/74.mp3?v=d432fe224548",
       "senses": [
         {
           "senseId": 133,
@@ -8466,6 +8538,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/76.mp3?v=7d1660adcbfc",
+      "hookAudioUrl": "audio/hooks/76.mp3?v=de7fccae20e5",
       "senses": [
         {
           "senseId": 136,
@@ -8560,6 +8633,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/77.mp3?v=837fb3ecad53",
+      "hookAudioUrl": "audio/hooks/77.mp3?v=f432524148a0",
       "senses": [
         {
           "senseId": 137,
@@ -8659,6 +8733,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/78.mp3?v=e8eddd47b5d4",
+      "hookAudioUrl": "audio/hooks/78.mp3?v=abc6531523f6",
       "senses": [
         {
           "senseId": 138,
@@ -8785,6 +8860,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/79.mp3?v=8248e2e25e63",
+      "hookAudioUrl": "audio/hooks/79.mp3?v=8e0efa8880a2",
       "senses": [
         {
           "senseId": 140,
@@ -8892,6 +8968,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/80.mp3?v=109b2a9c0371",
+      "hookAudioUrl": "audio/hooks/80.mp3?v=70052768b7e9",
       "senses": [
         {
           "senseId": 142,
@@ -9003,6 +9080,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/81.mp3?v=73fe930cc24a",
+      "hookAudioUrl": "audio/hooks/81.mp3?v=665f2e96b12e",
       "senses": [
         {
           "senseId": 143,
@@ -9113,6 +9191,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/82.mp3?v=1916f36fb456",
+      "hookAudioUrl": "audio/hooks/82.mp3?v=40b40f0352ef",
       "senses": [
         {
           "senseId": 145,
@@ -9220,6 +9299,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/83.mp3?v=b10a1f950755",
+      "hookAudioUrl": "audio/hooks/83.mp3?v=7054e2850450",
       "senses": [
         {
           "senseId": 148,
@@ -9330,6 +9410,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/84.mp3?v=06ce4a045095",
+      "hookAudioUrl": "audio/hooks/84.mp3?v=3adc333565da",
       "senses": [
         {
           "senseId": 149,
@@ -9459,6 +9540,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/85.mp3?v=908538ed71a9",
+      "hookAudioUrl": "audio/hooks/85.mp3?v=fa78a73571c8",
       "senses": [
         {
           "senseId": 152,
@@ -9578,6 +9660,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/86.mp3?v=0151af5b4b62",
+      "hookAudioUrl": "audio/hooks/86.mp3?v=3ee5a8fbe981",
       "senses": [
         {
           "senseId": 155,
@@ -9699,6 +9782,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/87.mp3?v=74c97df8db71",
+      "hookAudioUrl": "audio/hooks/87.mp3?v=2a6c737d25ad",
       "senses": [
         {
           "senseId": 158,
@@ -9835,6 +9919,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/88.mp3?v=34ffe05e9882",
+      "hookAudioUrl": "audio/hooks/88.mp3?v=008039c09b77",
       "senses": [
         {
           "senseId": 161,
@@ -9949,6 +10034,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/89.mp3?v=71fd73638427",
+      "hookAudioUrl": "audio/hooks/89.mp3?v=c12e9f376ed6",
       "senses": [
         {
           "senseId": 162,
@@ -10051,6 +10137,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/90.mp3?v=7903a80cc3ac",
+      "hookAudioUrl": "audio/hooks/90.mp3?v=78b19d19fe26",
       "senses": [
         {
           "senseId": 163,
@@ -10145,6 +10232,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/92.mp3?v=a858544cfd7a",
+      "hookAudioUrl": "audio/hooks/92.mp3?v=4ef8f10b4ff2",
       "senses": [
         {
           "senseId": 165,
@@ -10240,6 +10328,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/93.mp3?v=acf7d4e27e73",
+      "hookAudioUrl": "audio/hooks/93.mp3?v=4b9c5e89125e",
       "senses": [
         {
           "senseId": 166,
@@ -10358,6 +10447,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/94.mp3?v=5d6afa5fc764",
+      "hookAudioUrl": "audio/hooks/94.mp3?v=4ebbf5b8bfb5",
       "senses": [
         {
           "senseId": 167,
@@ -10465,6 +10555,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/95.mp3?v=290de03d7f10",
+      "hookAudioUrl": "audio/hooks/95.mp3?v=ad3b750615ad",
       "senses": [
         {
           "senseId": 170,
@@ -10558,6 +10649,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/96.mp3?v=2ffa283ac427",
+      "hookAudioUrl": "audio/hooks/96.mp3?v=720a224dc550",
       "senses": [
         {
           "senseId": 172,
@@ -10659,6 +10751,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/98.mp3?v=7c08ac1b3938",
+      "hookAudioUrl": "audio/hooks/98.mp3?v=44433808d742",
       "senses": [
         {
           "senseId": 177,
@@ -10772,6 +10865,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/99.mp3?v=62c7cfe529e2",
+      "hookAudioUrl": "audio/hooks/99.mp3?v=a888092c959d",
       "senses": [
         {
           "senseId": 179,
@@ -10887,6 +10981,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/100.mp3?v=d2a22af7d67b",
+      "hookAudioUrl": "audio/hooks/100.mp3?v=870fb989f109",
       "senses": [
         {
           "senseId": 180,
@@ -10981,6 +11076,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/101.mp3?v=8c305c16837b",
+      "hookAudioUrl": "audio/hooks/101.mp3?v=406a08f97e4f",
       "senses": [
         {
           "senseId": 181,
@@ -11079,6 +11175,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/102.mp3?v=1f2e816ac42f",
+      "hookAudioUrl": "audio/hooks/102.mp3?v=531c862643e7",
       "senses": [
         {
           "senseId": 182,
@@ -11181,6 +11278,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/103.mp3?v=2b5da19ddb87",
+      "hookAudioUrl": "audio/hooks/103.mp3?v=f4059ac6697b",
       "senses": [
         {
           "senseId": 183,
@@ -11279,6 +11377,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/104.mp3?v=f1cbc3778e5a",
+      "hookAudioUrl": "audio/hooks/104.mp3?v=5218cb849daf",
       "senses": [
         {
           "senseId": 184,
@@ -11380,6 +11479,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/105.mp3?v=9a1ab6dd23e3",
+      "hookAudioUrl": "audio/hooks/105.mp3?v=ba567236a70b",
       "senses": [
         {
           "senseId": 186,
@@ -11462,6 +11562,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/106.mp3?v=dd3c2ff00020",
+      "hookAudioUrl": "audio/hooks/106.mp3?v=f91369b5b10d",
       "senses": [
         {
           "senseId": 187,
@@ -11568,6 +11669,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/107.mp3?v=0de97001991b",
+      "hookAudioUrl": "audio/hooks/107.mp3?v=98fbd8fef033",
       "senses": [
         {
           "senseId": 188,
@@ -11683,6 +11785,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/108.mp3?v=e704e0885913",
+      "hookAudioUrl": "audio/hooks/108.mp3?v=418570e82794",
       "senses": [
         {
           "senseId": 190,
@@ -11793,6 +11896,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/109.mp3?v=5dfd45ff59d7",
+      "hookAudioUrl": "audio/hooks/109.mp3?v=23f4de526a58",
       "senses": [
         {
           "senseId": 191,
@@ -11906,6 +12010,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/110.mp3?v=964ab1a1c12c",
+      "hookAudioUrl": "audio/hooks/110.mp3?v=3b1f79c5ec5f",
       "senses": [
         {
           "senseId": 193,
@@ -12016,6 +12121,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/111.mp3?v=d2f670959214",
+      "hookAudioUrl": "audio/hooks/111.mp3?v=737664fe70e9",
       "senses": [
         {
           "senseId": 194,
@@ -12134,6 +12240,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/112.mp3?v=71bbc8def139",
+      "hookAudioUrl": "audio/hooks/112.mp3?v=ac48200cd644",
       "senses": [
         {
           "senseId": 196,
@@ -12232,6 +12339,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/113.mp3?v=21a8a50be68d",
+      "hookAudioUrl": "audio/hooks/113.mp3?v=b09c44d60b05",
       "senses": [
         {
           "senseId": 197,
@@ -12357,6 +12465,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/114.mp3?v=ee4d3c6ffabb",
+      "hookAudioUrl": "audio/hooks/114.mp3?v=5e11ee5c03fc",
       "senses": [
         {
           "senseId": 198,
@@ -12487,6 +12596,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/115.mp3?v=e24594cdaff5",
+      "hookAudioUrl": "audio/hooks/115.mp3?v=c479d37381fb",
       "senses": [
         {
           "senseId": 201,
@@ -12598,6 +12708,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/116.mp3?v=c43fe783b7c0",
+      "hookAudioUrl": "audio/hooks/116.mp3?v=b6be8f8aa317",
       "senses": [
         {
           "senseId": 202,
@@ -12715,6 +12826,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/117.mp3?v=257755d55df3",
+      "hookAudioUrl": "audio/hooks/117.mp3?v=887be1a054f8",
       "senses": [
         {
           "senseId": 205,
@@ -12826,6 +12938,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/119.mp3?v=fc6c127dc61b",
+      "hookAudioUrl": "audio/hooks/119.mp3?v=069e3766b824",
       "senses": [
         {
           "senseId": 208,
@@ -12947,6 +13060,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/120.mp3?v=81e4d39d6d9d",
+      "hookAudioUrl": "audio/hooks/120.mp3?v=50924b34e0bc",
       "senses": [
         {
           "senseId": 210,
@@ -13119,6 +13233,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/121.mp3?v=ba19b44e6c5b",
+      "hookAudioUrl": "audio/hooks/121.mp3?v=41f68074516b",
       "senses": [
         {
           "senseId": 212,
@@ -13240,6 +13355,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/122.mp3?v=178180f9d742",
+      "hookAudioUrl": "audio/hooks/122.mp3?v=341ab772f9b9",
       "senses": [
         {
           "senseId": 214,
@@ -13349,6 +13465,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/123.mp3?v=234186fa4de2",
+      "hookAudioUrl": "audio/hooks/123.mp3?v=1d1053e7eb7c",
       "senses": [
         {
           "senseId": 216,
@@ -13475,6 +13592,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/124.mp3?v=d7e247266b85",
+      "hookAudioUrl": "audio/hooks/124.mp3?v=f6ddbac423af",
       "senses": [
         {
           "senseId": 218,
@@ -13709,6 +13827,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/125.mp3?v=ffb50c70fdfb",
+      "hookAudioUrl": "audio/hooks/125.mp3?v=2a9eb60c8478",
       "senses": [
         {
           "senseId": 221,
@@ -13824,6 +13943,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/126.mp3?v=987407b20bf3",
+      "hookAudioUrl": "audio/hooks/126.mp3?v=705027916f9c",
       "senses": [
         {
           "senseId": 222,
@@ -13934,6 +14054,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/127.mp3?v=70727cd124fa",
+      "hookAudioUrl": "audio/hooks/127.mp3?v=95bb2f030962",
       "senses": [
         {
           "senseId": 223,
@@ -14051,6 +14172,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/128.mp3?v=dba5e8067847",
+      "hookAudioUrl": "audio/hooks/128.mp3?v=78a9f249c057",
       "senses": [
         {
           "senseId": 225,
@@ -14172,6 +14294,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/129.mp3?v=1966a9bed3d8",
+      "hookAudioUrl": "audio/hooks/129.mp3?v=a6e36555550d",
       "senses": [
         {
           "senseId": 228,
@@ -14290,6 +14413,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/130.mp3?v=4575f4bf1c36",
+      "hookAudioUrl": "audio/hooks/130.mp3?v=41952f38bf38",
       "senses": [
         {
           "senseId": 231,
@@ -14404,6 +14528,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/131.mp3?v=044413b717a0",
+      "hookAudioUrl": "audio/hooks/131.mp3?v=ab4aeb0e2a72",
       "senses": [
         {
           "senseId": 232,
@@ -14502,6 +14627,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/132.mp3?v=2757a7ec5636",
+      "hookAudioUrl": "audio/hooks/132.mp3?v=52514b7531ca",
       "senses": [
         {
           "senseId": 233,
@@ -14594,6 +14720,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/133.mp3?v=02027e80c574",
+      "hookAudioUrl": "audio/hooks/133.mp3?v=ef727727a363",
       "senses": [
         {
           "senseId": 234,
@@ -14692,6 +14819,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/134.mp3?v=0712cfe91153",
+      "hookAudioUrl": "audio/hooks/134.mp3?v=1186a2eb239a",
       "senses": [
         {
           "senseId": 235,
@@ -14786,6 +14914,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/135.mp3?v=486ad7198a8c",
+      "hookAudioUrl": "audio/hooks/135.mp3?v=1060038fecdf",
       "senses": [
         {
           "senseId": 237,
@@ -14903,6 +15032,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/136.mp3?v=d698240fac84",
+      "hookAudioUrl": "audio/hooks/136.mp3?v=23ea193df8a8",
       "senses": [
         {
           "senseId": 239,
@@ -14991,6 +15121,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/137.mp3?v=f53861dfecca",
+      "hookAudioUrl": "audio/hooks/137.mp3?v=e513cb991cd1",
       "senses": [
         {
           "senseId": 240,
@@ -15105,6 +15236,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/138.mp3?v=1c4d57bd76af",
+      "hookAudioUrl": "audio/hooks/138.mp3?v=a845d16e2858",
       "senses": [
         {
           "senseId": 242,
@@ -15225,6 +15357,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/140.mp3?v=0112b7c34c4a",
+      "hookAudioUrl": "audio/hooks/140.mp3?v=c7494ac17ebb",
       "senses": [
         {
           "senseId": 245,
@@ -15339,6 +15472,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/141.mp3?v=6e56f4e720d8",
+      "hookAudioUrl": "audio/hooks/141.mp3?v=85ea7ea8f3b2",
       "senses": [
         {
           "senseId": 246,
@@ -15526,6 +15660,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/142.mp3?v=72c7c74d89e1",
+      "hookAudioUrl": "audio/hooks/142.mp3?v=909ad280e505",
       "senses": [
         {
           "senseId": 249,
@@ -15639,6 +15774,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/143.mp3?v=f8fc400e4dc0",
+      "hookAudioUrl": "audio/hooks/143.mp3?v=361c1cb7dee7",
       "senses": [
         {
           "senseId": 250,
@@ -15733,6 +15869,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/144.mp3?v=af589e622bfa",
+      "hookAudioUrl": "audio/hooks/144.mp3?v=c17d28ac0e63",
       "senses": [
         {
           "senseId": 251,
@@ -15834,6 +15971,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/146.mp3?v=9dfb6f730c33",
+      "hookAudioUrl": "audio/hooks/146.mp3?v=a10f812db23b",
       "senses": [
         {
           "senseId": 254,
@@ -15941,6 +16079,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/147.mp3?v=a99153cae2f0",
+      "hookAudioUrl": "audio/hooks/147.mp3?v=f37a2b342909",
       "senses": [
         {
           "senseId": 255,
@@ -16056,6 +16195,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/148.mp3?v=448eeb6d3db2",
+      "hookAudioUrl": "audio/hooks/148.mp3?v=fc9c16803475",
       "senses": [
         {
           "senseId": 256,
@@ -16182,6 +16322,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/149.mp3?v=c11cc48ccf66",
+      "hookAudioUrl": "audio/hooks/149.mp3?v=1be8016f457f",
       "senses": [
         {
           "senseId": 258,
@@ -16295,6 +16436,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/150.mp3?v=752e7c3e79c9",
+      "hookAudioUrl": "audio/hooks/150.mp3?v=0432e50a6daf",
       "senses": [
         {
           "senseId": 260,
@@ -16417,6 +16559,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/152.mp3?v=202af6c05449",
+      "hookAudioUrl": "audio/hooks/152.mp3?v=56547df8e51b",
       "senses": [
         {
           "senseId": 264,
@@ -16538,6 +16681,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/153.mp3?v=7e1df003cf72",
+      "hookAudioUrl": "audio/hooks/153.mp3?v=fd9054934a2d",
       "senses": [
         {
           "senseId": 265,
@@ -16653,6 +16797,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/154.mp3?v=101c9ab2bf04",
+      "hookAudioUrl": "audio/hooks/154.mp3?v=e3fdd132751a",
       "senses": [
         {
           "senseId": 267,
@@ -16764,6 +16909,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/155.mp3?v=41971561239d",
+      "hookAudioUrl": "audio/hooks/155.mp3?v=16926556f750",
       "senses": [
         {
           "senseId": 270,
@@ -16874,6 +17020,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/156.mp3?v=ba758954f07c",
+      "hookAudioUrl": "audio/hooks/156.mp3?v=2cd68843a5e8",
       "senses": [
         {
           "senseId": 272,
@@ -16987,6 +17134,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/157.mp3?v=45d68a8d0638",
+      "hookAudioUrl": "audio/hooks/157.mp3?v=ff5e2203a282",
       "senses": [
         {
           "senseId": 275,
@@ -17097,6 +17245,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/158.mp3?v=eaee274affa4",
+      "hookAudioUrl": "audio/hooks/158.mp3?v=5bf2028744c1",
       "senses": [
         {
           "senseId": 276,
@@ -17212,6 +17361,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/159.mp3?v=244126d61071",
+      "hookAudioUrl": "audio/hooks/159.mp3?v=9fe19c871e3b",
       "senses": [
         {
           "senseId": 277,
@@ -17327,6 +17477,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/160.mp3?v=ac874e0e4807",
+      "hookAudioUrl": "audio/hooks/160.mp3?v=b975e6a5e351",
       "senses": [
         {
           "senseId": 279,
@@ -17434,6 +17585,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/161.mp3?v=1f796bd719a5",
+      "hookAudioUrl": "audio/hooks/161.mp3?v=f3a7e6197ed1",
       "senses": [
         {
           "senseId": 280,
@@ -17549,6 +17701,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/162.mp3?v=ab3dd75c9828",
+      "hookAudioUrl": "audio/hooks/162.mp3?v=2165a456bed3",
       "senses": [
         {
           "senseId": 282,
@@ -17651,6 +17804,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/163.mp3?v=54d0cf9e69ef",
+      "hookAudioUrl": "audio/hooks/163.mp3?v=b25391844573",
       "senses": [
         {
           "senseId": 283,
@@ -17769,6 +17923,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/165.mp3?v=b27e7ed03bb2",
+      "hookAudioUrl": "audio/hooks/165.mp3?v=26ab2c5cffa6",
       "senses": [
         {
           "senseId": 287,
@@ -17883,6 +18038,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/166.mp3?v=a4c574e9e1c6",
+      "hookAudioUrl": "audio/hooks/166.mp3?v=3d68025267d4",
       "senses": [
         {
           "senseId": 288,
@@ -17993,6 +18149,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/167.mp3?v=0882d6d0fc3b",
+      "hookAudioUrl": "audio/hooks/167.mp3?v=1d1880fa22ce",
       "senses": [
         {
           "senseId": 289,
@@ -18110,6 +18267,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/168.mp3?v=c9fa47f64ce8",
+      "hookAudioUrl": "audio/hooks/168.mp3?v=877d8b56352d",
       "senses": [
         {
           "senseId": 291,
@@ -18220,6 +18378,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/169.mp3?v=58ce8c1dd769",
+      "hookAudioUrl": "audio/hooks/169.mp3?v=295385e7c7d8",
       "senses": [
         {
           "senseId": 292,
@@ -18360,6 +18519,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/170.mp3?v=56a4c26cd681",
+      "hookAudioUrl": "audio/hooks/170.mp3?v=2b21c19f98a0",
       "senses": [
         {
           "senseId": 295,
@@ -18485,6 +18645,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/171.mp3?v=ed6c028ab8c1",
+      "hookAudioUrl": "audio/hooks/171.mp3?v=95c130dbc0ac",
       "senses": [
         {
           "senseId": 296,
@@ -18607,6 +18768,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/172.mp3?v=abfbb3b6e595",
+      "hookAudioUrl": "audio/hooks/172.mp3?v=89ea0ec61689",
       "senses": [
         {
           "senseId": 298,
@@ -18697,6 +18859,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/173.mp3?v=925ee4000cd5",
+      "hookAudioUrl": "audio/hooks/173.mp3?v=4e8de96a27ca",
       "senses": [
         {
           "senseId": 299,
@@ -18826,6 +18989,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/174.mp3?v=565db73daaf3",
+      "hookAudioUrl": "audio/hooks/174.mp3?v=53a5b4b293cf",
       "senses": [
         {
           "senseId": 301,
@@ -18945,6 +19109,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/175.mp3?v=3da2fcac5e02",
+      "hookAudioUrl": "audio/hooks/175.mp3?v=4dff42ccd304",
       "senses": [
         {
           "senseId": 302,
@@ -19123,6 +19288,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/176.mp3?v=5776c62381d1",
+      "hookAudioUrl": "audio/hooks/176.mp3?v=a865b4c69725",
       "senses": [
         {
           "senseId": 304,
@@ -19268,6 +19434,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/177.mp3?v=bc09038f61e4",
+      "hookAudioUrl": "audio/hooks/177.mp3?v=cc49a95c7e87",
       "senses": [
         {
           "senseId": 306,
@@ -19386,6 +19553,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/178.mp3?v=52ce531708c9",
+      "hookAudioUrl": "audio/hooks/178.mp3?v=3642102b55fb",
       "senses": [
         {
           "senseId": 308,
@@ -19515,6 +19683,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/179.mp3?v=648d5ff66cc1",
+      "hookAudioUrl": "audio/hooks/179.mp3?v=951fc85b3bda",
       "senses": [
         {
           "senseId": 310,
@@ -19659,6 +19828,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/180.mp3?v=3ec93fc3971e",
+      "hookAudioUrl": "audio/hooks/180.mp3?v=331c3a5a4a20",
       "senses": [
         {
           "senseId": 313,
@@ -19777,6 +19947,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/181.mp3?v=ed3482287101",
+      "hookAudioUrl": "audio/hooks/181.mp3?v=b0006d213da8",
       "senses": [
         {
           "senseId": 314,
@@ -19892,6 +20063,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/183.mp3?v=ab135086a9ed",
+      "hookAudioUrl": "audio/hooks/183.mp3?v=28c42c974230",
       "senses": [
         {
           "senseId": 318,
@@ -19999,6 +20171,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/184.mp3?v=9449380a5355",
+      "hookAudioUrl": "audio/hooks/184.mp3?v=08b603555c2e",
       "senses": [
         {
           "senseId": 320,
@@ -20113,6 +20286,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/185.mp3?v=86ec46b511f6",
+      "hookAudioUrl": "audio/hooks/185.mp3?v=67d4464a5d14",
       "senses": [
         {
           "senseId": 321,
@@ -20238,6 +20412,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/186.mp3?v=ddca09c108b5",
+      "hookAudioUrl": "audio/hooks/186.mp3?v=b8c3d3ce90c4",
       "senses": [
         {
           "senseId": 324,
@@ -20348,6 +20523,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/187.mp3?v=8003fd9a12bb",
+      "hookAudioUrl": "audio/hooks/187.mp3?v=0ed1c857b334",
       "senses": [
         {
           "senseId": 325,
@@ -20526,6 +20702,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/189.mp3?v=42524502e939",
+      "hookAudioUrl": "audio/hooks/189.mp3?v=8909e8513be8",
       "senses": [
         {
           "senseId": 330,
@@ -20640,6 +20817,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/190.mp3?v=2a6e7210ec6b",
+      "hookAudioUrl": "audio/hooks/190.mp3?v=6410b87f3e8c",
       "senses": [
         {
           "senseId": 331,
@@ -20750,6 +20928,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/191.mp3?v=f4b295ee1dae",
+      "hookAudioUrl": "audio/hooks/191.mp3?v=a6f8de87dad0",
       "senses": [
         {
           "senseId": 333,
@@ -20875,6 +21054,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/192.mp3?v=84238ac22480",
+      "hookAudioUrl": "audio/hooks/192.mp3?v=41b7b764ae23",
       "senses": [
         {
           "senseId": 336,
@@ -21011,6 +21191,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/193.mp3?v=bc74fda5a31f",
+      "hookAudioUrl": "audio/hooks/193.mp3?v=be74e2d07723",
       "senses": [
         {
           "senseId": 339,
@@ -21121,6 +21302,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/194.mp3?v=344d3f0af01a",
+      "hookAudioUrl": "audio/hooks/194.mp3?v=4c5f347297d9",
       "senses": [
         {
           "senseId": 340,
@@ -21232,6 +21414,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/195.mp3?v=fe013efbba78",
+      "hookAudioUrl": "audio/hooks/195.mp3?v=2d303c194737",
       "senses": [
         {
           "senseId": 341,
@@ -21366,6 +21549,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/196.mp3?v=b89c57bbeb74",
+      "hookAudioUrl": "audio/hooks/196.mp3?v=9c0204281444",
       "senses": [
         {
           "senseId": 343,
@@ -21544,6 +21728,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/197.mp3?v=37bfb4e725b4",
+      "hookAudioUrl": "audio/hooks/197.mp3?v=7ff7b00690d6",
       "senses": [
         {
           "senseId": 345,
@@ -21654,6 +21839,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/198.mp3?v=e4722798dbbb",
+      "hookAudioUrl": "audio/hooks/198.mp3?v=aea02feae54e",
       "senses": [
         {
           "senseId": 347,
@@ -21775,6 +21961,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/199.mp3?v=8075a8fbac15",
+      "hookAudioUrl": "audio/hooks/199.mp3?v=24f553608077",
       "senses": [
         {
           "senseId": 349,
@@ -21874,6 +22061,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/200.mp3?v=fa2390571d61",
+      "hookAudioUrl": "audio/hooks/200.mp3?v=d4bc7551aa25",
       "senses": [
         {
           "senseId": 350,
@@ -21972,6 +22160,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/201.mp3?v=2c86972c19fd",
+      "hookAudioUrl": "audio/hooks/201.mp3?v=b2cd2739cf2a",
       "senses": [
         {
           "senseId": 352,
@@ -22102,6 +22291,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/202.mp3?v=4843991d8e5a",
+      "hookAudioUrl": "audio/hooks/202.mp3?v=cd9b48113a7c",
       "senses": [
         {
           "senseId": 354,
@@ -22212,6 +22402,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/203.mp3?v=01997e0f39be",
+      "hookAudioUrl": "audio/hooks/203.mp3?v=1290dd2d7227",
       "senses": [
         {
           "senseId": 355,
@@ -22306,6 +22497,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/204.mp3?v=32fd4ed41fc9",
+      "hookAudioUrl": "audio/hooks/204.mp3?v=a856235ea39a",
       "senses": [
         {
           "senseId": 356,
@@ -22416,6 +22608,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/205.mp3?v=f86c3f520939",
+      "hookAudioUrl": "audio/hooks/205.mp3?v=5c556726af70",
       "senses": [
         {
           "senseId": 357,
@@ -22522,6 +22715,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/206.mp3?v=00765b67c87f",
+      "hookAudioUrl": "audio/hooks/206.mp3?v=723d973a1c3a",
       "senses": [
         {
           "senseId": 358,
@@ -22636,6 +22830,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/207.mp3?v=093b0561433a",
+      "hookAudioUrl": "audio/hooks/207.mp3?v=bf642e32bf8b",
       "senses": [
         {
           "senseId": 359,
@@ -22750,6 +22945,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/208.mp3?v=11373f23b676",
+      "hookAudioUrl": "audio/hooks/208.mp3?v=883ced74fb07",
       "senses": [
         {
           "senseId": 361,
@@ -22860,6 +23056,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/209.mp3?v=4b371ff03728",
+      "hookAudioUrl": "audio/hooks/209.mp3?v=9c7f3e7b3f05",
       "senses": [
         {
           "senseId": 363,
@@ -22970,6 +23167,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/210.mp3?v=f955a4471d60",
+      "hookAudioUrl": "audio/hooks/210.mp3?v=aad5e38f8e15",
       "senses": [
         {
           "senseId": 365,
@@ -23080,6 +23278,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/211.mp3?v=ae37ccdddc74",
+      "hookAudioUrl": "audio/hooks/211.mp3?v=7e60b7b72f2b",
       "senses": [
         {
           "senseId": 366,
@@ -23194,6 +23393,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/213.mp3?v=17832a3b27be",
+      "hookAudioUrl": "audio/hooks/213.mp3?v=c6dbba004240",
       "senses": [
         {
           "senseId": 368,
@@ -23304,6 +23504,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/214.mp3?v=2bcd05804528",
+      "hookAudioUrl": "audio/hooks/214.mp3?v=3c2f5db8d666",
       "senses": [
         {
           "senseId": 369,
@@ -23418,6 +23619,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/215.mp3?v=445e7e25f052",
+      "hookAudioUrl": "audio/hooks/215.mp3?v=dd87a250bc52",
       "senses": [
         {
           "senseId": 370,
@@ -23516,6 +23718,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/216.mp3?v=99fe55fc9081",
+      "hookAudioUrl": "audio/hooks/216.mp3?v=135a9292f8c4",
       "senses": [
         {
           "senseId": 371,
@@ -23630,6 +23833,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/217.mp3?v=2f2f784054e4",
+      "hookAudioUrl": "audio/hooks/217.mp3?v=989ea7d36164",
       "senses": [
         {
           "senseId": 372,
@@ -23762,6 +23966,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/218.mp3?v=91e178157fb3",
+      "hookAudioUrl": "audio/hooks/218.mp3?v=e7f53dece3b3",
       "senses": [
         {
           "senseId": 374,
@@ -23887,6 +24092,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/219.mp3?v=8bb8408397ff",
+      "hookAudioUrl": "audio/hooks/219.mp3?v=94cde749b894",
       "senses": [
         {
           "senseId": 377,
@@ -24027,6 +24233,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/220.mp3?v=c0e7b8fc585e",
+      "hookAudioUrl": "audio/hooks/220.mp3?v=d48fc504272d",
       "senses": [
         {
           "senseId": 380,
@@ -24129,6 +24336,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/221.mp3?v=e15e956c2571",
+      "hookAudioUrl": "audio/hooks/221.mp3?v=c62c63db1ff9",
       "senses": [
         {
           "senseId": 381,
@@ -24227,6 +24435,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/222.mp3?v=028c1570ab6e",
+      "hookAudioUrl": "audio/hooks/222.mp3?v=2de5cdb0774e",
       "senses": [
         {
           "senseId": 382,
@@ -24337,6 +24546,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/223.mp3?v=b2ed675a493c",
+      "hookAudioUrl": "audio/hooks/223.mp3?v=544fe1f1fd6c",
       "senses": [
         {
           "senseId": 384,
@@ -24446,6 +24656,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/224.mp3?v=1f3093c756b1",
+      "hookAudioUrl": "audio/hooks/224.mp3?v=bba4b95f99b4",
       "senses": [
         {
           "senseId": 386,
@@ -24560,6 +24771,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/225.mp3?v=be6cf66b6291",
+      "hookAudioUrl": "audio/hooks/225.mp3?v=84a0cec3dcfe",
       "senses": [
         {
           "senseId": 388,
@@ -24662,6 +24874,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/226.mp3?v=d72aaa628d14",
+      "hookAudioUrl": "audio/hooks/226.mp3?v=817a72c9a8e5",
       "senses": [
         {
           "senseId": 389,
@@ -24752,6 +24965,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/227.mp3?v=17158dbbba8c",
+      "hookAudioUrl": "audio/hooks/227.mp3?v=07f7c6fe13a3",
       "senses": [
         {
           "senseId": 390,
@@ -24877,6 +25091,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/228.mp3?v=dc8ed67ffdff",
+      "hookAudioUrl": "audio/hooks/228.mp3?v=dc30acbaef04",
       "senses": [
         {
           "senseId": 392,
@@ -24983,6 +25198,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/229.mp3?v=a7e7b61ca773",
+      "hookAudioUrl": "audio/hooks/229.mp3?v=edd49a847760",
       "senses": [
         {
           "senseId": 393,
@@ -25089,6 +25305,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/230.mp3?v=8107c5740aa9",
+      "hookAudioUrl": "audio/hooks/230.mp3?v=16562420c0e8",
       "senses": [
         {
           "senseId": 394,
@@ -25191,6 +25408,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/231.mp3?v=422a25a279d7",
+      "hookAudioUrl": "audio/hooks/231.mp3?v=ba8c017910d9",
       "senses": [
         {
           "senseId": 395,
@@ -25359,6 +25577,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/232.mp3?v=9ca1e7ed318e",
+      "hookAudioUrl": "audio/hooks/232.mp3?v=3dfba3941590",
       "senses": [
         {
           "senseId": 397,
@@ -25473,6 +25692,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/233.mp3?v=2649846069e0",
+      "hookAudioUrl": "audio/hooks/233.mp3?v=de2777e9a1dc",
       "senses": [
         {
           "senseId": 399,
@@ -25571,6 +25791,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/235.mp3?v=0a3e4f30c28f",
+      "hookAudioUrl": "audio/hooks/235.mp3?v=ea6e911ec56c",
       "senses": [
         {
           "senseId": 403,
@@ -25673,6 +25894,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/236.mp3?v=21172a0e7f97",
+      "hookAudioUrl": "audio/hooks/236.mp3?v=cbb3aca6a0bc",
       "senses": [
         {
           "senseId": 406,
@@ -25775,6 +25997,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/237.mp3?v=c86ee94befe7",
+      "hookAudioUrl": "audio/hooks/237.mp3?v=5446b8ce7f17",
       "senses": [
         {
           "senseId": 407,
@@ -25881,6 +26104,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/238.mp3?v=106c2560fb0d",
+      "hookAudioUrl": "audio/hooks/238.mp3?v=39188dc45b98",
       "senses": [
         {
           "senseId": 408,
@@ -25998,6 +26222,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/239.mp3?v=d39a1044e667",
+      "hookAudioUrl": "audio/hooks/239.mp3?v=aaa3366da934",
       "senses": [
         {
           "senseId": 410,
@@ -26108,6 +26333,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/241.mp3?v=9b44c4d3afca",
+      "hookAudioUrl": "audio/hooks/241.mp3?v=e9094e8824a0",
       "senses": [
         {
           "senseId": 413,
@@ -26217,6 +26443,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/242.mp3?v=4ff7cec04899",
+      "hookAudioUrl": "audio/hooks/242.mp3?v=fe05e4c0a1af",
       "senses": [
         {
           "senseId": 415,
@@ -26311,6 +26538,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/243.mp3?v=cb47f038c101",
+      "hookAudioUrl": "audio/hooks/243.mp3?v=3233a84f4fba",
       "senses": [
         {
           "senseId": 418,
@@ -26421,6 +26649,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/244.mp3?v=8f0d22027ba5",
+      "hookAudioUrl": "audio/hooks/244.mp3?v=67f20fb6635e",
       "senses": [
         {
           "senseId": 419,
@@ -26527,6 +26756,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/245.mp3?v=e18c924ac0e7",
+      "hookAudioUrl": "audio/hooks/245.mp3?v=0f56209e71de",
       "senses": [
         {
           "senseId": 420,
@@ -26637,6 +26867,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/246.mp3?v=0d262ea1d37a",
+      "hookAudioUrl": "audio/hooks/246.mp3?v=0fa196693bcb",
       "senses": [
         {
           "senseId": 421,
@@ -26742,6 +26973,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/247.mp3?v=6a6f1dd38964",
+      "hookAudioUrl": "audio/hooks/247.mp3?v=ac298f4e90b9",
       "senses": [
         {
           "senseId": 424,
@@ -26861,6 +27093,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/250.mp3?v=c7d48235503f",
+      "hookAudioUrl": "audio/hooks/250.mp3?v=ac634bfd3e56",
       "senses": [
         {
           "senseId": 429,
@@ -27008,6 +27241,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/251.mp3?v=7e9fb9436164",
+      "hookAudioUrl": "audio/hooks/251.mp3?v=86a995088293",
       "senses": [
         {
           "senseId": 432,
@@ -27114,6 +27348,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/252.mp3?v=d08378912a2d",
+      "hookAudioUrl": "audio/hooks/252.mp3?v=9458af555d4e",
       "senses": [
         {
           "senseId": 434,
@@ -27238,6 +27473,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/253.mp3?v=4e7ef456f064",
+      "hookAudioUrl": "audio/hooks/253.mp3?v=4a6fbd4137a8",
       "senses": [
         {
           "senseId": 437,
@@ -27336,6 +27572,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/254.mp3?v=381f7ab4c78e",
+      "hookAudioUrl": "audio/hooks/254.mp3?v=3a53df5aa1c5",
       "senses": [
         {
           "senseId": 440,
@@ -27438,6 +27675,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/255.mp3?v=473653d13213",
+      "hookAudioUrl": "audio/hooks/255.mp3?v=75acdf77b66f",
       "senses": [
         {
           "senseId": 441,
@@ -27551,6 +27789,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/256.mp3?v=a1ff1d1e55ca",
+      "hookAudioUrl": "audio/hooks/256.mp3?v=7f3a805a5bea",
       "senses": [
         {
           "senseId": 444,
@@ -27657,6 +27896,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/257.mp3?v=04488f291bb0",
+      "hookAudioUrl": "audio/hooks/257.mp3?v=ffa386ae69e0",
       "senses": [
         {
           "senseId": 445,
@@ -27887,6 +28127,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/258.mp3?v=09555cc35839",
+      "hookAudioUrl": "audio/hooks/258.mp3?v=1f57351be2f6",
       "senses": [
         {
           "senseId": 448,
@@ -27993,6 +28234,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/261.mp3?v=3a060527b85f",
+      "hookAudioUrl": "audio/hooks/261.mp3?v=eea4f01cadfc",
       "senses": [
         {
           "senseId": 454,
@@ -28110,6 +28352,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/262.mp3?v=f0b54629bcf2",
+      "hookAudioUrl": "audio/hooks/262.mp3?v=6eff1e9bec9c",
       "senses": [
         {
           "senseId": 457,
@@ -28219,6 +28462,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/263.mp3?v=e0382506cd93",
+      "hookAudioUrl": "audio/hooks/263.mp3?v=fcc550f56b23",
       "senses": [
         {
           "senseId": 458,
@@ -28321,6 +28565,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/264.mp3?v=4af85dc18f20",
+      "hookAudioUrl": "audio/hooks/264.mp3?v=0c16e10a8b95",
       "senses": [
         {
           "senseId": 459,
@@ -28430,6 +28675,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/265.mp3?v=f120e25df48f",
+      "hookAudioUrl": "audio/hooks/265.mp3?v=aa7ad87e58bd",
       "senses": [
         {
           "senseId": 461,
@@ -28555,6 +28801,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/266.mp3?v=c60e040e4407",
+      "hookAudioUrl": "audio/hooks/266.mp3?v=afc04f7be063",
       "senses": [
         {
           "senseId": 463,
@@ -28668,6 +28915,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/268.mp3?v=1c79c0d2dfac",
+      "hookAudioUrl": "audio/hooks/268.mp3?v=06cd41daed6e",
       "senses": [
         {
           "senseId": 465,
@@ -28789,6 +29037,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/269.mp3?v=65194e317c35",
+      "hookAudioUrl": "audio/hooks/269.mp3?v=7477f8405633",
       "senses": [
         {
           "senseId": 467,
@@ -28891,6 +29140,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/270.mp3?v=7e42018771a2",
+      "hookAudioUrl": "audio/hooks/270.mp3?v=b50ebe07b19d",
       "senses": [
         {
           "senseId": 469,
@@ -29060,6 +29310,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/271.mp3?v=ed4a18a797de",
+      "hookAudioUrl": "audio/hooks/271.mp3?v=b46c9426156b",
       "senses": [
         {
           "senseId": 472,
@@ -29166,6 +29417,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/272.mp3?v=34c15de3697d",
+      "hookAudioUrl": "audio/hooks/272.mp3?v=a4397b2cddeb",
       "senses": [
         {
           "senseId": 474,
@@ -29284,6 +29536,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/274.mp3?v=387932e68a19",
+      "hookAudioUrl": "audio/hooks/274.mp3?v=1dfc300919db",
       "senses": [
         {
           "senseId": 476,
@@ -29392,6 +29645,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/275.mp3?v=e41b86e400af",
+      "hookAudioUrl": "audio/hooks/275.mp3?v=301422eb33ed",
       "senses": [
         {
           "senseId": 479,
@@ -29502,6 +29756,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/276.mp3?v=f593ffda3f76",
+      "hookAudioUrl": "audio/hooks/276.mp3?v=a3ff2d89f455",
       "senses": [
         {
           "senseId": 480,
@@ -29678,6 +29933,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/277.mp3?v=9d5ccc9154c9",
+      "hookAudioUrl": "audio/hooks/277.mp3?v=49d9841bc482",
       "senses": [
         {
           "senseId": 483,
@@ -29856,6 +30112,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/278.mp3?v=c8ec003fc72c",
+      "hookAudioUrl": "audio/hooks/278.mp3?v=9e9a102377f1",
       "senses": [
         {
           "senseId": 486,
@@ -29970,6 +30227,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/279.mp3?v=b55537384c8d",
+      "hookAudioUrl": "audio/hooks/279.mp3?v=9374513eefc9",
       "senses": [
         {
           "senseId": 488,
@@ -30146,6 +30404,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/280.mp3?v=8b68d4b57816",
+      "hookAudioUrl": "audio/hooks/280.mp3?v=cd8683ef13f2",
       "senses": [
         {
           "senseId": 491,
@@ -30260,6 +30519,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/281.mp3?v=6ac2fd80c424",
+      "hookAudioUrl": "audio/hooks/281.mp3?v=3394c765adce",
       "senses": [
         {
           "senseId": 493,
@@ -30358,6 +30618,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/282.mp3?v=358cf1041636",
+      "hookAudioUrl": "audio/hooks/282.mp3?v=032f80b26fdd",
       "senses": [
         {
           "senseId": 494,
@@ -30472,6 +30733,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/283.mp3?v=b8e22235d574",
+      "hookAudioUrl": "audio/hooks/283.mp3?v=8c16ee59a573",
       "senses": [
         {
           "senseId": 495,
@@ -30589,6 +30851,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/284.mp3?v=0143cd54caa2",
+      "hookAudioUrl": "audio/hooks/284.mp3?v=d84e5d0b14c5",
       "senses": [
         {
           "senseId": 497,
@@ -30786,6 +31049,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/285.mp3?v=60bde85b2f55",
+      "hookAudioUrl": "audio/hooks/285.mp3?v=46570eeac990",
       "senses": [
         {
           "senseId": 500,
@@ -30904,6 +31168,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/288.mp3?v=0194c7cbe53e",
+      "hookAudioUrl": "audio/hooks/288.mp3?v=e306abd0d05e",
       "senses": [
         {
           "senseId": 504,
@@ -31025,6 +31290,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/289.mp3?v=88b7bdec98b5",
+      "hookAudioUrl": "audio/hooks/289.mp3?v=87f055387b48",
       "senses": [
         {
           "senseId": 507,
@@ -31158,6 +31424,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/290.mp3?v=ff039ace3e82",
+      "hookAudioUrl": "audio/hooks/290.mp3?v=c0f627470688",
       "senses": [
         {
           "senseId": 509,
@@ -31279,6 +31546,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/291.mp3?v=5169102e2837",
+      "hookAudioUrl": "audio/hooks/291.mp3?v=3b492dfdd0b9",
       "senses": [
         {
           "senseId": 512,
@@ -31397,6 +31665,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/292.mp3?v=2ae4a70f3db0",
+      "hookAudioUrl": "audio/hooks/292.mp3?v=90717bfd3636",
       "senses": [
         {
           "senseId": 513,
@@ -31522,6 +31791,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/294.mp3?v=8ca377448450",
+      "hookAudioUrl": "audio/hooks/294.mp3?v=faa959c52218",
       "senses": [
         {
           "senseId": 516,
@@ -31632,6 +31902,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/295.mp3?v=9c0c412da142",
+      "hookAudioUrl": "audio/hooks/295.mp3?v=3661cad061b5",
       "senses": [
         {
           "senseId": 517,
@@ -31730,6 +32001,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/297.mp3?v=e76b1552b633",
+      "hookAudioUrl": "audio/hooks/297.mp3?v=ad1119f23f33",
       "senses": [
         {
           "senseId": 519,
@@ -31846,6 +32118,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/298.mp3?v=0b7110efccfc",
+      "hookAudioUrl": "audio/hooks/298.mp3?v=c027158af0f8",
       "senses": [
         {
           "senseId": 522,
@@ -31961,6 +32234,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/299.mp3?v=12d5f73f37bb",
+      "hookAudioUrl": "audio/hooks/299.mp3?v=0ca00de68ff0",
       "senses": [
         {
           "senseId": 523,
@@ -32075,6 +32349,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/300.mp3?v=143430e06d65",
+      "hookAudioUrl": "audio/hooks/300.mp3?v=578b12154807",
       "senses": [
         {
           "senseId": 524,
@@ -32180,6 +32455,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/301.mp3?v=775f689d8a30",
+      "hookAudioUrl": "audio/hooks/301.mp3?v=1be0fc1265f9",
       "senses": [
         {
           "senseId": 526,
@@ -32305,6 +32581,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/302.mp3?v=a8208c633522",
+      "hookAudioUrl": "audio/hooks/302.mp3?v=5b33d90f62ea",
       "senses": [
         {
           "senseId": 528,
@@ -32411,6 +32688,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/303.mp3?v=16b43ca4e1ca",
+      "hookAudioUrl": "audio/hooks/303.mp3?v=deaf3b09adfb",
       "senses": [
         {
           "senseId": 529,
@@ -32513,6 +32791,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/304.mp3?v=b57da276f577",
+      "hookAudioUrl": "audio/hooks/304.mp3?v=3f8a664b104c",
       "senses": [
         {
           "senseId": 530,
@@ -32627,6 +32906,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/305.mp3?v=efa433b43929",
+      "hookAudioUrl": "audio/hooks/305.mp3?v=742b6d64f18e",
       "senses": [
         {
           "senseId": 531,
@@ -32748,6 +33028,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/306.mp3?v=2f6cce19884e",
+      "hookAudioUrl": "audio/hooks/306.mp3?v=f5eae7fba35c",
       "senses": [
         {
           "senseId": 534,
@@ -32866,6 +33147,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/307.mp3?v=bee19622fe50",
+      "hookAudioUrl": "audio/hooks/307.mp3?v=818cfccdaa54",
       "senses": [
         {
           "senseId": 535,
@@ -32979,6 +33261,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/308.mp3?v=0170c896a698",
+      "hookAudioUrl": "audio/hooks/308.mp3?v=4cfa572857a0",
       "senses": [
         {
           "senseId": 538,
@@ -33104,6 +33387,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/309.mp3?v=da7e2aec5e6e",
+      "hookAudioUrl": "audio/hooks/309.mp3?v=2576b36ad2e7",
       "senses": [
         {
           "senseId": 541,
@@ -33217,6 +33501,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/311.mp3?v=aaf67a67cef7",
+      "hookAudioUrl": "audio/hooks/311.mp3?v=478693b750fc",
       "senses": [
         {
           "senseId": 544,
@@ -33342,6 +33627,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/312.mp3?v=cc8597724621",
+      "hookAudioUrl": "audio/hooks/312.mp3?v=e7d7d2e4c7a3",
       "senses": [
         {
           "senseId": 547,
@@ -33444,6 +33730,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/313.mp3?v=deae89159fa4",
+      "hookAudioUrl": "audio/hooks/313.mp3?v=bfc9724b9ae9",
       "senses": [
         {
           "senseId": 549,
@@ -33572,6 +33859,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/314.mp3?v=9f00fdb4900c",
+      "hookAudioUrl": "audio/hooks/314.mp3?v=6a98768b589b",
       "senses": [
         {
           "senseId": 552,
@@ -33686,6 +33974,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/315.mp3?v=5c298631009e",
+      "hookAudioUrl": "audio/hooks/315.mp3?v=ebf2f9339c55",
       "senses": [
         {
           "senseId": 553,
@@ -33800,6 +34089,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/316.mp3?v=f90c71e9a599",
+      "hookAudioUrl": "audio/hooks/316.mp3?v=b3e8ee7c6a68",
       "senses": [
         {
           "senseId": 554,
@@ -33917,6 +34207,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/317.mp3?v=62e4f021cd42",
+      "hookAudioUrl": "audio/hooks/317.mp3?v=9d1cfef60d52",
       "senses": [
         {
           "senseId": 555,
@@ -34045,6 +34336,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/318.mp3?v=6db5c0d87c27",
+      "hookAudioUrl": "audio/hooks/318.mp3?v=8ce59b99a1bd",
       "senses": [
         {
           "senseId": 664,
@@ -34151,6 +34443,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/319.mp3?v=6ff228e1ba6b",
+      "hookAudioUrl": "audio/hooks/319.mp3?v=0829115f8ade",
       "senses": [
         {
           "senseId": 665,
@@ -34272,6 +34565,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/320.mp3?v=fe2997a2dff8",
+      "hookAudioUrl": "audio/hooks/320.mp3?v=9136cc8f3a08",
       "senses": [
         {
           "senseId": 666,
@@ -34393,6 +34687,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/321.mp3?v=e4d7e9f08443",
+      "hookAudioUrl": "audio/hooks/321.mp3?v=8c378a6add82",
       "senses": [
         {
           "senseId": 668,
@@ -34502,6 +34797,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/322.mp3?v=86aeda86b20a",
+      "hookAudioUrl": "audio/hooks/322.mp3?v=b18a4bb0de2e",
       "senses": [
         {
           "senseId": 670,
@@ -34616,6 +34912,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/323.mp3?v=d4b4e7aa5aa9",
+      "hookAudioUrl": "audio/hooks/323.mp3?v=1bd0dae2133a",
       "senses": [
         {
           "senseId": 671,
@@ -34730,6 +35027,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/324.mp3?v=509daddc3d75",
+      "hookAudioUrl": "audio/hooks/324.mp3?v=b4ee41541265",
       "senses": [
         {
           "senseId": 672,
@@ -34831,6 +35129,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/325.mp3?v=971c70020e6d",
+      "hookAudioUrl": "audio/hooks/325.mp3?v=95bd6f9ae79c",
       "senses": [
         {
           "senseId": 674,
@@ -34944,6 +35243,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/326.mp3?v=4e0f7fbd0c53",
+      "hookAudioUrl": "audio/hooks/326.mp3?v=55a5fb37eb7b",
       "senses": [
         {
           "senseId": 675,
@@ -35054,6 +35354,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/327.mp3?v=e0578698a89c",
+      "hookAudioUrl": "audio/hooks/327.mp3?v=ef874602a21d",
       "senses": [
         {
           "senseId": 676,
@@ -35156,6 +35457,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/328.mp3?v=23432cd07fd7",
+      "hookAudioUrl": "audio/hooks/328.mp3?v=cef0becdaae4",
       "senses": [
         {
           "senseId": 678,
@@ -35266,6 +35568,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/329.mp3?v=462d85b37e09",
+      "hookAudioUrl": "audio/hooks/329.mp3?v=b0265033d3ab",
       "senses": [
         {
           "senseId": 679,
@@ -35376,6 +35679,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/330.mp3?v=1095e5410c4c",
+      "hookAudioUrl": "audio/hooks/330.mp3?v=77d3ebb98b10",
       "senses": [
         {
           "senseId": 680,
@@ -35478,6 +35782,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/331.mp3?v=358ada9ecc77",
+      "hookAudioUrl": "audio/hooks/331.mp3?v=8c9a0d0e6cad",
       "senses": [
         {
           "senseId": 682,
@@ -35592,6 +35897,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/332.mp3?v=3fc24ede7902",
+      "hookAudioUrl": "audio/hooks/332.mp3?v=b96f6163c0dc",
       "senses": [
         {
           "senseId": 683,
@@ -35717,6 +36023,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/333.mp3?v=bc3fb5d2f8bb",
+      "hookAudioUrl": "audio/hooks/333.mp3?v=4f75e2651289",
       "senses": [
         {
           "senseId": 685,
@@ -35831,6 +36138,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/334.mp3?v=e7f27b232f18",
+      "hookAudioUrl": "audio/hooks/334.mp3?v=89c2f1c5cbe5",
       "senses": [
         {
           "senseId": 686,
@@ -35948,6 +36256,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/335.mp3?v=7bc77fa66580",
+      "hookAudioUrl": "audio/hooks/335.mp3?v=66b1e6989766",
       "senses": [
         {
           "senseId": 688,
@@ -36066,6 +36375,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/336.mp3?v=0b6781a7c023",
+      "hookAudioUrl": "audio/hooks/336.mp3?v=280dcb32a60f",
       "senses": [
         {
           "senseId": 689,
@@ -36176,6 +36486,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/337.mp3?v=2172c27d2844",
+      "hookAudioUrl": "audio/hooks/337.mp3?v=babcf6dadc31",
       "senses": [
         {
           "senseId": 690,
@@ -36290,6 +36601,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/338.mp3?v=566c2be66c32",
+      "hookAudioUrl": "audio/hooks/338.mp3?v=1e199f0a2dc4",
       "senses": [
         {
           "senseId": 691,
@@ -36404,6 +36716,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/339.mp3?v=701e5b049323",
+      "hookAudioUrl": "audio/hooks/339.mp3?v=9507321297b5",
       "senses": [
         {
           "senseId": 693,
@@ -36518,6 +36831,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/340.mp3?v=35f535f7b50e",
+      "hookAudioUrl": "audio/hooks/340.mp3?v=a95d30f10597",
       "senses": [
         {
           "senseId": 694,
@@ -36620,6 +36934,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/341.mp3?v=b8529a5f1928",
+      "hookAudioUrl": "audio/hooks/341.mp3?v=b0d6c54bd2e0",
       "senses": [
         {
           "senseId": 695,
@@ -36738,6 +37053,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/342.mp3?v=319a73a49da2",
+      "hookAudioUrl": "audio/hooks/342.mp3?v=3fd4c6175d2b",
       "senses": [
         {
           "senseId": 696,
@@ -36852,6 +37168,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/343.mp3?v=cd3aafdba819",
+      "hookAudioUrl": "audio/hooks/343.mp3?v=445c2ba303f2",
       "senses": [
         {
           "senseId": 697,
@@ -36958,6 +37275,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/344.mp3?v=5f8bee885117",
+      "hookAudioUrl": "audio/hooks/344.mp3?v=e781f9d55738",
       "senses": [
         {
           "senseId": 698,
@@ -37065,6 +37383,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/345.mp3?v=3a536f431534",
+      "hookAudioUrl": "audio/hooks/345.mp3?v=c468553abcb6",
       "senses": [
         {
           "senseId": 699,
@@ -37167,6 +37486,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/346.mp3?v=12f3d47ce241",
+      "hookAudioUrl": "audio/hooks/346.mp3?v=4e9044721313",
       "senses": [
         {
           "senseId": 700,
@@ -37269,6 +37589,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/347.mp3?v=f4d2d4abda73",
+      "hookAudioUrl": "audio/hooks/347.mp3?v=b1e61aa7ac2f",
       "senses": [
         {
           "senseId": 701,
@@ -37379,6 +37700,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/348.mp3?v=f47ac0965b87",
+      "hookAudioUrl": "audio/hooks/348.mp3?v=47930f489b76",
       "senses": [
         {
           "senseId": 702,
@@ -37489,6 +37811,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/349.mp3?v=7545f3b2c14e",
+      "hookAudioUrl": "audio/hooks/349.mp3?v=46e62c07b13a",
       "senses": [
         {
           "senseId": 703,
@@ -37595,6 +37918,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/350.mp3?v=490b09ffb184",
+      "hookAudioUrl": "audio/hooks/350.mp3?v=be3a1f3b111c",
       "senses": [
         {
           "senseId": 705,
@@ -37708,6 +38032,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/351.mp3?v=e5635075be9b",
+      "hookAudioUrl": "audio/hooks/351.mp3?v=2b84c91ea694",
       "senses": [
         {
           "senseId": 707,
@@ -37802,6 +38127,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/352.mp3?v=b58dc41bb973",
+      "hookAudioUrl": "audio/hooks/352.mp3?v=81cae7f560d7",
       "senses": [
         {
           "senseId": 708,
@@ -37912,6 +38238,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/353.mp3?v=cb1156ad7d91",
+      "hookAudioUrl": "audio/hooks/353.mp3?v=475126cef5af",
       "senses": [
         {
           "senseId": 709,
@@ -38014,6 +38341,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/354.mp3?v=a6b8a0708ddc",
+      "hookAudioUrl": "audio/hooks/354.mp3?v=50e75a43f70c",
       "senses": [
         {
           "senseId": 710,
@@ -38124,6 +38452,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/355.mp3?v=bbbc4e456b99",
+      "hookAudioUrl": "audio/hooks/355.mp3?v=181242e093a8",
       "senses": [
         {
           "senseId": 711,
@@ -38230,6 +38559,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/356.mp3?v=60703ad18fa3",
+      "hookAudioUrl": "audio/hooks/356.mp3?v=87b0f1980870",
       "senses": [
         {
           "senseId": 713,
@@ -38336,6 +38666,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/357.mp3?v=78a1481f7e8e",
+      "hookAudioUrl": "audio/hooks/357.mp3?v=47a742be671e",
       "senses": [
         {
           "senseId": 714,
@@ -38442,6 +38773,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/358.mp3?v=d390489ee2ce",
+      "hookAudioUrl": "audio/hooks/358.mp3?v=f2b53f586a7d",
       "senses": [
         {
           "senseId": 715,
@@ -38545,6 +38877,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/359.mp3?v=8b27a0772246",
+      "hookAudioUrl": "audio/hooks/359.mp3?v=c2faa631fff9",
       "senses": [
         {
           "senseId": 716,
@@ -38647,6 +38980,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/360.mp3?v=ae2b9913ae46",
+      "hookAudioUrl": "audio/hooks/360.mp3?v=6c3a0dde9d2d",
       "senses": [
         {
           "senseId": 718,
@@ -38738,6 +39072,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/361.mp3?v=23465c336e16",
+      "hookAudioUrl": "audio/hooks/361.mp3?v=04330b5c3442",
       "senses": [
         {
           "senseId": 719,
@@ -38855,6 +39190,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/362.mp3?v=30c88bcb6d61",
+      "hookAudioUrl": "audio/hooks/362.mp3?v=e12b023e1ffc",
       "senses": [
         {
           "senseId": 721,
@@ -38961,6 +39297,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/363.mp3?v=4f8c72dc2601",
+      "hookAudioUrl": "audio/hooks/363.mp3?v=0be4fbe6e62a",
       "senses": [
         {
           "senseId": 723,
@@ -39074,6 +39411,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/364.mp3?v=27b7b6402cc4",
+      "hookAudioUrl": "audio/hooks/364.mp3?v=6a55cf82befe",
       "senses": [
         {
           "senseId": 725,
@@ -39196,6 +39534,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/365.mp3?v=4db3a11071ef",
+      "hookAudioUrl": "audio/hooks/365.mp3?v=a2adf92c1b64",
       "senses": [
         {
           "senseId": 727,
@@ -39317,6 +39656,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/366.mp3?v=1312382190f6",
+      "hookAudioUrl": "audio/hooks/366.mp3?v=db601bcff91c",
       "senses": [
         {
           "senseId": 730,
@@ -39423,6 +39763,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/367.mp3?v=de46e62ae6ca",
+      "hookAudioUrl": "audio/hooks/367.mp3?v=7a690f3ae5c0",
       "senses": [
         {
           "senseId": 731,
@@ -39538,6 +39879,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/368.mp3?v=716ebca8814e",
+      "hookAudioUrl": "audio/hooks/368.mp3?v=9c08ebceddbf",
       "senses": [
         {
           "senseId": 732,
@@ -39644,6 +39986,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/369.mp3?v=5f1572b78281",
+      "hookAudioUrl": "audio/hooks/369.mp3?v=ea2806a2932c",
       "senses": [
         {
           "senseId": 733,
@@ -39750,6 +40093,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/370.mp3?v=3e53e406545d",
+      "hookAudioUrl": "audio/hooks/370.mp3?v=36069e45c7a7",
       "senses": [
         {
           "senseId": 735,
@@ -39875,6 +40219,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/371.mp3?v=2a560f584866",
+      "hookAudioUrl": "audio/hooks/371.mp3?v=50bf96bb6119",
       "senses": [
         {
           "senseId": 738,
@@ -39973,6 +40318,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/372.mp3?v=b88f311e41ef",
+      "hookAudioUrl": "audio/hooks/372.mp3?v=6b1291a28d28",
       "senses": [
         {
           "senseId": 739,
@@ -40079,6 +40425,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/373.mp3?v=4ff5bb9ccaba",
+      "hookAudioUrl": "audio/hooks/373.mp3?v=6222b71638e4",
       "senses": [
         {
           "senseId": 740,
@@ -40181,6 +40528,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/374.mp3?v=0d7cdca94d2d",
+      "hookAudioUrl": "audio/hooks/374.mp3?v=14c1b8a83041",
       "senses": [
         {
           "senseId": 741,
@@ -40291,6 +40639,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/375.mp3?v=2eb8783131a9",
+      "hookAudioUrl": "audio/hooks/375.mp3?v=55ef20ceb8db",
       "senses": [
         {
           "senseId": 742,
@@ -40420,6 +40769,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/376.mp3?v=8015048b28b0",
+      "hookAudioUrl": "audio/hooks/376.mp3?v=2cd2585b35f8",
       "senses": [
         {
           "senseId": 744,
@@ -40522,6 +40872,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/377.mp3?v=83af774b6ed0",
+      "hookAudioUrl": "audio/hooks/377.mp3?v=1490f5781088",
       "senses": [
         {
           "senseId": 745,
@@ -40620,6 +40971,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/378.mp3?v=64a01797b5ad",
+      "hookAudioUrl": "audio/hooks/378.mp3?v=f982096a41f3",
       "senses": [
         {
           "senseId": 747,
@@ -40734,6 +41086,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/379.mp3?v=73cb493d1be1",
+      "hookAudioUrl": "audio/hooks/379.mp3?v=bcfb6b926105",
       "senses": [
         {
           "senseId": 748,
@@ -40848,6 +41201,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/380.mp3?v=4d0501422b45",
+      "hookAudioUrl": "audio/hooks/380.mp3?v=d51a15b010fd",
       "senses": [
         {
           "senseId": 749,
@@ -40950,6 +41304,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/381.mp3?v=4131e28ec96f",
+      "hookAudioUrl": "audio/hooks/381.mp3?v=3d0899284ffe",
       "senses": [
         {
           "senseId": 750,
@@ -41056,6 +41411,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/382.mp3?v=a5a4592369d2",
+      "hookAudioUrl": "audio/hooks/382.mp3?v=2344861c4f3e",
       "senses": [
         {
           "senseId": 751,
@@ -41162,6 +41518,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/383.mp3?v=3be778ed57c2",
+      "hookAudioUrl": "audio/hooks/383.mp3?v=7fc4c919dfbb",
       "senses": [
         {
           "senseId": 752,
@@ -41268,6 +41625,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/384.mp3?v=8afbe92ef985",
+      "hookAudioUrl": "audio/hooks/384.mp3?v=33351996f60f",
       "senses": [
         {
           "senseId": 753,
@@ -41377,6 +41735,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/385.mp3?v=128ece108309",
+      "hookAudioUrl": "audio/hooks/385.mp3?v=47ad0f6f586c",
       "senses": [
         {
           "senseId": 754,
@@ -41494,6 +41853,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/386.mp3?v=341117b05e14",
+      "hookAudioUrl": "audio/hooks/386.mp3?v=9785abdbfeab",
       "senses": [
         {
           "senseId": 756,
@@ -41600,6 +41960,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/387.mp3?v=03901f71ef86",
+      "hookAudioUrl": "audio/hooks/387.mp3?v=b3296538dce0",
       "senses": [
         {
           "senseId": 757,
@@ -41713,6 +42074,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/388.mp3?v=95721e4ff744",
+      "hookAudioUrl": "audio/hooks/388.mp3?v=88ed2bb823b8",
       "senses": [
         {
           "senseId": 759,
@@ -41815,6 +42177,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/389.mp3?v=fe6df85fe87e",
+      "hookAudioUrl": "audio/hooks/389.mp3?v=c69aacaac682",
       "senses": [
         {
           "senseId": 760,
@@ -41921,6 +42284,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/390.mp3?v=08ef44aa3212",
+      "hookAudioUrl": "audio/hooks/390.mp3?v=23f693fdab9e",
       "senses": [
         {
           "senseId": 761,
@@ -42047,6 +42411,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/391.mp3?v=09f8fe38b8b1",
+      "hookAudioUrl": "audio/hooks/391.mp3?v=6afe72979308",
       "senses": [
         {
           "senseId": 763,
@@ -42149,6 +42514,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/392.mp3?v=7ee53a6f9f0d",
+      "hookAudioUrl": "audio/hooks/392.mp3?v=2ebafa0af649",
       "senses": [
         {
           "senseId": 764,
@@ -42235,6 +42601,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/393.mp3?v=faf78629471a",
+      "hookAudioUrl": "audio/hooks/393.mp3?v=8284c0ae1ad5",
       "senses": [
         {
           "senseId": 765,
@@ -42333,6 +42700,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/394.mp3?v=e151e95f3558",
+      "hookAudioUrl": "audio/hooks/394.mp3?v=36490d258c9f",
       "senses": [
         {
           "senseId": 766,
@@ -42435,6 +42803,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/395.mp3?v=77e46ac83942",
+      "hookAudioUrl": "audio/hooks/395.mp3?v=254af219290d",
       "senses": [
         {
           "senseId": 767,
@@ -42537,6 +42906,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/396.mp3?v=2b68a0e72a9f",
+      "hookAudioUrl": "audio/hooks/396.mp3?v=02d46071e184",
       "senses": [
         {
           "senseId": 769,
@@ -42643,6 +43013,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/397.mp3?v=f65b5f8524fc",
+      "hookAudioUrl": "audio/hooks/397.mp3?v=d7a3cdeeccde",
       "senses": [
         {
           "senseId": 770,
@@ -42752,6 +43123,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/398.mp3?v=f042029be91e",
+      "hookAudioUrl": "audio/hooks/398.mp3?v=a19ab6c5c453",
       "senses": [
         {
           "senseId": 773,
@@ -42858,6 +43230,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/399.mp3?v=f1eca0a3222f",
+      "hookAudioUrl": "audio/hooks/399.mp3?v=10cc3f9db8c1",
       "senses": [
         {
           "senseId": 774,
@@ -42940,6 +43313,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/400.mp3?v=5681517b82bb",
+      "hookAudioUrl": "audio/hooks/400.mp3?v=bc3d1526e2de",
       "senses": [
         {
           "senseId": 775,
@@ -43046,6 +43420,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/401.mp3?v=d6d8a5833570",
+      "hookAudioUrl": "audio/hooks/401.mp3?v=493daf8c937e",
       "senses": [
         {
           "senseId": 776,
@@ -43163,6 +43538,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/402.mp3?v=70461cd0b9fe",
+      "hookAudioUrl": "audio/hooks/402.mp3?v=65079cca9b11",
       "senses": [
         {
           "senseId": 778,
@@ -43273,6 +43649,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/403.mp3?v=fb3c6e190e3a",
+      "hookAudioUrl": "audio/hooks/403.mp3?v=a8b2d69ac033",
       "senses": [
         {
           "senseId": 779,
@@ -43379,6 +43756,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/404.mp3?v=c88c9bee3cf3",
+      "hookAudioUrl": "audio/hooks/404.mp3?v=617b1b6b03c8",
       "senses": [
         {
           "senseId": 780,
@@ -43500,6 +43878,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/405.mp3?v=da2a0260c282",
+      "hookAudioUrl": "audio/hooks/405.mp3?v=29695b03ab1b",
       "senses": [
         {
           "senseId": 781,
@@ -43602,6 +43981,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/406.mp3?v=8574199f1872",
+      "hookAudioUrl": "audio/hooks/406.mp3?v=6f266887593b",
       "senses": [
         {
           "senseId": 782,
@@ -43728,6 +44108,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/407.mp3?v=5a847ffe03a9",
+      "hookAudioUrl": "audio/hooks/407.mp3?v=ee69ecbf276b",
       "senses": [
         {
           "senseId": 785,
@@ -43839,6 +44220,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/408.mp3?v=4954c52847a1",
+      "hookAudioUrl": "audio/hooks/408.mp3?v=5b2be6e10df6",
       "senses": [
         {
           "senseId": 786,
@@ -43951,6 +44333,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/409.mp3?v=4109c7ba62a5",
+      "hookAudioUrl": "audio/hooks/409.mp3?v=e78d928e1ba2",
       "senses": [
         {
           "senseId": 789,
@@ -44083,6 +44466,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/410.mp3?v=5d1b946e9773",
+      "hookAudioUrl": "audio/hooks/410.mp3?v=8648f2a1b18c",
       "senses": [
         {
           "senseId": 791,
@@ -44201,6 +44585,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/411.mp3?v=3679fda4ae67",
+      "hookAudioUrl": "audio/hooks/411.mp3?v=31652b7e42ef",
       "senses": [
         {
           "senseId": 793,
@@ -44316,6 +44701,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/412.mp3?v=ee886aee838b",
+      "hookAudioUrl": "audio/hooks/412.mp3?v=9b6096bacb70",
       "senses": [
         {
           "senseId": 795,
@@ -44426,6 +44812,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/413.mp3?v=7e4b37790d87",
+      "hookAudioUrl": "audio/hooks/413.mp3?v=3f6fe5520c22",
       "senses": [
         {
           "senseId": 796,
@@ -44536,6 +44923,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/414.mp3?v=bd940a3960bf",
+      "hookAudioUrl": "audio/hooks/414.mp3?v=c61f8bdc9551",
       "senses": [
         {
           "senseId": 797,
@@ -44648,6 +45036,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/415.mp3?v=77e7902f37e9",
+      "hookAudioUrl": "audio/hooks/415.mp3?v=b9aa7467c5d9",
       "senses": [
         {
           "senseId": 800,
@@ -44773,6 +45162,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/416.mp3?v=c4cbee51e3a7",
+      "hookAudioUrl": "audio/hooks/416.mp3?v=58c72b96cd3c",
       "senses": [
         {
           "senseId": 802,
@@ -44883,6 +45273,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/417.mp3?v=0bad77ee45ed",
+      "hookAudioUrl": "audio/hooks/417.mp3?v=f472a9aa89e2",
       "senses": [
         {
           "senseId": 803,
@@ -44994,6 +45385,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/418.mp3?v=0cc633bb819e",
+      "hookAudioUrl": "audio/hooks/418.mp3?v=bb0c3866f645",
       "senses": [
         {
           "senseId": 829,
@@ -45099,6 +45491,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/419.mp3?v=5aef618be25c",
+      "hookAudioUrl": "audio/hooks/419.mp3?v=36d54f241f11",
       "senses": [
         {
           "senseId": 830,
@@ -45218,6 +45611,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/420.mp3?v=152d3551b44e",
+      "hookAudioUrl": "audio/hooks/420.mp3?v=c7f56b01c9ff",
       "senses": [
         {
           "senseId": 831,
@@ -45333,6 +45727,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/421.mp3?v=1bf9c79950a6",
+      "hookAudioUrl": "audio/hooks/421.mp3?v=32dc068909c9",
       "senses": [
         {
           "senseId": 832,
@@ -45442,6 +45837,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/422.mp3?v=7add46fb3994",
+      "hookAudioUrl": "audio/hooks/422.mp3?v=08c10d622a42",
       "senses": [
         {
           "senseId": 834,
@@ -45582,6 +45978,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/423.mp3?v=fb49dc3c916a",
+      "hookAudioUrl": "audio/hooks/423.mp3?v=54a1040ced3f",
       "senses": [
         {
           "senseId": 837,
@@ -45684,6 +46081,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/424.mp3?v=1822a4a70d84",
+      "hookAudioUrl": "audio/hooks/424.mp3?v=5640c463f2ca",
       "senses": [
         {
           "senseId": 838,
@@ -45803,6 +46201,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/425.mp3?v=54ac72f2793a",
+      "hookAudioUrl": "audio/hooks/425.mp3?v=35a21bc80ac9",
       "senses": [
         {
           "senseId": 839,
@@ -45912,6 +46311,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/426.mp3?v=3455aee14c7e",
+      "hookAudioUrl": "audio/hooks/426.mp3?v=510421fd68ad",
       "senses": [
         {
           "senseId": 841,
@@ -46022,6 +46422,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/427.mp3?v=ea1c2e7e03dd",
+      "hookAudioUrl": "audio/hooks/427.mp3?v=d3d45ec3db47",
       "senses": [
         {
           "senseId": 842,
@@ -46154,6 +46555,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/428.mp3?v=29aab25b26a3",
+      "hookAudioUrl": "audio/hooks/428.mp3?v=244b3dc1b6cd",
       "senses": [
         {
           "senseId": 844,
@@ -46263,6 +46665,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/429.mp3?v=cc8e12413a07",
+      "hookAudioUrl": "audio/hooks/429.mp3?v=0bbd6f361f4b",
       "senses": [
         {
           "senseId": 846,
@@ -46381,6 +46784,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/430.mp3?v=65d56fc6680c",
+      "hookAudioUrl": "audio/hooks/430.mp3?v=e53225ddf64e",
       "senses": [
         {
           "senseId": 848,
@@ -46491,6 +46895,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/431.mp3?v=9844364099fa",
+      "hookAudioUrl": "audio/hooks/431.mp3?v=2650ec4464fb",
       "senses": [
         {
           "senseId": 850,
@@ -46597,6 +47002,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/432.mp3?v=94e386462a57",
+      "hookAudioUrl": "audio/hooks/432.mp3?v=a55e236f2809",
       "senses": [
         {
           "senseId": 851,
@@ -46704,6 +47110,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/433.mp3?v=3afbc5626c10",
+      "hookAudioUrl": "audio/hooks/433.mp3?v=e1ca35325b91",
       "senses": [
         {
           "senseId": 852,
@@ -46837,6 +47244,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/434.mp3?v=21b11244b15e",
+      "hookAudioUrl": "audio/hooks/434.mp3?v=a17a41ff17ca",
       "senses": [
         {
           "senseId": 855,
@@ -46940,6 +47348,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/435.mp3?v=ff711ffed35f",
+      "hookAudioUrl": "audio/hooks/435.mp3?v=60b16353f8f0",
       "senses": [
         {
           "senseId": 856,
@@ -47038,6 +47447,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/436.mp3?v=35a5e798062a",
+      "hookAudioUrl": "audio/hooks/436.mp3?v=3acf98585508",
       "senses": [
         {
           "senseId": 858,
@@ -47179,6 +47589,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/437.mp3?v=34476a93899b",
+      "hookAudioUrl": "audio/hooks/437.mp3?v=d87ddc014751",
       "senses": [
         {
           "senseId": 861,
@@ -47292,6 +47703,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/438.mp3?v=86ebc7c1b44b",
+      "hookAudioUrl": "audio/hooks/438.mp3?v=b5215be91ae6",
       "senses": [
         {
           "senseId": 863,
@@ -47391,6 +47803,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/439.mp3?v=b872eb7b0c19",
+      "hookAudioUrl": "audio/hooks/439.mp3?v=22f2166a4d79",
       "senses": [
         {
           "senseId": 864,
@@ -47501,6 +47914,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/440.mp3?v=5988dfdc24db",
+      "hookAudioUrl": "audio/hooks/440.mp3?v=01e22eed1e2c",
       "senses": [
         {
           "senseId": 867,
@@ -47616,6 +48030,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/441.mp3?v=b04c01d8048f",
+      "hookAudioUrl": "audio/hooks/441.mp3?v=b7e068155f50",
       "senses": [
         {
           "senseId": 868,
@@ -47711,6 +48126,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/442.mp3?v=a0952df20a5d",
+      "hookAudioUrl": "audio/hooks/442.mp3?v=2c89706ea6fc",
       "senses": [
         {
           "senseId": 869,
@@ -47801,6 +48217,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/443.mp3?v=7ec0b180c466",
+      "hookAudioUrl": "audio/hooks/443.mp3?v=9aa986c2daae",
       "senses": [
         {
           "senseId": 870,
@@ -47914,6 +48331,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/444.mp3?v=4622199d1f6f",
+      "hookAudioUrl": "audio/hooks/444.mp3?v=4b8989c156b3",
       "senses": [
         {
           "senseId": 872,
@@ -48028,6 +48446,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/445.mp3?v=103098977f88",
+      "hookAudioUrl": "audio/hooks/445.mp3?v=0116b3a816fb",
       "senses": [
         {
           "senseId": 873,
@@ -48162,6 +48581,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/446.mp3?v=69a262b8bfb4",
+      "hookAudioUrl": "audio/hooks/446.mp3?v=6b106e1f1a5d",
       "senses": [
         {
           "senseId": 876,
@@ -48272,6 +48692,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/447.mp3?v=eba41928c868",
+      "hookAudioUrl": "audio/hooks/447.mp3?v=77b73c96d8bb",
       "senses": [
         {
           "senseId": 877,
@@ -48390,6 +48811,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/448.mp3?v=adeb5b5d489d",
+      "hookAudioUrl": "audio/hooks/448.mp3?v=0f968ecb8530",
       "senses": [
         {
           "senseId": 879,
@@ -48492,6 +48914,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/449.mp3?v=0cbb130f1cd4",
+      "hookAudioUrl": "audio/hooks/449.mp3?v=f904ef4e20f9",
       "senses": [
         {
           "senseId": 880,
@@ -48602,6 +49025,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/450.mp3?v=43d054dc6e85",
+      "hookAudioUrl": "audio/hooks/450.mp3?v=89ea545a3569",
       "senses": [
         {
           "senseId": 881,
@@ -48704,6 +49128,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/451.mp3?v=a686e7f3992d",
+      "hookAudioUrl": "audio/hooks/451.mp3?v=f3122b733b0f",
       "senses": [
         {
           "senseId": 882,
@@ -48828,6 +49253,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/452.mp3?v=173b8a39f667",
+      "hookAudioUrl": "audio/hooks/452.mp3?v=46c9c9d819f2",
       "senses": [
         {
           "senseId": 885,
@@ -48935,6 +49361,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/453.mp3?v=e6ed2b09d524",
+      "hookAudioUrl": "audio/hooks/453.mp3?v=c5a483e7a3a4",
       "senses": [
         {
           "senseId": 886,
@@ -49049,6 +49476,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/454.mp3?v=62538cab82cb",
+      "hookAudioUrl": "audio/hooks/454.mp3?v=b1c3f2e27499",
       "senses": [
         {
           "senseId": 888,
@@ -49167,6 +49595,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/455.mp3?v=334a95971a75",
+      "hookAudioUrl": "audio/hooks/455.mp3?v=bbf3b139d507",
       "senses": [
         {
           "senseId": 889,
@@ -49249,6 +49678,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/456.mp3?v=7a605c591383",
+      "hookAudioUrl": "audio/hooks/456.mp3?v=c4617dd742e3",
       "senses": [
         {
           "senseId": 890,
@@ -49359,6 +49789,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/457.mp3?v=154584bf7f56",
+      "hookAudioUrl": "audio/hooks/457.mp3?v=c991aa69116b",
       "senses": [
         {
           "senseId": 893,
@@ -49465,6 +49896,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/458.mp3?v=311fd7fc6993",
+      "hookAudioUrl": "audio/hooks/458.mp3?v=9f0e3279ee03",
       "senses": [
         {
           "senseId": 894,
@@ -49578,6 +50010,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/459.mp3?v=33a2905985be",
+      "hookAudioUrl": "audio/hooks/459.mp3?v=980d60c8d214",
       "senses": [
         {
           "senseId": 895,
@@ -49688,6 +50121,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/460.mp3?v=706c8b3408fd",
+      "hookAudioUrl": "audio/hooks/460.mp3?v=b39b1b726363",
       "senses": [
         {
           "senseId": 897,
@@ -49794,6 +50228,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/461.mp3?v=ce2a9262e775",
+      "hookAudioUrl": "audio/hooks/461.mp3?v=807c39828a02",
       "senses": [
         {
           "senseId": 898,
@@ -49919,6 +50354,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/462.mp3?v=54279d7055d9",
+      "hookAudioUrl": "audio/hooks/462.mp3?v=e782672dbfc6",
       "senses": [
         {
           "senseId": 900,
@@ -50029,6 +50465,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/463.mp3?v=eb864f950a72",
+      "hookAudioUrl": "audio/hooks/463.mp3?v=2c7473a6f9b2",
       "senses": [
         {
           "senseId": 901,
@@ -50127,6 +50564,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/464.mp3?v=298705cc0009",
+      "hookAudioUrl": "audio/hooks/464.mp3?v=460cc90b8c1e",
       "senses": [
         {
           "senseId": 902,
@@ -50237,6 +50675,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/465.mp3?v=ee5f3c2b2248",
+      "hookAudioUrl": "audio/hooks/465.mp3?v=4fb8a500babc",
       "senses": [
         {
           "senseId": 903,
@@ -50343,6 +50782,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/466.mp3?v=b45a2e726aad",
+      "hookAudioUrl": "audio/hooks/466.mp3?v=8eb35dbf69fe",
       "senses": [
         {
           "senseId": 904,
@@ -50440,6 +50880,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/467.mp3?v=25e31aa80ab2",
+      "hookAudioUrl": "audio/hooks/467.mp3?v=4d671cfa321a",
       "senses": [
         {
           "senseId": 906,
@@ -50550,6 +50991,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/468.mp3?v=61cfbd60b534",
+      "hookAudioUrl": "audio/hooks/468.mp3?v=51081ca5c2ca",
       "senses": [
         {
           "senseId": 907,
@@ -50655,6 +51097,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/469.mp3?v=db4a66d2d9ae",
+      "hookAudioUrl": "audio/hooks/469.mp3?v=c1bb1b698339",
       "senses": [
         {
           "senseId": 908,
@@ -50765,6 +51208,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/482.mp3?v=7720b792a3d0",
+      "hookAudioUrl": "audio/hooks/482.mp3?v=be9f849618e9",
       "senses": [
         {
           "senseId": 928,
@@ -50875,6 +51319,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/483.mp3?v=47d1a4686c92",
+      "hookAudioUrl": "audio/hooks/483.mp3?v=47b6e36e4371",
       "senses": [
         {
           "senseId": 930,
@@ -50972,6 +51417,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/484.mp3?v=2779b9842366",
+      "hookAudioUrl": "audio/hooks/484.mp3?v=5c407bcac26e",
       "senses": [
         {
           "senseId": 933,
@@ -51073,6 +51519,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/485.mp3?v=98acf84c8668",
+      "hookAudioUrl": "audio/hooks/485.mp3?v=c2eb3abd9cb5",
       "senses": [
         {
           "senseId": 936,
@@ -51167,6 +51614,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/486.mp3?v=a42ffbb9b818",
+      "hookAudioUrl": "audio/hooks/486.mp3?v=baf689038cf9",
       "senses": [
         {
           "senseId": 937,
@@ -51280,6 +51728,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/487.mp3?v=e4f0b4c3848f",
+      "hookAudioUrl": "audio/hooks/487.mp3?v=2d2b094383e2",
       "senses": [
         {
           "senseId": 938,
@@ -51389,6 +51838,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/488.mp3?v=22016558eb52",
+      "hookAudioUrl": "audio/hooks/488.mp3?v=a7b012536fb1",
       "senses": [
         {
           "senseId": 940,
@@ -51510,6 +51960,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/489.mp3?v=37323f37a7ae",
+      "hookAudioUrl": "audio/hooks/489.mp3?v=f5fc806db3cb",
       "senses": [
         {
           "senseId": 941,
@@ -51615,6 +52066,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/490.mp3?v=6f5b6bf42fb0",
+      "hookAudioUrl": "audio/hooks/490.mp3?v=206fd7498291",
       "senses": [
         {
           "senseId": 942,
@@ -51717,6 +52169,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/491.mp3?v=bd36ef1e6a1a",
+      "hookAudioUrl": "audio/hooks/491.mp3?v=b4f9e5470436",
       "senses": [
         {
           "senseId": 943,
@@ -51826,6 +52279,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/492.mp3?v=6110d1738698",
+      "hookAudioUrl": "audio/hooks/492.mp3?v=cb86c87398db",
       "senses": [
         {
           "senseId": 946,
@@ -51935,6 +52389,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/493.mp3?v=d5b67a95feec",
+      "hookAudioUrl": "audio/hooks/493.mp3?v=acddce44fec8",
       "senses": [
         {
           "senseId": 948,
@@ -52044,6 +52499,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/494.mp3?v=5b51f94c57b2",
+      "hookAudioUrl": "audio/hooks/494.mp3?v=853128cf2d29",
       "senses": [
         {
           "senseId": 950,
@@ -52132,6 +52588,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/495.mp3?v=810457a5973a",
+      "hookAudioUrl": "audio/hooks/495.mp3?v=328505c36d15",
       "senses": [
         {
           "senseId": 951,
@@ -52227,6 +52684,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/496.mp3?v=1670d2030260",
+      "hookAudioUrl": "audio/hooks/496.mp3?v=a6af97bd57fe",
       "senses": [
         {
           "senseId": 953,
@@ -52330,6 +52788,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/497.mp3?v=9397ccf7404c",
+      "hookAudioUrl": "audio/hooks/497.mp3?v=42d9620f138b",
       "senses": [
         {
           "senseId": 954,
@@ -52430,6 +52889,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/498.mp3?v=9061e22e1efa",
+      "hookAudioUrl": "audio/hooks/498.mp3?v=60bec2607011",
       "senses": [
         {
           "senseId": 955,
@@ -52514,6 +52974,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/499.mp3?v=a65473aded31",
+      "hookAudioUrl": "audio/hooks/499.mp3?v=cf690363b4e6",
       "senses": [
         {
           "senseId": 956,
@@ -52621,6 +53082,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/500.mp3?v=211a66f2a0e1",
+      "hookAudioUrl": "audio/hooks/500.mp3?v=aae789f89fc5",
       "senses": [
         {
           "senseId": 958,
@@ -52721,6 +53183,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/501.mp3?v=df5d2f824722",
+      "hookAudioUrl": "audio/hooks/501.mp3?v=aaaa9c35338f",
       "senses": [
         {
           "senseId": 959,
@@ -52817,6 +53280,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/502.mp3?v=0ecc8efa2d41",
+      "hookAudioUrl": "audio/hooks/502.mp3?v=994e6878e4db",
       "senses": [
         {
           "senseId": 961,
@@ -52930,6 +53394,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/503.mp3?v=ea2d9223d251",
+      "hookAudioUrl": "audio/hooks/503.mp3?v=0ef5255565b9",
       "senses": [
         {
           "senseId": 963,
@@ -53033,6 +53498,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/504.mp3?v=1202f78403bc",
+      "hookAudioUrl": "audio/hooks/504.mp3?v=b2eeebf7eb06",
       "senses": [
         {
           "senseId": 965,
@@ -53144,6 +53610,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/505.mp3?v=1e6f811d15a8",
+      "hookAudioUrl": "audio/hooks/505.mp3?v=0ce490773e6c",
       "senses": [
         {
           "senseId": 968,
@@ -53247,6 +53714,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/506.mp3?v=2fe8acb7c0ed",
+      "hookAudioUrl": "audio/hooks/506.mp3?v=b6be133e1c18",
       "senses": [
         {
           "senseId": 970,
@@ -53362,6 +53830,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/507.mp3?v=ad020a566ca0",
+      "hookAudioUrl": "audio/hooks/507.mp3?v=886708bc42ee",
       "senses": [
         {
           "senseId": 971,
@@ -53469,6 +53938,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/508.mp3?v=4ee55c4448de",
+      "hookAudioUrl": "audio/hooks/508.mp3?v=77e5fc31c144",
       "senses": [
         {
           "senseId": 973,
@@ -53555,6 +54025,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/509.mp3?v=f9830667da19",
+      "hookAudioUrl": "audio/hooks/509.mp3?v=f1ce6f99c4e8",
       "senses": [
         {
           "senseId": 974,
@@ -53676,6 +54147,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/510.mp3?v=f225025e0047",
+      "hookAudioUrl": "audio/hooks/510.mp3?v=7dec252aeeab",
       "senses": [
         {
           "senseId": 976,
@@ -53786,6 +54258,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/511.mp3?v=b2cb150583a8",
+      "hookAudioUrl": "audio/hooks/511.mp3?v=4e6776316909",
       "senses": [
         {
           "senseId": 977,
@@ -53892,6 +54365,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/512.mp3?v=ea87758c2b78",
+      "hookAudioUrl": "audio/hooks/512.mp3?v=9bf1c9c6d321",
       "senses": [
         {
           "senseId": 978,
@@ -54007,6 +54481,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/513.mp3?v=731c3cde5e1e",
+      "hookAudioUrl": "audio/hooks/513.mp3?v=ae6369e411ad",
       "senses": [
         {
           "senseId": 980,
@@ -54105,6 +54580,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/514.mp3?v=63cd83ae293d",
+      "hookAudioUrl": "audio/hooks/514.mp3?v=a89f7cac10b6",
       "senses": [
         {
           "senseId": 981,
@@ -54216,6 +54692,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/515.mp3?v=1cdf7c4caf41",
+      "hookAudioUrl": "audio/hooks/515.mp3?v=6bba5291a7ac",
       "senses": [
         {
           "senseId": 983,
@@ -54330,6 +54807,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/516.mp3?v=0eb5016f4984",
+      "hookAudioUrl": "audio/hooks/516.mp3?v=e8ed0f41afbf",
       "senses": [
         {
           "senseId": 985,
@@ -54432,6 +54910,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/517.mp3?v=5a0e2784df0a",
+      "hookAudioUrl": "audio/hooks/517.mp3?v=f4ff0255adcb",
       "senses": [
         {
           "senseId": 986,
@@ -54549,6 +55028,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/518.mp3?v=013ed35025ab",
+      "hookAudioUrl": "audio/hooks/518.mp3?v=b5ec39eca716",
       "senses": [
         {
           "senseId": 1032,
@@ -54663,6 +55143,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/519.mp3?v=7efe2ccf516e",
+      "hookAudioUrl": "audio/hooks/519.mp3?v=216eda1ed02f",
       "senses": [
         {
           "senseId": 1034,
@@ -54789,6 +55270,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/520.mp3?v=dbb2e66e5644",
+      "hookAudioUrl": "audio/hooks/520.mp3?v=16bae1fb3171",
       "senses": [
         {
           "senseId": 1035,
@@ -54903,6 +55385,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/521.mp3?v=53371ff6403f",
+      "hookAudioUrl": "audio/hooks/521.mp3?v=76b30e21e60b",
       "senses": [
         {
           "senseId": 1037,
@@ -55013,6 +55496,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/522.mp3?v=47fb493d0cec",
+      "hookAudioUrl": "audio/hooks/522.mp3?v=c774eca61bb8",
       "senses": [
         {
           "senseId": 1038,
@@ -55112,6 +55596,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/523.mp3?v=63b223abb265",
+      "hookAudioUrl": "audio/hooks/523.mp3?v=e9a18cac1aa4",
       "senses": [
         {
           "senseId": 1039,
@@ -55226,6 +55711,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/524.mp3?v=678de33e9984",
+      "hookAudioUrl": "audio/hooks/524.mp3?v=3d7cd452a8ca",
       "senses": [
         {
           "senseId": 1040,
@@ -55346,6 +55832,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/525.mp3?v=689016992265",
+      "hookAudioUrl": "audio/hooks/525.mp3?v=d962b1a3cd41",
       "senses": [
         {
           "senseId": 1043,
@@ -55464,6 +55951,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/526.mp3?v=672fbe43e93d",
+      "hookAudioUrl": "audio/hooks/526.mp3?v=aba9f70bfda5",
       "senses": [
         {
           "senseId": 1044,
@@ -55571,6 +56059,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/527.mp3?v=a8f75fa0a9bf",
+      "hookAudioUrl": "audio/hooks/527.mp3?v=b18179ab1a1e",
       "senses": [
         {
           "senseId": 1045,
@@ -55674,6 +56163,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/528.mp3?v=98908cf5c701",
+      "hookAudioUrl": "audio/hooks/528.mp3?v=e41f25d976b8",
       "senses": [
         {
           "senseId": 1047,
@@ -55794,6 +56284,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/529.mp3?v=6fae3a8d8afb",
+      "hookAudioUrl": "audio/hooks/529.mp3?v=30965c6c1f58",
       "senses": [
         {
           "senseId": 1049,
@@ -55884,6 +56375,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/530.mp3?v=2cb1ea8468bc",
+      "hookAudioUrl": "audio/hooks/530.mp3?v=1966965bac62",
       "senses": [
         {
           "senseId": 1050,
@@ -55999,6 +56491,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/531.mp3?v=8cdb3e1fdfdc",
+      "hookAudioUrl": "audio/hooks/531.mp3?v=2caa094cfa36",
       "senses": [
         {
           "senseId": 1051,
@@ -56113,6 +56606,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/532.mp3?v=d8d27bd83fc5",
+      "hookAudioUrl": "audio/hooks/532.mp3?v=eb7ef63b659d",
       "senses": [
         {
           "senseId": 1053,
@@ -56227,6 +56721,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/533.mp3?v=4f249e11d0d0",
+      "hookAudioUrl": "audio/hooks/533.mp3?v=5006a02acc0e",
       "senses": [
         {
           "senseId": 1055,
@@ -56364,6 +56859,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/534.mp3?v=3664b77daef0",
+      "hookAudioUrl": "audio/hooks/534.mp3?v=a7223d24f069",
       "senses": [
         {
           "senseId": 1058,
@@ -56487,6 +56983,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/535.mp3?v=2c5c59ca2715",
+      "hookAudioUrl": "audio/hooks/535.mp3?v=12efb7c288e8",
       "senses": [
         {
           "senseId": 1060,
@@ -56605,6 +57102,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/536.mp3?v=1a4a776a1d06",
+      "hookAudioUrl": "audio/hooks/536.mp3?v=05bee4498ea6",
       "senses": [
         {
           "senseId": 1062,
@@ -56728,6 +57226,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/537.mp3?v=8837c94ec2e0",
+      "hookAudioUrl": "audio/hooks/537.mp3?v=0078e5c40bc9",
       "senses": [
         {
           "senseId": 1063,
@@ -56834,6 +57333,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/538.mp3?v=52b151f884a4",
+      "hookAudioUrl": "audio/hooks/538.mp3?v=b1450f32fc1d",
       "senses": [
         {
           "senseId": 1064,
@@ -56952,6 +57452,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/539.mp3?v=d834b5a336e5",
+      "hookAudioUrl": "audio/hooks/539.mp3?v=ca042d72c271",
       "senses": [
         {
           "senseId": 1067,
@@ -57058,6 +57559,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/540.mp3?v=0d1adc8f7f3b",
+      "hookAudioUrl": "audio/hooks/540.mp3?v=63714df15ab1",
       "senses": [
         {
           "senseId": 1068,
@@ -57192,6 +57694,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/541.mp3?v=d1fbb3c1090a",
+      "hookAudioUrl": "audio/hooks/541.mp3?v=6b7de2ee9983",
       "senses": [
         {
           "senseId": 1071,
@@ -57322,6 +57825,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/542.mp3?v=585fd1afab6b",
+      "hookAudioUrl": "audio/hooks/542.mp3?v=809ee72fe352",
       "senses": [
         {
           "senseId": 1074,
@@ -57421,6 +57925,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/543.mp3?v=d3bf27e21a24",
+      "hookAudioUrl": "audio/hooks/543.mp3?v=0ea9e02e5fbf",
       "senses": [
         {
           "senseId": 1075,
@@ -57524,6 +58029,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/544.mp3?v=d1afc5073f72",
+      "hookAudioUrl": "audio/hooks/544.mp3?v=2fd3d563841d",
       "senses": [
         {
           "senseId": 1077,
@@ -57611,6 +58117,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/545.mp3?v=1f25c47d9403",
+      "hookAudioUrl": "audio/hooks/545.mp3?v=e1c312d76d7b",
       "senses": [
         {
           "senseId": 1078,
@@ -57722,6 +58229,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/546.mp3?v=c30f2ca9a730",
+      "hookAudioUrl": "audio/hooks/546.mp3?v=25a671e17235",
       "senses": [
         {
           "senseId": 1079,
@@ -57812,6 +58320,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/547.mp3?v=631199ac5d7f",
+      "hookAudioUrl": "audio/hooks/547.mp3?v=d71722ce521b",
       "senses": [
         {
           "senseId": 1080,
@@ -57926,6 +58435,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/548.mp3?v=f5197cfa070d",
+      "hookAudioUrl": "audio/hooks/548.mp3?v=fd3c909f756c",
       "senses": [
         {
           "senseId": 1082,
@@ -58048,6 +58558,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/549.mp3?v=ab965925156e",
+      "hookAudioUrl": "audio/hooks/549.mp3?v=6f120688b649",
       "senses": [
         {
           "senseId": 1084,
@@ -58166,6 +58677,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/550.mp3?v=0f24c5833c52",
+      "hookAudioUrl": "audio/hooks/550.mp3?v=3fe315b9d96d",
       "senses": [
         {
           "senseId": 1086,
@@ -58276,6 +58788,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/551.mp3?v=6731f467a78e",
+      "hookAudioUrl": "audio/hooks/551.mp3?v=1d215b0f57a5",
       "senses": [
         {
           "senseId": 1087,
@@ -58382,6 +58895,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/552.mp3?v=317433cd7985",
+      "hookAudioUrl": "audio/hooks/552.mp3?v=a422e8844975",
       "senses": [
         {
           "senseId": 1088,
@@ -58492,6 +59006,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/553.mp3?v=33c20de7b924",
+      "hookAudioUrl": "audio/hooks/553.mp3?v=265fff405c87",
       "senses": [
         {
           "senseId": 1089,
@@ -58606,6 +59121,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/554.mp3?v=9ef4d7d26007",
+      "hookAudioUrl": "audio/hooks/554.mp3?v=366adc641529",
       "senses": [
         {
           "senseId": 1092,
@@ -58721,6 +59237,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/555.mp3?v=ac4c042a3dde",
+      "hookAudioUrl": "audio/hooks/555.mp3?v=7aea901975f8",
       "senses": [
         {
           "senseId": 1094,
@@ -58812,6 +59329,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/556.mp3?v=c0b232685c03",
+      "hookAudioUrl": "audio/hooks/556.mp3?v=c83636e6b416",
       "senses": [
         {
           "senseId": 1095,
@@ -58923,6 +59441,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/557.mp3?v=ea7a21b8f428",
+      "hookAudioUrl": "audio/hooks/557.mp3?v=b7472913ebd0",
       "senses": [
         {
           "senseId": 1096,
@@ -59042,6 +59561,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/558.mp3?v=91953c1dee79",
+      "hookAudioUrl": "audio/hooks/558.mp3?v=34c10dec1b5d",
       "senses": [
         {
           "senseId": 1097,
@@ -59157,6 +59677,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/559.mp3?v=0f85f9ea8e48",
+      "hookAudioUrl": "audio/hooks/559.mp3?v=36b9d503268c",
       "senses": [
         {
           "senseId": 1098,
@@ -59276,6 +59797,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/560.mp3?v=9bd8280ca05b",
+      "hookAudioUrl": "audio/hooks/560.mp3?v=7f7f8643d1dc",
       "senses": [
         {
           "senseId": 1099,
@@ -59398,6 +59920,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/561.mp3?v=3ac064293958",
+      "hookAudioUrl": "audio/hooks/561.mp3?v=400f002e7515",
       "senses": [
         {
           "senseId": 1101,
@@ -59509,6 +60032,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/562.mp3?v=61ca0717f95f",
+      "hookAudioUrl": "audio/hooks/562.mp3?v=3aff9cdd081f",
       "senses": [
         {
           "senseId": 1102,
@@ -59620,6 +60144,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/563.mp3?v=05d902eba0eb",
+      "hookAudioUrl": "audio/hooks/563.mp3?v=8d5ef65870d6",
       "senses": [
         {
           "senseId": 1103,
@@ -59746,6 +60271,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/564.mp3?v=763e1f90a259",
+      "hookAudioUrl": "audio/hooks/564.mp3?v=9158c3f0552e",
       "senses": [
         {
           "senseId": 1105,
@@ -59872,6 +60398,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/565.mp3?v=91029ac0ef46",
+      "hookAudioUrl": "audio/hooks/565.mp3?v=48e25acc463f",
       "senses": [
         {
           "senseId": 1108,
@@ -59979,6 +60506,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/566.mp3?v=2db074995114",
+      "hookAudioUrl": "audio/hooks/566.mp3?v=c40ea3111423",
       "senses": [
         {
           "senseId": 1109,
@@ -60109,6 +60637,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/567.mp3?v=7f13dec8efdb",
+      "hookAudioUrl": "audio/hooks/567.mp3?v=8907e283aa92",
       "senses": [
         {
           "senseId": 1110,
@@ -60211,6 +60740,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/568.mp3?v=7f6bdb1b13bf",
+      "hookAudioUrl": "audio/hooks/568.mp3?v=f98bad2bffab",
       "senses": [
         {
           "senseId": 1111,
@@ -60309,6 +60839,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/569.mp3?v=9057531f18dd",
+      "hookAudioUrl": "audio/hooks/569.mp3?v=9cb957391d75",
       "senses": [
         {
           "senseId": 1112,
@@ -60415,6 +60946,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/570.mp3?v=0fae2cb1d674",
+      "hookAudioUrl": "audio/hooks/570.mp3?v=7e77de6feac5",
       "senses": [
         {
           "senseId": 1113,
@@ -60513,6 +61045,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/571.mp3?v=fad66c516fda",
+      "hookAudioUrl": "audio/hooks/571.mp3?v=a5d48d772446",
       "senses": [
         {
           "senseId": 1114,
@@ -60620,6 +61153,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/572.mp3?v=6f99381e712e",
+      "hookAudioUrl": "audio/hooks/572.mp3?v=92941e319203",
       "senses": [
         {
           "senseId": 1115,
@@ -60702,6 +61236,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/573.mp3?v=c021a7097d5a",
+      "hookAudioUrl": "audio/hooks/573.mp3?v=793fd8db14d5",
       "senses": [
         {
           "senseId": 1116,
@@ -60792,6 +61327,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/574.mp3?v=37fefb3e660a",
+      "hookAudioUrl": "audio/hooks/574.mp3?v=a2abfa52cccd",
       "senses": [
         {
           "senseId": 1117,
@@ -60914,6 +61450,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/575.mp3?v=d4dc1dce6e47",
+      "hookAudioUrl": "audio/hooks/575.mp3?v=ed4fd832bedb",
       "senses": [
         {
           "senseId": 1119,
@@ -61036,6 +61573,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/576.mp3?v=820624a742da",
+      "hookAudioUrl": "audio/hooks/576.mp3?v=5e93d314b9e7",
       "senses": [
         {
           "senseId": 1121,
@@ -61124,6 +61662,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/577.mp3?v=412ef5645411",
+      "hookAudioUrl": "audio/hooks/577.mp3?v=e56ab4af59bc",
       "senses": [
         {
           "senseId": 1124,
@@ -61254,6 +61793,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/578.mp3?v=b3cb7f50c167",
+      "hookAudioUrl": "audio/hooks/578.mp3?v=82fe4b519980",
       "senses": [
         {
           "senseId": 1126,
@@ -61357,6 +61897,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/579.mp3?v=b01e035eb124",
+      "hookAudioUrl": "audio/hooks/579.mp3?v=076aa269c618",
       "senses": [
         {
           "senseId": 1127,
@@ -61476,6 +62017,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/580.mp3?v=9f53bab59bde",
+      "hookAudioUrl": "audio/hooks/580.mp3?v=ae46ca18938f",
       "senses": [
         {
           "senseId": 1129,
@@ -61594,6 +62136,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/581.mp3?v=aa652bd6f3d9",
+      "hookAudioUrl": "audio/hooks/581.mp3?v=c98eccfcb8d1",
       "senses": [
         {
           "senseId": 1131,
@@ -61701,6 +62244,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/582.mp3?v=97441c0cb014",
+      "hookAudioUrl": "audio/hooks/582.mp3?v=ac3cbebe0d34",
       "senses": [
         {
           "senseId": 1132,
@@ -61823,6 +62367,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/583.mp3?v=6ed2b3a4de0d",
+      "hookAudioUrl": "audio/hooks/583.mp3?v=3714f0945b42",
       "senses": [
         {
           "senseId": 1134,
@@ -61946,6 +62491,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/584.mp3?v=5c3bd847e952",
+      "hookAudioUrl": "audio/hooks/584.mp3?v=fd8e0b6b7328",
       "senses": [
         {
           "senseId": 1137,
@@ -62057,6 +62603,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/585.mp3?v=f38dcc2dcb6e",
+      "hookAudioUrl": "audio/hooks/585.mp3?v=73cd2a72bc6b",
       "senses": [
         {
           "senseId": 1138,
@@ -62156,6 +62703,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/586.mp3?v=92582adffc63",
+      "hookAudioUrl": "audio/hooks/586.mp3?v=7220ee7cc192",
       "senses": [
         {
           "senseId": 1139,
@@ -62266,6 +62814,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/587.mp3?v=74c8ae4cc380",
+      "hookAudioUrl": "audio/hooks/587.mp3?v=3a341cbfb0c6",
       "senses": [
         {
           "senseId": 1140,
@@ -62384,6 +62933,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/588.mp3?v=ab034e464cc8",
+      "hookAudioUrl": "audio/hooks/588.mp3?v=3a327824ef2a",
       "senses": [
         {
           "senseId": 1141,
@@ -62497,6 +63047,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/589.mp3?v=16af2403080d",
+      "hookAudioUrl": "audio/hooks/589.mp3?v=9bf3c0656355",
       "senses": [
         {
           "senseId": 1142,
@@ -62600,6 +63151,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/590.mp3?v=94d918192f04",
+      "hookAudioUrl": "audio/hooks/590.mp3?v=610d2ef39656",
       "senses": [
         {
           "senseId": 1143,
@@ -62695,6 +63247,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/591.mp3?v=c8830e24f191",
+      "hookAudioUrl": "audio/hooks/591.mp3?v=8a453e4ddae7",
       "senses": [
         {
           "senseId": 1144,
@@ -62790,6 +63343,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/592.mp3?v=6f2ad78977fd",
+      "hookAudioUrl": "audio/hooks/592.mp3?v=ec9a6268ef1c",
       "senses": [
         {
           "senseId": 1145,
@@ -62897,6 +63451,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/593.mp3?v=67be719f86c7",
+      "hookAudioUrl": "audio/hooks/593.mp3?v=80462756972e",
       "senses": [
         {
           "senseId": 1147,
@@ -62992,6 +63547,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/594.mp3?v=7760e17cff75",
+      "hookAudioUrl": "audio/hooks/594.mp3?v=1ca513252da9",
       "senses": [
         {
           "senseId": 1148,
@@ -63098,6 +63654,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/595.mp3?v=42834a5e6291",
+      "hookAudioUrl": "audio/hooks/595.mp3?v=d60c28a910a8",
       "senses": [
         {
           "senseId": 1150,
@@ -63219,6 +63776,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/596.mp3?v=c44f58299c3d",
+      "hookAudioUrl": "audio/hooks/596.mp3?v=e2d212496f46",
       "senses": [
         {
           "senseId": 1152,
@@ -63334,6 +63892,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/597.mp3?v=13a59c5156b0",
+      "hookAudioUrl": "audio/hooks/597.mp3?v=1c50286113aa",
       "senses": [
         {
           "senseId": 1155,
@@ -63447,6 +64006,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/598.mp3?v=b0d22f5a89c0",
+      "hookAudioUrl": "audio/hooks/598.mp3?v=f068801c3a9c",
       "senses": [
         {
           "senseId": 1158,
@@ -63577,6 +64137,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/599.mp3?v=da1e81c65661",
+      "hookAudioUrl": "audio/hooks/599.mp3?v=bafaac4d9e5d",
       "senses": [
         {
           "senseId": 1160,
@@ -63711,6 +64272,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/600.mp3?v=2e606c18870d",
+      "hookAudioUrl": "audio/hooks/600.mp3?v=2e581781db82",
       "senses": [
         {
           "senseId": 1163,
@@ -63826,6 +64388,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/601.mp3?v=c1b7c6d2774b",
+      "hookAudioUrl": "audio/hooks/601.mp3?v=217cd7caac7f",
       "senses": [
         {
           "senseId": 1164,
@@ -63929,6 +64492,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/602.mp3?v=daa2443a387c",
+      "hookAudioUrl": "audio/hooks/602.mp3?v=f26343d49974",
       "senses": [
         {
           "senseId": 1165,
@@ -64027,6 +64591,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/603.mp3?v=1f85f44ff81a",
+      "hookAudioUrl": "audio/hooks/603.mp3?v=e7a81e4eaa36",
       "senses": [
         {
           "senseId": 1166,
@@ -64140,6 +64705,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/604.mp3?v=20288a1930a9",
+      "hookAudioUrl": "audio/hooks/604.mp3?v=8358a85cebc8",
       "senses": [
         {
           "senseId": 1169,
@@ -64270,6 +64836,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/605.mp3?v=1c3f05e65e01",
+      "hookAudioUrl": "audio/hooks/605.mp3?v=940c17a53237",
       "senses": [
         {
           "senseId": 1171,
@@ -64384,6 +64951,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/606.mp3?v=148d6cee73cf",
+      "hookAudioUrl": "audio/hooks/606.mp3?v=781ba96cca1c",
       "senses": [
         {
           "senseId": 1173,
@@ -64509,6 +65077,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/607.mp3?v=de8db1f742ab",
+      "hookAudioUrl": "audio/hooks/607.mp3?v=ac0d6d33042a",
       "senses": [
         {
           "senseId": 1176,
@@ -64638,6 +65207,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/608.mp3?v=142dd0085c9a",
+      "hookAudioUrl": "audio/hooks/608.mp3?v=0356dd42da74",
       "senses": [
         {
           "senseId": 1178,
@@ -64753,6 +65323,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/609.mp3?v=620c5f218de9",
+      "hookAudioUrl": "audio/hooks/609.mp3?v=188cca2732e1",
       "senses": [
         {
           "senseId": 1179,
@@ -64876,6 +65447,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/610.mp3?v=907fa36851cc",
+      "hookAudioUrl": "audio/hooks/610.mp3?v=c1f970636cee",
       "senses": [
         {
           "senseId": 1180,
@@ -65002,6 +65574,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/611.mp3?v=cb587318d197",
+      "hookAudioUrl": "audio/hooks/611.mp3?v=064c71d6249f",
       "senses": [
         {
           "senseId": 1183,
@@ -65105,6 +65678,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/612.mp3?v=83d8ca77082e",
+      "hookAudioUrl": "audio/hooks/612.mp3?v=c990d631fff3",
       "senses": [
         {
           "senseId": 1184,
@@ -65231,6 +65805,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/613.mp3?v=7a89c6ecf722",
+      "hookAudioUrl": "audio/hooks/613.mp3?v=16b987bc5b44",
       "senses": [
         {
           "senseId": 1186,
@@ -65352,6 +65927,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/614.mp3?v=74df34c317bc",
+      "hookAudioUrl": "audio/hooks/614.mp3?v=af8fd3afb88b",
       "senses": [
         {
           "senseId": 1187,
@@ -65462,6 +66038,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/615.mp3?v=0d463521b8e9",
+      "hookAudioUrl": "audio/hooks/615.mp3?v=f8827a43df5c",
       "senses": [
         {
           "senseId": 1188,
@@ -65588,6 +66165,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/616.mp3?v=a9c5b5cec3dd",
+      "hookAudioUrl": "audio/hooks/616.mp3?v=7feea9e84f7a",
       "senses": [
         {
           "senseId": 1190,
@@ -65714,6 +66292,7 @@
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/617.mp3?v=faff2e6d2aaf",
+      "hookAudioUrl": "audio/hooks/617.mp3?v=39b47f164107",
       "senses": [
         {
           "senseId": 1192,

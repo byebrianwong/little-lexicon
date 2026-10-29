@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-29T07:09:26.486Z"
+    "updatedAt": "2026-10-29T19:29:22.325Z"
   },
   "counters": {
     "words": 617,
@@ -124021,6 +124021,4059 @@
       "path": "definitions/1208.mp3",
       "bytes": 23510,
       "key": "84e3b5fc90af7564",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/1.mp3",
+      "bytes": 27481,
+      "key": "dc9e4fdfe34faff3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/2.mp3",
+      "bytes": 23092,
+      "key": "e776d34e55d51d14",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/3.mp3",
+      "bytes": 30720,
+      "key": "a143bd8fc7f6382b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/4.mp3",
+      "bytes": 30511,
+      "key": "ab6b0bf585a60838",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/5.mp3",
+      "bytes": 31347,
+      "key": "1e267599c4703ad9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/6.mp3",
+      "bytes": 33750,
+      "key": "932f312f98035876",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/7.mp3",
+      "bytes": 31974,
+      "key": "8c6d8d23905a4687",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/8.mp3",
+      "bytes": 34377,
+      "key": "f84704b037ddad80",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/9.mp3",
+      "bytes": 31556,
+      "key": "a4d3b6068b95c3b6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/10.mp3",
+      "bytes": 31765,
+      "key": "0f2650e0e795491f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/11.mp3",
+      "bytes": 36780,
+      "key": "d0ad5f0f97aa3ee3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/12.mp3",
+      "bytes": 27585,
+      "key": "44c3152c03a863dd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/13.mp3",
+      "bytes": 30511,
+      "key": "534e8bd7c4d01f82",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/14.mp3",
+      "bytes": 28212,
+      "key": "ba03005f54b1ddef",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/15.mp3",
+      "bytes": 32810,
+      "key": "b6bc09c3534cbc34",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/16.mp3",
+      "bytes": 42632,
+      "key": "ceb8b9311c1bf6a1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/17.mp3",
+      "bytes": 30511,
+      "key": "31410d9fd5a775eb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/18.mp3",
+      "bytes": 39079,
+      "key": "b6e7dce5eb667669",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/19.mp3",
+      "bytes": 28839,
+      "key": "1c8ffcef67da82ca",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/20.mp3",
+      "bytes": 28212,
+      "key": "c4d07b5e3e714850",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/21.mp3",
+      "bytes": 27272,
+      "key": "6177a6077be5649b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/22.mp3",
+      "bytes": 40229,
+      "key": "4a40f7084ea130dd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/23.mp3",
+      "bytes": 28108,
+      "key": "c2d273c004cfac43",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/24.mp3",
+      "bytes": 29153,
+      "key": "99b678552af19eb7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/25.mp3",
+      "bytes": 31033,
+      "key": "e54e18cc511b0030",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/26.mp3",
+      "bytes": 34691,
+      "key": "19c996d16e8f4db3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/27.mp3",
+      "bytes": 30720,
+      "key": "8bde944a5fa69831",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/28.mp3",
+      "bytes": 42423,
+      "key": "8a725fb1fe2e4a6e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/29.mp3",
+      "bytes": 36571,
+      "key": "4ab032fa146ee8cc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/30.mp3",
+      "bytes": 28003,
+      "key": "4e5c8df7a1071712",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/31.mp3",
+      "bytes": 34273,
+      "key": "724a85ba9b23139e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/32.mp3",
+      "bytes": 33541,
+      "key": "be66029a3e913c5a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/33.mp3",
+      "bytes": 29884,
+      "key": "984614d409c3f6d2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/34.mp3",
+      "bytes": 35318,
+      "key": "3cc898b37f31ab41",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/35.mp3",
+      "bytes": 40647,
+      "key": "ff6d8d8484948797",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/36.mp3",
+      "bytes": 23615,
+      "key": "5c4d745e0a286a44",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/37.mp3",
+      "bytes": 21838,
+      "key": "20cac1c0dbad81ae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/38.mp3",
+      "bytes": 34900,
+      "key": "305792949c863041",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/39.mp3",
+      "bytes": 28630,
+      "key": "11d94f4654f724ec",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/40.mp3",
+      "bytes": 24764,
+      "key": "094c42779b2e35b4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/41.mp3",
+      "bytes": 31138,
+      "key": "bec7b1bb3f666dbd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/42.mp3",
+      "bytes": 32810,
+      "key": "e06b23fc381da8ed",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/43.mp3",
+      "bytes": 22256,
+      "key": "29db51cfcf427940",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/44.mp3",
+      "bytes": 34377,
+      "key": "7153d7a21cdd7983",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/45.mp3",
+      "bytes": 35004,
+      "key": "3324e2bdf0fb6111",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/46.mp3",
+      "bytes": 27585,
+      "key": "7b4ed18025bd6095",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/47.mp3",
+      "bytes": 28108,
+      "key": "f631d05de452e631",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/48.mp3",
+      "bytes": 21420,
+      "key": "18a768d5a95d6072",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/50.mp3",
+      "bytes": 38034,
+      "key": "b2ed7993cc9dac61",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/51.mp3",
+      "bytes": 26227,
+      "key": "975e334fe3834ecf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/52.mp3",
+      "bytes": 34168,
+      "key": "8f88e0de39421c4b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/53.mp3",
+      "bytes": 34377,
+      "key": "277e133c08b5ed7c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/54.mp3",
+      "bytes": 31033,
+      "key": "841d5fd3f051698f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/55.mp3",
+      "bytes": 22570,
+      "key": "47db5d0da3fc4403",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/56.mp3",
+      "bytes": 36676,
+      "key": "bbe20455a048bf39",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/57.mp3",
+      "bytes": 29675,
+      "key": "8457291e635c2735",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/58.mp3",
+      "bytes": 30824,
+      "key": "5642c5688ee7d3e1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/59.mp3",
+      "bytes": 30407,
+      "key": "78f76490059b8ef8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/60.mp3",
+      "bytes": 34482,
+      "key": "309c4cc76b4334e1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/61.mp3",
+      "bytes": 29780,
+      "key": "81176e90201f5d7c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/62.mp3",
+      "bytes": 28630,
+      "key": "174e17efcbd9b54e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/63.mp3",
+      "bytes": 31347,
+      "key": "322362ac6bacce06",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/64.mp3",
+      "bytes": 28212,
+      "key": "4bebc83e7b0d39ed",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/65.mp3",
+      "bytes": 25704,
+      "key": "00c092b0a2d7c37b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/66.mp3",
+      "bytes": 32183,
+      "key": "b8d2ac0c4f8bb5d9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/67.mp3",
+      "bytes": 27899,
+      "key": "d80fe812c04abac3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/68.mp3",
+      "bytes": 21211,
+      "key": "7f626dce2b9eead7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/69.mp3",
+      "bytes": 24869,
+      "key": "2f6b5f418eed8cfd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/71.mp3",
+      "bytes": 28003,
+      "key": "a44d21450c396592",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/72.mp3",
+      "bytes": 29466,
+      "key": "e3c77e4bfe8d6bd5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/73.mp3",
+      "bytes": 25600,
+      "key": "2c04f3ccfa1f6f7b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/74.mp3",
+      "bytes": 34377,
+      "key": "20f6d87f23b39601",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/76.mp3",
+      "bytes": 34795,
+      "key": "0efc11532d40aae6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/77.mp3",
+      "bytes": 32287,
+      "key": "9af4481916c3d9cc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/78.mp3",
+      "bytes": 26122,
+      "key": "d1ba750583201b23",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/79.mp3",
+      "bytes": 32810,
+      "key": "995c1ad2bc134151",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/80.mp3",
+      "bytes": 30093,
+      "key": "4f52fa12a7c00587",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/81.mp3",
+      "bytes": 33019,
+      "key": "9e036a8414284d1f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/82.mp3",
+      "bytes": 32183,
+      "key": "cac60f3c66d7f19a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/83.mp3",
+      "bytes": 33855,
+      "key": "734c8968e7f69e40",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/84.mp3",
+      "bytes": 33959,
+      "key": "3c69ab132de8ad84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/85.mp3",
+      "bytes": 32287,
+      "key": "f54ee3f150c11f65",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/86.mp3",
+      "bytes": 36989,
+      "key": "4683f421f23a7c4f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/87.mp3",
+      "bytes": 24451,
+      "key": "a8abe619aed0c949",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/88.mp3",
+      "bytes": 26227,
+      "key": "0698a7c42063d880",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/89.mp3",
+      "bytes": 28003,
+      "key": "8fd131ec4e2c30a6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/90.mp3",
+      "bytes": 20480,
+      "key": "fb86e8d489adfc36",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/92.mp3",
+      "bytes": 27376,
+      "key": "214f28db71e5c577",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/93.mp3",
+      "bytes": 26540,
+      "key": "a0eec63d88ffcf50",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/94.mp3",
+      "bytes": 30302,
+      "key": "c5fdb7115d9e1377",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/95.mp3",
+      "bytes": 33437,
+      "key": "1c9b10e00acf0f8e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/96.mp3",
+      "bytes": 27899,
+      "key": "5d66d9a1cb69ea8a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/98.mp3",
+      "bytes": 31242,
+      "key": "d97a0af7151502c2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/99.mp3",
+      "bytes": 25496,
+      "key": "aad17a3082537eeb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/100.mp3",
+      "bytes": 39811,
+      "key": "ab719e025b18cd8e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/101.mp3",
+      "bytes": 38870,
+      "key": "cb185c2eb9c3ccb0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/102.mp3",
+      "bytes": 40020,
+      "key": "e175356d41981918",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/103.mp3",
+      "bytes": 36571,
+      "key": "4105c053eef43b89",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/104.mp3",
+      "bytes": 28944,
+      "key": "b392ca8108ee1fac",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/105.mp3",
+      "bytes": 28839,
+      "key": "c73efd53ff484856",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/106.mp3",
+      "bytes": 26540,
+      "key": "f66193c8b8aa4368",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/107.mp3",
+      "bytes": 31660,
+      "key": "084966385e8cf3c1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/108.mp3",
+      "bytes": 27899,
+      "key": "a9db33b9e61baab8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/109.mp3",
+      "bytes": 32392,
+      "key": "4ecc3be7c94569eb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/110.mp3",
+      "bytes": 35736,
+      "key": "f9cec52eb05cb982",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/111.mp3",
+      "bytes": 33123,
+      "key": "78b7e76fb86dce69",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/112.mp3",
+      "bytes": 31242,
+      "key": "e41deb3497f3f303",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/113.mp3",
+      "bytes": 25287,
+      "key": "3685a29d7db7dfa7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/114.mp3",
+      "bytes": 19017,
+      "key": "110e2b534f6e3b16",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/115.mp3",
+      "bytes": 38766,
+      "key": "a9b6e9adaf3d5f4d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/116.mp3",
+      "bytes": 33646,
+      "key": "09f13ee075e0652b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/117.mp3",
+      "bytes": 35213,
+      "key": "a41ffe57e7b5b256",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/119.mp3",
+      "bytes": 25078,
+      "key": "e6261974b239db5e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/120.mp3",
+      "bytes": 28526,
+      "key": "eb8bddab7af5958c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/121.mp3",
+      "bytes": 31138,
+      "key": "b479f0a0dbc7f1b7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/122.mp3",
+      "bytes": 43468,
+      "key": "cceff247acc9bd55",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/123.mp3",
+      "bytes": 29466,
+      "key": "4e87e6442e473c04",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/124.mp3",
+      "bytes": 33437,
+      "key": "7c762edecdd0da9f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/125.mp3",
+      "bytes": 29153,
+      "key": "be658b970a1c000c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/126.mp3",
+      "bytes": 24660,
+      "key": "7cd4a755c9de2f6a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/127.mp3",
+      "bytes": 29048,
+      "key": "20ee6196f8061993",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/128.mp3",
+      "bytes": 32810,
+      "key": "4b9c778b755af71c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/129.mp3",
+      "bytes": 20689,
+      "key": "00adc920856922be",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/130.mp3",
+      "bytes": 31660,
+      "key": "7e1692894c2e4679",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/131.mp3",
+      "bytes": 37616,
+      "key": "6fdafb7509ea2440",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/132.mp3",
+      "bytes": 19644,
+      "key": "d45e4d63deba4b07",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/133.mp3",
+      "bytes": 24764,
+      "key": "632a373e03f47ae7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/134.mp3",
+      "bytes": 28839,
+      "key": "79399f4109799e5c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/135.mp3",
+      "bytes": 37512,
+      "key": "ea6a83ddac4a37ac",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/136.mp3",
+      "bytes": 23092,
+      "key": "69c98c1279ce00a8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/137.mp3",
+      "bytes": 28317,
+      "key": "8c59fb3a386f4f5a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/138.mp3",
+      "bytes": 31451,
+      "key": "8c2d914dbd103f48",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/140.mp3",
+      "bytes": 32705,
+      "key": "b4e17859dbc5735a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/141.mp3",
+      "bytes": 37407,
+      "key": "74b51bae415b9924",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/142.mp3",
+      "bytes": 27167,
+      "key": "74509685f4e5df2d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/143.mp3",
+      "bytes": 27376,
+      "key": "fd254ef277d3fe3e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/144.mp3",
+      "bytes": 31765,
+      "key": "032f1fe9d2b4c0f7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/146.mp3",
+      "bytes": 33437,
+      "key": "3dec0055e1032e22",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/147.mp3",
+      "bytes": 25809,
+      "key": "88e9b17263a7cb92",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/148.mp3",
+      "bytes": 39811,
+      "key": "8db4e155f84cc065",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/149.mp3",
+      "bytes": 26227,
+      "key": "c3845e92c71fe677",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/150.mp3",
+      "bytes": 31974,
+      "key": "6b63b9595542db5c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/152.mp3",
+      "bytes": 32496,
+      "key": "c1dc00f632a4aa5d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/153.mp3",
+      "bytes": 36362,
+      "key": "707ce0b22a3507bd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/154.mp3",
+      "bytes": 34168,
+      "key": "c932d1b092b58706",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/155.mp3",
+      "bytes": 35318,
+      "key": "abb122f78c7457b8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/156.mp3",
+      "bytes": 35318,
+      "key": "e3fd6062d27295aa",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/157.mp3",
+      "bytes": 30511,
+      "key": "78f23815dd56f6e4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/158.mp3",
+      "bytes": 32914,
+      "key": "2cff69b28229c20f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/159.mp3",
+      "bytes": 27376,
+      "key": "62741234b0ca0f0e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/160.mp3",
+      "bytes": 33437,
+      "key": "33c29e3c22f42512",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/161.mp3",
+      "bytes": 30093,
+      "key": "c39ebec628c03d64",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/162.mp3",
+      "bytes": 31660,
+      "key": "9804594cd87bda8c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/163.mp3",
+      "bytes": 40124,
+      "key": "0b6ddc5d10740e35",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/165.mp3",
+      "bytes": 38139,
+      "key": "ae67c286ac22f711",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/166.mp3",
+      "bytes": 40229,
+      "key": "c0e0a169217b2ace",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/167.mp3",
+      "bytes": 34064,
+      "key": "162584d71b8dd03a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/168.mp3",
+      "bytes": 34064,
+      "key": "dda3e3fbb5250e90",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/169.mp3",
+      "bytes": 27585,
+      "key": "1325574d49789cb4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/170.mp3",
+      "bytes": 26436,
+      "key": "ac2fa56902f3e8ea",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/171.mp3",
+      "bytes": 31242,
+      "key": "dee7c918b6c49219",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/172.mp3",
+      "bytes": 23406,
+      "key": "925a44d77af4da73",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/173.mp3",
+      "bytes": 31033,
+      "key": "e1999d3352f57030",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/174.mp3",
+      "bytes": 28317,
+      "key": "5730cdfa12ea5d97",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/175.mp3",
+      "bytes": 45244,
+      "key": "dbee98fe54fcef25",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/176.mp3",
+      "bytes": 34586,
+      "key": "7576fbb2a73ece0d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/177.mp3",
+      "bytes": 30302,
+      "key": "80bfb47a35612352",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/178.mp3",
+      "bytes": 22779,
+      "key": "8a059a2085618cfe",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/179.mp3",
+      "bytes": 25600,
+      "key": "bd8f3534114355e4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/180.mp3",
+      "bytes": 29048,
+      "key": "d5739654f1cc48d5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/181.mp3",
+      "bytes": 26958,
+      "key": "aa7fc7a4620d4d90",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/183.mp3",
+      "bytes": 28839,
+      "key": "2f163a90cb609783",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/184.mp3",
+      "bytes": 30616,
+      "key": "b71a3305477f94a9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/185.mp3",
+      "bytes": 26122,
+      "key": "db565d627538dc12",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/186.mp3",
+      "bytes": 39706,
+      "key": "40ede6883a835a70",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/187.mp3",
+      "bytes": 27376,
+      "key": "c5b74cb5bedb68eb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/189.mp3",
+      "bytes": 30616,
+      "key": "95ea8bda232fde75",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/190.mp3",
+      "bytes": 35109,
+      "key": "87b73d6e9de756a3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/191.mp3",
+      "bytes": 34586,
+      "key": "2bc0de4a0cad0713",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/192.mp3",
+      "bytes": 35109,
+      "key": "46681e644f26a9fb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/193.mp3",
+      "bytes": 34168,
+      "key": "8ce9f6f03d174b83",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/194.mp3",
+      "bytes": 23197,
+      "key": "a236eb8acca4e984",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/195.mp3",
+      "bytes": 25391,
+      "key": "df1e1dbef3c092b4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/196.mp3",
+      "bytes": 29257,
+      "key": "68953f48e129e037",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/197.mp3",
+      "bytes": 30720,
+      "key": "0f7c79cc256d9e00",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/198.mp3",
+      "bytes": 29362,
+      "key": "4a4f5daf9c34f509",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/199.mp3",
+      "bytes": 25391,
+      "key": "90106a55b5bb55b7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/200.mp3",
+      "bytes": 33646,
+      "key": "6042feb3a1c1b7be",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/201.mp3",
+      "bytes": 27063,
+      "key": "9d6bfc2b7c6192d1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/202.mp3",
+      "bytes": 26018,
+      "key": "0362d89fbca8f017",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/203.mp3",
+      "bytes": 42632,
+      "key": "0310a1f651f0889d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/204.mp3",
+      "bytes": 24242,
+      "key": "f0aa61048abd8cae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/205.mp3",
+      "bytes": 16509,
+      "key": "bd6467d7e23840c8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/206.mp3",
+      "bytes": 40647,
+      "key": "b6cafaece2600794",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/207.mp3",
+      "bytes": 30511,
+      "key": "e96a9975c278fde4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/208.mp3",
+      "bytes": 30824,
+      "key": "746aecb1fee3640c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/209.mp3",
+      "bytes": 35840,
+      "key": "7aaf663e4db32126",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/210.mp3",
+      "bytes": 29989,
+      "key": "0f6f3ed26e27b6b6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/211.mp3",
+      "bytes": 26854,
+      "key": "0f5474292d375bb6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/213.mp3",
+      "bytes": 26540,
+      "key": "7176ee7b8df85099",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/214.mp3",
+      "bytes": 29362,
+      "key": "97433a98d6d251ac",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/215.mp3",
+      "bytes": 25496,
+      "key": "73c40d8eff5b4205",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/216.mp3",
+      "bytes": 28839,
+      "key": "eec88ee83cc2d3ad",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/217.mp3",
+      "bytes": 26540,
+      "key": "4640cd9b11ef2f4a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/218.mp3",
+      "bytes": 37512,
+      "key": "53ad1ba43ddb84c0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/219.mp3",
+      "bytes": 31660,
+      "key": "2125c7631307ecd0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/220.mp3",
+      "bytes": 22047,
+      "key": "5216a8319040f6c9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/221.mp3",
+      "bytes": 31138,
+      "key": "95b51a42c30c8798",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/222.mp3",
+      "bytes": 34064,
+      "key": "9af4fc98fa90b5e5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/223.mp3",
+      "bytes": 40647,
+      "key": "514e54044cc5abe6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/224.mp3",
+      "bytes": 36571,
+      "key": "15ed82c0ac6107f4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/225.mp3",
+      "bytes": 29257,
+      "key": "f8947908d52f419b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/226.mp3",
+      "bytes": 31765,
+      "key": "3fdaf4c2054d086f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/227.mp3",
+      "bytes": 27899,
+      "key": "5b487990681aebf6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/228.mp3",
+      "bytes": 35318,
+      "key": "a0692171f849b44b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/229.mp3",
+      "bytes": 36362,
+      "key": "2a772eb926ca40e0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/230.mp3",
+      "bytes": 33855,
+      "key": "28c0c2ef60608f21",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/231.mp3",
+      "bytes": 28003,
+      "key": "f4cbce9b402beaae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/232.mp3",
+      "bytes": 26749,
+      "key": "7e1ca5fc14e422da",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/233.mp3",
+      "bytes": 33123,
+      "key": "32a9c989ede7b3bf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/235.mp3",
+      "bytes": 30616,
+      "key": "f644576ed842f170",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/236.mp3",
+      "bytes": 26540,
+      "key": "b76f1b94d1191596",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/237.mp3",
+      "bytes": 30929,
+      "key": "f0ce8d00d3897d96",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/238.mp3",
+      "bytes": 23615,
+      "key": "e07fb0ce362b2ae9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/239.mp3",
+      "bytes": 33437,
+      "key": "2452ee0dcd6dbec9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/241.mp3",
+      "bytes": 28421,
+      "key": "2dc6d9e078e7f0fc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/242.mp3",
+      "bytes": 37094,
+      "key": "d337387995b5d601",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/243.mp3",
+      "bytes": 31347,
+      "key": "dd219a53ff254e5b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/244.mp3",
+      "bytes": 30302,
+      "key": "8cf265c436046fa8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/245.mp3",
+      "bytes": 29780,
+      "key": "9f9ff7c1a0f7bf9a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/246.mp3",
+      "bytes": 29675,
+      "key": "c2f95698ce204908",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/247.mp3",
+      "bytes": 36885,
+      "key": "2153d3ad9ffac5cf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/250.mp3",
+      "bytes": 34273,
+      "key": "ba387edaeae920bd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/251.mp3",
+      "bytes": 25913,
+      "key": "6b2d6f42f09ab0e3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/252.mp3",
+      "bytes": 29675,
+      "key": "d56092b3c84fc666",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/253.mp3",
+      "bytes": 35213,
+      "key": "c4f7032f1fcd0229",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/254.mp3",
+      "bytes": 33228,
+      "key": "bd35a4ff345c42c7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/255.mp3",
+      "bytes": 30198,
+      "key": "5166326535968aa0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/256.mp3",
+      "bytes": 27167,
+      "key": "ae7635d215aea12e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/257.mp3",
+      "bytes": 27690,
+      "key": "d557f9dacafbe871",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/258.mp3",
+      "bytes": 31242,
+      "key": "7bb298606a858789",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/261.mp3",
+      "bytes": 33646,
+      "key": "85d05fcd88aea40e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/262.mp3",
+      "bytes": 36780,
+      "key": "4f693c332a4498c4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/263.mp3",
+      "bytes": 39602,
+      "key": "671a354164780d02",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/264.mp3",
+      "bytes": 29780,
+      "key": "248e28f73f959872",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/265.mp3",
+      "bytes": 31556,
+      "key": "ed6b311120bf2ca3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/266.mp3",
+      "bytes": 22988,
+      "key": "e8b8716140e8d218",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/268.mp3",
+      "bytes": 29675,
+      "key": "aee3225e5d61d44a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/269.mp3",
+      "bytes": 29362,
+      "key": "c78e57249a4f3ff6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/270.mp3",
+      "bytes": 35004,
+      "key": "807c3e8a3a36357d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/271.mp3",
+      "bytes": 23615,
+      "key": "b2e020471c2ecf24",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/272.mp3",
+      "bytes": 27585,
+      "key": "d61896a94e6ed407",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/274.mp3",
+      "bytes": 23092,
+      "key": "9271dfbebefec0fb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/275.mp3",
+      "bytes": 25913,
+      "key": "269c1261d0735688",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/276.mp3",
+      "bytes": 21211,
+      "key": "a9f87efa9e87ca1d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/277.mp3",
+      "bytes": 22465,
+      "key": "06ab6fd472604705",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/278.mp3",
+      "bytes": 30302,
+      "key": "444c0b42016c9c50",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/279.mp3",
+      "bytes": 27899,
+      "key": "d40393b66fd92317",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/280.mp3",
+      "bytes": 27481,
+      "key": "e6c93360f95ed1aa",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/281.mp3",
+      "bytes": 35213,
+      "key": "0549b2e5bcc8f42e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/282.mp3",
+      "bytes": 21211,
+      "key": "8f099dc51f4e7234",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/283.mp3",
+      "bytes": 37303,
+      "key": "9b2daea4e9769ae3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/284.mp3",
+      "bytes": 24555,
+      "key": "809b5d9034f334c7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/285.mp3",
+      "bytes": 26331,
+      "key": "2db377a28dfdfd2e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/288.mp3",
+      "bytes": 33228,
+      "key": "6fa61ae114de97b0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/289.mp3",
+      "bytes": 24137,
+      "key": "d89771bc9e3fed1f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/290.mp3",
+      "bytes": 27481,
+      "key": "20bddcd9362fec99",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/291.mp3",
+      "bytes": 25078,
+      "key": "02b2ab5941fef24f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/292.mp3",
+      "bytes": 26227,
+      "key": "4f3b7c364598be9c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/294.mp3",
+      "bytes": 24346,
+      "key": "be505a8ebc1d42bb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/295.mp3",
+      "bytes": 33228,
+      "key": "145083a166aa2956",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/297.mp3",
+      "bytes": 26436,
+      "key": "01c173e03a9f7706",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/298.mp3",
+      "bytes": 31138,
+      "key": "b97c8b98fb6a7e95",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/299.mp3",
+      "bytes": 42109,
+      "key": "8459820250a3142e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/300.mp3",
+      "bytes": 34795,
+      "key": "6dc08f4010681ce0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/301.mp3",
+      "bytes": 40856,
+      "key": "a6314bc87e882861",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/302.mp3",
+      "bytes": 32392,
+      "key": "f19e586846196063",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/303.mp3",
+      "bytes": 28735,
+      "key": "ab0db81bd3a2e069",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/304.mp3",
+      "bytes": 30198,
+      "key": "c5a4ae88b2ce0e93",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/305.mp3",
+      "bytes": 23301,
+      "key": "138bae47a583c262",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/306.mp3",
+      "bytes": 29884,
+      "key": "62635c739bafeed8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/307.mp3",
+      "bytes": 37198,
+      "key": "757c2c94331dbc84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/308.mp3",
+      "bytes": 30511,
+      "key": "43628b184c1e7021",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/309.mp3",
+      "bytes": 28421,
+      "key": "f08236aa387f283c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/311.mp3",
+      "bytes": 31033,
+      "key": "27194985a532425e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/312.mp3",
+      "bytes": 26122,
+      "key": "0221a0129e95684f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/313.mp3",
+      "bytes": 32914,
+      "key": "990914bc5ba0334e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/314.mp3",
+      "bytes": 24660,
+      "key": "d1cbfa13858c56ea",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/315.mp3",
+      "bytes": 33437,
+      "key": "b87085f287e32155",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/316.mp3",
+      "bytes": 38975,
+      "key": "1f65b3ddaea0bab1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/317.mp3",
+      "bytes": 32601,
+      "key": "8d92f85670052e99",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/318.mp3",
+      "bytes": 26018,
+      "key": "1e6846cc145619a3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/319.mp3",
+      "bytes": 35840,
+      "key": "08d80c2f2b4d3dc0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/320.mp3",
+      "bytes": 33123,
+      "key": "a6b9bc786bf44a8c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/321.mp3",
+      "bytes": 28735,
+      "key": "7f3ab11894dc58d8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/322.mp3",
+      "bytes": 37930,
+      "key": "c3f16a220becb3e5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/323.mp3",
+      "bytes": 24869,
+      "key": "244710710bf84d30",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/324.mp3",
+      "bytes": 40438,
+      "key": "57e434a2c0d3982e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/325.mp3",
+      "bytes": 32810,
+      "key": "d6ca0ccccdd9d8ae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/326.mp3",
+      "bytes": 34064,
+      "key": "20124c29a7ba6800",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/327.mp3",
+      "bytes": 28839,
+      "key": "99608d04f92b5d1e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/328.mp3",
+      "bytes": 33123,
+      "key": "ab949521f0bc4b1c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/329.mp3",
+      "bytes": 31451,
+      "key": "5a31dd969ae95aeb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/330.mp3",
+      "bytes": 33123,
+      "key": "a36cbbf969442790",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/331.mp3",
+      "bytes": 35004,
+      "key": "f96a65794bf45966",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/332.mp3",
+      "bytes": 32914,
+      "key": "5e2fe66f5f08300c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/333.mp3",
+      "bytes": 30511,
+      "key": "9c198e2f0099fca9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/334.mp3",
+      "bytes": 39811,
+      "key": "cb25391f4f23c5f5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/335.mp3",
+      "bytes": 39288,
+      "key": "8a0b44f4d46d695e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/336.mp3",
+      "bytes": 25913,
+      "key": "cbba1310abb2f8fd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/337.mp3",
+      "bytes": 48170,
+      "key": "1671e869c084cd0a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/338.mp3",
+      "bytes": 30511,
+      "key": "f11a4a853ab62784",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/339.mp3",
+      "bytes": 29153,
+      "key": "0fa90b0cf4a9935d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/340.mp3",
+      "bytes": 34900,
+      "key": "a206c83b3f609b4c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/341.mp3",
+      "bytes": 42632,
+      "key": "8ba025bcc47ac426",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/342.mp3",
+      "bytes": 27376,
+      "key": "c7ea6cda339757ec",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/343.mp3",
+      "bytes": 40647,
+      "key": "52a8b5a0af30c07b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/344.mp3",
+      "bytes": 32496,
+      "key": "f50ba02559536a72",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/345.mp3",
+      "bytes": 29362,
+      "key": "72ecea0d60a87ce8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/346.mp3",
+      "bytes": 32287,
+      "key": "8f06e3f79e846fea",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/347.mp3",
+      "bytes": 26227,
+      "key": "9cabf66e6eff37ca",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/348.mp3",
+      "bytes": 30824,
+      "key": "05d4ac15cae4053e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/349.mp3",
+      "bytes": 26749,
+      "key": "fc832d57f20838ee",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/350.mp3",
+      "bytes": 26122,
+      "key": "d9553b8bb7c4a11e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/351.mp3",
+      "bytes": 32078,
+      "key": "195c168006686dcf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/352.mp3",
+      "bytes": 31974,
+      "key": "2fb25a6c3a54a8dd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/353.mp3",
+      "bytes": 34064,
+      "key": "7217ad0c22ee6e84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/354.mp3",
+      "bytes": 24242,
+      "key": "a5b9dc672aaead5a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/355.mp3",
+      "bytes": 31974,
+      "key": "0ea7579a3d6df6f8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/356.mp3",
+      "bytes": 25913,
+      "key": "fcf14dfaec10363a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/357.mp3",
+      "bytes": 35109,
+      "key": "a9dc04c183877578",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/358.mp3",
+      "bytes": 31451,
+      "key": "53eebc714fb6eccf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/359.mp3",
+      "bytes": 31660,
+      "key": "94e8c2030f3cca76",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/360.mp3",
+      "bytes": 34795,
+      "key": "6ee7753b48881d48",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/361.mp3",
+      "bytes": 31765,
+      "key": "62d32dce16226472",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/362.mp3",
+      "bytes": 30824,
+      "key": "40a00d6a6f89eeb6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/363.mp3",
+      "bytes": 27376,
+      "key": "7a996af506e81f03",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/364.mp3",
+      "bytes": 31660,
+      "key": "092fa5872ed513a0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/365.mp3",
+      "bytes": 34900,
+      "key": "5d8516795fd35b59",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/366.mp3",
+      "bytes": 31347,
+      "key": "776a866e098f6939",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/367.mp3",
+      "bytes": 20271,
+      "key": "6e2d54160efa5599",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/368.mp3",
+      "bytes": 36885,
+      "key": "fddcfb10345b617b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/369.mp3",
+      "bytes": 35422,
+      "key": "c4f1e199b0e9ed4d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/370.mp3",
+      "bytes": 31451,
+      "key": "27a1b0078a631bf9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/371.mp3",
+      "bytes": 40856,
+      "key": "0af45ef1f851d988",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/372.mp3",
+      "bytes": 43468,
+      "key": "b8eff28300cb8ddb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/373.mp3",
+      "bytes": 38139,
+      "key": "573363ae371d7ba8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/374.mp3",
+      "bytes": 28944,
+      "key": "fd183ac92cd58e90",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/375.mp3",
+      "bytes": 29884,
+      "key": "97c8cecd536b89c2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/376.mp3",
+      "bytes": 50155,
+      "key": "ba7bab355b467dea",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/377.mp3",
+      "bytes": 29675,
+      "key": "a8908c3a330ec3c8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/378.mp3",
+      "bytes": 27167,
+      "key": "30379c4de93a5084",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/379.mp3",
+      "bytes": 30824,
+      "key": "c4e333144dbaee66",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/380.mp3",
+      "bytes": 35004,
+      "key": "7f5a40ee57ea91f2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/381.mp3",
+      "bytes": 34064,
+      "key": "8f0f3738007f619e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/382.mp3",
+      "bytes": 29362,
+      "key": "18381d5592830b6b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/383.mp3",
+      "bytes": 27167,
+      "key": "e22bec0ca72c621a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/384.mp3",
+      "bytes": 26436,
+      "key": "41b27cb8f37517d5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/385.mp3",
+      "bytes": 29257,
+      "key": "c4a43513eceb50f6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/386.mp3",
+      "bytes": 28526,
+      "key": "f57f0529efad5a6d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/387.mp3",
+      "bytes": 34900,
+      "key": "a99c116764c7732f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/388.mp3",
+      "bytes": 37198,
+      "key": "8018d0d17d8c0292",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/389.mp3",
+      "bytes": 27690,
+      "key": "ce07322882ff59df",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/390.mp3",
+      "bytes": 37512,
+      "key": "bc2c9de08746d1ce",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/391.mp3",
+      "bytes": 42632,
+      "key": "d3fb96369e9eaf87",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/392.mp3",
+      "bytes": 28944,
+      "key": "558b434663760596",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/393.mp3",
+      "bytes": 25078,
+      "key": "d60d71435e095355",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/394.mp3",
+      "bytes": 19644,
+      "key": "91dd9c96944804e2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/395.mp3",
+      "bytes": 33123,
+      "key": "bf8ddee850f94e6d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/396.mp3",
+      "bytes": 34168,
+      "key": "92a9e74960e3804a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/397.mp3",
+      "bytes": 23615,
+      "key": "3eb512f4e4b7b530",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/398.mp3",
+      "bytes": 32810,
+      "key": "c596fb48020d1c69",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/399.mp3",
+      "bytes": 30511,
+      "key": "ce782f34206aefa1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/400.mp3",
+      "bytes": 26749,
+      "key": "2a24969bd5553489",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/401.mp3",
+      "bytes": 37721,
+      "key": "f6463e86d1fe86d0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/402.mp3",
+      "bytes": 40751,
+      "key": "f7480a8b3cda5a67",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/403.mp3",
+      "bytes": 33541,
+      "key": "ac382120204092dc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/404.mp3",
+      "bytes": 44304,
+      "key": "e0cfe28cb3f6db29",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/405.mp3",
+      "bytes": 35944,
+      "key": "771805ade08afce9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/406.mp3",
+      "bytes": 25809,
+      "key": "b6b41de962893bbf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/407.mp3",
+      "bytes": 31556,
+      "key": "eeff8b265fecd25d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/408.mp3",
+      "bytes": 36049,
+      "key": "b84800e17b392bf9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/409.mp3",
+      "bytes": 31138,
+      "key": "3cebace66873cc67",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/410.mp3",
+      "bytes": 27899,
+      "key": "6e7de142b68c0dc6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/411.mp3",
+      "bytes": 32496,
+      "key": "74b62bcb6f5c9e02",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/412.mp3",
+      "bytes": 25496,
+      "key": "d365823ded72b495",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/413.mp3",
+      "bytes": 31451,
+      "key": "bd2f5e4645f31b2f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/414.mp3",
+      "bytes": 39288,
+      "key": "51cc5bca95a43384",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/415.mp3",
+      "bytes": 27690,
+      "key": "b50a1173d492b432",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/416.mp3",
+      "bytes": 30093,
+      "key": "309a21fea62f3435",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/417.mp3",
+      "bytes": 25809,
+      "key": "18a5225f048632b6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/418.mp3",
+      "bytes": 28212,
+      "key": "35ddd3f8413fd831",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/419.mp3",
+      "bytes": 37094,
+      "key": "142d663d299e3eee",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/420.mp3",
+      "bytes": 33019,
+      "key": "acdc3804fdcc0b34",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/421.mp3",
+      "bytes": 36153,
+      "key": "f3d9ef76ada7afef",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/422.mp3",
+      "bytes": 25809,
+      "key": "c9a5105ce313e02e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/423.mp3",
+      "bytes": 36362,
+      "key": "f3c66505557ddcb5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/424.mp3",
+      "bytes": 38557,
+      "key": "72d1b18eccce9682",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/425.mp3",
+      "bytes": 28317,
+      "key": "31bc93ba30ba9aeb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/426.mp3",
+      "bytes": 26122,
+      "key": "d8ffbee060a2cf84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/427.mp3",
+      "bytes": 28421,
+      "key": "c5617ffb9af6ca79",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/428.mp3",
+      "bytes": 24660,
+      "key": "c421b51808b4499e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/429.mp3",
+      "bytes": 32914,
+      "key": "1e07d39b7a50c099",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/430.mp3",
+      "bytes": 36258,
+      "key": "e31131e0249c2c85",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/431.mp3",
+      "bytes": 36153,
+      "key": "ffb67aa74f2cdcac",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/432.mp3",
+      "bytes": 25391,
+      "key": "670d7fad17b287bb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/433.mp3",
+      "bytes": 35422,
+      "key": "d9cc4d7b95a0dfa3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/434.mp3",
+      "bytes": 33959,
+      "key": "61709dd9824040c3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/435.mp3",
+      "bytes": 33959,
+      "key": "84fc95557dfd19dc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/436.mp3",
+      "bytes": 35422,
+      "key": "f778e32c33b33388",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/437.mp3",
+      "bytes": 32705,
+      "key": "3ea4f52a9b6ef311",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/438.mp3",
+      "bytes": 35213,
+      "key": "4f47a210b74302ca",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/439.mp3",
+      "bytes": 31974,
+      "key": "13485957e5d961a5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/440.mp3",
+      "bytes": 24973,
+      "key": "69278046d7e8007b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/441.mp3",
+      "bytes": 37303,
+      "key": "43d7af45ee4b291b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/442.mp3",
+      "bytes": 32183,
+      "key": "c3e20bd1f8a63b9a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/443.mp3",
+      "bytes": 33437,
+      "key": "1bd65148079ab5f6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/444.mp3",
+      "bytes": 43572,
+      "key": "8139db4a4830e8ab",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/445.mp3",
+      "bytes": 31138,
+      "key": "4f84c9e0515681ec",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/446.mp3",
+      "bytes": 25913,
+      "key": "abd1533765537ecb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/447.mp3",
+      "bytes": 31765,
+      "key": "159b826417dd1905",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/448.mp3",
+      "bytes": 28421,
+      "key": "0c8d45da4c8e5984",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/449.mp3",
+      "bytes": 31869,
+      "key": "e0a754da4a9be65c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/450.mp3",
+      "bytes": 31347,
+      "key": "d7a490796e681f94",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/451.mp3",
+      "bytes": 30929,
+      "key": "432fa23c5c35f08c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/452.mp3",
+      "bytes": 31869,
+      "key": "ec7e170d495301b1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/453.mp3",
+      "bytes": 23824,
+      "key": "c2f580dd8d704c50",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/454.mp3",
+      "bytes": 32496,
+      "key": "4b778fb4ea49b5ae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/455.mp3",
+      "bytes": 42318,
+      "key": "a8be1d10aa718387",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/456.mp3",
+      "bytes": 38661,
+      "key": "4c7a04b2e1665a93",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/457.mp3",
+      "bytes": 34377,
+      "key": "8ad905ecea658b52",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/458.mp3",
+      "bytes": 30511,
+      "key": "3de1bd1ea489cd7d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/459.mp3",
+      "bytes": 29466,
+      "key": "d3cb395f2e773e24",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/460.mp3",
+      "bytes": 32810,
+      "key": "7e5b6fd9dbb48991",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/461.mp3",
+      "bytes": 40229,
+      "key": "ca70afed2efed4c4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/462.mp3",
+      "bytes": 34586,
+      "key": "6dfc4aacc55dfe70",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/463.mp3",
+      "bytes": 40020,
+      "key": "22ab615857da1e87",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/464.mp3",
+      "bytes": 39602,
+      "key": "95fc30a4187074a9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/465.mp3",
+      "bytes": 43886,
+      "key": "f099832cf5d54b4c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/466.mp3",
+      "bytes": 40751,
+      "key": "ba36521936587efc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/467.mp3",
+      "bytes": 40542,
+      "key": "00416c940babb6ed",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/468.mp3",
+      "bytes": 46498,
+      "key": "1481f738670990cd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/469.mp3",
+      "bytes": 37616,
+      "key": "5c06fa0c79b5186d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/482.mp3",
+      "bytes": 38034,
+      "key": "2cf7768bc5a780d2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/483.mp3",
+      "bytes": 32601,
+      "key": "fc767f919ee0ba1d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/484.mp3",
+      "bytes": 30302,
+      "key": "d05157c954e6d8b7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/485.mp3",
+      "bytes": 33646,
+      "key": "d22a597ba6af5f6b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/486.mp3",
+      "bytes": 43259,
+      "key": "3543f232f6e4e5d7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/487.mp3",
+      "bytes": 22988,
+      "key": "a91b1b0c20534f41",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/488.mp3",
+      "bytes": 40751,
+      "key": "078cc0ed1854bc1c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/489.mp3",
+      "bytes": 41900,
+      "key": "1e7d032c2840c707",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/490.mp3",
+      "bytes": 35318,
+      "key": "0ddeb5af77dea2c5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/491.mp3",
+      "bytes": 34900,
+      "key": "9a3b0c1bb60213c8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/492.mp3",
+      "bytes": 38661,
+      "key": "ac22665024bfab34",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/493.mp3",
+      "bytes": 39288,
+      "key": "111f92fe5a8bed4b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/494.mp3",
+      "bytes": 37721,
+      "key": "65de3eeb93ca80db",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/495.mp3",
+      "bytes": 24137,
+      "key": "5960c6c6085fd016",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/496.mp3",
+      "bytes": 27481,
+      "key": "d348c5296ef8ea7c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/497.mp3",
+      "bytes": 23719,
+      "key": "15667579c437b61a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/498.mp3",
+      "bytes": 33855,
+      "key": "9cbf55a460695d17",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/499.mp3",
+      "bytes": 24764,
+      "key": "47d8ed668de43d8b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/500.mp3",
+      "bytes": 30198,
+      "key": "824b6d77a835cce3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/501.mp3",
+      "bytes": 19749,
+      "key": "d1c9f5dab71a709b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/502.mp3",
+      "bytes": 23197,
+      "key": "2f133834513fceb2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/503.mp3",
+      "bytes": 39915,
+      "key": "e089e9588297ebc5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/504.mp3",
+      "bytes": 20689,
+      "key": "9f92610c25b48fe9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/505.mp3",
+      "bytes": 31033,
+      "key": "87632a0f556c525e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/506.mp3",
+      "bytes": 38975,
+      "key": "5273f0b76fa941c9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/507.mp3",
+      "bytes": 40124,
+      "key": "0eb9099e110c3978",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/508.mp3",
+      "bytes": 41900,
+      "key": "36f78ebec66b18bd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/509.mp3",
+      "bytes": 42109,
+      "key": "cdc049253fe801b6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/510.mp3",
+      "bytes": 27690,
+      "key": "ee2c19a16278750d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/511.mp3",
+      "bytes": 31556,
+      "key": "c5680684b59f1dd8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/512.mp3",
+      "bytes": 26436,
+      "key": "dc57d20c7a50a2a6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/513.mp3",
+      "bytes": 30198,
+      "key": "b8c2b42687dd3b03",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/514.mp3",
+      "bytes": 36049,
+      "key": "02eac0e418b76049",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/515.mp3",
+      "bytes": 42214,
+      "key": "82baf682a0fd9d5f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/516.mp3",
+      "bytes": 38139,
+      "key": "0544521474368f08",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/517.mp3",
+      "bytes": 36989,
+      "key": "188b2d7b9b0f5e1c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/518.mp3",
+      "bytes": 30511,
+      "key": "34c46a7c62cf2344",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/519.mp3",
+      "bytes": 31033,
+      "key": "a1e7eac6e810209b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/520.mp3",
+      "bytes": 32392,
+      "key": "f269208c0bf13922",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/521.mp3",
+      "bytes": 31660,
+      "key": "ef81751d2c5113bb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/522.mp3",
+      "bytes": 31451,
+      "key": "54561b2bb6ccc830",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/523.mp3",
+      "bytes": 30407,
+      "key": "663c00a769711d3d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/524.mp3",
+      "bytes": 31138,
+      "key": "a9dd0d3e6154c8b2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/525.mp3",
+      "bytes": 40542,
+      "key": "ce1eb95339b411c3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/526.mp3",
+      "bytes": 23719,
+      "key": "99994aad9bd4a210",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/527.mp3",
+      "bytes": 39184,
+      "key": "8d56903b3d110c84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/528.mp3",
+      "bytes": 34168,
+      "key": "d5a3d144424e33ca",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/529.mp3",
+      "bytes": 23615,
+      "key": "4c94823cbea48146",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/530.mp3",
+      "bytes": 37512,
+      "key": "5e34edd10de24457",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/531.mp3",
+      "bytes": 47752,
+      "key": "7e8e33c0ce776052",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/532.mp3",
+      "bytes": 28526,
+      "key": "31b189b6d0f7d574",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/533.mp3",
+      "bytes": 38243,
+      "key": "8bc8993c206764ba",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/534.mp3",
+      "bytes": 33437,
+      "key": "02a356b0f9fcaca9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/535.mp3",
+      "bytes": 35422,
+      "key": "dba1fcd68e04e5bd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/536.mp3",
+      "bytes": 36362,
+      "key": "8d261070bf468dff",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/537.mp3",
+      "bytes": 34064,
+      "key": "ba965b5d6d93f12f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/538.mp3",
+      "bytes": 28212,
+      "key": "94cd245ee350617b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/539.mp3",
+      "bytes": 30302,
+      "key": "3ccc2068305081af",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/540.mp3",
+      "bytes": 36571,
+      "key": "261ffb9823fdf74a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/541.mp3",
+      "bytes": 34377,
+      "key": "d77f9c96dff44cd7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/542.mp3",
+      "bytes": 30616,
+      "key": "1d74c300ad31b668",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/543.mp3",
+      "bytes": 31033,
+      "key": "7e8530aa7cc25e93",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/544.mp3",
+      "bytes": 31765,
+      "key": "8a20a909068848d8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/545.mp3",
+      "bytes": 32705,
+      "key": "bbfc376113cc7dc1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/546.mp3",
+      "bytes": 25391,
+      "key": "de3213f22d88e392",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/547.mp3",
+      "bytes": 29675,
+      "key": "cbb7818de3f54087",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/548.mp3",
+      "bytes": 29257,
+      "key": "915adc70d28db258",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/549.mp3",
+      "bytes": 28526,
+      "key": "cb68ea301ca8fdab",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/550.mp3",
+      "bytes": 27481,
+      "key": "9a825f6605f54d55",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/551.mp3",
+      "bytes": 26122,
+      "key": "cf560ff24487db08",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/552.mp3",
+      "bytes": 30511,
+      "key": "0b43afa2d5e708d4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/553.mp3",
+      "bytes": 27690,
+      "key": "7b30219c78a32af3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/554.mp3",
+      "bytes": 29780,
+      "key": "179f2f97a7b7446e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/555.mp3",
+      "bytes": 30407,
+      "key": "f036f0fe8d6e3cc5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/556.mp3",
+      "bytes": 25809,
+      "key": "3c43a7a566ec2d62",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/557.mp3",
+      "bytes": 31869,
+      "key": "5d6de21b2557d03a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/558.mp3",
+      "bytes": 29675,
+      "key": "69db571d0e49d945",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/559.mp3",
+      "bytes": 35004,
+      "key": "b81c0fda8ea6ae93",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/560.mp3",
+      "bytes": 41169,
+      "key": "b358ca9121d0ce30",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/561.mp3",
+      "bytes": 35213,
+      "key": "a77957f117b8fb24",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/562.mp3",
+      "bytes": 32705,
+      "key": "4f3db2256bbcdabe",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/563.mp3",
+      "bytes": 35318,
+      "key": "a6058caa745337cc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/564.mp3",
+      "bytes": 28630,
+      "key": "31efdfc6e50f1655",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/565.mp3",
+      "bytes": 40960,
+      "key": "ee0f64c330928945",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/566.mp3",
+      "bytes": 29466,
+      "key": "b8c278e5ecbbe1be",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/567.mp3",
+      "bytes": 37407,
+      "key": "f5dc92b9b92629b2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/568.mp3",
+      "bytes": 29571,
+      "key": "d1247ef10955ec6e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/569.mp3",
+      "bytes": 27481,
+      "key": "2293c8d440d68561",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/570.mp3",
+      "bytes": 25182,
+      "key": "48c540d09bd6a0af",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/571.mp3",
+      "bytes": 35736,
+      "key": "f08565482c5970ee",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/572.mp3",
+      "bytes": 26540,
+      "key": "db15b008da7d6edf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/573.mp3",
+      "bytes": 34691,
+      "key": "78e07b33d384f171",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/574.mp3",
+      "bytes": 29362,
+      "key": "5499632c57f9bedf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/575.mp3",
+      "bytes": 32810,
+      "key": "472bdc29d4871421",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/576.mp3",
+      "bytes": 29780,
+      "key": "dc88267a00af8568",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/577.mp3",
+      "bytes": 29153,
+      "key": "dbd808a2955d7a8c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/578.mp3",
+      "bytes": 27899,
+      "key": "9e1c5fde9bdf0cdc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/579.mp3",
+      "bytes": 33123,
+      "key": "f791c40d89f5fc06",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/580.mp3",
+      "bytes": 31033,
+      "key": "994a65b3c9020688",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/581.mp3",
+      "bytes": 21943,
+      "key": "4ea4a09efa416dce",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/582.mp3",
+      "bytes": 28839,
+      "key": "2c2a7f54ddee1add",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/583.mp3",
+      "bytes": 32392,
+      "key": "0e134aa0ed331873",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/584.mp3",
+      "bytes": 22779,
+      "key": "3ca13c830f0257d8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/585.mp3",
+      "bytes": 33123,
+      "key": "2541495ad642d1a0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/586.mp3",
+      "bytes": 25809,
+      "key": "fa8f35b0def3ff30",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/587.mp3",
+      "bytes": 42841,
+      "key": "03e56a74270ae37b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/588.mp3",
+      "bytes": 28212,
+      "key": "d8a125b05673971c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/589.mp3",
+      "bytes": 35213,
+      "key": "c257d61547a71d18",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/590.mp3",
+      "bytes": 25913,
+      "key": "bf6f151bf2fe3f83",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/591.mp3",
+      "bytes": 28630,
+      "key": "731459c72007144b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/592.mp3",
+      "bytes": 24660,
+      "key": "2a543a1fc44a093f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/593.mp3",
+      "bytes": 41273,
+      "key": "5166e713d004e058",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/594.mp3",
+      "bytes": 33646,
+      "key": "31c61800797f5932",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/595.mp3",
+      "bytes": 24033,
+      "key": "36af8d1b85b30f2b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/596.mp3",
+      "bytes": 31347,
+      "key": "2c2a8a2114f4865c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/597.mp3",
+      "bytes": 26331,
+      "key": "9f8a17df6a2c8240",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/598.mp3",
+      "bytes": 27690,
+      "key": "a7eef737683bda1d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/599.mp3",
+      "bytes": 29989,
+      "key": "229c54b8ebdd3674",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/600.mp3",
+      "bytes": 35944,
+      "key": "199117953c930406",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/601.mp3",
+      "bytes": 31660,
+      "key": "c7e8c88728b4de48",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/602.mp3",
+      "bytes": 41900,
+      "key": "87eae9acd885c293",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/603.mp3",
+      "bytes": 28108,
+      "key": "903b01e4bcad971d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/604.mp3",
+      "bytes": 32392,
+      "key": "92fb064850cc5d21",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/605.mp3",
+      "bytes": 31974,
+      "key": "37d43b924d0eedc1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/606.mp3",
+      "bytes": 30511,
+      "key": "a89deec0c78a689c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/607.mp3",
+      "bytes": 25913,
+      "key": "ba0b32facbc3710f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/608.mp3",
+      "bytes": 34691,
+      "key": "ed52f06461bb6728",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/609.mp3",
+      "bytes": 32078,
+      "key": "1c2900a9de35a944",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/610.mp3",
+      "bytes": 27899,
+      "key": "8b7b3b38cb2210d3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/611.mp3",
+      "bytes": 24869,
+      "key": "ac80eacabd374778",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/612.mp3",
+      "bytes": 31660,
+      "key": "2b3e36dfab5ee949",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/613.mp3",
+      "bytes": 29675,
+      "key": "05973484e4520774",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/614.mp3",
+      "bytes": 29362,
+      "key": "808e4f32b354540e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/615.mp3",
+      "bytes": 27690,
+      "key": "dde17c7efbb77091",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/616.mp3",
+      "bytes": 28839,
+      "key": "e11d3d3caa1034a4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/617.mp3",
+      "bytes": 27794,
+      "key": "a93916900f9a8f4d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     }
