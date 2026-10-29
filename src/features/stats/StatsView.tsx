@@ -14,13 +14,18 @@ import {
   Stat,
 } from '@/components/ui';
 import { levelProgress } from '@/features/gamification/xp';
-import type { ForecastDay, ProgressCounts } from '@/lib/backend/types';
+import { WordStat } from '@/features/learning/WordStat';
+import type { WordCounts, WordStatus } from '@/features/learning/wordProgress';
+import type { ForecastDay } from '@/lib/backend/types';
 import type { DailyStats, Profile } from '@/lib/types';
 import { Heatmap } from './Heatmap';
 
 export interface StatsViewProps {
   profile: Profile | undefined;
-  counts: ProgressCounts | undefined;
+  /** Learning and Known from the word tracker, Due from the schedule. */
+  counts: WordCounts | undefined;
+  /** Open the Learning view of the Words tab on one list. */
+  onOpenWords: (status: WordStatus) => void;
   /** Share of reviews recalled correctly, 0..1. Undefined until it loads. */
   retention: number | undefined;
   daily: DailyStats[] | undefined;
@@ -31,6 +36,7 @@ export interface StatsViewProps {
 export function StatsView({
   profile,
   counts,
+  onOpenWords,
   retention,
   daily,
   forecast,
@@ -47,17 +53,22 @@ export function StatsView({
 
       <Section label="Words" className="mt-8">
         <Row className="items-start gap-4">
-          <Stat value={counts?.known ?? 0} label="Known" />
-          <Stat value={counts?.learning ?? 0} label="Learning" />
-          <Stat value={counts?.due ?? 0} label="Due" />
+          <WordStat
+            value={counts?.learning}
+            label="Learning"
+            onPress={() => onOpenWords('learning')}
+          />
+          <WordStat value={counts?.due} label="Due" onPress={() => onOpenWords('due')} />
+          <WordStat value={counts?.known} label="Known" onPress={() => onOpenWords('known')} />
         </Row>
         <Row className="mt-6 items-start gap-4">
-          <Stat value={counts?.reviewCount ?? 0} label="In review" />
           <Stat
             value={retentionPct === null ? '—' : `${retentionPct}%`}
             label="Retention"
           />
           <Stat value={streak} label="Day streak" />
+          {/* Keeps the two stats in the first two columns of the row above. */}
+          <View className="flex-1" />
         </Row>
       </Section>
 
