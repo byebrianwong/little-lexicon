@@ -932,7 +932,10 @@ The `register` of the first sense, and of each other sense.
 - Check the labels Oxford Learner's, Cambridge and Longman give. The pages
   `tools/dictionary-defs.py` downloads are cached in `.cache/dict/`; search
   them for words such as formal, disapproving, literary. Use a label two of
-  them agree on.
+  them agree on, except `formal`: use it only when all three mark the sense
+  formal. Learner's dictionaries mark most of this list formal, and a label
+  on half the words tells the learner nothing. On 2026-10-29 the first
+  writers set `formal` on 13 of 24 words under the two-of-three rule.
 - `technical` is for an other sense from a specialist field (insular's
   "relating to the insula of the brain").
 - 5: the label matches the learner's dictionaries, or null rightly. 3: a
@@ -978,9 +981,11 @@ Which other senses to show under "Also means", and their plain definitions.
 
 - Show an other sense only when it is a current meaning a learner will meet:
   insular's "relating to islands". At most 2.
-- Do not show near-repeats of the first sense, rare or technical senses, or
-  senses that are another word's meaning (see "Other senses that are another
-  word's meaning" in "Traps found so far").
+- Do not show near-repeats of the first sense, rare senses, or senses that
+  are another word's meaning (see "Other senses that are another word's
+  meaning" in "Traps found so far"). A technical sense is shown only when a
+  general reader often meets it (catalyst in chemistry, dissonance in music),
+  with the `technical` label.
 - Write the `plain` definition in everyday words, at most 20 words, without
   naming the word. Never copy a dictionary's definition.
 - 5: the right senses (or none) with clear plain definitions. 3: shows a rare
