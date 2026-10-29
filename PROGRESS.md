@@ -3851,6 +3851,8 @@ its pronunciation guide, since the label did not need spelling out.
   the headword; when the word is hidden, its label is "Hear the word" so it
   does not give the answer away.
 - Placement now sets the IPA on the headword's line, as the other screens do.
+- "Use it" drops the "Hear the word" button from its feedback section. The
+  answer reveal right below it now has the icon beside the same word.
 - "Sentence" on Discover keeps its label: it sits under the example, away
   from the word.
 
@@ -3867,5 +3869,8 @@ its pronunciation guide, since the label did not need spelling out.
 - Storybook on web: Discover, Reveal, WordIntro, MultipleChoice and both
   placement stories (with and without IPA). On a narrow column the IPA and
   icon wrap to the next line together.
+- Chromatic build 150: 45 changes, all from this branch. On the reveal, a
+  long word with its IPA and the icon can push the part of speech onto the
+  next line (seen on "pragmatic" in the Use it stories).
 - `tsc`, lint, 334 jest tests.
 - Not run: iOS or Android.
