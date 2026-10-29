@@ -51,7 +51,11 @@ export const ChangingLevel: Story = {
   },
 };
 
-/** Picking how often practice shows known words saves that choice. */
+/**
+ * Picking how often practice shows known words saves that choice. The click
+ * scrolls the list to centre the chip, so the snapshot relies on the fonts
+ * loading before the story renders (see the loader in .storybook/preview.tsx).
+ */
 export const ChangingKnownWordFrequency: Story = {
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement);
