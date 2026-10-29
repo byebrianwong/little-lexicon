@@ -4094,7 +4094,7 @@ due yesterday and one due a minute ago, Due read 2 and today's bar read 1.
 
 ### Order of deployment
 
-Apply 0015 to games-apps before merging. The new bundle calls
+0015 had to be applied before merging: the new bundle calls
 `due_forecast_local`, and without 0015 that call fails. The "Upcoming reviews"
 section is then empty with no message, because `StatsView` draws nothing when
 the forecast query fails. That missing error state predates this change.
@@ -4119,10 +4119,17 @@ the forecast query fails. That missing error state predates this change.
   and no bar counts the known words. The two "Cannot manually set color
   scheme" page errors appear on both versions.
 
+### Applied (2026-10-29)
+
+0015 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same route as 0014, so it is not in the
+CLI's migration history). Checked afterwards: `due_forecast_local` is stable
+and security invoker, executable by `authenticated` and not by `anon`;
+`due_forecast(int)` has the overdue and known-word fixes and kept its grants.
+`due_forecast_local` called as `authenticated` returns one row per day. The
+types generated from the project match the committed `database.types.ts`
+byte for byte.
+
 ### Not run
 
-- Nothing ran against the games-apps project. 0015 is not applied there, and
-  `database.types.ts` was not regenerated from it. After applying 0015, run
-  `npm run gen:types` and check the output matches the committed file.
-- The iOS simulator, the Android emulator and the Storybook build (CI builds
-  it).
+- The iOS simulator and the Android emulator.
