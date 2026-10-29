@@ -3836,3 +3836,51 @@ The Android fingerprint changes from c3f4278 to 2dc6d90, because listing
 new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
+
+## Storybook waits for fonts before rendering a story (2026-10-29)
+
+The Chromatic snapshot of `Screens/Settings` → `ChangingKnownWordFrequency`
+no longer moves by a pixel from run to run. It had come back changed on main's
+build 149 with no Settings change, and every pull request showed the same
+pending change until someone reviewed it.
+
+### Cause
+
+- The story's play function clicks "Sometimes". Focusing the chip makes
+  Chrome scroll the settings list so the chip sits in the middle.
+- The Newsreader faces download only when text first uses them, and the play
+  function runs about 100 ms after the page loads, at the same moment. When
+  `400Regular_Italic` or `500Medium` arrived after the scroll, Chrome's
+  scroll anchoring moved the list by 1 CSS pixel to keep the line at the top
+  of the view (the italic "tiers 1 and 5." note) in place. Safari does not do
+  this, which is why its snapshot never changed.
+- Found by loading the built Storybook in Chromium many times and logging
+  the scroll position, the layout and the font status. Fonts loaded before
+  the click: scroll position 613. Fonts loaded after: 614. Delaying the font
+  files gave 614 every time.
+- In Chromatic the baseline accepted before build 149 (`capture-d7ed9f4b`)
+  is the late-font state. Build 149's capture (`capture-c6c61c46`) is the
+  fonts-first state, the one this change produces every time.
+
+### What changed
+
+- `.storybook/preview.tsx` has a global loader that loads every Newsreader
+  face listed in `document.fonts` before a story renders. A face that fails to
+  load fails the story instead of letting Chromatic capture the fallback
+  serif.
+
+### Verified
+
+- Built Storybook in headless Chromium at 1200 px and device scale 2: 26
+  runs all ended at 613, including runs with fonts delayed by 100 to 400 ms
+  and the CPU slowed four times. Before the change, 6 normal runs gave 613
+  four times and 614 twice.
+- `tsc`, lint, 334 jest tests.
+
+### For next time
+
+- The first Chromatic build with this change shows the story as changed
+  against the old baseline. The new image should match build 149's pending
+  capture. Accepting it on main once clears it for every branch.
+- Any play function that scrolls is exposed to the same race. The loader now
+  covers all stories.
