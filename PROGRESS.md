@@ -3883,8 +3883,9 @@ pending change until someone reviewed it.
 
 ### For next time
 
-- Main's build 149 still holds this story as a pending change, and branches
-  cut from d5ad2a3 inherit it. Merging main into such a branch after this
-  lands, or accepting the one change on build 149, clears it.
+- Brian accepted this story's change on main's build 149 the same day, so
+  main's baseline is now `capture-c6c61c46`, the image this change
+  produces. A branch whose build still shows it as pending clears once main
+  is merged into it, or once its Chromatic job is re-run.
 - Any play function that scrolls is exposed to the same race. The loader now
   covers all stories.
