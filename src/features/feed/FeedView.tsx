@@ -29,6 +29,7 @@ import {
   Label,
   Muted,
   Note,
+  Pronunciation,
   Row,
   Spinner,
   TextButton,
@@ -223,7 +224,13 @@ function WordPage({
       <View className="flex-1 justify-center">
         <View className="flex-row flex-wrap items-baseline gap-x-3">
           <Headword>{word.headword}</Headword>
-          {word.ipa ? <Muted>{word.ipa}</Muted> : null}
+          <Pronunciation
+            ipa={word.ipa}
+            headword={word.headword}
+            onPress={() => {
+              if (soundEnabled) void speakWord(word);
+            }}
+          />
         </View>
         <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
           {word.partOfSpeech ? <Note className="text-[17px]">{word.partOfSpeech}</Note> : null}
@@ -233,28 +240,19 @@ function WordPage({
         <View className="mt-6 border-t border-ink pt-4">
           <Body className="text-[20px] leading-[29px]">{definition}</Body>
           {example ? (
-            <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
-          ) : null}
-          <Row className="mt-2 gap-6">
-            <TextButton
-              icon="speaker"
-              label="Hear it"
-              accessibilityLabel={`Hear ${word.headword}`}
-              onPress={() => {
-                if (soundEnabled) void speakWord(word);
-              }}
-            />
-            {example ? (
+            <>
+              <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
               <TextButton
                 icon="speaker"
                 label="Sentence"
                 accessibilityLabel="Hear the example sentence"
+                className="mt-2"
                 onPress={() => {
                   if (soundEnabled) void speakSentence(example);
                 }}
               />
-            ) : null}
-          </Row>
+            </>
+          ) : null}
         </View>
       </View>
 

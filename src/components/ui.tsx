@@ -605,7 +605,36 @@ export function IconButton({
   );
 }
 
-/** A small underlined action with an optional icon, such as "Hear it". */
+/**
+ * The pronunciation guide with a speaker button right after it, for the line
+ * that starts with the headword. The guide and the button are one flex item,
+ * so they wrap to a new line together. A flex row takes its baseline from its
+ * first child, so the guide still lines up with the headword's baseline.
+ */
+export function Pronunciation({
+  ipa,
+  headword,
+  onPress,
+  className,
+}: {
+  ipa: string | null;
+  headword: string;
+  onPress: () => void;
+  className?: string;
+}) {
+  return (
+    <View
+      // With no guide there is no text to give a baseline, so centre the
+      // button on the line instead.
+      className={tw(cx('flex-row items-center', !ipa && 'self-center'), className)}
+    >
+      {ipa ? <Muted>{ipa}</Muted> : null}
+      <IconButton icon="speaker" label={`Hear ${headword}`} onPress={onPress} />
+    </View>
+  );
+}
+
+/** A small underlined action with an optional icon, such as "Sentence". */
 export function TextButton({
   label,
   icon,

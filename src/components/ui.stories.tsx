@@ -14,6 +14,7 @@ import {
   Muted,
   Note,
   ProgressBar,
+  Pronunciation,
   Row,
   Screen,
   Section,
@@ -106,7 +107,11 @@ export const Controls: Story = {
         placeholder="Write a sentence"
         accessibilityLabel="Sentence"
       />
-      <TextButton icon="speaker" label="Hear it" onPress={noop} />
+      <TextButton icon="speaker" label="Sentence" onPress={noop} />
+      <View className="flex-row flex-wrap items-baseline gap-x-3">
+        <Headword size="md">ephemeral</Headword>
+        <Pronunciation ipa="/ɪˈfɛm(ə)ɹəl/" headword="ephemeral" onPress={noop} />
+      </View>
     </View>
   ),
 };

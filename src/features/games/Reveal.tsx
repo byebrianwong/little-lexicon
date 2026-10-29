@@ -15,8 +15,8 @@ import {
   Button,
   Headword,
   Label,
-  Muted,
   Note,
+  Pronunciation,
   Row,
   TextButton,
 } from '@/components/ui';
@@ -117,7 +117,11 @@ export function Reveal({
 
         <View className="mt-3 flex-row flex-wrap items-baseline gap-x-3">
           <Headword size="md">{content.headword}</Headword>
-          {content.ipa ? <Muted>{content.ipa}</Muted> : null}
+          <Pronunciation
+            ipa={content.ipa}
+            headword={content.headword}
+            onPress={() => speakWord(content)}
+          />
           {content.partOfSpeech ? <Note>{content.partOfSpeech}</Note> : null}
         </View>
         <Body className="mt-2 text-[19px] leading-[27px]">{primaryDef}</Body>
@@ -131,19 +135,14 @@ export function Reveal({
             <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           </Pressable>
         ) : null}
-        <Row className="mt-2 flex-wrap gap-x-6">
-          <AudioButton
-            onPress={() => speakWord(content)}
-            label="Hear it"
+        {saved ? (
+          <SaveWordButton
+            headword={content.headword}
+            saved={saved.savedIds.has(content.wordId)}
+            onPress={() => saved.toggle(content)}
+            className="mt-2"
           />
-          {saved ? (
-            <SaveWordButton
-              headword={content.headword}
-              saved={saved.savedIds.has(content.wordId)}
-              onPress={() => saved.toggle(content)}
-            />
-          ) : null}
-        </Row>
+        ) : null}
       </View>
 
       <View className="mt-6 gap-3">
