@@ -3836,3 +3836,44 @@ The Android fingerprint changes from c3f4278 to 2dc6d90, because listing
 new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
+
+## Words no longer said twice on Android (2026-10-29)
+
+On Android every word was spoken twice: first the clip, then, 4 seconds
+later, the device's speech voice. If you had moved on by then, the second
+one played on the next screen. After a new word's intro, that screen is
+often "Which word means", so the voice said the answer.
+
+### Cause
+
+`play()` in `src/lib/audio` (added in #50) gives a clip 4 seconds to load
+and speaks the text if `player.isLoaded` is still false. On Android,
+expo-audio 1.0.13 reports `isLoaded` as "the player is in the ready state".
+A word clip lasts about a second, so by the check it has ended, the state
+is "ended", and `isLoaded` reads false. iOS and web keep `isLoaded` true
+after a clip ends, so only Android was affected.
+
+### What changed
+
+- `clipLoaded()` in `src/lib/audio` also counts a clip whose duration is
+  known. The duration stays set after the clip ends. A clip that never
+  loaded has none (0 on Android, NaN on iOS and web), so a real failure
+  still falls back to speech.
+- The new-word intro, the answer reveal and Listening each call
+  `stopAudio()` when they close. The word they played, or its speech
+  fallback, can no longer play on the next screen. React runs these
+  cleanups before the next screen's own audio starts, so that audio is not
+  cut off.
+
+### Verified
+
+- 6 unit tests in `src/lib/audio.test.ts`, with expo-audio and expo-speech
+  mocked. The two Android cases fail on the old check. App: `tsc`, lint,
+  340 jest tests.
+- Web demo, with clip plays and device speech logged: leaving the intro
+  for abate paused its clip, and nothing played during 5.5 seconds on the
+  question. Continue on the reveal paused abate before the next intro
+  played consummate. Device speech never ran.
+- Not run: Android. There is no Android SDK on this Mac. The cause comes
+  from reading expo-audio's Android source (`AudioModule.kt`,
+  `AudioPlayer.kt`).

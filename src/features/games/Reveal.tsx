@@ -9,7 +9,7 @@ import { useEffect, useRef } from 'react';
 import { Pressable, View } from 'react-native';
 import type { ExampleContent, WordContent } from '@/lib/types';
 import type { AnswerGrade } from '@/lib/text';
-import { speakSentence, speakWord } from '@/lib/audio';
+import { speakSentence, speakWord, stopAudio } from '@/lib/audio';
 import {
   Body,
   Button,
@@ -73,7 +73,9 @@ export function Reveal({
     if (correct) feedbackCorrect(soundEnabled);
     else feedbackIncorrect(soundEnabled);
     speakWord(content);
-    // Play once on reveal.
+    // Play once on reveal, and stop on Continue so it cannot play over the
+    // next question (which may ask for the same word).
+    return stopAudio;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

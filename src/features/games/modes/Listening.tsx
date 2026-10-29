@@ -5,7 +5,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Label, Note } from '@/components/ui';
-import { speakWord } from '@/lib/audio';
+import { speakWord, stopAudio } from '@/lib/audio';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import {
@@ -42,6 +42,7 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
 
   useEffect(() => {
     speakWord(content);
+    return stopAudio;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

@@ -15,7 +15,7 @@ import {
   Section,
   Spinner,
 } from '@/components/ui';
-import { speakWord } from '@/lib/audio';
+import { speakWord, stopAudio } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
@@ -39,6 +39,9 @@ export function WordIntro({
 
   useEffect(() => {
     speakWord(content);
+    // Stop on Start: the first question often asks for this word, so the
+    // audio must not still be playing there.
+    return stopAudio;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
