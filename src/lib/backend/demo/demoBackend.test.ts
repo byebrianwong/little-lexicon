@@ -189,6 +189,31 @@ describe('DemoBackend saved words and the tracker', () => {
     ]);
   });
 
+  it('gives the schedule of each word it holds', async () => {
+    const backend = new DemoBackend();
+    await backend.submitReview({
+      wordId: 6,
+      card,
+      rating: 3,
+      stateBefore: 'new',
+      gameMode: 'cloze',
+      responseMs: 3000,
+      retrievability: null,
+      xp: 5,
+      isNew: true,
+    });
+    await backend.markKnown([7]);
+
+    const schedules = await new DemoBackend().getWordSchedules();
+    expect(schedules.find((s) => s.wordId === 6)).toEqual({
+      wordId: 6,
+      due: card.due,
+      isKnown: false,
+      isSuspended: false,
+    });
+    expect(schedules.find((s) => s.wordId === 7)).toMatchObject({ isKnown: true });
+  });
+
   it('gives a profile saved by an older version the default for known words', async () => {
     await AsyncStorage.setItem(
       KEY,

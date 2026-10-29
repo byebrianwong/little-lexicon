@@ -7,6 +7,8 @@
 // any snapshot.
 
 import { buildOptionPool, type OptionPool } from '@/features/games/optionPool';
+import { groupWords, type WordCounts, type YourWords } from '@/features/learning/wordProgress';
+import { buildTrackers, type AnswerRecord } from '@/features/tracker/tracker';
 import { SAMPLE_WORDS } from './sampleWords';
 import type {
   DailyStats,
@@ -14,8 +16,9 @@ import type {
   SessionItem,
   UserWordState,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
-import type { ForecastDay, LeaderboardEntry, ProgressCounts } from '@/lib/backend/types';
+import type { ForecastDay, LeaderboardEntry } from '@/lib/backend/types';
 
 /** The credit line the words file carries (see pipeline/src/lib/wordnet.ts). */
 export const CREDITS: string[] = [
@@ -133,26 +136,79 @@ export const NEW_PROFILE: Profile = profile({
 /** A long-time learner: a big streak and a lot of XP. */
 export const VETERAN_PROFILE: Profile = profile({ xpTotal: 18200, streakCount: 63 });
 
-export function counts(overrides: Partial<ProgressCounts> = {}): ProgressCounts {
+/** The word counts on Home and Progress. */
+export function counts(overrides: Partial<WordCounts> = {}): WordCounts {
+  return { learning: 12, due: 23, known: 84, ...overrides };
+}
+
+export const EMPTY_COUNTS: WordCounts = counts({ learning: 0, due: 0, known: 0 });
+
+// --- The Learning view -------------------------------------------------------
+
+/**
+ * The moment the Learning view stories describe their words from. Noon UTC,
+ * so "today" and "3 days ago" come out the same in any time zone a snapshot
+ * is taken in.
+ */
+export const STORY_NOW = new Date(TODAY_MS + 12 * 60 * 60 * 1000);
+
+function daysAgo(n: number): string {
+  return new Date(STORY_NOW.getTime() - n * DAY_MS).toISOString();
+}
+
+/** Answers on the given days ago, right unless the day is in `wrong`. */
+function answers(headword: string, days: number[], wrong: number[] = []): AnswerRecord[] {
+  const wordId = word(headword).wordId;
+  return days.map((d) => ({ wordId, correct: !wrong.includes(d), at: daysAgo(d) }));
+}
+
+function scheduled(headword: string, dueInDays: number, extra: Partial<WordSchedule> = {}): WordSchedule {
   return {
-    known: 84,
-    learning: 12,
-    due: 23,
-    reviewCount: 96,
-    knownTotal: 84,
-    total: 140,
-    ...overrides,
+    wordId: word(headword).wordId,
+    due: new Date(STORY_NOW.getTime() + dueInDays * DAY_MS).toISOString(),
+    isKnown: false,
+    isSuspended: false,
+    ...extra,
   };
 }
 
-export const EMPTY_COUNTS: ProgressCounts = counts({
-  known: 0,
-  learning: 0,
-  due: 0,
-  reviewCount: 0,
-  knownTotal: 0,
-  total: 0,
-});
+const HISTORY: AnswerRecord[] = [
+  // Learning: a mistake four days ago, right on the two days since.
+  ...answers('laconic', [9, 6, 4, 2, 0], [4]),
+  // Learning: answered once, in practice only, so never scheduled.
+  ...answers('quixotic', [1]),
+  // Learning: wrong the last time, so back to no days.
+  ...answers('obfuscate', [12, 8, 3], [3]),
+  // Learning: three clean days, due again now.
+  ...answers('pernicious', [7, 5, 2]),
+  // Known: right on six separate days.
+  ...answers('ephemeral', [30, 21, 14, 9, 5, 3]),
+  ...answers('pragmatic', [40, 25, 18, 11, 6]),
+];
+
+const SCHEDULES: WordSchedule[] = [
+  scheduled('laconic', 3),
+  scheduled('obfuscate', 0),
+  scheduled('pernicious', -1),
+  scheduled('ephemeral', 24),
+  scheduled('pragmatic', 41),
+];
+
+/** A learner part way through: four words in progress, two due, two known. */
+export const YOUR_WORDS: YourWords = groupWords(
+  {
+    content: new Map(WORDS.map((w) => [w.wordId, w])),
+    trackers: buildTrackers(HISTORY, STORY_NOW),
+    schedules: SCHEDULES,
+    savedAt: new Map([
+      [word('laconic').wordId, daysAgo(11)],
+      [word('quixotic').wordId, daysAgo(2)],
+    ]),
+  },
+  STORY_NOW,
+);
+
+export const NO_WORDS: YourWords = { learning: [], due: [], known: [] };
 
 /**
  * Daily activity ending today, cycling through every shade the heatmap defines

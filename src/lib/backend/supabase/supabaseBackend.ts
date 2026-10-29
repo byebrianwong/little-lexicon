@@ -18,6 +18,7 @@ import type {
   SessionItem,
   UserWordState,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
 import { addDays, toDayString } from '@/lib/date';
 import type {
@@ -441,6 +442,22 @@ export class SupabaseBackend implements Backend {
       ...reviews.map((r) => ({ wordId: r.word_id, correct: r.rating > 1, at: r.reviewed_at })),
       ...practice.map((r) => ({ wordId: r.word_id, correct: r.correct, at: r.answered_at })),
     ];
+  }
+
+  async getWordSchedules(): Promise<WordSchedule[]> {
+    const rows = await fetchAllRows((from, to) =>
+      supabase
+        .from('user_word_state')
+        .select('word_id, due, is_known, is_suspended')
+        .order('word_id')
+        .range(from, to),
+    );
+    return rows.map((r) => ({
+      wordId: r.word_id,
+      due: r.due,
+      isKnown: r.is_known,
+      isSuspended: r.is_suspended,
+    }));
   }
 
   async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {

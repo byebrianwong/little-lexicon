@@ -4,10 +4,6 @@ import { useQuery } from '@tanstack/react-query';
 import { backend } from '@/lib/backend';
 import { qk } from '@/lib/queryClient';
 
-export function useProgressCounts() {
-  return useQuery({ queryKey: qk.stats, queryFn: () => backend.getProgressCounts() });
-}
-
 export function useDailyStats(days: number) {
   return useQuery({
     queryKey: [...qk.dailyStats, days],

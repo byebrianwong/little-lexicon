@@ -99,6 +99,9 @@ const learning: WordTracker = {
   mistakeRecently: false,
   latestRight: 3,
   latestCount: 3,
+  answers: 3,
+  rightAnswers: 3,
+  firstAnsweredAt: '2026-01-14T09:00:00.000Z',
   lastAnsweredAt: '2026-01-18T09:00:00.000Z',
 };
 

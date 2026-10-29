@@ -52,6 +52,9 @@ function tracker(wordId: number, status: WordTracker['status']): WordTracker {
     mistakeRecently: false,
     latestRight: 1,
     latestCount: 1,
+    answers: 1,
+    rightAnswers: 1,
+    firstAnsweredAt: '2026-10-20T00:00:00.000Z',
     lastAnsweredAt: '2026-10-20T00:00:00.000Z',
   };
 }

@@ -103,8 +103,8 @@ export function useMarkKnown() {
     },
     onSettled: () => {
       invalidateAfterListChange(qc);
-      // Known words count toward progress.
-      void qc.invalidateQueries({ queryKey: qk.stats });
+      // Words marked known leave the review schedule.
+      void qc.invalidateQueries({ queryKey: qk.wordSchedules });
     },
   });
 }

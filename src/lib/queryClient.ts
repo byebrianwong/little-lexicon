@@ -30,4 +30,6 @@ export const qk = {
   wordContent: (wordId: number) => ['wordContent', wordId] as const,
   wordList: ['wordList'] as const,
   answerHistory: ['answerHistory'] as const,
+  wordSchedules: ['wordSchedules'] as const,
+  allWords: ['allWords'] as const,
 };

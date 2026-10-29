@@ -4035,6 +4035,100 @@ an OTA update is enough once the site has deployed the clips.
   about 4.5 seconds for the 4.39-second `definitions/748.mp3`.
 - Not run: Android.
 
+## The words you are learning, with stats on each (2026-10-29)
+
+Brian asked for an easy way to see the words being learned and stats about
+them. Before this, the only list of them was Words, All words, Filters,
+Status, Learning. Home and Progress showed counts that could not be opened,
+and the counts did not match that filter.
+
+### Decisions (Brian chose each of these)
+
+- **Both places.** The Words tab has a fourth view, Learning, and the counts
+  on Home and Progress open it.
+- **The word tracker decides Learning and Known everywhere.** Home and
+  Progress used to count from the review schedule: Learning was cards in
+  FSRS learning steps, and Known was cards in review state or marked known.
+  One or two right answers could make a word Known on Home while Saved said
+  "Learning (1 of 5 days)". Now both counts use the tracker's rule (right on
+  5 separate days, no mistake since), so each count is the length of the list
+  it opens. Due stays on the review schedule.
+- **Every stat offered:** answers and accuracy, progress toward known, the
+  next review, and the days the word was first tested and saved.
+
+### What changed
+
+- **The Learning view** (`src/features/learning/LearningView.tsx`). A switch
+  at the top picks Learning, Due or Known, each with its count, and a line
+  under it says what the list holds. Rows are most recently answered first.
+  Each row shows the word, its definition, five bars for the days toward
+  known ("2 of 5 days"), and "4 of 5 right · next review in 3 days". Tapping a
+  row lists Answers (with the percentage), Latest (only past 5 answers),
+  Last tested, Next review, First tested and Saved, with the word's audio and
+  the Save control. Due also offers "Start a session".
+- **The lists and their counts come from one pure function**, `groupWords` in
+  `src/features/learning/wordProgress.ts` (unit tested). Learning and Known
+  are the tracker's two statuses. Due uses the session's rule: due time
+  passed, not marked known, not paused. A due word is also in Learning or
+  Known. Words no longer in the words file are left out.
+- **Home and Progress.** Their Learning, Due and Known numbers come from the
+  same lists, and each opens its list (`openWords` in
+  `src/features/learning/links.ts`). `Stat` in `ui.tsx` takes `onPress`, and
+  draws a small arrow after the label when it has one. Progress lost "In
+  review", a schedule figure with no list behind it.
+- **The link.** `openWords` navigates to `/browse?view=learning&status=due`.
+  The Words screen applies the params, then clears them with `setParams`, so
+  the same link works again after the user switches views.
+- **Backend:** `getWordSchedules()` returns each `user_word_state` row's due
+  time and its known and paused flags. Supabase reads it a page at a time.
+  RLS already limits the read to the user's own rows; no migration.
+- **The tracker** also keeps the total answers, the right ones, and the time
+  of the first answer.
+- `formatShortDate` ("Oct 3") and `formatDaysAgo` ("yesterday") in
+  `src/lib/date.ts`, written by hand rather than through `Intl` so every
+  platform reads the same.
+- **The Words switch** has four views now. It fits one line on a 360-point
+  phone with a 16-point gap (it was 24). A narrower screen wraps "All words"
+  to a second line instead of cutting it off.
+- `useMarkKnown` refreshes the schedules instead of the old counts.
+
+### What the learner sees differently
+
+- **Known on Home drops for most learners**, because the tracker's rule is
+  stricter than the schedule's. Words marked "I know it" in Discover, or in
+  the old placement test, have no answers, so they are in none of the lists.
+  They still stay out of sessions, as before. The All words filter already
+  treated them as "Not tested".
+- Achievements still count words started from the schedule
+  (`getProgressCounts().total`). Nothing else reads `getProgressCounts` now.
+
+### Verified
+
+- `tsc`, lint and 367 jest tests. New tests cover the grouping, the counts,
+  the next-review wording, the row's facts, the link params, the new tracker
+  fields, the date wording and `getWordSchedules` in both backends (Supabase
+  across more than one page).
+- Web (demo mode, dev server) with a seeded history: Home showed Due now 2,
+  Learning 4, Known 2. Tapping Learning opened the Learning view on that list;
+  an open row showed the facts above. Due and Known switched lists. After
+  switching to Discover, Due on Progress opened the Learning view on Due, so
+  the cleared params work a second time. The switch fits at 360 and 375 px
+  and wraps at 320 px; desktop width (1200 px) is unchanged apart from the new
+  view. No new console errors (the two `accessibilityElementsHidden` warnings
+  come from `Icon` and appear on main too).
+- Storybook: the static build passes. All 46 Home, Progress and Words stories
+  (10 of them new, under Screens/Words/Learning) finish with their play
+  functions passing and no axe violations.
+- Not run: the iOS simulator, the Android emulator and Supabase mode.
+
+### For next time
+
+- Home and Progress now read the whole answer history, as the Words tab
+  already did. If histories grow large, the SQL function suggested under
+  "Saved words in every mode" (one row per word) would serve all three.
+- Chromatic will show the changed Home, Progress and Words stories as visual
+  changes to accept.
+
 ## Upcoming reviews agree with Due (2026-10-29)
 
 The Progress screen's "Upcoming reviews" chart (next 14 days) could show fewer

@@ -325,6 +325,27 @@ describe('SupabaseBackend answer history', () => {
   });
 });
 
+describe('SupabaseBackend word schedules', () => {
+  it('gives each word its due time and flags, past the first page', async () => {
+    mockTables.user_word_state = [
+      stateRow(5, '2026-10-01T10:00:00.000Z'),
+      stateRow(6, FUTURE, { is_known: true }),
+      ...Array.from({ length: 1200 }, (_, i) => stateRow(1000 + i, FUTURE)),
+    ];
+
+    const schedules = await new SupabaseBackend().getWordSchedules();
+
+    expect(schedules).toHaveLength(1202);
+    expect(schedules[0]).toEqual({
+      wordId: 5,
+      due: '2026-10-01T10:00:00.000Z',
+      isKnown: false,
+      isSuspended: false,
+    });
+    expect(schedules[1]).toMatchObject({ wordId: 6, isKnown: true });
+  });
+});
+
 describe('SupabaseBackend personalization', () => {
   it('sends the headword and definition to the Edge Function', async () => {
     mockInvoke.mockResolvedValue({ data: { kind: 'mnemonic', text: 'A hook.' }, error: null });
