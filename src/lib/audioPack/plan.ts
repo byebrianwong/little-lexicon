@@ -23,7 +23,10 @@ export function wantedClips(words: WordContent[]): Map<string, string> {
   };
   for (const word of words) {
     add(word.audioUrl);
-    for (const sense of word.senses) for (const example of sense.examples) add(example.audioUrl);
+    for (const sense of word.senses) {
+      add(sense.audioUrl);
+      for (const example of sense.examples) add(example.audioUrl);
+    }
   }
   return wanted;
 }

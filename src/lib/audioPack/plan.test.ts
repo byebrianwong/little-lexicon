@@ -1,7 +1,12 @@
 import type { WordContent } from '@/lib/types';
 import { clipHash, forEachLimited, looksLikeMp3, planSync, wantedClips } from './plan';
 
-function word(id: number, audioUrl: string | null, examples: (string | null)[]): WordContent {
+function word(
+  id: number,
+  audioUrl: string | null,
+  examples: (string | null)[],
+  definitionUrl: string | null = null,
+): WordContent {
   return {
     wordId: id,
     headword: `word${id}`,
@@ -19,6 +24,7 @@ function word(id: number, audioUrl: string | null, examples: (string | null)[]):
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        audioUrl: definitionUrl,
         examples: examples.map((url, i) => ({
           exampleId: id * 100 + i,
           text: 'An example.',
@@ -47,13 +53,19 @@ describe('clipHash', () => {
 });
 
 describe('wantedClips', () => {
-  it('collects word and sentence clips by hash, skipping ones without a URL', () => {
+  it('collects word, definition and sentence clips by hash, skipping ones without a URL', () => {
     const wanted = wantedClips([
-      word(1, 'audio/words/1.mp3?v=aaaaaa', ['audio/sentences/100.mp3?v=bbbbbb', null]),
+      word(
+        1,
+        'audio/words/1.mp3?v=aaaaaa',
+        ['audio/sentences/100.mp3?v=bbbbbb', null],
+        'audio/definitions/10.mp3?v=dddddd',
+      ),
       word(2, null, ['audio/sentences/200.mp3?v=cccccc']),
     ]);
     expect([...wanted]).toEqual([
       ['aaaaaa', 'audio/words/1.mp3?v=aaaaaa'],
+      ['dddddd', 'audio/definitions/10.mp3?v=dddddd'],
       ['bbbbbb', 'audio/sentences/100.mp3?v=bbbbbb'],
       ['cccccc', 'audio/sentences/200.mp3?v=cccccc'],
     ]);

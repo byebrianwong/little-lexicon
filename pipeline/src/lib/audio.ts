@@ -2,8 +2,8 @@
 //
 // The app plays clips from the web app's host. Stage 04 saves MP3s under
 // public/audio, which the web export copies to the site, and stage 05 gives
-// each word and sentence in the words file the audioUrl of its clip. Nothing
-// here touches the network or the disk.
+// each word, sentence and definition in the words file the audioUrl of its
+// clip. Nothing here touches the network or the disk.
 
 import { createHash } from 'node:crypto';
 
@@ -126,21 +126,48 @@ export function sentenceClipKey(text: string, word: KeyWord, voice: string): str
 }
 
 /**
+ * Key of a TTS clip of a definition. It depends on the headword and IPA too,
+ * because the headword is pinned wherever the text uses it, as in a sentence.
+ */
+export function definitionClipKey(text: string, word: KeyWord, voice: string): string {
+  return clipKey({ kind: 'definition', text, headword: word.headword, ipa: word.ipa, voice });
+}
+
+/**
+ * The definition a sense's clip reads: the plain one when the sense has it,
+ * else the dictionary one. The app shows the same one.
+ */
+export function spokenDefinition(plain: string | null, definition: string): string {
+  return plain ?? definition;
+}
+
+/** Text a clip says other than the headword alone. */
+export interface SpokenText {
+  kind: 'sentence' | 'definition';
+  text: string;
+}
+
+/**
  * True when a saved clip was made from the content it is filed under now.
- * `sentence` is the example's text, or null for the headword clip. A clip goes
- * out of date when its sentence is rewritten in place or its word's IPA is
- * fixed, until stage 04 runs again. The clip's own voice is used, so changing
- * KOKORO_VOICE alone does not make a clip count as out of date here.
+ * `spoken` is the sentence or definition the clip reads, or null for the
+ * headword clip. A clip goes out of date when its text is rewritten in place
+ * or its word's IPA is fixed, until stage 04 runs again. The clip's own voice
+ * is used, so changing KOKORO_VOICE alone does not make a clip count as out of
+ * date here.
  */
 export function clipMatches(
   clip: { key?: string; source?: string; voice?: string },
   word: KeyWord,
-  sentence: string | null,
+  spoken: SpokenText | null,
 ): boolean {
-  if (clip.source === 'human') return sentence === null && clip.key === humanClipKey(word);
+  if (clip.source === 'human') return spoken === null && clip.key === humanClipKey(word);
   if (clip.source !== 'tts' || !clip.voice) return false;
   const expected =
-    sentence === null ? wordClipKey(word, clip.voice) : sentenceClipKey(sentence, word, clip.voice);
+    spoken === null
+      ? wordClipKey(word, clip.voice)
+      : spoken.kind === 'sentence'
+        ? sentenceClipKey(spoken.text, word, clip.voice)
+        : definitionClipKey(spoken.text, word, clip.voice);
   return clip.key === expected;
 }
 

@@ -4,11 +4,13 @@ import {
   clipKey,
   clipMatches,
   clipUrl,
+  definitionClipKey,
   humanClipKey,
   ipaToKokoro,
   kokoroText,
   pickUsRecording,
   sentenceClipKey,
+  spokenDefinition,
   ttsVoiceLabel,
   wordClipKey,
 } from './audio.ts';
@@ -65,6 +67,16 @@ test('clip keys change with the inputs each kind of clip depends on', () => {
   const text = 'The storm abated.';
   assert.notEqual(sentenceClipKey(text, word, voice), sentenceClipKey('The storm passed.', word, voice));
   assert.notEqual(sentenceClipKey(text, word, voice), sentenceClipKey(text, fixed, voice));
+  const definition = 'To calm down after being at its worst.';
+  assert.notEqual(definitionClipKey(definition, word, voice), definitionClipKey('To calm down.', word, voice));
+  assert.notEqual(definitionClipKey(definition, word, voice), definitionClipKey(definition, fixed, voice));
+  // The same text as a sentence and as a definition are different clips.
+  assert.notEqual(definitionClipKey(text, word, voice), sentenceClipKey(text, word, voice));
+});
+
+test('spokenDefinition reads the plain definition when there is one', () => {
+  assert.equal(spokenDefinition('To calm down.', 'Ease off from a fierce level.'), 'To calm down.');
+  assert.equal(spokenDefinition(null, 'Ease off from a fierce level.'), 'Ease off from a fierce level.');
 });
 
 test('clipMatches accepts only clips made from the current text and IPA', () => {
@@ -76,8 +88,14 @@ test('clipMatches accepts only clips made from the current text and IPA', () => 
   assert.equal(clipMatches(wordClip, fixed, null), false);
   const text = 'The storm abated.';
   const sentenceClip = { source: 'tts', voice, key: sentenceClipKey(text, word, voice) };
-  assert.equal(clipMatches(sentenceClip, word, text), true);
-  assert.equal(clipMatches(sentenceClip, word, 'The storm passed.'), false);
+  assert.equal(clipMatches(sentenceClip, word, { kind: 'sentence', text }), true);
+  assert.equal(clipMatches(sentenceClip, word, { kind: 'sentence', text: 'The storm passed.' }), false);
+  assert.equal(clipMatches(sentenceClip, word, { kind: 'definition', text }), false);
+  const definition = 'To calm down after being at its worst.';
+  const definitionClip = { source: 'tts', voice, key: definitionClipKey(definition, word, voice) };
+  assert.equal(clipMatches(definitionClip, word, { kind: 'definition', text: definition }), true);
+  assert.equal(clipMatches(definitionClip, word, { kind: 'definition', text: 'To calm down.' }), false);
+  assert.equal(clipMatches(definitionClip, fixed, { kind: 'definition', text: definition }), false);
   const human = { source: 'human', key: humanClipKey(word) };
   assert.equal(clipMatches(human, fixed, null), true);
   assert.equal(clipMatches({ source: 'tts', key: wordClip.key }, word, null), false);

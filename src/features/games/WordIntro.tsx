@@ -1,6 +1,7 @@
 // Compact introduction shown once before a new word is first quizzed
 // (Phase 3.2). Brief per the copy rules: word, part of speech, IPA, plain
-// definition, one example, audio, optional mnemonic.
+// definition, one example, audio for the word and the definition, optional
+// mnemonic.
 
 import { useEffect, useState } from 'react';
 import { View } from 'react-native';
@@ -11,15 +12,17 @@ import {
   Label,
   Note,
   Pronunciation,
+  Row,
   Section,
   Spinner,
 } from '@/components/ui';
-import { speakWord, stopAudio } from '@/lib/audio';
+import { speakDefinition, speakWord, stopAudio } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
 import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import { aiFeaturesAvailable } from '@/lib/env';
+import { AudioButton } from './Reveal';
 import { useGameContext } from './GameContext';
 
 export function WordIntro({
@@ -85,14 +88,22 @@ export function WordIntro({
         {sense?.examples[0] ? (
           <Note className="mt-3 text-[17px] leading-[25px]">{`“${sense.examples[0].text}”`}</Note>
         ) : null}
-        {saved ? (
-          <SaveWordButton
-            headword={content.headword}
-            saved={saved.savedIds.has(content.wordId)}
-            onPress={() => saved.toggle(content)}
-            className="mt-2"
-          />
-        ) : null}
+        <Row className="mt-2 flex-wrap gap-x-6">
+          {sense ? (
+            <AudioButton
+              onPress={() => speakDefinition(sense)}
+              label="Definition"
+              accessibilityLabel="Definition: hear it read out"
+            />
+          ) : null}
+          {saved ? (
+            <SaveWordButton
+              headword={content.headword}
+              saved={saved.savedIds.has(content.wordId)}
+              onPress={() => saved.toggle(content)}
+            />
+          ) : null}
+        </Row>
       </View>
 
       {content.mnemonics[0] ? (

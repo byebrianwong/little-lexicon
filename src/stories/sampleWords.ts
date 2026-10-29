@@ -30,6 +30,7 @@ function buildSense(word: SeedWord, wordId: number, senseIndex: number): SenseCo
     plainLanguageDefinition: seed.plain,
     senseOrder: senseIndex + 1,
     register: seed.register ?? null,
+    audioUrl: null,
     examples,
     distractors,
   };

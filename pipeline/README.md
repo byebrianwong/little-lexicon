@@ -41,8 +41,8 @@ with `--only=<stage>`.
 | `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
 | `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
 | `generate` | `src/stages/03-generate.ts` | Per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Claude Batch API when `ANTHROPIC_API_KEY` is set; otherwise Gemini when `GEMINI_API_KEY` is set (eight senses per request, saved as each returns). Zod-validated before any write. Skipped with neither key. |
-| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword and example sentence of the taught words, saved under `public/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`), which the web export copies to the site. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
-| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also give each word and sentence the `audioUrl` of its clip: its path under the site's `audio/` folder and a hash of its bytes (`audio/words/1.mp3?v=f6a11b644f7b`). A clip whose sentence or IPA changed after it was made gets no URL (the app uses the device's speech for it) until `audio` runs again. |
+| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword, example sentence and definition of the taught words, saved under `public/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`, `definitions/<sense id>.mp3`), which the web export copies to the site. A definition clip reads the definition the app shows: the plain one when the sense has it, else the dictionary one. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
+| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also give each word, sentence and sense the `audioUrl` of its clip: its path under the site's `audio/` folder and a hash of its bytes (`audio/words/1.mp3?v=f6a11b644f7b`). A clip whose sentence, definition or IPA changed after it was made gets no URL (the app uses the device's speech for it) until `audio` runs again. |
 
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
@@ -91,7 +91,7 @@ stale, then export. After other content changes (new words, or editing the
 record by hand), run `npx tsx src/run.ts --only=audio`, then `--only=export`.
 A clip whose text or IPA changed is left out of the export until it is
 remade, and the app's test `src/content/audio.test.ts` fails in CI while
-any word or sentence has no clip.
+any word, sentence or definition has no clip.
 
 The first live run downloads Open English WordNet (about 10 MB zipped, 80 MB
 unpacked) into `.cache/oewn`, checks its SHA-256, and unpacks it with the
@@ -136,7 +136,7 @@ Datamuse and WordNet need no key.
 
 ## Audio
 
-Stage 04 speaks the words and sentences with Kokoro-82M
+Stage 04 speaks the words, sentences and definitions with Kokoro-82M
 (https://huggingface.co/hexgrad/Kokoro-82M), an open text-to-speech model under
 the Apache 2.0 license, so its clips can ship in the app. It runs on this
 computer's CPU through `tools/kokoro-tts.py`. There is no account, key or
@@ -183,8 +183,8 @@ Re-running is safe and cheap. Each stage checks the record and only fills gaps:
   already has a mnemonic gets no new one.
 - `audio`: each clip records a key made from its text, the word's IPA and the
   voice. A clip is made again only when that key changes (a rewritten
-  sentence, a fixed IPA, a new voice). Clips whose word or sentence is gone or
-  retired are deleted, except on a `--limit` run.
+  sentence or definition, a fixed IPA, a new voice). Clips whose word,
+  sentence or sense is gone or retired are deleted, except on a `--limit` run.
 
 Datamuse responses are cached under `.cache/` by URL. Only successful and
 "not found" answers are cached, so a server error is retried on the next run.

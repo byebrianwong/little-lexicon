@@ -36,7 +36,7 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
-import { speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
 import type { WordContent } from '@/lib/types';
 import type { FeedStatus } from './feedState';
 
@@ -240,19 +240,30 @@ function WordPage({
         <View className="mt-6 border-t border-ink pt-4">
           <Body className="text-[20px] leading-[29px]">{definition}</Body>
           {example ? (
-            <>
-              <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
+            <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
+          ) : null}
+          <Row className="mt-2 flex-wrap gap-x-6">
+            {sense ? (
+              <TextButton
+                icon="speaker"
+                label="Definition"
+                accessibilityLabel="Definition: hear it read out"
+                onPress={() => {
+                  if (soundEnabled) void speakDefinition(sense);
+                }}
+              />
+            ) : null}
+            {example ? (
               <TextButton
                 icon="speaker"
                 label="Sentence"
                 accessibilityLabel="Hear the example sentence"
-                className="mt-2"
                 onPress={() => {
                   if (soundEnabled) void speakSentence(example);
                 }}
               />
-            </>
-          ) : null}
+            ) : null}
+          </Row>
         </View>
       </View>
 
