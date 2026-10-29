@@ -4128,3 +4128,102 @@ and the counts did not match that filter.
   "Saved words in every mode" (one row per word) would serve all three.
 - Chromatic will show the changed Home, Progress and Words stories as visual
   changes to accept.
+
+## Upcoming reviews agree with Due (2026-10-29)
+
+The Progress screen's "Upcoming reviews" chart (next 14 days) could show fewer
+words for today than the Due count above it. With a demo history of one word
+due yesterday and one due a minute ago, Due read 2 and today's bar read 1.
+
+### Cause
+
+- **Overdue words were in no bar.** Both backends counted only words whose due
+  date fell on the bar's day (`getForecast` in the demo backend, and
+  `due_forecast` from 0004). Due counts every word with `due <= now`.
+- **`due_forecast` counted words marked known.** Due, the session's due queue
+  and the demo backend leave them out.
+- **`due_forecast` used the database's days** (`current_date`, `due::date`),
+  which are UTC on Supabase. The rest of the app uses the device's local days
+  (`src/lib/date.ts`). For a learner in Los Angeles, a word due at 9 pm local
+  time was counted on the next day's bar.
+
+### What changed
+
+- `src/features/stats/forecast.ts`: `forecastWindow` lists the next N local
+  days with the local midnight that ends each one. `bucketDueDates` counts due
+  dates into those days, and anything due before today ends counts in today's
+  bar. Unit tested.
+- Demo backend: `getForecast` uses `bucketDueDates`.
+- Migration `0015_due_forecast_local_days.sql` adds
+  `due_forecast_local(p_day_ends timestamptz[])`. The device sends the local
+  day ends from `forecastWindow`. The function returns one count per day
+  index, with overdue words in day 0 and known and suspended words left out.
+  The Supabase backend calls it and labels the rows with the device's own day
+  strings.
+- 0015 also replaces `due_forecast(int)` with the overdue and known-word
+  fixes, for app versions published before this change. It still uses UTC
+  days.
+- `database.types.ts`: `due_forecast_local` added by hand, in the generator's
+  format.
+- Story fixture: the forecast now starts today, and today's bar (27) is above
+  the fixture's Due count (23). Chromatic will show a diff on the Stats
+  stories.
+
+### Decisions
+
+- **Overdue words go in today's bar**, not in a separate "Overdue" bar. Every
+  row of the chart stays a date, and today's bar is what is left to review
+  today: Due plus anything due later today.
+- **The device sends its day boundaries**, not a UTC offset or a time zone
+  name. An offset is wrong once a daylight saving change falls inside the 14
+  days. A time zone name depends on the device's `Intl` support and on Postgres
+  knowing the same name. The boundaries come from the same `addDays` and
+  `startOfDay` the rest of the app uses, so both backends bucket the same way.
+- **A new function name, not an overload of `due_forecast`.** PostgREST can
+  pick an overload by argument name, but the generated types would then
+  describe `due_forecast` as a union of two signatures.
+- **`due_forecast(int)` is kept.** Merging to main publishes an EAS Update, and
+  an installed build calls the old function until it downloads the update.
+  Drop it in a later migration.
+
+### Order of deployment
+
+0015 had to be applied before merging: the new bundle calls
+`due_forecast_local`, and without 0015 that call fails. The "Upcoming reviews"
+section is then empty with no message, because `StatsView` draws nothing when
+the forecast query fails. That missing error state predates this change.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (39 suites, 349 tests)
+  pass. The forecast and backend suites also pass with `TZ` set to
+  America/Los_Angeles, Asia/Kolkata, Pacific/Kiritimati and America/Sao_Paulo.
+- The new demo backend test fails on the old code (today's bar 1, expected 2).
+- PGlite (Postgres 17.5), migrations 0001 to 0015, as the `authenticated` role:
+  9 of 9 checks. `due_forecast_local` puts overdue words and a word due at
+  21:00 Los Angeles time (05:00 UTC the next day) in today's row, and a word
+  due at local midnight in the next row. It leaves out known words, suspended
+  words, other users' words and words due after the last day, and returns no
+  rows for an empty or null array. `due_forecast(int)` counts overdue words in
+  today and leaves out known words. Both run for `authenticated` and not for
+  `anon`.
+- Web, demo mode, headless Chromium, with a seeded history (one word due
+  yesterday, one due a minute ago, one due tomorrow, two known): before the
+  change, Due 2 and today's bar 1. After, Due 2, today's bar 2, tomorrow's 1,
+  and no bar counts the known words. The two "Cannot manually set color
+  scheme" page errors appear on both versions.
+
+### Applied (2026-10-29)
+
+0015 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same route as 0014, so it is not in the
+CLI's migration history). Checked afterwards: `due_forecast_local` is stable
+and security invoker, executable by `authenticated` and not by `anon`;
+`due_forecast(int)` has the overdue and known-word fixes and kept its grants.
+`due_forecast_local` called as `authenticated` returns one row per day. The
+types generated from the project match the committed `database.types.ts`
+byte for byte.
+
+### Not run
+
+- The iOS simulator and the Android emulator.
