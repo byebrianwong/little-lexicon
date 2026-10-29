@@ -3836,3 +3836,37 @@ The Android fingerprint changes from c3f4278 to 2dc6d90, because listing
 new. After this merges, the `EAS Update` workflow publishes nothing for
 Android until a new preview build exists:
 `eas build --profile preview --platform android`, then install it.
+
+## Android no longer says each word twice (2026-10-28)
+
+On Android, "Hear it" played the word's clip and then, a few seconds later,
+the phone's own speech voice said the word again. Brian heard it on
+vindicate's "What does this word mean?" question.
+
+### Cause
+
+`play()` in `src/lib/audio.ts` waits 4 seconds and falls back to device
+speech when `player.isLoaded` is false (#50). On Android, expo-audio's
+`isLoaded` is true only while the player is in its ready state. A word clip
+lasts about a second, so by the check it has ended, the player is in its
+ended state, and `isLoaded` reads false. iOS and web keep `isLoaded` true
+after the clip ends.
+
+### What changed
+
+- `clipLoaded()` treats a clip as loaded when `isLoaded` is true or its
+  `duration` is above 0. Every platform reports no duration until the clip
+  loads (0 on Android and iOS, NaN on web), and keeps it after the clip ends.
+- `src/lib/audio.test.ts` covers both cases: an ended clip on Android is not
+  spoken again, and a clip that never loads is still spoken after 4 seconds.
+  The first test fails with the old check.
+
+### Verified
+
+- Web demo, "What does this word mean?" on empirical: "Hear it" and the
+  answer screen each played `words/95.mp3` once (1.59 s), with no speech and
+  no fallback warning in the 6 seconds after.
+- App: `tsc`, lint, 339 jest tests.
+- Not run: Android. This Mac has no emulator. The change is JavaScript only,
+  so it reaches the phone by EAS Update if the phone has the 2026-10-26
+  preview build (b5516881, runtime 2dc6d90).
