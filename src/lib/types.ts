@@ -74,6 +74,12 @@ export interface SessionItem {
   content: WordContent;
   state: UserWordState | null;
   isNew: boolean;
+  /**
+   * How many times the learner has met the word before, which picks the
+   * example sentence to show (lib/examples). Left out, it is the review count
+   * in `state`. Practice sets it, because its items carry no SRS state.
+   */
+  visit?: number;
 }
 
 // A word the user saved, from any screen that shows a word. It stays saved

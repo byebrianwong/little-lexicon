@@ -5,8 +5,9 @@
 // matches is in wordFilters.ts.
 //
 // Each row is set like a dictionary entry: the word, its pronunciation and
-// part of speech, then the definition. Opening a row adds the example, the
-// memory hook, audio and the Save control.
+// part of speech, then the definition. Opening a row adds an example (with a
+// control to step through the others), the memory hook, audio and the Save
+// control.
 
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, View } from 'react-native';
@@ -27,6 +28,7 @@ import {
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
 import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
+import { pickExample } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
 import { ReportProblem } from '@/features/report/ReportProblem';
 import { SaveWordButton } from '@/features/feed/SaveWordButton';
@@ -217,7 +219,11 @@ function WordRow({
   onToggleSave: () => void;
 }) {
   const sense = word.senses[0];
-  const example = sense?.examples[0];
+  const examples = sense?.examples ?? [];
+  // Which example is shown: the first, until the learner steps to the next.
+  const [exampleStep, setExampleStep] = useState(0);
+  const example = pickExample(examples, exampleStep);
+  const nextStep = examples.length > 0 ? (exampleStep + 1) % examples.length : 0;
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
 
   // The toggle and the audio controls are siblings, never nested. React Native
@@ -257,7 +263,21 @@ function WordRow({
       {expanded ? (
         <View className="gap-3 pb-5">
           {example ? (
-            <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
+            <View>
+              {/* Read out when it changes, so "Next example" is heard to work. */}
+              <Note
+                accessibilityLiveRegion="polite"
+                className="text-[17px] leading-[25px]"
+              >{`“${example.text}”`}</Note>
+              {examples.length > 1 ? (
+                <TextButton
+                  icon="arrow-right"
+                  label="Next example"
+                  accessibilityLabel={`Next example, ${nextStep + 1} of ${examples.length}`}
+                  onPress={() => setExampleStep(nextStep)}
+                />
+              ) : null}
+            </View>
           ) : null}
 
           {word.mnemonics[0] ? (

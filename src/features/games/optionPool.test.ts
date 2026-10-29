@@ -217,6 +217,25 @@ describe('buildClozeChoice', () => {
       buildClozeChoice(abate, pool, mulberry32(3)),
     );
   });
+
+  it('avoids the sentence the visit shows elsewhere, unless it is the only one', () => {
+    const three = clozeWord(50, 'abate', 'verb', '/əˈbeɪt/', [
+      'It began to abate.',
+      'The noise would abate soon.',
+      'Rain may abate.',
+    ]);
+    const pool = buildOptionPool(asItems([three, ...otherVerbs]));
+    const shown = three.senses[0]!.examples[1]!;
+    const pick = (seed: number, avoid: typeof shown | null) =>
+      buildClozeChoice(three, pool, mulberry32(seed), avoid)!.example;
+    const seeds = Array.from({ length: 20 }, (_, seed) => seed);
+    // Left to the shuffle, some seeds would pick it.
+    expect(seeds.some((seed) => pick(seed, null) === shown)).toBe(true);
+    for (const seed of seeds) expect(pick(seed, shown)).not.toBe(shown);
+
+    const only = abate.senses[0]!.examples[0]!;
+    expect(buildClozeChoice(abate, pool, mulberry32(1), only)!.example).toBe(only);
+  });
 });
 
 describe('buildOptionPool with a collection', () => {

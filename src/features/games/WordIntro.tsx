@@ -17,6 +17,7 @@ import {
   Spinner,
 } from '@/components/ui';
 import { speakDefinition, speakWord, stopAudio } from '@/lib/audio';
+import { exampleForVisit } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
 import { backend } from '@/lib/backend';
 import { ReportProblem } from '@/features/report/ReportProblem';
@@ -27,12 +28,20 @@ import { useGameContext } from './GameContext';
 
 export function WordIntro({
   content,
+  visit = 0,
   onStart,
 }: {
   content: WordContent;
+  /**
+   * Earlier meetings with the word (lib/examples), which pick the sentence.
+   * A new word has none, so the card shows the sentence the reveal after the
+   * first question shows.
+   */
+  visit?: number;
   onStart: () => void;
 }) {
   const sense = content.senses[0];
+  const example = exampleForVisit(content, visit);
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
   const { profile, saved } = useGameContext();
   const [personalized, setPersonalized] = useState<string | null>(null);
@@ -85,8 +94,8 @@ export function WordIntro({
 
       <View className="mt-6 border-t border-ink pt-4">
         <Body className="text-[20px] leading-[29px]">{definition}</Body>
-        {sense?.examples[0] ? (
-          <Note className="mt-3 text-[17px] leading-[25px]">{`“${sense.examples[0].text}”`}</Note>
+        {example ? (
+          <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
         ) : null}
         <Row className="mt-2 flex-wrap gap-x-6">
           {sense ? (

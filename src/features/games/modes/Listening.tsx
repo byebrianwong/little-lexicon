@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Label, Note } from '@/components/ui';
 import { speakWord, stopAudio } from '@/lib/audio';
+import { exampleFor } from '@/lib/examples';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import {
@@ -86,7 +87,7 @@ export function Listening({ item, onOutcome, soundEnabled }: GameModeProps) {
         <Reveal
           correct={answered.correct}
           content={content}
-          example={content.senses[0]?.examples[0] ?? null}
+          example={exampleFor(item)}
           soundEnabled={soundEnabled}
           nextDueLabel={nextDueLabel}
           onContinue={() => {

@@ -6,6 +6,7 @@ import {
   MISTAKE_WEIGHT,
   parseKnownWordFrequency,
   practiceMode,
+  practiceVisit,
   practiceWeight,
   REPEAT_GAP,
   type PracticeChunkInput,
@@ -251,5 +252,25 @@ describe('buildPracticeChunk', () => {
     const knownShare = share({ savedIds, trackers }, (id) => knownIds.has(id));
     const learningShare = share({ savedIds, trackers }, (id) => learningIds.has(id));
     expect(knownShare).toBeLessThan(learningShare / 3);
+  });
+});
+
+describe('practiceVisit', () => {
+  const at = '2026-10-01T00:00:00.000Z';
+  const history = [
+    { wordId: 1, correct: true, at },
+    { wordId: 2, correct: false, at },
+    { wordId: 1, correct: false, at },
+  ];
+
+  it('is 0 for a word never answered', () => {
+    expect(practiceVisit(3, history)).toBe(0);
+    expect(practiceVisit(3)).toBe(0);
+  });
+
+  it('counts every earlier answer to the word, across the lists', () => {
+    expect(practiceVisit(1, history)).toBe(2);
+    expect(practiceVisit(1, history, [{ wordId: 1 }])).toBe(3);
+    expect(practiceVisit(2, history, [])).toBe(1);
   });
 });

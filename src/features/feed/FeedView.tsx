@@ -37,6 +37,7 @@ import {
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
 import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
+import { exampleForVisit } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
 import type { FeedStatus } from './feedState';
 
@@ -216,7 +217,9 @@ function WordPage({
   onUnknow: (word: WordContent) => void;
 }) {
   const sense = word.senses[0];
-  const example = sense?.examples[0];
+  // The feed only has words the learner has not met, so this is the first
+  // visit (lib/examples): the sentence a session first shows for the word too.
+  const example = exampleForVisit(word, 0);
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
 
   return (
