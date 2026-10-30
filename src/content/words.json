@@ -57538,10 +57538,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 670766,
-      "etymology": null,
+      "etymology": "From Middle English biholden, once the past participle of behold, whose Old English source could mean to hold or keep as well as to look at. Only the participle took on the sense of bound by a favor.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "feel beholden",
+        "remain beholden",
+        "beholden to no one"
+      ],
       "audioUrl": "audio/words/522.mp3?v=47fb493d0cec",
       "hookAudioUrl": "audio/hooks/522.mp3?v=c774eca61bb8",
       "senses": [
@@ -57638,12 +57642,16 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 494935,
-      "etymology": null,
+      "etymology": "From Old French broche, a spit or pin, from Latin broccus, jutting (of teeth), perhaps from Gaulish. To broach a cask was to pierce it to draw the drink, and opening up a subject grew from that.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "broach the subject",
+        "broach the topic",
+        "broach the issue"
+      ],
       "audioUrl": "audio/words/523.mp3?v=63b223abb265",
-      "hookAudioUrl": "audio/hooks/523.mp3?v=e9a18cac1aa4",
+      "hookAudioUrl": "audio/hooks/523.mp3?v=412eb62630f4",
       "senses": [
         {
           "senseId": 1039,
@@ -57710,11 +57718,11 @@
         {
           "senseId": 1238,
           "definition": "Tap a keg or barrel so that its beer or wine can be poured.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To knock a tap into a keg or barrel so the beer or wine can flow out.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1238.mp3?v=2de1d61e8a86",
+          "audioUrl": "audio/definitions/1238.mp3?v=da899841cffa",
           "examples": [],
           "distractors": []
         }
@@ -57742,7 +57750,7 @@
         }
       ],
       "mnemonics": [
-        "Broach comes from Old French broche, a pointed spike used to tap a barrel: broaching a touchy subject taps it open."
+        "Broach comes from Old French broche, a pointed spike: to broach a barrel is to pierce it and tap it, and broaching a touchy subject taps it open."
       ]
     },
     {
@@ -57753,10 +57761,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 302009,
-      "etymology": null,
+      "etymology": "From Middle Dutch bolwerc, made of bole, a tree trunk, and werc, work, so a rampart of timber. French boulevard comes from the same Dutch word.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bulwark against",
+        "last bulwark",
+        "bulwark of liberty"
+      ],
       "audioUrl": "audio/words/524.mp3?v=678de33e9984",
       "hookAudioUrl": "audio/hooks/524.mp3?v=3d7cd452a8ca",
       "senses": [
@@ -57820,22 +57832,22 @@
         {
           "senseId": 1239,
           "definition": "A heaped-up earthwork that troops shelter behind when a fort is under siege.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A rampart of earth or stone that defenders shelter behind.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1239.mp3?v=9e2fd520dc1b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1239.mp3?v=7e16bbcac327",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1240,
           "definition": "On a ship, a solid rail rising from the deck edge, built as part of the hull.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "On a ship, the solid side that rises above the deck like a low fence.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1240.mp3?v=ae4da3cbd6a4",
+          "audioUrl": "audio/definitions/1240.mp3?v=b1f40e9dc084",
           "examples": [],
           "distractors": []
         }
@@ -57874,10 +57886,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2206161,
-      "etymology": null,
+      "etymology": "From Old French burnir, a form of brunir, to polish or make brown, from a Germanic word for brown; it is unrelated to burn. To burnish a reputation is to polish it as one polishes metal.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "burnish his image",
+        "burnish his reputation",
+        "burnish his credentials"
+      ],
       "audioUrl": "audio/words/525.mp3?v=689016992265",
       "hookAudioUrl": "audio/hooks/525.mp3?v=d962b1a3cd41",
       "senses": [
@@ -57946,11 +57962,11 @@
         {
           "senseId": 1241,
           "definition": "Bring up a bright sheen on metal or a similar surface by steady rubbing.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To make metal gleam by rubbing it hard and long.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1241.mp3?v=6313c6395a75",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1241.mp3?v=7e05a583a5b7",
           "examples": [],
           "distractors": []
         }
@@ -57993,10 +58009,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 612448,
-      "etymology": null,
+      "etymology": "A Scots and northern English word made from can in its old sense, to know how, plus -y. Cunning grew from the same old verb.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Canny and uncanny are not a matched pair: uncanny means eerie, while canny means shrewd and hard to fool.",
+      "pairings": [
+        "canny operator",
+        "canny businessman",
+        "canny politician"
+      ],
       "audioUrl": "audio/words/526.mp3?v=672fbe43e93d",
       "hookAudioUrl": "audio/hooks/526.mp3?v=aba9f70bfda5",
       "senses": [
@@ -58205,10 +58225,16 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 491517,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Latin cedere, to give way or yield, the same verb found in concede, recede and precede.",
+      "roots": [
+        "cedere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cede control",
+        "cede territory",
+        "cede sovereignty"
+      ],
       "audioUrl": "audio/words/528.mp3?v=98908cf5c701",
       "hookAudioUrl": "audio/hooks/528.mp3?v=e41f25d976b8",
       "senses": [
@@ -58217,7 +58243,7 @@
           "definition": "Give up territory or authority and let another side take it, usually under pressure.",
           "plainLanguageDefinition": "To hand land or power over to another side, often because you must.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1047.mp3?v=744f5f5ba2a2",
           "examples": [
@@ -58326,10 +58352,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 850224,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in English from code and -ify. Code goes back through Old French, where it meant a body of law, to Latin codex, a tree trunk and later a book made of wooden tablets.",
+      "roots": [
+        "codex"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "codified law",
+        "codify the law",
+        "codify the rules"
+      ],
       "audioUrl": "audio/words/529.mp3?v=6fae3a8d8afb",
       "hookAudioUrl": "audio/hooks/529.mp3?v=30965c6c1f58",
       "senses": [
@@ -58417,10 +58449,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 304712,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in the 1800s from cognizance, which came through Old French from Latin cognoscere, to get to know, the verb also inside recognize.",
+      "roots": [
+        "cognoscere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fully cognizant",
+        "cognizant of the fact",
+        "remain cognizant"
+      ],
       "audioUrl": "audio/words/530.mp3?v=2cb1ea8468bc",
       "hookAudioUrl": "audio/hooks/530.mp3?v=1966965bac62",
       "senses": [
@@ -58429,7 +58467,7 @@
           "definition": "Informed about something and taking it into account.",
           "plainLanguageDefinition": "Knowing about something and keeping it in mind.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1050.mp3?v=14c67d3b8ee2",
           "examples": [
@@ -58533,10 +58571,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 95114,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin corona, crown, gave corolla, a little garland, and corollarium, a sum paid for one, then any tip or bonus. Later Latin philosophers used corollarium for a deduction, the source of today's sense.",
+      "roots": [
+        "corona"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "natural corollary",
+        "logical corollary",
+        "inevitable corollary"
+      ],
       "audioUrl": "audio/words/531.mp3?v=8cdb3e1fdfdc",
       "hookAudioUrl": "audio/hooks/531.mp3?v=2caa094cfa36",
       "senses": [
@@ -58545,7 +58589,7 @@
           "definition": "A further fact or effect that comes with something else as a matter of course.",
           "plainLanguageDefinition": "Something that is bound to happen because of something else.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1051.mp3?v=d53190e1d4a4",
           "examples": [
@@ -58605,11 +58649,11 @@
         {
           "senseId": 1214,
           "definition": "A minor theorem deduced straight from a larger one that has just been proved.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In mathematics, a smaller result you get almost free once a bigger theorem is proved.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1214.mp3?v=30059c9bbec2",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1214.mp3?v=278190f87d12",
           "examples": [],
           "distractors": []
         }
@@ -58648,10 +58692,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 193715,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Middle English corporealle, built from Latin corporeus, bodily, and -al. Corporeus comes from corpus, body, which also gave English corpse and corporal.",
+      "roots": [
+        "corpus"
+      ],
+      "watchOut": "Physical punishment such as caning is corporal punishment, not corporeal; corporeal means having a physical body rather than being spirit.",
+      "pairings": [
+        "corporeal form",
+        "corporeal world",
+        "corporeal existence"
+      ],
       "audioUrl": "audio/words/532.mp3?v=d8d27bd83fc5",
       "hookAudioUrl": "audio/hooks/532.mp3?v=eb7ef63b659d",
       "senses": [
@@ -58660,7 +58710,7 @@
           "definition": "Made of flesh or other matter and so taking up space in the physical world.",
           "plainLanguageDefinition": "Having a body made of flesh and bone, unlike a ghost or a dream.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1053.mp3?v=4bae7c675a51",
           "examples": [
@@ -58763,10 +58813,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1504375,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in English from de-, down, and base in its sense of low or inferior, which goes back through Old French bas to Latin bassus, low. Abase comes from the same Latin word.",
+      "roots": [
+        "bassus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "debased form",
+        "debase himself",
+        "debased version"
+      ],
       "audioUrl": "audio/words/533.mp3?v=4f249e11d0d0",
       "hookAudioUrl": "audio/hooks/533.mp3?v=5006a02acc0e",
       "senses": [
@@ -58835,22 +58891,22 @@
         {
           "senseId": 1230,
           "definition": "Cut the value of coins by mixing cheap metal into the gold or silver.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To water down a currency, for example by putting less silver in each coin.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1230.mp3?v=8ca1e989cf5e",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1230.mp3?v=ebde132f82a4",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1231,
           "definition": "Lead a person into immoral habits and a slow moral decline.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To draw someone into vice, little by little, until their morals give way.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1231.mp3?v=fdc478915149",
+          "audioUrl": "audio/definitions/1231.mp3?v=d3e9a90fb670",
           "examples": [],
           "distractors": []
         }
@@ -58901,10 +58957,14 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 287304,
-      "etymology": null,
+      "etymology": "Formed in the 1600s from deprave and -ity. Deprave came through Old French from Latin depravare, to distort or corrupt, built on pravus, crooked.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Depravity is not deprivation (going without what you need); it means deep moral corruption.",
+      "pairings": [
+        "moral depravity",
+        "human depravity",
+        "utter depravity"
+      ],
       "audioUrl": "audio/words/534.mp3?v=3664b77daef0",
       "hookAudioUrl": "audio/hooks/534.mp3?v=a7223d24f069",
       "senses": [
@@ -59025,10 +59085,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 330276,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin detritus, worn away, a form of deterere, to rub off, made of de-, away, and terere, to rub: detritus is what is left once things are worn or broken down.",
+      "roots": [
+        "terere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "detritus of war",
+        "detritus left behind"
+      ],
       "audioUrl": "audio/words/535.mp3?v=2c5c59ca2715",
       "hookAudioUrl": "audio/hooks/535.mp3?v=12efb7c288e8",
       "senses": [
@@ -59037,7 +59102,7 @@
           "definition": "A mess of scattered scraps, litter and broken pieces left lying around.",
           "plainLanguageDefinition": "Bits of rubbish and broken pieces left over after something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1060.mp3?v=e66b2027f95f",
           "examples": [
@@ -59097,11 +59162,11 @@
         {
           "senseId": 1215,
           "definition": "Fragments of rock, sand and silt that water, wind or ice have worn away.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In geology, the sand, grit and bits of stone that wear off larger rocks.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1215.mp3?v=72c68c2dc102",
+          "audioUrl": "audio/definitions/1215.mp3?v=8003f976b37d",
           "examples": [],
           "distractors": []
         }
@@ -59268,10 +59333,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1930800,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin aedificare, to build, made from aedes, a building, reached English through Old French edifier. In church Latin it meant building up a person's faith and conduct, which led to today's sense.",
+      "roots": [
+        "aedes"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "edify others",
+        "edifying example",
+        "greatly edified"
+      ],
       "audioUrl": "audio/words/537.mp3?v=8837c94ec2e0",
       "hookAudioUrl": "audio/hooks/537.mp3?v=0078e5c40bc9",
       "senses": [
@@ -59280,7 +59351,7 @@
           "definition": "Leave someone better informed and of finer character after a lesson, talk or book.",
           "plainLanguageDefinition": "To teach people something that also makes them better people.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1063.mp3?v=257ac8857d41",
           "examples": [
@@ -59494,10 +59565,15 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 516275,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Anglo-Norman entraiter, to deal with or negotiate, from en- and traiter, to treat, which goes back to Latin tractare, to handle, from trahere, to pull. Dealing with someone narrowed to pleading.",
+      "roots": [
+        "trahere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "earnestly entreat",
+        "humbly entreat"
+      ],
       "audioUrl": "audio/words/539.mp3?v=d834b5a336e5",
       "hookAudioUrl": "audio/hooks/539.mp3?v=ca042d72c271",
       "senses": [
@@ -59601,10 +59677,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 411602,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French espouser, to marry, from Latin sponsare, from spondere, to pledge or betroth. To espouse a cause is to take it up as if marrying it.",
+      "roots": [
+        "spondere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "espouse the cause",
+        "espouse the idea",
+        "openly espouse"
+      ],
       "audioUrl": "audio/words/540.mp3?v=0d1adc8f7f3b",
       "hookAudioUrl": "audio/hooks/540.mp3?v=63714df15ab1",
       "senses": [
@@ -59613,7 +59695,7 @@
           "definition": "Take up a belief or movement as one's own and speak in its favor.",
           "plainLanguageDefinition": "To adopt a view and publicly stand up for it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1068.mp3?v=96fbd406f8a9",
           "examples": [
@@ -59673,11 +59755,11 @@
         {
           "senseId": 1217,
           "definition": "Enter into marriage with someone.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To become someone's husband or wife.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1217.mp3?v=e1a9eebfc3a2",
+          "audioUrl": "audio/definitions/1217.mp3?v=703a43fdee18",
           "examples": [],
           "distractors": []
         }
@@ -59736,8 +59818,10 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 7679784,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin eviscerare, to disembowel, made of e-, out, and viscera, the organs inside the body: to eviscerate a law or plan is to tear its guts out.",
+      "roots": [
+        "viscera"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/541.mp3?v=d1fbb3c1090a",
@@ -59808,11 +59892,11 @@
         {
           "senseId": 1218,
           "definition": "Pull the guts out of a slaughtered animal or a body.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To gut an animal or a body by pulling out its insides.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1218.mp3?v=4794948d1b58",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1218.mp3?v=c3ff5e08df87",
           "examples": [],
           "distractors": []
         }
@@ -59867,10 +59951,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 143692,
-      "etymology": null,
+      "etymology": "From Ancient Greek exegesis, an explanation, either directly or through Late Latin. It comes from exegeisthai, to lead out and so to explain, built on hegeisthai, to lead, which is also behind hegemony.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "biblical exegesis",
+        "scriptural exegesis",
+        "textual exegesis"
+      ],
       "audioUrl": "audio/words/542.mp3?v=585fd1afab6b",
       "hookAudioUrl": "audio/hooks/542.mp3?v=809ee72fe352",
       "senses": [
@@ -59967,10 +60055,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 362538,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin exponere, to put out or set forth, made of ex-, out, and ponere, to place, came into English through Old French espondre. Ponere is also behind exponent and postpone.",
+      "roots": [
+        "ponere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "expound on",
+        "expound the law",
+        "expound the doctrine"
+      ],
       "audioUrl": "audio/words/543.mp3?v=d3bf27e21a24",
       "hookAudioUrl": "audio/hooks/543.mp3?v=0ea9e02e5fbf",
       "senses": [
@@ -59979,7 +60073,7 @@
           "definition": "Unfold the reasoning behind a doctrine or view, step after step, so others can follow it.",
           "plainLanguageDefinition": "To explain an idea in great detail, often in a long talk or piece of writing.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1075.mp3?v=651cd7b14ab6",
           "examples": [
@@ -60071,10 +60165,15 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 1015571,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From extenuate, from Latin extenuare, to thin out or lessen, built on tenuis, thin, the root of tenuous and attenuate: extenuating facts thin out the blame.",
+      "roots": [
+        "tenuis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "extenuating circumstances",
+        "extenuating factors"
+      ],
       "audioUrl": "audio/words/544.mp3?v=d1afc5073f72",
       "hookAudioUrl": "audio/hooks/544.mp3?v=2fd3d563841d",
       "senses": [
@@ -60083,7 +60182,7 @@
           "definition": "Offering a partial excuse for a misdeed, so that it earns less blame or a lighter penalty.",
           "plainLanguageDefinition": "Making a bad act seem less bad, because there was a fair reason behind it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1077.mp3?v=a8f4de522d90",
           "examples": [
@@ -60159,10 +60258,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 369598,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin extricare, to disentangle, made of ex-, out of, and tricae, hindrances or trifles, the same word behind intricate.",
+      "roots": [
+        "tricae"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "extricate himself",
+        "extricate itself from"
+      ],
       "audioUrl": "audio/words/545.mp3?v=1f25c47d9403",
       "hookAudioUrl": "audio/hooks/545.mp3?v=e1c312d76d7b",
       "senses": [

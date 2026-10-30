@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:12:16.795Z"
+    "updatedAt": "2026-10-30T08:16:37.349Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1049,
-    "reviews": 1459
+    "mnemonics": 1050,
+    "reviews": 1480
   },
   "words": [
     {
@@ -8953,8 +8953,15 @@
       "syllables": 3,
       "frequency_rank": 670766,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English biholden, once the past participle of behold, whose Old English source could mean to hold or keep as well as to look at. Only the participle took on the sense of bound by a favor.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "feel beholden",
+        "remain beholden",
+        "beholden to no one"
+      ]
     },
     {
       "id": 523,
@@ -8964,8 +8971,15 @@
       "syllables": 1,
       "frequency_rank": 494935,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French broche, a spit or pin, from Latin broccus, jutting (of teeth), perhaps from Gaulish. To broach a cask was to pierce it to draw the drink, and opening up a subject grew from that.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "broach the subject",
+        "broach the topic",
+        "broach the issue"
+      ]
     },
     {
       "id": 524,
@@ -8975,8 +8989,15 @@
       "syllables": 2,
       "frequency_rank": 302009,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle Dutch bolwerc, made of bole, a tree trunk, and werc, work, so a rampart of timber. French boulevard comes from the same Dutch word.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "bulwark against",
+        "last bulwark",
+        "bulwark of liberty"
+      ]
     },
     {
       "id": 525,
@@ -8986,8 +9007,15 @@
       "syllables": 2,
       "frequency_rank": 2206161,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French burnir, a form of brunir, to polish or make brown, from a Germanic word for brown; it is unrelated to burn. To burnish a reputation is to polish it as one polishes metal.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "burnish his image",
+        "burnish his reputation",
+        "burnish his credentials"
+      ]
     },
     {
       "id": 526,
@@ -8997,8 +9025,15 @@
       "syllables": 2,
       "frequency_rank": 612448,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "A Scots and northern English word made from can in its old sense, to know how, plus -y. Cunning grew from the same old verb.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Canny and uncanny are not a matched pair: uncanny means eerie, while canny means shrewd and hard to fool.",
+      "pairings": [
+        "canny operator",
+        "canny businessman",
+        "canny politician"
+      ]
     },
     {
       "id": 527,
@@ -9019,8 +9054,17 @@
       "syllables": 1,
       "frequency_rank": 491517,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin cedere, to give way or yield, the same verb found in concede, recede and precede.",
+      "audio_url": null,
+      "roots": [
+        "cedere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "cede control",
+        "cede territory",
+        "cede sovereignty"
+      ]
     },
     {
       "id": 529,
@@ -9030,8 +9074,17 @@
       "syllables": 3,
       "frequency_rank": 850224,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English from code and -ify. Code goes back through Old French, where it meant a body of law, to Latin codex, a tree trunk and later a book made of wooden tablets.",
+      "audio_url": null,
+      "roots": [
+        "codex"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "codified law",
+        "codify the law",
+        "codify the rules"
+      ]
     },
     {
       "id": 530,
@@ -9041,8 +9094,17 @@
       "syllables": 3,
       "frequency_rank": 304712,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in the 1800s from cognizance, which came through Old French from Latin cognoscere, to get to know, the verb also inside recognize.",
+      "audio_url": null,
+      "roots": [
+        "cognoscere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "fully cognizant",
+        "cognizant of the fact",
+        "remain cognizant"
+      ]
     },
     {
       "id": 531,
@@ -9052,8 +9114,17 @@
       "syllables": 4,
       "frequency_rank": 95114,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin corona, crown, gave corolla, a little garland, and corollarium, a sum paid for one, then any tip or bonus. Later Latin philosophers used corollarium for a deduction, the source of today's sense.",
+      "audio_url": null,
+      "roots": [
+        "corona"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "natural corollary",
+        "logical corollary",
+        "inevitable corollary"
+      ]
     },
     {
       "id": 532,
@@ -9063,8 +9134,17 @@
       "syllables": 4,
       "frequency_rank": 193715,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English corporealle, built from Latin corporeus, bodily, and -al. Corporeus comes from corpus, body, which also gave English corpse and corporal.",
+      "audio_url": null,
+      "roots": [
+        "corpus"
+      ],
+      "watch_out": "Physical punishment such as caning is corporal punishment, not corporeal; corporeal means having a physical body rather than being spirit.",
+      "pairings": [
+        "corporeal form",
+        "corporeal world",
+        "corporeal existence"
+      ]
     },
     {
       "id": 533,
@@ -9074,8 +9154,17 @@
       "syllables": 2,
       "frequency_rank": 1504375,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English from de-, down, and base in its sense of low or inferior, which goes back through Old French bas to Latin bassus, low. Abase comes from the same Latin word.",
+      "audio_url": null,
+      "roots": [
+        "bassus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "debased form",
+        "debase himself",
+        "debased version"
+      ]
     },
     {
       "id": 534,
@@ -9085,8 +9174,15 @@
       "syllables": 4,
       "frequency_rank": 287304,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in the 1600s from deprave and -ity. Deprave came through Old French from Latin depravare, to distort or corrupt, built on pravus, crooked.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Depravity is not deprivation (going without what you need); it means deep moral corruption.",
+      "pairings": [
+        "moral depravity",
+        "human depravity",
+        "utter depravity"
+      ]
     },
     {
       "id": 535,
@@ -9096,8 +9192,16 @@
       "syllables": 3,
       "frequency_rank": 330276,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin detritus, worn away, a form of deterere, to rub off, made of de-, away, and terere, to rub: detritus is what is left once things are worn or broken down.",
+      "audio_url": null,
+      "roots": [
+        "terere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "detritus of war",
+        "detritus left behind"
+      ]
     },
     {
       "id": 536,
@@ -9118,8 +9222,17 @@
       "syllables": 3,
       "frequency_rank": 1930800,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin aedificare, to build, made from aedes, a building, reached English through Old French edifier. In church Latin it meant building up a person's faith and conduct, which led to today's sense.",
+      "audio_url": null,
+      "roots": [
+        "aedes"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "edify others",
+        "edifying example",
+        "greatly edified"
+      ]
     },
     {
       "id": 538,
@@ -9140,8 +9253,16 @@
       "syllables": 2,
       "frequency_rank": 516275,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman entraiter, to deal with or negotiate, from en- and traiter, to treat, which goes back to Latin tractare, to handle, from trahere, to pull. Dealing with someone narrowed to pleading.",
+      "audio_url": null,
+      "roots": [
+        "trahere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "earnestly entreat",
+        "humbly entreat"
+      ]
     },
     {
       "id": 540,
@@ -9151,8 +9272,17 @@
       "syllables": 2,
       "frequency_rank": 411602,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French espouser, to marry, from Latin sponsare, from spondere, to pledge or betroth. To espouse a cause is to take it up as if marrying it.",
+      "audio_url": null,
+      "roots": [
+        "spondere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "espouse the cause",
+        "espouse the idea",
+        "openly espouse"
+      ]
     },
     {
       "id": 541,
@@ -9162,8 +9292,13 @@
       "syllables": 4,
       "frequency_rank": 7679784,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin eviscerare, to disembowel, made of e-, out, and viscera, the organs inside the body: to eviscerate a law or plan is to tear its guts out.",
+      "audio_url": null,
+      "roots": [
+        "viscera"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 542,
@@ -9173,8 +9308,15 @@
       "syllables": 4,
       "frequency_rank": 143692,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek exegesis, an explanation, either directly or through Late Latin. It comes from exegeisthai, to lead out and so to explain, built on hegeisthai, to lead, which is also behind hegemony.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "biblical exegesis",
+        "scriptural exegesis",
+        "textual exegesis"
+      ]
     },
     {
       "id": 543,
@@ -9184,8 +9326,17 @@
       "syllables": 2,
       "frequency_rank": 362538,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin exponere, to put out or set forth, made of ex-, out, and ponere, to place, came into English through Old French espondre. Ponere is also behind exponent and postpone.",
+      "audio_url": null,
+      "roots": [
+        "ponere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "expound on",
+        "expound the law",
+        "expound the doctrine"
+      ]
     },
     {
       "id": 544,
@@ -9195,8 +9346,16 @@
       "syllables": 5,
       "frequency_rank": 1015571,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From extenuate, from Latin extenuare, to thin out or lessen, built on tenuis, thin, the root of tenuous and attenuate: extenuating facts thin out the blame.",
+      "audio_url": null,
+      "roots": [
+        "tenuis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "extenuating circumstances",
+        "extenuating factors"
+      ]
     },
     {
       "id": 545,
@@ -9206,8 +9365,16 @@
       "syllables": 3,
       "frequency_rank": 369598,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin extricare, to disentangle, made of ex-, out of, and tricae, hindrances or trifles, the same word behind intricate.",
+      "audio_url": null,
+      "roots": [
+        "tricae"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "extricate himself",
+        "extricate itself from"
+      ]
     },
     {
       "id": 546,
@@ -15331,7 +15498,7 @@
       "definition": "Give up territory or authority and let another side take it, usually under pressure.",
       "plain_language_definition": "To hand land or power over to another side, often because you must.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1049,
@@ -15347,7 +15514,7 @@
       "definition": "Informed about something and taking it into account.",
       "plain_language_definition": "Knowing about something and keeping it in mind.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1051,
@@ -15355,7 +15522,7 @@
       "definition": "A further fact or effect that comes with something else as a matter of course.",
       "plain_language_definition": "Something that is bound to happen because of something else.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1053,
@@ -15363,7 +15530,7 @@
       "definition": "Made of flesh or other matter and so taking up space in the physical world.",
       "plain_language_definition": "Having a body made of flesh and bone, unlike a ghost or a dream.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1055,
@@ -15387,7 +15554,7 @@
       "definition": "A mess of scattered scraps, litter and broken pieces left lying around.",
       "plain_language_definition": "Bits of rubbish and broken pieces left over after something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1062,
@@ -15403,7 +15570,7 @@
       "definition": "Leave someone better informed and of finer character after a lesson, talk or book.",
       "plain_language_definition": "To teach people something that also makes them better people.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1064,
@@ -15427,7 +15594,7 @@
       "definition": "Take up a belief or movement as one's own and speak in its favor.",
       "plain_language_definition": "To adopt a view and publicly stand up for it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1071,
@@ -15451,7 +15618,7 @@
       "definition": "Unfold the reasoning behind a doctrine or view, step after step, so others can follow it.",
       "plain_language_definition": "To explain an idea in great detail, often in a long talk or piece of writing.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1077,
@@ -15459,7 +15626,7 @@
       "definition": "Offering a partial excuse for a misdeed, so that it earns less blame or a lighter penalty.",
       "plain_language_definition": "Making a bad act seem less bad, because there was a fair reason behind it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1078,
@@ -16221,17 +16388,19 @@
       "id": 1214,
       "word_id": 531,
       "definition": "A minor theorem deduced straight from a larger one that has just been proved.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In mathematics, a smaller result you get almost free once a bigger theorem is proved.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1215,
       "word_id": 535,
       "definition": "Fragments of rock, sand and silt that water, wind or ice have worn away.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In geology, the sand, grit and bits of stone that wear off larger rocks.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1216,
@@ -16245,17 +16414,19 @@
       "id": 1217,
       "word_id": 540,
       "definition": "Enter into marriage with someone.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To become someone's husband or wife.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1218,
       "word_id": 541,
       "definition": "Pull the guts out of a slaughtered animal or a body.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To gut an animal or a body by pulling out its insides.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1219,
@@ -16353,17 +16524,19 @@
       "id": 1230,
       "word_id": 533,
       "definition": "Cut the value of coins by mixing cheap metal into the gold or silver.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To water down a currency, for example by putting less silver in each coin.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1231,
       "word_id": 533,
       "definition": "Lead a person into immoral habits and a slow moral decline.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To draw someone into vice, little by little, until their morals give way.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1232,
@@ -16421,33 +16594,37 @@
       "id": 1238,
       "word_id": 523,
       "definition": "Tap a keg or barrel so that its beer or wine can be poured.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To knock a tap into a keg or barrel so the beer or wine can flow out.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1239,
       "word_id": 524,
       "definition": "A heaped-up earthwork that troops shelter behind when a fort is under siege.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A rampart of earth or stone that defenders shelter behind.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1240,
       "word_id": 524,
       "definition": "On a ship, a solid rail rising from the deck edge, built as part of the hull.",
-      "plain_language_definition": null,
+      "plain_language_definition": "On a ship, the solid side that rises above the deck like a low fence.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1241,
       "word_id": 525,
       "definition": "Bring up a bright sheen on metal or a similar surface by steady rubbing.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To make metal gleam by rubbing it hard and long.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1242,
@@ -73360,14 +73537,6 @@
       "revision": 3
     },
     {
-      "id": 965,
-      "word_id": 523,
-      "text": "Broach comes from Old French broche, a pointed spike used to tap a barrel: broaching a touchy subject taps it open.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 966,
       "word_id": 524,
       "text": "Bulwark comes from Middle Dutch bolwerc, a defense made of tree trunks (bole) and work: a log wall that holds off attack.",
@@ -74003,6 +74172,14 @@
       "id": 1049,
       "word_id": 547,
       "text": "Foist probably goes back to a Dutch word for fist: cheats at dice would hide a loaded die in the hand and foist it into play.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1050,
+      "word_id": 523,
+      "text": "Broach comes from Old French broche, a pointed spike: to broach a barrel is to pierce it and tap it, and broaching a touchy subject taps it open.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -126720,8 +126897,8 @@
     },
     {
       "path": "definitions/1238.mp3",
-      "bytes": 15987,
-      "key": "cf13827b0fbd9432",
+      "bytes": 18286,
+      "key": "2ef66ffd1b9e3b3a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126734,15 +126911,15 @@
     },
     {
       "path": "definitions/1239.mp3",
-      "bytes": 19331,
-      "key": "3b1607b92d96cac4",
+      "bytes": 17450,
+      "key": "c33eaea84788d9eb",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1240.mp3",
-      "bytes": 20584,
-      "key": "08801468505184f4",
+      "bytes": 18808,
+      "key": "bdf0ea4b8fc97ed9",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126755,8 +126932,8 @@
     },
     {
       "path": "definitions/1241.mp3",
-      "bytes": 17763,
-      "key": "37416891f3d3f06e",
+      "bytes": 12748,
+      "key": "db167127d2a88282",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126811,8 +126988,8 @@
     },
     {
       "path": "definitions/1214.mp3",
-      "bytes": 18599,
-      "key": "05e4e6d2ac217e95",
+      "bytes": 23092,
+      "key": "3d42eeb640192785",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126832,15 +127009,15 @@
     },
     {
       "path": "definitions/1230.mp3",
-      "bytes": 19435,
-      "key": "c994939fb5ff31b6",
+      "bytes": 20167,
+      "key": "ee0e44d56f6cffce",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1231.mp3",
-      "bytes": 17345,
-      "key": "28473827c5fe3d43",
+      "bytes": 18704,
+      "key": "600f7373780aec9b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126861,7 +127038,7 @@
     {
       "path": "definitions/1215.mp3",
       "bytes": 20480,
-      "key": "4089c464b135e3fb",
+      "key": "52ddb81f77e255da",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126909,8 +127086,8 @@
     },
     {
       "path": "definitions/1217.mp3",
-      "bytes": 9718,
-      "key": "c42cce8f76ef3ea7",
+      "bytes": 10658,
+      "key": "7e87b59c9c156626",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126923,8 +127100,8 @@
     },
     {
       "path": "definitions/1218.mp3",
-      "bytes": 13688,
-      "key": "ba3438bf7f20240c",
+      "bytes": 15464,
+      "key": "c35ddb1b03de1f0a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -131088,8 +131265,8 @@
     },
     {
       "path": "hooks/523.mp3",
-      "bytes": 30407,
-      "key": "663c00a769711d3d",
+      "bytes": 37407,
+      "key": "b9ac98d5ab36955e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -180698,6 +180875,670 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin 4: it follows the sequence of Wiktionary's two sentences and AHD's word history closely (variant of metal, figurative from the 1500s, spelling fixed by sense in the 1700s), and it does not say why metal came to mean spirit (the stuff a person is made of). Recast in your own order and add that step."
+    },
+    {
+      "id": 1460,
+      "word_id": 522,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary beholden (past participle of Middle English biholden, modern behold, 'though that verb does not mean to bind, obligate'), Wiktionary behold (Old English behealdan, 'to hold, possess, preserve, keep, observe, look at'), AHD and Longman (old past participle of behold). The second sentence keeps Wiktionary's point that the verb never meant oblige. No Latin or Greek stem, so no roots. Hook (behold once meant to hold or keep) matches behealdan; unchanged. Tone null: Oxford and Cambridge mark it formal, Longman's entry (feel/be beholden to somebody) has no label. No common mix-up. Pairings from the tool's lists (feel, remain; beholden to no): feel beholden 11.7, remain beholden 3.4, beholden to no one 12.0 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary: Old English behealdan could mean hold or keep, and the verb itself never meant bind. Tone null is right (Oxford and Cambridge mark it formal, Longman does not). Weakest point: 'remain beholden' (3.4 per billion) is the least common pairing; 'deeply beholden' is also in the data."
+    },
+    {
+      "id": 1461,
+      "word_id": 523,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary broach (Old French broche, from Vulgar Latin brocca, from Latin broccus, 'perhaps ultimately of Gaulish origin', hedge kept), Wiktionary Old French broche ('brooch, pin; spit'), French broche ('spike, peg'), Latin broccus ('having projecting teeth, buck-toothed') and AHD (Middle English brochen, to pierce). The cask sense comes before the figurative one in Wiktionary's verb senses. Roots empty: broccus shows only in brooch and brochure, which no learner would link. Hook changed: it said Old French broche was 'a pointed spike used to tap a barrel', but broche meant a pin or spit; tapping a barrel is the English verb's sense. Smallest fix: 'a pointed spike: to broach a barrel is to pierce it and tap it, and'. Tone null: Oxford and Longman give no label; Cambridge marks only the barrel sense formal. Pairings from the tool's lists (subject, issues): broach the subject 185, the topic 31, the issue 7.7 per billion. Other sense (tap a cask) not shown: broach a cask is 0.35 per billion, so the sense is rare now; plain written anyway, register null (only Cambridge labels it).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Old French broche, Latin broccus 'buck-toothed', the Gaulish hedge kept), and the cask-to-subject step matches its verb senses. Weakest points: the three pairings are one pattern (broach the subject/topic/issue), where 'first broached' (26 per billion) would add range; a null watch-out is defensible, though broach/brooch and 'breach the subject' are a known mix-up."
+    },
+    {
+      "id": 1462,
+      "word_id": 524,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary bulwark (Middle Dutch bolwerk, bolwerc, 'equivalent to bole (tree trunk) + work'; doublet of boulevard, from French, from Dutch) and AHD (bole, plank, + werc). 'A rampart of timber' is my gloss of trunk plus work and fits both sources (trunk or plank). No Latin or Greek stem, so no roots. Hook (bole and work, a log wall) agrees; unchanged. Tone null: Oxford and Cambridge mark the first sense formal, Longman does not. Pairings: bulwark against 219, last bulwark 7.2 (tool list: last, strongest, chief), bulwark of liberty 2.6 per billion. Also Means shows the rampart sense, which Oxford, Longman and AHD list and history writing uses; the ship's-side sense is hidden as a nautical detail few readers meet (no learner's dictionary labels it, so register null).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin 4: 'made of bole ... and werc' sets the English form bole beside the Dutch werc (the Middle Dutch element is bol), and 'so a rampart of timber' is an inference (Wiktionary glosses bole as tree trunk, AHD and Longman as plank; timber covers both). Also Means 4: 'rampart' in the plain definition is not an everyday word ('A wall of earth or stone that defenders shelter behind')."
+    },
+    {
+      "id": 1463,
+      "word_id": 525,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary burnish (Middle English burnishen, from burniss-, stem of Old French burnir, variant of brunir 'to make clean and shiny, polish; to make brown', from Frankish *brunijan, from Proto-Germanic *brunaz 'brown'; 'Unrelated to burn'). The Proto-Indo-European step is hedged ('possibly'), so it is left out. AHD agrees (brun). No roots. Hook (burnir, to polish, related to brun, brown) agrees; unchanged. Tone null for both senses: Oxford lists only 'to polish' (formal), Cambridge marks the metal sense literary and the image sense not at all, Longman marks the whole verb formal. Pairings: the tool's Datamuse lists show only the metal sense (burnished gold, copper), so I used its --check slot lists for the first sense: burnish his image 1.7, his reputation 1.7, his credentials 1.1 per billion (plus its image 1.0, their image 0.7). Pairings 4: modest counts. Also Means shows the metal sense, which is common (burnished gold, copper, brass).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (burnir, a variant of brunir; Frankish, from the Germanic word for brown; unrelated to burn). Weakest point: all three pairings use 'his' and are rare (1.1 to 1.7 per billion); 'burnish its image' or 'burnish their credentials' would vary them."
+    },
+    {
+      "id": 1464,
+      "word_id": 526,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary canny (Northern English dialect, from can 'to know' + -y, from Middle English cunnen 'to be able, know how to', Old English cunnan; compare Scots canny; 'More at can, cunning') and AHD (from can). No Latin or Greek stem. Hook (can in its old sense of know how) agrees; unchanged. Tone null: none of Oxford, Cambridge, Longman labels the shrewd sense. Watch out: Wiktionary's usage note says canny and uncanny are no longer antonyms, and its back-formed sense 'natural, normal' is marked proscribed; Vocabulary.com warns about the same pair. The note is my own wording. Pairings from the tool's noun list (operator, businessman, politician): canny operator 14.6, businessman 2.3, politician 2.0 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (northern English, from can 'know how' plus -y; see can, cunning). Weakest point: the watch-out is true, but 'not a matched pair' is vague ('Uncanny is not the opposite of canny' says it directly), and the mix-up is modest ('canny resemblance' 0.67 per billion against 'uncanny resemblance' 75)."
+    },
+    {
+      "id": 1465,
+      "word_id": 528,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cede (Middle French ceder, Old French ceder, from Latin cedo 'to yield') and AHD (French céder, Latin cedere). Root cedere, the infinitive (concede, recede, precede, succeed). Hook (cedere, root of recede and concede) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the tool's list (control, territory, sovereignty): cede control 27.5, cede territory 6.5, cede sovereignty 4.5 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. Origin and hook match Wiktionary (Latin cedo 'to yield'; go away is in the Latin verb's range), and formal is marked by Oxford, Cambridge and Longman."
+    },
+    {
+      "id": 1466,
+      "word_id": 529,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary codify (code + -ify, from the ety template) and Wiktionary code (Middle English and Old French code 'system of law', from Latin codex, later form of caudex, 'the stock or stem of a tree, a board or tablet of wood ... hence, a book'). Root codex (code, codex, codicil). Hook (contains code) agrees; unchanged. Tone null: Oxford marks it specialist, Cambridge formal, Longman nothing. Pairings from the tool's lists (laws, rules; codified law): codified law 25.4, codify the law 5.3, codify the rules 2.9 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (code + -ify; Old French code 'system of law'; Latin codex, later form of caudex, trunk, then wooden tablets and a book). Weakest point: 'codified law' and 'codify the law' are near-repeats; 'codified rules' or 'codify existing' (Datamuse) would add range."
+    },
+    {
+      "id": 1467,
+      "word_id": 530,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cognizant ('a new formation from cognizance + -ant; first attested in the 19th century') and Wiktionary cognizance (Old French conoissance, from conoistre, from Latin cognosco 'know', con- + gnosco). recognize is from recognoscere, a compound of the same verb. Root cognoscere, already used for connoisseur. Hook (shares cognoscere with recognize) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the tool's list (fully, remain) and its slot list: fully cognizant 55.2, cognizant of the fact 51.7, remain cognizant 19.3 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (from cognizance + -ant, first found in the 19th century; Old French from Latin cognoscere). Formal is marked by all three dictionaries. Weakest point: 'remain cognizant' uses a generic verb, though all three pairings are common (55, 52 and 19 per billion)."
+    },
+    {
+      "id": 1468,
+      "word_id": 531,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary corollary (Late Latin corollarium 'money paid for a garland; gift, gratuity, corollary; consequence, deduction', from corolla 'small garland', diminutive of corona 'crown') and the Latin entry corollarium (the deduction sense is marked 'in later philosophical writing'). AHD agrees. The origin runs from corona upward so it does not follow Oxford's word-origin note in order. Root corona (crown, coronation, coronary). Hook (money for a garland, so a bonus; the extra result you get free) agrees; unchanged. Tone formal: Oxford (formal or specialist), Cambridge and Longman all mark the first sense formal. Pairings from the tool's adjective list: natural corollary 24.8, logical 20.9, inevitable 10.2 per billion. Also Means shows the mathematics sense, which school geometry teaches, labeled technical (Oxford specialist, Cambridge specialized).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches the Latin page (corona, corolla, corollarium: money paid for a garland, a gratuity, and in later philosophical writing a deduction). Technical on the maths sense matches Oxford and Cambridge. Weakest point: 'almost free' in the maths plain definition is slightly casual."
+    },
+    {
+      "id": 1469,
+      "word_id": 532,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary corporeal (Middle English corporealle, equivalent to Latin corporeus + -al, from corpus 'body'; 'compare corporal') and AHD (corporeus, from corpus). corpse and corporal both go back to corpus. Root corpus. Hook (corpus, as in corpse) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Watch out: Google Books has corporeal punishment at 10.4 per billion against corporal punishment at 634; Wiktionary marks corporeal's 'bodily, corporal' sense archaic. The note says which phrase is usual without calling the other an error. Pairings from the tool's noun list (form, world, existence): corporeal form 44.3, world 28.8, existence 20.1 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle English corporealle, Latin corporeus + -al, corpus; compare corporal). The corporal/corporeal punishment watch-out is real (9.5 against 634 per billion). Weakest point: corpse is not on the corporeal page, but it is true."
+    },
+    {
+      "id": 1470,
+      "word_id": 533,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary debase ('From de- + base, from Old French bas, from Latin bassus'; 'Compare abase') and AHD (de- + base; base from bassus, low). Root bassus (base, abase, bass). Hook (de-, down, plus base in its old sense of low, as in base metal) agrees; unchanged. Tone null: only Longman marks it formal. Pairings from the tool's lists (debased form, version; debase himself): debased form 9.4, debase himself 5.5, debased version 2.9 per billion; 4 because 'debase himself' leans toward the dignity side of the sense. Also Means shows the coinage sense (debased currency, coinage and coin are all in the tool's list). The moral-corruption sense is hidden as close to the first sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (de- + base, Old French bas, Latin bassus; compare abase). Weakest points: 'debased form' and 'debased version' are near-repeats; the root bassus shows in few English words (bass, abase), which is acceptable."
+    },
+    {
+      "id": 1471,
+      "word_id": 534,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Wiktionary's depravity page has no etymology, so the first sentence rests on Dictionary.com ('First recorded in 1635-45; deprave + -ity'); the rest is from Wiktionary deprave (Middle English depraven, Old French depraver, Latin depravare 'pervert, distort, corrupt', from de- + pravus 'crooked, distorted, perverse, wicked'). Roots empty: pravus shows only in deprave's own family. Hook (shares pravus, crooked, with deprave) agrees; unchanged. Tone null: Oxford marks it formal, Cambridge does not, Longman has no entry. Watch out: Vocabulary.com warns against confusing depravity with deprivation; my wording. Scored 4 because books rarely show the slip (depraved childhood 0.08 against deprived childhood 7.2 per billion), though learners mix the pair up. Pairings from the tool's adjective list: moral depravity 43.3, human 44.2, utter 6.6 per billion (total depravity left out as a theology term). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary's depravity page has no etymology; deprave + -ity and the 1600s date match Dictionary.com (1635 to 1645), and the deprave chain matches Wiktionary. Hook 4: 'shares the root pravus with deprave' understates it (depravity is formed from deprave), though it is not false. Watch-out 4: a real look-alike pair, but misuse is rare in print ('depraved childhood' 0.08 against 'deprived childhood' 7.24 per billion)."
+    },
+    {
+      "id": 1472,
+      "word_id": 535,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary detritus (learned borrowing from Latin detritus '(that which is) rubbed away', from detero 'rub away'), the Latin entry detero (de- 'down, away' + tero 'to rub') and AHD (French détritus, from Latin detritus, from deterere, to wear away). Root terere, as on contrite. Hook (deterere, to wear away) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark the rubbish sense formal. Pairings: the tool's adjective list is mostly the science sense (organic, volcanic, glacial), so I used its 'left' and slot lists for the first sense: detritus of war 4.3, detritus left behind 1.9 per billion (4: modest counts). Other sense (rock fragments) is labeled technical (Oxford specialist, Cambridge specialized) and hidden: it is close to the first sense, and a reader who knows 'debris' follows it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin matches Wiktionary and the Latin page (detritus from detero, de- + tero 'rub'). Pairings 4: 'detritus left behind' is generic and fairly rare (1.87 per billion); 'human detritus' (5.9) shows the sense better. Also Means 4: the hidden specialist sense dominates the collocation data (organic, plant, volcanic detritus), so showing it with the technical label is arguable; hiding it is defensible."
+    },
+    {
+      "id": 1473,
+      "word_id": 537,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary edify (Old French edifier 'to build, to edify', Latin aedificare 'build'), the Latin entry aedifico (aedes 'building' + -fico; Medieval and Ecclesiastical Latin, figuratively, to 'build' a life, to live morally) and AHD (Late Latin aedificare, to instruct spiritually). Root aedes (edifice). Hook (aedificare, to build, as in edifice) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the tool's lists (others; edifying example; greatly edified): edify others 4.1, edifying example 3.3, greatly edified 2.3 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: Wiktionary's church-Latin sense is figuratively building a morally good life; 'building up a person's faith' goes slightly past it (true in standard dictionaries). Pairings 4: 'edify others' and 'greatly edified' use generic partners, while 'edifying spectacle', the top pairing in the data, is missing."
+    },
+    {
+      "id": 1474,
+      "word_id": 539,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary entreat (Late Middle English entreten, whose senses run from 'to deal with (someone)' and 'to engage in negotiation' to 'to plead with (someone)'; Anglo-Norman entraiter 'to deal with; to negotiate'; Old French en- + traiter 'to treat'; Latin tractare, of tracto 'to handle', from traho 'to drag, pull') and AHD (Anglo-Norman entreter: en- + treter, to treat). Root trahere, as on intractable. Hook ('contains treat', a begging child) makes no false origin claim; entreat is en- plus treat; unchanged. Tone null: Oxford and Longman mark it formal, Cambridge does not. Pairings from the tool's list (earnestly, humbly): earnestly entreat 7.8, humbly entreat 3.9 per billion; entreat forgiveness (0.5) was too rare. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Anglo-Norman entraiter, en- + traiter, Latin tractare, trahere; the Middle English senses run from dealing with to pleading). Tone null is right: Cambridge has no formal label. Weakest point: the hook's treat is a sound-alike picture, with no false claim."
+    },
+    {
+      "id": 1475,
+      "word_id": 540,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary espouse (Middle English espousen, Old French espouser, Latin sponsare, frequentative of spondeo), the Latin entry spondeo ('to promise, pledge oneself ... to promise in marriage, betroth') and AHD (espousen, to marry; spondere, to betroth). Root spondere (sponsor, respond, despondent). Hook (sponsus, promised in marriage, shared with spouse) agrees: sponsus is spondere's participle and sponsare is built on it; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the tool's lists (causes, openly) and its slot list: espouse the cause 10.9, the idea 3.2, openly espouse 2.8 per billion. The marry sense is hidden: Dictionary.com marks it archaic and no learner's dictionary lists it, so register null.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary and the Latin page (Old French espouser, Latin sponsare from spondeo 'pledge, betroth'). Formal is marked by all three dictionaries. Weakest point: the hook names sponsus while the origin and roots use sponsare and spondere; both are true."
+    },
+    {
+      "id": 1476,
+      "word_id": 541,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary eviscerate (Latin evisceratus, past participle of eviscerare 'to disembowel', from e- 'out' + viscera 'bowels'), Wiktionary visceral (viscera, plural of viscus 'internal organ of the body') and AHD. Root viscera, the form both sources give, which also links visceral. Hook (e- plus viscera, rip its guts out) agrees; unchanged. Tone null for the first sense: Oxford marks the entry formal, but Cambridge and Longman do not list the figurative sense. Pairings empty: the tool's lists for the first sense give only 'effectively' and 'completely', and effectively eviscerate(d) is 0.7 per billion, with every 'eviscerate the *' slot under 0.4. The gutting sense is labeled formal (all three mark it formal; Longman adds technical) and shown, since it is current and is the picture behind the first sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (e- + viscera). Empty pairings are right (figurative pairings are under 1 per billion). Formal on the literal sense matches Oxford, Cambridge and Longman; the first sense rightly has none. Weakest point: nothing of substance."
+    },
+    {
+      "id": 1477,
+      "word_id": 542,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary exegesis (learned borrowing from Late Latin exegesis 'exposition', or from Ancient Greek exegesis 'explanation, interpretation', from exegeomai 'to guide, lead; to expound, interpret', from ex- + hegeomai 'to guide, lead'; its Proto-Indo-European step is hedged and left out), Wiktionary hegemony (from hegemon, from hegeomai 'to lead') and AHD (exegeisthai, to interpret: ex- + hegeisthai, to lead). I use AHD's infinitive forms, as the hook does. Roots empty, to match hegemony, whose record names no root. Hook (exegeisthai, to lead out or explain) agrees; unchanged. Tone null: Oxford and Longman mark it formal, Cambridge marks it specialized. Pairings from the tool's adjective list: biblical exegesis 164, scriptural 32, textual 12 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: it names hegemony as sharing hegeisthai, and hegemony is in the list, but roots is empty, so the link is told and not made (hegemony's own origin does not name the verb either). Everything else matches Wiktionary, including the 'directly or through Late Latin' choice. Tone null is right (Oxford and Longman formal, Cambridge specialized)."
+    },
+    {
+      "id": 1478,
+      "word_id": 543,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary expound (Middle English expounden, Old French espondre, Latin exponere), the Latin entry expono (ex- + pono 'to place, put'; senses 'set forth' and 'explain') and AHD (ex- + ponere, to place). Root ponere (exponent, postpone, component). Hook (exponere, to put out or set forth) agrees; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: expound on 104, expound the law 3.1, expound the doctrine 1.7 per billion (doctrine and theories are in the tool's lists); 4 because 'expound on' is a bare preposition. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary and the Latin page (Old French espondre, Latin exponere, ex- + pono). Weakest point: 'expound on' is a preposition pattern rather than a partner that shows the meaning; 'expound the Scriptures' and 'expound the principles' are more common than 'expound the doctrine'."
+    },
+    {
+      "id": 1479,
+      "word_id": 544,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary extenuate (Latin extenuatus, participle of extenuo 'to diminish, reduce, thin', from ex- + tenuo, from tenuis 'fine, slender, thin'; 'Compare attenuate') and AHD (ex- + tenuare, from tenuis). Wiktionary's own extenuating page glosses ex as 'to delete, to cross out', which I did not follow. Root tenuis, as on tenuous. Hook (tenuis, thin, as in tenuous) agrees; unchanged. Tone formal: Oxford and Cambridge mark it formal, and Longman marks its entry 'extenuating circumstances/factors' formal. Pairings from the tool's noun list: extenuating circumstances 165, factors 3.8 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (extenuo, from tenuis 'thin'; compare attenuate). Formal is marked by Oxford, Cambridge and Longman (the extenuating circumstances phrase). Weakest point: a watch-out on the loose use of 'extenuating circumstances' for special or unusual circumstances could be considered."
+    },
+    {
+      "id": 1480,
+      "word_id": 545,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary extricate (Latin extricatus, past participle of extrico; 'Compare intricate'), the Latin entries extrico (ex- + tricae 'hindrances, impediments'; 'to disentangle, free') and tricae ('trifles, toys'; 'hindrances, impediments'; of uncertain origin, which the origin does not go into) and AHD (ex- + tricae, hindrances, perplexities; intricate from in- + tricae). Root tricae (intricate). Hook (extricate and intricate share tricae, perplexities) agrees with AHD's gloss; unchanged. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings from the tool's lists (himself, itself): extricate himself 130, extricate itself from 22.4 per billion; noun partners (wreckage, mud) are all under 0.5. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary and the Latin page (extrico, ex- + tricae 'hindrances, trifles'; intrico). Hook 4: 'perplexities' is not Wiktionary's gloss and differs from the origin's 'hindrances or trifles' (Lewis and Short has it, so it is loose, not false). Pairings 4: both are reflexive patterns (himself, itself from) that repeat each other and do not show what one gets free of."
     }
   ]
 }
