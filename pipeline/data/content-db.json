@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:27:55.895Z"
+    "updatedAt": "2026-10-30T07:46:28.678Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1032,
-    "reviews": 1186
+    "mnemonics": 1034,
+    "reviews": 1211
   },
   "words": [
     {
@@ -22,8 +22,17 @@
       "syllables": 2,
       "frequency_rank": 337344,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French abatre (\"to knock down\"), from Late Latin abbattere, built from ab (\"away\") and battuere (\"to beat\"), the verb that also gives debate.",
+      "audio_url": null,
+      "roots": [
+        "battuere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "the storm abated",
+        "the wind abated",
+        "symptoms abate"
+      ]
     },
     {
       "id": 2,
@@ -33,8 +42,16 @@
       "syllables": 3,
       "frequency_rank": 200302,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin aberrare (\"to go astray\"), from ab (\"away\") and errare (\"to wander\"), the verb that also gives err.",
+      "audio_url": null,
+      "roots": [
+        "errare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "aberrant behavior",
+        "aberrant patterns"
+      ]
     },
     {
       "id": 3,
@@ -44,8 +61,16 @@
       "syllables": 2,
       "frequency_rank": 3683838,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin abscondere (\"to hide\"), perhaps by way of Middle French, from abs (\"away\") and condere (\"to put away, store\"), the verb also behind recondite.",
+      "audio_url": null,
+      "roots": [
+        "condere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "absconded with the money",
+        "absconding debtor"
+      ]
     },
     {
       "id": 4,
@@ -55,8 +80,16 @@
       "syllables": 2,
       "frequency_rank": 197583,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin joined abs (\"away\") and tenere (\"to hold\") into abstinere, to keep yourself away from something; English took the word over through Old French.",
+      "audio_url": null,
+      "roots": [
+        "tenere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "abstain from alcohol",
+        "abstain from meat"
+      ]
     },
     {
       "id": 5,
@@ -66,8 +99,17 @@
       "syllables": 3,
       "frequency_rank": 746059,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin admonere (\"to remind, warn\"), built on monere (\"to warn\"), the verb that also gives monitor.",
+      "audio_url": null,
+      "roots": [
+        "monere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "gently admonished",
+        "sternly admonished",
+        "an admonishing finger"
+      ]
     },
     {
       "id": 6,
@@ -77,8 +119,17 @@
       "syllables": 4,
       "frequency_rank": 4420476,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin adulterare (\"to commit adultery\", and also \"to falsify, corrupt\"), built from ad (\"to\") and alter (\"the other\"); adultery comes from the same family.",
+      "audio_url": null,
+      "roots": [
+        "alter"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "adulterated food",
+        "adulterated milk",
+        "adulterated drugs"
+      ]
     },
     {
       "id": 7,
@@ -88,8 +139,17 @@
       "syllables": 3,
       "frequency_rank": 19162,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek aisthetikos (\"of sense perception\"), akin to aisthesis (\"sensation\"). The link to beauty is German: 1700s thinkers named the study of taste after the senses, and English followed in the 1800s.",
+      "audio_url": null,
+      "roots": [
+        "aisthesis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "aesthetic value",
+        "aesthetic pleasure",
+        "aesthetic appeal"
+      ]
     },
     {
       "id": 8,
@@ -99,8 +159,16 @@
       "syllables": 3,
       "frequency_rank": 4156000,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French agrandir (\"to enlarge\"), from a and grand (\"big\"), which goes back to Latin grandis (\"great\"), as in grandiloquent.",
+      "audio_url": null,
+      "roots": [
+        "grandis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "aggrandize themselves",
+        "aggrandize himself"
+      ]
     },
     {
       "id": 9,
@@ -110,8 +178,15 @@
       "syllables": 4,
       "frequency_rank": 432640,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin alacritas, from alacer (\"brisk, lively\"), which through French and Italian also gave the music term allegro.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "with alacrity",
+        "accepted with alacrity",
+        "responded with alacrity"
+      ]
     },
     {
       "id": 10,
@@ -121,8 +196,17 @@
       "syllables": 4,
       "frequency_rank": 85207,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin alleviare (\"to lighten\"), from ad and levis (\"light\"), the adjective behind levity: to alleviate pain is to make it lighter.",
+      "audio_url": null,
+      "roots": [
+        "levis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "alleviate poverty",
+        "alleviate pain",
+        "alleviate suffering"
+      ]
     },
     {
       "id": 11,
@@ -132,8 +216,15 @@
       "syllables": 4,
       "frequency_rank": 1326239,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin amalgamare, from amalgama (\"mercury alloy\"), from Arabic, from Greek malagma (\"softening ointment\"); mixing metals with mercury led to the general sense of blending into one.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "amalgamated with",
+        "amalgamated into one",
+        "amalgamate the two"
+      ]
     },
     {
       "id": 12,
@@ -143,8 +234,17 @@
       "syllables": 4,
       "frequency_rank": 33040,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ambiguus (\"shifting, doubtful\"), from ambigere (\"to go around, be in doubt\"), built from ambi (\"on both sides\") and agere (\"to drive\").",
+      "audio_url": null,
+      "roots": [
+        "agere"
+      ],
+      "watch_out": "Ambiguous describes words or situations open to more than one reading; a person torn between feelings is ambivalent.",
+      "pairings": [
+        "ambiguous language",
+        "deliberately ambiguous",
+        "ambiguous statement"
+      ]
     },
     {
       "id": 13,
@@ -154,8 +254,17 @@
       "syllables": 4,
       "frequency_rank": 89652,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "The psychiatrist Eugen Bleuler coined German Ambivalenz in 1910 for conflicting feelings held at once, from Latin ambi (\"both\") and valere (\"to be strong\"); English took ambivalence, then ambivalent.",
+      "audio_url": null,
+      "roots": [
+        "valere"
+      ],
+      "watch_out": "Ambivalent means torn between opposing feelings, not indifferent or uninterested.",
+      "pairings": [
+        "ambivalent feelings",
+        "ambivalent attitude",
+        "deeply ambivalent"
+      ]
     },
     {
       "id": 14,
@@ -165,8 +274,17 @@
       "syllables": 4,
       "frequency_rank": 304693,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Reshaped from the older English meliorate after French améliorer; meliorate comes from Late Latin meliorare (\"to improve\"), from melior (\"better\").",
+      "audio_url": null,
+      "roots": [
+        "melior"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ameliorate the effects",
+        "ameliorate the situation",
+        "ameliorate conditions"
+      ]
     },
     {
       "id": 15,
@@ -176,8 +294,16 @@
       "syllables": 5,
       "frequency_rank": 398875,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek anachronismos, from anachronizomai (\"to refer to the wrong time\"), built from ana (\"up, against\") and chronos (\"time\").",
+      "audio_url": null,
+      "roots": [
+        "chronos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "historical anachronism",
+        "deliberate anachronism"
+      ]
     },
     {
       "id": 16,
@@ -187,8 +313,17 @@
       "syllables": 4,
       "frequency_rank": 29783,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin analogus, from Ancient Greek analogos (\"proportionate\"), built on logos (\"reckoning\"); Greek analogia, formed from analogos, gave English analogy.",
+      "audio_url": null,
+      "roots": [
+        "logos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "closely analogous",
+        "directly analogous",
+        "analogous situation"
+      ]
     },
     {
       "id": 17,
@@ -198,8 +333,15 @@
       "syllables": 4,
       "frequency_rank": 77367,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "With the prefix an (\"not\"), Greek turned homalos (\"level\") into anomalos (\"uneven\"), whose noun anomalia came into English through Latin.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "apparent anomaly",
+        "statistical anomaly",
+        "strange anomaly"
+      ]
     },
     {
       "id": 18,
@@ -209,8 +351,17 @@
       "syllables": 4,
       "frequency_rank": 216430,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French and Latin from Ancient Greek antipatheia, from anti (\"against\") and pathos (\"feeling, suffering\").",
+      "audio_url": null,
+      "roots": [
+        "pathos"
+      ],
+      "watch_out": "Antipathy is strong dislike, not a lack of feeling; a lack of interest or feeling is apathy.",
+      "pairings": [
+        "antipathy toward",
+        "mutual antipathy",
+        "strong antipathy"
+      ]
     },
     {
       "id": 19,
@@ -220,8 +371,17 @@
       "syllables": 3,
       "frequency_rank": 110184,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French and Latin from Ancient Greek apatheia (\"freedom from emotion\"), from a (\"without\") and pathos (\"feeling, suffering\").",
+      "audio_url": null,
+      "roots": [
+        "pathos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "political apathy",
+        "public apathy",
+        "voter apathy"
+      ]
     },
     {
       "id": 20,
@@ -231,8 +391,17 @@
       "syllables": 2,
       "frequency_rank": 235100,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French apeser (\"to bring to peace\"), built on pais (\"peace\"), which comes from Latin pax.",
+      "audio_url": null,
+      "roots": [
+        "pax"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "appease the gods",
+        "appease the public",
+        "appease critics"
+      ]
     },
     {
       "id": 21,
@@ -242,8 +411,15 @@
       "syllables": 3,
       "frequency_rank": 127007,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin arduus (\"steep, high, hard to reach\"): an arduous task is an uphill climb.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "arduous task",
+        "arduous journey",
+        "arduous process"
+      ]
     },
     {
       "id": 22,
@@ -253,8 +429,17 @@
       "syllables": 4,
       "frequency_rank": 51198,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin articulare (\"to divide into joints\", and so \"to speak distinctly\"), from articulus (\"small joint\"), which also gave article.",
+      "audio_url": null,
+      "roots": [
+        "articulus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "clearly articulated",
+        "articulate a vision",
+        "articulate their needs"
+      ]
     },
     {
       "id": 23,
@@ -264,8 +449,15 @@
       "syllables": 3,
       "frequency_rank": 121411,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek asketikos, from asketes (\"monk, hermit\"), from askeo (\"to exercise, train\"): ascetics trained themselves to go without comforts.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Ascetic is easily confused with aesthetic, but it has nothing to do with beauty: it means giving up comforts on purpose.",
+      "pairings": [
+        "ascetic life",
+        "ascetic practices",
+        "ascetic ideal"
+      ]
     },
     {
       "id": 24,
@@ -275,8 +467,17 @@
       "syllables": 2,
       "frequency_rank": 488087,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French asuagier (\"to calm\"), from a Vulgar Latin verb built on Latin suavis (\"sweet\"), the source of suave.",
+      "audio_url": null,
+      "roots": [
+        "suavis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "assuage fears",
+        "assuage his guilt",
+        "assuage concerns"
+      ]
     },
     {
       "id": 25,
@@ -286,8 +487,15 @@
       "syllables": 3,
       "frequency_rank": 326001,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin audere (\"to dare\") gave the adjective audax (\"bold\") and the noun audacia, which English turned into audacious.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "audacious plan",
+        "audacious move",
+        "audacious attempt"
+      ]
     },
     {
       "id": 26,
@@ -8024,7 +8232,7 @@
       "definition": "Markedly different from an accepted norm.",
       "plain_language_definition": "Wandering off from what is normal or expected.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 4,
@@ -8048,7 +8256,7 @@
       "definition": "Call out someone's misbehavior and caution them against doing it again, usually without anger.",
       "plain_language_definition": "To give someone a serious talking-to about what they did wrong.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 10,
@@ -8072,7 +8280,7 @@
       "definition": "Make a person or group mightier, or puff up their image beyond what is true.",
       "plain_language_definition": "To build up how powerful or famous someone is, or to make them seem bigger than they are.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 15,
@@ -8080,7 +8288,7 @@
       "definition": "A brisk, willing response to a task or request, with no hint of holding back.",
       "plain_language_definition": "Being quick and happy to do something as soon as you are asked.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 16,
@@ -8120,7 +8328,7 @@
       "definition": "Bring a poor or painful state of affairs up to a better one.",
       "plain_language_definition": "To make a hard situation less bad for the people in it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 25,
@@ -8168,7 +8376,7 @@
       "definition": "Buy calm from an angry or threatening party by handing over part of what it wants.",
       "plain_language_definition": "To say yes to some demands so an angry person will back off.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 40,
@@ -8184,7 +8392,7 @@
       "definition": "Express an idea or emotion in exact and orderly language.",
       "plain_language_definition": "To put an idea into words so plainly that others get it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 46,
@@ -8216,7 +8424,8 @@
       "definition": "Unrestrained by convention or propriety.",
       "plain_language_definition": "Disrespectfully bold and showing no regard for normal rules or manners.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 54,
@@ -10772,17 +10981,19 @@
       "id": 579,
       "word_id": 24,
       "definition": "Satisfy a need of the body, such as thirst or hunger.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To satisfy hunger, thirst or a similar need of the body.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 580,
       "word_id": 24,
       "definition": "Cause to be more favorably inclined; gain the good will of.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To calm someone and win their goodwill.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 582,
@@ -10806,9 +11017,10 @@
       "id": 588,
       "word_id": 15,
       "definition": "A person, custom or object that seems out of date, as if left over from an earlier age.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Something left over from the past that no longer fits in today's world.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 596,
@@ -14271,41 +14483,46 @@
       "id": 1249,
       "word_id": 16,
       "definition": "In biology, of body parts in different species, serving the same purpose though they evolved separately.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In biology, describes body parts of different animals that do the same job but evolved separately.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1250,
       "word_id": 17,
       "definition": "In astronomy, an angle giving a planet's position along its orbit, counted from its closest approach to the sun.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In astronomy, an angle that tells where a planet is along its orbit.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1251,
       "word_id": 18,
       "definition": "A person or thing that someone cannot stand.",
-      "plain_language_definition": null,
+      "plain_language_definition": "The person or thing that someone strongly dislikes.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1252,
       "word_id": 20,
       "definition": "Take the edge off a hunger or craving for a time.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To satisfy a hunger or craving for a while.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1253,
       "word_id": 22,
       "definition": "Pronounce every syllable crisply and distinctly.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To pronounce each sound or word clearly.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1254,
@@ -14401,33 +14618,37 @@
       "id": 1264,
       "word_id": 4,
       "definition": "Let a vote pass without counting oneself on either side.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To hold back your vote, backing neither side, when a group decides something.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1265,
       "word_id": 5,
       "definition": "Give someone a sober word of caution before they act.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To firmly urge someone to do something, or warn them not to, before they act.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1266,
       "word_id": 7,
       "definition": "Attractive and stylish in a carefully chosen way.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Pleasing to look at, with a style that seems carefully chosen.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1267,
       "word_id": 12,
       "definition": "Not fitting neatly into one category, so its status stays unsettled.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Hard to classify or pin down, so its true nature or status is unclear.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1268,
@@ -66963,14 +67184,6 @@
       "revision": 2
     },
     {
-      "id": 382,
-      "word_id": 23,
-      "text": "Ascetic comes from the Greek askesis, \"exercise\": an ascetic trains the body to do without comforts.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 383,
       "word_id": 41,
       "text": "Castigate comes from the Latin castigare, \"to correct or punish\": to castigate is to correct someone with harsh words.",
@@ -67606,14 +67819,6 @@
       "id": 470,
       "word_id": 10,
       "text": "Alleviate comes from the Latin levis, meaning light, as in levity: to alleviate a pain is to make it lighter to carry.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 471,
-      "word_id": 11,
-      "text": "Amalgamate comes from amalgam, the blend of mercury and other metals long used to fill teeth: to amalgamate is to blend things into one.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -71718,6 +71923,22 @@
       "id": 1032,
       "word_id": 206,
       "text": "Perfidious holds fid, from Latin fides (faith), as in fidelity: a perfidious person breaks faith.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1033,
+      "word_id": 11,
+      "text": "Amalgamate is related to amalgam, the blend of mercury and other metals long used to fill teeth: to amalgamate is to blend things into one.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1034,
+      "word_id": 23,
+      "text": "Ascetic comes from the Greek askeo, \"to exercise\": an ascetic trains the body to do without comforts.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -119556,8 +119777,8 @@
     },
     {
       "path": "definitions/1264.mp3",
-      "bytes": 14629,
-      "key": "062b689712625e39",
+      "bytes": 19122,
+      "key": "7b3c0c76bda11dd8",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119570,8 +119791,8 @@
     },
     {
       "path": "definitions/1265.mp3",
-      "bytes": 14420,
-      "key": "4ec7af83844de3f2",
+      "bytes": 19853,
+      "key": "3cfab245490e46db",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119591,8 +119812,8 @@
     },
     {
       "path": "definitions/1266.mp3",
-      "bytes": 14106,
-      "key": "9153bb82a9e12937",
+      "bytes": 15987,
+      "key": "759977e5e0a6a66e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119633,8 +119854,8 @@
     },
     {
       "path": "definitions/1267.mp3",
-      "bytes": 19017,
-      "key": "90523c97a88a101e",
+      "bytes": 20167,
+      "key": "cfaafd5f2737bcce",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119661,8 +119882,8 @@
     },
     {
       "path": "definitions/588.mp3",
-      "bytes": 24973,
-      "key": "e7caecb048443137",
+      "bytes": 18390,
+      "key": "016292e6b76e02f1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119675,8 +119896,8 @@
     },
     {
       "path": "definitions/1249.mp3",
-      "bytes": 26854,
-      "key": "13f8b372832d00a0",
+      "bytes": 28212,
+      "key": "1982887f1c368114",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119689,8 +119910,8 @@
     },
     {
       "path": "definitions/1250.mp3",
-      "bytes": 29257,
-      "key": "3640bad82eb2afbe",
+      "bytes": 18495,
+      "key": "f9b74ba1c9b4d20f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119703,8 +119924,8 @@
     },
     {
       "path": "definitions/1251.mp3",
-      "bytes": 12225,
-      "key": "e0b429ec3e85b8f8",
+      "bytes": 13479,
+      "key": "c872510b53952395",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119724,8 +119945,8 @@
     },
     {
       "path": "definitions/1252.mp3",
-      "bytes": 13270,
-      "key": "856ee47fb1984804",
+      "bytes": 13166,
+      "key": "42a216b2fd8b0899",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119745,8 +119966,8 @@
     },
     {
       "path": "definitions/1253.mp3",
-      "bytes": 13688,
-      "key": "fcd1c6fb49a6a58f",
+      "bytes": 11285,
+      "key": "876fc22df89f36b7",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119766,15 +119987,15 @@
     },
     {
       "path": "definitions/579.mp3",
-      "bytes": 15464,
-      "key": "572f4416f4ccc093",
+      "bytes": 16614,
+      "key": "bac096eb773223aa",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/580.mp3",
-      "bytes": 16196,
-      "key": "7dfa5e9ac10c6ac6",
+      "bytes": 11598,
+      "key": "50389c8badc569a2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125485,8 +125706,8 @@
     },
     {
       "path": "hooks/11.mp3",
-      "bytes": 36780,
-      "key": "d0ad5f0f97aa3ee3",
+      "bytes": 38975,
+      "key": "c50116655566738a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125569,8 +125790,8 @@
     },
     {
       "path": "hooks/23.mp3",
-      "bytes": 28108,
-      "key": "c2d273c004cfac43",
+      "bytes": 27794,
+      "key": "237c9beaaf71f9dc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -169807,6 +170028,800 @@
         "alsoMeans": 5
       },
       "checker_notes": "Round 2: the origin now gives the step to today's meaning ('a perfunctory act is aimed only at getting the duty over') in its own words; no cached dictionary uses it. The glosses match Wiktionary (perfungor 'perform, carry through', from per- plus fungor 'perform') and Lewis and Short ('fulfil'), and function is a true relative. Pairings 4: 'perfunctory manner' is generic; nod (9.1) and kiss (10.2) are good. Weakest point otherwise: 'fulfil' is the British spelling."
+    },
+    {
+      "id": 1187,
+      "word_id": 1,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (abate: Anglo-Norman/Old French abatre \"to demolish, knock down\", Late Latin abbattere, Latin ab- + battere from older battuere) and the Wiktionary pages for Latin battuo and English debate (from Latin battuo). Only Etymology 1 is used; the hedged Etymology 2 and 4 are other words. Hook claim (Old French abatre, to knock down) is true. Tone null: Oxford and Longman mark it formal, but Cambridge marks only its Business English entry, so the all-three rule for formal is not met. No common mix-up. Pairings from Ngram: the storm abated 17.4, the wind abated 8.5, symptoms abate 8.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks out against Wiktionary (Anglo-Norman and Old French abatre, Late Latin abbattere, ab + battuere; debate is from Old French debatre, dis- + battuo). Tone null is right: Oxford and Longman mark it formal, Cambridge does not. Pairings are all common (storm abated 17.4, wind abated 8.5, symptoms abate 8.3 per billion). Weakest point: the origin skips Middle English and Anglo-Norman and leaves the step from 'knock down' to 'lessen' to the hook, which is fine."
+    },
+    {
+      "id": 1188,
+      "word_id": 2,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (aberrans, participle of aberro \"go astray\", ab + erro \"to wander\") and the Wiktionary page for English err (from Latin erro). Hook says aberrant contains err: true in spelling and in origin. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: aberrant behavior 50.4, aberrant patterns 3.8 per billion; patterns is common but leans scientific, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks out against Wiktionary (aberro from ab + erro; err from erro), and errare is a root learners see in err, error, erratic. formal is right: Oxford, Cambridge and Longman all mark it. Weakest point, pairings: 'aberrant patterns' is much less common than 'aberrant behavior' (3.8 against 50 per billion, and outside the top ten words after 'aberrant'), and 'patterns' is a generic partner."
+    },
+    {
+      "id": 1189,
+      "word_id": 3,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (either Middle French abscondre or directly Latin abscondo \"hide\", abs \"away\" + condo \"put together, store\"; the either/or is kept as \"perhaps by way of Middle French\") and the etymology of recondite (re- + condo \"to put away, store\"), which is in the list. Hook claim (Latin abscondere, to hide away) is true. Tone null: only Longman marks formal; Cambridge has humorous only on an example. Pairings: absconded with the money 2.6, absconding debtor 1.3 per billion (Datamuse ranks absconding debtor first after the participle); the debtor phrase is the less common one.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's either-or (Middle French abscondre or Latin abscondo) as 'perhaps by way of Middle French'; condere and recondite check out (recondo from re- + condo). Tone null is right (only Longman says formal). Weakest point, pairings: 'absconding debtor' is old legal language: Datamuse ranks it high from older texts, but it is 1.3 per billion in 2010 to 2022 books."
+    },
+    {
+      "id": 1190,
+      "word_id": 4,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English absteinen, Old French abstenir, Latin abstineo \"to hold oneself back\", abs- \"from\" + teneo \"to hold\"). tenere also links untenable, impertinent and retinue in the list. Hook claim (abs-, away, and tenere, to hold) is true. Tone null: no label in Oxford, Cambridge or Longman. Pairings: abstain from alcohol 27.0, abstain from meat 10.8 per billion. The voting sense is current (abstain from voting 22.2), so it is shown under Also means.\nRound 2: origin recast in my own order and glosses; facts unchanged (Wiktionary and Oxford: Old French abstenir, Latin abstinere, abs/ab- + tenere).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the recast origin has its own shape and checks out against Wiktionary (abstineo from abs- + teneo, into English through Old French), and the gloss 'to keep yourself away from something' is the writer's own. Weakest point: abs is glossed 'away' where Wiktionary has 'from' (Longman has 'away'), which is fine. Other fields unchanged from round 1: the vote sense is current and its plain definition is clear."
+    },
+    {
+      "id": 1191,
+      "word_id": 5,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin admoneo \"to remind, warn\", ad- + moneo \"to warn, advise\") and the Wiktionary page for monitor (from monere \"to warn\"). Wiktionary hedges the Old French step (perhaps unattested *amonir), so the origin leaves that step out. Hook claim (shares monere with monitor) is true. Tone formal: all three dictionaries label the entry formal. The other sense (urge someone to do something, Oxford sense 2) is shown: it is current and distinct from scolding after the fact; its register is null because Longman does not list that sense. Weakest point: a strict reader may find it close to the first sense. Pairings: an admonishing finger 10.3, gently admonished 5.4, sternly admonished 3.4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin leaves out the Old French step Wiktionary hedges with 'perhaps', which is allowed; monitor from monere checks out. formal: all three dictionaries mark sense 1, and the other sense rightly stays null (Longman lacks it). pairings 4: 'gently admonished' (5.4) and 'sternly admonished' (3.4) are common, but their adverbs fit any verb of telling; 'an admonishing finger' is the one that shows the word. alsoMeans 4: the sense is current (Oxford and Cambridge sense 2), but the plain 'firmly urge someone to do something, or warn them not to' follows the do-or-not-do frame that Dictionary.com ('advise to do or against doing something'), Cambridge's American entry and Oxford ('strongly advise somebody to do something') share. Shared by three, so a note only."
+    },
+    {
+      "id": 1192,
+      "word_id": 6,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (adulteratus, participle of adultero \"to adulterate, defile, commit adultery, counterfeit\", ad- + alter + -o; equivalent to adultery + -ate) and the Wiktionary Latin pages for adultero (ad + alter, \"to go to the other\", unhedged) and adulter (back-formation from adultero). Hook claim (adulterare, to corrupt, close relative of adultery) is true. Tone null: no label in any of the three. Pairings: adulterated food 13.8, adulterated drugs 4.9, adulterated milk 4.9 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked Wiktionary's Latin adultero: ad ('to') + alter ('the other') + -o, defined 'commit adultery' and figuratively 'falsify, corrupt'. alter is a root learners see in alter, alternate, altruism. Weakest point: the glosses 'to' and 'the other' are Wiktionary's own, but they are short shared facts."
+    },
+    {
+      "id": 1193,
+      "word_id": 7,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (German Asthetik or French esthetique, New Latin aestheticus, Greek aisthetikos \"of sense perception\", from aisthanomai \"to feel\"; analysable as aesthe(sis) + -tic) and the Wiktionary pages for Greek aisthesis (from aisthanomai \"to perceive\") and English anesthesia (an- + aisthesis \"sensation\"). Root aisthesis is a judgment call: it is the stem learners see in anesthesia and synesthesia, though aesthetic itself comes from the verb. Hook claim (aisthanesthai, the infinitive of aisthanomai; anesthetic from the same root) is true. Tone null: no label in the three. The \"stylish, beautiful\" sense is current (Oxford and Cambridge list it), so it is shown.\nRound 2: origin rewritten to add the step to beauty (the beauty sense arose in German in the mid 1700s and reached English in the early 1800s, per Oxford's word origin) and to drop the anesthesia aside; aisthesis stays named, as a relative of aisthetikos (both from aisthanomai, per Wiktionary). Round 3 (main session): second sentence recast so it no longer follows the shape of Oxford's word-origin note; same facts.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 3: the origin now explains the beauty sense in its own shape. Wiktionary's English entry does not give the German step, but Oxford's word origin (beauty sense first used in German in the mid 18th century, adopted into English in the early 19th) and Vocabulary.com (German philosophers used it for a theory of the beautiful) both support it, and the sentence follows neither: 'named the study of taste after the senses' is the writer's own angle. Weakest point: 'after the senses' simplifies 'after the Greek word for perception', and the first sentence keeps Wiktionary's gloss 'of sense perception' (a short shared fact). Other fields unchanged: the other sense's plain opens with 'Pleasing to look at', which WordUp also uses."
+    },
+    {
+      "id": 1194,
+      "word_id": 8,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French agrandir; surface ag- + grand + -ize), the Wiktionary French page for agrandir (a- + grand + -ir, \"to enlarge\"), English grand (from Latin grandis) and grandiloquent (Latin grandis \"great, full\"), which is in the list. Hook claim (contains grand, from Latin grandis) is true. Tone disapproving: Cambridge marks the verb \"disapproving formal\"; Oxford and Longman have no verb entry, but both mark aggrandizement disapproving, as Cambridge does. Formal is not set because only Cambridge has the verb. Pairings: aggrandize themselves 4.0, aggrandize himself 2.5 per billion; both reflexive, so they show the same pattern.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks out: French agrandir (ag- + grand per Wiktionary's surface analysis, Dictionary.com and Oxford), Latin grandis, and grandiloquent from grandis + loqui. disapproving is right: Cambridge marks the verb, and Oxford and Longman mark the noun aggrandizement (neither has the verb). pairings 4: both pairings are the same reflexive pattern ('themselves', 'himself'); the data has no common noun partner (aggrandize power 0.6 per billion), so one reflexive pairing would do."
+    },
+    {
+      "id": 1195,
+      "word_id": 9,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English alacrite, Latin alacritas, from alacer \"brisk\") and the Wiktionary pages for English and Italian allegro (Italian allegro from French allegre, from Latin alacer). No root: alacer shows in no other English word a learner would spot. Hook claim (alacer, same root as allegro) is true. Tone formal: all three mark it formal. Pairings: with alacrity 164, accepted with alacrity 12.4, responded with alacrity 6.9; with alacrity is generic but is the main construction.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked allegro on Wiktionary: Italian allegro was borrowed from French allègre, from Latin alacer, so 'through French and Italian' is right, and the hook's 'same root as allegro' holds. formal: all three dictionaries mark it. Roots left empty is right. Weakest point: the gloss 'brisk, lively' could include 'eager', the part of alacer closest to alacrity; minor."
+    },
+    {
+      "id": 1196,
+      "word_id": 10,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Late Latin alleviatus, alleviare \"to lighten\"; surface al- + Latin levis), the Wiktionary Latin page for allevio (ad- + levis \"light\" + -io, Late Latin) and the etymology of levity (Latin levitas, from levis), which is in the list. Hook claim (from levis, light, as in levity) is true. Tone null: only Cambridge marks formal. Pairings: alleviate poverty 107.6, alleviate pain 61.1, alleviate suffering 49.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked Wiktionary's Latin allevio (ad- + levis 'light' + -io) and levity (from levitas, from levis). Tone null is right (only Cambridge says formal). Pairings poverty, pain, suffering are the top three in the data. Weakest point: Oxford traces alleviare through allevare 'raise' influenced by levis; the origin follows Wiktionary and Longman, which is fine."
+    },
+    {
+      "id": 1197,
+      "word_id": 11,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Medieval Latin amalgamatus, amalgamare, amalgama), the Wiktionary English page for amalgam (Medieval Latin amalgama, from Arabic, from Greek malagma \"emollient\", from malassein \"to soften\") and the Latin page for amalgama, which notes an alternative Arabic source; hence \"most likely\". Hook changed: \"Amalgamate comes from amalgam\" became \"Amalgamate is related to amalgam\", because the verb comes from Medieval Latin amalgamare, the same source as amalgam, not from the English noun. Tone null: only Longman marks formal. Pairings: amalgamated with 95.9, amalgamated into one 7.9, amalgamate the two 3.3; amalgamated with is generic.\nRound 2: removed \"most likely\", since Wiktionary's amalgam entry states the Arabic and Greek steps without a hedge (its Latin amalgama page only mentions and dismisses another Arabic source), and added the step from a mercury alloy to merging (Wiktionary lists the alloy sense beside merge, combine; Oxford glosses amalgamat- \"formed into a soft mass\").",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the hedge is gone, so the chain now matches Wiktionary's amalgam (Medieval Latin amalgama 'mercury alloy', from Arabic, from Greek malagma), and the added clause explains the step to blending in the writer's own words (Dictionary.com also says the verb first meant mixing metals). pairings 4 (unchanged from round 1): all three are function-word patterns ('with', 'into one', 'the two') with no noun partner, though noun partners are rare in the data (amalgamated companies 1.1 per billion)."
+    },
+    {
+      "id": 1198,
+      "word_id": 12,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin ambiguus \"moving from side to side, of doubtful nature\", ambigere \"to go about, wander, doubt\", ambi- + agere \"to drive, move\"); the tool's hedge flag is the word \"doubtful\" in a gloss, not a hedge. agere also links cogent, exigent, intransigent and prodigal in the list. Hook claim (ambi-, on both sides) is true. Tone null: no label in the three. Watch-out: ambiguous for ambivalent (\"I feel ambiguous about it\") is a listed confusable pair, though less common than misusing ambivalent itself, hence 4. The status sense is current (ambiguous position, status and relationship are top Datamuse nouns), so it is shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin matches Wiktionary (ambiguus from ambigere, ambi- + agere) with glosses in the writer's own words. The watch-out on ambivalent is a real, common mix-up and is true. alsoMeans 4: the sense is current (Oxford 'not clearly stated or defined'; ambiguous status and position are common), but the plain 'Hard to classify or pin down, so its true nature or status is unclear' shares 'classify' and 'nature' with Dictionary.com's 'of doubtful or uncertain nature; difficult to comprehend, distinguish, or classify', and it sits close to the first sense."
+    },
+    {
+      "id": 1199,
+      "word_id": 13,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (back-formation from ambivalence, from German Ambivalenz, from Latin ambi- \"in two ways\" + valeo \"be strong\"). Hook claim (ambi-, both, with valere, to be strong) is true. Tone null: no label in the three. Watch-out: using ambivalent for \"indifferent\" is a well-known misuse. Pairings: ambivalent attitude 74.7, ambivalent feelings 69.7, deeply ambivalent 30.6 per billion.\nRound 2: origin rewritten in my own order and with the missing step, checked against the Wiktionary pages for English ambivalence and German Ambivalenz (coined by the Swiss psychiatrist Eugen Bleuler in 1910 for simultaneous conflicting feelings) and Oxford's word origin. Watch-out tightened so indifferent appears once.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: every new fact checks out against Wiktionary's ambivalence entry (German Ambivalenz 'simultaneous conflicting feelings', coined by Eugen Bleuler in 1910, from Latin ambi- 'both' + valere 'to be strong'), the sentence has its own shape, and it now explains the meaning. The watch-out is now one tight, true clause. Weakest point: 'psychiatrist' is not in Wiktionary, though Bleuler was one (Dictionary.com says psychologist)."
+    },
+    {
+      "id": 1200,
+      "word_id": 14,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against the Wiktionary page for ameliorate (alteration of meliorate after French ameliorer; the tool could not read the \"from\" template, so I read the page) and for meliorate (Late Latin melioratus, meliorare, from Latin melior \"better\"). Hook claim (contains Latin melior, better) is true. Tone formal: all three mark it formal. Pairings: ameliorate the effects 19.9, the situation 15.8, conditions 4.7 per billion.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks out against Wiktionary (alteration of meliorate after French améliorer; meliorate from Late Latin melioro, from melior). origin 4: the root melior appears only in rare words (meliorate, meliorism), so a learner will not spot it elsewhere, and 'after French améliorer' is Wiktionary's own phrase. formal: all three dictionaries mark it."
+    },
+    {
+      "id": 1201,
+      "word_id": 15,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French anachronisme or New Latin anachronismus, Greek anachronismos, from anachronizomai \"referring to the wrong time\", ana \"up against\" + chronizo, from chronos \"time\"). Hook claim (contains chronos, time) is true. Tone null: no label in the three. The \"out of date\" sense is current and common, so it is shown. Pairings: historical anachronism 5.8, deliberate anachronism 2.2 per billion; glaring anachronism (1.0) was too rare.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Greek anachronismos, anachronizomai, ana + chronos), skipping French and New Latin, which is fine; chronos is a good root. The out-of-date sense is current (Oxford's sense 1) with a clear plain definition. Weakest point: 'deliberate anachronism' is the less common pairing (2.2 per billion), though Datamuse lists it."
+    },
+    {
+      "id": 1202,
+      "word_id": 16,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin analogus, Greek analogos), the Wiktionary Greek pages for analogos (ana- + -logos, \"proportionate\") and analogia (analogos + -ia), and English analogy (Greek ana- + logos \"speech, reckoning\"). Root logos is broad (it also links eulogy, where Wiktionary hedges the step), hence 4. Hook claim (analogos, in due proportion, the source of analogy) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. The biology sense is technical and not often met by general readers, so it is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked Wiktionary's Greek pages: analogos is ana- + -logos, 'proportionate', and analogia is analogos + -ia, so the origin's analogy link and the hook's 'source of analogy too' hold. Tone null is right (Oxford and Longman say formal, Cambridge does not). pairings 4: 'closely' and 'directly' are degree adverbs that fit any comparison word and 'analogous situation' is generic, though the data's nouns for analogous are all generic. The biology sense is rightly hidden with the technical label."
+    },
+    {
+      "id": 1203,
+      "word_id": 17,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin anomalia, Greek anomalia, from anomalos \"irregular, uneven\", negating homalos \"even\", from homos \"same\") and the Wiktionary Greek page for homalos, which derives it from a PIE root and says the link to homos is only \"often thought\"; so the origin stops at homalos and homos is not used as a root. Hook claim (an- not, homalos even or regular) is true. Tone null: Cambridge and Longman mark formal, Oxford does not. The astronomy sense is rare and technical, so it is not shown.\nRound 2: origin recast in my own order; homalos glossed \"level\" from the Wiktionary Greek page (even, level). Facts unchanged (Wiktionary and Oxford: via Latin from Greek anomalia, from anomalos, an- + homalos).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the recast origin has its own shape and checks out against Wiktionary and Oxford (an- + homalos, anomalos 'uneven', anomalia into English through Latin); Wiktionary's homalos page gives 'even, level', so 'level' holds. pairings 4 (unchanged from round 1): 'strange anomaly' (11.1 per billion) is generic; 'statistical anomaly' and 'apparent anomaly' are good."
+    },
+    {
+      "id": 1204,
+      "word_id": 18,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French antipathie and Latin antipathia, from Greek antipatheia, from antipathes, anti- \"against\" + pathos \"suffering, strong feeling\"). Wiktionary hedges only the further origin of pathos, which the origin does not mention. pathos links apathy and pathos in the list. Hook claim (pathos with syn- and anti-) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. Watch-out: antipathy and apathy are a listed confusable pair; how often learners mix them is less certain, hence 4. The object-of-dislike sense is rare, so it is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French and Latin, Greek antipatheia, anti- + pathos); the hedge on pathos's deeper origin is rightly left out. Tone null is right (Oxford and Longman say formal, Cambridge does not). watchOut 4: antipathy and apathy are a real pair on confused-word lists and the note is true and brief, but it is a less common mix-up than the classic misreadings. pairings 4: 'strong antipathy' is common, but 'strong' fits any feeling."
+    },
+    {
+      "id": 1205,
+      "word_id": 19,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French apathie, Latin apathia, Greek apatheia \"freedom from emotion\", from apathes, a- \"not\" + pathos \"emotion, passion\"). Hook claim (a-, without, plus pathos, feeling) is true. Tone null: no label in the three. The antipathy/apathy note sits on antipathy. Pairings: political apathy 38.5, public apathy 16.4, voter apathy 14.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary and Oxford (French apathie, Latin apathia, Greek apatheia, a- + pathos). Pairings political, public and voter apathy are the top three in the data. Weakest point: the gloss 'freedom from emotion' is one of Wiktionary's own, but short."
+    },
+    {
+      "id": 1206,
+      "word_id": 20,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English apesen, Old French apeser \"to pacify, bring to peace\"); Wiktionary has no page for apeser, so I checked Old French apaisier (a + pais + -ier), French apaiser (from apaisier, from pais \"peace\") and Old French pais (from Latin pax). Hook claim (peace inside it, from Old French pais) is true. Tone disapproving: Oxford \"formal, usually disapproving\", Cambridge \"often disapproving\"; formal is not set because Cambridge does not mark it. The hunger sense is shown (appease his hunger 3.0, appease the hunger 2.4 per billion); it is current but literary, the weakest point. Pairings: appease the gods 22.2, the public 3.8, critics 2.3.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Wiktionary's English page stops at Old French apeser; its Old French apaisier is a + pais + -ier, Oxford and Longman agree, and its peace entry has Old French pais from Latin pax, so the origin and the pax root hold. disapproving: Oxford ('usually disapproving') and Cambridge mark it. alsoMeans 4: the hunger sense is real (Dictionary.com, AHD, Vocabulary.com; 'appease his hunger' 3.0 per billion) but less common, and Oxford and Longman leave it out; defensible to show."
+    },
+    {
+      "id": 1207,
+      "word_id": 21,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin arduus \"lofty, high, steep, hard to reach, difficult\"). No root: arduus shows in no other English word. Hook claim (arduus, steep) is true. Tone null: no label in the three. Pairings: arduous task 150.9, arduous journey 105.9, arduous process 66.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (arduus 'lofty, high, steep, hard to reach') and adds its own link to today's meaning. Roots left empty is right. Weakest point: the glosses are a subset of Wiktionary's list; short shared facts."
+    },
+    {
+      "id": 1208,
+      "word_id": 22,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin articulatus, participle of articulo) and the Wiktionary Latin pages for articulo (from articulus; \"to divide into joints\", figuratively \"to utter distinctly\") and articulus (diminutive of artus \"joint\"), and English article (from Latin articulus). Hook claim (articulus, small joint) is true. Tone formal for the \"express\" sense: Oxford, Cambridge (verb entry) and Longman all mark it formal; the pronounce sense has no formal label in Oxford or Longman, so null. Pairings: clearly articulated 251.6, articulate a vision 20.8, articulate their needs 10.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked Wiktionary's Latin articulo (articulus 'joint' + -o; 'divide into joints', figuratively 'utter distinctly') and article from articulus. formal: all three dictionaries mark the express sense; the pronounce sense rightly stays null. Weakest point: the origin's gloss pair and pointer to article sit close to Longman's word origin ('to divide into joints, speak clearly', see ARTICLE), though Oxford and Wiktionary give the same facts."
+    },
+    {
+      "id": 1209,
+      "word_id": 23,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Medieval Latin asceticus, Greek asketikos, from asketes \"monk, hermit\", from askeo \"to exercise\") and the Wiktionary Greek pages for asketes (from askeo) and askesis (also from askeo, \"exercise, training\"). Hook changed: askesis (\"exercise\") became askeo (\"to exercise\"), because askesis is a sister noun of the same verb, not the source of ascetic. No root: askeo shows in no other English word. Tone null: no label in the three. Watch-out: ascetic/aesthetic is a classic sound-alike mix-up.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked Wiktionary's Ancient Greek askeo: its senses include 'practise, exercise, train', so the gloss holds (Wiktionary calls askeo itself of unknown origin, which the origin does not need to cover). The hook change from askesis to askeo is right: the word comes through asketes from askeo, and askesis is a sister noun. The watch-out on aesthetic is the classic mix-up, true and brief. Weakest point: 'monk, hermit' is Wiktionary's gloss word for word, but short."
+    },
+    {
+      "id": 1210,
+      "word_id": 24,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English aswagen, Old French asuagier \"to appease, to calm\", Vulgar Latin *assuavio, Latin ad- + suavis \"sweet\") and the Wiktionary page for suave (from Latin suavis). Hook claim (suavis, sweet, root of suave) is true. Tone null: Oxford and Cambridge mark formal, Longman marks literary, so neither rule is met. The thirst/hunger sense is shown (assuages thirst and assuage hunger appear in Datamuse). Sense 580 (\"cause to be more favorably inclined; gain the good will of\") is WordNet's sense of conciliate or propitiate and rare for assuage; it is hidden, and it is worth reviewing on a main worksheet.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin matches Wiktionary (Old French asuagier, Vulgar Latin *assuavio, ad- + suavis; suave from suavis). Tone null is right: Oxford and Cambridge say formal, Longman says literary. alsoMeans 4: the hunger and thirst sense is in Dictionary.com and AHD but not in Oxford, Cambridge or Longman, and it is uncommon ('assuage thirst' 0.5, 'assuage hunger' 1.3 per billion); defensible to show. The goodwill sense is rightly hidden."
+    },
+    {
+      "id": 1211,
+      "word_id": 25,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin audacia \"boldness\" + -ious, from audax \"bold\", from audeo \"to be bold, to dare\"). No root: audere shows only in audacity, the same word family. Hook claim (audere, to dare, not audire) is true. Tone null: only Oxford marks formal. The existing plain for the impudent sense is kept and shown: it is a current meaning (an audacious lie). Pairings: audacious plan 15.3, audacious move 8.0, audacious attempt 6.8 per billion.\nRound 2: origin recast so it starts from the verb and ends with the English word; facts unchanged (Wiktionary: audacia + -ious, from audax, from audeo; Oxford: audax from audere).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the recast origin has its own shape and checks out against Wiktionary (audeo 'to dare', audax 'bold', audacia, + -ious). Weakest point: Longman routes the word through French audacieux, which Wiktionary does not mention, so leaving it out is fine; the other sense's plain sits near Dictionary.com's 'recklessly bold in defiance of convention, propriety', though it follows the record's own definition."
     }
   ]
 }

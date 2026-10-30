@@ -13,10 +13,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 337344,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French abatre (\"to knock down\"), from Late Latin abbattere, built from ab (\"away\") and battuere (\"to beat\"), the verb that also gives debate.",
+      "roots": [
+        "battuere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "the storm abated",
+        "the wind abated",
+        "symptoms abate"
+      ],
       "audioUrl": "audio/words/1.mp3?v=f6a11b644f7b",
       "hookAudioUrl": "audio/hooks/1.mp3?v=ffe8e5c90378",
       "senses": [
@@ -124,10 +130,15 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 200302,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin aberrare (\"to go astray\"), from ab (\"away\") and errare (\"to wander\"), the verb that also gives err.",
+      "roots": [
+        "errare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "aberrant behavior",
+        "aberrant patterns"
+      ],
       "audioUrl": "audio/words/2.mp3?v=43c381e27c8c",
       "hookAudioUrl": "audio/hooks/2.mp3?v=ca961169e262",
       "senses": [
@@ -136,7 +147,7 @@
           "definition": "Markedly different from an accepted norm.",
           "plainLanguageDefinition": "Wandering off from what is normal or expected.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/3.mp3?v=b0ebadcf8eb8",
           "examples": [
@@ -236,10 +247,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 3683838,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin abscondere (\"to hide\"), perhaps by way of Middle French, from abs (\"away\") and condere (\"to put away, store\"), the verb also behind recondite.",
+      "roots": [
+        "condere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "absconded with the money",
+        "absconding debtor"
+      ],
       "audioUrl": "audio/words/3.mp3?v=931cda652d5a",
       "hookAudioUrl": "audio/hooks/3.mp3?v=90a27561675a",
       "senses": [
@@ -335,10 +351,15 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 197583,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin joined abs (\"away\") and tenere (\"to hold\") into abstinere, to keep yourself away from something; English took the word over through Old French.",
+      "roots": [
+        "tenere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "abstain from alcohol",
+        "abstain from meat"
+      ],
       "audioUrl": "audio/words/4.mp3?v=98deec2cd488",
       "hookAudioUrl": "audio/hooks/4.mp3?v=7f13d3a59897",
       "senses": [
@@ -407,11 +428,11 @@
         {
           "senseId": 1264,
           "definition": "Let a vote pass without counting oneself on either side.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To hold back your vote, backing neither side, when a group decides something.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1264.mp3?v=5490dade1d79",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1264.mp3?v=9605d584c17e",
           "examples": [],
           "distractors": []
         }
@@ -454,10 +475,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 746059,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin admonere (\"to remind, warn\"), built on monere (\"to warn\"), the verb that also gives monitor.",
+      "roots": [
+        "monere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "gently admonished",
+        "sternly admonished",
+        "an admonishing finger"
+      ],
       "audioUrl": "audio/words/5.mp3?v=fc8e249a3e64",
       "hookAudioUrl": "audio/hooks/5.mp3?v=5c4f8fa5f573",
       "senses": [
@@ -466,7 +493,7 @@
           "definition": "Call out someone's misbehavior and caution them against doing it again, usually without anger.",
           "plainLanguageDefinition": "To give someone a serious talking-to about what they did wrong.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/7.mp3?v=d1ff0a7cf3ce",
           "examples": [
@@ -526,11 +553,11 @@
         {
           "senseId": 1265,
           "definition": "Give someone a sober word of caution before they act.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To firmly urge someone to do something, or warn them not to, before they act.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1265.mp3?v=ffc8e81ab055",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1265.mp3?v=8c621339e430",
           "examples": [],
           "distractors": []
         }
@@ -577,10 +604,16 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 4420476,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin adulterare (\"to commit adultery\", and also \"to falsify, corrupt\"), built from ad (\"to\") and alter (\"the other\"); adultery comes from the same family.",
+      "roots": [
+        "alter"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "adulterated food",
+        "adulterated milk",
+        "adulterated drugs"
+      ],
       "audioUrl": "audio/words/6.mp3?v=f0c5a2037f2b",
       "hookAudioUrl": "audio/hooks/6.mp3?v=1307bbfc6177",
       "senses": [
@@ -680,10 +713,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 19162,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek aisthetikos (\"of sense perception\"), akin to aisthesis (\"sensation\"). The link to beauty is German: 1700s thinkers named the study of taste after the senses, and English followed in the 1800s.",
+      "roots": [
+        "aisthesis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "aesthetic value",
+        "aesthetic pleasure",
+        "aesthetic appeal"
+      ],
       "audioUrl": "audio/words/7.mp3?v=da9cbd05ebb2",
       "hookAudioUrl": "audio/hooks/7.mp3?v=c353679f70d8",
       "senses": [
@@ -747,11 +786,11 @@
         {
           "senseId": 1266,
           "definition": "Attractive and stylish in a carefully chosen way.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Pleasing to look at, with a style that seems carefully chosen.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1266.mp3?v=9e8ffd7c1769",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1266.mp3?v=d26f40b5b197",
           "examples": [],
           "distractors": []
         }
@@ -774,10 +813,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 4156000,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French agrandir (\"to enlarge\"), from a and grand (\"big\"), which goes back to Latin grandis (\"great\"), as in grandiloquent.",
+      "roots": [
+        "grandis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "aggrandize themselves",
+        "aggrandize himself"
+      ],
       "audioUrl": "audio/words/8.mp3?v=07e5cb99590d",
       "hookAudioUrl": "audio/hooks/8.mp3?v=af706d43d5d7",
       "senses": [
@@ -786,7 +830,7 @@
           "definition": "Make a person or group mightier, or puff up their image beyond what is true.",
           "plainLanguageDefinition": "To build up how powerful or famous someone is, or to make them seem bigger than they are.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/14.mp3?v=ea09e5901854",
           "examples": [
@@ -890,10 +934,14 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 432640,
-      "etymology": null,
+      "etymology": "From Latin alacritas, from alacer (\"brisk, lively\"), which through French and Italian also gave the music term allegro.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "with alacrity",
+        "accepted with alacrity",
+        "responded with alacrity"
+      ],
       "audioUrl": "audio/words/9.mp3?v=e3660e7de2eb",
       "hookAudioUrl": "audio/hooks/9.mp3?v=a8f84465a0c4",
       "senses": [
@@ -902,7 +950,7 @@
           "definition": "A brisk, willing response to a task or request, with no hint of holding back.",
           "plainLanguageDefinition": "Being quick and happy to do something as soon as you are asked.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/15.mp3?v=072eceeb5443",
           "examples": [
@@ -997,10 +1045,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 85207,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin alleviare (\"to lighten\"), from ad and levis (\"light\"), the adjective behind levity: to alleviate pain is to make it lighter.",
+      "roots": [
+        "levis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "alleviate poverty",
+        "alleviate pain",
+        "alleviate suffering"
+      ],
       "audioUrl": "audio/words/10.mp3?v=5f4bc5360918",
       "hookAudioUrl": "audio/hooks/10.mp3?v=bb0305e2c854",
       "senses": [
@@ -1117,12 +1171,16 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1326239,
-      "etymology": null,
+      "etymology": "From Medieval Latin amalgamare, from amalgama (\"mercury alloy\"), from Arabic, from Greek malagma (\"softening ointment\"); mixing metals with mercury led to the general sense of blending into one.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "amalgamated with",
+        "amalgamated into one",
+        "amalgamate the two"
+      ],
       "audioUrl": "audio/words/11.mp3?v=f8a7736b65c9",
-      "hookAudioUrl": "audio/hooks/11.mp3?v=3cce7c9787ca",
+      "hookAudioUrl": "audio/hooks/11.mp3?v=e27a2a57ae98",
       "senses": [
         {
           "senseId": 18,
@@ -1221,7 +1279,7 @@
         }
       ],
       "mnemonics": [
-        "Amalgamate comes from amalgam, the blend of mercury and other metals long used to fill teeth: to amalgamate is to blend things into one."
+        "Amalgamate is related to amalgam, the blend of mercury and other metals long used to fill teeth: to amalgamate is to blend things into one."
       ]
     },
     {
@@ -1232,10 +1290,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 33040,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin ambiguus (\"shifting, doubtful\"), from ambigere (\"to go around, be in doubt\"), built from ambi (\"on both sides\") and agere (\"to drive\").",
+      "roots": [
+        "agere"
+      ],
+      "watchOut": "Ambiguous describes words or situations open to more than one reading; a person torn between feelings is ambivalent.",
+      "pairings": [
+        "ambiguous language",
+        "deliberately ambiguous",
+        "ambiguous statement"
+      ],
       "audioUrl": "audio/words/12.mp3?v=da2f9c21979d",
       "hookAudioUrl": "audio/hooks/12.mp3?v=2b0d4784f4ce",
       "senses": [
@@ -1304,11 +1368,11 @@
         {
           "senseId": 1267,
           "definition": "Not fitting neatly into one category, so its status stays unsettled.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Hard to classify or pin down, so its true nature or status is unclear.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1267.mp3?v=0e7e49056bd7",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1267.mp3?v=7db65b3ef7ec",
           "examples": [],
           "distractors": []
         }
@@ -1347,10 +1411,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 89652,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "The psychiatrist Eugen Bleuler coined German Ambivalenz in 1910 for conflicting feelings held at once, from Latin ambi (\"both\") and valere (\"to be strong\"); English took ambivalence, then ambivalent.",
+      "roots": [
+        "valere"
+      ],
+      "watchOut": "Ambivalent means torn between opposing feelings, not indifferent or uninterested.",
+      "pairings": [
+        "ambivalent feelings",
+        "ambivalent attitude",
+        "deeply ambivalent"
+      ],
       "audioUrl": "audio/words/13.mp3?v=624da5461b07",
       "hookAudioUrl": "audio/hooks/13.mp3?v=764600e51452",
       "senses": [
@@ -1459,10 +1529,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 304693,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Reshaped from the older English meliorate after French améliorer; meliorate comes from Late Latin meliorare (\"to improve\"), from melior (\"better\").",
+      "roots": [
+        "melior"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ameliorate the effects",
+        "ameliorate the situation",
+        "ameliorate conditions"
+      ],
       "audioUrl": "audio/words/14.mp3?v=53a77ffcadee",
       "hookAudioUrl": "audio/hooks/14.mp3?v=5793a009b09d",
       "senses": [
@@ -1471,7 +1547,7 @@
           "definition": "Bring a poor or painful state of affairs up to a better one.",
           "plainLanguageDefinition": "To make a hard situation less bad for the people in it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/23.mp3?v=f194a2ca1aaa",
           "examples": [
@@ -1567,10 +1643,15 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 398875,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek anachronismos, from anachronizomai (\"to refer to the wrong time\"), built from ana (\"up, against\") and chronos (\"time\").",
+      "roots": [
+        "chronos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "historical anachronism",
+        "deliberate anachronism"
+      ],
       "audioUrl": "audio/words/15.mp3?v=aca4f655a7cb",
       "hookAudioUrl": "audio/hooks/15.mp3?v=f87f858b4f86",
       "senses": [
@@ -1634,11 +1715,11 @@
         {
           "senseId": 588,
           "definition": "A person, custom or object that seems out of date, as if left over from an earlier age.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Something left over from the past that no longer fits in today's world.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/588.mp3?v=00c6409f6f17",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/588.mp3?v=3a66cf271cf6",
           "examples": [],
           "distractors": []
         }
@@ -1656,10 +1737,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 29783,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin analogus, from Ancient Greek analogos (\"proportionate\"), built on logos (\"reckoning\"); Greek analogia, formed from analogos, gave English analogy.",
+      "roots": [
+        "logos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "closely analogous",
+        "directly analogous",
+        "analogous situation"
+      ],
       "audioUrl": "audio/words/16.mp3?v=e3a7b7e1428f",
       "hookAudioUrl": "audio/hooks/16.mp3?v=a4a58f673c12",
       "senses": [
@@ -1728,11 +1815,11 @@
         {
           "senseId": 1249,
           "definition": "In biology, of body parts in different species, serving the same purpose though they evolved separately.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In biology, describes body parts of different animals that do the same job but evolved separately.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1249.mp3?v=c79d4696a398",
+          "audioUrl": "audio/definitions/1249.mp3?v=26407989818c",
           "examples": [],
           "distractors": []
         }
@@ -1783,10 +1870,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 77367,
-      "etymology": null,
+      "etymology": "With the prefix an (\"not\"), Greek turned homalos (\"level\") into anomalos (\"uneven\"), whose noun anomalia came into English through Latin.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "apparent anomaly",
+        "statistical anomaly",
+        "strange anomaly"
+      ],
       "audioUrl": "audio/words/17.mp3?v=acd2e24341f1",
       "hookAudioUrl": "audio/hooks/17.mp3?v=fb2b8deec09e",
       "senses": [
@@ -1855,11 +1946,11 @@
         {
           "senseId": 1250,
           "definition": "In astronomy, an angle giving a planet's position along its orbit, counted from its closest approach to the sun.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In astronomy, an angle that tells where a planet is along its orbit.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1250.mp3?v=2dd15b0b4e5b",
+          "audioUrl": "audio/definitions/1250.mp3?v=fce3eae5f78d",
           "examples": [],
           "distractors": []
         }
@@ -1906,10 +1997,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 216430,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Through French and Latin from Ancient Greek antipatheia, from anti (\"against\") and pathos (\"feeling, suffering\").",
+      "roots": [
+        "pathos"
+      ],
+      "watchOut": "Antipathy is strong dislike, not a lack of feeling; a lack of interest or feeling is apathy.",
+      "pairings": [
+        "antipathy toward",
+        "mutual antipathy",
+        "strong antipathy"
+      ],
       "audioUrl": "audio/words/18.mp3?v=43beb00c3e51",
       "hookAudioUrl": "audio/hooks/18.mp3?v=591d53ef4cce",
       "senses": [
@@ -1973,11 +2070,11 @@
         {
           "senseId": 1251,
           "definition": "A person or thing that someone cannot stand.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "The person or thing that someone strongly dislikes.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1251.mp3?v=00dfc34cfb08",
+          "audioUrl": "audio/definitions/1251.mp3?v=4e716ce0ed75",
           "examples": [],
           "distractors": []
         }
@@ -2032,10 +2129,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 110184,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French and Latin from Ancient Greek apatheia (\"freedom from emotion\"), from a (\"without\") and pathos (\"feeling, suffering\").",
+      "roots": [
+        "pathos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "political apathy",
+        "public apathy",
+        "voter apathy"
+      ],
       "audioUrl": "audio/words/19.mp3?v=a986900e60a5",
       "hookAudioUrl": "audio/hooks/19.mp3?v=41464686955c",
       "senses": [
@@ -2143,10 +2246,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 235100,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French apeser (\"to bring to peace\"), built on pais (\"peace\"), which comes from Latin pax.",
+      "roots": [
+        "pax"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "appease the gods",
+        "appease the public",
+        "appease critics"
+      ],
       "audioUrl": "audio/words/20.mp3?v=3159de779b4a",
       "hookAudioUrl": "audio/hooks/20.mp3?v=0d276f312487",
       "senses": [
@@ -2155,7 +2264,7 @@
           "definition": "Buy calm from an angry or threatening party by handing over part of what it wants.",
           "plainLanguageDefinition": "To say yes to some demands so an angry person will back off.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/37.mp3?v=f3240805d225",
           "examples": [
@@ -2215,11 +2324,11 @@
         {
           "senseId": 1252,
           "definition": "Take the edge off a hunger or craving for a time.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To satisfy a hunger or craving for a while.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1252.mp3?v=f999f696ee2f",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1252.mp3?v=cbd4dd15b2fd",
           "examples": [],
           "distractors": []
         }
@@ -2274,10 +2383,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 127007,
-      "etymology": null,
+      "etymology": "From Latin arduus (\"steep, high, hard to reach\"): an arduous task is an uphill climb.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "arduous task",
+        "arduous journey",
+        "arduous process"
+      ],
       "audioUrl": "audio/words/21.mp3?v=f0f548d7b38e",
       "hookAudioUrl": "audio/hooks/21.mp3?v=1bd81d9609f3",
       "senses": [
@@ -2389,10 +2502,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 51198,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin articulare (\"to divide into joints\", and so \"to speak distinctly\"), from articulus (\"small joint\"), which also gave article.",
+      "roots": [
+        "articulus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "clearly articulated",
+        "articulate a vision",
+        "articulate their needs"
+      ],
       "audioUrl": "audio/words/22.mp3?v=ddf33fa6c9dc",
       "hookAudioUrl": "audio/hooks/22.mp3?v=4eb13f88a996",
       "senses": [
@@ -2401,7 +2520,7 @@
           "definition": "Express an idea or emotion in exact and orderly language.",
           "plainLanguageDefinition": "To put an idea into words so plainly that others get it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/43.mp3?v=7d35845b84fd",
           "examples": [
@@ -2461,11 +2580,11 @@
         {
           "senseId": 1253,
           "definition": "Pronounce every syllable crisply and distinctly.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To pronounce each sound or word clearly.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1253.mp3?v=1cf100c20fae",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1253.mp3?v=b79c6d0d2f35",
           "examples": [],
           "distractors": []
         }
@@ -2504,12 +2623,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 121411,
-      "etymology": null,
+      "etymology": "From Ancient Greek asketikos, from asketes (\"monk, hermit\"), from askeo (\"to exercise, train\"): ascetics trained themselves to go without comforts.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Ascetic is easily confused with aesthetic, but it has nothing to do with beauty: it means giving up comforts on purpose.",
+      "pairings": [
+        "ascetic life",
+        "ascetic practices",
+        "ascetic ideal"
+      ],
       "audioUrl": "audio/words/23.mp3?v=2a286c2c2cda",
-      "hookAudioUrl": "audio/hooks/23.mp3?v=2c4eb7e5ada3",
+      "hookAudioUrl": "audio/hooks/23.mp3?v=afd0718cfb5a",
       "senses": [
         {
           "senseId": 46,
@@ -2586,7 +2709,7 @@
         }
       ],
       "mnemonics": [
-        "Ascetic comes from the Greek askesis, \"exercise\": an ascetic trains the body to do without comforts."
+        "Ascetic comes from the Greek askeo, \"to exercise\": an ascetic trains the body to do without comforts."
       ]
     },
     {
@@ -2597,10 +2720,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 488087,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French asuagier (\"to calm\"), from a Vulgar Latin verb built on Latin suavis (\"sweet\"), the source of suave.",
+      "roots": [
+        "suavis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "assuage fears",
+        "assuage his guilt",
+        "assuage concerns"
+      ],
       "audioUrl": "audio/words/24.mp3?v=df003aad6165",
       "hookAudioUrl": "audio/hooks/24.mp3?v=dcb9b1dbfe91",
       "senses": [
@@ -2664,22 +2793,22 @@
         {
           "senseId": 579,
           "definition": "Satisfy a need of the body, such as thirst or hunger.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To satisfy hunger, thirst or a similar need of the body.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/579.mp3?v=8df67bc02732",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/579.mp3?v=b5d8c30c4cdf",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 580,
           "definition": "Cause to be more favorably inclined; gain the good will of.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To calm someone and win their goodwill.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/580.mp3?v=efafef71a215",
+          "audioUrl": "audio/definitions/580.mp3?v=b231c746beb6",
           "examples": [],
           "distractors": []
         }
@@ -2734,10 +2863,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 326001,
-      "etymology": null,
+      "etymology": "Latin audere (\"to dare\") gave the adjective audax (\"bold\") and the noun audacia, which English turned into audacious.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "audacious plan",
+        "audacious move",
+        "audacious attempt"
+      ],
       "audioUrl": "audio/words/25.mp3?v=a78db60e5864",
       "hookAudioUrl": "audio/hooks/25.mp3?v=76fa7bf84abc",
       "senses": [
@@ -2804,7 +2937,7 @@
           "plainLanguageDefinition": "Disrespectfully bold and showing no regard for normal rules or manners.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
+          "alsoMeans": true,
           "audioUrl": "audio/definitions/52.mp3?v=8b56e710f394",
           "examples": [
             {
