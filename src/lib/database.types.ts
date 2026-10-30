@@ -595,6 +595,13 @@ export type Database = {
           due_count: number
         }[]
       }
+      due_forecast_local: {
+        Args: { p_day_ends: string[] }
+        Returns: {
+          day_index: number
+          due_count: number
+        }[]
+      }
       retention_rate: { Args: { p_since: string }; Returns: number }
       submit_review: {
         Args: {

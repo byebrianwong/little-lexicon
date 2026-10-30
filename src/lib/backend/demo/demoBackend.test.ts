@@ -189,6 +189,31 @@ describe('DemoBackend saved words and the tracker', () => {
     ]);
   });
 
+  it('gives the schedule of each word it holds', async () => {
+    const backend = new DemoBackend();
+    await backend.submitReview({
+      wordId: 6,
+      card,
+      rating: 3,
+      stateBefore: 'new',
+      gameMode: 'cloze',
+      responseMs: 3000,
+      retrievability: null,
+      xp: 5,
+      isNew: true,
+    });
+    await backend.markKnown([7]);
+
+    const schedules = await new DemoBackend().getWordSchedules();
+    expect(schedules.find((s) => s.wordId === 6)).toEqual({
+      wordId: 6,
+      due: card.due,
+      isKnown: false,
+      isSuspended: false,
+    });
+    expect(schedules.find((s) => s.wordId === 7)).toMatchObject({ isKnown: true });
+  });
+
   it('gives a profile saved by an older version the default for known words', async () => {
     await AsyncStorage.setItem(
       KEY,
@@ -199,5 +224,40 @@ describe('DemoBackend saved words and the tracker', () => {
     );
     const profile = await new DemoBackend().getProfile();
     expect(profile).toMatchObject({ displayName: 'Old', dailyGoal: 20, knownWordFrequency: 'rarely' });
+  });
+});
+
+describe('DemoBackend upcoming reviews', () => {
+  it("counts overdue words in today's bar and leaves out known and suspended words", async () => {
+    const now = Date.now();
+    const yesterday = new Date(now - 86_400_000).toISOString();
+    const row = (wordId: number, due: string, extra: object = {}) => ({
+      ...stateRow(wordId),
+      due,
+      ...extra,
+    });
+    await AsyncStorage.setItem(
+      KEY,
+      JSON.stringify({
+        wordIdScheme: 'words-file',
+        states: {
+          6: row(6, yesterday),
+          7: row(7, new Date(now - 60_000).toISOString()),
+          8: row(8, new Date(now + 86_400_000).toISOString()),
+          9: row(9, yesterday, { is_known: true }),
+          10: row(10, yesterday, { is_suspended: true }),
+        },
+      }),
+    );
+    const backend = new DemoBackend();
+
+    const counts = await backend.getProgressCounts();
+    const forecast = await backend.getForecast(14);
+
+    expect(counts.due).toBe(2);
+    expect(forecast).toHaveLength(14);
+    expect(forecast[0]!.dueCount).toBe(2);
+    expect(forecast[1]!.dueCount).toBe(1);
+    expect(forecast.reduce((sum, f) => sum + f.dueCount, 0)).toBe(3);
   });
 });

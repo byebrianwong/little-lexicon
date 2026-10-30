@@ -18,6 +18,7 @@ import type {
   SessionItem,
   UserWordState,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
 import { addDays, toDayString } from '@/lib/date';
 import type {
@@ -37,6 +38,7 @@ import type {
 } from '../types';
 import { orderFeed, pickNewWordIds } from '@/features/feed/wordOrder';
 import { parseKnownWordFrequency } from '@/features/games/practice';
+import { forecastWindow } from '@/features/stats/forecast';
 import type { AnswerRecord } from '@/features/tracker/tracker';
 
 /**
@@ -442,6 +444,22 @@ export class SupabaseBackend implements Backend {
     ];
   }
 
+  async getWordSchedules(): Promise<WordSchedule[]> {
+    const rows = await fetchAllRows((from, to) =>
+      supabase
+        .from('user_word_state')
+        .select('word_id, due, is_known, is_suspended')
+        .order('word_id')
+        .range(from, to),
+    );
+    return rows.map((r) => ({
+      wordId: r.word_id,
+      due: r.due,
+      isKnown: r.is_known,
+      isSuspended: r.is_suspended,
+    }));
+  }
+
   async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {
     const userId = await this.requireUserId();
     const { error } = await supabase.from('practice_logs').insert({
@@ -574,12 +592,15 @@ export class SupabaseBackend implements Backend {
   }
 
   async getForecast(days: number): Promise<ForecastDay[]> {
-    const { data, error } = await supabase.rpc('due_forecast', { p_days: days });
+    // The device sends its own day boundaries, so the days are local days,
+    // as in demo mode, and not the database's (UTC) days.
+    const window = forecastWindow(days);
+    const { data, error } = await supabase.rpc('due_forecast_local', {
+      p_day_ends: window.map((d) => d.end.toISOString()),
+    });
     if (error) throw new Error(error.message);
-    return (data ?? []).map((r: { day: string; due_count: number }) => ({
-      day: r.day,
-      dueCount: Number(r.due_count),
-    }));
+    const counts = new Map((data ?? []).map((r) => [r.day_index, Number(r.due_count)]));
+    return window.map((d, i) => ({ day: d.day, dueCount: counts.get(i) ?? 0 }));
   }
 
   async getDailyStatsRange(days: number): Promise<DailyStats[]> {

@@ -4034,3 +4034,196 @@ an OTA update is enough once the site has deployed the clips.
   "Definition" on insouciant played the stored `file://` MP3 to the end,
   about 4.5 seconds for the 4.39-second `definitions/748.mp3`.
 - Not run: Android.
+
+## The words you are learning, with stats on each (2026-10-29)
+
+Brian asked for an easy way to see the words being learned and stats about
+them. Before this, the only list of them was Words, All words, Filters,
+Status, Learning. Home and Progress showed counts that could not be opened,
+and the counts did not match that filter.
+
+### Decisions (Brian chose each of these)
+
+- **Both places.** The Words tab has a fourth view, Learning, and the counts
+  on Home and Progress open it.
+- **The word tracker decides Learning and Known everywhere.** Home and
+  Progress used to count from the review schedule: Learning was cards in
+  FSRS learning steps, and Known was cards in review state or marked known.
+  One or two right answers could make a word Known on Home while Saved said
+  "Learning (1 of 5 days)". Now both counts use the tracker's rule (right on
+  5 separate days, no mistake since), so each count is the length of the list
+  it opens. Due stays on the review schedule.
+- **Every stat offered:** answers and accuracy, progress toward known, the
+  next review, and the days the word was first tested and saved.
+
+### What changed
+
+- **The Learning view** (`src/features/learning/LearningView.tsx`). A switch
+  at the top picks Learning, Due or Known, each with its count, and a line
+  under it says what the list holds. Rows are most recently answered first.
+  Each row shows the word, its definition, five bars for the days toward
+  known ("2 of 5 days"), and "4 of 5 right · next review in 3 days". Tapping a
+  row lists Answers (with the percentage), Latest (only past 5 answers),
+  Last tested, Next review, First tested and Saved, with the word's audio and
+  the Save control. Due also offers "Start a session".
+- **The lists and their counts come from one pure function**, `groupWords` in
+  `src/features/learning/wordProgress.ts` (unit tested). Learning and Known
+  are the tracker's two statuses. Due uses the session's rule: due time
+  passed, not marked known, not paused. A due word is also in Learning or
+  Known. Words no longer in the words file are left out.
+- **Home and Progress.** Their Learning, Due and Known numbers come from the
+  same lists, and each opens its list (`openWords` in
+  `src/features/learning/links.ts`). `Stat` in `ui.tsx` takes `onPress`, and
+  draws a small arrow after the label when it has one. Progress lost "In
+  review", a schedule figure with no list behind it.
+- **The link.** `openWords` navigates to `/browse?view=learning&status=due`.
+  The Words screen applies the params, then clears them with `setParams`, so
+  the same link works again after the user switches views.
+- **Backend:** `getWordSchedules()` returns each `user_word_state` row's due
+  time and its known and paused flags. Supabase reads it a page at a time.
+  RLS already limits the read to the user's own rows; no migration.
+- **The tracker** also keeps the total answers, the right ones, and the time
+  of the first answer.
+- `formatShortDate` ("Oct 3") and `formatDaysAgo` ("yesterday") in
+  `src/lib/date.ts`, written by hand rather than through `Intl` so every
+  platform reads the same.
+- **The Words switch** has four views now. It fits one line on a 360-point
+  phone with a 16-point gap (it was 24). A narrower screen wraps "All words"
+  to a second line instead of cutting it off.
+- `useMarkKnown` refreshes the schedules instead of the old counts.
+
+### What the learner sees differently
+
+- **Known on Home drops for most learners**, because the tracker's rule is
+  stricter than the schedule's. Words marked "I know it" in Discover, or in
+  the old placement test, have no answers, so they are in none of the lists.
+  They still stay out of sessions, as before. The All words filter already
+  treated them as "Not tested".
+- Achievements still count words started from the schedule
+  (`getProgressCounts().total`). Nothing else reads `getProgressCounts` now.
+
+### Verified
+
+- `tsc`, lint and 367 jest tests. New tests cover the grouping, the counts,
+  the next-review wording, the row's facts, the link params, the new tracker
+  fields, the date wording and `getWordSchedules` in both backends (Supabase
+  across more than one page).
+- Web (demo mode, dev server) with a seeded history: Home showed Due now 2,
+  Learning 4, Known 2. Tapping Learning opened the Learning view on that list;
+  an open row showed the facts above. Due and Known switched lists. After
+  switching to Discover, Due on Progress opened the Learning view on Due, so
+  the cleared params work a second time. The switch fits at 360 and 375 px
+  and wraps at 320 px; desktop width (1200 px) is unchanged apart from the new
+  view. No new console errors (the two `accessibilityElementsHidden` warnings
+  come from `Icon` and appear on main too).
+- Storybook: the static build passes. All 46 Home, Progress and Words stories
+  (10 of them new, under Screens/Words/Learning) finish with their play
+  functions passing and no axe violations.
+- Not run: the iOS simulator, the Android emulator and Supabase mode.
+
+### For next time
+
+- Home and Progress now read the whole answer history, as the Words tab
+  already did. If histories grow large, the SQL function suggested under
+  "Saved words in every mode" (one row per word) would serve all three.
+- Chromatic will show the changed Home, Progress and Words stories as visual
+  changes to accept.
+
+## Upcoming reviews agree with Due (2026-10-29)
+
+The Progress screen's "Upcoming reviews" chart (next 14 days) could show fewer
+words for today than the Due count above it. With a demo history of one word
+due yesterday and one due a minute ago, Due read 2 and today's bar read 1.
+
+### Cause
+
+- **Overdue words were in no bar.** Both backends counted only words whose due
+  date fell on the bar's day (`getForecast` in the demo backend, and
+  `due_forecast` from 0004). Due counts every word with `due <= now`.
+- **`due_forecast` counted words marked known.** Due, the session's due queue
+  and the demo backend leave them out.
+- **`due_forecast` used the database's days** (`current_date`, `due::date`),
+  which are UTC on Supabase. The rest of the app uses the device's local days
+  (`src/lib/date.ts`). For a learner in Los Angeles, a word due at 9 pm local
+  time was counted on the next day's bar.
+
+### What changed
+
+- `src/features/stats/forecast.ts`: `forecastWindow` lists the next N local
+  days with the local midnight that ends each one. `bucketDueDates` counts due
+  dates into those days, and anything due before today ends counts in today's
+  bar. Unit tested.
+- Demo backend: `getForecast` uses `bucketDueDates`.
+- Migration `0015_due_forecast_local_days.sql` adds
+  `due_forecast_local(p_day_ends timestamptz[])`. The device sends the local
+  day ends from `forecastWindow`. The function returns one count per day
+  index, with overdue words in day 0 and known and suspended words left out.
+  The Supabase backend calls it and labels the rows with the device's own day
+  strings.
+- 0015 also replaces `due_forecast(int)` with the overdue and known-word
+  fixes, for app versions published before this change. It still uses UTC
+  days.
+- `database.types.ts`: `due_forecast_local` added by hand, in the generator's
+  format.
+- Story fixture: the forecast now starts today, and today's bar (27) is above
+  the fixture's Due count (23). Chromatic will show a diff on the Stats
+  stories.
+
+### Decisions
+
+- **Overdue words go in today's bar**, not in a separate "Overdue" bar. Every
+  row of the chart stays a date, and today's bar is what is left to review
+  today: Due plus anything due later today.
+- **The device sends its day boundaries**, not a UTC offset or a time zone
+  name. An offset is wrong once a daylight saving change falls inside the 14
+  days. A time zone name depends on the device's `Intl` support and on Postgres
+  knowing the same name. The boundaries come from the same `addDays` and
+  `startOfDay` the rest of the app uses, so both backends bucket the same way.
+- **A new function name, not an overload of `due_forecast`.** PostgREST can
+  pick an overload by argument name, but the generated types would then
+  describe `due_forecast` as a union of two signatures.
+- **`due_forecast(int)` is kept.** Merging to main publishes an EAS Update, and
+  an installed build calls the old function until it downloads the update.
+  Drop it in a later migration.
+
+### Order of deployment
+
+0015 had to be applied before merging: the new bundle calls
+`due_forecast_local`, and without 0015 that call fails. The "Upcoming reviews"
+section is then empty with no message, because `StatsView` draws nothing when
+the forecast query fails. That missing error state predates this change.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (39 suites, 349 tests)
+  pass. The forecast and backend suites also pass with `TZ` set to
+  America/Los_Angeles, Asia/Kolkata, Pacific/Kiritimati and America/Sao_Paulo.
+- The new demo backend test fails on the old code (today's bar 1, expected 2).
+- PGlite (Postgres 17.5), migrations 0001 to 0015, as the `authenticated` role:
+  9 of 9 checks. `due_forecast_local` puts overdue words and a word due at
+  21:00 Los Angeles time (05:00 UTC the next day) in today's row, and a word
+  due at local midnight in the next row. It leaves out known words, suspended
+  words, other users' words and words due after the last day, and returns no
+  rows for an empty or null array. `due_forecast(int)` counts overdue words in
+  today and leaves out known words. Both run for `authenticated` and not for
+  `anon`.
+- Web, demo mode, headless Chromium, with a seeded history (one word due
+  yesterday, one due a minute ago, one due tomorrow, two known): before the
+  change, Due 2 and today's bar 1. After, Due 2, today's bar 2, tomorrow's 1,
+  and no bar counts the known words. The two "Cannot manually set color
+  scheme" page errors appear on both versions.
+
+### Applied (2026-10-29)
+
+0015 was applied to the games-apps project in one transaction, through the
+Management API's SQL endpoint (the same route as 0014, so it is not in the
+CLI's migration history). Checked afterwards: `due_forecast_local` is stable
+and security invoker, executable by `authenticated` and not by `anon`;
+`due_forecast(int)` has the overdue and known-word fixes and kept its grants.
+`due_forecast_local` called as `authenticated` returns one row per day. The
+types generated from the project match the committed `database.types.ts`
+byte for byte.
+
+### Not run
+
+- The iOS simulator and the Android emulator.

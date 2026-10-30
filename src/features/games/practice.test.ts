@@ -107,6 +107,9 @@ function tracker(wordId: number, overrides: Partial<WordTracker> = {}): WordTrac
     mistakeRecently: false,
     latestRight: 1,
     latestCount: 1,
+    answers: 1,
+    rightAnswers: 1,
+    firstAnsweredAt: '2026-10-20T10:00:00.000Z',
     lastAnsweredAt: '2026-10-20T10:00:00.000Z',
     ...overrides,
   };

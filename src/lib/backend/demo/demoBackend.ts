@@ -12,6 +12,7 @@ import type {
   SessionItem,
   UserWordState,
   WordContent,
+  WordSchedule,
 } from '@/lib/types';
 import { todayString, toDayString, addDays } from '@/lib/date';
 import type {
@@ -33,6 +34,7 @@ import { normalizeAnswer } from '@/lib/text';
 import { legacyIdMap, remapWordIds } from './legacyWordIds';
 import { orderFeed, pickNewWordIds, type CatalogEntry } from '@/features/feed/wordOrder';
 import { DEFAULT_KNOWN_WORD_FREQUENCY } from '@/features/games/practice';
+import { bucketDueDates } from '@/features/stats/forecast';
 import type { AnswerRecord } from '@/features/tracker/tracker';
 
 const STORAGE_KEY = 'little_lexicon.demo.v1';
@@ -386,6 +388,16 @@ export class DemoBackend implements Backend {
     ];
   }
 
+  async getWordSchedules(): Promise<WordSchedule[]> {
+    await this.ensureLoaded();
+    return Object.values(this.data.states).map((r) => ({
+      wordId: r.word_id,
+      due: r.due,
+      isKnown: r.is_known,
+      isSuspended: r.is_suspended,
+    }));
+  }
+
   async logPracticeAnswer(input: PracticeAnswerInput): Promise<void> {
     await this.ensureLoaded();
     this.data.practiceLogs = [
@@ -501,16 +513,10 @@ export class DemoBackend implements Backend {
 
   async getForecast(days: number): Promise<ForecastDay[]> {
     await this.ensureLoaded();
-    const out: ForecastDay[] = [];
-    const base = new Date();
-    for (let i = 0; i < days; i++) {
-      const day = toDayString(addDays(base, i));
-      const dueCount = Object.values(this.data.states).filter(
-        (r) => !r.is_suspended && !r.is_known && toDayString(new Date(r.due)) === day,
-      ).length;
-      out.push({ day, dueCount });
-    }
-    return out;
+    const dueTimes = Object.values(this.data.states)
+      .filter((r) => !r.is_suspended && !r.is_known)
+      .map((r) => Date.parse(r.due));
+    return bucketDueDates(dueTimes, days);
   }
 
   async getDailyStatsRange(days: number): Promise<DailyStats[]> {

@@ -99,6 +99,17 @@ export interface UserWordState {
   isSuspended: boolean;
 }
 
+// When the review schedule brings a word back, for the Learning view. One per
+// word with a user_word_state row: a word introduced in a session or speed
+// round, or marked known.
+export interface WordSchedule {
+  wordId: number;
+  due: string; // ISO
+  /** Marked known ("I know it" in Discover, or the old placement test). Never due. */
+  isKnown: boolean;
+  isSuspended: boolean;
+}
+
 // A single item to present in a session: the word content plus (optional)
 // existing SRS state. `isNew` is true when there is no user_word_state yet.
 export interface SessionItem {

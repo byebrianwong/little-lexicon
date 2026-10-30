@@ -337,23 +337,55 @@ export function Label({
   );
 }
 
-/** A number with a small-caps label under it. */
+/**
+ * A number with a small-caps label under it. With `onPress` it opens what it
+ * counts, and an arrow after the label says so.
+ */
 export function Stat({
   value,
   label,
+  onPress,
+  accessibilityLabel,
   className,
 }: {
   value: string | number;
   label: string;
+  onPress?: () => void;
+  /** For a tappable stat: what it counts and what a tap does. */
+  accessibilityLabel?: string;
   className?: string;
 }) {
+  const number = (
+    <Text className="font-serif-medium text-[34px] leading-[38px] text-ink">{value}</Text>
+  );
+  if (!onPress) {
+    return (
+      <View className={tw(cx('flex-1 gap-1'), className)}>
+        {number}
+        <Label>{label}</Label>
+      </View>
+    );
+  }
   return (
-    <View className={tw(cx('flex-1 gap-1'), className)}>
-      <Text className="font-serif-medium text-[34px] leading-[38px] text-ink">
-        {value}
-      </Text>
-      <Label>{label}</Label>
-    </View>
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={accessibilityLabel}
+      onPress={onPress}
+      // The padding gives the press and hover fill some room; the negative
+      // margin keeps the number lined up with a plain Stat.
+      className={tw(
+        cx(
+          '-mx-2 -my-1 flex-1 gap-1 rounded-[3px] px-2 py-1 active:bg-paper-deep web:hover:bg-paper-deep',
+        ),
+        className,
+      )}
+    >
+      {number}
+      <View className="flex-row items-center gap-1">
+        <Label>{label}</Label>
+        <Icon name="arrow-right" size={12} color={colors.graphite} />
+      </View>
+    </Pressable>
   );
 }
 

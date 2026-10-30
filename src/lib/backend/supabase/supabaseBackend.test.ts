@@ -4,6 +4,7 @@
 // per test. No network is involved.
 
 import { loadContent } from '@/lib/content';
+import { addDays, toDayString } from '@/lib/date';
 import { SupabaseBackend } from './supabaseBackend';
 
 type Row = Record<string, unknown>;
@@ -324,6 +325,27 @@ describe('SupabaseBackend answer history', () => {
   });
 });
 
+describe('SupabaseBackend word schedules', () => {
+  it('gives each word its due time and flags, past the first page', async () => {
+    mockTables.user_word_state = [
+      stateRow(5, '2026-10-01T10:00:00.000Z'),
+      stateRow(6, FUTURE, { is_known: true }),
+      ...Array.from({ length: 1200 }, (_, i) => stateRow(1000 + i, FUTURE)),
+    ];
+
+    const schedules = await new SupabaseBackend().getWordSchedules();
+
+    expect(schedules).toHaveLength(1202);
+    expect(schedules[0]).toEqual({
+      wordId: 5,
+      due: '2026-10-01T10:00:00.000Z',
+      isKnown: false,
+      isSuspended: false,
+    });
+    expect(schedules[1]).toMatchObject({ wordId: 6, isKnown: true });
+  });
+});
+
 describe('SupabaseBackend personalization', () => {
   it('sends the headword and definition to the Edge Function', async () => {
     mockInvoke.mockResolvedValue({ data: { kind: 'mnemonic', text: 'A hook.' }, error: null });
@@ -429,6 +451,42 @@ describe('SupabaseBackend profile', () => {
     mockUserMetadata = { display_name: { nested: true } };
     const profile = await new SupabaseBackend().getProfile();
     expect(profile.displayName).toBeNull();
+  });
+});
+
+describe('SupabaseBackend upcoming reviews', () => {
+  it("sends the device's local day boundaries and labels the counts with local days", async () => {
+    mockRpc.mockResolvedValue({
+      data: [
+        { day_index: 0, due_count: 5 },
+        { day_index: 1, due_count: 2 },
+      ],
+      error: null,
+    });
+
+    const forecast = await new SupabaseBackend().getForecast(3);
+
+    expect(mockRpc).toHaveBeenCalledTimes(1);
+    const [fn, args] = mockRpc.mock.calls[0] as [string, { p_day_ends: string[] }];
+    expect(fn).toBe('due_forecast_local');
+    const ends = args.p_day_ends.map((s) => new Date(s));
+    expect(ends).toHaveLength(3);
+    for (const [i, end] of ends.entries()) {
+      // Each end is a local midnight, one local day after the one before.
+      expect([end.getHours(), end.getMinutes(), end.getSeconds()]).toEqual([0, 0, 0]);
+      expect(toDayString(end)).toBe(toDayString(addDays(new Date(), i + 1)));
+    }
+    // A day the server leaves out reads as zero.
+    expect(forecast).toEqual([
+      { day: toDayString(new Date()), dueCount: 5 },
+      { day: toDayString(addDays(new Date(), 1)), dueCount: 2 },
+      { day: toDayString(addDays(new Date(), 2)), dueCount: 0 },
+    ]);
+  });
+
+  it('reports a failed read', async () => {
+    mockRpc.mockResolvedValue({ data: null, error: { message: 'boom' } });
+    await expect(new SupabaseBackend().getForecast(14)).rejects.toThrow('boom');
   });
 });
 

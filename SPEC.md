@@ -95,6 +95,14 @@ Every screen that shows a word has a Save for later control: the Discover feed, 
 
 The tracker is built on the device from `review_logs` and `practice_logs` (`src/features/tracker`). Per word: answers in the past 7 days, how many of the last 5 answers were right, and whether the word is known. A word is known once it has been answered right on 5 separate days (local time) with no mistake since; any mistake, in any mode, starts the count again.
 
+The Learning view of the Words tab lists every word the user has started, in three lists (`src/features/learning`):
+
+- Learning: answered, and not known by the tracker's rule.
+- Known: known by the tracker's rule.
+- Due: due now on the review schedule (FSRS), the words a session would review. A due word is also in Learning or Known.
+
+Each row shows the days toward known, the right answers out of all answers and the next review. An open row adds the latest answers, when the word was last and first tested, and when it was saved. The Learning, Due and Known counts on Home and Progress are the lengths of these lists, and tapping one opens its list. A word marked "I know it" with no answers is in none of them.
+
 Endless practice draws from the whole collection, weighted per word (`src/features/games/practice.ts`). Saved words fill about half of the picks when every word has the same weight. A word with a mistake in the past 7 days has twice the weight. A known word has 0.2 (Rarely, the default), 0.5 (Sometimes) or 1 (As often as others) of the weight. A word does not come back within 8 picks. Sessions stay on FSRS and do not read the tracker.
 
 ## 5. Content pipeline (Phase 1)
@@ -136,7 +144,7 @@ Structured output: prompt the model to return JSON only, parse defensively, stri
 
 - Engagement layer: streaks with a limited streak-freeze, XP and levels, an adjustable daily goal, a weekly segmented leaderboard, achievements, immediate positive feedback on correct answers.
 - Anti-gaming rules baked in from the start: XP scales with retrieval difficulty (production and cloze award more than multiple choice), and streak credit requires genuine review completion, not trivial taps. This keeps engagement aligned with learning rather than decoupled from it.
-- Progress views: words known/learning/due, retention percentage, streak, XP and level, a calendar heatmap, and a forecast of upcoming reviews.
+- Progress views: words known/learning/due, retention percentage, streak, XP and level, a calendar heatmap, and a forecast of upcoming reviews. Known and learning follow the word tracker and due follows the review schedule (section 4); each count opens its words in the Learning view.
 
 ## 9. Monetization
 

@@ -1,13 +1,17 @@
 // The Words tab: Discover (a feed of unseen words), Saved (every word saved,
-// from here or any game) and All words (the whole collection).
+// from here or any game), Learning (every word started, with its stats) and
+// All words (the whole collection).
+//
+// Home and Progress link here with `view` and `status` params
+// (features/learning/links.ts). The screen applies them, then clears them, so
+// the same link works again after the user has switched views.
 //
 // This screen owns the feed's state and runs every write. What each button
 // does is decided in features/feed/feedState.ts; this file applies the result
 // and keeps "I know it" pending until the word leaves the screen, as that
 // module explains.
 
-import { useQuery } from '@tanstack/react-query';
-import { useFocusEffect } from 'expo-router';
+import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AppState, View } from 'react-native';
 import { BrowseView } from '@/features/browse/BrowseView';
@@ -30,9 +34,12 @@ import {
 } from '@/features/feed/queries';
 import { useWordTrackers } from '@/features/tracker/queries';
 import { useFeedWords } from '@/features/feed/useFeedWords';
+import { LearningView } from '@/features/learning/LearningView';
+import { readWordsParams } from '@/features/learning/links';
+import { useAllWords, useYourWords } from '@/features/learning/queries';
+import type { WordStatus } from '@/features/learning/wordProgress';
 import { useProfile } from '@/features/review/queries';
 import { useSettingsStore } from '@/features/settings/settingsStore';
-import { backend } from '@/lib/backend';
 import { pushOnce } from '@/lib/navigation';
 import type { WordContent } from '@/lib/types';
 
@@ -52,6 +59,11 @@ export default function Words() {
   const soundEnabled = useSettingsStore((s) => s.soundEnabled);
   const profile = useProfile();
   const [view, setView] = useState<WordsViewId>('discover');
+  const [learningStatus, setLearningStatus] = useState<WordStatus>('learning');
+  const { view: viewParam, status: statusParam } = useLocalSearchParams<{
+    view?: string;
+    status?: string;
+  }>();
 
   // A new order each time the app starts, so words scrolled past come back
   // in a different place rather than always first.
@@ -60,11 +72,8 @@ export default function Words() {
   const list = useWordList();
   const saved = useSavedWords();
   const trackers = useWordTrackers();
-  const allWords = useQuery({
-    queryKey: ['allWords'],
-    queryFn: () => backend.getAllWords(),
-    enabled: view === 'all',
-  });
+  const allWords = useAllWords(view === 'all');
+  const yourWords = useYourWords();
 
   // The mutate functions are stable across renders; the hook results are not.
   // Depending on the results would rebuild `settle` every render and fire the
@@ -151,10 +160,21 @@ export default function Words() {
     return out;
   }, [feed.words, listed, pendingKnown, known]);
 
-  function changeView(next: WordsViewId) {
-    if (next !== 'discover') settle(null);
-    setView(next);
-  }
+  const changeView = useCallback(
+    (next: WordsViewId) => {
+      if (next !== 'discover') settle(null);
+      setView(next);
+    },
+    [settle],
+  );
+
+  useEffect(() => {
+    const link = readWordsParams({ view: viewParam, status: statusParam });
+    if (!link.view) return;
+    changeView(link.view);
+    if (link.status) setLearningStatus(link.status);
+    router.setParams({ view: undefined, status: undefined });
+  }, [viewParam, statusParam, changeView]);
 
   function startSession() {
     settle(null);
@@ -197,6 +217,18 @@ export default function Words() {
             pushOnce('/practice');
           }}
           onDiscover={() => changeView('discover')}
+        />
+      ) : null}
+      {view === 'learning' ? (
+        <LearningView
+          words={yourWords.words}
+          failed={yourWords.failed}
+          onRetry={yourWords.retry}
+          status={learningStatus}
+          onChangeStatus={setLearningStatus}
+          soundEnabled={soundEnabled}
+          onToggleSave={saved.toggle}
+          onStartSession={startSession}
         />
       ) : null}
       {view === 'all' ? (

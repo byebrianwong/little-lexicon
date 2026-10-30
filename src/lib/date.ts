@@ -47,3 +47,42 @@ export function formatNextDue(due: Date, now: Date = new Date()): string {
 function inUnits(n: number, unit: string): string {
   return `in ${n} ${unit}${n === 1 ? '' : 's'}`;
 }
+
+const MONTHS = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
+/**
+ * A day as "Oct 3", with the year added when it is not this year's:
+ * "Oct 3, 2025". Spelled out by hand rather than through Intl, so it reads the
+ * same on every platform.
+ */
+export function formatShortDate(d: Date, now: Date = new Date()): string {
+  const day = `${MONTHS[d.getMonth()]} ${d.getDate()}`;
+  return d.getFullYear() === now.getFullYear() ? day : `${day}, ${d.getFullYear()}`;
+}
+
+/**
+ * How long ago a day was, in local calendar days: "today", "yesterday",
+ * "12 days ago", then the date itself from 30 days back.
+ */
+export function formatDaysAgo(d: Date, now: Date = new Date()): string {
+  const days = Math.round(
+    (startOfDay(now).getTime() - startOfDay(d).getTime()) / 86_400_000,
+  );
+  if (days <= 0) return 'today';
+  if (days === 1) return 'yesterday';
+  if (days < 30) return `${days} days ago`;
+  return formatShortDate(d, now);
+}
