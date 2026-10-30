@@ -66150,10 +66150,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1405221,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin respondere, the source of respond, became Italian rispondere, to reply; its noun risposta, an answer, passed into French as riposte and from there into English.",
+      "roots": [
+        "respondere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "witty riposte",
+        "sharp riposte",
+        "quick riposte"
+      ],
       "audioUrl": "audio/words/594.mp3?v=7760e17cff75",
       "hookAudioUrl": "audio/hooks/594.mp3?v=1ca513252da9",
       "senses": [
@@ -66222,11 +66228,11 @@
         {
           "senseId": 1223,
           "definition": "In fencing, the attack a fencer makes in return as soon as the other's blade has been knocked aside.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In fencing, a counterattack made the moment you have pushed aside the other fencer's blade.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1223.mp3?v=2b3dc9a571e3",
+          "audioUrl": "audio/definitions/1223.mp3?v=1d03c547a664",
           "examples": [],
           "distractors": []
         }
@@ -66257,10 +66263,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 172977,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Greek schisma, a split or division, built on schizein, to split; the word came into English by way of Old French.",
+      "roots": [
+        "schizein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "deep schism",
+        "political schism",
+        "internal schisms"
+      ],
       "audioUrl": "audio/words/595.mp3?v=42834a5e6291",
       "hookAudioUrl": "audio/hooks/595.mp3?v=d60c28a910a8",
       "senses": [
@@ -66324,11 +66336,11 @@
         {
           "senseId": 1224,
           "definition": "The breaking away of a church or part of one, so that two bodies now each claim to be the true church.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A split in a church, after which each side claims to be the true church.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1224.mp3?v=6628165e55be",
+          "audioUrl": "audio/definitions/1224.mp3?v=cdf9d79a4e21",
           "examples": [],
           "distractors": []
         }
@@ -66379,10 +66391,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 151681,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French semblance, from sembler, to seem, which goes back through Late Latin to Latin similis, like: a semblance is how a thing seems, not what it is.",
+      "roots": [
+        "similis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "a semblance of order",
+        "semblance of normalcy",
+        "outward semblance"
+      ],
       "audioUrl": "audio/words/596.mp3?v=c44f58299c3d",
       "hookAudioUrl": "audio/hooks/596.mp3?v=e2d212496f46",
       "senses": [
@@ -66609,10 +66627,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 448004,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin squalidus, from squalere, to be rough and filthy, as neglected things are; squalor comes from the same verb.",
+      "roots": [
+        "squalere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "squalid conditions",
+        "squalid surroundings",
+        "squalid room"
+      ],
       "audioUrl": "audio/words/598.mp3?v=b0d22f5a89c0",
       "hookAudioUrl": "audio/hooks/598.mp3?v=f068801c3a9c",
       "senses": [
@@ -66621,7 +66645,7 @@
           "definition": "Grimy, shabby and decaying, with the look of a place nobody can afford to keep up.",
           "plainLanguageDefinition": "So filthy and broken-down that no one should have to live there.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1158.mp3?v=11ccf8818b55",
           "examples": [
@@ -66681,11 +66705,11 @@
         {
           "senseId": 1226,
           "definition": "Shameful and cheap in conduct, with nothing decent about the motives.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Seedy and shameful, like a grubby affair or a deal struck for selfish reasons.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1226.mp3?v=04d8d6074206",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1226.mp3?v=76eeaa722c90",
           "examples": [],
           "distractors": []
         }
@@ -66740,12 +66764,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 365986,
-      "etymology": null,
+      "etymology": "From Old English stǣlwierþe, serviceable, probably from a word for place or foundation plus one for worth. Walter Scott spread the Scots form stalwart, which meant sturdy and brave before it came to mean loyal.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "stalwart supporter",
+        "stalwart champion",
+        "stalwart defender"
+      ],
       "audioUrl": "audio/words/599.mp3?v=da1e81c65661",
-      "hookAudioUrl": "audio/hooks/599.mp3?v=bafaac4d9e5d",
+      "hookAudioUrl": "audio/hooks/599.mp3?v=58dd0dfa7e56",
       "senses": [
         {
           "senseId": 1160,
@@ -66812,11 +66840,11 @@
         {
           "senseId": 1227,
           "definition": "Big-boned and brawny in build.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Big and sturdy, with a strong, solid build.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1227.mp3?v=68a4de24f7fe",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1227.mp3?v=cd3c0d74ea58",
           "examples": [],
           "distractors": []
         }
@@ -66864,7 +66892,7 @@
         }
       ],
       "mnemonics": [
-        "Stalwart comes from Old English stael, place, and weorth, worth: a stalwart friend is worth their place at your side."
+        "Stalwart probably comes from Old English stael, place, and weorth, worth: a stalwart friend is worth their place at your side."
       ]
     },
     {
@@ -66875,7 +66903,7 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1054737,
-      "etymology": null,
+      "etymology": "From Old English sundrian, to separate, built on sundor, apart; the same stem gives asunder and sundry.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -66887,7 +66915,7 @@
           "definition": "Force apart things or people that were joined, so that they cannot easily come back together.",
           "plainLanguageDefinition": "To split up what was together, so badly that it may never be whole again.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1163.mp3?v=0a37545abda4",
           "examples": [
@@ -67095,10 +67123,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 3982794,
-      "etymology": null,
+      "etymology": "Named for Tantalus, punished in Greek myth with water and fruit that always pulled back from his reach, so he could see them but never drink or eat.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "tantalizing glimpse",
+        "tantalizing possibility",
+        "tantalizing hints"
+      ],
       "audioUrl": "audio/words/602.mp3?v=daa2443a387c",
       "hookAudioUrl": "audio/hooks/602.mp3?v=f26343d49974",
       "senses": [
@@ -67194,10 +67226,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 486160,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin titulus, a title or inscription, by way of French titulaire: a titular ruler holds the title and nothing more.",
+      "roots": [
+        "titulus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "titular head",
+        "titular king",
+        "titular leader"
+      ],
       "audioUrl": "audio/words/603.mp3?v=1f85f44ff81a",
       "hookAudioUrl": "audio/hooks/603.mp3?v=e7a81e4eaa36",
       "senses": [
@@ -67261,11 +67299,11 @@
         {
           "senseId": 1228,
           "definition": "Being the figure that a story, song or show is named after.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Giving a book, film or show its title, as its main character often does.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1228.mp3?v=a2560da457d6",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1228.mp3?v=9b9385917159",
           "examples": [],
           "distractors": []
         }
@@ -67308,10 +67346,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 193839,
-      "etymology": null,
+      "etymology": "From Old French travail, suffering, from travailler, to trouble or wear out, which goes back to Late Latin tripalium, a frame of three stakes used for torture. Travel is the same word.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "the travails of",
+        "economic travails",
+        "personal travails"
+      ],
       "audioUrl": "audio/words/604.mp3?v=20288a1930a9",
       "hookAudioUrl": "audio/hooks/604.mp3?v=8358a85cebc8",
       "senses": [
@@ -67380,11 +67422,11 @@
         {
           "senseId": 1229,
           "definition": "The pain and effort of giving birth.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "The hard work and pain of having a baby.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1229.mp3?v=3a4ae362af92",
+          "audioUrl": "audio/definitions/1229.mp3?v=c13738ff7505",
           "examples": [],
           "distractors": []
         }
@@ -67439,10 +67481,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 310762,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin tutela, guardianship, from tueri, to watch over, which also gave tutor: both a guardian and a teacher keep watch over someone.",
+      "roots": [
+        "tueri"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "under the tutelage of",
+        "careful tutelage"
+      ],
       "audioUrl": "audio/words/605.mp3?v=1c3f05e65e01",
       "hookAudioUrl": "audio/hooks/605.mp3?v=940c17a53237",
       "senses": [
@@ -67451,7 +67498,7 @@
           "definition": "Hands-on teaching in which a more skilled person directs and corrects a learner's work.",
           "plainLanguageDefinition": "Being trained by someone who shows you how and checks your work.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1171.mp3?v=63c887d557a6",
           "examples": [
@@ -67511,11 +67558,11 @@
         {
           "senseId": 1201,
           "definition": "The protective care of a guardian who is responsible for someone.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Being looked after, and kept in check, by a guardian or a stronger power.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1201.mp3?v=f98e6a8d658e",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1201.mp3?v=15d29fa82f7a",
           "examples": [],
           "distractors": []
         }
@@ -67554,10 +67601,16 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 526124,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Built from un- and assailable. Assail came through Old French from Latin ad, at, and salire, to leap, so to assail someone is to leap at them.",
+      "roots": [
+        "salire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "unassailable position",
+        "unassailable lead",
+        "unassailable logic"
+      ],
       "audioUrl": "audio/words/606.mp3?v=148d6cee73cf",
       "hookAudioUrl": "audio/hooks/606.mp3?v=781ba96cca1c",
       "senses": [
@@ -67621,11 +67674,11 @@
         {
           "senseId": 1202,
           "definition": "Too well defended to be attacked or captured by force.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "So strongly defended that no attack could take it, like a fortress on a cliff.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1202.mp3?v=c028a38e9c94",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1202.mp3?v=526171a6ffbb",
           "examples": [],
           "distractors": []
         }
@@ -67680,10 +67733,16 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 860855,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From un- and conscionable, an old word made from conscience, which goes back through Latin conscire, to be aware, to scire, to know.",
+      "roots": [
+        "scire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "unconscionable conduct",
+        "unconscionable contract",
+        "an unconscionable time"
+      ],
       "audioUrl": "audio/words/607.mp3?v=de8db1f742ab",
       "hookAudioUrl": "audio/hooks/607.mp3?v=ac0d6d33042a",
       "senses": [
@@ -67692,7 +67751,7 @@
           "definition": "Unfair, cruel or excessive to a shocking degree, beyond any decent excuse.",
           "plainLanguageDefinition": "So wrong or unfair that it is shocking and cannot be defended.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1176.mp3?v=f03d34852d49",
           "examples": [
@@ -67747,11 +67806,11 @@
         {
           "senseId": 1203,
           "definition": "Lacking any inner sense of right and wrong.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Without any conscience, as a person who feels no guilt.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1203.mp3?v=d1136e96496e",
+          "audioUrl": "audio/definitions/1203.mp3?v=fa9edaa9cdbd",
           "examples": [],
           "distractors": []
         }
@@ -67810,10 +67869,16 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 560077,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From un- and mitigated. Mitigate comes from Latin mitigare, to soften, built on mitis, mild, so an unmitigated wrong has had nothing to soften it.",
+      "roots": [
+        "mitis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "unmitigated disaster",
+        "unmitigated evil",
+        "unmitigated gall"
+      ],
       "audioUrl": "audio/words/608.mp3?v=142dd0085c9a",
       "hookAudioUrl": "audio/hooks/608.mp3?v=0356dd42da74",
       "senses": [
@@ -67926,10 +67991,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 398422,
-      "etymology": null,
+      "etymology": "From Middle English unsemli, un- added to seemly, fitting or proper, probably shaped in part by an Old Norse word of the same meaning.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "unseemly haste",
+        "unseemly behavior",
+        "unseemly conduct"
+      ],
       "audioUrl": "audio/words/609.mp3?v=620c5f218de9",
       "hookAudioUrl": "audio/hooks/609.mp3?v=188cca2732e1",
       "senses": [
@@ -67938,7 +68007,7 @@
           "definition": "Wrong for the occasion, in a way that offends the manners people expect there.",
           "plainLanguageDefinition": "Not proper or fitting for the place or the moment.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1179.mp3?v=a461e6b2a151",
           "examples": [
@@ -68050,10 +68119,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 548142,
-      "etymology": null,
+      "etymology": "From Old English unwitende, not knowing, made of un- and a form of the old verb wit, to know (Old English witan).",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "unwitting victim",
+        "unwitting accomplice",
+        "unwitting participants"
+      ],
       "audioUrl": "audio/words/610.mp3?v=907fa36851cc",
       "hookAudioUrl": "audio/hooks/610.mp3?v=c1f970636cee",
       "senses": [
@@ -68122,11 +68195,11 @@
         {
           "senseId": 1204,
           "definition": "Done by accident instead of on purpose.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Happening by mistake, without anyone meaning it to.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1204.mp3?v=083195298b3d",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1204.mp3?v=6954c6282f88",
           "examples": [],
           "distractors": []
         }
@@ -68177,10 +68250,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 330491,
-      "etymology": null,
+      "etymology": "Thought to be up plus shot. An upshot was once the closing shot of an archery match, and the word moved from that end of a contest to the end result of anything.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "the upshot was",
+        "the upshot is that",
+        "the practical upshot"
+      ],
       "audioUrl": "audio/words/611.mp3?v=cb587318d197",
       "hookAudioUrl": "audio/hooks/611.mp3?v=064c71d6249f",
       "senses": [
@@ -68281,10 +68358,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 492351,
-      "etymology": null,
+      "etymology": "From Latin usurpare, to take into use or to seize, by way of Old French. Its first part is probably usus, use; the rest is uncertain, though it is often linked to rapere, to seize.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "usurp the throne",
+        "usurp power",
+        "usurp the authority"
+      ],
       "audioUrl": "audio/words/612.mp3?v=83d8ca77082e",
       "hookAudioUrl": "audio/hooks/612.mp3?v=c990d631fff3",
       "senses": [
@@ -68293,7 +68374,7 @@
           "definition": "Install oneself in a post or power with no lawful claim, displacing the person entitled to it.",
           "plainLanguageDefinition": "To push out a rightful leader and take their power for yourself.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1184.mp3?v=f92ece957266",
           "examples": [
@@ -68353,11 +68434,11 @@
         {
           "senseId": 1205,
           "definition": "Push aside and take over the role or place of something else.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Take over a role that something else used to fill.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1205.mp3?v=ce8c58c776a4",
+          "audioUrl": "audio/definitions/1205.mp3?v=f564732a1651",
           "examples": [],
           "distractors": []
         }
@@ -68408,10 +68489,17 @@
       "syllables": 5,
       "difficultyTier": 2,
       "frequencyRank": 270883,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin variegare, to give something varied colors, from varius, various, and agere, to make; vary and variety come from the same varius.",
+      "roots": [
+        "varius",
+        "agere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "variegated leaves",
+        "variegated foliage",
+        "variegated marble"
+      ],
       "audioUrl": "audio/words/613.mp3?v=7a89c6ecf722",
       "hookAudioUrl": "audio/hooks/613.mp3?v=16b987bc5b44",
       "senses": [
@@ -68475,11 +68563,11 @@
         {
           "senseId": 1206,
           "definition": "Full of variety; diverse in makeup or character.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Mixed and varied, with parts of many sorts, as a crowd or a career can be.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1206.mp3?v=e1bdf34c1f56",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1206.mp3?v=28af6661d514",
           "examples": [],
           "distractors": []
         }
@@ -68530,10 +68618,15 @@
       "syllables": 1,
       "difficultyTier": 5,
       "frequencyRank": 3289733,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French vanter, to boast, which goes back to Latin vanus, empty or vain: to vaunt is to boast with little behind it.",
+      "roots": [
+        "vanus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "much vaunted",
+        "highly vaunted"
+      ],
       "audioUrl": "audio/words/614.mp3?v=74df34c317bc",
       "hookAudioUrl": "audio/hooks/614.mp3?v=af8fd3afb88b",
       "senses": [
@@ -68641,10 +68734,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 93958,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin visceralis, from Latin viscera, the inner organs (singular viscus): a visceral feeling seems to rise from the gut.",
+      "roots": [
+        "viscera"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "visceral reaction",
+        "visceral response",
+        "on a visceral level"
+      ],
       "audioUrl": "audio/words/615.mp3?v=0d463521b8e9",
       "hookAudioUrl": "audio/hooks/615.mp3?v=f8827a43df5c",
       "senses": [
@@ -68653,7 +68752,7 @@
           "definition": "Felt in the gut as an instant, instinctive reaction that comes before any reasoning.",
           "plainLanguageDefinition": "Felt strongly in your gut, as a reaction that comes before thinking.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1188.mp3?v=eacd190ec521",
           "examples": [
@@ -68713,11 +68812,11 @@
         {
           "senseId": 1207,
           "definition": "Relating to the soft organs inside the chest and belly.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Having to do with the body's inner organs, such as the heart and gut.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1207.mp3?v=397da8b404a7",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1207.mp3?v=0822058bc022",
           "examples": [],
           "distractors": []
         }
@@ -68895,10 +68994,14 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 442382,
-      "etymology": null,
+      "etymology": "From Old English wrǣstan, to twist hard, which also gave wrestle; writhe and wry are distant relatives.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "wrest control",
+        "wrest power",
+        "wrest concessions"
+      ],
       "audioUrl": "audio/words/617.mp3?v=faff2e6d2aaf",
       "hookAudioUrl": "audio/hooks/617.mp3?v=39b47f164107",
       "senses": [
@@ -68907,7 +69010,7 @@
           "definition": "Pry something from another's grip, whether a thing in their hands or their control of a place or group.",
           "plainLanguageDefinition": "To fight someone for something they are holding onto and come away with it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1192.mp3?v=15928ebb2a53",
           "examples": [
@@ -68962,11 +69065,11 @@
         {
           "senseId": 1208,
           "definition": "Get something, such as an answer or a living, out of a difficult source through great effort.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Get something out of a hard source by long effort, as a living from poor land.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1208.mp3?v=03710cf7d87b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1208.mp3?v=07e54e501c90",
           "examples": [],
           "distractors": []
         }

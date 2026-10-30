@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:36:19.197Z"
+    "updatedAt": "2026-10-30T08:51:36.653Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1054,
-    "reviews": 1550
+    "mnemonics": 1055,
+    "reviews": 1571
   },
   "words": [
     {
@@ -10648,8 +10648,17 @@
       "syllables": 2,
       "frequency_rank": 1405221,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin respondere, the source of respond, became Italian rispondere, to reply; its noun risposta, an answer, passed into French as riposte and from there into English.",
+      "audio_url": null,
+      "roots": [
+        "respondere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "witty riposte",
+        "sharp riposte",
+        "quick riposte"
+      ]
     },
     {
       "id": 595,
@@ -10659,8 +10668,17 @@
       "syllables": 2,
       "frequency_rank": 172977,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek schisma, a split or division, built on schizein, to split; the word came into English by way of Old French.",
+      "audio_url": null,
+      "roots": [
+        "schizein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "deep schism",
+        "political schism",
+        "internal schisms"
+      ]
     },
     {
       "id": 596,
@@ -10670,8 +10688,17 @@
       "syllables": 2,
       "frequency_rank": 151681,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French semblance, from sembler, to seem, which goes back through Late Latin to Latin similis, like: a semblance is how a thing seems, not what it is.",
+      "audio_url": null,
+      "roots": [
+        "similis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "a semblance of order",
+        "semblance of normalcy",
+        "outward semblance"
+      ]
     },
     {
       "id": 597,
@@ -10692,8 +10719,17 @@
       "syllables": 2,
       "frequency_rank": 448004,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin squalidus, from squalere, to be rough and filthy, as neglected things are; squalor comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "squalere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "squalid conditions",
+        "squalid surroundings",
+        "squalid room"
+      ]
     },
     {
       "id": 599,
@@ -10703,8 +10739,15 @@
       "syllables": 2,
       "frequency_rank": 365986,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English stǣlwierþe, serviceable, probably from a word for place or foundation plus one for worth. Walter Scott spread the Scots form stalwart, which meant sturdy and brave before it came to mean loyal.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "stalwart supporter",
+        "stalwart champion",
+        "stalwart defender"
+      ]
     },
     {
       "id": 600,
@@ -10714,8 +10757,11 @@
       "syllables": 2,
       "frequency_rank": 1054737,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English sundrian, to separate, built on sundor, apart; the same stem gives asunder and sundry.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 601,
@@ -10736,8 +10782,15 @@
       "syllables": 3,
       "frequency_rank": 3982794,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Named for Tantalus, punished in Greek myth with water and fruit that always pulled back from his reach, so he could see them but never drink or eat.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "tantalizing glimpse",
+        "tantalizing possibility",
+        "tantalizing hints"
+      ]
     },
     {
       "id": 603,
@@ -10747,8 +10800,17 @@
       "syllables": 3,
       "frequency_rank": 486160,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin titulus, a title or inscription, by way of French titulaire: a titular ruler holds the title and nothing more.",
+      "audio_url": null,
+      "roots": [
+        "titulus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "titular head",
+        "titular king",
+        "titular leader"
+      ]
     },
     {
       "id": 604,
@@ -10758,8 +10820,15 @@
       "syllables": 2,
       "frequency_rank": 193839,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French travail, suffering, from travailler, to trouble or wear out, which goes back to Late Latin tripalium, a frame of three stakes used for torture. Travel is the same word.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "the travails of",
+        "economic travails",
+        "personal travails"
+      ]
     },
     {
       "id": 605,
@@ -10769,8 +10838,16 @@
       "syllables": 3,
       "frequency_rank": 310762,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tutela, guardianship, from tueri, to watch over, which also gave tutor: both a guardian and a teacher keep watch over someone.",
+      "audio_url": null,
+      "roots": [
+        "tueri"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "under the tutelage of",
+        "careful tutelage"
+      ]
     },
     {
       "id": 606,
@@ -10780,8 +10857,17 @@
       "syllables": 5,
       "frequency_rank": 526124,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built from un- and assailable. Assail came through Old French from Latin ad, at, and salire, to leap, so to assail someone is to leap at them.",
+      "audio_url": null,
+      "roots": [
+        "salire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "unassailable position",
+        "unassailable lead",
+        "unassailable logic"
+      ]
     },
     {
       "id": 607,
@@ -10791,8 +10877,17 @@
       "syllables": 5,
       "frequency_rank": 860855,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From un- and conscionable, an old word made from conscience, which goes back through Latin conscire, to be aware, to scire, to know.",
+      "audio_url": null,
+      "roots": [
+        "scire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "unconscionable conduct",
+        "unconscionable contract",
+        "an unconscionable time"
+      ]
     },
     {
       "id": 608,
@@ -10802,8 +10897,17 @@
       "syllables": 5,
       "frequency_rank": 560077,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From un- and mitigated. Mitigate comes from Latin mitigare, to soften, built on mitis, mild, so an unmitigated wrong has had nothing to soften it.",
+      "audio_url": null,
+      "roots": [
+        "mitis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "unmitigated disaster",
+        "unmitigated evil",
+        "unmitigated gall"
+      ]
     },
     {
       "id": 609,
@@ -10813,8 +10917,15 @@
       "syllables": 3,
       "frequency_rank": 398422,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English unsemli, un- added to seemly, fitting or proper, probably shaped in part by an Old Norse word of the same meaning.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "unseemly haste",
+        "unseemly behavior",
+        "unseemly conduct"
+      ]
     },
     {
       "id": 610,
@@ -10824,8 +10935,15 @@
       "syllables": 3,
       "frequency_rank": 548142,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English unwitende, not knowing, made of un- and a form of the old verb wit, to know (Old English witan).",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "unwitting victim",
+        "unwitting accomplice",
+        "unwitting participants"
+      ]
     },
     {
       "id": 611,
@@ -10835,8 +10953,15 @@
       "syllables": 2,
       "frequency_rank": 330491,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Thought to be up plus shot. An upshot was once the closing shot of an archery match, and the word moved from that end of a contest to the end result of anything.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "the upshot was",
+        "the upshot is that",
+        "the practical upshot"
+      ]
     },
     {
       "id": 612,
@@ -10846,8 +10971,15 @@
       "syllables": 2,
       "frequency_rank": 492351,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin usurpare, to take into use or to seize, by way of Old French. Its first part is probably usus, use; the rest is uncertain, though it is often linked to rapere, to seize.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "usurp the throne",
+        "usurp power",
+        "usurp the authority"
+      ]
     },
     {
       "id": 613,
@@ -10857,8 +10989,18 @@
       "syllables": 5,
       "frequency_rank": 270883,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin variegare, to give something varied colors, from varius, various, and agere, to make; vary and variety come from the same varius.",
+      "audio_url": null,
+      "roots": [
+        "varius",
+        "agere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "variegated leaves",
+        "variegated foliage",
+        "variegated marble"
+      ]
     },
     {
       "id": 614,
@@ -10868,8 +11010,16 @@
       "syllables": 1,
       "frequency_rank": 3289733,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French vanter, to boast, which goes back to Latin vanus, empty or vain: to vaunt is to boast with little behind it.",
+      "audio_url": null,
+      "roots": [
+        "vanus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "much vaunted",
+        "highly vaunted"
+      ]
     },
     {
       "id": 615,
@@ -10879,8 +11029,17 @@
       "syllables": 3,
       "frequency_rank": 93958,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin visceralis, from Latin viscera, the inner organs (singular viscus): a visceral feeling seems to rise from the gut.",
+      "audio_url": null,
+      "roots": [
+        "viscera"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "visceral reaction",
+        "visceral response",
+        "on a visceral level"
+      ]
     },
     {
       "id": 616,
@@ -10901,8 +11060,15 @@
       "syllables": 1,
       "frequency_rank": 442382,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English wrǣstan, to twist hard, which also gave wrestle; writhe and wry are distant relatives.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "wrest control",
+        "wrest power",
+        "wrest concessions"
+      ]
     }
   ],
   "senses": [
@@ -16631,7 +16797,7 @@
       "definition": "Grimy, shabby and decaying, with the look of a place nobody can afford to keep up.",
       "plain_language_definition": "So filthy and broken-down that no one should have to live there.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 1160,
@@ -16647,7 +16813,7 @@
       "definition": "Force apart things or people that were joined, so that they cannot easily come back together.",
       "plain_language_definition": "To split up what was together, so badly that it may never be whole again.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 1164,
@@ -16687,7 +16853,7 @@
       "definition": "Hands-on teaching in which a more skilled person directs and corrects a learner's work.",
       "plain_language_definition": "Being trained by someone who shows you how and checks your work.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1173,
@@ -16703,7 +16869,7 @@
       "definition": "Unfair, cruel or excessive to a shocking degree, beyond any decent excuse.",
       "plain_language_definition": "So wrong or unfair that it is shocking and cannot be defended.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1178,
@@ -16719,7 +16885,7 @@
       "definition": "Wrong for the occasion, in a way that offends the manners people expect there.",
       "plain_language_definition": "Not proper or fitting for the place or the moment.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1180,
@@ -16743,7 +16909,7 @@
       "definition": "Install oneself in a post or power with no lawful claim, displacing the person entitled to it.",
       "plain_language_definition": "To push out a rightful leader and take their power for yourself.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1186,
@@ -16767,7 +16933,7 @@
       "definition": "Felt in the gut as an instant, instinctive reaction that comes before any reasoning.",
       "plain_language_definition": "Felt strongly in your gut, as a reaction that comes before thinking.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 1190,
@@ -16783,7 +16949,7 @@
       "definition": "Pry something from another's grip, whether a thing in their hands or their control of a place or group.",
       "plain_language_definition": "To fight someone for something they are holding onto and come away with it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1193,
@@ -16860,65 +17026,73 @@
       "id": 1201,
       "word_id": 605,
       "definition": "The protective care of a guardian who is responsible for someone.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Being looked after, and kept in check, by a guardian or a stronger power.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1202,
       "word_id": 606,
       "definition": "Too well defended to be attacked or captured by force.",
-      "plain_language_definition": null,
+      "plain_language_definition": "So strongly defended that no attack could take it, like a fortress on a cliff.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1203,
       "word_id": 607,
       "definition": "Lacking any inner sense of right and wrong.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Without any conscience, as a person who feels no guilt.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1204,
       "word_id": 610,
       "definition": "Done by accident instead of on purpose.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Happening by mistake, without anyone meaning it to.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1205,
       "word_id": 612,
       "definition": "Push aside and take over the role or place of something else.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Take over a role that something else used to fill.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1206,
       "word_id": 613,
       "definition": "Full of variety; diverse in makeup or character.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Mixed and varied, with parts of many sorts, as a crowd or a career can be.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1207,
       "word_id": 615,
       "definition": "Relating to the soft organs inside the chest and belly.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Having to do with the body's inner organs, such as the heart and gut.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1208,
       "word_id": 617,
       "definition": "Get something, such as an answer or a living, out of a difficult source through great effort.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Get something out of a hard source by long effort, as a living from poor land.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1209,
@@ -17049,17 +17223,19 @@
       "id": 1223,
       "word_id": 594,
       "definition": "In fencing, the attack a fencer makes in return as soon as the other's blade has been knocked aside.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In fencing, a counterattack made the moment you have pushed aside the other fencer's blade.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1224,
       "word_id": 595,
       "definition": "The breaking away of a church or part of one, so that two bodies now each claim to be the true church.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A split in a church, after which each side claims to be the true church.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1225,
@@ -17073,33 +17249,37 @@
       "id": 1226,
       "word_id": 598,
       "definition": "Shameful and cheap in conduct, with nothing decent about the motives.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Seedy and shameful, like a grubby affair or a deal struck for selfish reasons.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1227,
       "word_id": 599,
       "definition": "Big-boned and brawny in build.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Big and sturdy, with a strong, solid build.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1228,
       "word_id": 603,
       "definition": "Being the figure that a story, song or show is named after.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Giving a book, film or show its title, as its main character often does.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1229,
       "word_id": 604,
       "definition": "The pain and effort of giving birth.",
-      "plain_language_definition": null,
+      "plain_language_definition": "The hard work and pain of having a baby.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1230,
@@ -73985,14 +74165,6 @@
       "revision": 3
     },
     {
-      "id": 951,
-      "word_id": 599,
-      "text": "Stalwart comes from Old English stael, place, and weorth, worth: a stalwart friend is worth their place at your side.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 952,
       "word_id": 600,
       "text": "Sunder comes from Old English sundrian, built on sundor, apart, which also gives asunder: to sunder something is to tear it asunder.",
@@ -74772,6 +74944,14 @@
       "id": 1054,
       "word_id": 433,
       "text": "Circumscribe comes from Latin circum, around, and scribere, to write: you draw a line around something, and it may not cross it.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1055,
+      "word_id": 599,
+      "text": "Stalwart probably comes from Old English stael, place, and weorth, worth: a stalwart friend is worth their place at your side.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -128196,8 +128376,8 @@
     },
     {
       "path": "definitions/1223.mp3",
-      "bytes": 25913,
-      "key": "173afd86302bd39f",
+      "bytes": 21943,
+      "key": "23af763c142ae05d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128210,8 +128390,8 @@
     },
     {
       "path": "definitions/1224.mp3",
-      "bytes": 23824,
-      "key": "69f08b1e95308432",
+      "bytes": 18495,
+      "key": "0e4f0873ef0f57d6",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128245,8 +128425,8 @@
     },
     {
       "path": "definitions/1226.mp3",
-      "bytes": 18077,
-      "key": "bc985f4f65506622",
+      "bytes": 20793,
+      "key": "2a91dd7ec299de63",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128259,8 +128439,8 @@
     },
     {
       "path": "definitions/1227.mp3",
-      "bytes": 9404,
-      "key": "e03d7bb410231d65",
+      "bytes": 12748,
+      "key": "dc89d1707e257072",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128294,8 +128474,8 @@
     },
     {
       "path": "definitions/1228.mp3",
-      "bytes": 16614,
-      "key": "b6518c7b1e2a0ba4",
+      "bytes": 19958,
+      "key": "241999584d168db2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128308,8 +128488,8 @@
     },
     {
       "path": "definitions/1229.mp3",
-      "bytes": 10031,
-      "key": "b8b328421eaeff3e",
+      "bytes": 11912,
+      "key": "5378ff40c4b6df1e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128322,8 +128502,8 @@
     },
     {
       "path": "definitions/1201.mp3",
-      "bytes": 17554,
-      "key": "76ec12b786e92ace",
+      "bytes": 19435,
+      "key": "54287685f1475a68",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128336,8 +128516,8 @@
     },
     {
       "path": "definitions/1202.mp3",
-      "bytes": 15047,
-      "key": "b6aff7009f79b90e",
+      "bytes": 20376,
+      "key": "2cb99339f7180a22",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128350,8 +128530,8 @@
     },
     {
       "path": "definitions/1203.mp3",
-      "bytes": 11912,
-      "key": "1388885e68692a1b",
+      "bytes": 15151,
+      "key": "182b57f486a166c2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128378,8 +128558,8 @@
     },
     {
       "path": "definitions/1204.mp3",
-      "bytes": 12121,
-      "key": "d2a92a226c856342",
+      "bytes": 14211,
+      "key": "ecf947b417154246",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128399,8 +128579,8 @@
     },
     {
       "path": "definitions/1205.mp3",
-      "bytes": 15673,
-      "key": "4d0b99dedff2ba7a",
+      "bytes": 12330,
+      "key": "d59e006f30774459",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128413,8 +128593,8 @@
     },
     {
       "path": "definitions/1206.mp3",
-      "bytes": 14838,
-      "key": "82204d73d247d92b",
+      "bytes": 20584,
+      "key": "6f9b3556c254bfcb",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128434,8 +128614,8 @@
     },
     {
       "path": "definitions/1207.mp3",
-      "bytes": 15256,
-      "key": "1c733fd5decd5c9b",
+      "bytes": 17868,
+      "key": "9cf7d471b5fd44d1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -128462,8 +128642,8 @@
     },
     {
       "path": "definitions/1208.mp3",
-      "bytes": 23510,
-      "key": "84e3b5fc90af7564",
+      "bytes": 19122,
+      "key": "690adbbfc5431925",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -132389,8 +132569,8 @@
     },
     {
       "path": "hooks/599.mp3",
-      "bytes": 29989,
-      "key": "229c54b8ebdd3674",
+      "bytes": 32705,
+      "key": "4eeb9cdc0ca96764",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -184341,6 +184521,670 @@
         "alsoMeans": 5
       },
       "checker_notes": "pairings 4: 'large retinue' is generic, though the most common. The tenere root matches the record."
+    },
+    {
+      "id": 1551,
+      "word_id": 594,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French riposte, taken from Italian risposta, from rispondere \"to respond\"). The English page stops at Italian; the Latin step is from the Wiktionary page for Italian rispondere (from Late Latin respondere, Latin respondeo), and AHD and Dictionary.com agree. The origin runs forward in time so it does not follow any one source's order. Hook claim (Italian risposta, an answer, a cousin of respond) is true. Tone null: Oxford and Longman mark it formal, Cambridge does not, so the all-three rule is not met. Pairings from the tool's rc list: witty riposte 2.31, sharp riposte 1.42, quick riposte 1.08 per billion; all show the quick, clever reply, but the counts are modest, the weakest point. The fencing sense is not shown (a learner rarely meets it); its register is technical.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (French riposte, from Italian risposta, from rispondere); the Latin respondere step goes past the English entry and rests on Longman and AHD, which agree. Weakest point: the pairings are the right first-sense partners from the tool's list but low in absolute terms (witty 2.31, sharp 1.42, quick 1.08 per billion). Tone null is right (Oxford and Longman formal, Cambridge not); the fencing sense is rightly hidden."
+    },
+    {
+      "id": 1552,
+      "word_id": 595,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English scisme, Old French cisme or scisme, Greek schisma \"division\", from schizo \"I split\"); the infinitive schizein is the form AHD, Oxford, Longman and Dictionary.com give. Hook (Greek schisma, a split or cut) is true; Oxford glosses schisma as cleft. Tone null: only Oxford marks it formal. Pairings: deep schism 3.29, political schism 4.12, internal schisms 4.76 per billion, all from the tool's rc lists; I left out great schism and papal schism, which are church names. The church sense is not shown: learner's dictionaries fold it into the general sense (\"especially in a religious organization\"), so it reads as a near-repeat; a reviewer may judge the Great Schism worth a line.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (Old French cisme or scisme, from Ancient Greek schisma, division, from schizo, I split) and skips the Late Latin step, which is fine; schizein is the form Longman uses. Weakest point: the hook glosses schisma as 'a split or cut'; Wiktionary gives 'division' from 'I split', so 'cut' is a little loose. The church sense is a near-repeat of the first and rightly hidden."
+    },
+    {
+      "id": 1553,
+      "word_id": 596,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English semblaunce, Old French semblance, from semblant of sembler \"to appear, seem\", Late Latin similare, a variant of Latin simulare, from similis \"like\"). similis also links dissemble. Hook claim (sembler, to seem, the root of resemble) is true: Dictionary.com points sembler to resemble and AHD glosses sembler \"to resemble\". Tone null: Oxford and Cambridge mark it formal, Longman gives no label. Pairings: a semblance of order 31.27, semblance of normalcy 28.21, outward semblance 7.57 per billion (outward heads the tool's adjective list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Old French semblance, from semblant of sembler, from Late Latin similare, from Latin similis); similis matches dissemble in the record. Weakest point: strictly the noun comes from semblant, the participle of sembler, not from sembler itself. Tone null is right: Oxford and Cambridge mark it formal, Longman's phrase page is not confirmed."
+    },
+    {
+      "id": 1554,
+      "word_id": 598,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (learned borrowing from Latin squalidus, from squalere \"to be rough or dirty\") and AHD for squalor (Latin squalor, from squalere), which backs both the origin's and the hook's claim that squalor comes from the same verb (the Wiktionary page for squalor was not fetched). Hook gloss \"caked with dirt\" fits Dictionary.com's \"dirty, encrusted\". Tone disapproving: Oxford (whole entry) and Cambridge (this sense) mark it; Longman does not. Pairings: squalid conditions 23.97, squalid room 6.82, squalid surroundings 3.76 per billion, all from the tool's lists. The moral sense (a squalid affair) is shown: all three learner's dictionaries list it; register null, as only Oxford's entry-wide label covers it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Latin squalidus, from squalere, to be rough or dirty) and Longman/AHD; squalor shares the verb. Weakest point: the gloss 'to be rough and filthy' sits close to Wiktionary's 'to be rough or dirty', though it is a short shared fact. Disapproving is right (Oxford and Cambridge); the second sense's plain definition is clear."
+    },
+    {
+      "id": 1555,
+      "word_id": 599,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (borrowed from Scots stalwart under Walter Scott's influence, replacing stalworth; Old English stǣlwierþe \"serviceable\", probably from staþol \"foundation\" or stǣl \"place\" plus -wierþe; Middle English stal-worth \"strong, hardy, brave\"). Wiktionary hedges the parts, so the origin says \"probably\". HOOK CHANGED: it said stalwart comes from stael and weorth as fact; Wiktionary marks that step as probable and offers staþol as an alternative, so I added \"probably\" (Oxford and Longman give place plus worth, Longman also with \"probably\"). The second part is worth in Oxford and AHD but \"able to\" in Wiktionary, so origin and hook score 4. Tone null for the loyal sense (no label anywhere). The physical sense is shown with formal: Oxford's adjective page, Cambridge and Longman all mark it formal. Pairings: stalwart supporter 6.56, stalwart defender 5.01, stalwart champion 2.35 per billion (supporter and champion are on the tool's list; most of its other nouns, men, frame, figure, belong to the physical sense). Note: the common noun use (a party stalwart) has no sense in the record.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin and hook keep Wiktionary's 'probably' and the Walter Scott step. Weakest point: 'one for worth' (origin) and 'weorth, worth' (hook) follow Oxford, Longman and AHD, while Wiktionary glosses the second element -wierthe as 'able to, capable of', and the hook names only stael of Wiktionary's two candidates. The formal label on the build sense holds in all three (Oxford's stalwart adjective page checked); first-sense pairings are right."
+    },
+    {
+      "id": 1556,
+      "word_id": 600,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register"
+      ],
+      "notes": "Origin checked against tools/etymology.py (verb from Middle English sundren, Old English sundrian \"to separate\"; adjective from Old English sundor- \"separate\"; \"more at sundry\") and AHD for asunder (Old English on sundran, from sunder \"apart\"); the Wiktionary page for asunder would not load under the rate limit. Hook claim (sundrian, built on sundor, which also gives asunder) is true. Tone literary: Cambridge and Longman mark it literary and Oxford \"formal or literary\". Pairings left empty: the tool's lists for sunder are names (Sunder Singh) and the best phrases are rare or generic (sundered from 19.32 but only a preposition, widely sundered 1.34, sunder the ties 0.23, sundered by war 0.10).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Old English sundrian; sundor-, separate; more at sundry) and Dictionary.com. Literary is marked by all three dictionaries. Weakest point: empty pairings; the tool's partners are weak (sundered from, widely sundered 1.34 per billion), so empty is the right call."
+    },
+    {
+      "id": 1557,
+      "word_id": 602,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (from Tantalus in Greek myth, condemned to stand in water that drew back when he stooped to drink, under fruit out of reach; Tantalus + -ize) and Oxford's note (a king in the myth). Written from those facts without the sources' wording. Hook claims (king in Greek myth, water sank, fruit rose) are true to the myth. Tone null: no label. Pairings use the adjective form, the commonest by far: tantalizing glimpse 20.61, tantalizing possibility 11.04, tantalizing hints 10.21 per billion, all from the tool's lc list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin and hook match Wiktionary's Tantalus story (water that receded, fruit out of reach); 'king' is supported by Longman. Weakest point: all three pairings use the adjective tantalizing rather than the verb, though they show the first sense and are common (glimpse 20.61, possibility 11.04, hints 10.21 per billion)."
+    },
+    {
+      "id": 1558,
+      "word_id": 603,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (borrowed from Middle French titulaire, from Latin titularis, from titulus \"title\") and Oxford (titulus \"inscription, title\"). Hook claim (titulus, a title or label) is true. Tone null: only Oxford marks it formal. Pairings: titular head 35.87, titular king 6.92, titular leader 6.34 per billion, all from the tool's list; I left out titular bishop (a church term) and titular hero (the other sense). The \"named in the title\" sense is shown: it is now the commonest use (the titular character).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Middle French titulaire, from Latin titularis, from titulus). Weakest point: it says French rather than Middle French and skips titularis, both harmless. Pairings are the tool's top three; the named-after sense is current and its plain definition is clear."
+    },
+    {
+      "id": 1559,
+      "word_id": 604,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py, the page's French section (French travail, Old French travail \"suffering, pain\", from travailler, from Vulgar Latin *tripaliare, from Late Latin tripalium, a torture device of three stakes), and the Wiktionary page for travel (doublet; Middle English travailen \"to toil, work, travel\", Old French travailler \"to trouble, suffer, be worn out\"). AHD, Dictionary.com, Oxford and Longman all give the tripalium origin; AHD calls the tripalis step \"probably\", which I left out. Hook claim (travel was the same word, from hard journeys) is true: Wiktionary glosses Middle English travelen \"to make a laborious journey\". Tone null: Oxford \"old use or literary\", Longman \"written\", Cambridge none, so no label has two votes; tone 4 because Wiktionary also calls it literary. Pairings: the travails of 93.60, economic travails 2.65, personal travails 2.12 per billion (the tool's rc list for travails). The childbirth sense is not shown: it is archaic and no learner's dictionary lists it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'the travails of' (93.60 per billion) is common but its partners fit any noun; economic and personal travails are fine. Origin: the English entry stops at Old French travail; the tripalium step rests on Longman, AHD and Dictionary.com, which agree. Hook checked against Wiktionary's travel page (Middle English travelen, to make a laborious journey, from travailen, to toil)."
+    },
+    {
+      "id": 1560,
+      "word_id": 605,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin tutela \"a watching, guardianship, protection\" + -age, from tueri \"to watch, guard\") and AHD for tutor (Latin tutor, from tutus, past participle of tueri). Hook claim (shares tueri with tutor) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: under the tutelage of 194.56, careful tutelage 2.51 per billion (careful is on the tool's adjective list). The guardianship sense is shown with a plain definition that covers political tutelage: the tool's adjective list is mostly political (political, colonial, foreign, British tutelage), and Oxford lists it as a second sense. Its register is null because Cambridge does not list the sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Latin tutela, from tueri, to watch, guard). Formal is marked by Oxford, Cambridge and Longman. Weakest point: 'careful tutelage' is modest (2.51 per billion) next to 'under the tutelage of' (194.56). The guardianship sense is current (political, colonial tutelage) and well defined."
+    },
+    {
+      "id": 1561,
+      "word_id": 606,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (un- + assailable; the tool prints nothing more) and the Wiktionary page for assail (Middle English assailen, Old French assalir, Late Latin assalire, from ad \"at, towards\" + salire \"jump\"). salire should link salient. Hook claim (un- plus assail, to attack) is true. Tone null: Oxford and Longman mark it formal, Cambridge does not. Pairings: unassailable position 12.10, unassailable logic 3.23, unassailable lead 2.62 per billion (position and logic are on the tool's lists). The literal sense (a fortress no attack can take) is shown: Cambridge lists \"impossible to attack\" and history texts use it; a reviewer may call it close to the first sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. The assail step checked on Wiktionary's assail page (Old French assalir, from Late Latin assalire, from ad + salire, jump); salire matches salient in the record. Tone null is right (Cambridge has no formal label). Weakest point: the hook says 'un- plus assail' where the word is un- plus assailable, harmless."
+    },
+    {
+      "id": 1562,
+      "word_id": 607,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (un- + conscionable), Oxford and Longman (obsolete conscionable, from conscience + -able) and the Wiktionary page for conscience (Latin conscientia, from conscire \"to know, be conscious\", from com- + scire \"to know\"). Hook claim (comes from conscience) is true. Tone formal: Oxford (whole entry), Cambridge (the moral sense, also disapproving) and Longman all mark it formal. Pairings: unconscionable conduct 25.17, an unconscionable time 6.82, unconscionable contract 6.01 per billion, all on the tool's list; conduct and contract lean legal. The other sense (lacking a conscience) is not shown: no learner's dictionary lists it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Conscience, from conscire, from scire, checked on Wiktionary's conscience page; conscionable as a form made from conscience is in Longman; scire matches prescient. Formal is marked by all three. Weakest point: the origin leaves the step to today's meaning (what no conscience could allow) to the hook."
+    },
+    {
+      "id": 1563,
+      "word_id": 608,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py for unmitigated (un- + mitigated) and mitigate (Latin mitigo \"to make soft, ripe; to tame\", from mitis \"gentle, mild\"); Wiktionary's hedge is on where mitis comes from, which the origin does not go into. mitis links mitigate. Hook claim (un- plus mitigate, to ease or soften) is true. Tone null: no label in the three. Pairings: unmitigated disaster 44.57, unmitigated evil 9.44, unmitigated gall 9.34 per billion, the top of the tool's list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary's mitigate page (Latin mitigo, from mitis, gentle, mild); mitis matches mitigate in the record. Weakest point: the hook says 'un- plus mitigate' where the word is un- plus mitigated, harmless. Pairings are the tool's top partners."
+    },
+    {
+      "id": 1564,
+      "word_id": 609,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English unsemli, probably a partial calque of Old Norse usaemiligr; un- + seemly). The \"probably\" is kept. Hook claim (un- plus seemly) is true; \"a formal word for fitting\" is about usage, not origin. Tone formal: Oxford (\"old-fashioned or formal\"), Cambridge and Longman all mark it formal. Pairings: unseemly haste 16.68, unseemly behavior 8.74, unseemly conduct 4.49 per billion, the top of the tool's list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin keeps Wiktionary's 'probably' on the Old Norse partial calque. Weakest point: Oxford's label is 'old-fashioned or formal', so the all-three formal rule holds, but only just. Pairings (haste 16.68, behavior 8.74, conduct 4.49 per billion) are good."
+    },
+    {
+      "id": 1565,
+      "word_id": 610,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English unwittinge, Old English unwitende \"not knowing\", un- + witting) and AHD (witting, present participle of witten \"to know\", from Old English witan). Hook claim (wit in its old sense of knowing) is true. Tone null: only Cambridge marks it formal (Longman has no entry). Pairings: unwitting victim 8.79, unwitting accomplice 7.26, unwitting participants 4.60 per billion, the top of the tool's list. The \"not done on purpose\" sense is shown: Oxford and Cambridge both cover it (an unwitting mistake).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin agrees with Wiktionary (Old English unwitende, un- + witting) and AHD (witting from Old English witan, to know). Weakest point: none of substance; the shown sense (done by accident) is current and distinct from the first."
+    },
+    {
+      "id": 1566,
+      "word_id": 611,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (presumed from up- + shot, referring to the last shot in an archery match); the \"presumed\" is kept as \"thought to be\". AHD, Dictionary.com and Longman all give the archery sense as the earlier one. Hook claim (first meant the final shot of an archery match) agrees with them. Tone null: no label. Pairings: the upshot is that 118.72, the upshot was 93.03, the practical upshot 4.11 per billion (practical is on the tool's adjective list); the first two are frames, not partners, but they are how the word is used.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'the upshot was' and 'the upshot is that' are the same frame in two tenses, so one adds little. Origin keeps Wiktionary's hedge ('Presumed from up- + shot' as 'Thought to be'); the archery sense is attested in Longman and AHD, which supports the hook's 'first meant'."
+    },
+    {
+      "id": 1567,
+      "word_id": 612,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English usurpen, Old French usurper, Latin usurpo) and the Wiktionary page for Latin usurpo: the first part is probably usus \"use\", and the second is marked uncertain, linked to rapio \"to snatch\" since 1840 but derived by Watkins from rumpo \"to break\". Dictionary.com and Longman give usus + rapere as fact, but the origin keeps Wiktionary's hedge, and I left rapere out of roots so the app does not link usurp with rapacious on a disputed step. Hook claim (usurpare, to seize for one's own use) matches Oxford's gloss and Wiktionary's Latin senses (to take into use; to seize; to usurp), though Wiktionary gives \"seize for one's own use\" only as a perhaps-original sense, so hook 4; no change made. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: usurped the throne 25.60 / usurp the throne 19.99, usurp power 14.31, usurp the authority 6.77 per billion, all from the tool's lists. The other sense (take over another thing's role) is not shown: it is close to the first and is supplant's meaning, and as a fallback wrong answer it could be marked wrong under supplant, where it is right; worth a look on a main worksheet.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. The origin's hedges match Wiktionary's Latin usurpo page exactly (first part probably usus; second part uncertain, linked to rapio since Freund). Weakest point: the hook glosses usurpare as 'to seize for one's own use', the sense that page gives only as a 'perhaps' if the rapere link holds; the attested senses are to use, take into use, seize, appropriate. Matching the origin's gloss would be safer."
+    },
+    {
+      "id": 1568,
+      "word_id": 613,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (variegate + -ed) and the Wiktionary page for variegate (Late Latin variegare \"to make of various sorts or colors\", from varius \"various\" + agere \"to make, do\"), with Oxford and AHD. agere links cogent, exigent and others. Hook claim (varius, varied or spotted): \"varied\" is backed by AHD (various), Oxford (diverse) and Wiktionary (various), but the Wiktionary page for Latin varius would not load after many tries under the rate limit, and no cached dictionary gives \"spotted\", so I could not confirm that gloss; hook scored 4, left unchanged, and the origin says only \"various\". vary and variety: Dictionary.com's note names them as the same root. Tone null: Oxford marks the color sense specialist, the others give no label. Pairings: variegated leaves 16.01, variegated foliage 8.44, variegated marble 3.10 per billion, all from the tool's list. The \"diverse\" sense is shown: Oxford and Longman list it (both formal), and GRE reading uses it; register null because Cambridge does not list it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. varius is supported by Longman and Wiktionary's variegate + -ed. Weakest point: agere shows in variegated only as -eg-, and the Late Latin variegare and agere steps are not on Wiktionary's English entry; the record already links agere this way for cogent, exigent, ambiguous and prodigal, so the root is consistent. Tone null is right on both senses."
+    },
+    {
+      "id": 1569,
+      "word_id": 614,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English vaunten, Anglo-Norman vaunter, Old French vanter, from Latin vanus \"vain, boastful\") and AHD (through Late Latin vanitare, from vanus \"empty\"). vanus links evanescent. Hook claim (goes back to vanus, empty, the source of vain) is true. Tone null: only Cambridge has an entry for the verb (\"formal, usually disapproving\"); Oxford and Longman have none, so tone 4. Pairings: much vaunted 35.53 (unhyphenated; the hyphenated form is commoner still), highly vaunted 1.97 per billion, both from the tool's lists. The verb's own collocates (vaunt themselves) read as archaic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: both pairings are an adverb plus vaunted; 'much vaunted' is the standard phrase (35.53 per billion, 61.61 hyphenated), but 'highly vaunted' is modest (1.97) and neither shows what is vaunted. Origin checked against Wiktionary (Old French vanter, from Latin vanus) and AHD; vanus matches evanescent. Tone null is right: only Cambridge has the verb (formal, disapproving)."
+    },
+    {
+      "id": 1570,
+      "word_id": 615,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French visceral or Medieval Latin visceralis, from Latin viscera, plural of viscus \"internal organ\"; Wiktionary hedges where viscus comes from, which the origin leaves out). The root is viscera, the plural both visceralis and eviscerare are built on, spelled as eviscerate has it on worksheet u so the two link; viscous is a different word (Latin viscum). Hook claim (from viscera, the internal organs) is true. Tone literary: Oxford, Cambridge and Longman all mark the feeling sense literary. Pairings: visceral reaction 53.44, visceral response 30.75, on a visceral level 13.85 per billion; the tool's adjective list is all anatomy (the other sense), so these come from its visceral * slot list. The anatomy sense is shown as technical (all three label it anatomy, specialized or medical); visceral fat is common.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Medieval Latin visceralis, from viscera, plural of viscus). Literary on the first sense and technical on the organ sense are marked by all three dictionaries. Weakest point: the root viscera is the plural rather than the nominative singular, but it matches eviscerate in the record."
+    },
+    {
+      "id": 1571,
+      "word_id": 617,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English wresten, Old English wraestan \"to twist forcibly, wrench\"; see also writhe, wry) and AHD for wrestle (Old English *wraestlian, frequentative of wraestan); the Wiktionary page for wrestle would not load under the rate limit. Hook claim (related to wrestle) is true. Tone formal: Oxford (wrest from), Cambridge and Longman all mark the take-control use formal; Longman calls the grab-by-force use literary, so tone 4. Pairings: wrest control 68.53, wrest power 14.45, wrest concessions 1.86 per billion, all from the tool's lc list. The \"get with great effort\" sense is shown (wrest a living from the soil, wrest a confession); register null, as only Cambridge marks it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Old English wraestan, to twist forcibly; see also writhe, wry). Formal is confirmed on Oxford's wrest from page, Cambridge and Longman. Weakest point: the shown sense's plain definition says 'a hard source by long effort', which reads awkwardly, and the sense is about great effort rather than long effort."
     }
   ]
 }
