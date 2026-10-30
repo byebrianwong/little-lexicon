@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T07:57:04.734Z"
+    "updatedAt": "2026-10-30T08:01:41.229Z"
   },
   "counters": {
     "words": 617,
@@ -11,7 +11,7 @@
     "word_relations": 6605,
     "distractors": 7333,
     "mnemonics": 1038,
-    "reviews": 1283
+    "reviews": 1302
   },
   "words": [
     {
@@ -5640,8 +5640,17 @@
       "syllables": 3,
       "frequency_rank": 1178067,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French accolade, an embrace, which goes back to Latin ad, to, and collum, neck, the root of collar. The hug that once welcomed a new knight became a word for any honor.",
+      "audio_url": null,
+      "roots": [
+        "collum"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "highest accolade",
+        "won accolades",
+        "critical accolades"
+      ]
     },
     {
       "id": 320,
@@ -5651,8 +5660,17 @@
       "syllables": 3,
       "frequency_rank": 1574605,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin acerbus, a word for the sour taste of unripe fruit that Romans also applied to harsh, bitter people. English uses it for words with that sour sting.",
+      "audio_url": null,
+      "roots": [
+        "acerbus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "acerbic wit",
+        "acerbic comments",
+        "acerbic critic"
+      ]
     },
     {
       "id": 321,
@@ -5662,8 +5680,17 @@
       "syllables": 3,
       "frequency_rank": 314578,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin acumen meant a sharpened point, from acuere, to sharpen. English borrowed it for a mind sharp enough to see quickly what matters.",
+      "audio_url": null,
+      "roots": [
+        "acuere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "business acumen",
+        "political acumen",
+        "financial acumen"
+      ]
     },
     {
       "id": 322,
@@ -5673,8 +5700,15 @@
       "syllables": 2,
       "frequency_rank": 570406,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French adroit, made of à, to, and droit, right, which goes back to Latin directus, straight. An adroit person handles things the right way.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "adroit politician",
+        "adroit handling",
+        "adroit diplomacy"
+      ]
     },
     {
       "id": 323,
@@ -5684,8 +5718,17 @@
       "syllables": 3,
       "frequency_rank": 426878,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin affabilis, built on affari, to address, from ad, to, and fari, to speak, described someone you could readily approach and speak with. It reached English through French.",
+      "audio_url": null,
+      "roots": [
+        "fari"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "affable manner",
+        "affable smile",
+        "affable personality"
+      ]
     },
     {
       "id": 324,
@@ -5695,8 +5738,15 @@
       "syllables": 4,
       "frequency_rank": 293499,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Late Latin from Ancient Greek anathema, a thing set up as an offering to a god. Church writers, influenced by Hebrew herem, used it for a person cursed and cast out, and so for anything detested.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "is anathema to",
+        "became anathema",
+        "considered anathema"
+      ]
     },
     {
       "id": 325,
@@ -5706,8 +5756,11 @@
       "syllables": 3,
       "frequency_rank": 1967481,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Ancient Greek anodynos, painless, was made of an-, without, and odyne, pain, so the word first named painkillers. Its sense of bland probably came through French anodin, harmless.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 326,
@@ -5717,8 +5770,16 @@
       "syllables": 4,
       "frequency_rank": 330036,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From apocrypha, Late Latin for books of doubtful source kept out of church use, from Ancient Greek apokryphos, hidden, built on kryptein, to hide. By 1590 it also meant of doubtful truth.",
+      "audio_url": null,
+      "roots": [
+        "kryptein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "apocryphal story",
+        "probably apocryphal"
+      ]
     },
     {
       "id": 327,
@@ -5728,8 +5789,17 @@
       "syllables": 4,
       "frequency_rank": 214883,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin approbare, to approve, built on probare, to find worthy, from probus, good, gave the noun approbatio, which came into English through Old French.",
+      "audio_url": null,
+      "roots": [
+        "probus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "public approbation",
+        "universal approbation",
+        "unqualified approbation"
+      ]
     },
     {
       "id": 328,
@@ -5739,8 +5809,15 @@
       "syllables": 2,
       "frequency_rank": 442829,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin arcere, to shut in, a verb related to arca, a chest, gave arcanus, secret, the source of arcane: such knowledge is kept shut away from most people.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "arcane knowledge",
+        "arcane rules",
+        "arcane details"
+      ]
     },
     {
       "id": 329,
@@ -5750,8 +5827,17 @@
       "syllables": 4,
       "frequency_rank": 586871,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin assiduus, built on assidere, to sit by or settle at, from ad- and sedere, to sit: an assiduous person stays seated at a task until it is done.",
+      "audio_url": null,
+      "roots": [
+        "sedere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "assiduous attention",
+        "assiduous study",
+        "assiduous efforts"
+      ]
     },
     {
       "id": 330,
@@ -5761,8 +5847,17 @@
       "syllables": 3,
       "frequency_rank": 258537,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin avarus, greedy, built on the same root as avere, to yearn for, gave avaritia, which reached English through Old French.",
+      "audio_url": null,
+      "roots": [
+        "avere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "insatiable avarice",
+        "human avarice",
+        "sordid avarice"
+      ]
     },
     {
       "id": 331,
@@ -5772,8 +5867,17 @@
       "syllables": 3,
       "frequency_rank": 777869,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin bellum, war, also behind belligerent, gave bellicus, of war, and then bellicosus, warlike, the source of bellicose.",
+      "audio_url": null,
+      "roots": [
+        "bellum"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "bellicose rhetoric",
+        "bellicose statements",
+        "bellicose attitude"
+      ]
     },
     {
       "id": 332,
@@ -5783,8 +5887,15 @@
       "syllables": 1,
       "frequency_rank": 956081,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Old English blithe meant happy or gentle, and Dutch blij, glad, is a cousin. Today the word usually describes good cheer where some worry would be wiser.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "blithe disregard",
+        "blithe assumption",
+        "blithe indifference"
+      ]
     },
     {
       "id": 333,
@@ -5794,8 +5905,15 @@
       "syllables": 1,
       "frequency_rank": 595634,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Italian brusco, which could describe sour wine as well as a sudden, abrupt manner. Where the Italian word came from is uncertain.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "brusque manner",
+        "brusque tone",
+        "brusque reply"
+      ]
     },
     {
       "id": 334,
@@ -5805,8 +5923,15 @@
       "syllables": 3,
       "frequency_rank": 855543,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Ancient Greek boukolos, a cowherd, gave boukolikos, rustic or pastoral, which reached English through Latin: a bucolic scene is the herdsman's countryside of fields and cattle.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "bucolic setting",
+        "bucolic landscape",
+        "bucolic scene"
+      ]
     },
     {
       "id": 335,
@@ -5849,8 +5974,17 @@
       "syllables": 2,
       "frequency_rank": 125962,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin censura, the post and rulings of a Roman censor, from censere, to assess or judge. In English it once meant any judgment before narrowing to a harsh one.",
+      "audio_url": null,
+      "roots": [
+        "censere"
+      ],
+      "watch_out": "Censure does not mean cutting or banning material, which is censoring; it means strong, often official criticism of someone's conduct.",
+      "pairings": [
+        "public censure",
+        "severe censure",
+        "escape censure"
+      ]
     },
     {
       "id": 339,
@@ -5860,8 +5994,14 @@
       "syllables": 2,
       "frequency_rank": 1366553,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Old English cearig could mean careful, anxious or sad, and was formed on the Germanic word that became care, so a chary person is full of care.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "chary of",
+        "extremely chary"
+      ]
     },
     {
       "id": 340,
@@ -5882,8 +6022,17 @@
       "syllables": 3,
       "frequency_rank": 466490,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin circum, around, and specere, to look, formed circumspicere, to look all around, from which this word comes: a circumspect person checks every side before acting.",
+      "audio_url": null,
+      "roots": [
+        "specere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "circumspect approach",
+        "circumspect manner",
+        "remained circumspect"
+      ]
     },
     {
       "id": 342,
@@ -11909,7 +12058,7 @@
       "definition": "Free of anything sharp, bold or challenging, and so unlikely to stir any reaction.",
       "plain_language_definition": "So careful not to upset anyone that it ends up dull.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 675,
@@ -11925,7 +12074,7 @@
       "definition": "A favorable verdict on someone or their work, expressed as approval or praise.",
       "plain_language_definition": "Approval and praise from others.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 678,
@@ -11941,7 +12090,7 @@
       "definition": "Unflagging in effort and thorough in every step.",
       "plain_language_definition": "Keeping at a job patiently and never cutting corners.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 680,
@@ -11949,7 +12098,7 @@
       "definition": "A consuming hunger for riches that outweighs fairness or kindness.",
       "plain_language_definition": "Strong greed for money or things.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 682,
@@ -11957,7 +12106,7 @@
       "definition": "Inclined to pick fights and to reach for force before talk.",
       "plain_language_definition": "Always itching for a fight or a war.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 683,
@@ -11981,7 +12130,7 @@
       "definition": "Charming and peaceful in the way country life is often pictured.",
       "plain_language_definition": "Calm and pretty, like farms and open fields far from the city.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 688,
@@ -12013,7 +12162,7 @@
       "definition": "A stern verdict that someone has behaved badly, often delivered formally by those with authority over them.",
       "plain_language_definition": "Strong blame or criticism, often from someone in charge.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 693,
@@ -12037,7 +12186,7 @@
       "definition": "Wary and discreet, weighing how one's words or actions could backfire.",
       "plain_language_definition": "Careful to think about the risks before you act or speak.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 696,
@@ -12659,33 +12808,37 @@
       "id": 806,
       "word_id": 321,
       "definition": "A narrow, pointed tip at the end of a leaf or other plant part.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In plants, the thin pointed end of a leaf.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 808,
       "word_id": 325,
       "definition": "Able to ease or dull pain.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Making pain less sharp, as a painkiller does.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 809,
       "word_id": 332,
       "definition": "Cheerful and untroubled in spirit.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Lighthearted and full of good cheer.",
       "sense_order": 2,
-      "register": null
+      "register": "literary",
+      "also_means": true
     },
     {
       "id": 810,
       "word_id": 334,
       "definition": "Having to do with shepherds or the herding of animals.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Relating to herdsmen and the animals they look after.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 812,
@@ -15691,17 +15844,19 @@
       "id": 1319,
       "word_id": 319,
       "definition": "The rite in which a monarch dubs someone a knight.",
-      "plain_language_definition": null,
+      "plain_language_definition": "The ceremony of making someone a knight, as with a touch of a sword on the shoulder.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1320,
       "word_id": 320,
       "definition": "Tasting tart enough to make the mouth pucker.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Sour or bitter to the taste.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1321,
@@ -15831,9 +15986,10 @@
       "id": 1335,
       "word_id": 324,
       "definition": "A sentence passed by church authorities that condemns someone and shuts them out of the church.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A curse laid on someone by church leaders, cutting them off from the faithful.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1336,
@@ -123381,8 +123537,8 @@
     },
     {
       "path": "definitions/1319.mp3",
-      "bytes": 11598,
-      "key": "b86de9a88ef937a3",
+      "bytes": 19749,
+      "key": "9a4f763e8bde3b99",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123395,8 +123551,8 @@
     },
     {
       "path": "definitions/1320.mp3",
-      "bytes": 11389,
-      "key": "ea7957c81d4ec2f7",
+      "bytes": 8986,
+      "key": "286944c7f91bb185",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123409,8 +123565,8 @@
     },
     {
       "path": "definitions/806.mp3",
-      "bytes": 17032,
-      "key": "ae6f430f3986ae07",
+      "bytes": 12539,
+      "key": "c2a32a0cd364f669",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123437,8 +123593,8 @@
     },
     {
       "path": "definitions/1335.mp3",
-      "bytes": 21734,
-      "key": "3e073cc52208b903",
+      "bytes": 18913,
+      "key": "463f22a8037f023d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123451,8 +123607,8 @@
     },
     {
       "path": "definitions/808.mp3",
-      "bytes": 9613,
-      "key": "24075104d459b06a",
+      "bytes": 13166,
+      "key": "48b6519efaea0c20",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123507,8 +123663,8 @@
     },
     {
       "path": "definitions/809.mp3",
-      "bytes": 10553,
-      "key": "3dc736dad56b7155",
+      "bytes": 10031,
+      "key": "b8c952059225a850",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -123528,8 +123684,8 @@
     },
     {
       "path": "definitions/810.mp3",
-      "bytes": 14002,
-      "key": "a86aa037546a2fc0",
+      "bytes": 15047,
+      "key": "20a96efea6edf163",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -173702,6 +173858,602 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin matches Wiktionary: sanctimony from Latin sanctimonia, from sanctus, which is sancio's participle, and sanctimony's obsolete 'state of holiness' sense. sancire links it with sanction. disapproving: all three dictionaries. Weakest point: the hook says it comes from sanctus, skipping sanctimonia, which is fine as ancestry."
+    },
+    {
+      "id": 1284,
+      "word_id": 319,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary accolade: English section (French accolade, via Occitan acolada, from Vulgar Latin *accollo, ad- + collum \"neck\", English collar) and French section (Old French acolee, verb acoler). The knighting embrace is Wiktionary's historical sense; the praise sense dates from 1852. Tone from the cached Oxford Learner's, Cambridge and Longman pages: Oxford and Cambridge formal, Longman none, so null. Other sense (knighting rite) is historical, not shown. Hook says \"comes from French accoler\": loose, since the noun is French accolade formed on Old French acoler (modern accoler), but not false; left unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says French accoler while the origin says French accolade. Both hold: Wiktionary's French entry traces accolade to Old French acoler (ad + collum), and the English entry backs the knighting embrace and the later sense of praise."
+    },
+    {
+      "id": 1285,
+      "word_id": 320,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary acerbic (17th century, Latin acerbus) and the Latin acerbus page fetched through the API (senses: of taste harsh, unripe, sour; of a person rough, severe, bitter; from Proto-Italic *akris, the source of acer, which supports the hook's \"related to acer\"). Root acerbus also links exacerbate (Latin acerbo, from acerbus). Tone from the cached Oxford Learner's, Cambridge and Longman pages: Oxford and Cambridge formal, Longman none, so null. Taste sense is rare, not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the unripe-fruit and harsh-person claims go past the English entry, but the Latin acerbus page supports them (of taste: unripe, sour; of a person: harsh, bitter), and it backs the hook's link to acer (both from Proto-Italic *akris)."
+    },
+    {
+      "id": 1286,
+      "word_id": 321,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary acumen, English and Latin sections (acumen \"sharpened point\", from acuo \"make sharp, sharpen\" + -men). Root acuere is the stem of acute and acuity. Tone from the cached Oxford Learner's, Cambridge and Longman pages: only Cambridge formal, so null. Botanical sense labeled technical and not shown. Hook (Latin word for a point, from acuere) is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. The Latin entry gives acumen 'a sharpened point' from acuo 'sharpen'; the botanical sense is rightly hidden and labelled technical."
+    },
+    {
+      "id": 1287,
+      "word_id": 322,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary adroit (French a + droit \"right\", from Late Latin drictus, Latin directus) and AHD. No root: droit/directus is not visible in other list words, and dirigere/regere is too far back. Tone from the cached Oxford Learner's, Cambridge and Longman pages: only Oxford formal, so null. Hook: \"a droit, properly\" matches Oxford's origin note (\"according to right, properly\"); Wiktionary gives a + droit \"right\". Droit as the right side and dexterous from the right hand are true. Not false, left unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Hook 4: 'à droit, properly' is not in Wiktionary (its French entry gives only à + droit), and the right-hand link is a parallel with dexterous, not the source of adroit. Nothing in it is false. Origin matches Wiktionary (à + droit, from Latin directus)."
+    },
+    {
+      "id": 1288,
+      "word_id": 323,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary affable (French affable, Latin affabilis, from affor \"to address\", ad + for \"to speak\"; \"See fable\"). Root fari also underlies ineffable, which is in the list. Origin written in a different order from Oxford's and Longman's notes. Tone from the cached Oxford Learner's, Cambridge and Longman pages: none of the three labels it. Hook (affabilis from ad + fari) is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. affabilis from affor (ad + for, fari) matches Wiktionary, and fari is spelled as on ineffable."
+    },
+    {
+      "id": 1289,
+      "word_id": 324,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary anathema (Late Latin anathema \"curse, person cursed, offering\"; Greek anathema, from anatithemi \"offer as a votive gift\"; sense \"accursed\" under the influence of Hebrew herem in church writers). No root: tithenai is not visible in English words. Tone from the cached Oxford Learner's, Cambridge and Longman pages: Oxford and Longman formal, Cambridge none, so null. Church sense is ecclesiastical and historical (Wiktionary), missing from all three learner's dictionaries, so not shown. Pairings: became and considered from the tool; \"is anathema to\" 57.9 per billion in --check. Hook is true.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin 4: Wiktionary says the Greek term itself was shaped by Hebrew herem, which led to the sense 'accursed' in church writers; the origin makes the church writers the ones influenced. Pairings 4: 'became anathema' (4.23) and 'considered anathema' (4.65) are common but generic frames. Also means 4: the church-curse sense is common in the tool's data (papal, pronounced, hurled anathemas); leaving it to the origin is defensible."
+    },
+    {
+      "id": 1290,
+      "word_id": 325,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary anodyne (Medieval Latin anodynos, Greek anodynos \"free from pain\", an- + odyne). Wiktionary hedges the French anodin step with \"probably\", and the origin keeps the hedge. Tone from the cached Oxford Learner's, Cambridge and Longman pages: Oxford formal, Cambridge \"formal, mainly disapproving\", Longman formal, so formal. Pairings left empty: the tool's lists are 19th-century medical uses (anodyne draught, liniment), and \"anodyne statement\" is only 0.84 per billion. Pain sense is dated, not shown. Hook is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: no pairings. First-sense phrases are rare ('anodyne statement' 0.84, 'anodyne language' 0.56 per billion; no noun in the 'anodyne *' top ten), so empty is right. The 'probably' hedge on French anodin is kept."
+    },
+    {
+      "id": 1291,
+      "word_id": 326,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary apocryphal (apocrypha + -al) and the English apocrypha page fetched through the API (Late Latin apocryphus \"secret, not approved for public reading\", Greek apokryphos \"hidden\", apo + krypto; \"of doubtful authenticity\" first attested 1590). Root kryptein is the stem of crypt and cryptic. Tone from the cached Oxford Learner's, Cambridge and Longman pages: only Cambridge formal, so null. Hook: \"books kept out of the Bible because their origin was in doubt\" is loose (some Bibles include them), but matches Wiktionary's \"not approved for public reading\" and \"of unknown authorship\"; left unchanged.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: Wiktionary dates 'of doubtful authenticity' (of writings, not canonical) to 1590; 'of doubtful truth' for stories is a separate, undated sense, so 'by 1590 it also meant of doubtful truth' runs slightly ahead of the source. Hook 4: 'books kept out of the Bible' holds for the Hebrew and Protestant canons only; Catholic and Orthodox Bibles include most of them."
+    },
+    {
+      "id": 1292,
+      "word_id": 327,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary approbation (Old French approbacion, Latin approbatio, approbare, ad + probare \"approve, commend\", from probus \"good\"). Root probus as the main session asked, so it links with probity. Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it formal. Hook (approbation and approve share approbare) is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'probare, to find worthy' is a free gloss (Wiktionary: approve, commend). probus is spelled as on probity and reprobate in the sibling worksheets."
+    },
+    {
+      "id": 1293,
+      "word_id": 328,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary arcane (Latin arcanus \"hidden, secret\", from arceo \"to shut up, enclose\"; cognate with arca \"a chest\"). No root a learner could spot elsewhere. Tone from the cached Oxford Learner's, Cambridge and Longman pages: Oxford and Cambridge formal, Longman none, so null. Hook (\"related to arca\") matches Wiktionary.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the first sentence strings four glosses into one clause. Facts match Wiktionary (arcanus from arceo, cognate with arca)."
+    },
+    {
+      "id": 1294,
+      "word_id": 329,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary assiduous (Latin assiduus, from assidere \"to sit down to\", ad- + sedere \"to sit\"; cognate with assess). Root sedere is the stem of sediment, sedentary and preside. Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it formal. Hook makes no root claim beyond assiduus.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'until it is done' adds a little colour beyond Latin assiduus. assideo 'sit by' and sedere are confirmed; sedere matches insidious."
+    },
+    {
+      "id": 1295,
+      "word_id": 330,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary avarice (Old French, Latin avaritia, from avarus) and the Latin avarus page fetched through the API (\"from the root of aveo, long for, crave\"). Root avere also gives English avid. Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it formal. Pairings from the tool's list; sordid avarice is a little old-fashioned. Hook (avarus from avere) is true.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: avere shows in English only in avid, so the root links little. Hook 4: says avarus comes 'from avere', where the Latin entry (and the origin) say from the root of aveo; loose but not false. Pairings 4: 'human avarice' is common (2.41 per billion) but its partner says little about the meaning."
+    },
+    {
+      "id": 1296,
+      "word_id": 331,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary bellicose (Latin bellicosus), the Latin bellicosus and bellicus pages fetched through the API (bellicosus from bellicum + -osus; bellicus \"of or pertaining to war\", related term bellum) and Wiktionary belligerent (from bellum). Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it formal. Hook (bellum, also in belligerent and antebellum) is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: Wiktionary builds bellicosus on bellicum ('signal for battle'), the noun use of bellicus, so the bellicus step is fine. bellum is a well-chosen root."
+    },
+    {
+      "id": 1297,
+      "word_id": 332,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary blithe (Old English blithe \"happy, gentle\"; cognate Dutch blij \"happy\"). Tone from the cached Oxford Learner's, Cambridge and Longman pages: first sense: only Oxford disapproving, so null. Cheerful sense: Oxford and Longman literary (Wiktionary: dated or literary), so literary, and shown, since \"blithe spirit\" is the commonest phrase in the tool's data. Pairings use the careless sense only. Hook (\"joyful\" in Old English) matches.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the Old English form is written blithe rather than blīþe. The literary label on the cheerful sense matches Oxford and Longman, and the careless first sense rightly has no label (only Oxford marks it disapproving)."
+    },
+    {
+      "id": 1298,
+      "word_id": 333,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary brusque (French brusque, Italian brusco \"abrupt, sudden; sour, tart\"; \"further unknown\") and the Italian brusco page fetched through the API (sour, tart, chiefly of wine). The Italian page derives it from brusca, horsetail, while the English page says unknown and AHD gives a hedged Late Latin source, so the origin calls it uncertain. Tone from the cached Oxford Learner's, Cambridge and Longman pages: none of the three labels it. Hook: \"tart\" is in Wiktionary; \"rough\" is in AHD (\"coarse, rough\") but not Wiktionary. Not false, left unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Hook 4: 'rough' is not among Wiktionary's glosses for Italian brusco (sour, tart, chiefly of wine; abrupt, sudden); 'tart' is. The origin's sour-wine claim is on the Italian entry, and 'uncertain' fits (the English entry says unknown, the Italian one offers brusca)."
+    },
+    {
+      "id": 1299,
+      "word_id": 334,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary bucolic (Latin bucolicus, Greek boukolikos \"rustic, pastoral\", literally \"pertaining to cowherds\") and the Greek boukolos page fetched through the API (\"cowherd\", from PIE words for cow and herder). No root: bous shows in no common English word. Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it literary. Herding sense is rare outside \"bucolic poetry\", not shown. Hook (boukolos herdsman, bous ox) is true; AHD also gives bous.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. The Greek entry confirms boukolos 'cowherd' from the words for cow and herder, and literary is in all three learner's dictionaries."
+    },
+    {
+      "id": 1300,
+      "word_id": 338,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary censure (Latin censura \"censor's office or assessment\", from censere \"to assess, judge\"; obsolete English sense \"a judgment, favorable or unfavorable\"). Root censere is visible in census and censor. Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark the noun formal. Watch-out: Dictionary.com and WordUp both note the censure/censor mix-up; written in my own words. Hook is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. Wiktionary's obsolete 'a judgment (favorable or unfavorable)' backs the narrowing, and the censure/censor watch-out is a real mix-up stated correctly."
+    },
+    {
+      "id": 1301,
+      "word_id": 339,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary chary (Old English cearig \"careful; anxious, sad\", from Proto-West Germanic *karag; \"analysable as care + -y\", \"see further at care\") and AHD. No root: the stem is Germanic. Tone from the cached Oxford Learner's, Cambridge and Longman pages: none of the three labels it (Longman: especially British). Pairings: the tool's lists are thin; \"extremely chary\" leads its list, and \"chary of\" is 45 per billion in --check. One is a generic adverb. Hook (same Old English root as care) is true.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'extremely chary' (0.80 per billion) uses a generic intensifier; 'chary of' (45) is strong. Origin matches Wiktionary (ceariġ, care + -y)."
+    },
+    {
+      "id": 1302,
+      "word_id": 341,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary circumspect (Latin circumspecto \"look around\") and the Latin circumspicio page fetched through the API (circum- + specio; circumspecto listed as a synonym). The English word comes through circumspecto, so the origin says \"from which this word comes\" rather than naming a direct borrowing. Root specere as the main session asked (also perspicacious). Tone from the cached Oxford Learner's, Cambridge and Longman pages: all three mark it formal. Hook (circum + specere) is true.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: Wiktionary's English entry derives it from circumspecto; the circumspicere route is backed by Latin circumspectus (its participle, also 'prudent'), so it holds, but 'from which this word comes' is clumsy. Hook 4: circle is a sibling of circum (both from circus), not built on it, so 'as in circle' is loose. Pairings 4: 'remained circumspect' (2.54) uses a generic verb."
     }
   ]
 }

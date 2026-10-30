@@ -35732,10 +35732,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1178067,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French accolade, an embrace, which goes back to Latin ad, to, and collum, neck, the root of collar. The hug that once welcomed a new knight became a word for any honor.",
+      "roots": [
+        "collum"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "highest accolade",
+        "won accolades",
+        "critical accolades"
+      ],
       "audioUrl": "audio/words/319.mp3?v=6ff228e1ba6b",
       "hookAudioUrl": "audio/hooks/319.mp3?v=0829115f8ade",
       "senses": [
@@ -35799,11 +35805,11 @@
         {
           "senseId": 1319,
           "definition": "The rite in which a monarch dubs someone a knight.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "The ceremony of making someone a knight, as with a touch of a sword on the shoulder.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1319.mp3?v=cb1b5f940fe4",
+          "audioUrl": "audio/definitions/1319.mp3?v=a127f2c69d47",
           "examples": [],
           "distractors": []
         }
@@ -35854,10 +35860,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1574605,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin acerbus, a word for the sour taste of unripe fruit that Romans also applied to harsh, bitter people. English uses it for words with that sour sting.",
+      "roots": [
+        "acerbus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "acerbic wit",
+        "acerbic comments",
+        "acerbic critic"
+      ],
       "audioUrl": "audio/words/320.mp3?v=fe2997a2dff8",
       "hookAudioUrl": "audio/hooks/320.mp3?v=9136cc8f3a08",
       "senses": [
@@ -35921,11 +35933,11 @@
         {
           "senseId": 1320,
           "definition": "Tasting tart enough to make the mouth pucker.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Sour or bitter to the taste.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1320.mp3?v=639060bf43b1",
+          "audioUrl": "audio/definitions/1320.mp3?v=8ad4fa2a217c",
           "examples": [],
           "distractors": []
         }
@@ -35976,10 +35988,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 314578,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin acumen meant a sharpened point, from acuere, to sharpen. English borrowed it for a mind sharp enough to see quickly what matters.",
+      "roots": [
+        "acuere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "business acumen",
+        "political acumen",
+        "financial acumen"
+      ],
       "audioUrl": "audio/words/321.mp3?v=e4d7e9f08443",
       "hookAudioUrl": "audio/hooks/321.mp3?v=8c378a6add82",
       "senses": [
@@ -36043,11 +36061,11 @@
         {
           "senseId": 806,
           "definition": "A narrow, pointed tip at the end of a leaf or other plant part.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In plants, the thin pointed end of a leaf.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/806.mp3?v=d03739ff89b9",
+          "audioUrl": "audio/definitions/806.mp3?v=6a55144c87fa",
           "examples": [],
           "distractors": []
         }
@@ -36086,10 +36104,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 570406,
-      "etymology": null,
+      "etymology": "From French adroit, made of à, to, and droit, right, which goes back to Latin directus, straight. An adroit person handles things the right way.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "adroit politician",
+        "adroit handling",
+        "adroit diplomacy"
+      ],
       "audioUrl": "audio/words/322.mp3?v=86aeda86b20a",
       "hookAudioUrl": "audio/hooks/322.mp3?v=b18a4bb0de2e",
       "senses": [
@@ -36201,10 +36223,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 426878,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin affabilis, built on affari, to address, from ad, to, and fari, to speak, described someone you could readily approach and speak with. It reached English through French.",
+      "roots": [
+        "fari"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "affable manner",
+        "affable smile",
+        "affable personality"
+      ],
       "audioUrl": "audio/words/323.mp3?v=d4b4e7aa5aa9",
       "hookAudioUrl": "audio/hooks/323.mp3?v=1bd0dae2133a",
       "senses": [
@@ -36316,10 +36344,14 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 293499,
-      "etymology": null,
+      "etymology": "Through Late Latin from Ancient Greek anathema, a thing set up as an offering to a god. Church writers, influenced by Hebrew herem, used it for a person cursed and cast out, and so for anything detested.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "is anathema to",
+        "became anathema",
+        "considered anathema"
+      ],
       "audioUrl": "audio/words/324.mp3?v=509daddc3d75",
       "hookAudioUrl": "audio/hooks/324.mp3?v=b4ee41541265",
       "senses": [
@@ -36383,11 +36415,11 @@
         {
           "senseId": 1335,
           "definition": "A sentence passed by church authorities that condemns someone and shuts them out of the church.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A curse laid on someone by church leaders, cutting them off from the faithful.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1335.mp3?v=55a8992a5dee",
+          "audioUrl": "audio/definitions/1335.mp3?v=9a179b519e68",
           "examples": [],
           "distractors": []
         }
@@ -36418,7 +36450,7 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1967481,
-      "etymology": null,
+      "etymology": "Ancient Greek anodynos, painless, was made of an-, without, and odyne, pain, so the word first named painkillers. Its sense of bland probably came through French anodin, harmless.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -36430,7 +36462,7 @@
           "definition": "Free of anything sharp, bold or challenging, and so unlikely to stir any reaction.",
           "plainLanguageDefinition": "So careful not to upset anyone that it ends up dull.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/674.mp3?v=ec71ebafde4c",
           "examples": [
@@ -36485,11 +36517,11 @@
         {
           "senseId": 808,
           "definition": "Able to ease or dull pain.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Making pain less sharp, as a painkiller does.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/808.mp3?v=08b16faf4f9e",
+          "audioUrl": "audio/definitions/808.mp3?v=cd0fbb92151f",
           "examples": [],
           "distractors": []
         }
@@ -36532,10 +36564,15 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 330036,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From apocrypha, Late Latin for books of doubtful source kept out of church use, from Ancient Greek apokryphos, hidden, built on kryptein, to hide. By 1590 it also meant of doubtful truth.",
+      "roots": [
+        "kryptein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "apocryphal story",
+        "probably apocryphal"
+      ],
       "audioUrl": "audio/words/326.mp3?v=4e0f7fbd0c53",
       "hookAudioUrl": "audio/hooks/326.mp3?v=55a5fb37eb7b",
       "senses": [
@@ -36643,10 +36680,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 214883,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin approbare, to approve, built on probare, to find worthy, from probus, good, gave the noun approbatio, which came into English through Old French.",
+      "roots": [
+        "probus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "public approbation",
+        "universal approbation",
+        "unqualified approbation"
+      ],
       "audioUrl": "audio/words/327.mp3?v=e0578698a89c",
       "hookAudioUrl": "audio/hooks/327.mp3?v=ef874602a21d",
       "senses": [
@@ -36655,7 +36698,7 @@
           "definition": "A favorable verdict on someone or their work, expressed as approval or praise.",
           "plainLanguageDefinition": "Approval and praise from others.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/676.mp3?v=2ef97422d785",
           "examples": [
@@ -36746,10 +36789,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 442829,
-      "etymology": null,
+      "etymology": "Latin arcere, to shut in, a verb related to arca, a chest, gave arcanus, secret, the source of arcane: such knowledge is kept shut away from most people.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "arcane knowledge",
+        "arcane rules",
+        "arcane details"
+      ],
       "audioUrl": "audio/words/328.mp3?v=23432cd07fd7",
       "hookAudioUrl": "audio/hooks/328.mp3?v=cef0becdaae4",
       "senses": [
@@ -36857,10 +36904,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 586871,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin assiduus, built on assidere, to sit by or settle at, from ad- and sedere, to sit: an assiduous person stays seated at a task until it is done.",
+      "roots": [
+        "sedere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "assiduous attention",
+        "assiduous study",
+        "assiduous efforts"
+      ],
       "audioUrl": "audio/words/329.mp3?v=462d85b37e09",
       "hookAudioUrl": "audio/hooks/329.mp3?v=b0265033d3ab",
       "senses": [
@@ -36869,7 +36922,7 @@
           "definition": "Unflagging in effort and thorough in every step.",
           "plainLanguageDefinition": "Keeping at a job patiently and never cutting corners.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/679.mp3?v=e6835a4a654a",
           "examples": [
@@ -36968,10 +37021,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 258537,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin avarus, greedy, built on the same root as avere, to yearn for, gave avaritia, which reached English through Old French.",
+      "roots": [
+        "avere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "insatiable avarice",
+        "human avarice",
+        "sordid avarice"
+      ],
       "audioUrl": "audio/words/330.mp3?v=1095e5410c4c",
       "hookAudioUrl": "audio/hooks/330.mp3?v=77d3ebb98b10",
       "senses": [
@@ -36980,7 +37039,7 @@
           "definition": "A consuming hunger for riches that outweighs fairness or kindness.",
           "plainLanguageDefinition": "Strong greed for money or things.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/680.mp3?v=3dcb334e4d59",
           "examples": [
@@ -37071,10 +37130,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 777869,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin bellum, war, also behind belligerent, gave bellicus, of war, and then bellicosus, warlike, the source of bellicose.",
+      "roots": [
+        "bellum"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bellicose rhetoric",
+        "bellicose statements",
+        "bellicose attitude"
+      ],
       "audioUrl": "audio/words/331.mp3?v=358ada9ecc77",
       "hookAudioUrl": "audio/hooks/331.mp3?v=8c9a0d0e6cad",
       "senses": [
@@ -37083,7 +37148,7 @@
           "definition": "Inclined to pick fights and to reach for force before talk.",
           "plainLanguageDefinition": "Always itching for a fight or a war.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/682.mp3?v=3dbff977022f",
           "examples": [
@@ -37186,10 +37251,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 956081,
-      "etymology": null,
+      "etymology": "Old English blithe meant happy or gentle, and Dutch blij, glad, is a cousin. Today the word usually describes good cheer where some worry would be wiser.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "blithe disregard",
+        "blithe assumption",
+        "blithe indifference"
+      ],
       "audioUrl": "audio/words/332.mp3?v=3fc24ede7902",
       "hookAudioUrl": "audio/hooks/332.mp3?v=b96f6163c0dc",
       "senses": [
@@ -37253,11 +37322,11 @@
         {
           "senseId": 809,
           "definition": "Cheerful and untroubled in spirit.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Lighthearted and full of good cheer.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/809.mp3?v=f4540899dda6",
+          "register": "literary",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/809.mp3?v=980a92231c0e",
           "examples": [],
           "distractors": []
         }
@@ -37312,10 +37381,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 595634,
-      "etymology": null,
+      "etymology": "Through French from Italian brusco, which could describe sour wine as well as a sudden, abrupt manner. Where the Italian word came from is uncertain.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "brusque manner",
+        "brusque tone",
+        "brusque reply"
+      ],
       "audioUrl": "audio/words/333.mp3?v=bc3fb5d2f8bb",
       "hookAudioUrl": "audio/hooks/333.mp3?v=4f75e2651289",
       "senses": [
@@ -37427,10 +37500,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 855543,
-      "etymology": null,
+      "etymology": "Ancient Greek boukolos, a cowherd, gave boukolikos, rustic or pastoral, which reached English through Latin: a bucolic scene is the herdsman's countryside of fields and cattle.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bucolic setting",
+        "bucolic landscape",
+        "bucolic scene"
+      ],
       "audioUrl": "audio/words/334.mp3?v=e7f27b232f18",
       "hookAudioUrl": "audio/hooks/334.mp3?v=89c2f1c5cbe5",
       "senses": [
@@ -37439,7 +37516,7 @@
           "definition": "Charming and peaceful in the way country life is often pictured.",
           "plainLanguageDefinition": "Calm and pretty, like farms and open fields far from the city.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/686.mp3?v=6c67fe8d8697",
           "examples": [
@@ -37494,11 +37571,11 @@
         {
           "senseId": 810,
           "definition": "Having to do with shepherds or the herding of animals.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Relating to herdsmen and the animals they look after.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/810.mp3?v=07cfb12f960b",
+          "audioUrl": "audio/definitions/810.mp3?v=dbb690d88990",
           "examples": [],
           "distractors": []
         }
@@ -37890,10 +37967,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 125962,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin censura, the post and rulings of a Roman censor, from censere, to assess or judge. In English it once meant any judgment before narrowing to a harsh one.",
+      "roots": [
+        "censere"
+      ],
+      "watchOut": "Censure does not mean cutting or banning material, which is censoring; it means strong, often official criticism of someone's conduct.",
+      "pairings": [
+        "public censure",
+        "severe censure",
+        "escape censure"
+      ],
       "audioUrl": "audio/words/338.mp3?v=566c2be66c32",
       "hookAudioUrl": "audio/hooks/338.mp3?v=1e199f0a2dc4",
       "senses": [
@@ -37902,7 +37985,7 @@
           "definition": "A stern verdict that someone has behaved badly, often delivered formally by those with authority over them.",
           "plainLanguageDefinition": "Strong blame or criticism, often from someone in charge.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/691.mp3?v=29ad6090dfe7",
           "examples": [
@@ -38005,10 +38088,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1366553,
-      "etymology": null,
+      "etymology": "Old English cearig could mean careful, anxious or sad, and was formed on the Germanic word that became care, so a chary person is full of care.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "chary of",
+        "extremely chary"
+      ],
       "audioUrl": "audio/words/339.mp3?v=701e5b049323",
       "hookAudioUrl": "audio/hooks/339.mp3?v=9507321297b5",
       "senses": [
@@ -38223,10 +38309,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 466490,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin circum, around, and specere, to look, formed circumspicere, to look all around, from which this word comes: a circumspect person checks every side before acting.",
+      "roots": [
+        "specere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "circumspect approach",
+        "circumspect manner",
+        "remained circumspect"
+      ],
       "audioUrl": "audio/words/341.mp3?v=b8529a5f1928",
       "hookAudioUrl": "audio/hooks/341.mp3?v=b0d6c54bd2e0",
       "senses": [
@@ -38235,7 +38327,7 @@
           "definition": "Wary and discreet, weighing how one's words or actions could backfire.",
           "plainLanguageDefinition": "Careful to think about the risks before you act or speak.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/695.mp3?v=5e803429e781",
           "examples": [
