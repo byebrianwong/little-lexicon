@@ -2,7 +2,7 @@
 // network: Chromatic compares images, so a story whose data moves on its own
 // reports a diff on every run.
 //
-// Word content comes from twelve hand-written sample words (sampleCorpus.ts),
+// Word content comes from thirteen hand-written sample words (sampleCorpus.ts),
 // not from the app's words file, so regenerating that file does not change
 // any snapshot.
 
@@ -31,6 +31,23 @@ export function word(headword: string): WordContent {
   const found = WORDS.find((w) => w.headword === headword);
   if (!found) throw new Error(`No sample word named "${headword}"`);
   return found;
+}
+
+/**
+ * A word with none of the extras: no tone, origin, roots, watch-out note,
+ * pairings, other meanings, synonyms or antonyms. Shows that each extra line
+ * leaves no trace when it has nothing to say.
+ */
+export function withoutExtras(content: WordContent): WordContent {
+  return {
+    ...content,
+    etymology: null,
+    roots: [],
+    watchOut: null,
+    pairings: [],
+    relations: [],
+    senses: content.senses.map((s) => ({ ...s, register: null, alsoMeans: false })),
+  };
 }
 
 // A Monday, so week-aligned grids (the heatmap) start in a stable place.

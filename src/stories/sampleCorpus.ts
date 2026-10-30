@@ -1,9 +1,12 @@
-// Twelve hand-written words used as story fixtures. The app itself teaches the
-// words in src/content/words.json, which the pipeline generates; these stay
+// Thirteen hand-written words used as story fixtures. The app itself teaches
+// the words in src/content/words.json, which the pipeline generates; these stay
 // fixed so Chromatic snapshots do not change when that file does. Until the
-// words file existed, demo mode used this list, numbered 1 to 12 in this order
-// (see src/lib/backend/demo/legacyWordIds.ts). Definitions are concise and
-// original to avoid share-alike text.
+// words file existed, demo mode used the first twelve, numbered 1 to 12 in this
+// order (see src/lib/backend/demo/legacyWordIds.ts). Definitions are concise
+// and original to avoid share-alike text.
+//
+// loquacious, the last, has every extra (tone, origin, root, watch-out note,
+// pairings and an "Also means" sense), and shares its root with eloquent.
 
 import type { Register } from '@/lib/types';
 
@@ -16,6 +19,8 @@ export interface SeedSense {
   def: string;
   plain: string;
   register?: Register;
+  /** Show under "Also means". Only on a later sense. */
+  alsoMeans?: boolean;
   examples: SeedExample[];
   distractors: string[]; // wrong definitions for multiple choice
 }
@@ -387,6 +392,46 @@ export const CORPUS: SeedWord[] = [
     synonyms: ['articulate', 'persuasive', 'fluent', 'expressive'],
     antonyms: ['inarticulate', 'halting', 'tongue-tied'],
     mnemonic: 'Someone eloquent can elope with your agreement using words alone.',
+  },
+  {
+    headword: 'loquacious',
+    pos: 'adjective',
+    ipa: '/ləˈkweɪʃəs/',
+    syllables: 4,
+    difficultyTier: 4,
+    frequencyRank: 16400,
+    etymology: 'From Latin loquax, talkative, from loqui, to speak.',
+    roots: ['loqui'],
+    watchOut: 'Loquacious means talking a lot, not talking well; that is eloquent.',
+    pairings: ['loquacious guide', 'became loquacious'],
+    senses: [
+      {
+        register: 'formal',
+        def: 'Tending to talk a great deal.',
+        plain: 'Talks a lot, often more than needed.',
+        examples: [
+          { text: 'Our loquacious guide had a story for every street corner.', cloze: 'loquacious' },
+          { text: 'After two coffees he became loquacious and told the tale twice.', cloze: 'loquacious' },
+          { text: 'The loquacious host never let the interview go quiet.', cloze: 'loquacious' },
+        ],
+        distractors: [
+          'Saying very little; quiet.',
+          'Easily frightened.',
+          'Relating to the law.',
+        ],
+      },
+      {
+        register: 'literary',
+        alsoMeans: true,
+        def: 'Of birds or water, making a steady chattering or babbling sound.',
+        plain: 'Of birds or water: making a steady chattering sound.',
+        examples: [{ text: 'A loquacious stream ran past the cottage.', cloze: 'loquacious' }],
+        distractors: [],
+      },
+    ],
+    synonyms: ['talkative', 'garrulous', 'voluble', 'chatty'],
+    antonyms: ['taciturn', 'reticent', 'laconic'],
+    mnemonic: 'Loquacious shares loqui, to speak, with eloquent: a loquacious person speaks and speaks.',
   },
 ];
 
