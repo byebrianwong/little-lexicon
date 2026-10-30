@@ -393,6 +393,7 @@ export default function SessionScreen() {
         {showIntro ? (
           <WordIntro
             content={current.content}
+            collection={allWordsQuery.data}
             visit={visitOf(current)}
             onStart={() => setIntroduced((prev) => new Set(prev).add(current.content.wordId))}
           />

@@ -5,6 +5,7 @@ import {
   filterWords,
   NO_FILTERS,
   partsOfSpeech,
+  searchForWord,
   toggleTier,
   type FilterContext,
 } from './wordFilters';
@@ -118,6 +119,33 @@ describe('filterWords', () => {
     };
     expect(ids(filterWords(WORDS, '', filters, CTX))).toEqual([5]);
     expect(ids(filterWords(WORDS, 'erudite', filters, CTX))).toEqual([]);
+  });
+});
+
+describe('searchForWord', () => {
+  const erudite = WORDS[2]!;
+
+  it('searches for the headword, which lists that word', () => {
+    const next = searchForWord(erudite, NO_FILTERS, CTX);
+    expect(next.query).toBe('erudite');
+    expect(ids(filterWords(WORDS, next.query, next.filters, CTX))).toEqual([3]);
+  });
+
+  it('keeps the filters when the word passes them', () => {
+    const filters = { tiers: [3], status: 'known' as const, partOfSpeech: 'adjective' };
+    expect(searchForWord(erudite, filters, CTX)).toEqual({ query: 'erudite', filters });
+  });
+
+  it('clears the filters when one would hide the word', () => {
+    for (const filters of [
+      { ...NO_FILTERS, tiers: [1, 2] },
+      { ...NO_FILTERS, status: 'saved' as const },
+      { ...NO_FILTERS, partOfSpeech: 'verb' },
+    ]) {
+      const next = searchForWord(erudite, filters, CTX);
+      expect(next.filters).toEqual(NO_FILTERS);
+      expect(ids(filterWords(WORDS, next.query, next.filters, CTX))).toEqual([3]);
+    }
   });
 });
 

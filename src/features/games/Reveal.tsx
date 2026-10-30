@@ -5,6 +5,11 @@
 //
 // It is set like a dictionary entry under an ink rule: the verdict in small
 // capitals, the word, its definition, then the example in italic.
+//
+// Of the extras (components/WordExtras), only the "Watch out" note is shown,
+// under the definition. It names the misreading a wrong answer often comes
+// from, and this panel is where that answer gets corrected. The other lines
+// are on the new-word card and in All words.
 
 import { useEffect, useRef } from 'react';
 import { Pressable, View } from 'react-native';
@@ -22,6 +27,8 @@ import {
   TextButton,
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
+import { WatchOut } from '@/components/WordExtras';
+import { watchOutOf } from '@/lib/wordExtras';
 import { colors } from '@/theme/colors';
 import { ReportProblem } from '@/features/report/ReportProblem';
 import { SaveWordButton } from '@/features/feed/SaveWordButton';
@@ -137,6 +144,7 @@ export function Reveal({
           {content.partOfSpeech ? <Note>{content.partOfSpeech}</Note> : null}
         </View>
         <Body className="mt-2 text-[19px] leading-[27px]">{primaryDef}</Body>
+        <WatchOut note={watchOutOf(content)} className="mt-2" />
         {example ? (
           <Pressable
             accessibilityRole="button"
