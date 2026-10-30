@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T07:47:19.636Z"
+    "updatedAt": "2026-10-30T07:56:14.903Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1034,
-    "reviews": 1235
+    "mnemonics": 1035,
+    "reviews": 1259
   },
   "words": [
     {
@@ -4639,8 +4639,15 @@
       "syllables": 3,
       "frequency_rank": 382060,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French sardonique, by way of Latin, from Ancient Greek sardonios, used of bitter, scornful laughter. The Greek is often linked to a Sardinian plant said to kill those who ate it, leaving a scornful-looking grin.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "sardonic smile",
+        "sardonic laugh",
+        "sardonic humor"
+      ]
     },
     {
       "id": 264,
@@ -4650,8 +4657,16 @@
       "syllables": 3,
       "frequency_rank": 2592285,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin satiare (\"to fill up, satisfy\"), from satis (\"enough\"), the word that also gives satisfy.",
+      "audio_url": null,
+      "roots": [
+        "satis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "satiate their hunger",
+        "fully satiated"
+      ]
     },
     {
       "id": 265,
@@ -4661,8 +4676,15 @@
       "syllables": 3,
       "frequency_rank": 2087648,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French saturnin or straight from Medieval Latin Saturninus, \"of Saturn\". Astrologers held that people born under that planet were cold and gloomy.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "saturnine face",
+        "saturnine features",
+        "saturnine expression"
+      ]
     },
     {
       "id": 266,
@@ -4672,8 +4694,13 @@
       "syllables": 2,
       "frequency_rank": 774687,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French savant (\"knowing\"), once the present participle of savoir (\"to know\"), which goes back to Latin sapere (\"to be wise, to taste\"). The sense of a person with one rare gift is short for idiot savant.",
+      "audio_url": null,
+      "roots": [
+        "sapere"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 267,
@@ -4695,8 +4722,17 @@
       "syllables": 2,
       "frequency_rank": 264254,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin servilis (\"of a slave\"), from servus (\"slave\"), the word that also gives serve.",
+      "audio_url": null,
+      "roots": [
+        "servus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "servile obedience",
+        "servile flattery",
+        "servile attitude"
+      ]
     },
     {
       "id": 269,
@@ -4706,8 +4742,16 @@
       "syllables": 4,
       "frequency_rank": 1691956,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French soporifique, made from Latin sopor (\"deep sleep\") and the suffix -ficus (\"making\"), which is related to facere (\"to make\").",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "soporific effect",
+        "soporific drugs"
+      ]
     },
     {
       "id": 270,
@@ -4717,8 +4761,15 @@
       "syllables": 3,
       "frequency_rank": 117995,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin spurius, said of a child born outside marriage and later of anything false. Where spurius itself comes from is uncertain.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "spurious claims",
+        "spurious correlation",
+        "spurious grounds"
+      ]
     },
     {
       "id": 271,
@@ -4728,8 +4779,15 @@
       "syllables": 2,
       "frequency_rank": 814937,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of unknown origin. It first appears in the late 1500s, when it could also mean to scatter, and may be a blend of scatter and wander.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "squander money",
+        "squander time",
+        "squander the opportunity"
+      ]
     },
     {
       "id": 272,
@@ -4739,8 +4797,14 @@
       "syllables": 1,
       "frequency_rank": 386381,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From the verb stay: its past participle stayed was once also spelled staid, and that spelling lived on as a word for settled, sober people.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "staid and respectable",
+        "staid and conservative"
+      ]
     },
     {
       "id": 273,
@@ -4762,8 +4826,16 @@
       "syllables": 2,
       "frequency_rank": 308114,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French strident, from Latin stridere (\"to creak, screech, hiss\"), a verb whose sound imitates the noise it names.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "strident voice",
+        "strident tone",
+        "strident criticism",
+        "strident rhetoric"
+      ]
     },
     {
       "id": 275,
@@ -4773,8 +4845,14 @@
       "syllables": 2,
       "frequency_rank": 3224142,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "First a golf term for a ball lying between another ball and the hole. Its source is uncertain, perhaps a Scots word for someone who can barely see.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "stymie efforts",
+        "stymie progress"
+      ]
     },
     {
       "id": 276,
@@ -4784,8 +4862,17 @@
       "syllables": 2,
       "frequency_rank": 63636,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin sublimis (\"lifted up, lofty\"), partly through Middle French: something sublime stands far above the ordinary.",
+      "audio_url": null,
+      "roots": [
+        "sublimis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "sublime beauty",
+        "sublime spectacle",
+        "sublime scenery"
+      ]
     },
     {
       "id": 277,
@@ -4795,8 +4882,17 @@
       "syllables": 4,
       "frequency_rank": 189271,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin substantiare (\"to give substance to\"), from Latin substantia (\"substance\"), built from sub (\"under\") and stare (\"to stand\").",
+      "audio_url": null,
+      "roots": [
+        "substantia"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "substantiate the claim",
+        "substantiate the allegations",
+        "substantiating evidence"
+      ]
     },
     {
       "id": 278,
@@ -4806,8 +4902,17 @@
       "syllables": 4,
       "frequency_rank": 97579,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin superfluus (\"overflowing\"), from super (\"over\") and fluere (\"to flow\"), the verb also behind fluid.",
+      "audio_url": null,
+      "roots": [
+        "fluere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "superfluous words",
+        "superfluous information",
+        "superfluous details"
+      ]
     },
     {
       "id": 279,
@@ -4817,8 +4922,16 @@
       "syllables": 2,
       "frequency_rank": 861466,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French surfait, \"overdone\", formed from sur (\"over\") and faire (\"to do\"), which goes back to Latin facere.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "a surfeit of information",
+        "a surfeit of food"
+      ]
     },
     {
       "id": 280,
@@ -4828,8 +4941,17 @@
       "syllables": 4,
       "frequency_rank": 732736,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin surrepticius (\"stolen, secret\"), usually traced to surripere (\"to snatch away\"), from sub (\"under\") and rapere (\"to seize\"). Some trace it instead to surrepere (\"to creep under\").",
+      "audio_url": null,
+      "roots": [
+        "rapere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "surreptitious glance",
+        "surreptitious entry",
+        "surreptitious recording"
+      ]
     },
     {
       "id": 281,
@@ -4839,8 +4961,16 @@
       "syllables": 3,
       "frequency_rank": 2965494,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek sykophantes (\"informer\"), literally \"fig-shower\", from sykon (\"fig\") and phainein (\"to show\"), for reasons now unclear. In English it first meant an informer, later a flatterer of the powerful.",
+      "audio_url": null,
+      "roots": [
+        "phainein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "surrounded by sycophants",
+        "fawning sycophants"
+      ]
     },
     {
       "id": 282,
@@ -4850,8 +4980,17 @@
       "syllables": 3,
       "frequency_rank": 591040,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from French taciturne, or made by shortening taciturnity; either way it goes back to Latin tacitus (\"silent\"), from tacere (\"to be silent\"), the verb that also gives tacit.",
+      "audio_url": null,
+      "roots": [
+        "tacere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "taciturn man",
+        "taciturn nature",
+        "taciturn disposition"
+      ]
     },
     {
       "id": 283,
@@ -4861,8 +5000,17 @@
       "syllables": 3,
       "frequency_rank": 152040,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From tangent, from Latin linea tangens, \"touching line\", a line that meets a curve at one point. Tangens comes from tangere (\"to touch\").",
+      "audio_url": null,
+      "roots": [
+        "tangere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "tangential issue",
+        "tangential connection",
+        "tangential relevance"
+      ]
     },
     {
       "id": 284,
@@ -4872,8 +5020,18 @@
       "syllables": 3,
       "frequency_rank": 148211,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tenuis (\"thin, fine\") plus the English ending -ous. The same Latin adjective lies behind attenuate.",
+      "audio_url": null,
+      "roots": [
+        "tenuis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "tenuous connection",
+        "tenuous link",
+        "tenuous hold",
+        "tenuous grip"
+      ]
     },
     {
       "id": 285,
@@ -4883,8 +5041,17 @@
       "syllables": 1,
       "frequency_rank": 330863,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tersus (\"wiped off, tidy\"), from tergere (\"to wipe\"), the verb also behind detergent. In English it first meant polished or neat, and later brief and spare.",
+      "audio_url": null,
+      "roots": [
+        "tergere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "terse reply",
+        "terse statement",
+        "terse note"
+      ]
     },
     {
       "id": 286,
@@ -4918,8 +5085,17 @@
       "syllables": 3,
       "frequency_rank": 243489,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tortuosus (\"full of twists\"), from tortus (\"a twisting\"), from torquere (\"to twist\"), the verb that also gives torque and contort.",
+      "audio_url": null,
+      "roots": [
+        "torquere"
+      ],
+      "watch_out": "Tortuous is about twists and needless complications, not suffering; for something painful to endure, the word is torturous.",
+      "pairings": [
+        "tortuous process",
+        "tortuous negotiations",
+        "tortuous history"
+      ]
     },
     {
       "id": 289,
@@ -4929,8 +5105,13 @@
       "syllables": 3,
       "frequency_rank": 431459,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tractabilis (\"easy to handle\"), from tractare (\"to handle\"), a form of trahere (\"to draw, pull\") that stresses repeated action.",
+      "audio_url": null,
+      "roots": [
+        "trahere"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 290,
@@ -4940,8 +5121,18 @@
       "syllables": 2,
       "frequency_rank": 654036,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French trenchier (\"to cut\"), whose present participle trenchant meant \"cutting\". The noun trench comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "trenchier"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "trenchant criticism",
+        "trenchant critique",
+        "trenchant analysis",
+        "trenchant critic"
+      ]
     },
     {
       "id": 291,
@@ -10672,7 +10863,7 @@
       "definition": "Habitually gloomy and sullen, with a dark, forbidding look.",
       "plain_language_definition": "Gloomy, moody and quiet, with a grim look.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 463,
@@ -10680,7 +10871,7 @@
       "definition": "A scholar whose knowledge runs so deep that others treat them as an authority.",
       "plain_language_definition": "Someone who knows a huge amount, often more than anyone else about their subject.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 464,
@@ -10696,7 +10887,7 @@
       "definition": "Meekly obeying and flattering whoever holds power over one.",
       "plain_language_definition": "Always bowing and saying yes to the people above you, with no pride left.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 467,
@@ -10720,7 +10911,8 @@
       "definition": "Born out of wedlock.",
       "plain_language_definition": "Born to parents who are not married to each other.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 472,
@@ -10760,7 +10952,7 @@
       "definition": "Bring an effort to a standstill by putting something in its way that it cannot get past.",
       "plain_language_definition": "To block someone's progress so that they get stuck.",
       "sense_order": 1,
-      "register": null
+      "register": "informal"
     },
     {
       "id": 480,
@@ -10776,7 +10968,8 @@
       "definition": "Worthy of adoration or reverence.",
       "plain_language_definition": "Extremely worthy of deep respect and honor.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 483,
@@ -10784,7 +10977,7 @@
       "definition": "Turn a claim from mere assertion into something proven, by producing evidence for it.",
       "plain_language_definition": "To show with proof that what someone claims actually holds up.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 484,
@@ -10792,7 +10985,8 @@
       "definition": "Represent in bodily form.",
       "plain_language_definition": "To give physical form or shape to an abstract idea.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 486,
@@ -10808,7 +11002,7 @@
       "definition": "An oversized helping or stock of something, past the point where more is welcome.",
       "plain_language_definition": "So much of something that it stops being a treat and becomes a burden.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 490,
@@ -10816,7 +11010,8 @@
       "definition": "Eating until excessively full.",
       "plain_language_definition": "The act of eating or drinking way too much.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 491,
@@ -10832,7 +11027,7 @@
       "definition": "A hanger-on who fawns over powerful people and echoes their views for what it may bring.",
       "plain_language_definition": "A person who acts overly nice to important people just to get ahead.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 494,
@@ -10862,9 +11057,10 @@
       "id": 498,
       "word_id": 284,
       "definition": "Very thin in gauge or diameter.",
-      "plain_language_definition": "Extremely thin in width or diameter.",
+      "plain_language_definition": "Very fine and slender, like a single strand of silk.",
       "sense_order": 2,
-      "register": null
+      "register": "literary",
+      "also_means": true
     },
     {
       "id": 500,
@@ -10912,7 +11108,7 @@
       "definition": "Giving way readily to direction, so that handling it takes little effort.",
       "plain_language_definition": "Easy to lead and quick to go along with what you want.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 509,
@@ -11363,7 +11559,8 @@
       "definition": "Eat much more than one needs.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 640,
@@ -11371,7 +11568,8 @@
       "definition": "Bitter or scornful.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 643,
@@ -11453,9 +11651,10 @@
       "id": 654,
       "word_id": 289,
       "definition": "Simple enough to solve or work through with a reasonable amount of effort.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a problem or task, possible to solve or manage without great difficulty.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 664,
@@ -15200,9 +15399,10 @@
       "id": 1307,
       "word_id": 283,
       "definition": "In geometry, lying along or pointing the same way as a tangent line.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In math and physics, running along a line that just touches a curve at one point.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1308,
@@ -15210,15 +15410,17 @@
       "definition": "Of a gas or fluid, spread so thin that it is barely there.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1309,
       "word_id": 288,
       "definition": "Of a road or river, curving back and forth many times along its course.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Snaking left and right again and again, as a mountain road or a river does.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1310,
@@ -15226,7 +15428,8 @@
       "definition": "Marking a clean, unmistakable line between one thing and another.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1311,
@@ -15368,17 +15571,19 @@
       "id": 1328,
       "word_id": 266,
       "definition": "A person with autism or a brain injury who shows a single astonishing gift, far beyond their other skills.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Someone with autism or a brain injury who has one amazing talent, such as drawing a city from memory.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1329,
       "word_id": 268,
       "definition": "Belonging to the lowly work or status of an enslaved person or a domestic worker.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To do with slaves or servants, such as their labor or their low place in society.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1330,
@@ -69420,14 +69625,6 @@
       "revision": 3
     },
     {
-      "id": 671,
-      "word_id": 280,
-      "text": "Surreptitious comes from Latin surripere, to snatch from under: a surreptitious act is done under cover.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 672,
       "word_id": 281,
       "text": "Sycophant comes from Greek sykophantes, literally fig-shower. Picture a fawning courtier forever showing the king a basket of figs.",
@@ -72143,6 +72340,14 @@
       "id": 1034,
       "word_id": 23,
       "text": "Ascetic comes from the Greek askeo, \"to exercise\": an ascetic trains the body to do without comforts.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1035,
+      "word_id": 280,
+      "text": "Surreptitious is usually traced to Latin surripere, to snatch from under: a surreptitious act is done under cover.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -122466,8 +122671,8 @@
     },
     {
       "path": "definitions/1328.mp3",
-      "bytes": 29571,
-      "key": "b9e5d276fc383838",
+      "bytes": 28421,
+      "key": "006ff03d8fd61032",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122480,8 +122685,8 @@
     },
     {
       "path": "definitions/1329.mp3",
-      "bytes": 23928,
-      "key": "cfa693e168a09baa",
+      "bytes": 22361,
+      "key": "1ac187eb092749cb",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122613,8 +122818,8 @@
     },
     {
       "path": "definitions/1307.mp3",
-      "bytes": 19749,
-      "key": "2eb47e2fd3f0c74f",
+      "bytes": 21107,
+      "key": "e8de7a9ca8e4cb3e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122627,8 +122832,8 @@
     },
     {
       "path": "definitions/498.mp3",
-      "bytes": 11912,
-      "key": "fff1aa87cabb0896",
+      "bytes": 15464,
+      "key": "8baf8c491174c93c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122655,8 +122860,8 @@
     },
     {
       "path": "definitions/1309.mp3",
-      "bytes": 19122,
-      "key": "613c3341e17f3665",
+      "bytes": 20480,
+      "key": "5c2cee623480a24e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122669,8 +122874,8 @@
     },
     {
       "path": "definitions/654.mp3",
-      "bytes": 19226,
-      "key": "8a779959e0c7a3b6",
+      "bytes": 21525,
+      "key": "d08df9932d6b88d2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127646,8 +127851,8 @@
     },
     {
       "path": "hooks/280.mp3",
-      "bytes": 27481,
-      "key": "e6c93360f95ed1aa",
+      "bytes": 30720,
+      "key": "8a9bb8fd5f14847a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -171786,6 +171991,757 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin and hook match Wiktionary (prolificus, proles + -ficus from facere; proliferate shares proles). Roots match the record (facere). Weakest point: the origin is close to the skill's own model sentence, which is fine."
+    },
+    {
+      "id": 1236,
+      "word_id": 263,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French sardonique, Latin sardonius, Ancient Greek sardonios, a form of sardanios \"bitter or scornful laughter\"; the link to a Sardinian plant that twisted the eater's face is given as \"often cited\", the plant species and a link to sairo \"to grin\" are hedged). The origin keeps the hedge (\"often linked\", \"said to\") and leaves out the plant species and sairo; its wording differs from Longman's and Dictionary.com's plant clauses. Hook unchanged: it calls the plant story a tale, which fits the hedge, but \"goes back to\" states the link a little more firmly than Wiktionary, so 4. No root: nothing else in English shows sardonios. Tone null: Oxford marks disapproving, Cambridge has no label, Longman marks only \"written\". Pairings: sardonic smile 88.9, sardonic laugh 18.5, sardonic humor 10.7 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says sardonic 'goes back to a Greek tale' of the Sardinian plant, while Wiktionary says the Greek word is only often cited as coming from that plant (and may instead be related to sairo, 'to grin'). Calling it a tale keeps it a story, so it stands. Origin keeps the hedge ('often linked'); null tone is right (only Oxford says disapproving, Longman says written); smile, laugh and humor top the tool's list."
+    },
+    {
+      "id": 1237,
+      "word_id": 264,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin satiatus, participle of satio \"to fill full, satiate, satisfy\", from satis \"sufficient\"), the Latin page for satio (satis + -o) and the page for satisfy (Latin satisfacere, from satis + facio). Hook claim (satis, the same root as satisfy) is true. Tone null: Oxford and Cambridge mark formal, Longman marks literary, so neither rule is met. Pairings: fully satiated 4.3, satiate their hunger 1.6 per billion; both modest, the weakest point. The other sense (eat far more than one needs) is a rare use and is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'fully satiated' pairs the word with an adverb that fits almost any participle, and 'satiate their hunger' is real but modest (1.6 per billion). Origin and hook match Wiktionary (satio, from satis). Null tone is right: Oxford and Cambridge say formal, Longman literary. The hidden overeat sense is rightly not shown."
+    },
+    {
+      "id": 1238,
+      "word_id": 265,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English saturnine, from Old French saturnin or directly Medieval Latin Saturninus, from Saturnus + -inus; the gloomy sense comes from the astrological belief about people born under Saturn). The either/or is kept. Hook claim (astrologers held people born under Saturn were gloomy) matches Wiktionary's sense note. No root: Saturn is a proper name and no list word shares it. Tone literary: Oxford, Cambridge and Longman all mark it literary. Pairings: saturnine face 5.8, saturnine features 2.5, saturnine expression 1.0 per billion (saturnine gout, also common, is the lead-poisoning sense and is left out). The other sense (bitter or scornful) is near the first and close to sardonic's meaning, so it is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the three pairings (face, features, expression) all describe a look, so they repeat one idea; all are top of the tool's list. Origin matches Wiktionary (Old French saturnin or Medieval Latin Saturninus; the gloomy sense from astrology). Literary is marked by Oxford, Cambridge and Longman."
+    },
+    {
+      "id": 1239,
+      "word_id": 266,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French savant, from Latin sapio; sense 3 is a clipping of idiot savant), the French section of the savant page (old present participle of savoir) and the Latin page for sapio (\"to be wise\", \"to taste\"). The origin avoids Wiktionary's and Dictionary.com's \"old present participle\" wording. sapere also links insipid. Hook claim (from French savoir, to know) is true. Tone formal on both senses: Oxford and Longman label the whole entry formal, and Cambridge labels its one sense, which covers both meanings, formal. Pairings empty: the first-sense phrases are rare (French savants 3.2, great savant 1.8, distinguished savant 0.6 per billion); idiot savant, autistic savant and savant syndrome belong to the other sense. That sense is shown: it is the meaning most readers meet today.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the shown plain definition limits savant syndrome to autism or a brain injury; it also occurs with other developmental disabilities. The other sense's formal label rests on the entry-level labels in Oxford and Longman and Cambridge's single combined definition, so it follows the three-of-three rule, though that sense is mostly a clinical term. Origin checked against Wiktionary's French savant (old present participle of savoir) and Latin sapio; empty pairings are right (no common first-sense partner in the tool's data)."
+    },
+    {
+      "id": 1240,
+      "word_id": 268,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French servil, Latin servilis, from servus \"slave\") and the page for serve (Old French servir, Latin servio, from servus). Hook claim (shares its Latin root with servant and serve) is true. Tone disapproving: Oxford and Cambridge label it, and Longman adds \"used to show disapproval\". Pairings: servile obedience 4.2, servile attitude 3.6, servile flattery 2.2 per billion. The slave sense is shown: servile war, servile labor, servile condition and servile status lead the collocation lists, and Longman lists it as sense 2.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'servile attitude' (3.6 per billion, not in the tool's lists) uses a partner that fits any adjective; 'servile imitation' (top of the tool's first-sense partners, 7.5) would show the slavish sense better. Disapproving is marked by all three dictionaries. The Also means sense (slaves, servile labor and status) is common in the tool's data and its plain definition is right."
+    },
+    {
+      "id": 1241,
+      "word_id": 269,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "The English entry gives only a template (borrowed from French soporifique; sopor + -ific), so the origin was checked against the Wiktionary pages for French soporifique (Latin sopor \"deep sleep\" + -ficus), Latin sopor and Latin -ficus (forms adjectives of making, related to Proto-Italic *fakio, the source of facio). facere also links beneficent and efficacy. Hook claim (Latin sopor, deep sleep, plus -fic, making) is true; the word came through French. Tone null: Oxford and Longman mark formal, Cambridge does not. Pairings: soporific effect 11.4 per billion; soporific drugs is high in Datamuse but 1.0 in Google Books, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'soporific drugs' is in the tool's list but only 1.0 per billion in Google Books. Origin matches Wiktionary's French soporifique (Latin sopor 'deep sleep' + -ficus). Null tone is right (Cambridge has no formal label)."
+    },
+    {
+      "id": 1242,
+      "word_id": 270,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Late Latin spurius \"illegitimate, bastardly\", possibly related to sperno or from Etruscan) and the Latin page for spurius (adjective: of illegitimate birth; false). The hedge on the Latin word's source is kept; the origin avoids Oxford's \"born out of wedlock\" gloss. Hook unchanged: it glosses spurius as \"illegitimate child\"; Wiktionary gives the adjective, and Longman gives the Latin noun \"child of unmarried parents\", so the claim holds. Tone null: no label in Oxford, Cambridge or Longman. watchOut null: specious is a known neighbour, but Oxford's own spurious sense (\"apparently but not actually valid\") overlaps it, so a sharp contrast would overstate the difference (Dictionary.com lists specious vs. spurious as a common comparison; a reviewer may want a note). Pairings: spurious correlation 22.4, spurious claims 13.4, spurious grounds 6.9 per billion. The born-out-of-wedlock sense is archaic and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out 4: no note, though spurious and specious are a well-known confusable pair (fake versus plausible but wrong); null is defensible. Origin matches Wiktionary: Latin spurius had both the illegitimate-birth and the 'false' senses, and its source is hedged there (perhaps Indo-European, or Etruscan), which 'uncertain' keeps. Born-out-of-wedlock sense rightly hidden."
+    },
+    {
+      "id": 1243,
+      "word_id": 271,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (earliest uses late 16th century, also \"to scatter\"; of unknown origin, perhaps a blend of scatter and wander). Both hedges are kept. Hook makes no origin claim: squander and wander rhyme when said aloud. Tone null: only Cambridge marks disapproving. Pairings: squander money 6.5, squander time 5.6, squander the opportunity 4.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. Origin keeps Wiktionary's hedges (unknown, perhaps a blend of scatter and wander) and its early 'scatter' sense; the hook is a true rhyme with wander and makes no origin claim."
+    },
+    {
+      "id": 1244,
+      "word_id": 272,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (an obsolete spelling of stayed, past participle of stay, used as an adjective); worded differently from Wiktionary's sentence. Hook claim (began as an old spelling of stayed) is true. No root. Tone null: no label in Oxford, Cambridge or Longman. Pairings: Datamuse's noun list for staid is mostly the old past tense (staid three days), so phrases were checked: staid and conservative 2.1, staid and respectable 1.8 per billion; two-word partners are rarer (staid British 1.4, staid image 1.0). Modest, the weakest point. Round 2: origin recast so it no longer follows Wiktionary's sentence order or keeps \"used as an adjective\"; same facts (an old spelling of stayed, the past participle of stay).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Origin 5: own wording and order now, facts match Wiktionary, AHD and Oxford (an old spelling of stayed, the past participle of stay), and 'settled' gives the step to the meaning. Pairings 4 (unchanged): 'staid and respectable' (1.8 per billion) and 'staid and conservative' (2.1) are real but are binomials, not a noun partner. The tool's list for staid is mostly the old spelling of stayed, so it offers nothing better."
+    },
+    {
+      "id": 1245,
+      "word_id": 274,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French strident, Latin stridens, participle of strido) and the Latin page for strido (to make a shrill or harsh sound: creak, screech, hiss; from an imitative root). Hook claim (stridere, to creak or screech) is true. No root: stridere shows only in rare words such as stridor. Tone null: no label in the three. Pairings: strident voice 35.1, strident tone 15.0, strident criticism 5.6, strident rhetoric 4.1 per billion, covering both the sound and the argument halves of the definition. strident progress (for great strides) is 0.09, so no watch-out.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out 4: no note, though Wiktionary records a nonstandard use meaning vigorous or making strides (forceful in a positive way); null is defensible. Origin checked against Wiktionary's Latin strido page, which calls the verb imitative, so 'a verb whose sound imitates the noise it names' is supported. Pairings all top the tool's list."
+    },
+    {
+      "id": 1246,
+      "word_id": 275,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (from the golf meaning, a ball blocking another from the hole; perhaps from Scots stymie \"person with poor eyesight\", or from Scots styme \"glimmer\"). The hedge is kept. Hook unchanged: \"began as a golf word\" holds for English, but if the Scots source is right the word existed before golf, so 4. Tone informal: Oxford, Cambridge and Longman all mark it informal. Pairings: stymie efforts 1.7, stymie progress 1.1 per billion (efforts and progress lead Datamuse's list); stymied by is common (129.8) but generic. Modest, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin gives only one of Wiktionary's two Scots guesses (a person with poor eyesight; or styme, a glimmer), but under 'uncertain, perhaps', so it is fine. Informal is marked by Oxford, Cambridge and Longman."
+    },
+    {
+      "id": 1247,
+      "word_id": 276,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (adjective from Middle French sublime and Latin sublimis \"elevated, raised; exalted\"). Wiktionary hedges the Latin word's further source (sub- plus possibly a root behind limen), so the origin stops at sublimis. sublimis also shows in sublimate. Hook claim (sublimis, raised high) is true. Tone null: the first sense has no label; Oxford's \"formal, often disapproving\" is on the extreme sense (sublime indifference). Pairings: sublime beauty 18.5, sublime spectacle 6.9, sublime scenery 4.5 per billion. The other sense (worthy of adoration) is rare and close to the first, so not shown. For a main worksheet: the record lacks the common \"extreme\" sense (sublime confidence, sublime indifference).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the root sublimis links only to sublime's own family (sublimate, sublimation), and a learner may wrongly connect subliminal (from limen). For a main worksheet: the record lacks Oxford's and Longman's current sense 'extreme, without noticing' (sublime indifference), so it cannot be shown under Also means; the hidden 'worthy of adoration' sense is a near-repeat and rightly hidden."
+    },
+    {
+      "id": 1248,
+      "word_id": 277,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Medieval Latin substantiatus \"given substance\", from substantiare) and the Latin page for substantia (substo + -ia; sub- \"under\" + sto \"to stand\"). substantia also shows in substance and substantive. Hook claim (contains substance) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: substantiate the claim 23.7, substantiating evidence 7.8, substantiate the allegations 2.2 per billion. The other sense (represent in bodily form) is rare and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'substantiate the allegations' is the least common pairing (2.2 per billion, against 23.7 for 'substantiate the claim'). Origin matches Wiktionary (Medieval Latin substantiare; Latin substantia from substo, sub + sto). Formal is marked by all three dictionaries."
+    },
+    {
+      "id": 1249,
+      "word_id": 278,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin superfluus, from superfluo \"overflow\", super \"over\" + fluo \"flow\"; compare fluid) and the Latin page for fluo (infinitive fluere). Hook claim (super, over, and fluere, to flow) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. Pairings: superfluous words 14.1, superfluous information 9.6, superfluous details 5.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. Origin matches Wiktionary (superfluus, from superfluo, super + fluo; fluid is in its compare list). Null tone is right (Cambridge has no formal label)."
+    },
+    {
+      "id": 1250,
+      "word_id": 279,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English surfeite, from Anglo-Norman surfet, surfeit and Old French sorfet, sorfait, past participle of surfaire \"to augment, exaggerate, exceed\", sur- + faire \"to do\") and the page for French faire (from Latin facio, facere). Hook claim (Old French surfait, overdone: sur plus fait) is true: Wiktionary spells the Old French form sorfait and the Anglo-Norman surfet, surfeit, and AHD and Dictionary.com give surfait. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: a surfeit of information 2.0, a surfeit of food 1.3 per billion (high for four-word phrases). The other sense (overeating) is dated and not shown. Round 2: the origin now spells the Old French form surfait, as the hook does (AHD and Dictionary.com give surfait; Wiktionary lists sorfait and Anglo-Norman surfet, surfeit), and drops the Anglo-Norman form and surfaire so a learner meets fewer foreign forms. Hook unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Origin 5: the origin is now short and plain and matches the hook's spelling. The facts are right (surfaire from sur plus faire, from Latin facere). Weakest point: Wiktionary spells the Old French forms sorfet and sorfait, while surfait is the spelling in AHD and Dictionary.com (the latter as Middle French). Also 'formed from sur and faire' compresses the step through the past participle fait, which the hook gives."
+    },
+    {
+      "id": 1251,
+      "word_id": 280,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Wiktionary disagrees with itself here. tools/etymology.py gives Latin surrepticius from surrepo \"to creep along\"; the Latin page for surrepticius builds it on surreptus, and the page for surreptus gives it as the participle of both surripio (sub- + rapio, \"to snatch away; to steal\") and surrepo (\"to creep under\"). Oxford, AHD and Dictionary.com all derive it from surripere (sub- + rapere \"to seize\"). The origin leads with surripere (\"usually traced\") and keeps the creep-under account as the alternative. Hook claim (surripere, to snatch from under) matches the Latin pages and the three dictionaries. rapere also links rapacious; a reviewer who reads only the English entry may question it. Tone null: no label in the three. Pairings: surreptitious glance 26.1, surreptitious entry 4.4, surreptitious recording 2.6 per billion. Round 2: hook changed from \"comes from Latin surripere\" to \"is usually traced to Latin surripere\", the same hedge the origin uses, since Wiktionary's English entry gives surrepere instead.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Origin 4 (unchanged): Wiktionary's English entry derives the word from surrepo ('to creep along'), and the origin calls that the minority view ('Some trace it instead'). 'usually traced to surripere' rests on AHD, Dictionary.com and Oxford, which all say surripere, so the claim holds and both accounts are kept. Hook 5: 'is usually traced to' now matches the origin's hedge."
+    },
+    {
+      "id": 1252,
+      "word_id": 281,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested 1537; Latin sycophanta \"informer, trickster\", Ancient Greek sykophantes, from sykon \"fig\" + phaino \"to show\"; Wiktionary tells the showing-the-fig gesture and the politicians' story as a story). The origin says only that stories explain the sense. phainein also links diaphanous. Hook claim (literally fig-shower) is true; the basket of figs is framed as a picture, not as history. Tone disapproving: Oxford and Cambridge label it, Longman adds \"used to show disapproval\"; all three also mark it formal, but only one label fits and disapproving matters more for using it. Pairings: surrounded by sycophants 4.1, fawning sycophants 1.1 per billion; the second is modest. Round 2: the origin now gives the step to today's meaning (in English first an informer, Wiktionary's obsolete sense, then a flatterer of the powerful); the Latin step and its gloss were cut to fit, and the fig-shower link keeps its hedge (\"for reasons now unclear\"). The Greek gloss \"informer\" follows Oxford, AHD and Dictionary.com. Hook score lowered to 4 after the reviewer's point that the courtier picture could be remembered as the origin; hook unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Origin 5: the informer-to-flatterer step is now given and is supported (Wiktionary's obsolete 'informer, talebearer' sense; Oxford's 'mid 16th cent., denoting an informer'). 'for reasons now unclear' keeps the hedge on the fig stories. Dropping the Latin step is fine. The sykon 'fig' and phainein 'to show' glosses are the short facts every dictionary shares. Hook 4 (unchanged, weakest point): the courtier-with-figs picture is invented. It is framed as 'Picture', but a learner may remember it as the origin."
+    },
+    {
+      "id": 1253,
+      "word_id": 282,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (back-formation from taciturnity, from Latin taciturnitas; or from French taciturne reinforced by Latin taciturnus, from tacitus), the Latin page for tacitus (participle of taceo) and the page for tacit (Latin tacitus, from tacere \"to be silent\"). The either/or is kept. tacere also links tacit. Hook claim (tacere, to be silent, the same root as tacit) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. Pairings: taciturn man 18.2, taciturn nature 3.4, taciturn disposition 1.5 per billion. Round 2: \"back-formation\" replaced with plain words (\"made by shortening taciturnity\") and the two accounts put in a different order from Wiktionary's; both are still given.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Origin 5: 'made by shortening taciturnity' replaces the jargon, and both of Wiktionary's accounts are kept. Both lead back to tacitus and tacere, so 'either way' is right. Pairings 4 (unchanged): man, nature and disposition are real and top the tool's list, but they are generic nouns for a personality adjective."
+    },
+    {
+      "id": 1254,
+      "word_id": 283,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "The English entry gives only a template (tangent + -ial), so the origin was checked against the Wiktionary page for tangent (Latin tangentem, from tangens \"touching\", in linea tangens \"a touching line\", participle of tango \"touch\"). Hook claim (from tangent, a line touching a circle at one point) is true. Tone null on the first sense: Oxford and Longman mark formal, Cambridge does not; technical on the geometry sense, which Oxford labels geometry. Pairings: tangential connection 4.4, tangential relevance 1.7, tangential issue 1.6 per billion; Datamuse's lists are all physics (tangential velocity, force), so these are modest. The geometry sense is shown because it is common in school maths and physics and explains the first sense; a reviewer may judge it too technical.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Pairings 4: 'tangential issue' (1.6 per billion), 'tangential connection' (4.4) and 'tangential relevance' (1.7) are real but modest, and none is in the tool's lists, which show only the geometry sense. Also means 4: the plain definition's 'a line that just touches a curve at one point' is close to WordUp's 'a straight line that just touches the edge of a curve at a single point'; touching a curve at one point is every dictionary's meaning, but 'just touches' is WordUp's. Origin checked against Wiktionary's tangent (linea tangens, from tango)."
+    },
+    {
+      "id": 1255,
+      "word_id": 284,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (irregularly formed from Latin tenuis \"thin, slight\" + -ous) and the page for attenuate (ad- + tenuo, from tenuis), which is in the list; worded differently from Wiktionary's sentence. Hook claim (tenuis, thin) is true. Tone null on the first sense (no label in the three); literary on the thin sense, which Cambridge and Longman mark literary. Pairings: tenuous connection 35.9, tenuous hold 33.0, tenuous link 24.4, tenuous grip 16.0 per billion. The thin sense is shown with a new plain definition (the old one, \"Extremely thin ...\", opened like Oxford's); the thin-gas sense is rare and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the shown literary sense (very thin) is less common than the first; Oxford, Cambridge and Longman all list it and Cambridge and Longman mark it literary, so showing it with that label is fine. Origin matches Wiktionary (tenuis + -ous); attenuate is from the same adjective."
+    },
+    {
+      "id": 1256,
+      "word_id": 285,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin tersus \"clean, wiped off; neat\", participle of tergeo, tergo \"to clean, rub, wipe\"), the senses on the terse page (obsolete \"polished; neat, spruce\" from the early 1600s, then \"brief, concise\" by extension) and the page for detergent (Latin detergeo, de + tergeo \"wipe\"). The gloss avoids Longman's \"clean, neat\". Hook claim (tersus, wiped clean) is true. Tone null: no label in the three. Pairings: terse reply 22.3, terse statement 10.5, terse note 9.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. 'In English it first meant polished or neat' is supported by Wiktionary's obsolete sense (burnished, polished, neat, spruce, from the early 17th century), and detergent is from tergere."
+    },
+    {
+      "id": 1257,
+      "word_id": 288,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French tortuos, Latin tortuosus, from tortus \"a twisting, winding\"), the Latin page for tortus (participle of torqueo) and the pages for torque (Latin torqueo \"to twist\") and contort (contorqueo, com- + torqueo). Hook claim (torquere, the root of contort and torque) is true. Tone null: only Oxford marks formal. watchOut: tortuous and torturous are a well-known pair of look-alikes (both go back to torquere); Google Books has torturous path 4.2, torturous road 1.7 and tortuous pain 1.0 per billion, so the mix-up is in print. Pairings: tortuous process 12.9, tortuous history 5.7, tortuous negotiations 4.4 per billion; tortuous path (34.5) fits both senses and is left out. The road and river sense is shown: Oxford and Longman list it and tortuous course, road and streets are common. Round 2: the watch-out was reworded in a new frame, since its opening followed Vocabulary.com's usage note; it also avoids Dictionary.com's second-r tip and AHD's road example.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Watch-out 5: the mix-up is real, the note is true and short, and it no longer shares wording with Vocabulary.com's or Dictionary.com's usage notes (no three-word run in common with any cached page). Weakest point: Dictionary.com notes that some contexts could take either word; the note is still right as a general rule."
+    },
+    {
+      "id": 1258,
+      "word_id": 289,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin tractabilis \"that may be touched, handled, or managed\", from tracto \"handle, manage\", frequentative of traho \"draw\") and the Latin pages for tracto (traho + frequentative -to) and traho (infinitive trahere). trahere also links intractable. Hook claim (tractare, to handle) is true. Tone formal on both senses: Oxford, Cambridge and Longman each give one formal sense that covers people and problems (\"easy to deal with or control\"). Pairings empty: first-sense phrases are rare (docile and tractable 1.3, tractable disposition 1.0, tractable people 0.6 per billion); tractable problem and computationally tractable belong to the other sense, which is shown because it is the commonest use.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: empty pairings; 'tractable disposition' is in the tool's list for the first sense but only 1.0 per billion, so empty is defensible. Formal on both senses follows the entry-level labels in all three dictionaries. Origin matches Wiktionary (tractabilis, from tracto, frequentative of traho)."
+    },
+    {
+      "id": 1259,
+      "word_id": 290,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French trenchant, present participle of trenchier \"to cut\") and the pages for English trench (from Old French trenche) and Old French trenche (from the verb trenchier); worded differently from Wiktionary's sentence. trenchier's own source is uncertain and is left out. The root trenchier also shows in trench and retrench. Hook claim (trenchier, to cut, the same source as trench) is true. Tone null: Oxford and Cambridge mark formal, Longman marks only \"written\". Pairings: trenchant critique 23.9, trenchant criticism 15.6, trenchant analysis 7.8, trenchant critic 6.2 per billion. trenchant supporter (an entrenched misuse) is 0.08, so no watch-out. The clear-cut sense is rare and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: three of the four (criticism, critique, critic) are the same idea; all top the tool's list, but one could give way to another partner from it (style, observations, wit). Null tone is right: Longman says written, not formal. Origin matches Wiktionary (trenchier, present participle trenchant); trench comes from Old French trenche, from the same verb."
     }
   ]
 }
