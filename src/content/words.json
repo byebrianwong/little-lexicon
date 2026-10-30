@@ -41037,10 +41037,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1587332,
-      "etymology": null,
+      "etymology": "From Middle English gainsayen, made of gain-, an old prefix meaning against, and say: to gainsay a claim is to speak against it.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "gainsay the fact",
+        "dare gainsay"
+      ],
       "audioUrl": "audio/words/366.mp3?v=1312382190f6",
       "hookAudioUrl": "audio/hooks/366.mp3?v=db601bcff91c",
       "senses": [
@@ -41049,7 +41052,7 @@
           "definition": "Dispute a statement or claim, denying that it is true.",
           "plainLanguageDefinition": "To insist that someone's claim is wrong.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/730.mp3?v=99ab6a1ac4c9",
           "examples": [
@@ -41144,10 +41147,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 683221,
-      "etymology": null,
+      "etymology": "Of unknown origin; it may come from gawren, a Middle English verb meaning to stare, but that link is not proven.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "garish colors",
+        "garish light",
+        "garish neon"
+      ],
       "audioUrl": "audio/words/367.mp3?v=de46e62ae6ca",
       "hookAudioUrl": "audio/hooks/367.mp3?v=7a690f3ae5c0",
       "senses": [
@@ -41156,7 +41163,7 @@
           "definition": "Loud in color or ornament to the point of bad taste.",
           "plainLanguageDefinition": "Much too bright and showy, with no sense of good taste.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/731.mp3?v=a793d139b022",
           "examples": [
@@ -41260,10 +41267,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 388633,
-      "etymology": null,
+      "etymology": "A form of the old word german, closely related, which goes back to Latin germanus, having the same parents. Writers quoting a line from Shakespeare's Hamlet gave it today's sense of relevant.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "germane to the discussion",
+        "germane to the question",
+        "directly germane"
+      ],
       "audioUrl": "audio/words/368.mp3?v=716ebca8814e",
       "hookAudioUrl": "audio/hooks/368.mp3?v=9c08ebceddbf",
       "senses": [
@@ -41272,7 +41283,7 @@
           "definition": "Directly connected to the question under discussion, and so worth raising.",
           "plainLanguageDefinition": "Closely connected to what is being discussed.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/732.mp3?v=bd27b61075b8",
           "examples": [
@@ -41367,10 +41378,17 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 2050979,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin grandiloquus, by way of Middle French, built from grandis, great, and loqui, to speak; eloquent and loquacious come from the same Latin verb.",
+      "roots": [
+        "grandis",
+        "loqui"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "grandiloquent style",
+        "grandiloquent language",
+        "grandiloquent title"
+      ],
       "audioUrl": "audio/words/369.mp3?v=5f1572b78281",
       "hookAudioUrl": "audio/hooks/369.mp3?v=ea2806a2932c",
       "senses": [
@@ -41379,7 +41397,7 @@
           "definition": "Showy and overblown in speech or writing, dressing ordinary ideas in high-sounding words.",
           "plainLanguageDefinition": "Talking or writing in an overblown way, with showy words where simple ones would do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/733.mp3?v=9242c1072f8a",
           "examples": [
@@ -41474,10 +41492,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 253128,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin gratuitus, freely given, from the root of gratia, favor. Something given for nothing came to mean something done for no good reason.",
+      "roots": [
+        "gratia"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "gratuitous violence",
+        "gratuitous cruelty",
+        "gratuitous insult"
+      ],
       "audioUrl": "audio/words/370.mp3?v=3e53e406545d",
       "hookAudioUrl": "audio/hooks/370.mp3?v=36069e45c7a7",
       "senses": [
@@ -41486,7 +41510,7 @@
           "definition": "Uncalled for, with nothing in the situation to justify it.",
           "plainLanguageDefinition": "Not needed or asked for, and often unkind or over the top.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/735.mp3?v=8a54a941f128",
           "examples": [
@@ -41541,11 +41565,11 @@
         {
           "senseId": 1338,
           "definition": "Costing nothing to the one who receives it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Given or provided free, with no payment asked.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1338.mp3?v=2dea18b1c7f7",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1338.mp3?v=182321d98663",
           "examples": [],
           "distractors": []
         }
@@ -41600,10 +41624,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 408994,
-      "etymology": null,
+      "etymology": "From Old French herbergeor, one who provides lodging, from herbergier, to shelter. A harbinger once went ahead of a traveling court to find rooms, so seeing one meant others were coming.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "harbinger of doom",
+        "harbinger of spring",
+        "early harbinger"
+      ],
       "audioUrl": "audio/words/371.mp3?v=2a560f584866",
       "hookAudioUrl": "audio/hooks/371.mp3?v=50bf96bb6119",
       "senses": [
@@ -41612,7 +41640,7 @@
           "definition": "An early clue from which people can foresee a coming change.",
           "plainLanguageDefinition": "A first hint of what is coming next.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/738.mp3?v=b2a74758eccf",
           "examples": [
@@ -41699,10 +41727,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 521517,
-      "etymology": null,
+      "etymology": "Borrowed from Ancient Greek hubris, insolence or outrage; in Greek myth it was the pride of mortals who set themselves against the gods.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "human hubris",
+        "imperial hubris",
+        "intellectual hubris"
+      ],
       "audioUrl": "audio/words/372.mp3?v=b88f311e41ef",
       "hookAudioUrl": "audio/hooks/372.mp3?v=6b1291a28d28",
       "senses": [
@@ -41711,7 +41743,7 @@
           "definition": "Arrogant self-confidence that leads someone to overstep their limits and invite disaster.",
           "plainLanguageDefinition": "Being so proud and sure of yourself that you take foolish risks.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/739.mp3?v=ca6217ae2ccf",
           "examples": [
@@ -41806,10 +41838,16 @@
       "syllables": 6,
       "difficultyTier": 4,
       "frequencyRank": 793948,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Ancient Greek idiosynkrasia, a person's own temperament, made of idios, one's own, syn, together, and krasis, a mixing: each person's own blend of traits.",
+      "roots": [
+        "idios"
+      ],
+      "watchOut": "The usual spelling ends in -crasy, from Greek krasis, a mixing; the spelling with -cracy, as in democracy, is widely treated as a mistake.",
+      "pairings": [
+        "personal idiosyncrasies",
+        "individual idiosyncrasies",
+        "little idiosyncrasies"
+      ],
       "audioUrl": "audio/words/373.mp3?v=4ff5bb9ccaba",
       "hookAudioUrl": "audio/hooks/373.mp3?v=6222b71638e4",
       "senses": [
@@ -41909,10 +41947,16 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 611736,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin ignominiosus, from ignominia, disgrace, which joins in-, not, to nomen, name or good name: something ignominious costs you your reputation.",
+      "roots": [
+        "nomen"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ignominious end",
+        "ignominious defeat",
+        "ignominious retreat"
+      ],
       "audioUrl": "audio/words/374.mp3?v=0d7cdca94d2d",
       "hookAudioUrl": "audio/hooks/374.mp3?v=14c1b8a83041",
       "senses": [
@@ -42020,10 +42064,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 307650,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin impetuosus, violent, from Latin impetus, an attack, which comes from impetere, to rush at, made of in- and petere, to seek or attack.",
+      "roots": [
+        "petere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "impetuous nature",
+        "impetuous youth",
+        "impetuous temper"
+      ],
       "audioUrl": "audio/words/375.mp3?v=2eb8783131a9",
       "hookAudioUrl": "audio/hooks/375.mp3?v=55ef20ceb8db",
       "senses": [
@@ -42087,11 +42137,11 @@
         {
           "senseId": 1339,
           "definition": "Surging fiercely and powerfully, as floodwater does.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Rushing along with violent force, as wind or water can.",
           "senseOrder": 2,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1339.mp3?v=074242cc98e5",
+          "audioUrl": "audio/definitions/1339.mp3?v=dde281e516e0",
           "examples": [],
           "distractors": []
         }
@@ -42150,8 +42200,10 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 3921138,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French importuner, from Latin importunus, built from in-, not, and portus, harbor. The Latin word first meant having no harbor, then unsuitable or troublesome.",
+      "roots": [
+        "portus"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/376.mp3?v=8015048b28b0",
@@ -42162,7 +42214,7 @@
           "definition": "Press someone with request after request, wearing on their patience.",
           "plainLanguageDefinition": "Nag and plead with someone again and again for a favor.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/744.mp3?v=b3f966e372b5",
           "examples": [
@@ -42253,10 +42305,16 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 491139,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin incorrigibilis joins in-, not, to a form of corrigere, to correct: an incorrigible habit is one that nothing can correct.",
+      "roots": [
+        "corrigere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "incorrigible rogue",
+        "incorrigible optimist",
+        "incorrigible offenders"
+      ],
       "audioUrl": "audio/words/377.mp3?v=83af774b6ed0",
       "hookAudioUrl": "audio/hooks/377.mp3?v=1490f5781088",
       "senses": [
@@ -42265,7 +42323,7 @@
           "definition": "Past any hope of reform, and sure to go on misbehaving.",
           "plainLanguageDefinition": "So stuck in a bad habit that nothing will ever change it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "humorous",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/745.mp3?v=66c6d05ce431",
           "examples": [
@@ -42352,10 +42410,16 @@
       "syllables": 6,
       "difficultyTier": 2,
       "frequencyRank": 322321,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin indefatigabilis meant unable to be worn out; it adds in-, not, to defatigare, to exhaust, a form of fatigare, which also gave English fatigue.",
+      "roots": [
+        "fatigare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "indefatigable energy",
+        "indefatigable efforts",
+        "indefatigable worker"
+      ],
       "audioUrl": "audio/words/378.mp3?v=64a01797b5ad",
       "hookAudioUrl": "audio/hooks/378.mp3?v=f982096a41f3",
       "senses": [
@@ -42364,7 +42428,7 @@
           "definition": "Never wearing out, however long or hard the work goes on.",
           "plainLanguageDefinition": "Able to keep working hard for hours or days without getting tired.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/747.mp3?v=b3b38ab8ea41",
           "examples": [
@@ -42467,10 +42531,14 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 3137668,
-      "etymology": null,
+      "etymology": "French insouciant joins in-, not, to souciant, a form of soucier, to worry or care; English took the word from French in the 1820s.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "insouciant attitude",
+        "insouciant smile",
+        "insouciant shrug"
+      ],
       "audioUrl": "audio/words/379.mp3?v=73cb493d1be1",
       "hookAudioUrl": "audio/hooks/379.mp3?v=bcfb6b926105",
       "senses": [
@@ -42582,10 +42650,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 3639169,
-      "etymology": null,
+      "etymology": "From Middle English inuren, from in and ure, an old word for use or practice heard in phrases like in ure: what you are inured to has become a matter of habit.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "become inured",
+        "inured to hardship",
+        "inured to violence"
+      ],
       "audioUrl": "audio/words/380.mp3?v=4d0501422b45",
       "hookAudioUrl": "audio/hooks/380.mp3?v=d51a15b010fd",
       "senses": [
@@ -42685,19 +42757,25 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 424799,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin invehere, to carry into, was used in the passive for attacking someone with words, and Medieval Latin made invectiva, a tirade, from it. Its base is vehere, to carry, as in vehicle.",
+      "roots": [
+        "vehere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "stream of invective",
+        "personal invective",
+        "bitter invective"
+      ],
       "audioUrl": "audio/words/381.mp3?v=4131e28ec96f",
-      "hookAudioUrl": "audio/hooks/381.mp3?v=3d0899284ffe",
+      "hookAudioUrl": "audio/hooks/381.mp3?v=504e39919785",
       "senses": [
         {
           "senseId": 750,
           "definition": "Bitter, abusive language used to condemn or wound its target.",
           "plainLanguageDefinition": "Angry words and insults thrown at someone to hurt them or run them down.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/750.mp3?v=008afb878b56",
           "examples": [
@@ -42781,7 +42859,7 @@
         }
       ],
       "mnemonics": [
-        "Invective comes from Latin invehi, 'to attack with words', literally 'to be carried against': invective charges at its target."
+        "Invective comes from Latin invehi, 'to attack with words', literally 'to be carried into': invective charges at its target."
       ]
     },
     {
@@ -42792,10 +42870,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 938259,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin jocus, a joke, is the source of English joke; its diminutive joculus, a little joke, gave the adjective jocularis, which became jocular.",
+      "roots": [
+        "jocus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "jocular tone",
+        "jocular manner",
+        "jocular remark"
+      ],
       "audioUrl": "audio/words/382.mp3?v=a5a4592369d2",
       "hookAudioUrl": "audio/hooks/382.mp3?v=2344861c4f3e",
       "senses": [
@@ -42804,7 +42888,7 @@
           "definition": "Inclined to joke, or said in a teasing, light-hearted spirit.",
           "plainLanguageDefinition": "Always ready with a joke, or said in fun.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/751.mp3?v=067dc9a83a29",
           "examples": [
@@ -42899,10 +42983,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 137874,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Latin judicare, to judge, gave judicium, judgment, and French built judicieux on it; judicial and adjudicate belong to the same family of Latin words.",
+      "roots": [
+        "judicare"
+      ],
+      "watchOut": "Judicious is not judicial: a judicial matter concerns courts and judges, while a judicious choice shows good sense.",
+      "pairings": [
+        "judicious use",
+        "judicious choice",
+        "judicious selection"
+      ],
       "audioUrl": "audio/words/383.mp3?v=3be778ed57c2",
       "hookAudioUrl": "audio/hooks/383.mp3?v=7fc4c919dfbb",
       "senses": [
@@ -43006,7 +43096,7 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 4152410,
-      "etymology": null,
+      "etymology": "From Latin lacrimosus, tearful, from lacrima, a tear, a word that shares a distant ancestor with English tear.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -43073,11 +43163,11 @@
         {
           "senseId": 817,
           "definition": "Sad enough to move listeners or viewers to tears.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Meant to make an audience cry, like a sad film or song.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/817.mp3?v=e601d83ff9a4",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/817.mp3?v=d6a9f44b2852",
           "examples": [],
           "distractors": []
         }
@@ -43116,12 +43206,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 12901894,
-      "etymology": null,
+      "etymology": "First recorded in the 1630s, probably made from two verbs that both meant to beat, lam and baste; to lambaste someone now usually means to beat them with words.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "critics lambasted",
+        "publicly lambasted"
+      ],
       "audioUrl": "audio/words/385.mp3?v=128ece108309",
-      "hookAudioUrl": "audio/hooks/385.mp3?v=47ad0f6f586c",
+      "hookAudioUrl": "audio/hooks/385.mp3?v=2fa8c1b4270e",
       "senses": [
         {
           "senseId": 754,
@@ -43183,11 +43276,11 @@
         {
           "senseId": 1344,
           "definition": "Thrash someone soundly with blows.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To beat someone hard, again and again.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1344.mp3?v=8e4e6cc691b0",
+          "audioUrl": "audio/definitions/1344.mp3?v=2a8d1212dad1",
           "examples": [],
           "distractors": []
         }
@@ -43223,7 +43316,7 @@
         }
       ],
       "mnemonics": [
-        "Lambaste begins with lam, an old verb meaning to beat hard: to lambaste someone is to beat them with words."
+        "Lambaste begins with lam, probably the old verb meaning to beat hard: to lambaste someone is to beat them with words."
       ]
     },
     {
@@ -43234,10 +43327,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 363499,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin languidus, faint or weak, from languere, to be weak or listless, the verb behind languish and languor too.",
+      "roots": [
+        "languere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "languid air",
+        "languid grace",
+        "languid voice"
+      ],
       "audioUrl": "audio/words/386.mp3?v=341117b05e14",
       "hookAudioUrl": "audio/hooks/386.mp3?v=9785abdbfeab",
       "senses": [
@@ -43246,7 +43345,7 @@
           "definition": "Slow and drowsy in manner, as though any effort would be too much.",
           "plainLanguageDefinition": "Moving or acting slowly, as if too tired or relaxed to hurry.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/756.mp3?v=806228d1af36",
           "examples": [
@@ -43341,10 +43440,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 681191,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French largesce, generosity, from large, generous or wide, which goes back to Latin largus, plentiful or free-handed; English large has the same source.",
+      "roots": [
+        "largus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "government largesse",
+        "federal largesse",
+        "royal largesse"
+      ],
       "audioUrl": "audio/words/387.mp3?v=03901f71ef86",
       "hookAudioUrl": "audio/hooks/387.mp3?v=b3296538dce0",
       "senses": [
@@ -43353,7 +43458,7 @@
           "definition": "Free and lavish giving of money or gifts, often by a rich or powerful patron.",
           "plainLanguageDefinition": "A rich person's habit of being very free with money and gifts.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/757.mp3?v=8a154d5bc96f",
           "examples": [
@@ -43408,11 +43513,11 @@
         {
           "senseId": 819,
           "definition": "Gifts or sums of money handed out by a wealthy giver.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "The cash or presents themselves, handed out by someone wealthy.",
           "senseOrder": 2,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/819.mp3?v=346a0ba1d773",
+          "audioUrl": "audio/definitions/819.mp3?v=832c92cd59ca",
           "examples": [],
           "distractors": []
         }
@@ -43455,7 +43560,7 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 15961182,
-      "etymology": null,
+      "etymology": "From lion and -ize, using lion in the sense of a famous person whom everyone is curious to see: to lionize someone is to treat them as that kind of star.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -43558,10 +43663,14 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1163808,
-      "etymology": null,
+      "etymology": "From Latin lugubris, mournful, from the root of lugere, to mourn, with the English ending -ious; today it often suggests a gloom that seems overdone.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "lugubrious face",
+        "lugubrious expression",
+        "lugubrious voice"
+      ],
       "audioUrl": "audio/words/389.mp3?v=fe6df85fe87e",
       "hookAudioUrl": "audio/hooks/389.mp3?v=c69aacaac682",
       "senses": [
@@ -43570,7 +43679,7 @@
           "definition": "Heavy with sorrow, in a way that often seems exaggerated.",
           "plainLanguageDefinition": "Very sad and gloomy, often more than the moment calls for.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/760.mp3?v=7bc16dd46a49",
           "examples": [
@@ -43665,10 +43774,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 284195,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin malevolens, made of male (\"badly\") and volens (\"wishing\"), from velle (\"to wish\"), the verb also behind volition.",
+      "roots": [
+        "velle"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "malevolent intent",
+        "malevolent spirit",
+        "malevolent eyes"
+      ],
       "audioUrl": "audio/words/390.mp3?v=08ef44aa3212",
       "hookAudioUrl": "audio/hooks/390.mp3?v=23f693fdab9e",
       "senses": [
@@ -43737,11 +43852,11 @@
         {
           "senseId": 1345,
           "definition": "Working to bring harm or misfortune, said of forces rather than people.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Bringing harm or bad luck, used of forces or influences rather than people.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1345.mp3?v=3c736dce6c9c",
+          "audioUrl": "audio/definitions/1345.mp3?v=243fbe16d891",
           "examples": [],
           "distractors": []
         }
@@ -43792,12 +43907,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2567368,
-      "etymology": null,
+      "etymology": "From mawk, an old dialect word for a maggot that came from Old Norse, plus -ish. It once meant queasy or sickly in taste; now it means sickly in sentiment.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mawkish sentimentality",
+        "mawkish sentiment"
+      ],
       "audioUrl": "audio/words/391.mp3?v=09f8fe38b8b1",
-      "hookAudioUrl": "audio/hooks/391.mp3?v=6afe72979308",
+      "hookAudioUrl": "audio/hooks/391.mp3?v=a5a08483c396",
       "senses": [
         {
           "senseId": 763,
@@ -43884,7 +44002,7 @@
         }
       ],
       "mnemonics": [
-        "Mawkish comes from mawk, an old word for a maggot, so it first described food that turned the stomach. Today it means sentiment laid on so thick that it does the same."
+        "Mawkish comes from mawk, an old word for a maggot, so it once described food that turned the stomach. Today it means sentiment laid on so thick that it does the same."
       ]
     },
     {
@@ -43895,8 +44013,11 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1543400,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek, joining misein (\"to hate\") and anthropos (\"human being\"): a misanthrope dislikes people as a whole.",
+      "roots": [
+        "misein",
+        "anthropos"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/392.mp3?v=7ee53a6f9f0d",
@@ -43982,10 +44103,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 431766,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin modicum (\"a little\"), a noun use of modicus (\"moderate\"), from modus (\"measure\"): a modicum is a small, measured amount.",
+      "roots": [
+        "modus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "a modicum of respect",
+        "a modicum of privacy",
+        "a modicum of success"
+      ],
       "audioUrl": "audio/words/393.mp3?v=faf78629471a",
       "hookAudioUrl": "audio/hooks/393.mp3?v=8284c0ae1ad5",
       "senses": [
@@ -43994,7 +44121,7 @@
           "definition": "A small quantity of something, often the least that could reasonably be expected.",
           "plainLanguageDefinition": "Just a little of something, often barely enough.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/765.mp3?v=f0131bd4037e",
           "examples": [
@@ -44081,10 +44208,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 857274,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French mordant (\"biting\"), from Latin mordere (\"to bite\"), the verb also behind remorse: mordant humor leaves a sting.",
+      "roots": [
+        "mordere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mordant wit",
+        "mordant humor",
+        "mordant satire"
+      ],
       "audioUrl": "audio/words/394.mp3?v=e151e95f3558",
       "hookAudioUrl": "audio/hooks/394.mp3?v=36490d258c9f",
       "senses": [
@@ -44093,7 +44226,7 @@
           "definition": "Sharp and stinging in a way meant to wound, especially in humor or criticism.",
           "plainLanguageDefinition": "Clever and cruel at once, with jokes or comments that sting.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/766.mp3?v=ba4477f6ac9a",
           "examples": [
@@ -44184,10 +44317,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 354796,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin obviare (\"to meet, to prevent\"), from obvius (\"in the way\"), built on via (\"way\") just as obvious is: to obviate a need is to meet it early.",
+      "roots": [
+        "via"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "obviate the need",
+        "obviate the necessity"
+      ],
       "audioUrl": "audio/words/395.mp3?v=77e46ac83942",
       "hookAudioUrl": "audio/hooks/395.mp3?v=254af219290d",
       "senses": [
@@ -44196,7 +44334,7 @@
           "definition": "Remove the reason for a step or measure by dealing with the issue ahead of time.",
           "plainLanguageDefinition": "To solve something early so that a planned step is no longer needed.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/767.mp3?v=9bd82324b84e",
           "examples": [
@@ -44287,10 +44425,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 245085,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin odiosus, through Old French, from odium (\"hatred\"), a word English also took over for the loathing that odious acts earn.",
+      "roots": [
+        "odium"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "odious task",
+        "odious crime",
+        "odious comparisons"
+      ],
       "audioUrl": "audio/words/396.mp3?v=2b68a0e72a9f",
       "hookAudioUrl": "audio/hooks/396.mp3?v=02d46071e184",
       "senses": [
@@ -44299,7 +44443,7 @@
           "definition": "Vile enough to stir up loathing and revulsion.",
           "plainLanguageDefinition": "So nasty and wrong that people hate it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/769.mp3?v=06fd21dc8668",
           "examples": [
@@ -44504,10 +44648,14 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 661570,
-      "etymology": null,
+      "etymology": "From French panégyrique, from Ancient Greek panegyrikos (\"for a festival assembly\"), from panegyris, a gathering of all the people. In Greek it could also mean flattering.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "glowing panegyric",
+        "fulsome panegyric",
+        "funeral panegyric"
+      ],
       "audioUrl": "audio/words/398.mp3?v=f042029be91e",
       "hookAudioUrl": "audio/hooks/398.mp3?v=a19ab6c5c453",
       "senses": [
@@ -44516,7 +44664,7 @@
           "definition": "A public speech or text devoted entirely to lavish praise of someone or something.",
           "plainLanguageDefinition": "A speech or essay that does nothing but praise someone.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/773.mp3?v=f29831f1ec43",
           "examples": [
@@ -44611,10 +44759,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 617679,
-      "etymology": null,
+      "etymology": "From Tamil paraiyar, \"drummers\" (from parai, \"drum\"), a caste of southern India held low and shunned by others. Another account traces it to Sanskrit para, \"outsider\".",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "social pariah",
+        "pariah status",
+        "become a pariah"
+      ],
       "audioUrl": "audio/words/399.mp3?v=f1eca0a3222f",
       "hookAudioUrl": "audio/hooks/399.mp3?v=10cc3f9db8c1",
       "senses": [
@@ -44694,10 +44846,14 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 384395,
-      "etymology": null,
+      "etymology": "From Late Latin peiorare (\"to make worse\"), from Latin peior (\"worse\"): a pejorative word makes its subject sound worse.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pejorative term",
+        "pejorative sense",
+        "pejorative connotations"
+      ],
       "audioUrl": "audio/words/400.mp3?v=5681517b82bb",
       "hookAudioUrl": "audio/hooks/400.mp3?v=bc3d1526e2de",
       "senses": [
@@ -44706,7 +44862,7 @@
           "definition": "Showing contempt or a low opinion, especially through the choice of a word or name.",
           "plainLanguageDefinition": "Said in a way that puts someone or something down.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/775.mp3?v=fb35d6bdd651",
           "examples": [
@@ -44801,19 +44957,23 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 645951,
-      "etymology": null,
+      "etymology": "From Ancient Greek peripatetikos (\"given to walking about\"), via Latin and French. Aristotle's followers were named for the walkways of his school, or for his reputed habit of teaching on foot.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "peripatetic life",
+        "peripatetic existence",
+        "peripatetic teacher"
+      ],
       "audioUrl": "audio/words/401.mp3?v=d6d8a5833570",
-      "hookAudioUrl": "audio/hooks/401.mp3?v=493daf8c937e",
+      "hookAudioUrl": "audio/hooks/401.mp3?v=a136221ff118",
       "senses": [
         {
           "senseId": 776,
           "definition": "Always on the move, living or working in one place after another.",
           "plainLanguageDefinition": "Moving around a lot and rarely staying in one place for long.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/776.mp3?v=e72033406295",
           "examples": [
@@ -44868,11 +45028,11 @@
         {
           "senseId": 1337,
           "definition": "Of Aristotle's followers or the teachings they handed down.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Relating to Aristotle, his school of philosophy, or its later followers.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1337.mp3?v=4b986f564b61",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1337.mp3?v=c5b47213d5c3",
           "examples": [],
           "distractors": []
         }
@@ -44908,7 +45068,7 @@
         }
       ],
       "mnemonics": [
-        "Peripatetic comes from Greek peripatein, \"to walk around\" (peri, \"around\"). Aristotle's pupils got the name from the covered walk where he taught."
+        "Peripatetic comes from Greek peripatein, \"to walk around\" (peri, \"around\"). Aristotle's pupils perhaps got the name from the covered walk where he taught."
       ]
     },
     {
@@ -45030,10 +45190,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 23141720,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Shortened from plaudite, Latin for \"applaud!\", a command form of plaudere (\"to clap\"), the verb also behind applaud and plausible.",
+      "roots": [
+        "plaudere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "won plaudits",
+        "earned plaudits",
+        "critical plaudits"
+      ],
       "audioUrl": "audio/words/403.mp3?v=fb3c6e190e3a",
       "hookAudioUrl": "audio/hooks/403.mp3?v=a8b2d69ac033",
       "senses": [
@@ -45042,7 +45208,7 @@
           "definition": "Words or applause that publicly praise someone for an achievement.",
           "plainLanguageDefinition": "Praise or cheers that people give someone who did well.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/779.mp3?v=5f414ddb6f32",
           "examples": [
@@ -45137,10 +45303,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1700079,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin proscribere, \"to publish in writing\", from scribere (\"to write\"). Romans used it for posting the names of people declared outlaws, and it came to mean to ban.",
+      "roots": [
+        "scribere"
+      ],
+      "watchOut": "Do not confuse it with prescribe, which means to order or recommend; proscribe means to forbid.",
+      "pairings": [
+        "proscribed conduct",
+        "proscribed by law",
+        "the law proscribes"
+      ],
       "audioUrl": "audio/words/404.mp3?v=c88c9bee3cf3",
       "hookAudioUrl": "audio/hooks/404.mp3?v=617b1b6b03c8",
       "senses": [
@@ -45149,7 +45321,7 @@
           "definition": "Declare something off limits by law or by order of an authority.",
           "plainLanguageDefinition": "To make it against the rules or the law to do something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/780.mp3?v=3dc4099e9418",
           "examples": [
@@ -45204,11 +45376,11 @@
         {
           "senseId": 1340,
           "definition": "Declare a person an enemy of the state and drive them out of the country.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To brand someone a public enemy and banish them from their homeland.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1340.mp3?v=5b1ecdfaa4cb",
+          "audioUrl": "audio/definitions/1340.mp3?v=ef7be468c17f",
           "examples": [],
           "distractors": []
         }
@@ -45259,10 +45431,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 984360,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin querulosus, through Old French, from Latin queri (\"to complain\"), the verb that also gave English quarrel.",
+      "roots": [
+        "queri"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "querulous voice",
+        "querulous tone",
+        "querulous note"
+      ],
       "audioUrl": "audio/words/405.mp3?v=da2a0260c282",
       "hookAudioUrl": "audio/hooks/405.mp3?v=29695b03ab1b",
       "senses": [
@@ -45271,7 +45449,7 @@
           "definition": "Prone to grumbling and fault-finding, with a sour, easily irritated temper.",
           "plainLanguageDefinition": "Always complaining in a cranky, whiny way.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/781.mp3?v=4e57dbb2dd31",
           "examples": [
@@ -45362,10 +45540,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 600689,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Ultimately from Latin rapax (\"grasping, greedy\"), from rapere (\"to snatch, carry off\"), perhaps by way of English rapacity: the rapacious grab all they can.",
+      "roots": [
+        "rapere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "rapacious landlords",
+        "rapacious appetite",
+        "rapacious greed"
+      ],
       "audioUrl": "audio/words/406.mp3?v=8574199f1872",
       "hookAudioUrl": "audio/hooks/406.mp3?v=6f266887593b",
       "senses": [
@@ -45374,7 +45558,7 @@
           "definition": "Hungry for gain and willing to strip others of what they have to get it.",
           "plainLanguageDefinition": "So greedy that you grab everything you can from others, no matter who gets hurt.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/782.mp3?v=0477fe5c6666",
           "examples": [
@@ -45434,11 +45618,11 @@
         {
           "senseId": 1341,
           "definition": "Of an animal, feeding on other animals that it hunts down.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of an animal, living by hunting and eating other animals.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1341.mp3?v=d6c30fc15caf",
+          "audioUrl": "audio/definitions/1341.mp3?v=95b11e3351c8",
           "examples": [],
           "distractors": []
         }
@@ -45489,10 +45673,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1060108,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin recantare, from re- (\"back\") and cantare (\"to sing\"); the Latin word already meant to revoke as well as to sing back.",
+      "roots": [
+        "cantare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "publicly recant",
+        "recanted his testimony",
+        "later recanted"
+      ],
       "audioUrl": "audio/words/407.mp3?v=5a847ffe03a9",
       "hookAudioUrl": "audio/hooks/407.mp3?v=ee69ecbf276b",
       "senses": [
@@ -45501,7 +45691,7 @@
           "definition": "Give up a belief or claim in public.",
           "plainLanguageDefinition": "To publicly take back something you said or believed.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/785.mp3?v=45f71ff8e9a7",
           "examples": [
@@ -45714,10 +45904,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 224276,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin sanguineus (\"of blood\"), from sanguis (\"blood\"), via Old French. Old medicine held that people with more blood than the other humors were cheerful and hopeful.",
+      "roots": [
+        "sanguis"
+      ],
+      "watchOut": "It means hopeful and confident; do not confuse it with sanguinary, which means bloody or bloodthirsty.",
+      "pairings": [
+        "sanguine view",
+        "sanguine expectations",
+        "sanguine hopes"
+      ],
       "audioUrl": "audio/words/409.mp3?v=4109c7ba62a5",
       "hookAudioUrl": "audio/hooks/409.mp3?v=e78d928e1ba2",
       "senses": [
@@ -45726,7 +45922,7 @@
           "definition": "Holding a steady, untroubled belief that matters will work out.",
           "plainLanguageDefinition": "Feeling sure that things will turn out fine.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/789.mp3?v=69171504d2d1",
           "examples": [
@@ -45781,22 +45977,22 @@
         {
           "senseId": 826,
           "definition": "Having a ruddy, healthy-looking complexion.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Having a healthy, reddish color in the face.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/826.mp3?v=109b71a4f1b1",
+          "audioUrl": "audio/definitions/826.mp3?v=219cb298f561",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1342,
           "definition": "Deep red, the shade of fresh blood.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a deep red color, like that of blood.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1342.mp3?v=3e1cf9183c5a",
+          "audioUrl": "audio/definitions/1342.mp3?v=9a431720b1db",
           "examples": [],
           "distractors": []
         }
@@ -45847,10 +46043,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 413494,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin speciosus (\"good-looking\"), from species (\"appearance\"), from specere (\"to look\"). In English it once meant beautiful, then fair-seeming but false.",
+      "roots": [
+        "specere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "specious argument",
+        "specious reasoning",
+        "specious pretext"
+      ],
       "audioUrl": "audio/words/410.mp3?v=5d1b946e9773",
       "hookAudioUrl": "audio/hooks/410.mp3?v=8648f2a1b18c",
       "senses": [
@@ -45859,7 +46061,7 @@
           "definition": "Persuasive on its face yet resting on a flaw or a falsehood.",
           "plainLanguageDefinition": "Easy to believe, yet built on a mistake or a lie.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/791.mp3?v=d11a02017931",
           "examples": [
@@ -45919,11 +46121,11 @@
         {
           "senseId": 1343,
           "definition": "Showy in a way that masks something hollow or false.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Attractive on the surface but hiding something empty or false.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1343.mp3?v=232b59d6db96",
+          "audioUrl": "audio/definitions/1343.mp3?v=e5f37c8c0a90",
           "examples": [],
           "distractors": []
         }
@@ -45966,10 +46168,14 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 1034528,
-      "etymology": null,
+      "etymology": "From Latin superciliosus (\"haughty\"), from supercilium (\"eyebrow\"), which in Latin also meant pride: a raised eyebrow is the look of someone who feels superior.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "supercilious smile",
+        "supercilious look",
+        "supercilious tone"
+      ],
       "audioUrl": "audio/words/411.mp3?v=3679fda4ae67",
       "hookAudioUrl": "audio/hooks/411.mp3?v=31652b7e42ef",
       "senses": [
@@ -45978,7 +46184,7 @@
           "definition": "Openly scornful of others out of a belief in one's own superiority.",
           "plainLanguageDefinition": "Acting too good for other people and letting them see it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/793.mp3?v=2246fd81a4fe",
           "examples": [
@@ -46082,10 +46288,17 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 106586,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin tacitus (\"unspoken\"), directly or through French tacite, from tacere (\"to be silent\"), the verb also behind taciturn.",
+      "roots": [
+        "tacere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "tacit agreement",
+        "tacit understanding",
+        "tacit consent",
+        "tacit approval"
+      ],
       "audioUrl": "audio/words/412.mp3?v=ee886aee838b",
       "hookAudioUrl": "audio/hooks/412.mp3?v=9b6096bacb70",
       "senses": [
@@ -46193,10 +46406,13 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 713173,
-      "etymology": null,
+      "etymology": "From Latin temeritas (\"rashness\"), through Old French, from temere (\"rashly, at random\"), which goes back to an older word meaning \"blindly, in the dark\".",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "had the temerity to",
+        "his own temerity"
+      ],
       "audioUrl": "audio/words/413.mp3?v=7e4b37790d87",
       "hookAudioUrl": "audio/hooks/413.mp3?v=3f6fe5520c22",
       "senses": [
@@ -46205,7 +46421,7 @@
           "definition": "Rash boldness that ignores danger or what is considered proper.",
           "plainLanguageDefinition": "Cheeky nerve to do or say something you have no right to.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/796.mp3?v=3b0f03a15c97",
           "examples": [

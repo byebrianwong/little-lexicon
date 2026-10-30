@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:02:38.342Z"
+    "updatedAt": "2026-10-30T08:03:46.699Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1039,
-    "reviews": 1324
+    "mnemonics": 1043,
+    "reviews": 1369
   },
   "words": [
     {
@@ -6306,8 +6306,14 @@
       "syllables": 2,
       "frequency_rank": 1587332,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English gainsayen, made of gain-, an old prefix meaning against, and say: to gainsay a claim is to speak against it.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "gainsay the fact",
+        "dare gainsay"
+      ]
     },
     {
       "id": 367,
@@ -6317,8 +6323,15 @@
       "syllables": 2,
       "frequency_rank": 683221,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of unknown origin; it may come from gawren, a Middle English verb meaning to stare, but that link is not proven.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "garish colors",
+        "garish light",
+        "garish neon"
+      ]
     },
     {
       "id": 368,
@@ -6328,8 +6341,15 @@
       "syllables": 2,
       "frequency_rank": 388633,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "A form of the old word german, closely related, which goes back to Latin germanus, having the same parents. Writers quoting a line from Shakespeare's Hamlet gave it today's sense of relevant.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "germane to the discussion",
+        "germane to the question",
+        "directly germane"
+      ]
     },
     {
       "id": 369,
@@ -6339,8 +6359,18 @@
       "syllables": 4,
       "frequency_rank": 2050979,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin grandiloquus, by way of Middle French, built from grandis, great, and loqui, to speak; eloquent and loquacious come from the same Latin verb.",
+      "audio_url": null,
+      "roots": [
+        "grandis",
+        "loqui"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "grandiloquent style",
+        "grandiloquent language",
+        "grandiloquent title"
+      ]
     },
     {
       "id": 370,
@@ -6350,8 +6380,17 @@
       "syllables": 4,
       "frequency_rank": 253128,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin gratuitus, freely given, from the root of gratia, favor. Something given for nothing came to mean something done for no good reason.",
+      "audio_url": null,
+      "roots": [
+        "gratia"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "gratuitous violence",
+        "gratuitous cruelty",
+        "gratuitous insult"
+      ]
     },
     {
       "id": 371,
@@ -6361,8 +6400,15 @@
       "syllables": 3,
       "frequency_rank": 408994,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French herbergeor, one who provides lodging, from herbergier, to shelter. A harbinger once went ahead of a traveling court to find rooms, so seeing one meant others were coming.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "harbinger of doom",
+        "harbinger of spring",
+        "early harbinger"
+      ]
     },
     {
       "id": 372,
@@ -6372,8 +6418,15 @@
       "syllables": 2,
       "frequency_rank": 521517,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from Ancient Greek hubris, insolence or outrage; in Greek myth it was the pride of mortals who set themselves against the gods.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "human hubris",
+        "imperial hubris",
+        "intellectual hubris"
+      ]
     },
     {
       "id": 373,
@@ -6383,8 +6436,17 @@
       "syllables": 6,
       "frequency_rank": 793948,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek idiosynkrasia, a person's own temperament, made of idios, one's own, syn, together, and krasis, a mixing: each person's own blend of traits.",
+      "audio_url": null,
+      "roots": [
+        "idios"
+      ],
+      "watch_out": "The usual spelling ends in -crasy, from Greek krasis, a mixing; the spelling with -cracy, as in democracy, is widely treated as a mistake.",
+      "pairings": [
+        "personal idiosyncrasies",
+        "individual idiosyncrasies",
+        "little idiosyncrasies"
+      ]
     },
     {
       "id": 374,
@@ -6394,8 +6456,17 @@
       "syllables": 5,
       "frequency_rank": 611736,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ignominiosus, from ignominia, disgrace, which joins in-, not, to nomen, name or good name: something ignominious costs you your reputation.",
+      "audio_url": null,
+      "roots": [
+        "nomen"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ignominious end",
+        "ignominious defeat",
+        "ignominious retreat"
+      ]
     },
     {
       "id": 375,
@@ -6405,8 +6476,17 @@
       "syllables": 4,
       "frequency_rank": 307650,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin impetuosus, violent, from Latin impetus, an attack, which comes from impetere, to rush at, made of in- and petere, to seek or attack.",
+      "audio_url": null,
+      "roots": [
+        "petere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "impetuous nature",
+        "impetuous youth",
+        "impetuous temper"
+      ]
     },
     {
       "id": 376,
@@ -6416,8 +6496,13 @@
       "syllables": 3,
       "frequency_rank": 3921138,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French importuner, from Latin importunus, built from in-, not, and portus, harbor. The Latin word first meant having no harbor, then unsuitable or troublesome.",
+      "audio_url": null,
+      "roots": [
+        "portus"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 377,
@@ -6427,8 +6512,17 @@
       "syllables": 5,
       "frequency_rank": 491139,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin incorrigibilis joins in-, not, to a form of corrigere, to correct: an incorrigible habit is one that nothing can correct.",
+      "audio_url": null,
+      "roots": [
+        "corrigere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "incorrigible rogue",
+        "incorrigible optimist",
+        "incorrigible offenders"
+      ]
     },
     {
       "id": 378,
@@ -6438,8 +6532,17 @@
       "syllables": 6,
       "frequency_rank": 322321,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin indefatigabilis meant unable to be worn out; it adds in-, not, to defatigare, to exhaust, a form of fatigare, which also gave English fatigue.",
+      "audio_url": null,
+      "roots": [
+        "fatigare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "indefatigable energy",
+        "indefatigable efforts",
+        "indefatigable worker"
+      ]
     },
     {
       "id": 379,
@@ -6449,8 +6552,15 @@
       "syllables": 4,
       "frequency_rank": 3137668,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "French insouciant joins in-, not, to souciant, a form of soucier, to worry or care; English took the word from French in the 1820s.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "insouciant attitude",
+        "insouciant smile",
+        "insouciant shrug"
+      ]
     },
     {
       "id": 380,
@@ -6460,8 +6570,15 @@
       "syllables": 2,
       "frequency_rank": 3639169,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English inuren, from in and ure, an old word for use or practice heard in phrases like in ure: what you are inured to has become a matter of habit.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "become inured",
+        "inured to hardship",
+        "inured to violence"
+      ]
     },
     {
       "id": 381,
@@ -6471,8 +6588,17 @@
       "syllables": 3,
       "frequency_rank": 424799,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin invehere, to carry into, was used in the passive for attacking someone with words, and Medieval Latin made invectiva, a tirade, from it. Its base is vehere, to carry, as in vehicle.",
+      "audio_url": null,
+      "roots": [
+        "vehere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "stream of invective",
+        "personal invective",
+        "bitter invective"
+      ]
     },
     {
       "id": 382,
@@ -6482,8 +6608,17 @@
       "syllables": 3,
       "frequency_rank": 938259,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin jocus, a joke, is the source of English joke; its diminutive joculus, a little joke, gave the adjective jocularis, which became jocular.",
+      "audio_url": null,
+      "roots": [
+        "jocus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "jocular tone",
+        "jocular manner",
+        "jocular remark"
+      ]
     },
     {
       "id": 383,
@@ -6493,8 +6628,17 @@
       "syllables": 3,
       "frequency_rank": 137874,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin judicare, to judge, gave judicium, judgment, and French built judicieux on it; judicial and adjudicate belong to the same family of Latin words.",
+      "audio_url": null,
+      "roots": [
+        "judicare"
+      ],
+      "watch_out": "Judicious is not judicial: a judicial matter concerns courts and judges, while a judicious choice shows good sense.",
+      "pairings": [
+        "judicious use",
+        "judicious choice",
+        "judicious selection"
+      ]
     },
     {
       "id": 384,
@@ -6504,8 +6648,11 @@
       "syllables": 3,
       "frequency_rank": 4152410,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin lacrimosus, tearful, from lacrima, a tear, a word that shares a distant ancestor with English tear.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 385,
@@ -6515,8 +6662,14 @@
       "syllables": 2,
       "frequency_rank": 12901894,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "First recorded in the 1630s, probably made from two verbs that both meant to beat, lam and baste; to lambaste someone now usually means to beat them with words.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "critics lambasted",
+        "publicly lambasted"
+      ]
     },
     {
       "id": 386,
@@ -6526,8 +6679,17 @@
       "syllables": 2,
       "frequency_rank": 363499,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin languidus, faint or weak, from languere, to be weak or listless, the verb behind languish and languor too.",
+      "audio_url": null,
+      "roots": [
+        "languere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "languid air",
+        "languid grace",
+        "languid voice"
+      ]
     },
     {
       "id": 387,
@@ -6537,8 +6699,17 @@
       "syllables": 2,
       "frequency_rank": 681191,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French largesce, generosity, from large, generous or wide, which goes back to Latin largus, plentiful or free-handed; English large has the same source.",
+      "audio_url": null,
+      "roots": [
+        "largus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "government largesse",
+        "federal largesse",
+        "royal largesse"
+      ]
     },
     {
       "id": 388,
@@ -6548,8 +6719,11 @@
       "syllables": 3,
       "frequency_rank": 15961182,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From lion and -ize, using lion in the sense of a famous person whom everyone is curious to see: to lionize someone is to treat them as that kind of star.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 389,
@@ -6559,8 +6733,15 @@
       "syllables": 4,
       "frequency_rank": 1163808,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin lugubris, mournful, from the root of lugere, to mourn, with the English ending -ious; today it often suggests a gloom that seems overdone.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "lugubrious face",
+        "lugubrious expression",
+        "lugubrious voice"
+      ]
     },
     {
       "id": 390,
@@ -6570,8 +6751,17 @@
       "syllables": 4,
       "frequency_rank": 284195,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin malevolens, made of male (\"badly\") and volens (\"wishing\"), from velle (\"to wish\"), the verb also behind volition.",
+      "audio_url": null,
+      "roots": [
+        "velle"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "malevolent intent",
+        "malevolent spirit",
+        "malevolent eyes"
+      ]
     },
     {
       "id": 391,
@@ -6581,8 +6771,14 @@
       "syllables": 2,
       "frequency_rank": 2567368,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From mawk, an old dialect word for a maggot that came from Old Norse, plus -ish. It once meant queasy or sickly in taste; now it means sickly in sentiment.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mawkish sentimentality",
+        "mawkish sentiment"
+      ]
     },
     {
       "id": 392,
@@ -6592,8 +6788,14 @@
       "syllables": 3,
       "frequency_rank": 1543400,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek, joining misein (\"to hate\") and anthropos (\"human being\"): a misanthrope dislikes people as a whole.",
+      "audio_url": null,
+      "roots": [
+        "misein",
+        "anthropos"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 393,
@@ -6603,8 +6805,17 @@
       "syllables": 3,
       "frequency_rank": 431766,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin modicum (\"a little\"), a noun use of modicus (\"moderate\"), from modus (\"measure\"): a modicum is a small, measured amount.",
+      "audio_url": null,
+      "roots": [
+        "modus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "a modicum of respect",
+        "a modicum of privacy",
+        "a modicum of success"
+      ]
     },
     {
       "id": 394,
@@ -6614,8 +6825,17 @@
       "syllables": 2,
       "frequency_rank": 857274,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French mordant (\"biting\"), from Latin mordere (\"to bite\"), the verb also behind remorse: mordant humor leaves a sting.",
+      "audio_url": null,
+      "roots": [
+        "mordere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "mordant wit",
+        "mordant humor",
+        "mordant satire"
+      ]
     },
     {
       "id": 395,
@@ -6625,8 +6845,16 @@
       "syllables": 3,
       "frequency_rank": 354796,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin obviare (\"to meet, to prevent\"), from obvius (\"in the way\"), built on via (\"way\") just as obvious is: to obviate a need is to meet it early.",
+      "audio_url": null,
+      "roots": [
+        "via"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "obviate the need",
+        "obviate the necessity"
+      ]
     },
     {
       "id": 396,
@@ -6636,8 +6864,17 @@
       "syllables": 3,
       "frequency_rank": 245085,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin odiosus, through Old French, from odium (\"hatred\"), a word English also took over for the loathing that odious acts earn.",
+      "audio_url": null,
+      "roots": [
+        "odium"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "odious task",
+        "odious crime",
+        "odious comparisons"
+      ]
     },
     {
       "id": 397,
@@ -6658,8 +6895,15 @@
       "syllables": 4,
       "frequency_rank": 661570,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French panégyrique, from Ancient Greek panegyrikos (\"for a festival assembly\"), from panegyris, a gathering of all the people. In Greek it could also mean flattering.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "glowing panegyric",
+        "fulsome panegyric",
+        "funeral panegyric"
+      ]
     },
     {
       "id": 399,
@@ -6669,8 +6913,15 @@
       "syllables": 3,
       "frequency_rank": 617679,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Tamil paraiyar, \"drummers\" (from parai, \"drum\"), a caste of southern India held low and shunned by others. Another account traces it to Sanskrit para, \"outsider\".",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "social pariah",
+        "pariah status",
+        "become a pariah"
+      ]
     },
     {
       "id": 400,
@@ -6680,8 +6931,15 @@
       "syllables": 4,
       "frequency_rank": 384395,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin peiorare (\"to make worse\"), from Latin peior (\"worse\"): a pejorative word makes its subject sound worse.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "pejorative term",
+        "pejorative sense",
+        "pejorative connotations"
+      ]
     },
     {
       "id": 401,
@@ -6691,8 +6949,15 @@
       "syllables": 5,
       "frequency_rank": 645951,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek peripatetikos (\"given to walking about\"), via Latin and French. Aristotle's followers were named for the walkways of his school, or for his reputed habit of teaching on foot.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "peripatetic life",
+        "peripatetic existence",
+        "peripatetic teacher"
+      ]
     },
     {
       "id": 402,
@@ -6713,8 +6978,17 @@
       "syllables": 2,
       "frequency_rank": 23141720,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Shortened from plaudite, Latin for \"applaud!\", a command form of plaudere (\"to clap\"), the verb also behind applaud and plausible.",
+      "audio_url": null,
+      "roots": [
+        "plaudere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "won plaudits",
+        "earned plaudits",
+        "critical plaudits"
+      ]
     },
     {
       "id": 404,
@@ -6724,8 +6998,17 @@
       "syllables": 2,
       "frequency_rank": 1700079,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin proscribere, \"to publish in writing\", from scribere (\"to write\"). Romans used it for posting the names of people declared outlaws, and it came to mean to ban.",
+      "audio_url": null,
+      "roots": [
+        "scribere"
+      ],
+      "watch_out": "Do not confuse it with prescribe, which means to order or recommend; proscribe means to forbid.",
+      "pairings": [
+        "proscribed conduct",
+        "proscribed by law",
+        "the law proscribes"
+      ]
     },
     {
       "id": 405,
@@ -6735,8 +7018,17 @@
       "syllables": 3,
       "frequency_rank": 984360,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin querulosus, through Old French, from Latin queri (\"to complain\"), the verb that also gave English quarrel.",
+      "audio_url": null,
+      "roots": [
+        "queri"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "querulous voice",
+        "querulous tone",
+        "querulous note"
+      ]
     },
     {
       "id": 406,
@@ -6746,8 +7038,17 @@
       "syllables": 3,
       "frequency_rank": 600689,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Ultimately from Latin rapax (\"grasping, greedy\"), from rapere (\"to snatch, carry off\"), perhaps by way of English rapacity: the rapacious grab all they can.",
+      "audio_url": null,
+      "roots": [
+        "rapere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "rapacious landlords",
+        "rapacious appetite",
+        "rapacious greed"
+      ]
     },
     {
       "id": 407,
@@ -6757,8 +7058,17 @@
       "syllables": 2,
       "frequency_rank": 1060108,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin recantare, from re- (\"back\") and cantare (\"to sing\"); the Latin word already meant to revoke as well as to sing back.",
+      "audio_url": null,
+      "roots": [
+        "cantare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "publicly recant",
+        "recanted his testimony",
+        "later recanted"
+      ]
     },
     {
       "id": 408,
@@ -6779,8 +7089,17 @@
       "syllables": 2,
       "frequency_rank": 224276,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin sanguineus (\"of blood\"), from sanguis (\"blood\"), via Old French. Old medicine held that people with more blood than the other humors were cheerful and hopeful.",
+      "audio_url": null,
+      "roots": [
+        "sanguis"
+      ],
+      "watch_out": "It means hopeful and confident; do not confuse it with sanguinary, which means bloody or bloodthirsty.",
+      "pairings": [
+        "sanguine view",
+        "sanguine expectations",
+        "sanguine hopes"
+      ]
     },
     {
       "id": 410,
@@ -6790,8 +7109,17 @@
       "syllables": 2,
       "frequency_rank": 413494,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin speciosus (\"good-looking\"), from species (\"appearance\"), from specere (\"to look\"). In English it once meant beautiful, then fair-seeming but false.",
+      "audio_url": null,
+      "roots": [
+        "specere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "specious argument",
+        "specious reasoning",
+        "specious pretext"
+      ]
     },
     {
       "id": 411,
@@ -6801,8 +7129,15 @@
       "syllables": 5,
       "frequency_rank": 1034528,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin superciliosus (\"haughty\"), from supercilium (\"eyebrow\"), which in Latin also meant pride: a raised eyebrow is the look of someone who feels superior.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "supercilious smile",
+        "supercilious look",
+        "supercilious tone"
+      ]
     },
     {
       "id": 412,
@@ -6812,8 +7147,18 @@
       "syllables": 2,
       "frequency_rank": 106586,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tacitus (\"unspoken\"), directly or through French tacite, from tacere (\"to be silent\"), the verb also behind taciturn.",
+      "audio_url": null,
+      "roots": [
+        "tacere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "tacit agreement",
+        "tacit understanding",
+        "tacit consent",
+        "tacit approval"
+      ]
     },
     {
       "id": 413,
@@ -6823,8 +7168,14 @@
       "syllables": 4,
       "frequency_rank": 713173,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin temeritas (\"rashness\"), through Old French, from temere (\"rashly, at random\"), which goes back to an older word meaning \"blindly, in the dark\".",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "had the temerity to",
+        "his own temerity"
+      ]
     },
     {
       "id": 414,
@@ -12571,7 +12922,7 @@
       "definition": "Dispute a statement or claim, denying that it is true.",
       "plain_language_definition": "To insist that someone's claim is wrong.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 731,
@@ -12579,7 +12930,7 @@
       "definition": "Loud in color or ornament to the point of bad taste.",
       "plain_language_definition": "Much too bright and showy, with no sense of good taste.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 732,
@@ -12587,7 +12938,7 @@
       "definition": "Directly connected to the question under discussion, and so worth raising.",
       "plain_language_definition": "Closely connected to what is being discussed.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 733,
@@ -12595,7 +12946,7 @@
       "definition": "Showy and overblown in speech or writing, dressing ordinary ideas in high-sounding words.",
       "plain_language_definition": "Talking or writing in an overblown way, with showy words where simple ones would do.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 735,
@@ -12603,7 +12954,7 @@
       "definition": "Uncalled for, with nothing in the situation to justify it.",
       "plain_language_definition": "Not needed or asked for, and often unkind or over the top.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 738,
@@ -12611,7 +12962,7 @@
       "definition": "An early clue from which people can foresee a coming change.",
       "plain_language_definition": "A first hint of what is coming next.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 739,
@@ -12619,7 +12970,7 @@
       "definition": "Arrogant self-confidence that leads someone to overstep their limits and invite disaster.",
       "plain_language_definition": "Being so proud and sure of yourself that you take foolish risks.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 740,
@@ -12651,7 +13002,7 @@
       "definition": "Press someone with request after request, wearing on their patience.",
       "plain_language_definition": "Nag and plead with someone again and again for a favor.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 745,
@@ -12659,7 +13010,7 @@
       "definition": "Past any hope of reform, and sure to go on misbehaving.",
       "plain_language_definition": "So stuck in a bad habit that nothing will ever change it.",
       "sense_order": 1,
-      "register": null
+      "register": "humorous"
     },
     {
       "id": 747,
@@ -12667,7 +13018,7 @@
       "definition": "Never wearing out, however long or hard the work goes on.",
       "plain_language_definition": "Able to keep working hard for hours or days without getting tired.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 748,
@@ -12691,7 +13042,7 @@
       "definition": "Bitter, abusive language used to condemn or wound its target.",
       "plain_language_definition": "Angry words and insults thrown at someone to hurt them or run them down.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 751,
@@ -12699,7 +13050,7 @@
       "definition": "Inclined to joke, or said in a teasing, light-hearted spirit.",
       "plain_language_definition": "Always ready with a joke, or said in fun.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 752,
@@ -12731,7 +13082,7 @@
       "definition": "Slow and drowsy in manner, as though any effort would be too much.",
       "plain_language_definition": "Moving or acting slowly, as if too tired or relaxed to hurry.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 757,
@@ -12739,7 +13090,7 @@
       "definition": "Free and lavish giving of money or gifts, often by a rich or powerful patron.",
       "plain_language_definition": "A rich person's habit of being very free with money and gifts.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 759,
@@ -12755,7 +13106,7 @@
       "definition": "Heavy with sorrow, in a way that often seems exaggerated.",
       "plain_language_definition": "Very sad and gloomy, often more than the moment calls for.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 761,
@@ -12787,7 +13138,7 @@
       "definition": "A small quantity of something, often the least that could reasonably be expected.",
       "plain_language_definition": "Just a little of something, often barely enough.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 766,
@@ -12795,7 +13146,7 @@
       "definition": "Sharp and stinging in a way meant to wound, especially in humor or criticism.",
       "plain_language_definition": "Clever and cruel at once, with jokes or comments that sting.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 767,
@@ -12803,7 +13154,7 @@
       "definition": "Remove the reason for a step or measure by dealing with the issue ahead of time.",
       "plain_language_definition": "To solve something early so that a planned step is no longer needed.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 769,
@@ -12811,7 +13162,7 @@
       "definition": "Vile enough to stir up loathing and revulsion.",
       "plain_language_definition": "So nasty and wrong that people hate it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 770,
@@ -12827,7 +13178,7 @@
       "definition": "A public speech or text devoted entirely to lavish praise of someone or something.",
       "plain_language_definition": "A speech or essay that does nothing but praise someone.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 774,
@@ -12843,7 +13194,7 @@
       "definition": "Showing contempt or a low opinion, especially through the choice of a word or name.",
       "plain_language_definition": "Said in a way that puts someone or something down.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 776,
@@ -12851,7 +13202,7 @@
       "definition": "Always on the move, living or working in one place after another.",
       "plain_language_definition": "Moving around a lot and rarely staying in one place for long.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 778,
@@ -12867,7 +13218,7 @@
       "definition": "Words or applause that publicly praise someone for an achievement.",
       "plain_language_definition": "Praise or cheers that people give someone who did well.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 780,
@@ -12875,7 +13226,7 @@
       "definition": "Declare something off limits by law or by order of an authority.",
       "plain_language_definition": "To make it against the rules or the law to do something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 781,
@@ -12883,7 +13234,7 @@
       "definition": "Prone to grumbling and fault-finding, with a sour, easily irritated temper.",
       "plain_language_definition": "Always complaining in a cranky, whiny way.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 782,
@@ -12891,7 +13242,7 @@
       "definition": "Hungry for gain and willing to strip others of what they have to get it.",
       "plain_language_definition": "So greedy that you grab everything you can from others, no matter who gets hurt.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 785,
@@ -12899,7 +13250,7 @@
       "definition": "Give up a belief or claim in public.",
       "plain_language_definition": "To publicly take back something you said or believed.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 786,
@@ -12915,7 +13266,7 @@
       "definition": "Holding a steady, untroubled belief that matters will work out.",
       "plain_language_definition": "Feeling sure that things will turn out fine.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 791,
@@ -12923,7 +13274,7 @@
       "definition": "Persuasive on its face yet resting on a flaw or a falsehood.",
       "plain_language_definition": "Easy to believe, yet built on a mistake or a lie.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 793,
@@ -12931,7 +13282,7 @@
       "definition": "Openly scornful of others out of a belief in one's own superiority.",
       "plain_language_definition": "Acting too good for other people and letting them see it.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 795,
@@ -12947,7 +13298,7 @@
       "definition": "Rash boldness that ignores danger or what is considered proper.",
       "plain_language_definition": "Cheeky nerve to do or say something you have no right to.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 797,
@@ -13053,17 +13404,19 @@
       "id": 817,
       "word_id": 384,
       "definition": "Sad enough to move listeners or viewers to tears.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Meant to make an audience cry, like a sad film or song.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 819,
       "word_id": 387,
       "definition": "Gifts or sums of money handed out by a wealthy giver.",
-      "plain_language_definition": null,
+      "plain_language_definition": "The cash or presents themselves, handed out by someone wealthy.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": false
     },
     {
       "id": 824,
@@ -13085,9 +13438,10 @@
       "id": 826,
       "word_id": 409,
       "definition": "Having a ruddy, healthy-looking complexion.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Having a healthy, reddish color in the face.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 828,
@@ -16198,73 +16552,82 @@
       "id": 1337,
       "word_id": 401,
       "definition": "Of Aristotle's followers or the teachings they handed down.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Relating to Aristotle, his school of philosophy, or its later followers.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1338,
       "word_id": 370,
       "definition": "Costing nothing to the one who receives it.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Given or provided free, with no payment asked.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1339,
       "word_id": 375,
       "definition": "Surging fiercely and powerfully, as floodwater does.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Rushing along with violent force, as wind or water can.",
       "sense_order": 2,
-      "register": null
+      "register": "literary",
+      "also_means": false
     },
     {
       "id": 1340,
       "word_id": 404,
       "definition": "Declare a person an enemy of the state and drive them out of the country.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To brand someone a public enemy and banish them from their homeland.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1341,
       "word_id": 406,
       "definition": "Of an animal, feeding on other animals that it hunts down.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of an animal, living by hunting and eating other animals.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1342,
       "word_id": 409,
       "definition": "Deep red, the shade of fresh blood.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a deep red color, like that of blood.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1343,
       "word_id": 410,
       "definition": "Showy in a way that masks something hollow or false.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Attractive on the surface but hiding something empty or false.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1344,
       "word_id": 385,
       "definition": "Thrash someone soundly with blows.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To beat someone hard, again and again.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1345,
       "word_id": 390,
       "definition": "Working to bring harm or misfortune, said of forces rather than people.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Bringing harm or bad luck, used of forces or influences rather than people.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     }
   ],
   "example_sentences": [
@@ -70631,14 +70994,6 @@
       "revision": 3
     },
     {
-      "id": 745,
-      "word_id": 381,
-      "text": "Invective comes from Latin invehi, 'to attack with words', literally 'to be carried against': invective charges at its target.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 746,
       "word_id": 382,
       "text": "Jocular comes from Latin joculus, a little joke, from jocus, the same root that gave English the word joke.",
@@ -70730,14 +71085,6 @@
       "id": 764,
       "word_id": 400,
       "text": "Pejorative comes from Latin pejor, \"worse\": a pejorative word makes something sound worse than it is.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 765,
-      "word_id": 401,
-      "text": "Peripatetic comes from Greek peripatein, \"to walk around\" (peri, \"around\"). Aristotle's pupils got the name from the covered walk where he taught.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -72663,14 +73010,6 @@
       "revision": 3
     },
     {
-      "id": 1010,
-      "word_id": 391,
-      "text": "Mawkish comes from mawk, an old word for a maggot, so it first described food that turned the stomach. Today it means sentiment laid on so thick that it does the same.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 1011,
       "word_id": 393,
       "text": "Modicum comes from Latin modus, \"measure\": picture a measuring spoon that holds only a pinch.",
@@ -72746,14 +73085,6 @@
       "id": 1020,
       "word_id": 383,
       "text": "Judicious comes from Latin judicium, judgment: a judicious choice is one made with good judgment.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 1021,
-      "word_id": 385,
-      "text": "Lambaste begins with lam, an old verb meaning to beat hard: to lambaste someone is to beat them with words.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -72898,6 +73229,38 @@
       "id": 1039,
       "word_id": 508,
       "text": "Tantamount ends in amount: if one thing is tantamount to another, it amounts to the same thing. It may come from Anglo-French tant amunter, 'to amount to as much'.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1040,
+      "word_id": 381,
+      "text": "Invective comes from Latin invehi, 'to attack with words', literally 'to be carried into': invective charges at its target.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1041,
+      "word_id": 385,
+      "text": "Lambaste begins with lam, probably the old verb meaning to beat hard: to lambaste someone is to beat them with words.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1042,
+      "word_id": 391,
+      "text": "Mawkish comes from mawk, an old word for a maggot, so it once described food that turned the stomach. Today it means sentiment laid on so thick that it does the same.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1043,
+      "word_id": 401,
+      "text": "Peripatetic comes from Greek peripatein, \"to walk around\" (peri, \"around\"). Aristotle's pupils perhaps got the name from the covered walk where he taught.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -124173,8 +124536,8 @@
     },
     {
       "path": "definitions/1338.mp3",
-      "bytes": 11389,
-      "key": "10f61d0d4175bdbb",
+      "bytes": 14315,
+      "key": "c4db555ba4fa6b04",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124215,8 +124578,8 @@
     },
     {
       "path": "definitions/1339.mp3",
-      "bytes": 14315,
-      "key": "7cfa059c6f57a3eb",
+      "bytes": 16718,
+      "key": "a08df8fe4f4c5cb8",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124285,8 +124648,8 @@
     },
     {
       "path": "definitions/817.mp3",
-      "bytes": 13793,
-      "key": "842770f94307986d",
+      "bytes": 15673,
+      "key": "006cedfc020b689d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124299,8 +124662,8 @@
     },
     {
       "path": "definitions/1344.mp3",
-      "bytes": 9718,
-      "key": "9e1b4ca7bcc040ad",
+      "bytes": 11180,
+      "key": "75b1ee3095b154f0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124320,8 +124683,8 @@
     },
     {
       "path": "definitions/819.mp3",
-      "bytes": 16300,
-      "key": "f8081a2f856600d3",
+      "bytes": 16823,
+      "key": "b76dc36203fe0684",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124348,8 +124711,8 @@
     },
     {
       "path": "definitions/1345.mp3",
-      "bytes": 18286,
-      "key": "8cd412f62871823b",
+      "bytes": 21629,
+      "key": "402c074826f8856c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124439,8 +124802,8 @@
     },
     {
       "path": "definitions/1337.mp3",
-      "bytes": 16196,
-      "key": "8dd14f5e36817cf3",
+      "bytes": 19644,
+      "key": "a9845f2934ea087a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124467,8 +124830,8 @@
     },
     {
       "path": "definitions/1340.mp3",
-      "bytes": 18704,
-      "key": "e74220af3305cbdb",
+      "bytes": 18077,
+      "key": "f8b6b85577da3ada",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124488,8 +124851,8 @@
     },
     {
       "path": "definitions/1341.mp3",
-      "bytes": 15987,
-      "key": "c7b183f39fc823c1",
+      "bytes": 16509,
+      "key": "6b2161d232b947c7",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124531,14 +124894,14 @@
     {
       "path": "definitions/826.mp3",
       "bytes": 12748,
-      "key": "e39dc76db228e842",
+      "key": "e5689d07a38eb637",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1342.mp3",
-      "bytes": 10867,
-      "key": "02c5ee223bd66f40",
+      "bytes": 11912,
+      "key": "e0d88ce85a9dc983",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124551,8 +124914,8 @@
     },
     {
       "path": "definitions/1343.mp3",
-      "bytes": 13270,
-      "key": "0b724ff35ccc5648",
+      "bytes": 16718,
+      "key": "5566e6e8250f2a0f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129074,7 +129437,7 @@
     {
       "path": "hooks/381.mp3",
       "bytes": 34064,
-      "key": "8f0f3738007f619e",
+      "key": "8153c39aca0277ee",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129101,8 +129464,8 @@
     },
     {
       "path": "hooks/385.mp3",
-      "bytes": 29257,
-      "key": "c4a43513eceb50f6",
+      "bytes": 31242,
+      "key": "4e0f477aa3b71cdd",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129143,8 +129506,8 @@
     },
     {
       "path": "hooks/391.mp3",
-      "bytes": 42632,
-      "key": "d3fb96369e9eaf87",
+      "bytes": 42423,
+      "key": "a785bc224c0b485e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129213,8 +129576,8 @@
     },
     {
       "path": "hooks/401.mp3",
-      "bytes": 37721,
-      "key": "f6463e86d1fe86d0",
+      "bytes": 39602,
+      "key": "162e463a19b32c59",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -175341,6 +175704,1429 @@
         "alsoMeans": 4
       },
       "checker_notes": "Also means (4): the rhetorical-device sense is hidden; Oxford calls it the earliest current sense and a learner may meet it in literature classes, so showing it with technical is worth considering. Origin follows Wiktionary's surface analysis (anti- + thesis); dictionaries derive it from antitithenai, which agrees. Tone null right: Oxford and Longman formal, Cambridge not."
+    },
+    {
+      "id": 1325,
+      "word_id": 366,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English gainsayen, gain- + say) and the Wiktionary page gain- (Old English gean-, 'against'; 'More at again'), which also supports the hook's 'as in against'; Oxford, Longman and AHD agree. No root: gain- is a prefix and say is English. Hook true, unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: gainsay the fact 1.94 (the top object in 'gainsay the *'), dare gainsay 1.23 per billion (Datamuse 'dare'); the verb is rare, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims match Wiktionary (Middle English gainsayen, gain- + say; the gain- page gives 'against'). Formal in Oxford, Cambridge and Longman. Weakest point: only two pairings, and 'dare gainsay' (1.23 per billion) shows the usual negative frame rather than the meaning; 'gainsay the fact' (1.94) is the one that shows it. The hook's \"'against' (as in against)\" reads awkwardly but is true."
+    },
+    {
+      "id": 1326,
+      "word_id": 367,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py, which hedges every step ('Unknown, possibly from obsolete Middle English gawren, to stare'); Oxford and AHD also say origin unknown, so the origin says unknown and keeps the 'may' on gawren and leaves out the Old Norse steps. Hook is a sound-alike (glare) with no origin claim. Tone disapproving: Oxford and Cambridge. Pairings: garish colors 10.88, light 7.86, neon 5.27 per billion, all top Datamuse nouns.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge (unknown, possibly Middle English gawren 'to stare'). Disapproving in Oxford and Cambridge, Longman unlabelled. Pairings are top Datamuse partners (garish light 7.9, garish neon 5.3 per billion). Weakest point: 'garish light' leans on glare rather than the color-and-taste definition, though Cambridge's 'unpleasantly bright' covers it."
+    },
+    {
+      "id": 1327,
+      "word_id": 368,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (variant of german, 'having the same parents; related', its current sense from allusions to Shakespeare's Hamlet) and the Wiktionary page german (Old French germain, Latin germanus, senses 'same parents' and obsolete 'closely related, akin'); Oxford's word origin agrees. Hook (Latin germanus, having the same parents) true, unchanged. No root: germanus shows in no common English word. Tone formal: all three learner's dictionaries. Pairings: germane to the discussion 3.59, germane to the question 2.73 (Datamuse 'question'), directly germane 5.35 per billion; particularly germane (22.2) is commoner but fits any adjective.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked against Wiktionary germane (variant of german; this sense from allusions to its use in Hamlet) and german (from Latin germanus; obsolete 'closely related, akin'). Formal in all three. Pairings: directly germane 5.4, germane to the discussion 3.6, to the question 2.7 per billion. Weakest point: the opening 'A form of the old word german' stays close to Wiktionary's 'A variant form of german', though it is a bare fact."
+    },
+    {
+      "id": 1328,
+      "word_id": 369,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French grandiloquent, Latin grandiloquus, grandis 'great' + loquens, from loquor 'to speak'; compare eloquent); Oxford, Longman and AHD agree. Roots grandis (as on aggrandize) and loqui (as on eloquent and loquacious). Hook true, unchanged. Tone: Oxford and Cambridge mark it formal and disapproving, Longman formal; as on intransigent, disapproving (two of three) is set because it is the label that matters for use. Pairings: style 1.68, language 1.43, title 1.07 per billion, the top Datamuse nouns, but rare.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary (Middle French, Latin grandiloquus, grandis + loquens from loquor; compare eloquent); loquacious is also from loqui. Roots grandis and loqui are spelled as on aggrandize and eloquent. Pairings style, title, language are the top partners. Weakest point: all three dictionaries also mark it formal, so either label fits; disapproving (Oxford, Cambridge) is the more useful one."
+    },
+    {
+      "id": 1329,
+      "word_id": 370,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin gratuitus 'free', from gratia 'favor', gratus), the Latin page gratuitus (from the root of gratia and gratus; senses 'freely given', 'vain, futile') and the English page's sense order (given freely, then unjustified), which supports the step from free to uncalled for. Root gratia (gratis, ingratiate on worksheet s). Hook (shares its root with gratis) true: Wiktionary gratis is from Latin gratis and lists gratuitous as related. Tone disapproving: Oxford and Cambridge. Pairings: violence 28.38, cruelty 5.85, insult 5.33 per billion. Also means: the 'free' sense is shown; it is the top Datamuse use (services, advice, instruction, relief) and Longman Business has it under LAW, but Oxford and Cambridge omit it, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked against Wiktionary gratuitous (Latin gratuitus, from gratia), Latin gratuitus ('freely given', from the root of gratia) and gratis (from Latin gratis), so the hook's shared root holds. Disapproving in Oxford and Cambridge. Also means: 'given freely' is Wiktionary's sense 1 and common in the data (gratuitous services, advice). Weakest point: 'given for nothing came to mean done for no good reason' is a fair reading of the two senses, not a step Wiktionary states."
+    },
+    {
+      "id": 1330,
+      "word_id": 371,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French herbergeor, from herbergier 'to shelter', Germanic 'army camp, shelter'; originally a person sent ahead to arrange lodgings) and the English page's obsolete sense (the officer of the English royal household who went before the court to prepare lodgings), which supports the hook; unchanged. No root. Tone literary: Cambridge and Longman mark it literary, Oxford 'formal or literary'; formal is not set because Cambridge does not mark it. Pairings: harbinger of doom 12.76, of spring 8.45 (both in Wiktionary's collocations), early harbinger 2.91 per billion (Datamuse 'early').",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary: herbergeor from herbergier 'to shelter', 'originally a person sent in advance to arrange lodgings', and the obsolete sense of the royal-household officer who went ahead of the travelling court. Literary in all three (Oxford 'formal or literary'). Pairings: harbinger of doom 12.8, of spring 8.5, early harbinger 2.9 per billion. Weakest point: the hook's 'you knew the king himself was coming' is an inference, though a fair one."
+    },
+    {
+      "id": 1331,
+      "word_id": 372,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (learned borrowing from Ancient Greek hubris, 'pride, insolence, outrage') and the English sense ('originally, in Greek mythology, toward the gods'). No root. Hook (Greek word for insolent, outrageous behavior) true, unchanged; its proverb is a memory aid, not an origin claim. Tone literary: Oxford, Cambridge and Longman all mark it literary. Pairings: human 12.05, imperial 7.94, intellectual 2.72 per billion, all from Datamuse.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary: borrowed from Greek hubris ('pride, insolence, outrage'), and its definition, 'originally (Greek mythology) toward the gods', backs the second clause. Literary in all three. Pairings (4): human 12.1, imperial 7.9, intellectual 2.7 per billion are common, but they are classifying adjectives that do not show the meaning, and 'imperial hubris' is partly the title of a 2004 book; 'act of hubris' (7.7) would show it."
+    },
+    {
+      "id": 1332,
+      "word_id": 373,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Greek idiosynkrasia, 'one's own temperament', from idios + syn + krasis) and the Greek page krasis ('mixture; temperament'), which supports the hook's 'a blend'; Oxford and AHD agree. Root idios (idiom, idiot). Hook true, unchanged. Tone null: no label in any of the three. Watch out: a spelling note, as on callous; the Wiktionary page idiosyncracy says that spelling is commonly considered a misspelling while Webster's Third gives both, so the note says 'widely treated as a mistake' rather than calling it wrong. Pairings: personal 13.54, individual 8.52, little 6.94 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (idiosynkrasia, idios + syn + krasis) and the Greek krasis page ('mixture', 'temperament'), so 'a mixing' and the hook's 'a blend' hold. Root idios is right. No label in any of the three. Watch out (4): true, and hedged as Wiktionary's idiosyncracy usage note is ('commonly considered a misspelling'), and the -cracy slip is common, but it is a spelling note rather than the meaning mix-up the field is for, and it repeats the origin's 'from Greek krasis, a mixing'."
+    },
+    {
+      "id": 1333,
+      "word_id": 374,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin ignominiosus, from ignominia, from ig- for in- 'not' + nomen 'name; good name, reputation') and Oxford's word origin. Root nomen (nominate, nominal, misnomer on worksheet w). Hook (nomen, name, as in nominate) true, unchanged. Tone null: Oxford and Longman say formal but Cambridge literary, so neither label has the agreement it needs. Pairings: end 22.49, defeat 16.74, retreat 7.30 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary (ignominiosus, from ignominia, from ig-, a variant of in- 'not', + nomen 'name, good name'). Root nomen is right. Oxford and Longman formal, Cambridge literary, so null is right. Pairings end, defeat, retreat are top partners. Weakest point: the origin skips the Middle French route Wiktionary gives as an alternative, which is fine for one line."
+    },
+    {
+      "id": 1334,
+      "word_id": 375,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French impetueux, Late Latin impetuosus 'violent', Latin impetus 'attack, violence') and the Latin pages impetus (from impeto, 'to rush upon, attack'; an intermediate form is hedged, so it is left out) and impeto (in- + peto). Root petere, the form petulant uses (coordinator's note). Hook (impetus, a rush or attack) true: the Latin page gives 'an attack, a charge' and 'a rapid motion'. Tone null: no label in any of the three. Pairings: nature 9.30, youth 5.33, temper 2.71 per billion; impetuous torrent is left out as the other sense. Other sense (surging like floodwater) kept hidden: Oxford, Cambridge and Longman omit it, and dictionary.com (poetic) and WordUp (literary) label it, so it is set literary.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked against Wiktionary impetuous, Latin impetus ('attack', from impeto), impeto ('to rush upon, assail', in- + peto) and peto ('seek', 'attack'). Root petere matches petulant. Null tone is right; the hidden sense's literary label matches Collins's 'poetic' (the learner's dictionaries lack that sense), and hiding it is right. Weakest point: that hidden sense's plain ('Rushing along with violent force') sits near Collins ('rushing') and AHD ('violent force')."
+    },
+    {
+      "id": 1335,
+      "word_id": 376,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French importuner, Medieval Latin importunor, Latin importunus 'unfit, troublesome', originally 'having no harbor') and the Latin page importunus (in- + portus + -nus; antonym opportunus), which supports the hook's 'opposite of opportunus'; unchanged. Root portus (port, opportune). Tone formal: all three learner's dictionaries. Pairings left empty: the Datamuse partners are rare in Ngram (constantly importuned 0.41, repeatedly 0.28, earnestly 0.40 per billion) and the common ones are generic (importuned by 8.30, importuned him 5.21).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary importune and Latin importunus (in- + portus; 'inconvenient, unsuitable', 'annoying'; originally 'having no harbor'; antonym opportunus, which backs the hook). Formal in all three. Empty pairings are right: nothing with a meaning partner is common (importuned by 8.3 per billion is generic, importune him for 0.43). Weakest point: Cambridge's legal sense (soliciting for sex) is not in the record; rare for a general reader."
+    },
+    {
+      "id": 1336,
+      "word_id": 377,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin incorrigibilis, in- + corrigere 'to correct' + -ibilis); Oxford, Longman and AHD agree. Root corrigere: it shows in corrigible and, less visibly, in correct, so origin 4. Hook true, unchanged. Tone humorous: Cambridge labels it humorous, Oxford 'disapproving or humorous', and Longman's definition says it is often used humorously; 4 because serious uses (incorrigible offenders) remain. Pairings: rogue 2.36, optimist 1.93, offenders 1.32 per billion, the top Datamuse nouns but not frequent.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary (incorrigibilis, in- + corrigere + -ibilis). Humorous: Oxford 'disapproving or humorous', Cambridge 'mainly humorous', Longman 'often used humorously'. Pairings optimist, rogue, offenders are top partners. Weakest point: the root corrigere shows in English mostly through correct (from its participle) and corrigendum, so the link is less visible than for most roots."
+    },
+    {
+      "id": 1337,
+      "word_id": 378,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin indefatigabilis 'untiring', in- + defatigo 'to tire out') and the Latin page defatigo (de- + fatigo; 'to tire out or exhaust'); Longman and Oxford tie it to fatigue through fatigare. Root fatigare (fatigue). Hook (fatigue hidden inside it) true, unchanged. Tone formal: Oxford (formal, approving), Cambridge and Longman. Pairings: energy 7.37, efforts 6.45, worker 6.20 per billion; indefatigable industry is left out because it uses industry in its old sense of hard work.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): the facts match Wiktionary (indefatigabilis, in- + defatigo 'to tire out'; defatigo is de- + fatigo), but 'defatigare, a form of fatigare' is loose: it is fatigare with the prefix de-. Root fatigare (fatigue) is right. Formal in all three. Pairings energy, efforts, worker are top partners."
+    },
+    {
+      "id": 1338,
+      "word_id": 379,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French insouciant, in- 'not' + souciant 'worrying', 1828) and AHD (souciant, present participle of soucier). No root. Hook (in- plus soucier, to worry; souci, worry) true, unchanged. Tone null: Oxford formal, Cambridge literary, and Longman has only insouciance (formal), fetched to scratch since Longman has no insouciant page. Pairings: smile 1.89, attitude 1.79, shrug 1.68 per billion, the top Datamuse nouns but rare.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary (French insouciant, in- + souciant 'worrying', 1828). Oxford and Longman (insouciance) formal, Cambridge literary, so null is right. Pairings attitude 1.8, shrug 1.7 per billion and smile are top partners. Weakest point: the hook says in- plus soucier, where the word is in- plus its participle souciant; harmless."
+    },
+    {
+      "id": 1339,
+      "word_id": 380,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English inuren, in- + ure 'practise, exercise') and the Wiktionary page ure (obsolete, only in 'in ure' and 'out of ure': use, practice), which supports the hook's 'in ure, in use'; Oxford and AHD agree. No root. Tone null: Oxford (inure to) and Cambridge mark it formal, Longman (inure to, fetched to scratch) has no label. Pairings: become inured 26.28, inured to hardship 3.22, inured to violence 1.99 per billion. Also means 4: the record has only one sense, but the legal sense (to take effect, as in 'inure to the benefit of') is in Wiktionary and dominates Datamuse (earnings inures, benefit inuring); consider adding it as an other sense on a main worksheet.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (inuren, in- + ure; ure 'use, practice', obsolete, only in 'in ure' and 'out of ure'). Oxford and Cambridge formal, Longman unlabelled, so null is right. Pairings: become inured 26.3, inured to hardship 3.2, to violence 2.0 per billion. Also means (4): the record lacks Wiktionary's chiefly legal sense 'to take effect' ('inures to the benefit of'), which dominates inure and inures in the collocation data; it is technical, so leaving it out is defensible, but it is a main-worksheet decision."
+    },
+    {
+      "id": 1340,
+      "word_id": 381,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French invective, Medieval Latin invectiva 'abusive speech', Latin invectivus, invectus, inveho 'bring in', in- + veho 'carry'; see vehicle) and the Latin page inveho (senses 'carry into', 'attack', passive 'attack with words, inveigh against'). Root vehere (vehicle, inveigh). Hook changed: it said invehi is literally 'to be carried against', but Wiktionary glosses the in- as 'in' and the verb as 'carry into', and Oxford gives 'be carried into', so 'against' became 'into'. Tone formal: all three. Pairings: stream of invective 8.29, personal 5.16, bitter 4.33 per billion (personal and bitter top Datamuse).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary invective (Medieval Latin invectiva 'abusive speech', from invectus, inveho, in- + veho; see vehicle) and Latin inveho (passive: 'to attack with words'). The hook fix ('carried into' for 'carried against') follows inveho's literal sense. Formal in all three. Pairings: stream of invective 8.3, personal 5.2, bitter 4.3 per billion. Weakest point: 'a tirade' for invectiva drops the 'abusive' part."
+    },
+    {
+      "id": 1341,
+      "word_id": 382,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin iocularis, from ioculus 'a little jest', diminutive of iocus 'a jest') and the Wiktionary pages iocus and joke (joke from Latin iocus), which support the hook; unchanged. Spelled with j as in the hook, Oxford and Longman. Root jocus (joke, jocose). Tone formal: all three. Pairings: tone 10.73, manner 5.32, remark 2.65 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary jocular (iocularis, ioculus 'a little jest', iocus 'a jest'), joke (from Latin iocus) and iocus. Root jocus is right. Formal in all three. Pairings tone, manner, remark are top partners. Weakest point: the hook repeats the origin almost word for word, which the owner allows."
+    },
+    {
+      "id": 1342,
+      "word_id": 383,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French judicieux, ultimately from Latin iudico; related to judge, judicial) and the Latin page iudicium (from iudico 'to judge' + -ium, alternative form judicium); Oxford, Longman and AHD give Latin judicium. Root judicare, in the j spelling English dictionaries use, so adjudicate (worksheet t) can share it. Hook (judicium, judgment) true, unchanged. Tone null: Oxford and Longman say formal, Cambridge has no label. Watch out: judicial and judicious are a known confusable pair (Cambridge's entry says 'Compare judicial' and dictionary.com has a usage note on the two); 4 because I have no count of how often they are confused. Pairings: use 208.36, choice 34.49, selection 26.98 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary says only 'from French judicieux, ultimately derived from Latin iudico' (its French judicieux page, fetched today, says the same), and Latin iudicium is iudico + -ium. The step 'French built judicieux on judicium' (origin and hook) is not stated there but agrees with it and with standard sources, so it stands; that is the weakest point. Watch out: judicial/judicious is a classic confusable, stated briefly and correctly. Oxford and Longman formal, Cambridge none, so null is right."
+    },
+    {
+      "id": 1343,
+      "word_id": 384,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin lachrymosus, lacrimosus, from lacrima 'tear' + -osus; from Old Latin dacrima, Proto-Indo-European *dakru-, cognate with English tear) and Oxford and AHD. No root: lacrima shows only in rare words such as lacrimal. Hook (lacrima, a tear) true, unchanged. Tone null on both senses: Oxford and Longman formal, Cambridge literary. Pairings left empty: the first-sense partners are rare (lachrymose voice 0.43, tone 0.26 per billion) and the others (sentimentality, drama) belong to the second sense. Also means: the 'making people cry' sense is shown; Oxford ('making you cry'), AHD and dictionary.com list it, and vocabulary.com notes its use for sentimental books and films.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Matches Wiktionary (lacrimosus, lacrima 'tear', cognate with English tear). Oxford and Longman formal, Cambridge literary, so null is right. Empty pairings are right (lachrymose voice 0.43 per billion; 'lachrymose conception' is a term from Jewish historiography). Also means (4): the tear-jerker sense is current (Oxford 'making you cry'), but 'Meant to make an audience cry' adds intent where the sense is about the effect."
+    },
+    {
+      "id": 1344,
+      "word_id": 385,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested 1637, probably lam 'beat' + baste 'beat'), the Wiktionary pages lam ('to beat or thrash', listing lambaste) and baste (etymology 3, 'to beat with a stick', listing lambaste); AHD also says perhaps. The origin keeps 'probably'. Hook changed: 'begins with lam, an old verb meaning to beat hard' stated the hedged step as fact; it now says 'probably the old verb'. Tone null: Oxford and Longman have the entry only as lambast (both formal, fetched to scratch), Cambridge has no label. Pairings: critics lambasted 2.14, publicly lambasted 1.35 per billion (Datamuse 'critics', 'publicly'). The thrash sense stays hidden: Wiktionary calls it dated in British English and the learner's dictionaries omit it.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): facts and hedge match Wiktionary (first attested 1637; probably lam 'beat' + baste 'beat'; the lam and baste pages confirm both), but it opens with Dictionary.com's stock 'First recorded in' + date and keeps the date-then-probably-lam-plus-baste order that Dictionary.com and Wiktionary share; with so few facts that comes close to a shared frame. The hook fix (adding 'probably') keeps the hedge. Oxford and Longman (lambast) formal, Cambridge none, so null is right. Pairings: critics lambasted 2.1, publicly lambasted 1.4 per billion."
+    },
+    {
+      "id": 1345,
+      "word_id": 386,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French languide or Latin languidus, from langueo 'to be faint or weak'; see languish) and the Latin page langueo (derived terms include languor). Root languere (languish, languor). Hook 4: Latin languere is right, but Wiktionary glosses it 'to be faint, weak' and 'listless', not 'droop'; the hook's 'lack strength' matches, so it is left as is. Tone literary: Cambridge and Longman. Pairings: voice 6.37, air 6.36, grace 6.13 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary languid (Middle French languide or Latin languidus, from langueo; see languish) and Latin langueo ('to be faint, weak'; 'listless'). Root languere is right. Cambridge and Longman literary. Pairings: languid air 6.4, grace 6.1 per billion, and voice. Weakest point: 'From Latin languidus' drops the Middle French route Wiktionary gives as an alternative; fine for one line."
+    },
+    {
+      "id": 1346,
+      "word_id": 387,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English largesse, Old French largesce 'generosity', from large 'big, generous, wide') and the Latin page largus ('abundant, plentiful', 'bountiful, liberal'), which supports the hook's 'generous as well as abundant'; Oxford, Longman and AHD agree. Root largus (large, enlarge). Tone formal on both senses: Oxford ('formal or humorous'), Cambridge and Longman mark the entry formal, covering the giving and the money given. Pairings: government 11.01, federal 5.29, royal 2.79 per billion. The other sense (the gifts themselves) stays hidden: Oxford folds it into one sense with the first.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary largesse (Old French largesce, from large 'generous, wide') and Latin largus ('abundant, plentiful'; 'bountiful, liberal', so the hook's 'generous as well as abundant' holds). Cambridge and Longman formal and Oxford 'formal or humorous', so formal is in all three, on the hidden sense too; hiding the near-repeat sense is right. Weakest point: Oxford's 'or humorous' is lost with formal alone."
+    },
+    {
+      "id": 1347,
+      "word_id": 388,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin"
+      ],
+      "notes": "Origin checked against tools/etymology.py (lion + -ize) and the Wiktionary page lion (sense 'a famous person regarded with interest and curiosity', quoted from the 1800s), which supports the hook's 'old use of lion for a celebrity'; the Tower of London story is not in Wiktionary and is not used. No root. Tone null: Oxford formal, Longman written, Cambridge none. Pairings left empty: lionized by 10.77 is generic and lionized by the press is 0.34 per billion.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary gives only lion + -ize; its lion page has 'a famous person regarded with interest and curiosity', which supports the origin and hook. Origin (4): 'a famous person whom everyone is curious to see' stays close to that gloss (famous person, curiosity); say it from another angle. Oxford formal, Cambridge none, Longman 'written', so null is right. Empty pairings are right: only 'lionized by' and 'was lionized' are common, and they do not show the meaning."
+    },
+    {
+      "id": 1348,
+      "word_id": 389,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin lugubris 'mournful; gloomy' + -ious) and the Latin page lugubris (from the root of lugeo 'mourn, lament'); Oxford, Longman and AHD agree. No root: lugere shows in no common English word. Hook (lugere, to mourn) true, unchanged. Tone literary: Cambridge and Longman (Longman adds 'sometimes used humorously'). Pairings: face 3.63, expression 2.74, voice 2.09 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Matches Wiktionary lugubrious (Latin lugubris 'mournful; gloomy', with -ious) and Latin lugubris ('from the root of lugeo, mourn'), so the hedge 'from the root of lugere' is right. Cambridge and Longman literary (Longman: 'sometimes used humorously', which backs the closing clause). Pairings face, expression, voice are top partners. Weakest point: 'from the root of lugere' echoes the Latin page's own phrase, though it is a short fact."
+    },
+    {
+      "id": 1349,
+      "word_id": 390,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary malevolent (Latin malevolens from male \"badly\" + volens \"wishing\", from velle \"to wish\") and volition (Latin volo, velle), so velle links it with volition. Hook matches; unchanged. Tone null: Oxford and Longman say formal, Cambridge literary, so formal is not on all three and literary on only one. No common mix-up. Pairings from the collocations lists (intent, spirit, eyes; 10.6, 19.4 and 9.8 per billion); I left out \"malevolent forces\" because forces belong to the other sense. The other sense (of forces rather than people) is a near-repeat of the first, so not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check out against Wiktionary (male, volens, velle) and volition's entry (from volo, velle). Null tone is right: Oxford and Longman mark it formal, Cambridge literary. Weakest point: 'malevolent spirit' (19.4 per billion) leans on supernatural beings; 'malevolent intent' and 'malevolent eyes' show the first sense more directly. Hiding the forces sense is right, as a near repeat."
+    },
+    {
+      "id": 1350,
+      "word_id": 391,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary mawkish (mawk + -ish; archaic senses \"feeling sick, queasy\" and \"sickening or insipid in taste or smell\") and mawk (obsolete or dialect \"a maggot\", from Middle English mawke, from Old Norse). Hook change: \"first described food\" became \"once described food\". Wiktionary gives both archaic senses without an order, and the queasy (person) sense may be the older one, so \"first\" claimed more than the sources show. No root. Tone null: only Oxford marks it disapproving. Pairings: the two sentiment nouns at the top of the collocations list (3.2 and 1.7 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and the changed hook match Wiktionary (mawk, maggot, from Old Norse; archaic senses 'queasy' and 'sickening or insipid in taste or smell'). Null tone is right (only Oxford marks it disapproving). Weakest point: the two pairings are near repeats ('mawkish sentimentality' 3.16, 'mawkish sentiment' 1.70); a second partner from the tool's list would add more."
+    },
+    {
+      "id": 1351,
+      "word_id": 392,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots"
+      ],
+      "notes": "Origin checked against Wiktionary misanthrope (Ancient Greek miseo \"I hate\" + anthropos \"man; human\"); misein is the infinitive, the linking form for Greek verbs. Both roots show in other English words (misogyny, anthropology). Hook matches; unchanged. Tone null: only Oxford says formal, Cambridge has no label, and Longman has no entry. Pairings empty: the best in the collocations list, \"confirmed misanthrope\", is 0.56 per billion and the rest are lower, so nothing is common enough.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "misein and anthropos match Wiktionary and are good linking roots (misogyny, philanthropy, anthropology). Null tone is right (only Oxford marks it formal). Empty pairings are right: 'confirmed misanthrope' is 0.56 per billion. Weakest point: none of note."
+    },
+    {
+      "id": 1352,
+      "word_id": 393,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary modicum (Latin modicum \"a little\", neuter of modicus \"moderate\", from modus \"a measure\") and modus. Hook matches; unchanged. Tone formal: Oxford, Cambridge and Longman (at its entry \"a modicum of something\") all mark it formal. Pairings from the \"modicum of *\" slot (privacy 17.0, respect 13.0, success 12.6 per billion; \"a modicum of\" is 489).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (noun use of modicus, from modus); modus is a good root (mode, moderate, modest). formal is right: Oxford, Cambridge and Longman ('a modicum of something') all mark it. All three pairings are the top fillers of 'a modicum of *'. Weakest point: the hook says 'comes from modus' and skips modicus, which is fine for a hook."
+    },
+    {
+      "id": 1353,
+      "word_id": 394,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary mordant (French mordant, from Latin mordeo), mordeo (\"to bite; to sting\") and remorse (Latin remordeo, literally \"to bite back\", from re- + mordeo); Longman gives French mordant as the present participle of mordre \"to bite\". Hook matches; unchanged. Tone formal: Oxford and Cambridge mark it formal, and so does Longman at its entry \"mordant wit/satire/humour\". Pairings: the top nouns in the collocations list (wit 5.7, humor 2.6, satire 1.3 per billion); the dye nouns belong to the noun sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French mordant from Latin mordeo) and remorse's entry (remordeo, from mordeo). formal is right: Oxford, Cambridge and Longman ('mordant wit/satire/humour') all mark it. Pairings are the tool's top three. Weakest point: mordere shows in English mainly through remorse, a thin but real link."
+    },
+    {
+      "id": 1354,
+      "word_id": 395,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary obviate (Latin obviatus, from obvio), obvio (\"to meet; to prevent, hinder\", from obvius), obvius (ob- + via) and obvious (Latin obvius, from ob- + via). Hook (\"shares Latin via with obvious\") matches; unchanged. Tone formal: all three learner's dictionaries. No watch-out: Wiktionary notes that some call \"obviate the need\" redundant and that the objection is groundless, which is not a misreading. Pairings: \"obviate the need\" (129.7 per billion; \"need\" is the top word after obviates) and \"obviate the necessity\" (13.5).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Facts check out against Wiktionary's obvio ('to meet', 'to prevent', post-classical), obvius ('in the way', from ob and via) and obvious. Weakest point: the closing 'to obviate a need is to meet it early' can read as the English idiom 'meet a need' (satisfy it), the opposite of making it unneeded. Pairings: 'obviate the necessity' (13.5) repeats 'obviate the need' (129); 'obviate the risk' or 'the problem' would show more. formal is right on all three dictionaries."
+    },
+    {
+      "id": 1355,
+      "word_id": 396,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary odious (Middle English, from Old French odieus, from Latin odiosus, from odium \"hate\") and odium. Hook matches; unchanged. Tone formal: all three learner's dictionaries. Pairings from the collocations list (task 4.4, crime 2.8, comparisons 2.5 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Old French odieus, Latin odiosus, odium) and English odium's entry. formal is right on all three dictionaries. Weakest point: the root odium links only to the uncommon English word odium, and 'odious comparisons' (2.47) is the proverb's set phrase rather than a plain use of the first sense."
+    },
+    {
+      "id": 1356,
+      "word_id": 398,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary panegyric (French panegyrique, from Ancient Greek panegyrikos), panegyrikos (from panegyris \"festival, assembly\"; \"of or for a public festival or assembly\", by extension \"flattering\") and panegyris (pan- + agyris, the Aeolic form of agora; \"a general or national assembly; festival\"). No root: pan is a bare prefix, and agora would need more words than the origin can carry. Hook (\"panegyris, a gathering of all the people\") matches; unchanged. Tone formal: all three (Longman \"old-fashioned formal\"). Pairings: adjectives from the collocations list that show praise (glowing 0.58, fulsome 0.54, funeral 0.78 per billion); the word is rare, so all its pairings are, hence 4.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Facts check out against Wiktionary's panegyrikos ('of or for a public festival or assembly', 'by extension flattering') and panegyris (pan- plus agyris, 'assembly'). Origin (4): the step from a festival assembly to a speech of praise is left to 'could also mean flattering'; it never says that festival speeches praised. Hook (4): 'it was praise spoken before the whole crowd' simplifies a festival oration, loose but not false. formal is right on all three dictionaries."
+    },
+    {
+      "id": 1357,
+      "word_id": 399,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pariah (Tamil paraiyar, from paraiyan \"drummer\", from parai \"drum\", or the Malayalam equivalent; the drummers were in the lower strata of the caste system; alternatively from Sanskrit para \"distant; outsider\"). Oxford and Longman give the Tamil account. I kept Wiktionary's alternative. Hook gives the Tamil account Oxford and Longman give; unchanged. Tone null: Oxford's \"sometimes offensive\" and Cambridge's \"old-fashioned offensive\" (on the caste sense) are not labels the app uses. Pairings from the collocations list (social pariah 17.4, pariah status 17.2, become a pariah 8.5 per billion); \"pariah state\" is about countries.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary and keeps its Sanskrit alternative; it leaves out the Malayalam source Wiktionary also names, which a learner does not need. Hook (4): gives the Tamil account as the whole story, without the alternative the origin keeps; Oxford, AHD and Dictionary.com all give Tamil, so no change is required. Null tone is right (Oxford's 'sometimes offensive' is not one of our labels)."
+    },
+    {
+      "id": 1358,
+      "word_id": 400,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pejorative (Late Latin peioratus, past participle of peiorare \"worsen\", from Latin peior \"worse\", + -ive). No root: peior shows in no common English word. Hook (\"Latin pejor, worse\") matches; pejor is the usual variant spelling. Tone formal: all three learner's dictionaries. Pairings: the top nouns in the collocations list (term 68.3, sense 53.9, connotations 22.3 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Late Latin peiorare, from peior). formal is right on all three dictionaries. Pairings are the tool's top nouns. Weakest point: the gloss 'to make worse' is Longman's and Oxford's, a short shared fact."
+    },
+    {
+      "id": 1359,
+      "word_id": 401,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary peripatetic (French peripatetique, from Latin peripateticus, from Ancient Greek peripatetikos \"given to walking around\", from peripateo \"to walk around\", from peri + pateo) and Peripatetic (Aristotle's school was named either for his supposed habit of teaching while walking the walkways of the Lyceum or for the walkways themselves); peripatos also glossed \"a covered walk\". Hook change: Wiktionary gives two explanations, so \"Aristotle's pupils got the name from the covered walk\" became \"Aristotle's pupils perhaps got the name from the covered walk\". No root: peri is a bare prefix and pateo shows in no common English word. Tone formal: all three. Pairings from the collocations list (life 11.1, existence 6.1, teacher 2.0 per billion). The Aristotle sense is shown with technical: \"peripatetic school\" and \"peripatetic philosophy\" lead the collocation data (13.3 and 9.1 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and the changed hook match Wiktionary's Peripatetic entry (named for Aristotle's supposed teaching while walking the Lyceum's walkways, or for the walkways), and the hedge is kept in both. formal is right on all three dictionaries. Also means (4): showing the Aristotle sense is right ('peripatetic school', 'philosophy', 'philosopher' are the word's top collocates), but its plain follows the frame Dictionary.com, AHD and Wiktionary share ('of or relating to Aristotle ... school of philosophy ... followers'), and it does not say the sense is usually capitalized."
+    },
+    {
+      "id": 1360,
+      "word_id": 403,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary plaudit (for earlier plaudite, from Latin plaudite, plural imperative of plaudere), plaudo (\"to strike, clap; to applaud\"), applaud (ad + plaudere) and plausible (plausibilis, from plaudere). Tone formal: Cambridge, and Oxford and Longman at their entries for plaudits. Pairings from the collocations list (won 8.0, earned 2.3, critical 2.2 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (earlier plaudite, plural imperative of plaudere) and the applaud and plausible entries. The hook's 'cue that closed a Roman comedy' is supported by Wiktionary's plaudo entry (Plaudite! is the last word of Terence's Andria) and by AHD. formal is right: Cambridge, Oxford ('plaudits') and Longman ('plaudits') all mark it. Weakest point: none of note."
+    },
+    {
+      "id": 1361,
+      "word_id": 404,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary proscribe (Middle English, from Latin proscribo \"to proclaim, forbid, banish\") and proscribo (pro- + scribo \"write\"; \"to advertise, proclaim; to publish; to proscribe, ban; to outlaw, banish\"). Hook matches; unchanged. Tone formal: all three learner's dictionaries. Watch-out: proscribe and prescribe are a classic confusion with nearly opposite meanings. Pairings from the collocations list (proscribed conduct 8.4, proscribed by law 6.2, law proscribes 3.0 per billion). The other sense (outlawing and banishing a person) is mainly historical, so not shown.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): 'to publish in writing' is Dictionary.com's (Random House) gloss of proscribere word for word; Wiktionary's Latin entry gives 'to advertise, proclaim', 'to publish', 'to outlaw, banish'. The posting of outlaws' names goes past Wiktionary but AHD supports it ('to put up someone's name as outlawed'). The watch-out is a real, common mix-up (Oxford has a prescribe/proscribe note) and is stated in the writer's own words. formal is right on all three dictionaries."
+    },
+    {
+      "id": 1362,
+      "word_id": 405,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary querulous (Old French querelos, from Late Latin querulosus, from Latin querulus, from queror \"to complain\") and quarrel (Latin querela, from queri \"to complain\"). Hook matches; unchanged. Tone formal: all three (Oxford adds disapproving, only one source). Pairings: the top nouns in the collocations list (voice 15.8, tone 5.1, note 2.4 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Old French querelos, Late Latin querulosus, queror) and quarrel's entry (querela, from queri). formal is right on all three dictionaries. Watch out (4): no note, though Vocabulary.com and Dictionary.com both warn that querulous is not related to query, a misreading learners make; null is defensible since it is not a classic like enervate."
+    },
+    {
+      "id": 1363,
+      "word_id": 406,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary rapacious (\"perhaps from rapacity\", ultimately from Latin rapax \"grasping, greedy\"), rapax (from rapio \"to grab\" + -ax) and rapio (\"to snatch, grab, carry off\"); I kept the \"perhaps\". Hook (\"rapere, to seize\") matches; unchanged. Tone disapproving: Oxford and Cambridge mark it formal and disapproving, Longman formal. Pairings from the collocations list (appetite 3.2, greed 3.0, landlords 1.9 per billion). The animal sense is not shown: Wiktionary calls it dated except of birds, and no learner's dictionary lists it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's 'perhaps' on rapacity; rapax and rapere ('to snatch, carry off') match the Latin entries; rapere is a good root (rapt, rapture, rapid). disapproving is right (Oxford, Cambridge). Hiding the animal sense is right. Weakest point: 'rapacious greed' (3.01) is redundant; 'rapacious landlords' and 'rapacious appetite' carry the meaning."
+    },
+    {
+      "id": 1364,
+      "word_id": 407,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary recant (Latin recantare \"to sing back, re-echo ... recant, recall, revoke\", from re- \"back\" + canto \"to chant, to sing\"). cantare is the linking form for chant and incantation. Hook matches; unchanged. Tone formal: all three learner's dictionaries. Pairings from the collocations list (later recanted 13.0, recanted his testimony 1.8, publicly recant 1.6 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (recantare, re- and canto; the Latin already meant recall and revoke), and cantare is a good root (chant, enchant, incantation). formal is right on all three dictionaries. Weakest point: 'later recanted' (13.0) is common but generic, an adverb that fits any verb."
+    },
+    {
+      "id": 1365,
+      "word_id": 409,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary sanguine (Old French sanguin, ultimately Latin sanguineus \"of blood\", from sanguis \"blood\"; the humour sense: a constitution with more blood than the other humours, linked with cheerfulness and confidence). I left out the hedged older origin of sanguis. Hook (\"medieval doctors\") matches; unchanged. Tone formal: all three learner's dictionaries. Watch-out: Wiktionary's usage note says not to confuse it with sanguinary. Pairings from the collocations list (expectations 16.8, view 16.2, hopes 14.3 per billion). The colour and complexion senses are not shown: they are literary or dated, and only Cambridge lists the colour.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (sanguineus, sanguis, Old French; the humor blood linked with cheerfulness). formal is right on all three dictionaries. The watch-out is true: the bloody sense of sanguine is obsolete (Collins), and sanguine/sanguinary is a known pair. Weakest point: 'It means hopeful and confident' is stated flatly though the record keeps a blood-red sense; hiding that rare sense is still the right call."
+    },
+    {
+      "id": 1366,
+      "word_id": 410,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary specious (Middle English, from Anglo-Norman and Middle French, from Latin speciosus \"good-looking\"; an obsolete sense \"beautiful\"), speciosus (\"good-looking, handsome; showy, specious\"; from species), species (\"from specio, to see\"; \"external appearance; semblance\") and specio (\"to look at\"). Hook matches; unchanged. Tone formal: all three (Cambridge adds disapproving, only one). Pairings from the collocations list (argument 11.8, reasoning 6.2, pretext 3.6 per billion). The other sense (showy but hollow) is close to the first, so not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (speciosus 'good-looking'; obsolete English sense 'beautiful') and the species and specio entries; specere is a good root. formal is right on all three dictionaries. Watch out (4): no note, though specious and spurious are a recognized confusion (Dictionary.com lists the pair as commonly confused, and Wiktionary's entry points to spurious); null is defensible."
+    },
+    {
+      "id": 1367,
+      "word_id": 411,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary supercilious (learned borrowing from Latin superciliosus \"haughty\") and supercilium (super- + cilium \"eyelid\"; senses \"the eyebrow\" and \"pride, haughtiness, arrogance\"). No root: cilium shows only in the technical word cilia. Hook matches; unchanged. Tone disapproving: Oxford and Cambridge; Longman says formal and \"used to show disapproval\". Pairings from the collocations list (look 12.1, smile 9.3, tone 4.1 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary's superciliosus ('haughty') and Latin supercilium ('eyebrow'; 'pride, haughtiness'), and gives the step to today's meaning. disapproving is right (Oxford, Cambridge, and Longman's 'used to show disapproval'). Empty roots are right. Weakest point: none of note."
+    },
+    {
+      "id": 1368,
+      "word_id": 412,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary tacit (\"borrowed from late Middle French tacite, or from Latin tacitus\", from tacere \"to be silent\"), tacitus (participle of taceo) and taciturn (from tacitus); I kept the either-or. tacere matches reticent on worksheet j. Hook matches; unchanged. Tone null: no learner's dictionary labels it. Pairings: four of the top nouns in the collocations list (understanding 137, agreement 115, approval 79, consent 62 per billion); \"tacit knowledge\" is a technical term.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's either/or (French tacite or Latin tacitus) and matches taciturn's entry (from tacitus). Null tone is right (no dictionary labels it). Pairings are four of the tool's top nouns. Weakest point: 'tacere to be silent' is the same short gloss Longman and Wiktionary give, a shared fact."
+    },
+    {
+      "id": 1369,
+      "word_id": 413,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary temerity (Old French temerite, from Latin temeritas \"chance, accident, rashness\", from temere \"by chance, casually, rashly\") and temere (from Proto-Italic *temezi \"in darkness, blindly\"; senses \"by chance, at random\", \"rashly, heedlessly\"). Hook (\"temere, blindly or rashly\"): \"rashly\" is the Latin sense and \"blindly\" the older one Wiktionary gives, so I left it; scored 4 for that. Tone formal: all three (Cambridge adds disapproving). Pairings: \"had the temerity to\" (97 per billion for \"had the temerity\") and \"his own temerity\" (\"own\" tops the collocations list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary's temeritas and temere entries, including the older form meaning 'in darkness, blindly'. Hook (4): glosses Latin temere as 'blindly', which is the sense of its reconstructed ancestor; Latin temere itself means 'by chance, rashly'. Pairings (4): 'had the temerity to' (99.7) is right; 'his own temerity' (4.53) rests on a generic 'own'. formal is right on all three dictionaries."
     }
   ]
 }
