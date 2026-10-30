@@ -7,6 +7,7 @@ import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Button, Headword, IconButton, Label, Note, Row } from '@/components/ui';
 import { speakWord } from '@/lib/audio';
+import { exampleFor } from '@/lib/examples';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import {
@@ -132,7 +133,7 @@ export function MultipleChoice({
         <Reveal
           correct={answered.correct}
           content={content}
-          example={sense.examples[0] ?? null}
+          example={exampleFor(item)}
           soundEnabled={soundEnabled}
           nextDueLabel={nextDueLabel}
           onContinue={() => {

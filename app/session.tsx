@@ -38,6 +38,7 @@ import {
 import { applyGoalMet } from '@/features/gamification/streak';
 import { newlyUnlocked } from '@/features/gamification/achievements';
 import { todayString } from '@/lib/date';
+import { visitOf } from '@/lib/examples';
 import { CenterScreen } from '@/components/ui';
 
 interface Totals {
@@ -392,6 +393,8 @@ export default function SessionScreen() {
         {showIntro ? (
           <WordIntro
             content={current.content}
+            collection={allWordsQuery.data}
+            visit={visitOf(current)}
             onStart={() => setIntroduced((prev) => new Set(prev).add(current.content.wordId))}
           />
         ) : (

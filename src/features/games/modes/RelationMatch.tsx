@@ -6,6 +6,7 @@ import { Pressable, Text, View } from 'react-native';
 import { Button, Headword, Label, Note, cx } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
+import { exampleFor } from '@/lib/examples';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import { mulberry32, pickRelationDistractors, shuffle } from '../optionPool';
@@ -139,7 +140,7 @@ export function RelationMatch({ item, mode, onOutcome, soundEnabled }: GameModeP
         <Reveal
           correct={answered}
           content={content}
-          example={content.senses[0]?.examples[0] ?? null}
+          example={exampleFor(item)}
           soundEnabled={soundEnabled}
           nextDueLabel={nextDueLabel}
           onContinue={() => {

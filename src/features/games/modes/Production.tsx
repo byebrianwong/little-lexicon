@@ -6,6 +6,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Button, Label, Note, TextField } from '@/components/ui';
+import { exampleFor } from '@/lib/examples';
 import { FREE_LETTERS, gradeAnswer, hintLetters, type AnswerGrade } from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useNextDueLabel } from '../GameContext';
@@ -84,7 +85,7 @@ export function Production({ item, onOutcome, soundEnabled }: GameModeProps) {
         <Reveal
           correct={grade !== 'wrong'}
           content={content}
-          example={sense.examples[0] ?? null}
+          example={exampleFor(item)}
           soundEnabled={soundEnabled}
           attempt={{ text: value, grade }}
           nextDueLabel={nextDueLabel}

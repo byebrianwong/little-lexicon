@@ -41,8 +41,8 @@ with `--only=<stage>`.
 | `words` | `src/stages/01-ingest-words.ts` | Load the seed list, dedupe, lowercase-normalize, drop proper-noun candidates and multi-word entries, and add new words to the record. Then re-tier the whole list by Datamuse frequency into five equal groups, so every tier has words. |
 | `senses` | `src/stages/02-hydrate.ts` | From Open English WordNet: up to 3 definitions, dictionary examples that use the headword, synonyms, antonyms, and a US pronunciation. Datamuse's most common part of speech decides which part of speech's senses are kept. Vulgar and slur synonyms are dropped. |
 | `generate` | `src/stages/03-generate.ts` | Per sense a plain-language definition, 3-5 example sentences with cloze targets, 4-6 distractors (wrong definitions, for multiple choice), and one mnemonic per word. Claude Batch API when `ANTHROPIC_API_KEY` is set; otherwise Gemini when `GEMINI_API_KEY` is set (eight senses per request, saved as each returns). Zod-validated before any write. Skipped with neither key. |
-| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword, example sentence and definition of the taught words, saved under `public/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`, `definitions/<sense id>.mp3`), which the web export copies to the site. A definition clip reads the definition the app shows: the plain one when the sense has it, else the dictionary one. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
-| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also give each word, sentence and sense the `audioUrl` of its clip: its path under the site's `audio/` folder and a hash of its bytes (`audio/words/1.mp3?v=f6a11b644f7b`). A clip whose sentence, definition or IPA changed after it was made gets no URL (the app uses the device's speech for it) until `audio` runs again. |
+| `audio` | `src/stages/04-audio.ts` | An MP3 for every headword, example sentence, definition and memory hook of the taught words, saved under `public/audio` (`words/<id>.mp3`, `sentences/<id>.mp3`, `definitions/<sense id>.mp3`, `hooks/<word id>.mp3`), which the web export copies to the site. A definition clip reads the definition the app shows: the plain one when the sense has it, else the dictionary one. A hook clip reads the hook the app shows, the word's first global mnemonic by id, so it is filed under the word's id. Headwords use a US human recording from the Free Dictionary API when there is one; everything else is spoken by Kokoro, an open voice model that runs on this computer, with the word's IPA pinning how it says the headword. Skipped when the Kokoro env is missing (see [Audio](#audio)). |
+| `export` | `src/stages/05-export.ts` | Build `src/content/words.json` from the whole record, check ids against the existing file, and report the size. Also give each word, sentence and sense the `audioUrl` of its clip, and each word the `hookAudioUrl` of its hook's clip: its path under the site's `audio/` folder and a hash of its bytes (`audio/words/1.mp3?v=f6a11b644f7b`). A clip whose sentence, definition, hook or IPA changed after it was made gets no URL (the app uses the device's speech for it) until `audio` runs again. |
 
 A word WordNet does not have gets no senses, is left out of the export, and is
 logged. Stages never fill real files with stub text.
@@ -91,7 +91,7 @@ stale, then export. After other content changes (new words, or editing the
 record by hand), run `npx tsx src/run.ts --only=audio`, then `--only=export`.
 A clip whose text or IPA changed is left out of the export until it is
 remade, and the app's test `src/content/audio.test.ts` fails in CI while
-any word, sentence or definition has no clip.
+any word, sentence, definition or memory hook has no clip.
 
 The first live run downloads Open English WordNet (about 10 MB zipped, 80 MB
 unpacked) into `.cache/oewn`, checks its SHA-256, and unpacks it with the
@@ -136,12 +136,13 @@ Datamuse and WordNet need no key.
 
 ## Audio
 
-Stage 04 speaks the words, sentences and definitions with Kokoro-82M
-(https://huggingface.co/hexgrad/Kokoro-82M), an open text-to-speech model under
-the Apache 2.0 license, so its clips can ship in the app. It runs on this
-computer's CPU through `tools/kokoro-tts.py`. There is no account, key or
-charge. On an Apple M5 a full run of 3,162 clips took 30 minutes, after 3.5
-minutes of Free Dictionary lookups. Clips average about 20 KB.
+Stage 04 speaks the words, sentences, definitions and memory hooks with
+Kokoro-82M (https://huggingface.co/hexgrad/Kokoro-82M), an open
+text-to-speech model under the Apache 2.0 license, so its clips can ship in
+the app. It runs on this computer's CPU through `tools/kokoro-tts.py`. There
+is no account, key or charge. On an Apple M5 a full run of 3,162 clips took
+30 minutes, after 3.5 minutes of Free Dictionary lookups. Clips average about
+20 KB.
 
 Set it up once (macOS):
 
@@ -156,6 +157,28 @@ The env takes about 900 MB, mostly PyTorch. The first run also downloads the
 model (about 330 MB) into the Hugging Face cache, `~/.cache/huggingface`. The
 model is pinned to one commit in `tools/kokoro-tts.py`.
 
+On Linux (x86-64, Ubuntu 24.04 with its Python 3.12, 2026-10-29):
+
+```bash
+uv venv --python 3.12 ~/.cache/little-lexicon-tts/.venv
+uv pip install --python ~/.cache/little-lexicon-tts/.venv/bin/python \
+  --extra-index-url https://download.pytorch.org/whl/cpu \
+  --index-strategy unsafe-best-match \
+  -r tools/kokoro-requirements.txt
+```
+
+The extra index has the CPU build of PyTorch, `torch==2.14.1+cpu`, which
+meets the `torch==2.14.1` pin. From PyPI alone, Linux gets the CUDA build and
+15 `nvidia-*` packages. The PyTorch index also lists some other pinned
+packages (`certifi`, for one) at other versions, and by default uv looks for a
+package only on the first index that has it, so it needs
+`--index-strategy unsafe-best-match` to find those pins on PyPI. The env takes
+1.2 GB. espeak-ng comes from the `espeakng-loader` package, so no system
+package is needed. The clips have the same format and keys as on macOS, so a
+Linux run makes only the clips that are missing or out of date. On 4 CPU
+cores, Kokoro made the 579 hook clips (about 75 minutes of speech) in 17.5
+minutes.
+
 Keep the env at a short path. Kokoro uses espeak-ng to spell words that are
 missing from its dictionary, and espeak-ng cuts the path of its data folder at
 160 characters. An env inside a worktree or a temp folder can pass that limit;
@@ -166,8 +189,9 @@ How it says each word:
 - The word's IPA from the words file is turned into Kokoro's phoneme letters
   (`ipaToKokoro` in `src/lib/audio.ts`) and pinned in the text with Kokoro's
   markup, `[abate](/əbˈAt/)`. This applies to the headword clip and to the
-  headword wherever a sentence uses it as written or capitalized. Inflected
-  forms ("abated") are left to Kokoro's own dictionary.
+  headword wherever a sentence, definition or hook uses it as written or
+  capitalized. Inflected forms ("abated") are left to Kokoro's own
+  dictionary.
 - Without the pin, Kokoro gets some words wrong, for example "banal" as
   "BAY-nul" and "debacle" as "day-BAH-kul".
 - Clips are 32 kbps mono MP3s at 24 kHz.
@@ -183,8 +207,9 @@ Re-running is safe and cheap. Each stage checks the record and only fills gaps:
   already has a mnemonic gets no new one.
 - `audio`: each clip records a key made from its text, the word's IPA and the
   voice. A clip is made again only when that key changes (a rewritten
-  sentence or definition, a fixed IPA, a new voice). Clips whose word,
-  sentence or sense is gone or retired are deleted, except on a `--limit` run.
+  sentence, definition or hook, a fixed IPA, a new voice). Clips whose word,
+  sentence, sense or hook is gone or retired are deleted, except on a
+  `--limit` run.
 
 Datamuse responses are cached under `.cache/` by URL. Only successful and
 "not found" answers are cached, so a server error is retried on the next run.

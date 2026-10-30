@@ -37,7 +37,10 @@ import {
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
 import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
+import { exampleForVisit } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
+import { toneOf, watchOutOf } from '@/lib/wordExtras';
+import { ToneLabel, WatchOut } from '@/components/WordExtras';
 import type { FeedStatus } from './feedState';
 
 export interface FeedViewProps {
@@ -216,8 +219,18 @@ function WordPage({
   onUnknow: (word: WordContent) => void;
 }) {
   const sense = word.senses[0];
-  const example = sense?.examples[0];
+  // The feed only has words the learner has not met, so this is the first
+  // visit (lib/examples): the sentence a session first shows for the word too.
+  const example = exampleForVisit(word, 0);
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
+  // Of the extras (components/WordExtras), a page shows only the tone label,
+  // which takes no height, and the "Watch out" note, which only some words
+  // have. The note is for words people think they know but misread, which is
+  // when "I know it" would be the wrong tap. Each page is one screen tall, and
+  // on a small phone a long entry already fills it, so the other lines are
+  // left to the new-word card and All words.
+  const tone = toneOf(word);
+  const watchOut = watchOutOf(word);
 
   return (
     <View className="flex-1 w-full max-w-[640px] self-center px-6 pb-6">
@@ -234,11 +247,13 @@ function WordPage({
         </View>
         <View className="mt-1 flex-row flex-wrap items-baseline gap-x-3">
           {word.partOfSpeech ? <Note className="text-[17px]">{word.partOfSpeech}</Note> : null}
+          <ToneLabel tone={tone} />
           <Label>{`Tier ${word.difficultyTier}`}</Label>
         </View>
 
         <View className="mt-6 border-t border-ink pt-4">
           <Body className="text-[20px] leading-[29px]">{definition}</Body>
+          <WatchOut note={watchOut} className="mt-3" />
           {example ? (
             <Note className="mt-3 text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
           ) : null}

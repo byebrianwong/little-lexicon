@@ -18,6 +18,7 @@ import {
   TextField,
 } from '@/components/ui';
 import { backend, type SentenceFeedback } from '@/lib/backend';
+import { exampleFor } from '@/lib/examples';
 import type { GameOutcome } from '@/srs/srs';
 import { useNextDueLabel } from '../GameContext';
 import { Reveal } from '../Reveal';
@@ -102,7 +103,7 @@ export function UseIt({ item, onOutcome, soundEnabled }: GameModeProps) {
           <Reveal
             correct={correct}
             content={content}
-            example={sense.examples[0] ?? null}
+            example={exampleFor(item)}
             soundEnabled={soundEnabled}
             nextDueLabel={nextDueLabel}
             onContinue={() => {

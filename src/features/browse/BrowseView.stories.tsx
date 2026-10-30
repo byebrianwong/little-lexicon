@@ -1,7 +1,7 @@
 import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite';
 import { expect, fn, userEvent, within } from 'storybook/test';
 import { phone } from '@/stories/decorators';
-import { WORDS, word } from '@/stories/fixtures';
+import { WORDS, withoutExtras, word } from '@/stories/fixtures';
 import type { WordTracker } from '@/features/tracker/tracker';
 import { BrowseView } from './BrowseView';
 import { WordsLayout } from './WordsLayout';
@@ -38,6 +38,54 @@ export const RowExpanded: Story = {
     const canvas = within(canvasElement);
     await userEvent.click(canvas.getByText('ephemeral'));
     await expect(await canvas.findByText('Memory hook')).toBeInTheDocument();
+  },
+};
+
+/**
+ * An open row shows every extra: Watch out under the definition, then Also
+ * means, Similar, Opposite, Often used, Origin and Same root. The tone label
+ * sits beside the part of speech, open or closed.
+ */
+export const RowWithEveryExtra: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'loquacious');
+    await userEvent.click(await canvas.findByRole('button', { name: 'loquacious. Expand' }));
+    await expect(await canvas.findByText('Watch out')).toBeInTheDocument();
+    await expect(canvas.getByText('Also means')).toBeInTheDocument();
+  },
+};
+
+/** A Same root word is a link: it searches for that word and opens its row. */
+export const SameRootLink: Story = {
+  args: { initialFiltersOpen: true },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    // Tier 2 hides loquacious (tier 4); following the link clears the filter.
+    await userEvent.click(canvas.getByRole('button', { name: 'Tier 2' }));
+    await userEvent.click(await canvas.findByRole('button', { name: 'eloquent. Expand' }));
+    await userEvent.click(
+      await canvas.findByRole('link', { name: 'loquacious: show this word' }),
+    );
+    await expect(canvas.getByPlaceholderText('Search words and meanings')).toHaveValue(
+      'loquacious',
+    );
+    await expect(
+      await canvas.findByRole('button', { name: 'loquacious. Collapse' }),
+    ).toBeInTheDocument();
+    await expect(canvas.getByText('Filters')).toBeInTheDocument();
+  },
+};
+
+/** An open row for a word with none of the extras: no empty labels. */
+export const RowWithNoExtras: Story = {
+  args: { words: [withoutExtras(word('quixotic')), word('ephemeral')] },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button', { name: 'quixotic. Expand' }));
+    await expect(await canvas.findByText('Memory hook')).toBeInTheDocument();
+    await expect(canvas.queryByText('Similar')).not.toBeInTheDocument();
+    await expect(canvas.queryByText('Origin')).not.toBeInTheDocument();
   },
 };
 

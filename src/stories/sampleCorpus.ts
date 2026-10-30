@@ -1,9 +1,14 @@
-// Twelve hand-written words used as story fixtures. The app itself teaches the
-// words in src/content/words.json, which the pipeline generates; these stay
+// Thirteen hand-written words used as story fixtures. The app itself teaches
+// the words in src/content/words.json, which the pipeline generates; these stay
 // fixed so Chromatic snapshots do not change when that file does. Until the
-// words file existed, demo mode used this list, numbered 1 to 12 in this order
-// (see src/lib/backend/demo/legacyWordIds.ts). Definitions are concise and
-// original to avoid share-alike text.
+// words file existed, demo mode used the first twelve, numbered 1 to 12 in this
+// order (see src/lib/backend/demo/legacyWordIds.ts). Definitions are concise
+// and original to avoid share-alike text.
+//
+// loquacious, the last, has every extra (tone, origin, root, watch-out note,
+// pairings and an "Also means" sense), and shares its root with eloquent.
+
+import type { Register } from '@/lib/types';
 
 export interface SeedExample {
   text: string;
@@ -13,7 +18,9 @@ export interface SeedExample {
 export interface SeedSense {
   def: string;
   plain: string;
-  register?: string;
+  register?: Register;
+  /** Show under "Also means". Only on a later sense. */
+  alsoMeans?: boolean;
   examples: SeedExample[];
   distractors: string[]; // wrong definitions for multiple choice
 }
@@ -26,6 +33,10 @@ export interface SeedWord {
   difficultyTier: number; // 1..5
   frequencyRank: number;
   etymology: string;
+  /** Root forms named in `etymology`, lowercase ASCII. */
+  roots?: string[];
+  watchOut?: string;
+  pairings?: string[];
   senses: SeedSense[];
   synonyms: string[];
   antonyms: string[];
@@ -156,6 +167,7 @@ export const CORPUS: SeedWord[] = [
     etymology: 'From Greek sykophantes, an informer or flatterer.',
     senses: [
       {
+        register: 'disapproving',
         def: 'A person who flatters powerful people to gain advantage.',
         plain: 'A suck-up who praises the boss for favors.',
         examples: [
@@ -182,6 +194,8 @@ export const CORPUS: SeedWord[] = [
     difficultyTier: 2,
     frequencyRank: 5400,
     etymology: 'From Greek pragma, a deed or thing done.',
+    roots: ['pragma'],
+    pairings: ['pragmatic approach', 'pragmatic reasons'],
     senses: [
       {
         def: 'Dealing with things practically rather than idealistically.',
@@ -210,6 +224,8 @@ export const CORPUS: SeedWord[] = [
     difficultyTier: 3,
     frequencyRank: 8700,
     etymology: 'From Latin ubique, everywhere.',
+    roots: ['ubique'],
+    pairings: ['ubiquitous presence', 'ubiquitous feature'],
     senses: [
       {
         def: 'Present or found everywhere.',
@@ -294,6 +310,8 @@ export const CORPUS: SeedWord[] = [
     difficultyTier: 3,
     frequencyRank: 10100,
     etymology: 'From Latin gregarius, belonging to a flock (grex).',
+    roots: ['grex'],
+    pairings: ['gregarious nature', 'gregarious animals'],
     senses: [
       {
         def: 'Fond of company; sociable.',
@@ -322,6 +340,9 @@ export const CORPUS: SeedWord[] = [
     difficultyTier: 4,
     frequencyRank: 12600,
     etymology: 'From Latin insidiae, an ambush.',
+    roots: ['insidiae'],
+    watchOut: 'Insidious means harmful in a slow, hidden way, not simply harmful.',
+    pairings: ['insidious onset', 'insidious influence'],
     senses: [
       {
         def: 'Proceeding in a gradual, subtle way, but with harmful effects.',
@@ -349,7 +370,9 @@ export const CORPUS: SeedWord[] = [
     syllables: 3,
     difficultyTier: 2,
     frequencyRank: 6100,
-    etymology: 'From Latin eloqui, to speak out.',
+    etymology: 'From Latin eloqui, to speak out, from loqui, to speak.',
+    roots: ['loqui'],
+    pairings: ['eloquent speech', 'eloquent speaker', 'eloquent plea'],
     senses: [
       {
         def: 'Fluent and persuasive in speech or writing.',
@@ -369,6 +392,46 @@ export const CORPUS: SeedWord[] = [
     synonyms: ['articulate', 'persuasive', 'fluent', 'expressive'],
     antonyms: ['inarticulate', 'halting', 'tongue-tied'],
     mnemonic: 'Someone eloquent can elope with your agreement using words alone.',
+  },
+  {
+    headword: 'loquacious',
+    pos: 'adjective',
+    ipa: '/ləˈkweɪʃəs/',
+    syllables: 4,
+    difficultyTier: 4,
+    frequencyRank: 16400,
+    etymology: 'From Latin loquax, talkative, from loqui, to speak.',
+    roots: ['loqui'],
+    watchOut: 'Loquacious means talking a lot, not talking well; that is eloquent.',
+    pairings: ['loquacious guide', 'became loquacious'],
+    senses: [
+      {
+        register: 'formal',
+        def: 'Tending to talk a great deal.',
+        plain: 'Talks a lot, often more than needed.',
+        examples: [
+          { text: 'Our loquacious guide had a story for every street corner.', cloze: 'loquacious' },
+          { text: 'After two coffees he became loquacious and told the tale twice.', cloze: 'loquacious' },
+          { text: 'The loquacious host never let the interview go quiet.', cloze: 'loquacious' },
+        ],
+        distractors: [
+          'Saying very little; quiet.',
+          'Easily frightened.',
+          'Relating to the law.',
+        ],
+      },
+      {
+        register: 'literary',
+        alsoMeans: true,
+        def: 'Of birds or water, making a steady chattering or babbling sound.',
+        plain: 'Of birds or water: making a steady chattering sound.',
+        examples: [{ text: 'A loquacious stream ran past the cottage.', cloze: 'loquacious' }],
+        distractors: [],
+      },
+    ],
+    synonyms: ['talkative', 'garrulous', 'voluble', 'chatty'],
+    antonyms: ['taciturn', 'reticent', 'laconic'],
+    mnemonic: 'Loquacious shares loqui, to speak, with eloquent: a loquacious person speaks and speaks.',
   },
 ];
 

@@ -86,6 +86,20 @@ function matchesQuery(word: WordContent, query: string): boolean {
   );
 }
 
+/**
+ * The search and filters that bring one word into view, for a link to it from
+ * another row (a "Same root" word): the search becomes its headword, and the
+ * filters stay as they are when the word passes them, else they are cleared.
+ */
+export function searchForWord(
+  word: WordContent,
+  filters: WordFilters,
+  ctx: FilterContext,
+): { query: string; filters: WordFilters } {
+  const passes = filterWords([word], '', filters, ctx).length > 0;
+  return { query: word.headword, filters: passes ? filters : NO_FILTERS };
+}
+
 /** The words that match the search text and the filters, in their original order. */
 export function filterWords(
   words: readonly WordContent[],
