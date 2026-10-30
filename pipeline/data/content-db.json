@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:19:33.976Z"
+    "updatedAt": "2026-10-30T06:20:07.876Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1028,
-    "reviews": 1138
+    "mnemonics": 1029,
+    "reviews": 1162
   },
   "words": [
     {
@@ -2208,8 +2208,15 @@
       "syllables": 2,
       "frequency_rank": 819087,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From hackney, a horse often hired out, a name probably taken from Hackney, then a village near London. Hired horses and carriages were used by everyone, which most likely gave the sense of stale from overuse.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "hackneyed phrase",
+        "hackneyed expression",
+        "hackneyed theme"
+      ]
     },
     {
       "id": 131,
@@ -2219,8 +2226,14 @@
       "syllables": 2,
       "frequency_rank": 745230,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Old Italian aringa, tied to aringare, to speak in public, and aringo, a public assembly. These probably come from a Germanic word for ring, making harangue a relative of ring and rank.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "long harangue",
+        "political harangue"
+      ]
     },
     {
       "id": 132,
@@ -2230,8 +2243,13 @@
       "syllables": 3,
       "frequency_rank": 1867511,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Made in English from Ancient Greek hedone, pleasure, with the ending -ist; hedonism is built the same way.",
+      "audio_url": null,
+      "roots": [
+        "hedone"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 133,
@@ -2241,8 +2259,15 @@
       "syllables": 4,
       "frequency_rank": 73322,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek hegemonia, leadership or supreme command, from hegemon, a leader, which comes from a verb meaning to lead. Its use in the early 1800s owed something to German Hegemonie.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "cultural hegemony",
+        "political hegemony",
+        "economic hegemony"
+      ]
     },
     {
       "id": 134,
@@ -2252,8 +2277,17 @@
       "syllables": 3,
       "frequency_rank": 86870,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek hairesis, a choosing, and so a set of principles someone adopts, from a verb meaning to take for oneself. It reached English through Latin and Old French.",
+      "audio_url": null,
+      "roots": [
+        "hairesis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "accused of heresy",
+        "charged with heresy",
+        "heresy trial"
+      ]
     },
     {
       "id": 135,
@@ -2263,8 +2297,13 @@
       "syllables": 4,
       "frequency_rank": 1288361,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Byzantine Greek eikonoklastes, image breaker, from eikon, image, and a verb meaning to break, by way of French and Medieval Latin. It first named people who destroyed religious images.",
+      "audio_url": null,
+      "roots": [
+        "eikon"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 136,
@@ -2274,8 +2313,16 @@
       "syllables": 4,
       "frequency_rank": 149625,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek eidololatreia, worship of idols, which joins eidolon, an image or idol, to a word for worship. It came into English through Latin and Old French.",
+      "audio_url": null,
+      "roots": [
+        "eidolon"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pagan idolatry",
+        "commit idolatry"
+      ]
     },
     {
       "id": 137,
@@ -2285,8 +2332,17 @@
       "syllables": 4,
       "frequency_rank": 165760,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin immutabilis, unchangeable: in-, not, plus mutabilis, changeable, which comes from mutare, to change, as in mutation.",
+      "audio_url": null,
+      "roots": [
+        "mutare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "immutable laws",
+        "immutable principles",
+        "immutable truth"
+      ]
     },
     {
       "id": 138,
@@ -2296,8 +2352,17 @@
       "syllables": 3,
       "frequency_rank": 418495,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Made in English from im-, not, and passive in its old sense of able to suffer or feel. Passive comes from Latin pati, to suffer, which also gave English passion and patient.",
+      "audio_url": null,
+      "roots": [
+        "pati"
+      ],
+      "watch_out": "It does not mean impassioned: an impassive face shows no feeling, while an impassioned speech is full of it.",
+      "pairings": [
+        "impassive face",
+        "impassive expression",
+        "remained impassive"
+      ]
     },
     {
       "id": 139,
@@ -2319,8 +2384,17 @@
       "syllables": 4,
       "frequency_rank": 311056,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin imperiosus, mighty or commanding, from imperium, command or the power to rule, the word that also gave English empire.",
+      "audio_url": null,
+      "roots": [
+        "imperium"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "imperious tone",
+        "imperious manner",
+        "imperious gesture"
+      ]
     },
     {
       "id": 141,
@@ -2330,8 +2404,18 @@
       "syllables": 4,
       "frequency_rank": 396810,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin impertinens, from in-, not, and pertinere, to concern, which is built on tenere, to hold. It first meant irrelevant and later came to mean rude.",
+      "audio_url": null,
+      "roots": [
+        "pertinere",
+        "tenere"
+      ],
+      "watch_out": "It now usually means rude rather than irrelevant, though the older sense, not pertinent, still turns up in old books and legal writing.",
+      "pairings": [
+        "impertinent question",
+        "impertinent curiosity",
+        "impertinent remarks"
+      ]
     },
     {
       "id": 142,
@@ -2341,8 +2425,17 @@
       "syllables": 4,
       "frequency_rank": 206478,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin impervius, impassable, from in-, not, and pervius, having a way through, which joins per, through, and via, way.",
+      "audio_url": null,
+      "roots": [
+        "via"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "impervious to criticism",
+        "impervious to reason",
+        "impervious to pain"
+      ]
     },
     {
       "id": 143,
@@ -2352,8 +2445,17 @@
       "syllables": 4,
       "frequency_rank": 263453,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin implacabilis, unappeasable: in-, not, plus placabilis, easy to calm, from placare, to appease, the source of placate.",
+      "audio_url": null,
+      "roots": [
+        "placare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "implacable enemy",
+        "implacable hatred",
+        "implacable foe"
+      ]
     },
     {
       "id": 144,
@@ -2363,8 +2465,16 @@
       "syllables": 2,
       "frequency_rank": 628607,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin imputare, to enter into the account or charge to someone, from in-, in, and putare, to reckon or think. It came to English through French imputer.",
+      "audio_url": null,
+      "roots": [
+        "putare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "impute motives",
+        "impute blame"
+      ]
     },
     {
       "id": 145,
@@ -2386,8 +2496,17 @@
       "syllables": 4,
       "frequency_rank": 148588,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin incipiens, beginning, a form of incipere, to begin, which joins in-, in or on, and capere, to take hold of.",
+      "audio_url": null,
+      "roots": [
+        "capere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "incipient stage",
+        "incipient rebellion",
+        "incipient decay"
+      ]
     },
     {
       "id": 147,
@@ -2397,8 +2516,15 @@
       "syllables": 3,
       "frequency_rank": 295169,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin indigens, a form of indigere, to need, which joins indu, within, and egere, to lack. It came to English through Old French.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "It is easily mixed up with indigenous (born in or belonging to a region) and indignant (feeling wronged), but an indigent person has next to no money.",
+      "pairings": [
+        "indigent defendants",
+        "indigent patients",
+        "indigent families"
+      ]
     },
     {
       "id": 148,
@@ -2408,8 +2534,16 @@
       "syllables": 3,
       "frequency_rank": 307103,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built on Latin dolere, to hurt: Late Latin indolens meant painless, and English took it directly or by way of French. Perhaps in French, the word moved from painless to easygoing and lazy.",
+      "audio_url": null,
+      "roots": [
+        "dolere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "indolent habits",
+        "indolent life"
+      ]
     },
     {
       "id": 149,
@@ -2419,8 +2553,17 @@
       "syllables": 4,
       "frequency_rank": 304620,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin ineffabilis, unutterable: in-, not, plus effabilis, utterable, from effari, to speak out, which is built on fari, to speak.",
+      "audio_url": null,
+      "roots": [
+        "fari"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ineffable joy",
+        "ineffable beauty",
+        "ineffable mystery"
+      ]
     },
     {
       "id": 150,
@@ -2430,8 +2573,17 @@
       "syllables": 5,
       "frequency_rank": 217524,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inexorabilis, unmoved by pleading: in-, not, plus exorabilis, from exorare, to win over by begging, which is built on orare, to plead or pray.",
+      "audio_url": null,
+      "roots": [
+        "orare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inexorable logic",
+        "inexorable march",
+        "inexorable decline"
+      ]
     },
     {
       "id": 151,
@@ -2453,8 +2605,17 @@
       "syllables": 4,
       "frequency_rank": 288418,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin inimicalis, hostile, from inimicus, an enemy, which joins in-, not, and amicus, friend, as in amicable.",
+      "audio_url": null,
+      "roots": [
+        "amicus"
+      ],
+      "watch_out": "It does not mean inimitable (impossible to copy); inimical means harmful or unfriendly.",
+      "pairings": [
+        "inimical to the interests",
+        "inimical to democracy",
+        "inimical to freedom"
+      ]
     },
     {
       "id": 153,
@@ -2464,8 +2625,16 @@
       "syllables": 4,
       "frequency_rank": 243592,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin iniquitas, unfairness, from iniquus, unequal or unjust: in-, not, plus aequus, equal or fair, as in equal and equanimity.",
+      "audio_url": null,
+      "roots": [
+        "aequus"
+      ],
+      "watch_out": "It is not the same as inequity, which means unfairness or unequal shares; iniquity means wickedness, a far graver charge.",
+      "pairings": [
+        "den of iniquity",
+        "commit iniquity"
+      ]
     },
     {
       "id": 154,
@@ -2475,8 +2644,17 @@
       "syllables": 4,
       "frequency_rank": 214575,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin innocuus, harmless: in-, not, plus nocuus, harmful, from nocere, to harm, the verb behind noxious and innocent.",
+      "audio_url": null,
+      "roots": [
+        "nocere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "seemingly innocuous",
+        "innocuous question",
+        "innocuous remark"
+      ]
     },
     {
       "id": 155,
@@ -2486,8 +2664,17 @@
       "syllables": 3,
       "frequency_rank": 546783,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin insipidus, tasteless: in-, not, plus sapidus, tasty, from sapere, to taste, the source of savor.",
+      "audio_url": null,
+      "roots": [
+        "sapere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "insipid taste",
+        "insipid food",
+        "insipid smile"
+      ]
     },
     {
       "id": 156,
@@ -2497,8 +2684,16 @@
       "syllables": 3,
       "frequency_rank": 222647,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin insularis, of an island, from insula, island, as in peninsula. The sense of narrow and inward-looking pictures a group cut off as if on an island.",
+      "audio_url": null,
+      "roots": [
+        "insula"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "insular community",
+        "insular culture"
+      ]
     },
     {
       "id": 157,
@@ -8773,7 +8968,7 @@
       "definition": "Leadership so dominant that one state or class sets the terms for everyone else.",
       "plain_language_definition": "Being the top power that others must follow.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 235,
@@ -8789,7 +8984,7 @@
       "definition": "A person who makes a habit of challenging whatever a society treats as beyond question.",
       "plain_language_definition": "A person who loves to knock down ideas that everyone else treats as untouchable.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 239,
@@ -8797,7 +8992,7 @@
       "definition": "The giving of divine honors to a carved, cast or painted image.",
       "plain_language_definition": "Bowing down to a statue or object and treating it like a god.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 240,
@@ -8805,7 +9000,7 @@
       "definition": "Fixed in a way that no force, effort or passage of time can alter.",
       "plain_language_definition": "Set for good; no one and nothing can ever alter it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 242,
@@ -8845,7 +9040,8 @@
       "definition": "Not pertinent to the matter under consideration.",
       "plain_language_definition": "Having nothing to do with the topic you are currently discussing.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 249,
@@ -8869,7 +9065,7 @@
       "definition": "Hold a person or thing responsible for an act or quality, usually a bad one such as a fault or a selfish motive.",
       "plain_language_definition": "To claim that someone caused something or has some quality, often a bad one.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 253,
@@ -8885,7 +9081,7 @@
       "definition": "Present only in a first faint form that is likely to grow.",
       "plain_language_definition": "In its first early stage and likely to get bigger.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 255,
@@ -8893,7 +9089,7 @@
       "definition": "Living in poverty so deep that getting through each day is a struggle.",
       "plain_language_definition": "Having so little money that food and rent are out of reach.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 256,
@@ -8909,7 +9105,7 @@
       "definition": "So vast or moving that every attempt to put it into words falls short.",
       "plain_language_definition": "Too big a feeling or experience for any words to do it justice.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 260,
@@ -8917,7 +9113,7 @@
       "definition": "Moving forward in a way that nothing can stop or turn aside.",
       "plain_language_definition": "Always pressing on, and impossible to halt however hard people try.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 262,
@@ -8941,7 +9137,7 @@
       "definition": "Harmful to something, or tending to hold back its growth or success.",
       "plain_language_definition": "Bad for something, making it hard for it to grow or do well.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 265,
@@ -8949,7 +9145,7 @@
       "definition": "Wicked conduct, especially cruel injustice done to others.",
       "plain_language_definition": "Behavior so unfair and cruel that it counts as evil.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 267,
@@ -8965,7 +9161,7 @@
       "definition": "So bland in taste or spirit that it leaves no impression at all.",
       "plain_language_definition": "Bland and dull, with no real flavor or spark.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 272,
@@ -8973,7 +9169,7 @@
       "definition": "Turned inward as a community or person, so that events and people beyond a small circle hardly register.",
       "plain_language_definition": "Cut off from the wider world and not curious about it.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 275,
@@ -10502,25 +10698,28 @@
       "id": 613,
       "word_id": 144,
       "definition": "In law or accounting, assign a value to something by estimating it from other figures.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To work out a likely figure for something from other numbers when the true one is unknown.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 616,
       "word_id": 152,
       "definition": "Feeling or showing ill will toward a person or group.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Acting like an enemy toward someone.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 619,
       "word_id": 136,
       "definition": "Admiration so extreme that it treats a person or thing as holy.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Treating a person or thing you admire as if it were a god.",
       "sense_order": 2,
-      "register": null
+      "register": "disapproving",
+      "also_means": true
     },
     {
       "id": 621,
@@ -14109,33 +14308,37 @@
       "id": 1274,
       "word_id": 148,
       "definition": "Of a tumor or other illness, getting worse only slowly and with little discomfort.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a disease, spreading slowly and causing little pain.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1275,
       "word_id": 149,
       "definition": "Of a name or word, barred from speech by religious law.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a holy name, never to be said aloud under religious rules.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1276,
       "word_id": 150,
       "definition": "Of a person, deaf to every plea for mercy or a change of mind.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a person, unmoved however much others beg or plead.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1277,
       "word_id": 156,
       "definition": "Having to do with islands or the people who live on them.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Found on islands or connected with the people who live on them.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1278,
@@ -14168,17 +14371,19 @@
       "id": 1281,
       "word_id": 135,
       "definition": "One who wrecks holy statues and paintings, believing that honoring them is wrong.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A person who destroys holy pictures and statues because they think such images should not be worshipped.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1282,
       "word_id": 142,
       "definition": "Of a material, sealed tight against water, damp and fumes.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Letting no water or gas seep into it or through it.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1283,
@@ -67740,14 +67945,6 @@
       "revision": 3
     },
     {
-      "id": 544,
-      "word_id": 131,
-      "text": "Harangue comes from Medieval Latin harenga, a speech given to a crowd. It also starts like harass, which is what a harangue does to its listeners.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 545,
       "word_id": 132,
       "text": "Hedonist comes from Greek hedone, \"pleasure\": a hedonist lives to chase it.",
@@ -71327,6 +71524,14 @@
       "id": 1028,
       "word_id": 176,
       "text": "Mercurial comes from Mercury, the swift messenger god, like the metal named after him, which slides and splits apart unpredictably.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1029,
+      "word_id": 131,
+      "text": "Harangue came through French from Old Italian aringa, linked to a word for a public assembly. It also starts like harass, which is what a harangue does to its listeners.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -120432,8 +120637,8 @@
     },
     {
       "path": "definitions/1281.mp3",
-      "bytes": 20689,
-      "key": "8e7a452b612e33ff",
+      "bytes": 26122,
+      "key": "2393e37957e952d0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120446,8 +120651,8 @@
     },
     {
       "path": "definitions/619.mp3",
-      "bytes": 18390,
-      "key": "de0e3d1b4b543115",
+      "bytes": 15778,
+      "key": "c7f0b675d7c4664b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120495,8 +120700,8 @@
     },
     {
       "path": "definitions/1282.mp3",
-      "bytes": 16300,
-      "key": "52d321ba51c6cb0d",
+      "bytes": 14211,
+      "key": "8b76a0aaff664e37",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120516,8 +120721,8 @@
     },
     {
       "path": "definitions/613.mp3",
-      "bytes": 23510,
-      "key": "148fc3753bfd3dd5",
+      "bytes": 21734,
+      "key": "658e7fffaddebf30",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120544,8 +120749,8 @@
     },
     {
       "path": "definitions/1274.mp3",
-      "bytes": 22256,
-      "key": "22504966c854e337",
+      "bytes": 14942,
+      "key": "276170bb21afa24a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120558,8 +120763,8 @@
     },
     {
       "path": "definitions/1275.mp3",
-      "bytes": 15987,
-      "key": "569a7f0400c552dc",
+      "bytes": 18077,
+      "key": "93619ce6bda844f4",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120572,8 +120777,8 @@
     },
     {
       "path": "definitions/1276.mp3",
-      "bytes": 17136,
-      "key": "6e6ed12b9e7fd5e8",
+      "bytes": 15987,
+      "key": "92640398b5f73244",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120586,8 +120791,8 @@
     },
     {
       "path": "definitions/616.mp3",
-      "bytes": 14211,
-      "key": "dce5bb8dcd7e948b",
+      "bytes": 10136,
+      "key": "521a9a53f02f9282",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120621,8 +120826,8 @@
     },
     {
       "path": "definitions/1277.mp3",
-      "bytes": 14838,
-      "key": "56109aa93f14d10f",
+      "bytes": 16196,
+      "key": "022152fdbbb6b01f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125892,8 +126097,8 @@
     },
     {
       "path": "hooks/131.mp3",
-      "bytes": 37616,
-      "key": "6fdafb7509ea2440",
+      "bytes": 42109,
+      "key": "753d386f5d1298cc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -167893,6 +168098,772 @@
         "alsoMeans": 4
       },
       "checker_notes": "Origin and hook match Wiktionary (mondain, mundanus, mundus). Null tone is right (only Oxford says 'often disapproving'). alsoMeans: the record lacks the 'of this world, not spiritual' sense (Longman, literary), which readers meet in 'mundane affairs' and 'the mundane world'; it could be added on a main worksheet."
+    },
+    {
+      "id": 1139,
+      "word_id": 130,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary hackneyed (hackney + -ed; the overuse sense \"most likely\" from much-used hackney carriages) and hackney (Middle English hakeney, a small horse often hired out, \"probably\" from the village of Hackney); both hedges kept. No root a learner could spot elsewhere, so roots empty. Hook kept: hackney as a hired horse is true; \"ridden by everyone, it ended up worn out\" states as fact the link Wiktionary gives as most likely, so 4. Tone null: only Cambridge marks it disapproving. Pairings from Datamuse and Ngram (hackneyed phrase 7.2, expression 2.1, theme 1.3 per billion). No other senses.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says the hired horse, ridden by everyone, ended up worn out, while Wiktionary only says the sense most likely came from hackney carriages being so commonplace; the origin keeps that hedge, the hook drops it. The origin's 'a horse often hired out' echoes Wiktionary's gloss for Middle English hakeney (a short gloss, acceptable). Only Cambridge marks hackneyed disapproving (Oxford and Longman give no label), so null is right. Pairings are the top nouns in the data (phrase, expression, theme)."
+    },
+    {
+      "id": 1140,
+      "word_id": 131,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary harangue: French harangue and Old Italian aringa, from aringare (speak in public) and aringo (public assembly), from a Germanic word akin to Old High German hring (ring); doublet of ring, rank, range and rink. I added \"probably\" because the Oxford Learner's Word Origin says \"perhaps of Germanic origin\". No root a learner could spot (hring), so roots empty. Hook kept: Wiktionary has no entry for Medieval Latin harenga, but the Oxford Learner's Word Origin gives Old French arenge from medieval Latin harenga; the gloss \"a speech given to a crowd\" fits the Romance forms. Not false, so 4. Tone disapproving: Oxford labels the noun disapproving, Cambridge the verb; Longman gives none, so 4. Pairings: long harangue 8.3, political 1.4, lengthy 1.3 per billion, all top Datamuse adjectives. Round 2: hook changed from \"comes from Medieval Latin harenga, a speech given to a crowd\" (Oxford only, not Wiktionary) to \"came through French from Old Italian aringa, linked to a word for a public assembly\", which matches the origin (aringo, a public assembly). Tone set to null: only Oxford's noun entry is marked disapproving; Cambridge and Longman mark only the verb or nothing. Dropped \"lengthy harangue\", a near-repeat of \"long harangue\"; pairings 4 since long is generic.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the pairings. Both are in the data, but 'long harangue' (8.3 per billion) uses an adjective that fits any speech; 'political harangue' (1.4) is the one that shows a kind. The origin is unchanged: its facts match Wiktionary, 'tied to' is vague, and its chain follows AHD's order closely, though reworded. The new hook agrees with the origin and Wiktionary (Old Italian aringa, linked to aringo, a public assembly). Null tone is now right, since Cambridge's and Longman's noun entries have no label."
+    },
+    {
+      "id": 1141,
+      "word_id": 132,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots"
+      ],
+      "notes": "Origin checked against Wiktionary hedonist and hedonism (Ancient Greek hedone, pleasure, + -ist / -ism). Root hedone, which a learner sees in hedonism and hedonic. Hook true. No tone label in Oxford, Cambridge or Longman. Pairings left empty: Datamuse partners are philosophy terms (psychological hedonist, egoistic hedonist) and Ngram finds no common everyday pairing (true hedonist 0.6, committed hedonist 0.25, hedonist lifestyle 0.4).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. The origin matches Wiktionary (Ancient Greek hedone, pleasure, plus -ist; hedonism is formed the same way). Root hedone shows in hedonism and hedonic. No labels in Oxford, Cambridge or Longman. Empty pairings are right: the data's top partners (psychological, egoistic hedonist) are philosophy terms."
+    },
+    {
+      "id": 1142,
+      "word_id": 133,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary hegemony: Ancient Greek hegemonia from hegemon (leader) from hegeomai (to lead); early 19th-century use influenced by German Hegemonie. Roots left empty: hegemon shows up only in the word's own family (hegemon, hegemonic). Hook true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: cultural hegemony 139, political 63, economic 31 per billion.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin follows Wiktionary's chain and glosses closely (hegemonia 'leadership, chief command', from hegemon 'a leader', from a verb 'to lead'), and its second sentence rewords Wiktionary's 'Early 19th-century usage influenced by German Hegemonie' in the same place. All facts are right. Formal is marked by all three dictionaries. Pairings are the top three adjectives in the data."
+    },
+    {
+      "id": 1143,
+      "word_id": 134,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary heresy: Old French and Latin haeresis from Ancient Greek hairesis (choice, system of principles) from haireomai (to take for oneself, choose). The hedged Proto-Indo-European step is left out. Root hairesis, which a learner sees in heretic. Hook true (\"a choosing\"). No tone label in the three learner's dictionaries. Pairings: accused of heresy 26, charged with heresy 9.1, heresy trial 8.9 per billion.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the root hairesis is hard for a learner to spot in other English words (heretic and heretical are the same family, spelled through Latin haeresis), so it links nothing; acceptable. The origin is true and rightly leaves out Wiktionary's 'possibly' PIE step; the step from a chosen school of thought to a belief a church condemns is left mostly to the hook. No labels. Pairings are common (accused of heresy 26.4, charged with heresy 9.1, heresy trial 8.9 per billion)."
+    },
+    {
+      "id": 1144,
+      "word_id": 135,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary iconoclast (French and Medieval Latin from Byzantine Greek eikonoklastes, literally image breaker), icono- (eikon) and -clast (klastos, broken, from klao, to break); its first sense is the historical destroyer of religious images. Root eikon (icon, iconic). Hook kept: eikon is right; Wiktionary glosses only the whole compound, so \"klastes, breaker\" names the second part of eikonoklastes rather than a separate word, 4. Tone formal: all three learner's dictionaries. Pairings empty: first-sense pairings are rare in Ngram (great iconoclast 1.6, young 0.5), and the common ones (iconoclast controversy, emperors) belong to the other sense. Also means: the image-breaker sense, common in history writing (Datamuse: iconoclast controversy, emperors); register null, as the learner's dictionaries do not list it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: empty pairings; the data's 'great iconoclast' and 'young iconoclast' are generic, so empty is acceptable. The origin matches Wiktionary (Byzantine Greek eikonoklastes, image breaker, via French and Medieval Latin) and gives the step to today's meaning. Root eikon shows in icon and iconic. Oxford, Cambridge and Longman all mark it formal. The image-breaker sense is a current historical meaning with a clear plain definition."
+    },
+    {
+      "id": 1145,
+      "word_id": 136,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary idolatry (Old French, Latin, from Greek eidololatreia, from eidolon, idol, and latris or latreuo, worship) and -latry (Late Latin latria, worship). Root eidolon (idol). Hook true: the Oxford Learner's Word Origin also names Greek -latreia, worship. Tone disapproving on both senses: Oxford and Cambridge both mark the entry (often) disapproving. Pairings: pagan idolatry 13, commit idolatry 7.4 per billion. Also means: excessive admiration, listed by all three learner's dictionaries.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin says 'Greek' where the house style is 'Ancient Greek', and simplifies Wiktionary's chain (a back-formation from eidololatres, from eidolon plus latris or latreuo) to 'joins eidolon to a word for worship'; acceptable. Oxford and Cambridge mark the whole entry 'often disapproving', so disapproving fits both senses. Pairings are common (pagan idolatry 13.2, commit idolatry 7.4 per billion). The admiration sense is current and its plain definition is clear."
+    },
+    {
+      "id": 1146,
+      "word_id": 137,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary immutable (Latin immutabilis, im- + mutable), mutable (Latin mutabilis), and mutabilis and mutation for mutare. Root mutare (mutation, mutate, commute). Hook true. Tone formal: all three learner's dictionaries. Pairings: immutable laws 48, truth 14, principles 13 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none. Origin and hook match Wiktionary (immutabilis, im- plus mutabilis, from mutare). Formal in all three dictionaries. Pairings are the top nouns in the data (laws, principles, truth)."
+    },
+    {
+      "id": 1147,
+      "word_id": 138,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary impassive (im- + passive in its old sense, able to suffer), passive (Latin passivus from passus, past participle of pati, to suffer; compare patient) and passion. Root pati. Hook kept: it compresses im- + passive into \"im- joined to pati\", but every claim holds, 4. Tone null: no label in the three learner's dictionaries. Watch out: impassive and impassioned look alike and mean opposite things. Pairings: remained impassive 75, impassive face 56, expression 24 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says impassive joins im- to 'the Latin root of passion' (pati); Wiktionary has im- plus passive, which carries that root, so it is slightly loose. The impassioned watch-out is true and well put; the look-alike is real but less common than the classic misreadings. The origin matches Wiktionary (passive in its obsolete sense, capable of suffering or feeling, from Latin passivus and pati). No labels. Pairings are top data items."
+    },
+    {
+      "id": 1148,
+      "word_id": 140,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary imperious (Latin imperiosus from imperium, command, power) and empire. Root imperium (empire, imperial). Hook true. Tone null under the updated rule: Oxford says formal, often disapproving; Cambridge marks formal only in its American dictionary; Longman gives no label. Pairings: imperious tone 20, voice 16, gesture 13, manner 12 per billion; I left out the top Datamuse pairing, imperious necessity, which is the old \"urgent\" sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin glosses imperiosus 'mighty or commanding' where Wiktionary has 'mighty, powerful' (commanding is a correct Latin sense). Oxford marks it formal and often disapproving, Cambridge Advanced gives no label (only its American edition says fml) and Longman none, so null fits the rules. Pairings are common and avoid the 'imperious necessity' sense."
+    },
+    {
+      "id": 1149,
+      "word_id": 141,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary impertinent (Latin impertinens, im- + pertinent; its usage note says \"not pertinent\" was the original meaning and \"rude\" came later), pertinent (Latin pertinens) and Latin pertineo (per- + teneo, to hold; to concern, belong). Roots pertinere (pertinent, pertain) and tenere (abstain, retinue, untenable, countenance in the list). Hook true, backed by the usage note. Tone null. Watch out: the word looks like \"not pertinent\"; the note says the old sense survives (legal \"impertinent matter\") rather than calling it wrong. Pairings: impertinent question 14, curiosity 4.9, remarks 2.4 per billion. Also means: not shown; Wiktionary calls the irrelevant sense archaic and the learner's dictionaries omit it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: two roots where pertinere already contains tenere; both are real stems (pertinent, pertain; tenacious, tenant). 'First meant irrelevant, later rude' matches Oxford's word origin and Wiktionary's im- plus pertinent. The watch-out is true (the not-pertinent sense survives in legal writing) and covers the sense left out of Also means. No labels. Pairings are common (impertinent questions, curiosity, remarks)."
+    },
+    {
+      "id": 1150,
+      "word_id": 142,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary impervious (Latin impervius, in- + pervius) and Latin pervius (per + via; having a passage through). Root via (obviate in the list; also deviate, trivial). Hook true. Tone: first sense null (only Longman says formal); the material sense technical (Oxford specialist, Cambridge specialized, Longman technical). Pairings for the first sense: impervious to pain 9.4, to reason 4.5, to criticism 4.1 per billion. Also means: the material sense is shown though labeled technical, because it is everyday text (impervious material, layer and surface lead the Datamuse list) and it explains the figurative sense. Round 2: the material sense's plain definition said \"sealed\", which overstates; now it says the material lets no water or gas seep in or through. Checked against Oxford, Cambridge, Longman and WordUp wording for that sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. The new plain definition of the material sense ('Letting no water or gas seep into it or through it') matches how dictionaries describe impervious rock and surfaces. The technical label matches Oxford (specialist), Cambridge (specialized) and Longman (technical). The origin is true: per plus via is the standard analysis of pervius. Pairings are common (impervious to pain 9.4, to reason 4.5, to criticism 4.1 per billion)."
+    },
+    {
+      "id": 1151,
+      "word_id": 143,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary implacable (Latin implacabilis, im- + placabilis from placo, to appease) and placate (Latin placatus from placo). Root placare (placate in the list). Hook true. Tone null: only Cambridge marks it formal. Pairings: implacable enemy 33, hatred 17, foe 15 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none. Origin and hook match Wiktionary (implacabilis, placabilis, placare, the source of placate). Only Cambridge marks it formal, so null is right. Pairings are the top three nouns in the data."
+    },
+    {
+      "id": 1152,
+      "word_id": 144,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary impute (Middle French imputer, Latin imputo, to bring into the reckoning, charge), Latin imputo (in- + puto) and putative (puto, to think, consider, reckon); hook's compute checked against Latin computo. Root putare (putative in the list). Hook true. Tone formal: Oxford, Cambridge and Longman all mark \"impute something to somebody\" formal (their phrasal verb pages). Pairings: impute motives 1.9 and impute blame 1.4 per billion, the top Datamuse objects, but not frequent, so 4. Also means: the accounting and statistics sense is technical, so not shown; register technical. Round 2: formal kept. The headword pages in .cache/dict only link to the phrasal verb, so I saved the three phrasal-verb pages and their label lines with URLs in the scratch folder: /tmp/claude-0/-home-user-little-lexicon/c5359333-97c3-58b7-a63d-3a586fd02c78/scratchpad/extras-f/impute-formal-labels.txt (pages in impute-pages/ beside it). Oxford (impute something to somebody/something), Longman (impute something to somebody) and Cambridge (impute something to someone) all label the entry formal.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Weakest point: Also means. The estimating sense is frequent in the data (imputed income, rent, value; impute missing values) and could be shown as technical, but leaving it out is defensible. I checked the formal label against the saved pages: Oxford's impute-to entry has (formal), Longman's 'impute something to somebody' has REGISTERLAB formal, and Cambridge's 'impute something to someone' has formal in its header, so all three mark the sense and formal is right. The origin is true (imputare from in- plus putare; root putare shows in compute and dispute). Pairings are common enough (impute motives 1.9, impute blame 1.4 per billion)."
+    },
+    {
+      "id": 1153,
+      "word_id": 146,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary incipient (Latin incipiens, present participle of incipio) and Latin incipio (in- + capio, to seize upon, lay hold of). Root capere (precept in the list; capture, accept). Hook true (in- on, capere to take). Tone formal: all three learner's dictionaries. Pairings: incipient stage 20, rebellion 3.4, decay 2.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'a form of incipere' for a present participle is vague but fine. Origin and hook match Wiktionary, and in- plus capere is the standard analysis of incipere. Formal in all three dictionaries. Pairings are common (incipient stage 19.6, rebellion 3.4, decay 2.6 per billion)."
+    },
+    {
+      "id": 1154,
+      "word_id": 147,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary indigent (Old French, Latin indigens, present participle of indigeo, from indu, within, + egeo, to be in need). Roots empty: egere shows in no other English word a learner would know. Hook true. Tone formal: all three learner's dictionaries. Watch out: indigent, indigenous and indignant are a well-known look-alike trio. Pairings: indigent defendants 34, patients 15, families 6 per billion. Round 2: watch-out reworded; the old glosses matched WordUp's usage note (\"native to a place\", \"angry at unfairness\", \"means very poor\").",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: in the reworded watch-out, 'feeling wronged' for indignant leaves out the anger that is the core of the word; 'angry at being treated unfairly' would be exact. The mix-ups are real, the note is true, and it no longer echoes WordUp's note. The origin matches Wiktionary (indigens, indigere, indu plus egere, via Old French) in the writer's own order. Formal in all three dictionaries. Pairings are top items in the data."
+    },
+    {
+      "id": 1155,
+      "word_id": 148,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary indolent (French indolent or Late Latin indolens, in- + dolens, hurting, from doleo; the lazy sense \"perhaps\" developed in French, hedge kept). Root dolere (doleful, condolence). Hook kept: in- + dolere is right and the tumor sense is real; \"the indolent avoid the pain of hard work\" reads as a memory aid, not a claim about how the sense arose, 4. Tone null under the updated rule: Oxford and Longman say formal, but Cambridge's main entry says literary (formal only in its American dictionary). Pairings: indolent life 3.4, habits 2.3 per billion. Also means: the medical sense is technical, so not shown. Round 2: origin rewritten in a new order and wording (it had kept Wiktionary's two sentences); same facts, hedge kept with \"Perhaps\".",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Weakest point: the hook. 'The indolent avoid the pain of hard work' implies a path from painless to lazy that Wiktionary does not give, though it reads as a memory picture. The rewritten origin is now in the writer's own words and order, keeps Wiktionary's 'perhaps', and gives the step (painless, then easygoing, then lazy) that matches Wiktionary's 'living easily, slothful'. Tone (4): Oxford and Longman mark it formal, Cambridge Advanced says literary (its American edition says fml), so null fits the all-three rule but is borderline. Also means (4): the medical sense is frequent in the data (indolent course, ulcers, lymphomas), and the hook already mentions it, so showing it as technical is defensible."
+    },
+    {
+      "id": 1156,
+      "word_id": 149,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary ineffable (from Middle French), Latin ineffabilis (in- + effabilis, utterable), Latin effor (ex- + for; to speak out, utter) and affable (for, to speak). Root fari (affable in the list). Hook true. Tone formal: all three learner's dictionaries. Pairings: ineffable mystery 9.5, joy 8.7, beauty 6.5 per billion. Also means: the \"not to be uttered\" sense, which Wiktionary lists and which gives the commonest Datamuse pairing (ineffable name); register null.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. The chain (ineffabilis, effabilis, effari, fari) is standard and matches the full Wiktionary page; root fari shows in fable, affable and infant. Formal in all three. 'Ineffable name' is the most frequent pairing in the data, so showing the holy-name sense is right, and its plain definition is clear."
+    },
+    {
+      "id": 1157,
+      "word_id": 150,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary inexorable (Latin inexorabilis, in- + exorabilis, from exoro, ex- + oro, to beg, plead, pray). Root orare (oration, orator). Hook true. Tone formal: all three learner's dictionaries. Pairings: inexorable march 17, logic 15, decline 13 per billion. Also means: the person sense (\"deaf to every plea\") is not shown: Wiktionary lists it, but the learner's dictionaries do not, and no person nouns appear in the Datamuse list, so 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none. Origin and hook match Wiktionary (inexorabilis, exorabilis, exorare, orare). Formal in all three. Pairings are in the data (logic, march, decline). Leaving the person sense out of Also means is right: Oxford, Cambridge and Longman give only the process sense."
+    },
+    {
+      "id": 1158,
+      "word_id": 152,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary inimical (Late Latin inimicalis from inimicus, in- + amicus) and amicable (Late Latin amicabilis, friendly). Root amicus (amicable, amity). Hook true. Tone formal on the first sense (all three); null on the unfriendly sense, which only Oxford lists. Watch out: inimical and inimitable are a classic look-alike pair. Pairings: inimical to the interests 8.5, to democracy 2.3, to freedom 2.0 per billion; \"the interests\" is a little generic, so 4. Also means: the unfriendly sense, listed by Oxford and Wiktionary.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Weakest point: 'inimical to the interests' is a fragment (the interests of what?); a complete phrase such as 'inimical to growth' would read better. The inimitable watch-out names a look-alike Vocabulary.com warns about, real but not one of the classic mix-ups. The ill-will sense is current (inimical forces, attitude), but its plain 'Acting like an enemy toward someone' overstates 'unfriendly' a little. Origin and hook match Wiktionary. Formal in all three."
+    },
+    {
+      "id": 1159,
+      "word_id": 153,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary iniquity (Old French, Latin iniquitas from iniquus, in- + aequus, equal, fair), equanimity (aequus) and equal (Latin aequalis). Root aequus (equanimity and equivocate in the list). Hook true. Tone formal: all three learner's dictionaries. Watch out: iniquity and inequity are often swapped. Pairings: den of iniquity 36, commit iniquity 16 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: 'commit iniquity' (16.5 per billion) is mostly biblical. Origin and hook match Wiktionary (iniquitas, iniquus, in- plus aequus). The inequity watch-out is a classic mix-up (Dictionary.com lists it) and is true. Formal in all three."
+    },
+    {
+      "id": 1160,
+      "word_id": 154,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary innocuous (Latin innocuus, harmless), nocuous (Latin nocuus), Latin nocuus (from noceo), noxious and innocent. Root nocere (noxious, innocent, nuisance). Hook true. Tone null: only Oxford marks it formal. Pairings: seemingly innocuous 100, innocuous question 13, remark 3.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none. The origin matches Wiktionary (innocuus, nocuus), and nocere does underlie noxious and innocent. Only Oxford marks it formal, so null is right. Pairings are common (seemingly innocuous is the top modifier; innocuous question 13.0, remark 3.3 per billion)."
+    },
+    {
+      "id": 1161,
+      "word_id": 155,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary insipid (French insipide, Latin insipidus, in- + sapidus, savory), Latin sapidus (sapio + -idus), savant (from sapio) and savour. The hedge that some senses were perhaps influenced by insipient is left out. Root sapere (savant in the list). Hook true. Tone disapproving: Oxford and Cambridge. Pairings: insipid smile 1.9, taste 1.8, food 1.7 per billion, the top Datamuse nouns but not frequent, so 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin leaves out Wiktionary's hedged 'perhaps influenced by insipient', which is allowed. Origin and hook are true (savor goes back through Latin sapor to sapere). Oxford and Cambridge mark it disapproving. Pairings are top data items."
+    },
+    {
+      "id": 1162,
+      "word_id": 156,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary insular (Latin insularis from insula, island; insula itself of uncertain origin, a step I leave out) and peninsula (paene + insula). Root insula (peninsula, insulate). Hook true. Tone disapproving on the first sense (Oxford, Cambridge, Longman); null on the island sense (Oxford says specialist, Longman formal). Pairings: insular community 6.5, culture 3.9 per billion; most Datamuse partners belong to the island and brain senses, so 4. Also means: relating to islands, the skill's own example.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none. The origin matches Wiktionary and gives the step to today's meaning; Wiktionary's 'uncertain origin' hedge is about insula itself, which the origin does not go into. Oxford and Cambridge mark the main sense disapproving; only Oxford marks the island sense (specialist), so null there is fine. Pairings are common (insular community 6.5, insular culture 3.9 per billion)."
     }
   ]
 }

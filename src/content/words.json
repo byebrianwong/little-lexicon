@@ -14876,10 +14876,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 819087,
-      "etymology": null,
+      "etymology": "From hackney, a horse often hired out, a name probably taken from Hackney, then a village near London. Hired horses and carriages were used by everyone, which most likely gave the sense of stale from overuse.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "hackneyed phrase",
+        "hackneyed expression",
+        "hackneyed theme"
+      ],
       "audioUrl": "audio/words/130.mp3?v=4575f4bf1c36",
       "hookAudioUrl": "audio/hooks/130.mp3?v=41952f38bf38",
       "senses": [
@@ -14991,12 +14995,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 745230,
-      "etymology": null,
+      "etymology": "Through French from Old Italian aringa, tied to aringare, to speak in public, and aringo, a public assembly. These probably come from a Germanic word for ring, making harangue a relative of ring and rank.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "long harangue",
+        "political harangue"
+      ],
       "audioUrl": "audio/words/131.mp3?v=044413b717a0",
-      "hookAudioUrl": "audio/hooks/131.mp3?v=ab4aeb0e2a72",
+      "hookAudioUrl": "audio/hooks/131.mp3?v=d722cf1364d7",
       "senses": [
         {
           "senseId": 232,
@@ -15079,7 +15086,7 @@
         }
       ],
       "mnemonics": [
-        "Harangue comes from Medieval Latin harenga, a speech given to a crowd. It also starts like harass, which is what a harangue does to its listeners."
+        "Harangue came through French from Old Italian aringa, linked to a word for a public assembly. It also starts like harass, which is what a harangue does to its listeners."
       ]
     },
     {
@@ -15090,8 +15097,10 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1867511,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Made in English from Ancient Greek hedone, pleasure, with the ending -ist; hedonism is built the same way.",
+      "roots": [
+        "hedone"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/132.mp3?v=2757a7ec5636",
@@ -15183,10 +15192,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 73322,
-      "etymology": null,
+      "etymology": "From Ancient Greek hegemonia, leadership or supreme command, from hegemon, a leader, which comes from a verb meaning to lead. Its use in the early 1800s owed something to German Hegemonie.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cultural hegemony",
+        "political hegemony",
+        "economic hegemony"
+      ],
       "audioUrl": "audio/words/133.mp3?v=02027e80c574",
       "hookAudioUrl": "audio/hooks/133.mp3?v=ef727727a363",
       "senses": [
@@ -15195,7 +15208,7 @@
           "definition": "Leadership so dominant that one state or class sets the terms for everyone else.",
           "plainLanguageDefinition": "Being the top power that others must follow.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/234.mp3?v=57c9d9436b9b",
           "examples": [
@@ -15282,10 +15295,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 86870,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek hairesis, a choosing, and so a set of principles someone adopts, from a verb meaning to take for oneself. It reached English through Latin and Old French.",
+      "roots": [
+        "hairesis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "accused of heresy",
+        "charged with heresy",
+        "heresy trial"
+      ],
       "audioUrl": "audio/words/134.mp3?v=0712cfe91153",
       "hookAudioUrl": "audio/hooks/134.mp3?v=1186a2eb239a",
       "senses": [
@@ -15377,8 +15396,10 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1288361,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Byzantine Greek eikonoklastes, image breaker, from eikon, image, and a verb meaning to break, by way of French and Medieval Latin. It first named people who destroyed religious images.",
+      "roots": [
+        "eikon"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/135.mp3?v=486ad7198a8c",
@@ -15389,7 +15410,7 @@
           "definition": "A person who makes a habit of challenging whatever a society treats as beyond question.",
           "plainLanguageDefinition": "A person who loves to knock down ideas that everyone else treats as untouchable.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/237.mp3?v=9d48c0d0e08c",
           "examples": [
@@ -15444,11 +15465,11 @@
         {
           "senseId": 1281,
           "definition": "One who wrecks holy statues and paintings, believing that honoring them is wrong.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A person who destroys holy pictures and statues because they think such images should not be worshipped.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1281.mp3?v=c9a56fd921bc",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1281.mp3?v=276eddf500df",
           "examples": [],
           "distractors": []
         }
@@ -15495,10 +15516,15 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 149625,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Greek eidololatreia, worship of idols, which joins eidolon, an image or idol, to a word for worship. It came into English through Latin and Old French.",
+      "roots": [
+        "eidolon"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pagan idolatry",
+        "commit idolatry"
+      ],
       "audioUrl": "audio/words/136.mp3?v=d698240fac84",
       "hookAudioUrl": "audio/hooks/136.mp3?v=23ea193df8a8",
       "senses": [
@@ -15507,7 +15533,7 @@
           "definition": "The giving of divine honors to a carved, cast or painted image.",
           "plainLanguageDefinition": "Bowing down to a statue or object and treating it like a god.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/239.mp3?v=a043d72bde19",
           "examples": [
@@ -15562,11 +15588,11 @@
         {
           "senseId": 619,
           "definition": "Admiration so extreme that it treats a person or thing as holy.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Treating a person or thing you admire as if it were a god.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/619.mp3?v=51ee7a089936",
+          "register": "disapproving",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/619.mp3?v=f6421cc296eb",
           "examples": [],
           "distractors": []
         }
@@ -15584,10 +15610,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 165760,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin immutabilis, unchangeable: in-, not, plus mutabilis, changeable, which comes from mutare, to change, as in mutation.",
+      "roots": [
+        "mutare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "immutable laws",
+        "immutable principles",
+        "immutable truth"
+      ],
       "audioUrl": "audio/words/137.mp3?v=f53861dfecca",
       "hookAudioUrl": "audio/hooks/137.mp3?v=e513cb991cd1",
       "senses": [
@@ -15596,7 +15628,7 @@
           "definition": "Fixed in a way that no force, effort or passage of time can alter.",
           "plainLanguageDefinition": "Set for good; no one and nothing can ever alter it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/240.mp3?v=01b18f44e84a",
           "examples": [
@@ -15699,10 +15731,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 418495,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Made in English from im-, not, and passive in its old sense of able to suffer or feel. Passive comes from Latin pati, to suffer, which also gave English passion and patient.",
+      "roots": [
+        "pati"
+      ],
+      "watchOut": "It does not mean impassioned: an impassive face shows no feeling, while an impassioned speech is full of it.",
+      "pairings": [
+        "impassive face",
+        "impassive expression",
+        "remained impassive"
+      ],
       "audioUrl": "audio/words/138.mp3?v=1c4d57bd76af",
       "hookAudioUrl": "audio/hooks/138.mp3?v=a845d16e2858",
       "senses": [
@@ -15820,10 +15858,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 311056,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin imperiosus, mighty or commanding, from imperium, command or the power to rule, the word that also gave English empire.",
+      "roots": [
+        "imperium"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "imperious tone",
+        "imperious manner",
+        "imperious gesture"
+      ],
       "audioUrl": "audio/words/140.mp3?v=0112b7c34c4a",
       "hookAudioUrl": "audio/hooks/140.mp3?v=c7494ac17ebb",
       "senses": [
@@ -15935,10 +15979,17 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 396810,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin impertinens, from in-, not, and pertinere, to concern, which is built on tenere, to hold. It first meant irrelevant and later came to mean rude.",
+      "roots": [
+        "pertinere",
+        "tenere"
+      ],
+      "watchOut": "It now usually means rude rather than irrelevant, though the older sense, not pertinent, still turns up in old books and legal writing.",
+      "pairings": [
+        "impertinent question",
+        "impertinent curiosity",
+        "impertinent remarks"
+      ],
       "audioUrl": "audio/words/141.mp3?v=6e56f4e720d8",
       "hookAudioUrl": "audio/hooks/141.mp3?v=85ea7ea8f3b2",
       "senses": [
@@ -16123,10 +16174,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 206478,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin impervius, impassable, from in-, not, and pervius, having a way through, which joins per, through, and via, way.",
+      "roots": [
+        "via"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "impervious to criticism",
+        "impervious to reason",
+        "impervious to pain"
+      ],
       "audioUrl": "audio/words/142.mp3?v=72c7c74d89e1",
       "hookAudioUrl": "audio/hooks/142.mp3?v=909ad280e505",
       "senses": [
@@ -16190,11 +16247,11 @@
         {
           "senseId": 1282,
           "definition": "Of a material, sealed tight against water, damp and fumes.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Letting no water or gas seep into it or through it.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1282.mp3?v=2d4c2cbddbaf",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1282.mp3?v=0fa9f8826e72",
           "examples": [],
           "distractors": []
         }
@@ -16237,10 +16294,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 263453,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin implacabilis, unappeasable: in-, not, plus placabilis, easy to calm, from placare, to appease, the source of placate.",
+      "roots": [
+        "placare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "implacable enemy",
+        "implacable hatred",
+        "implacable foe"
+      ],
       "audioUrl": "audio/words/143.mp3?v=f8fc400e4dc0",
       "hookAudioUrl": "audio/hooks/143.mp3?v=361c1cb7dee7",
       "senses": [
@@ -16332,10 +16395,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 628607,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin imputare, to enter into the account or charge to someone, from in-, in, and putare, to reckon or think. It came to English through French imputer.",
+      "roots": [
+        "putare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "impute motives",
+        "impute blame"
+      ],
       "audioUrl": "audio/words/144.mp3?v=af589e622bfa",
       "hookAudioUrl": "audio/hooks/144.mp3?v=c17d28ac0e63",
       "senses": [
@@ -16344,7 +16412,7 @@
           "definition": "Hold a person or thing responsible for an act or quality, usually a bad one such as a fault or a selfish motive.",
           "plainLanguageDefinition": "To claim that someone caused something or has some quality, often a bad one.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/251.mp3?v=b911a627e146",
           "examples": [
@@ -16399,11 +16467,11 @@
         {
           "senseId": 613,
           "definition": "In law or accounting, assign a value to something by estimating it from other figures.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To work out a likely figure for something from other numbers when the true one is unknown.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/613.mp3?v=9b2694c81423",
+          "audioUrl": "audio/definitions/613.mp3?v=0202bd7b1c27",
           "examples": [],
           "distractors": []
         }
@@ -16434,10 +16502,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 148588,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin incipiens, beginning, a form of incipere, to begin, which joins in-, in or on, and capere, to take hold of.",
+      "roots": [
+        "capere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "incipient stage",
+        "incipient rebellion",
+        "incipient decay"
+      ],
       "audioUrl": "audio/words/146.mp3?v=9dfb6f730c33",
       "hookAudioUrl": "audio/hooks/146.mp3?v=a10f812db23b",
       "senses": [
@@ -16446,7 +16520,7 @@
           "definition": "Present only in a first faint form that is likely to grow.",
           "plainLanguageDefinition": "In its first early stage and likely to get bigger.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/254.mp3?v=f084158b310b",
           "examples": [
@@ -16542,10 +16616,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 295169,
-      "etymology": null,
+      "etymology": "From Latin indigens, a form of indigere, to need, which joins indu, within, and egere, to lack. It came to English through Old French.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "It is easily mixed up with indigenous (born in or belonging to a region) and indignant (feeling wronged), but an indigent person has next to no money.",
+      "pairings": [
+        "indigent defendants",
+        "indigent patients",
+        "indigent families"
+      ],
       "audioUrl": "audio/words/147.mp3?v=a99153cae2f0",
       "hookAudioUrl": "audio/hooks/147.mp3?v=f37a2b342909",
       "senses": [
@@ -16554,7 +16632,7 @@
           "definition": "Living in poverty so deep that getting through each day is a struggle.",
           "plainLanguageDefinition": "Having so little money that food and rent are out of reach.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/255.mp3?v=f531e12c3127",
           "examples": [
@@ -16658,10 +16736,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 307103,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Built on Latin dolere, to hurt: Late Latin indolens meant painless, and English took it directly or by way of French. Perhaps in French, the word moved from painless to easygoing and lazy.",
+      "roots": [
+        "dolere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "indolent habits",
+        "indolent life"
+      ],
       "audioUrl": "audio/words/148.mp3?v=448eeb6d3db2",
       "hookAudioUrl": "audio/hooks/148.mp3?v=fc9c16803475",
       "senses": [
@@ -16730,11 +16813,11 @@
         {
           "senseId": 1274,
           "definition": "Of a tumor or other illness, getting worse only slowly and with little discomfort.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a disease, spreading slowly and causing little pain.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1274.mp3?v=b8c0406b98f2",
+          "audioUrl": "audio/definitions/1274.mp3?v=542701fd8ffd",
           "examples": [],
           "distractors": []
         }
@@ -16785,10 +16868,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 304620,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Latin ineffabilis, unutterable: in-, not, plus effabilis, utterable, from effari, to speak out, which is built on fari, to speak.",
+      "roots": [
+        "fari"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ineffable joy",
+        "ineffable beauty",
+        "ineffable mystery"
+      ],
       "audioUrl": "audio/words/149.mp3?v=c11cc48ccf66",
       "hookAudioUrl": "audio/hooks/149.mp3?v=1be8016f457f",
       "senses": [
@@ -16797,7 +16886,7 @@
           "definition": "So vast or moving that every attempt to put it into words falls short.",
           "plainLanguageDefinition": "Too big a feeling or experience for any words to do it justice.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/258.mp3?v=d865c262be51",
           "examples": [
@@ -16852,11 +16941,11 @@
         {
           "senseId": 1275,
           "definition": "Of a name or word, barred from speech by religious law.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a holy name, never to be said aloud under religious rules.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1275.mp3?v=bec8bb40659b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1275.mp3?v=de0ce6ec485e",
           "examples": [],
           "distractors": []
         }
@@ -16899,10 +16988,16 @@
       "syllables": 5,
       "difficultyTier": 2,
       "frequencyRank": 217524,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inexorabilis, unmoved by pleading: in-, not, plus exorabilis, from exorare, to win over by begging, which is built on orare, to plead or pray.",
+      "roots": [
+        "orare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inexorable logic",
+        "inexorable march",
+        "inexorable decline"
+      ],
       "audioUrl": "audio/words/150.mp3?v=752e7c3e79c9",
       "hookAudioUrl": "audio/hooks/150.mp3?v=0432e50a6daf",
       "senses": [
@@ -16911,7 +17006,7 @@
           "definition": "Moving forward in a way that nothing can stop or turn aside.",
           "plainLanguageDefinition": "Always pressing on, and impossible to halt however hard people try.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/260.mp3?v=df2eb224d2cd",
           "examples": [
@@ -16971,11 +17066,11 @@
         {
           "senseId": 1276,
           "definition": "Of a person, deaf to every plea for mercy or a change of mind.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a person, unmoved however much others beg or plead.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1276.mp3?v=f00c9ecef50b",
+          "audioUrl": "audio/definitions/1276.mp3?v=ca67d46fb38f",
           "examples": [],
           "distractors": []
         }
@@ -17022,10 +17117,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 288418,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Late Latin inimicalis, hostile, from inimicus, an enemy, which joins in-, not, and amicus, friend, as in amicable.",
+      "roots": [
+        "amicus"
+      ],
+      "watchOut": "It does not mean inimitable (impossible to copy); inimical means harmful or unfriendly.",
+      "pairings": [
+        "inimical to the interests",
+        "inimical to democracy",
+        "inimical to freedom"
+      ],
       "audioUrl": "audio/words/152.mp3?v=202af6c05449",
       "hookAudioUrl": "audio/hooks/152.mp3?v=56547df8e51b",
       "senses": [
@@ -17034,7 +17135,7 @@
           "definition": "Harmful to something, or tending to hold back its growth or success.",
           "plainLanguageDefinition": "Bad for something, making it hard for it to grow or do well.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/264.mp3?v=148e90a3c5fd",
           "examples": [
@@ -17089,11 +17190,11 @@
         {
           "senseId": 616,
           "definition": "Feeling or showing ill will toward a person or group.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Acting like an enemy toward someone.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/616.mp3?v=7e772f6435af",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/616.mp3?v=ec1694f47aef",
           "examples": [],
           "distractors": []
         }
@@ -17144,10 +17245,15 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 243592,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin iniquitas, unfairness, from iniquus, unequal or unjust: in-, not, plus aequus, equal or fair, as in equal and equanimity.",
+      "roots": [
+        "aequus"
+      ],
+      "watchOut": "It is not the same as inequity, which means unfairness or unequal shares; iniquity means wickedness, a far graver charge.",
+      "pairings": [
+        "den of iniquity",
+        "commit iniquity"
+      ],
       "audioUrl": "audio/words/153.mp3?v=7e1df003cf72",
       "hookAudioUrl": "audio/hooks/153.mp3?v=fd9054934a2d",
       "senses": [
@@ -17156,7 +17262,7 @@
           "definition": "Wicked conduct, especially cruel injustice done to others.",
           "plainLanguageDefinition": "Behavior so unfair and cruel that it counts as evil.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/265.mp3?v=5ee96a96ae25",
           "examples": [
@@ -17260,10 +17366,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 214575,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin innocuus, harmless: in-, not, plus nocuus, harmful, from nocere, to harm, the verb behind noxious and innocent.",
+      "roots": [
+        "nocere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "seemingly innocuous",
+        "innocuous question",
+        "innocuous remark"
+      ],
       "audioUrl": "audio/words/154.mp3?v=101c9ab2bf04",
       "hookAudioUrl": "audio/hooks/154.mp3?v=e3fdd132751a",
       "senses": [
@@ -17372,10 +17484,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 546783,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Latin insipidus, tasteless: in-, not, plus sapidus, tasty, from sapere, to taste, the source of savor.",
+      "roots": [
+        "sapere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "insipid taste",
+        "insipid food",
+        "insipid smile"
+      ],
       "audioUrl": "audio/words/155.mp3?v=41971561239d",
       "hookAudioUrl": "audio/hooks/155.mp3?v=16926556f750",
       "senses": [
@@ -17384,7 +17502,7 @@
           "definition": "So bland in taste or spirit that it leaves no impression at all.",
           "plainLanguageDefinition": "Bland and dull, with no real flavor or spark.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/270.mp3?v=e60b5ef49837",
           "examples": [
@@ -17483,10 +17601,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 222647,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin insularis, of an island, from insula, island, as in peninsula. The sense of narrow and inward-looking pictures a group cut off as if on an island.",
+      "roots": [
+        "insula"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "insular community",
+        "insular culture"
+      ],
       "audioUrl": "audio/words/156.mp3?v=ba758954f07c",
       "hookAudioUrl": "audio/hooks/156.mp3?v=2cd68843a5e8",
       "senses": [
@@ -17495,7 +17618,7 @@
           "definition": "Turned inward as a community or person, so that events and people beyond a small circle hardly register.",
           "plainLanguageDefinition": "Cut off from the wider world and not curious about it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/272.mp3?v=1143a8fcc4d1",
           "examples": [
@@ -17550,11 +17673,11 @@
         {
           "senseId": 1277,
           "definition": "Having to do with islands or the people who live on them.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Found on islands or connected with the people who live on them.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1277.mp3?v=e3dde68347ac",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1277.mp3?v=5373fa300076",
           "examples": [],
           "distractors": []
         }
