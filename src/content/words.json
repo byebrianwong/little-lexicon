@@ -20759,10 +20759,13 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 301020,
-      "etymology": null,
+      "etymology": "From Medieval Latin, from Arabic naẓīr as-samt, \"counterpart of the zenith\": the nadir is the point of the sky straight below, opposite the zenith overhead, so it came to mean the lowest point.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "reached its nadir",
+        "absolute nadir"
+      ],
       "audioUrl": "audio/words/183.mp3?v=ab135086a9ed",
       "hookAudioUrl": "audio/hooks/183.mp3?v=28c42c974230",
       "senses": [
@@ -20820,11 +20823,11 @@
         {
           "senseId": 1292,
           "definition": "In astronomy, the imagined point under an observer's feet, on the part of the sky the earth hides.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In astronomy, the point of the sky straight under your feet, opposite the zenith overhead.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1292.mp3?v=8f904605ac07",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1292.mp3?v=c2facc96249b",
           "examples": [],
           "distractors": []
         }
@@ -20867,10 +20870,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 198098,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin nascens, \"being born\", a form of nasci (\"to be born\"), the verb behind natal and native: a nascent thing has only just come into being.",
+      "roots": [
+        "nasci"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "nascent democracy",
+        "nascent industry",
+        "nascent movement"
+      ],
       "audioUrl": "audio/words/184.mp3?v=9449380a5355",
       "hookAudioUrl": "audio/hooks/184.mp3?v=08b603555c2e",
       "senses": [
@@ -20879,7 +20888,7 @@
           "definition": "In its first stirrings, still far from the form it will take.",
           "plainLanguageDefinition": "Just getting started, and still a small version of what it may become.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/320.mp3?v=9051281db41c",
           "examples": [
@@ -20982,10 +20991,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 376709,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin nebulosus, \"misty, cloudy\", from nebula (\"mist, cloud\"), by way of French: a nebulous plan is one you can only make out as if through fog.",
+      "roots": [
+        "nebula"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "nebulous concept",
+        "nebulous term",
+        "nebulous idea"
+      ],
       "audioUrl": "audio/words/185.mp3?v=86ec46b511f6",
       "hookAudioUrl": "audio/hooks/185.mp3?v=67d4464a5d14",
       "senses": [
@@ -21108,10 +21123,14 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 592789,
-      "etymology": null,
+      "etymology": "From Latin nefarius, from nefas (\"a wrong against divine law\"), which joins ne- (\"not\") to fas (\"what divine law allows\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "nefarious activities",
+        "nefarious purposes",
+        "nefarious schemes"
+      ],
       "audioUrl": "audio/words/186.mp3?v=ddca09c108b5",
       "hookAudioUrl": "audio/hooks/186.mp3?v=b8c3d3ce90c4",
       "senses": [
@@ -21120,7 +21139,7 @@
           "definition": "Wicked in intent and usually unlawful in method.",
           "plainLanguageDefinition": "Meant to hurt people or break the law, often in secret.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/324.mp3?v=2854af8158f1",
           "examples": [
@@ -21219,19 +21238,25 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 682879,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek neophytos, \"newly planted\", from neos (\"new\") and phyton (\"plant\"), through Latin neophytus: a neophyte has only just taken root in a field.",
+      "roots": [
+        "neos",
+        "phyton"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "political neophyte",
+        "young neophyte"
+      ],
       "audioUrl": "audio/words/187.mp3?v=8003fd9a12bb",
-      "hookAudioUrl": "audio/hooks/187.mp3?v=0ed1c857b334",
+      "hookAudioUrl": "audio/hooks/187.mp3?v=d5783a1a1489",
       "senses": [
         {
           "senseId": 325,
           "definition": "A raw recruit to some field, with little practice behind them.",
           "plainLanguageDefinition": "A newcomer who is still finding their feet in some pursuit.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/325.mp3?v=05c5819ff114",
           "examples": [
@@ -21286,11 +21311,11 @@
         {
           "senseId": 327,
           "definition": "A new convert being taught the principles of Christianity by a catechist.",
-          "plainLanguageDefinition": "A person newly converted to Christianity who is receiving religious instruction.",
+          "plainLanguageDefinition": "Someone who has just joined the Christian faith and is still being taught its beliefs.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/327.mp3?v=409e278c7f21",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/327.mp3?v=6b71b49d3d20",
           "examples": [
             {
               "exampleId": 1586,
@@ -21387,7 +21412,7 @@
         }
       ],
       "mnemonics": [
-        "Neophyte comes from Greek neos, new, and phytos, planted: a neophyte is newly planted in a field."
+        "Neophyte comes from Greek neos, new, and phyton, plant: a neophyte is newly planted in a field."
       ]
     },
     {
@@ -21398,10 +21423,13 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2557179,
-      "etymology": null,
+      "etymology": "From Late Latin obfuscatus, \"darkened\", from obfuscare, built on fuscare (\"to darken\"), perhaps by way of French: to obfuscate a point is to throw shadow over it.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "obfuscate the truth",
+        "obfuscate the issue"
+      ],
       "audioUrl": "audio/words/189.mp3?v=42524502e939",
       "hookAudioUrl": "audio/hooks/189.mp3?v=8909e8513be8",
       "senses": [
@@ -21410,7 +21438,7 @@
           "definition": "Bury the meaning of something under confusion, usually to hide what is really going on.",
           "plainLanguageDefinition": "To muddle a message on purpose so the real point stays hidden.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/330.mp3?v=3f6c946e7997",
           "examples": [
@@ -21513,19 +21541,25 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 855043,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin obsequiosus, from obsequium (\"compliance\"), from obsequi (\"to yield to\"), which joins ob (\"toward\") and sequi (\"to follow\"), the verb behind sequel and sequence.",
+      "roots": [
+        "sequi"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "obsequious smile",
+        "obsequious manner",
+        "obsequious servant"
+      ],
       "audioUrl": "audio/words/190.mp3?v=2a6e7210ec6b",
-      "hookAudioUrl": "audio/hooks/190.mp3?v=6410b87f3e8c",
+      "hookAudioUrl": "audio/hooks/190.mp3?v=326421d97769",
       "senses": [
         {
           "senseId": 331,
           "definition": "Lowering oneself before people in power through endless flattery and eager agreement.",
           "plainLanguageDefinition": "Always praising and agreeing with an important person, hoping to win their favor.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/331.mp3?v=7ac72d1f62fc",
           "examples": [
@@ -21613,7 +21647,7 @@
         }
       ],
       "mnemonics": [
-        "Obsequious comes from Latin obsequi, to comply, literally to follow after: an obsequious person follows the boss's every wish."
+        "Obsequious comes from Latin obsequi, to comply, built on sequi, to follow: an obsequious person follows the boss's every wish."
       ]
     },
     {
@@ -21624,10 +21658,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 166815,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin obstinatus, \"resolved\", from obstinare (\"to set one's mind firmly on\"), built on stare (\"to stand\"): an obstinate person stands firm and will not shift.",
+      "roots": [
+        "stare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "obstinate refusal",
+        "obstinate resistance",
+        "obstinate silence"
+      ],
       "audioUrl": "audio/words/191.mp3?v=f4b295ee1dae",
       "hookAudioUrl": "audio/hooks/191.mp3?v=a6f8de87dad0",
       "senses": [
@@ -21636,7 +21676,7 @@
           "definition": "Unmoved by any reason, plea or pressure to give up a position already taken.",
           "plainLanguageDefinition": "Very stubborn; once you decide something, nobody can talk you out of it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/333.mp3?v=c372da63b135",
           "examples": [
@@ -21691,11 +21731,11 @@
         {
           "senseId": 1283,
           "definition": "Of a problem, stain or illness, persisting through every attempt to clear it up.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a stain, illness or problem, refusing to clear up whatever you try.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1283.mp3?v=74ac0bacb19d",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1283.mp3?v=8083bacb5bb5",
           "examples": [],
           "distractors": []
         }
@@ -21750,10 +21790,13 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 382461,
-      "etymology": null,
+      "etymology": "From Latin obtusus, \"blunted, dull\", from obtundere (\"to beat against, to blunt\"): an obtuse mind, like an obtuse angle, has lost its sharp point.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Using obtuse to mean hard to understand, as if it were abstruse, is common but disputed; its core sense is slow to catch on.",
+      "pairings": [
+        "deliberately obtuse",
+        "being obtuse"
+      ],
       "audioUrl": "audio/words/192.mp3?v=84238ac22480",
       "hookAudioUrl": "audio/hooks/192.mp3?v=41b7b764ae23",
       "senses": [
@@ -21762,7 +21805,7 @@
           "definition": "Dense about hints and implications that most people pick up at once.",
           "plainLanguageDefinition": "Not catching on, even when the point is right in front of you.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/336.mp3?v=b963b9e5cc8c",
           "examples": [
@@ -21817,11 +21860,11 @@
         {
           "senseId": 1284,
           "definition": "Of an angle, opening past 90 degrees but short of 180.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of an angle, measuring somewhere from just over 90 degrees up to just under 180.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1284.mp3?v=48ce730dc5f3",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1284.mp3?v=2aed86f6faad",
           "examples": [],
           "distractors": []
         },
@@ -21887,10 +21930,15 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 983899,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin officiosus, \"obliging, kind\", from officium (\"service, duty\"), the source of office: an officious person is too eager to be of service.",
+      "roots": [
+        "officium"
+      ],
+      "watchOut": "Officious does not mean official: it describes someone who takes over matters that are not theirs to manage.",
+      "pairings": [
+        "officious manner",
+        "officious interference"
+      ],
       "audioUrl": "audio/words/193.mp3?v=bc74fda5a31f",
       "hookAudioUrl": "audio/hooks/193.mp3?v=be74e2d07723",
       "senses": [
@@ -21899,7 +21947,7 @@
           "definition": "Intrusive in a meddling or offensive manner.",
           "plainLanguageDefinition": "Being overly eager to give unwanted help or advice in an annoying way.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/339.mp3?v=db314964cf88",
           "examples": [
@@ -21998,10 +22046,17 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 266960,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Old French from Latin onerosus, built on onus (\"burden\"), stem oner-, which also gives English onus and exonerate.",
+      "roots": [
+        "onus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "onerous task",
+        "onerous burden",
+        "onerous duties",
+        "onerous conditions"
+      ],
       "audioUrl": "audio/words/194.mp3?v=344d3f0af01a",
       "hookAudioUrl": "audio/hooks/194.mp3?v=4c5f347297d9",
       "senses": [
@@ -22010,7 +22065,7 @@
           "definition": "Weighing on a person as a burden, through the labor, expense or duty it requires.",
           "plainLanguageDefinition": "Hard and tiring to do, like a heavy load you have to carry.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/340.mp3?v=ca6c3406a930",
           "examples": [
@@ -22110,10 +22165,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 75580,
-      "etymology": null,
+      "etymology": "From Latin opacus, \"shaded, dark\", a word of unknown source, later influenced by French opaque: what is opaque lets no light, or no understanding, through.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "opaque process",
+        "deliberately opaque",
+        "opaque to outsiders"
+      ],
       "audioUrl": "audio/words/195.mp3?v=fe013efbba78",
       "hookAudioUrl": "audio/hooks/195.mp3?v=2d303c194737",
       "senses": [
@@ -22182,11 +22241,11 @@
         {
           "senseId": 1286,
           "definition": "Of a surface or substance, keeping light out entirely.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a material, blocking light so that nothing can be seen through it.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1286.mp3?v=9a593af3f65f",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1286.mp3?v=ab91e7cd1be7",
           "examples": [],
           "distractors": []
         }
@@ -22245,10 +22304,14 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 989535,
-      "etymology": null,
+      "etymology": "From Latin opprobrium, \"reproach, disgrace\", from opprobrare (\"to taunt\"), which joins ob- (\"toward\") to probrum (\"shame, insult\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "public opprobrium",
+        "moral opprobrium",
+        "social opprobrium"
+      ],
       "audioUrl": "audio/words/196.mp3?v=b89c57bbeb74",
       "hookAudioUrl": "audio/hooks/196.mp3?v=9c0204281444",
       "senses": [
@@ -22257,7 +22320,7 @@
           "definition": "Scornful public blame aimed at a person or group for behavior seen as disgraceful.",
           "plainLanguageDefinition": "A harsh wave of public shame and criticism directed at someone.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/343.mp3?v=cddd4501e2bf",
           "examples": [
@@ -22424,10 +22487,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 423384,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin ostentatus, a form of ostentare (\"to show off, to display\"), which repeats the action of ostendere (\"to show\"), also the source of ostensible.",
+      "roots": [
+        "ostendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ostentatious display",
+        "ostentatious wealth",
+        "ostentatious luxury"
+      ],
       "audioUrl": "audio/words/197.mp3?v=37bfb4e725b4",
       "hookAudioUrl": "audio/hooks/197.mp3?v=7ff7b00690d6",
       "senses": [
@@ -22436,7 +22505,7 @@
           "definition": "Showing off riches or importance so openly that the display itself becomes the point.",
           "plainLanguageDefinition": "Flashy on purpose, to let everyone see how much money or power you have.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/345.mp3?v=a9d4cc6690b9",
           "examples": [
@@ -22535,7 +22604,7 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2108441,
-      "etymology": null,
+      "etymology": "From Latin palliatus, \"cloaked\", from pallium (\"cloak\"), either directly or through French: to palliate a fault or a pain is to cover it without removing it.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -22602,11 +22671,11 @@
         {
           "senseId": 1287,
           "definition": "Bring a sick person relief from pain or other symptoms while the disease itself goes on.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To make an illness easier to bear by easing its symptoms, not its cause.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1287.mp3?v=3b11c6ff48e7",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1287.mp3?v=b041b864412a",
           "examples": [],
           "distractors": []
         }
@@ -22657,10 +22726,13 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 280200,
-      "etymology": null,
+      "etymology": "From Ancient Greek panakeia, through Latin, from panakes (\"all-healing\"), made of pan (\"all\") and akos (\"cure\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "not a panacea",
+        "universal panacea"
+      ],
       "audioUrl": "audio/words/199.mp3?v=8075a8fbac15",
       "hookAudioUrl": "audio/hooks/199.mp3?v=24f553608077",
       "senses": [
@@ -22757,10 +22829,13 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 410100,
-      "etymology": null,
+      "etymology": "Through French from Old Italian paragone, from paragonare (\"to test on a touchstone\"), perhaps from a Greek verb meaning \"to sharpen\": a paragon is the standard others are tested against.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "paragon of virtue",
+        "moral paragon"
+      ],
       "audioUrl": "audio/words/200.mp3?v=fa2390571d61",
       "hookAudioUrl": "audio/hooks/200.mp3?v=d4bc7551aa25",
       "senses": [
@@ -22856,7 +22931,7 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 477254,
-      "etymology": null,
+      "etymology": "From Latin parsimonia, \"thrift\", formed from parcere (\"to spare, to save\"), a verb whose own source is uncertain.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -22868,7 +22943,7 @@
           "definition": "Extreme care in spending money; reluctance to spend money unnecessarily.",
           "plainLanguageDefinition": "Being very careful with money and refusing to spend it unless totally necessary.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/352.mp3?v=dd87162a9128",
           "examples": [
@@ -22928,11 +23003,11 @@
         {
           "senseId": 601,
           "definition": "The preference, in science or argument, for the simplest explanation that accounts for the facts.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In science and reasoning, the rule of choosing the simplest explanation that fits what is known.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/601.mp3?v=49109fcfb2d0",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/601.mp3?v=c70522767cf4",
           "examples": [],
           "distractors": []
         }
@@ -22987,10 +23062,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 182668,
-      "etymology": null,
+      "etymology": "From Latin paucitas, \"fewness\", partly by way of French, built on paucus (\"few\"), which is related to English few.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "paucity of data",
+        "paucity of evidence",
+        "relative paucity"
+      ],
       "audioUrl": "audio/words/202.mp3?v=4843991d8e5a",
       "hookAudioUrl": "audio/hooks/202.mp3?v=cd9b48113a7c",
       "senses": [
@@ -22999,7 +23078,7 @@
           "definition": "A supply or count too small to meet what is needed.",
           "plainLanguageDefinition": "When there just isn't enough of something to go around.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/354.mp3?v=aeed15fbff51",
           "examples": [
@@ -23098,10 +23177,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 422491,
-      "etymology": null,
+      "etymology": "From pedant, which came through French from Italian pedante, \"schoolmaster\": in English a pedant was once simply a teacher, before the word came to mean a stickler for petty rules.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pedantic about",
+        "pedantic manner",
+        "pedantic style"
+      ],
       "audioUrl": "audio/words/203.mp3?v=01997e0f39be",
       "hookAudioUrl": "audio/hooks/203.mp3?v=1290dd2d7227",
       "senses": [
@@ -23110,7 +23193,7 @@
           "definition": "Treating minor points of rule or fact as if they mattered most, often to display one's learning.",
           "plainLanguageDefinition": "Always correcting people on small points that hardly matter, like a fussy know-it-all.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/355.mp3?v=4f1164d76221",
           "examples": [
@@ -23193,10 +23276,15 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 269139,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French penchant, \"leaning\", from pencher (\"to tilt, to lean\"), which goes back to Latin pendere (\"to hang\"), as in pendulum: a penchant is a leaning toward something.",
+      "roots": [
+        "pendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "a penchant for",
+        "strong penchant"
+      ],
       "audioUrl": "audio/words/204.mp3?v=32fd4ed41fc9",
       "hookAudioUrl": "audio/hooks/204.mp3?v=a856235ea39a",
       "senses": [
@@ -23304,10 +23392,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 838636,
-      "etymology": null,
+      "etymology": "From Latin penuria, \"want, scarcity\". Where the Latin word came from is uncertain; it may be linked to paene (\"almost\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "died in penury",
+        "lived in penury",
+        "abject penury"
+      ],
       "audioUrl": "audio/words/205.mp3?v=f86c3f520939",
       "hookAudioUrl": "audio/hooks/205.mp3?v=5c556726af70",
       "senses": [
@@ -23316,7 +23408,7 @@
           "definition": "Poverty so severe that even food, heat and shelter are out of reach.",
           "plainLanguageDefinition": "Being so poor that you struggle to pay for the basics of life.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/357.mp3?v=0512a8c3080f",
           "examples": [
@@ -23411,19 +23503,24 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 928961,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin perfidiosus, from perfidia (\"treachery\"), from perfidus (\"faithless\"), built on fides (\"faith\"), the root of fidelity: a perfidious person breaks faith.",
+      "roots": [
+        "fides"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "perfidious Albion",
+        "perfidious conduct"
+      ],
       "audioUrl": "audio/words/206.mp3?v=00765b67c87f",
-      "hookAudioUrl": "audio/hooks/206.mp3?v=723d973a1c3a",
+      "hookAudioUrl": "audio/hooks/206.mp3?v=7d5cadcda5df",
       "senses": [
         {
           "senseId": 358,
           "definition": "Given to breaking faith with those who depend on one's loyalty.",
           "plainLanguageDefinition": "Likely to turn on the friends or partners who trusted you.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/358.mp3?v=a83419ba4286",
           "examples": [
@@ -23515,7 +23612,7 @@
         }
       ],
       "mnemonics": [
-        "Perfidious holds fid, from Latin fides (faith), as in fidelity. The per- here means astray, as in perjury, so a perfidious person strays from faith."
+        "Perfidious holds fid, from Latin fides (faith), as in fidelity: a perfidious person breaks faith."
       ]
     },
     {
@@ -23526,10 +23623,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 339299,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin perfunctorius, \"careless\", from perfungi (\"to carry through, to fulfill\"), built on fungi (\"to perform\"), as in function: a perfunctory act is aimed only at getting the duty over.",
+      "roots": [
+        "fungi"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "perfunctory nod",
+        "perfunctory kiss",
+        "perfunctory manner"
+      ],
       "audioUrl": "audio/words/207.mp3?v=093b0561433a",
       "hookAudioUrl": "audio/hooks/207.mp3?v=bf642e32bf8b",
       "senses": [

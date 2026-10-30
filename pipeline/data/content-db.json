@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:20:07.876Z"
+    "updatedAt": "2026-10-30T06:27:55.895Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1029,
-    "reviews": 1162
+    "mnemonics": 1032,
+    "reviews": 1186
   },
   "words": [
     {
@@ -3173,8 +3173,14 @@
       "syllables": 2,
       "frequency_rank": 301020,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin, from Arabic naẓīr as-samt, \"counterpart of the zenith\": the nadir is the point of the sky straight below, opposite the zenith overhead, so it came to mean the lowest point.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "reached its nadir",
+        "absolute nadir"
+      ]
     },
     {
       "id": 184,
@@ -3184,8 +3190,17 @@
       "syllables": 2,
       "frequency_rank": 198098,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin nascens, \"being born\", a form of nasci (\"to be born\"), the verb behind natal and native: a nascent thing has only just come into being.",
+      "audio_url": null,
+      "roots": [
+        "nasci"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "nascent democracy",
+        "nascent industry",
+        "nascent movement"
+      ]
     },
     {
       "id": 185,
@@ -3195,8 +3210,17 @@
       "syllables": 3,
       "frequency_rank": 376709,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin nebulosus, \"misty, cloudy\", from nebula (\"mist, cloud\"), by way of French: a nebulous plan is one you can only make out as if through fog.",
+      "audio_url": null,
+      "roots": [
+        "nebula"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "nebulous concept",
+        "nebulous term",
+        "nebulous idea"
+      ]
     },
     {
       "id": 186,
@@ -3206,8 +3230,15 @@
       "syllables": 4,
       "frequency_rank": 592789,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin nefarius, from nefas (\"a wrong against divine law\"), which joins ne- (\"not\") to fas (\"what divine law allows\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "nefarious activities",
+        "nefarious purposes",
+        "nefarious schemes"
+      ]
     },
     {
       "id": 187,
@@ -3217,8 +3248,17 @@
       "syllables": 3,
       "frequency_rank": 682879,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek neophytos, \"newly planted\", from neos (\"new\") and phyton (\"plant\"), through Latin neophytus: a neophyte has only just taken root in a field.",
+      "audio_url": null,
+      "roots": [
+        "neos",
+        "phyton"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "political neophyte",
+        "young neophyte"
+      ]
     },
     {
       "id": 188,
@@ -3240,8 +3280,14 @@
       "syllables": 3,
       "frequency_rank": 2557179,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin obfuscatus, \"darkened\", from obfuscare, built on fuscare (\"to darken\"), perhaps by way of French: to obfuscate a point is to throw shadow over it.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "obfuscate the truth",
+        "obfuscate the issue"
+      ]
     },
     {
       "id": 190,
@@ -3251,8 +3297,17 @@
       "syllables": 4,
       "frequency_rank": 855043,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin obsequiosus, from obsequium (\"compliance\"), from obsequi (\"to yield to\"), which joins ob (\"toward\") and sequi (\"to follow\"), the verb behind sequel and sequence.",
+      "audio_url": null,
+      "roots": [
+        "sequi"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "obsequious smile",
+        "obsequious manner",
+        "obsequious servant"
+      ]
     },
     {
       "id": 191,
@@ -3262,8 +3317,17 @@
       "syllables": 3,
       "frequency_rank": 166815,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin obstinatus, \"resolved\", from obstinare (\"to set one's mind firmly on\"), built on stare (\"to stand\"): an obstinate person stands firm and will not shift.",
+      "audio_url": null,
+      "roots": [
+        "stare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "obstinate refusal",
+        "obstinate resistance",
+        "obstinate silence"
+      ]
     },
     {
       "id": 192,
@@ -3273,8 +3337,14 @@
       "syllables": 2,
       "frequency_rank": 382461,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin obtusus, \"blunted, dull\", from obtundere (\"to beat against, to blunt\"): an obtuse mind, like an obtuse angle, has lost its sharp point.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Using obtuse to mean hard to understand, as if it were abstruse, is common but disputed; its core sense is slow to catch on.",
+      "pairings": [
+        "deliberately obtuse",
+        "being obtuse"
+      ]
     },
     {
       "id": 193,
@@ -3284,8 +3354,16 @@
       "syllables": 3,
       "frequency_rank": 983899,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin officiosus, \"obliging, kind\", from officium (\"service, duty\"), the source of office: an officious person is too eager to be of service.",
+      "audio_url": null,
+      "roots": [
+        "officium"
+      ],
+      "watch_out": "Officious does not mean official: it describes someone who takes over matters that are not theirs to manage.",
+      "pairings": [
+        "officious manner",
+        "officious interference"
+      ]
     },
     {
       "id": 194,
@@ -3295,8 +3373,18 @@
       "syllables": 3,
       "frequency_rank": 266960,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Old French from Latin onerosus, built on onus (\"burden\"), stem oner-, which also gives English onus and exonerate.",
+      "audio_url": null,
+      "roots": [
+        "onus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "onerous task",
+        "onerous burden",
+        "onerous duties",
+        "onerous conditions"
+      ]
     },
     {
       "id": 195,
@@ -3306,8 +3394,15 @@
       "syllables": 2,
       "frequency_rank": 75580,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin opacus, \"shaded, dark\", a word of unknown source, later influenced by French opaque: what is opaque lets no light, or no understanding, through.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "opaque process",
+        "deliberately opaque",
+        "opaque to outsiders"
+      ]
     },
     {
       "id": 196,
@@ -3317,8 +3412,15 @@
       "syllables": 4,
       "frequency_rank": 989535,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin opprobrium, \"reproach, disgrace\", from opprobrare (\"to taunt\"), which joins ob- (\"toward\") to probrum (\"shame, insult\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "public opprobrium",
+        "moral opprobrium",
+        "social opprobrium"
+      ]
     },
     {
       "id": 197,
@@ -3328,8 +3430,17 @@
       "syllables": 4,
       "frequency_rank": 423384,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ostentatus, a form of ostentare (\"to show off, to display\"), which repeats the action of ostendere (\"to show\"), also the source of ostensible.",
+      "audio_url": null,
+      "roots": [
+        "ostendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ostentatious display",
+        "ostentatious wealth",
+        "ostentatious luxury"
+      ]
     },
     {
       "id": 198,
@@ -3339,8 +3450,11 @@
       "syllables": 3,
       "frequency_rank": 2108441,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin palliatus, \"cloaked\", from pallium (\"cloak\"), either directly or through French: to palliate a fault or a pain is to cover it without removing it.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 199,
@@ -3350,8 +3464,14 @@
       "syllables": 4,
       "frequency_rank": 280200,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek panakeia, through Latin, from panakes (\"all-healing\"), made of pan (\"all\") and akos (\"cure\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "not a panacea",
+        "universal panacea"
+      ]
     },
     {
       "id": 200,
@@ -3361,8 +3481,14 @@
       "syllables": 3,
       "frequency_rank": 410100,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Old Italian paragone, from paragonare (\"to test on a touchstone\"), perhaps from a Greek verb meaning \"to sharpen\": a paragon is the standard others are tested against.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "paragon of virtue",
+        "moral paragon"
+      ]
     },
     {
       "id": 201,
@@ -3372,8 +3498,11 @@
       "syllables": 4,
       "frequency_rank": 477254,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin parsimonia, \"thrift\", formed from parcere (\"to spare, to save\"), a verb whose own source is uncertain.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 202,
@@ -3383,8 +3512,15 @@
       "syllables": 3,
       "frequency_rank": 182668,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin paucitas, \"fewness\", partly by way of French, built on paucus (\"few\"), which is related to English few.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "paucity of data",
+        "paucity of evidence",
+        "relative paucity"
+      ]
     },
     {
       "id": 203,
@@ -3394,8 +3530,15 @@
       "syllables": 3,
       "frequency_rank": 422491,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From pedant, which came through French from Italian pedante, \"schoolmaster\": in English a pedant was once simply a teacher, before the word came to mean a stickler for petty rules.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "pedantic about",
+        "pedantic manner",
+        "pedantic style"
+      ]
     },
     {
       "id": 204,
@@ -3405,8 +3548,16 @@
       "syllables": 2,
       "frequency_rank": 269139,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French penchant, \"leaning\", from pencher (\"to tilt, to lean\"), which goes back to Latin pendere (\"to hang\"), as in pendulum: a penchant is a leaning toward something.",
+      "audio_url": null,
+      "roots": [
+        "pendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "a penchant for",
+        "strong penchant"
+      ]
     },
     {
       "id": 205,
@@ -3416,8 +3567,15 @@
       "syllables": 3,
       "frequency_rank": 838636,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin penuria, \"want, scarcity\". Where the Latin word came from is uncertain; it may be linked to paene (\"almost\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "died in penury",
+        "lived in penury",
+        "abject penury"
+      ]
     },
     {
       "id": 206,
@@ -3427,8 +3585,16 @@
       "syllables": 4,
       "frequency_rank": 928961,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin perfidiosus, from perfidia (\"treachery\"), from perfidus (\"faithless\"), built on fides (\"faith\"), the root of fidelity: a perfidious person breaks faith.",
+      "audio_url": null,
+      "roots": [
+        "fides"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "perfidious Albion",
+        "perfidious conduct"
+      ]
     },
     {
       "id": 207,
@@ -3438,8 +3604,17 @@
       "syllables": 4,
       "frequency_rank": 339299,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin perfunctorius, \"careless\", from perfungi (\"to carry through, to fulfill\"), built on fungi (\"to perform\"), as in function: a perfunctory act is aimed only at getting the duty over.",
+      "audio_url": null,
+      "roots": [
+        "fungi"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "perfunctory nod",
+        "perfunctory kiss",
+        "perfunctory manner"
+      ]
     },
     {
       "id": 208,
@@ -9402,7 +9577,7 @@
       "definition": "In its first stirrings, still far from the form it will take.",
       "plain_language_definition": "Just getting started, and still a small version of what it may become.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 321,
@@ -9418,7 +9593,7 @@
       "definition": "Wicked in intent and usually unlawful in method.",
       "plain_language_definition": "Meant to hurt people or break the law, often in secret.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 325,
@@ -9426,15 +9601,16 @@
       "definition": "A raw recruit to some field, with little practice behind them.",
       "plain_language_definition": "A newcomer who is still finding their feet in some pursuit.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 327,
       "word_id": 187,
       "definition": "A new convert being taught the principles of Christianity by a catechist.",
-      "plain_language_definition": "A person newly converted to Christianity who is receiving religious instruction.",
+      "plain_language_definition": "Someone who has just joined the Christian faith and is still being taught its beliefs.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 328,
@@ -9450,7 +9626,7 @@
       "definition": "Bury the meaning of something under confusion, usually to hide what is really going on.",
       "plain_language_definition": "To muddle a message on purpose so the real point stays hidden.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 331,
@@ -9458,7 +9634,7 @@
       "definition": "Lowering oneself before people in power through endless flattery and eager agreement.",
       "plain_language_definition": "Always praising and agreeing with an important person, hoping to win their favor.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 333,
@@ -9466,7 +9642,7 @@
       "definition": "Unmoved by any reason, plea or pressure to give up a position already taken.",
       "plain_language_definition": "Very stubborn; once you decide something, nobody can talk you out of it.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 336,
@@ -9474,7 +9650,7 @@
       "definition": "Dense about hints and implications that most people pick up at once.",
       "plain_language_definition": "Not catching on, even when the point is right in front of you.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 339,
@@ -9482,7 +9658,7 @@
       "definition": "Intrusive in a meddling or offensive manner.",
       "plain_language_definition": "Being overly eager to give unwanted help or advice in an annoying way.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 340,
@@ -9490,7 +9666,7 @@
       "definition": "Weighing on a person as a burden, through the labor, expense or duty it requires.",
       "plain_language_definition": "Hard and tiring to do, like a heavy load you have to carry.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 341,
@@ -9506,7 +9682,7 @@
       "definition": "Scornful public blame aimed at a person or group for behavior seen as disgraceful.",
       "plain_language_definition": "A harsh wave of public shame and criticism directed at someone.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 344,
@@ -9514,7 +9690,8 @@
       "definition": "A state of extreme dishonor.",
       "plain_language_definition": "A deep and lasting sense of shame or humiliation.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 345,
@@ -9522,7 +9699,7 @@
       "definition": "Showing off riches or importance so openly that the display itself becomes the point.",
       "plain_language_definition": "Flashy on purpose, to let everyone see how much money or power you have.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 347,
@@ -9554,7 +9731,7 @@
       "definition": "Extreme care in spending money; reluctance to spend money unnecessarily.",
       "plain_language_definition": "Being very careful with money and refusing to spend it unless totally necessary.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 354,
@@ -9562,7 +9739,7 @@
       "definition": "A supply or count too small to meet what is needed.",
       "plain_language_definition": "When there just isn't enough of something to go around.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 355,
@@ -9570,7 +9747,7 @@
       "definition": "Treating minor points of rule or fact as if they mattered most, often to display one's learning.",
       "plain_language_definition": "Always correcting people on small points that hardly matter, like a fussy know-it-all.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 356,
@@ -9586,7 +9763,7 @@
       "definition": "Poverty so severe that even food, heat and shelter are out of reach.",
       "plain_language_definition": "Being so poor that you struggle to pay for the basics of life.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 358,
@@ -9594,7 +9771,7 @@
       "definition": "Given to breaking faith with those who depend on one's loyalty.",
       "plain_language_definition": "Likely to turn on the friends or partners who trusted you.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 359,
@@ -10664,9 +10841,10 @@
       "id": 601,
       "word_id": 201,
       "definition": "The preference, in science or argument, for the simplest explanation that accounts for the facts.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In science and reasoning, the rule of choosing the simplest explanation that fits what is known.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 602,
@@ -10735,7 +10913,8 @@
       "definition": "A plant that is found in an area where it had not been recorded previously.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 628,
@@ -14389,17 +14568,19 @@
       "id": 1283,
       "word_id": 191,
       "definition": "Of a problem, stain or illness, persisting through every attempt to clear it up.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a stain, illness or problem, refusing to clear up whatever you try.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1284,
       "word_id": 192,
       "definition": "Of an angle, opening past 90 degrees but short of 180.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of an angle, measuring somewhere from just over 90 degrees up to just under 180.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1285,
@@ -14407,23 +14588,26 @@
       "definition": "Of a shape or tip, rounded or flattened rather than coming to a sharp point.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1286,
       "word_id": 195,
       "definition": "Of a surface or substance, keeping light out entirely.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a material, blocking light so that nothing can be seen through it.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1287,
       "word_id": 198,
       "definition": "Bring a sick person relief from pain or other symptoms while the disease itself goes on.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To make an illness easier to bear by easing its symptoms, not its cause.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1288,
@@ -14465,9 +14649,10 @@
       "id": 1292,
       "word_id": 183,
       "definition": "In astronomy, the imagined point under an observer's feet, on the part of the sky the earth hides.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In astronomy, the point of the sky straight under your feet, opposite the zenith overhead.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1293,
@@ -14475,7 +14660,8 @@
       "definition": "Of the vast glowing clouds of gas that drift between the stars.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1294,
@@ -68161,14 +68347,6 @@
       "revision": 3
     },
     {
-      "id": 575,
-      "word_id": 187,
-      "text": "Neophyte comes from Greek neos, new, and phytos, planted: a neophyte is newly planted in a field.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 576,
       "word_id": 188,
       "text": "Obdurate comes from Latin obdurare, to harden, from durus, hard: an obdurate heart has hardened and will not bend.",
@@ -68180,14 +68358,6 @@
       "id": 577,
       "word_id": 189,
       "text": "Obfuscate comes from Latin fuscus, dark: to obfuscate is to darken a point until no one can see it clearly.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 578,
-      "word_id": 190,
-      "text": "Obsequious comes from Latin obsequi, to comply, literally to follow after: an obsequious person follows the boss's every wish.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -71177,14 +71347,6 @@
       "revision": 3
     },
     {
-      "id": 985,
-      "word_id": 206,
-      "text": "Perfidious holds fid, from Latin fides (faith), as in fidelity. The per- here means astray, as in perjury, so a perfidious person strays from faith.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 986,
       "word_id": 186,
       "text": "Nefarious comes from Latin nefas, a crime against divine law (ne-, not, plus fas, what is right): a nefarious act is the opposite of what is right.",
@@ -71532,6 +71694,30 @@
       "id": 1029,
       "word_id": 131,
       "text": "Harangue came through French from Old Italian aringa, linked to a word for a public assembly. It also starts like harass, which is what a harangue does to its listeners.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1030,
+      "word_id": 187,
+      "text": "Neophyte comes from Greek neos, new, and phyton, plant: a neophyte is newly planted in a field.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1031,
+      "word_id": 190,
+      "text": "Obsequious comes from Latin obsequi, to comply, built on sequi, to follow: an obsequious person follows the boss's every wish.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1032,
+      "word_id": 206,
+      "text": "Perfidious holds fid, from Latin fides (faith), as in fidelity: a perfidious person breaks faith.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -121092,8 +121278,8 @@
     },
     {
       "path": "definitions/1292.mp3",
-      "bytes": 25391,
-      "key": "15acde332ae33187",
+      "bytes": 22152,
+      "key": "45470f0a0e1be93b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121134,8 +121320,8 @@
     },
     {
       "path": "definitions/327.mp3",
-      "bytes": 22779,
-      "key": "c6dba285418a7126",
+      "bytes": 19749,
+      "key": "6d2afa116c8d8880",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121169,8 +121355,8 @@
     },
     {
       "path": "definitions/1283.mp3",
-      "bytes": 20898,
-      "key": "71ae8874c8739858",
+      "bytes": 19540,
+      "key": "488ffc16dcad80ec",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121183,8 +121369,8 @@
     },
     {
       "path": "definitions/1284.mp3",
-      "bytes": 20480,
-      "key": "609a7b1fdf37e976",
+      "bytes": 26227,
+      "key": "ec1e36c8943d8445",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121218,8 +121404,8 @@
     },
     {
       "path": "definitions/1286.mp3",
-      "bytes": 15987,
-      "key": "83accd09e73179e7",
+      "bytes": 16927,
+      "key": "f05f9a0226cf96e8",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121253,8 +121439,8 @@
     },
     {
       "path": "definitions/1287.mp3",
-      "bytes": 23510,
-      "key": "520b88b6f9c5cb23",
+      "bytes": 18808,
+      "key": "52f668440829c648",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121282,7 +121468,7 @@
     {
       "path": "definitions/601.mp3",
       "bytes": 24869,
-      "key": "dd966ff47d183863",
+      "key": "3d3ea3cc86d23450",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126454,8 +126640,8 @@
     },
     {
       "path": "hooks/187.mp3",
-      "bytes": 27376,
-      "key": "c5b74cb5bedb68eb",
+      "bytes": 26854,
+      "key": "c9a652f26f378a3a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126468,8 +126654,8 @@
     },
     {
       "path": "hooks/190.mp3",
-      "bytes": 35109,
-      "key": "87b73d6e9de756a3",
+      "bytes": 35422,
+      "key": "d2ae95fe422c7901",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126580,8 +126766,8 @@
     },
     {
       "path": "hooks/206.mp3",
-      "bytes": 40647,
-      "key": "b6cafaece2600794",
+      "bytes": 27167,
+      "key": "8dd235bdec7f1228",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -168864,6 +169050,763 @@
         "alsoMeans": 5
       },
       "checker_notes": "Weakest point: none. The origin matches Wiktionary and gives the step to today's meaning; Wiktionary's 'uncertain origin' hedge is about insula itself, which the origin does not go into. Oxford and Cambridge mark the main sense disapproving; only Oxford marks the island sense (specialist), so null there is fine. Pairings are common (insular community 6.5, insular culture 3.9 per billion)."
+    },
+    {
+      "id": 1163,
+      "word_id": 183,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary nadir (Medieval Latin, from Arabic naẓīr as-samt, naẓīr \"counterpart\", as-samt \"the zenith\") and AHD (Arabic naẓīr, \"opposite (the zenith)\"). No root: nothing else in English shows naẓīr. Hook unchanged: its gloss of nazir as \"opposite\" is AHD's, and Wiktionary's \"counterpart\" means the same point here. Tone null: Oxford and Cambridge mark it formal, Longman marks it \"written\", so the all-three rule for formal is not met. Pairings: \"reached its nadir\" 16.9 per billion, \"absolute nadir\" 2.6 (the tool's top adjective). The astronomy sense is shown as technical (Cambridge marks it specialized); it explains the zenith contrast the hook relies on.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Medieval Latin from Arabic nazir as-samt, 'counterpart of the zenith'); AHD, Oxford and Dictionary.com gloss nazir as 'opposite', so the hook holds. Tone null is right: Oxford and Cambridge say formal, Longman only 'written'. Weakest points: 'absolute nadir' (2.6 per billion) is an intensifier pairing, where 'at its nadir' (9.2) or 'reached a nadir' (8.9) show use better; the astronomy sense is borderline as one a general reader often meets, though the origin leans on it, and its plain shares the standard 'point directly below the observer, opposite the zenith' frame (AHD, Cambridge, WordUp)."
+    },
+    {
+      "id": 1164,
+      "word_id": 184,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary nascent (Latin nāscēns, present participle of nāscor, \"to be born\") and AHD (present participle of nāscī). Root nasci in the infinitive form; natal and native come from its participle natus. Hook claims (nasci, natal, renaissance) are true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from Google Books 2010 to 2022: nascent democracy 10.2, industry 9.5, movement 8.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All checks pass. Formal is marked by all three (Oxford, Cambridge at the headword, Longman). Pairings are common (democracy 10.2, industry 9.5, movement 8.4). Weakest point: 'a form of nasci' is vague for a present participle, and natal and native show the nat- stem rather than nasc-, which the origin handles by calling nasci 'the verb behind' them."
+    },
+    {
+      "id": 1165,
+      "word_id": 185,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary nebulous (Middle English, from Middle French nebuleus, from Latin nebulōsus \"full of mist\", from nebula \"mist, vapour, cloud\") and AHD. The tool's \"obscure\" hedge note comes from a gloss of the Old English cognate, not from a doubt about the origin, which I leave out. Root nebula (nebula, nebulizer). Hook (Latin nebula, mist) true; unchanged. Tone null: Oxford and Longman mark it formal, Cambridge does not. Pairings: nebulous concept 17.4, term 7.2, idea 5.0 per billion. The astronomy sense (of nebulae) is not shown: learner's dictionaries leave it out and its corpus hits are mostly old astronomy books (\"nebulous matter\"). Round 2: the closing clause followed Longman's \"an idea that is nebulous is ... no definite edges\" frame; rewritten as a plan seen as if through fog.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new step to today's meaning ('a nebulous plan is one you can only make out as if through fog') no longer follows Longman's frame or its 'no definite edges', and no cached dictionary uses it ('nebulous plan' is only a WordUp example phrase, and a common pairing). The facts are unchanged and right (Latin nebulosus from nebula, via Middle French). Weakest point: none of note; the rest stands as in round 1."
+    },
+    {
+      "id": 1166,
+      "word_id": 186,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary nefarious (Latin nefārius, from nefās \"contrary to divine law\", from ne- \"not\" + fās \"divine law\") and AHD (fās, divine law). No root: fas shows in no other common English word. Hook (nefas, ne- plus fas \"what is right\") agrees; unchanged. Tone formal: all three mark it formal. Pairings: activities 36.7, purposes 33.8, schemes 7.7 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (nefarius from nefas, ne- plus fas). Formal is marked by all three. Pairings are strong (activities 36.7, purposes 33.8, schemes 7.7). Weakest point: the hook glosses fas as 'what is right' where Wiktionary gives 'divine law'; Lewis and Short allow it, so it stays true."
+    },
+    {
+      "id": 1167,
+      "word_id": 187,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary neophyte (Latin neophytus, from Ancient Greek neophytos \"newly planted\", from neos \"new\" + phyton \"plant\") and AHD (-phutos, \"planted\"). Roots neos (neon, neolithic, neologism) and phyton (phytoplankton, epiphyte). Hook (neos new, phytos planted) matches AHD; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: political neophyte 3.8, young neophyte 1.8 per billion (young is generic; the tool's top two adjectives). The religious sense is shown with a new plain definition: Oxford and Longman list a new-convert sense and the corpus has many \"mission\" and \"Christian\" neophytes. The plant sense is rare and stays hidden. Round 2: hook changed from \"phytos, planted\" to \"phyton, plant\" so it names the same form and gloss as the origin; the rest of the hook is unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Round 2: the hook now names phyton, 'plant', as the origin does, and the claim is true (Wiktionary: neos plus phyton, 'newly planted'). Pairings 4: 'young neophyte' (1.8) is generic. Also means 4: the religious sense is current and its plain is accurate for the record's Christian definition, though learner's dictionaries give it for any religion."
+    },
+    {
+      "id": 1168,
+      "word_id": 189,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary obfuscate (either from Middle French obfusquer or directly from Late Latin obfuscātus, from ob- + fuscō \"to darken\"), the Latin page fuscō (from fuscus \"dark, dusky\"), and AHD. The French route is hedged as \"perhaps\", as Wiktionary gives both. No root: fuscus shows only in rare fuscous. Hook (Latin fuscus, dark) is true via fuscō; unchanged. Tone formal: all three mark it formal. Pairings: obfuscate the truth 2.5, the issue 1.7 per billion (obfuscated code is the computing use, left out). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's either/or (Middle French or directly Late Latin) as 'perhaps by way of French'; root list rightly empty. Formal is marked by all three. Weakest point: the hook names fuscus 'dark' while the origin names fuscare 'to darken'; Wiktionary's Latin page derives fusco from fuscus, so both are true. Pairings are the top objects in the slot but modest (truth 2.5, issue 1.7)."
+    },
+    {
+      "id": 1169,
+      "word_id": 190,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary obsequious (Latin obsequiōsus, from obsequium \"compliance\", from obsequor \"comply with, yield to\", from ob \"towards\" + sequor \"follow\", cf. sequel) and AHD (obsequī, to comply; ob-, to; sequī, to follow). Root sequi in the infinitive form (sequel, sequence, consequence). Hook unchanged: \"literally to follow after\" is loose, since Wiktionary and AHD gloss ob as toward, but Etymonline glosses it \"after\", so it is not false. Tone disapproving: Oxford and Cambridge label it disapproving and Longman says it is used to show disapproval; formal is only on Oxford and Cambridge. Pairings: smile 5.6, manner 4.0, servant 1.5 per billion. No other senses. Round 2: hook changed from \"literally to follow after\" to \"built on sequi, to follow\", which agrees with Wiktionary and the origin (ob \"toward\" + sequi \"to follow\") without restating ob.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the hook's 'built on sequi, to follow' matches Wiktionary (ob plus sequor, 'follow') and the origin, and no longer reads ob as 'after'. Pairings 4: 'obsequious manner' is generic and 'obsequious servant' is low (1.5); 'obsequious smile' (5.6) is good."
+    },
+    {
+      "id": 1170,
+      "word_id": 191,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary obstinate (Latin obstinātus, participle of obstinō \"set one's mind firmly upon, resolve\", from ob + *stinare, from stare \"to stand\") and AHD (obstināre, to persist). The reconstructed *stinare step is left out. Root stare (stable, station, statue). Hook (obstinare to persist, a relative of stare) matches AHD and Wiktionary; unchanged. Tone disapproving: Oxford \"often disapproving\", Cambridge \"usually disapproving\". Pairings: refusal 15.3, resistance 15.2, silence 8.8 per billion. The stain or illness sense is shown: all three learner's dictionaries list it (\"obstinate stains\").",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: the gloss 'to set one's mind firmly on' is Wiktionary's 'set one's mind firmly upon' almost word for word. It is a short gloss, so a nit, but rewording it would be safer. 'built on stare' skips Wiktionary's *stinare step, which is fine for learners. Hook, tone (disapproving in Oxford and Cambridge), pairings (refusal 15.3, resistance 15.2, silence 8.8) and the persistent-problem sense are all good."
+    },
+    {
+      "id": 1171,
+      "word_id": 192,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary obtuse (Latin obtūsus \"blunt, dull\", participle of obtundō \"to beat; to blunt\", from ob- \"against\" + tundō \"to beat\") and AHD. No root: tundere shows in no common English word. Hook (obtusus, blunted) true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark the slow-witted sense formal (only Oxford adds disapproving). Watch out: AHD reports its Usage Panel split on obtuse meaning \"hard to understand\", so the note calls it disputed. Pairings: deliberately obtuse 15.4, being obtuse 14.1 per billion. The angle sense is shown as technical (Oxford geometry, Cambridge specialized); the blunt-tip sense is botanical and hidden. Round 2: the angle sense's plain followed WordUp's \"wider than a right angle but not as wide as a straight line\"; rewritten by degrees in my own words, avoiding Cambridge's \"more than ... less than\" and Oxford's \"between\".",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Round 2: the angle plain ('measuring somewhere from just over 90 degrees up to just under 180') is accurate and drops WordUp's right-angle and straight-line frame. Its 90-to-180 range is the plain geometric fact that Oxford, Cambridge, Collins and Vocabulary.com all give, so that is not copying. Also means 4: 'somewhere from just over ... up to just under' is wordy, and 'just over 90' can read as 'close to 90' until the second half. Pairings 4: 'being obtuse' (14.1) is generic, though mostly the understanding sense."
+    },
+    {
+      "id": 1172,
+      "word_id": 193,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary officious (Middle English, from Latin officiōsus \"kindly\", from officium \"service\") and AHD (officiōsus obliging, dutiful; officium duty). Root officium (office, official, officiate). Hook (officium duty, root of office) true; unchanged. Tone disapproving: Oxford and Cambridge label it, Longman says it shows disapproval. Watch out: learners take it for a formal word for official (WordUp lists this as a common mistake). Pairings: manner 3.7, interference 1.8 per billion. No other senses. Round 2: the watch-out note's \"help, advice or orders\" followed Dictionary.com's list; rewritten without a list, and without WordUp's \"nobody asked\" or Cambridge and Longman's \"too eager to\".",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the watch-out note drops Dictionary.com's 'services, help, or advice' list and is not copied. The officious/official mix-up is real and the note is true in substance. Watch-out 4: 'takes over matters' is a little stronger than the dictionaries' sense: Oxford, Cambridge and Longman centre on being too eager to tell people what to do, AHD on pushing unwanted help or advice. An officious person interferes and gives orders without necessarily taking control. Pairings 4: both are low (manner 3.7, interference 1.8) and 'manner' is generic."
+    },
+    {
+      "id": 1173,
+      "word_id": 194,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary onerous (inherited from Middle English; compare exonerate), Wiktionary onus (Latin onus, \"burden\") and exonerate (onus, oner-, \"a burden, load\"), and AHD (Old French onereus, from Latin onerōsus, from onus). Root onus, spelled as on exonerate. Hook (Latin onus, burden) true; unchanged. Tone formal: all three mark it formal. Pairings: task 49.9, burden 15.2, duties 13.2, conditions 13.2 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All checks pass. The rendered Wiktionary etymology (Middle English from Middle French onereux, Old French onereus, Latin onerosus from onus) supports the origin; root onus links to exonerate. Formal is marked by all three. Pairings are strong (task 49.9). Weakest point: 'Through Old French' skips the Middle French step, which is harmless."
+    },
+    {
+      "id": 1174,
+      "word_id": 195,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary opaque (Middle English opake, from Latin opācus \"shaded, shady, dark\", of unknown origin, later reinforced from Middle French) and AHD; the unknown source of opacus is kept. No root (opacity is the same word). Hook (opacus, shaded) true; unchanged. Tone null: Cambridge and Longman mark the hard-to-understand sense formal, Oxford does not. Pairings chosen for the figurative sense: opaque process 3.7, deliberately opaque 2.7, opaque to outsiders 2.1 per billion (\"opaque glass\" belongs to the light sense). The light sense is shown, a current everyday meaning.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge on opacus ('a word of unknown source') and its later French influence. Tone null is right: Oxford gives no label on the understanding sense, Cambridge and Longman mark it formal (two of three). Pairings 4: all real but modest (process 3.7, deliberately 2.7, to outsiders 2.1); 'remains opaque' (16.4) is commoner. Also means 4: the light sense is right to show, but its plain shares the 'light cannot pass, so you cannot see through it' frame with Cambridge, Oxford and WordUp (shared, so a nit)."
+    },
+    {
+      "id": 1175,
+      "word_id": 196,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary opprobrium (Latin opprobrium \"a reproach; disgrace\", from opprobrō \"to reproach, taunt\", from ob- \"towards\" + probrum \"disgrace, shame; abuse, insult\") and AHD. No root: probrum shows only in this word family. Hook unchanged: probrum as \"a shameful act\" is close to Wiktionary's \"disgrace, shame\" and to the classical gloss, and opprobrium does descend from it. Tone formal: all three mark it formal. Pairings: moral 9.8, public 8.6, social 8.3 per billion. The \"state of extreme dishonor\" sense is not shown: learner's dictionaries do not list it and it is now rare.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (opprobrium from opprobro 'to taunt', ob- plus probrum). Formal is marked by all three. Pairings are common (moral 9.8, public 8.6, social 8.3). Weakest point: the hook glosses probrum as 'a shameful act', while Wiktionary's Latin page gives 'disgrace, shame; abuse, insult'; Lewis and Short supports the hook, so it stays true."
+    },
+    {
+      "id": 1176,
+      "word_id": 197,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary ostentatious (Latin ostentātus + -ious), the Latin page ostentō (frequentative of ostendō \"show\", senses \"exhibit\" and \"show off\"), and Wiktionary ostensible (from ostendō, cf. ostentatious). Root ostendere links this word with ostensible. Hook (ostentare, to keep showing) fits a frequentative; unchanged. Tone disapproving: Oxford and Cambridge label it; Longman has no label. Pairings: display 32.4, wealth 6.5, luxury 3.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked past the English entry: Wiktionary's Latin page makes ostento a frequentative of ostendo with the sense 'to show off', so 'repeats the action of ostendere' and the hook's 'to keep showing' hold; ostensible does come from ostendo. Disapproving in Oxford and Cambridge. Pairings strong (display 32.4). Weakest point: 'a form of ostentare' is vague for a past participle."
+    },
+    {
+      "id": 1177,
+      "word_id": 198,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary palliate (Middle English palliaten, from Middle French pallier or directly from Latin palliātus, of palliō \"to cover with a cloak\", from pallium \"a cloak\") and AHD. No root (pallium shows in no common English word; pall comes from it but does not show the stem). Hook (pallium, cloak) true; unchanged. Tone null on the first sense: only Cambridge has the \"reduce the bad effects\" sense (formal); Oxford and Longman give only the medical sense. Medical sense: Oxford and Longman formal, Cambridge \"medical, specialized\", so no label meets the rules. Pairings left empty: every first-sense phrase is under 1 per billion (palliate the offence 0.31, palliating circumstances 0.68); the common \"palliate symptoms\" is the medical sense. The medical sense is shown (palliative care makes it current).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's 'either from Middle French or directly from Latin' and gives the step to today's meaning. Empty pairings are right: first-sense uses are rare ('palliate the offence' 0.3) and the common ones are medical. Weakest point: tone. All three mark palliate formal, but Oxford and Longman only have the medical sense and Cambridge marks its medical sense 'specialized', so null under the all-three rule is defensible rather than certain."
+    },
+    {
+      "id": 1178,
+      "word_id": 199,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary panacea (Latin panacēa, from Ancient Greek panakeia, from panakes \"all-healing\", from pan \"all\" + akos \"cure\") and AHD. No root: pan is on the prefix stoplist and akos shows nowhere else. Hook (pan all, akos cure) true; unchanged. Tone null: no learner's dictionary labels it. Pairings: not a panacea 98.8, universal panacea 13.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Greek panakeia via Latin, from panakes, pan plus akos). No labels in any of the three, so null is right. Pairings 4: 'universal panacea' is common (13.4) but usage guides call it redundant, so it is a questionable model for learners; 'not a panacea' (98.8) is excellent."
+    },
+    {
+      "id": 1179,
+      "word_id": 200,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary paragon (Middle French, from Old Italian paragone, from paragonare \"to test on a touchstone\", perhaps from Ancient Greek parakonan \"to sharpen\") and AHD (same, with \"perhaps\"); the hedge is kept. No root. Hook (Italian paragone, a touchstone for testing gold) agrees with the touchstone sense; unchanged. Tone null: only Longman notes humorous use. Pairings: paragon of virtue 34.3, moral paragon 2.2 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's 'perhaps' on the Greek source and gives the step to today's meaning. The hook's 'touchstone used to test gold' is backed by the Longman and Oxford etymologies rather than Wiktionary, which glosses only paragonare. Weakest point: the chain 'from paragonare (to test on a touchstone), perhaps from ... to sharpen' follows Wiktionary and AHD clause for clause, but it is the shared chain of facts, not prose."
+    },
+    {
+      "id": 1180,
+      "word_id": 201,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary parsimony (Latin parsimōnia \"frugality, thrift\", from pars-, stem of parcō \"to economize, save up\"; further origin uncertain) and AHD (parcere, to spare); the hedge is kept. No root. Hook (parcere, to spare) true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal (only Cambridge adds disapproving). Pairings left empty: money-sense phrases are rare (extreme parsimony 1.2, government parsimony 0.6 per billion), and the tool's top phrases (maximum parsimony, parsimony analysis) belong to the science sense. The science sense is shown as technical: general readers meet the principle of parsimony.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge on parco ('a verb whose own source is uncertain'). Formal is marked by all three; technical on the science sense is right, and showing it is right, since 'principle of parsimony' and 'maximum parsimony' dominate modern usage. Empty pairings are fine (money-sense pairings are rare). Weakest point: the plain's 'choosing the simplest explanation' also appears in a WordUp usage note, but it is a generic phrase."
+    },
+    {
+      "id": 1181,
+      "word_id": 202,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary paucity (Middle English, partly from Middle French paucité and partly from Latin paucitās \"fewness\", from paucus \"few\"; related to few) and AHD. No root: paucus shows only in this word. Hook (paucus, few) true; unchanged. Tone formal: all three mark it formal. Pairings: paucity of data 63.4, relative paucity 59.8, paucity of evidence 31.6 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (partly Middle French, partly Latin paucitas, from paucus, related to few). Formal is marked by all three. Pairings strong (data 63.4, relative 59.8, evidence 31.6). Weakest point: 'relative paucity' has a hedge word for a partner, though it is very common."
+    },
+    {
+      "id": 1182,
+      "word_id": 203,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pedantic (pedant + -ic) and the page pedant (from Middle French pedant, pedante, from Italian pedante \"a teacher, schoolmaster, pedant\"; archaic English sense \"a teacher or schoolmaster\"). Wiktionary calls pedante unrelated to pedagogo, so the origin does not link it to pedagogue. No root. Hook (through French from Italian pedante, a schoolmaster) true; unchanged. Tone disapproving: Oxford and Cambridge label it; Longman does not. Pairings: pedantic about 6.8, manner 2.5, style 2.0 per billion (partners are generic; nothing more specific is common). No other senses. Round 2: \"shows off small points of learning\" kept Wiktionary's \"points of learning\"; the later meaning is now \"a stickler for petty rules\", which no cached dictionary uses.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the copied 'points of learning' is gone, and 'a stickler for petty rules' is not dictionary wording. 'Once simply a teacher' matches Wiktionary's archaic sense of pedant ('a teacher or schoolmaster'). Origin 4: 'stickler for petty rules' is accurate as far as it goes, because rules are central in Wiktionary ('overly concerned with formal rules'), Oxford ('too worried about small details or rules') and Longman ('too much attention to rules or to small unimportant details'). But it leaves out the small points of fact and the show of learning, which the first-sense definition names ('minor points of rule or fact ... to display one's learning'). Alone, it could describe a rule-enforcing official as well as a pedant. Pairings 4: all three partners are generic, though the data offers no common partner that shows the meaning."
+    },
+    {
+      "id": 1183,
+      "word_id": 204,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary penchant (French, present participle of pencher \"to tilt, to lean\", from Old French pengier, from Vulgar Latin *pendicāre, from Latin pendere \"to hang\") and AHD. Root pendere (pendulum, pendant, depend, suspend). Hook (pencher, to lean) true; unchanged. Tone null: no learner's dictionary labels it. Pairings: a penchant for 352.8, strong penchant 4.9 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French pencher, from Old French pengier, from Vulgar Latin *pendicare, from pendere); root pendere is good. No labels in any of the three. Pairings 4: both partners are generic ('a penchant for' is the key frame at 353, and 'strong penchant' is an intensifier at 4.9)."
+    },
+    {
+      "id": 1184,
+      "word_id": 205,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary penury (Late Middle English, from Latin pēnūria \"need, scarcity, want\"; further origin uncertain, possibly related to paene \"almost\") and AHD; the hedge is kept, and no root is given because the paene link is only possible. Hook is a sound-alike (penniless) with no origin claim, and the two do share the PEN- sound; unchanged. Tone formal: all three mark it formal. Pairings: died in penury 1.8, lived in penury 1.2, abject penury 1.4 per billion (low counts for a rare word, but the most common it has). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge (uncertain, possibly linked to paene), and leaving paene out of roots is right given the doubt. Hook is a sound-alike and makes no origin claim. Formal is marked by all three. Pairings 4: all real but rare (died in 1.8, abject 1.4, lived in 1.2); 'in penury' itself is 20.2."
+    },
+    {
+      "id": 1185,
+      "word_id": 206,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary perfidious (Latin perfidiōsus \"treacherous\", from perfidia), perfidy (perfidia, from perfidus \"faithless, treacherous\", from fides \"faith\"; related to fidelity) and the Latin page perfidus (per \"through\" + fidēs \"faith\", from the phrase per fidem dēcipere, \"to deceive through faith\"). Root fides (fidelity, infidel, confide). Hook changed: it said \"The per- here means astray, as in perjury, so a perfidious person strays from faith\", but Wiktionary glosses this per as \"through\", and its Latin per- and perjury pages give no \"astray\" sense (that reading comes from older Latin dictionaries). I removed that sentence and kept the true fides and fidelity claim. Tone literary: Oxford, Cambridge and Longman all mark it literary. Pairings: perfidious Albion 12.8, perfidious conduct 1.7 per billion (Albion is a proper noun). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked past the English entry: Wiktionary's Latin pages give perfidia from perfidus ('faithless'), from per plus fides. The hook change is right, since the old 'per- means astray' is not supported (Wiktionary's perfidus page glosses per as 'through', from per fidem decipere), and the new hook is true. Literary is marked by all three. Pairings 4: 'perfidious conduct' is low (1.6), and 'perfidious Albion' is a fixed name, not a pattern a learner can reuse."
+    },
+    {
+      "id": 1186,
+      "word_id": 207,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary perfunctory (Late Latin perfunctōrius \"careless, negligent\", from perfungor \"perform, carry through\", from per- + fungor), the Latin pages perfungor (\"to fulfil, perform, discharge\") and fungor (\"to perform\"; derived terms dēfungor, fūnctiō), and AHD (perfungī, to get through with). Root fungi, the infinitive (function, defunct, fungible). Hook (perfungi, to get through a duty) matches AHD; unchanged. Tone null: Oxford and Longman mark it formal, Cambridge does not. Pairings: manner 20.8, kiss 10.2, nod 9.1 per billion. No other senses. Round 2: the origin now links carrying a duty through to today's meaning (an act aimed only at getting the duty over); defunct dropped for length. Glosses from Wiktionary perfungor (\"fulfil\") and the English entry (\"carry through\"). Main session: spelling fulfil -> fulfill (American English), no other change.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the origin now gives the step to today's meaning ('a perfunctory act is aimed only at getting the duty over') in its own words; no cached dictionary uses it. The glosses match Wiktionary (perfungor 'perform, carry through', from per- plus fungor 'perform') and Lewis and Short ('fulfil'), and function is a true relative. Pairings 4: 'perfunctory manner' is generic; nod (9.1) and kiss (10.2) are good. Weakest point otherwise: 'fulfil' is the British spelling."
     }
   ]
 }
