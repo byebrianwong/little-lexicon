@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:16:37.349Z"
+    "updatedAt": "2026-10-30T08:25:45.667Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1050,
-    "reviews": 1480
+    "mnemonics": 1052,
+    "reviews": 1503
   },
   "words": [
     {
@@ -5329,8 +5329,15 @@
       "syllables": 3,
       "frequency_rank": 1037611,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed through French around 1540 from Latin truculentus, built on trux (\"wild, fierce\"). It first described savage cruelty and later settled on a readiness to fight or argue.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "truculent attitude",
+        "truculent mood",
+        "truculent manner"
+      ]
     },
     {
       "id": 292,
@@ -5340,8 +5347,14 @@
       "syllables": 2,
       "frequency_rank": 1039060,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin turgidus (\"swollen\"), from turgere (\"to swell\"). The word moved from swollen body parts to writing that is swollen with grand, heavy language.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Turgid means swollen or overblown, not murky; water clouded with mud is turbid.",
+      "pairings": [
+        "turgid prose",
+        "turgid style"
+      ]
     },
     {
       "id": 293,
@@ -5363,8 +5376,15 @@
       "syllables": 4,
       "frequency_rank": 91687,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin ubique (\"everywhere\"), made of ubi (\"where\") and -que (\"ever\"), gave Medieval Latin ubiquitas; English turned that into ubiquity and added -ous.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "ubiquitous presence",
+        "ubiquitous feature",
+        "become ubiquitous"
+      ]
     },
     {
       "id": 295,
@@ -5374,8 +5394,16 @@
       "syllables": 2,
       "frequency_rank": 1430664,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French ombrage, from Latin umbraticus (\"in the shade\"), built on umbra (\"shadow\"). In English it meant shade before it came to mean doubt or offense, as if a shadow had fallen over someone's feelings.",
+      "audio_url": null,
+      "roots": [
+        "umbra"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "take umbrage at",
+        "took great umbrage"
+      ]
     },
     {
       "id": 296,
@@ -5397,8 +5425,16 @@
       "syllables": 3,
       "frequency_rank": 2595704,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin unda (\"wave\") is the root, also seen in inundate: an unrecorded diminutive, undula (\"little wave\"), gave New Latin undulatus, which English took up in the 1660s.",
+      "audio_url": null,
+      "roots": [
+        "unda"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "undulating motion",
+        "her hips undulated"
+      ]
     },
     {
       "id": 298,
@@ -5408,8 +5444,15 @@
       "syllables": 2,
       "frequency_rank": 2261297,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Old English upbregdan was made of up and bregdan, a verb of quick movement that also gave braid. It first meant to bring up a fault against someone, and only later to scold.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "upbraided him for",
+        "upbraided himself",
+        "bitterly upbraided"
+      ]
     },
     {
       "id": 299,
@@ -5419,8 +5462,17 @@
       "syllables": 2,
       "frequency_rank": 518508,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Urbane and urban are two forms of one word, from Latin urbanus (\"of the city\"), built on urbs (\"city\"). In Latin it already described the polished manners of city people.",
+      "audio_url": null,
+      "roots": [
+        "urbs"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "urbane manner",
+        "urbane wit",
+        "urbane gentleman"
+      ]
     },
     {
       "id": 300,
@@ -5430,8 +5482,14 @@
       "syllables": 3,
       "frequency_rank": 1761270,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin vacillare (\"to sway, totter\"), a verb whose own origin is unknown. A body swaying to and fro became a mind swaying between choices.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "vacillate between",
+        "vacillating policy"
+      ]
     },
     {
       "id": 301,
@@ -5441,8 +5499,16 @@
       "syllables": 2,
       "frequency_rank": 1378565,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin vapidus, built on vapor (\"steam\"). It described wine that had breathed out its vapor and gone flat, and English carried the idea over to dull, lifeless talk.",
+      "audio_url": null,
+      "roots": [
+        "vapor"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "vapid smile",
+        "vapid conversation"
+      ]
     },
     {
       "id": 302,
@@ -5452,8 +5518,17 @@
       "syllables": 3,
       "frequency_rank": 1033545,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin venerari (\"to worship, revere\"), a verb formed from venus (\"love, charm\"), a word related to the name of the goddess Venus.",
+      "audio_url": null,
+      "roots": [
+        "venus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "highly venerated",
+        "venerated as a saint",
+        "venerate their ancestors"
+      ]
     },
     {
       "id": 303,
@@ -5463,8 +5538,16 @@
       "syllables": 4,
       "frequency_rank": 260414,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin veracitas (\"truthfulness\") by way of French, from Latin verax (\"truthful\"), built on verus (\"true\"), which also gives very, verify and verdict.",
+      "audio_url": null,
+      "roots": [
+        "verus"
+      ],
+      "watch_out": "Veracity means truthfulness; voracity, with an o, is a huge appetite.",
+      "pairings": [
+        "historical veracity",
+        "question the veracity"
+      ]
     },
     {
       "id": 304,
@@ -5474,8 +5557,16 @@
       "syllables": 2,
       "frequency_rank": 786109,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin verbosus (\"wordy\"), from verbum (\"word\"), the noun behind verb, verbal and verbatim.",
+      "audio_url": null,
+      "roots": [
+        "verbum"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "verbose style",
+        "overly verbose"
+      ]
     },
     {
       "id": 305,
@@ -5485,8 +5576,15 @@
       "syllables": 1,
       "frequency_rank": 787347,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French vexer, from Latin vexare, which meant to shake hard as well as to harass or annoy. Where vexare itself came from is uncertain.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "sorely vexed",
+        "greatly vexed",
+        "vexed with him"
+      ]
     },
     {
       "id": 306,
@@ -5496,8 +5594,17 @@
       "syllables": 3,
       "frequency_rank": 2496156,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin vilis (\"cheap, worthless\"), the source of vile, gave Late Latin vilificare (\"to make cheap\"). English first used vilify for lowering the worth of a thing, then for running down a person.",
+      "audio_url": null,
+      "roots": [
+        "vilis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "often vilified",
+        "vilified in the press",
+        "publicly vilified"
+      ]
     },
     {
       "id": 307,
@@ -5507,8 +5614,17 @@
       "syllables": 3,
       "frequency_rank": 359260,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin vindicare (\"to claim, set free, avenge\"), from vindex (\"claimant, defender\"), made of vis (\"force\") and dicere (\"to declare\"). English first used it for setting free, then for clearing or proving right.",
+      "audio_url": null,
+      "roots": [
+        "dicere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "felt vindicated",
+        "fully vindicated",
+        "vindicate himself"
+      ]
     },
     {
       "id": 308,
@@ -5518,8 +5634,17 @@
       "syllables": 3,
       "frequency_rank": 172097,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin virulentus (\"poisonous\"), from virus (\"poison, venom\"). In Middle English it described wounds oozing pus; the sense of bitter, hate-filled attacks came later.",
+      "audio_url": null,
+      "roots": [
+        "virus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "virulent attack",
+        "virulent racism",
+        "virulent criticism"
+      ]
     },
     {
       "id": 309,
@@ -5529,8 +5654,17 @@
       "syllables": 2,
       "frequency_rank": 94536,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin viscum meant mistletoe and the sticky birdlime made from its berries. From it came Late Latin viscosus (\"sticky\"), which reached English partly through French.",
+      "audio_url": null,
+      "roots": [
+        "viscum"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "viscous liquid",
+        "viscous fluid",
+        "highly viscous"
+      ]
     },
     {
       "id": 310,
@@ -5552,8 +5686,15 @@
       "syllables": 3,
       "frequency_rank": 49413,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin volatilis (\"flying, fleeting\"), from volare (\"to fly\"), through French. English once used it of flying creatures; liquids that quickly turn to vapor and sudden swings of mood came later.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "volatile situation",
+        "politically volatile",
+        "volatile temper"
+      ]
     },
     {
       "id": 312,
@@ -5563,8 +5704,17 @@
       "syllables": 3,
       "frequency_rank": 439628,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin vorax (\"gluttonous\"), from vorare (\"to swallow up, devour\"), the verb also behind devour and carnivore. Latin vorare could also mean to read eagerly.",
+      "audio_url": null,
+      "roots": [
+        "vorare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "voracious appetite",
+        "voracious reader",
+        "voracious predators"
+      ]
     },
     {
       "id": 313,
@@ -5574,8 +5724,15 @@
       "syllables": 2,
       "frequency_rank": 467171,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English waveren (\"to swing, totter\"), possibly from an Old English or Old Norse word for flickering, unsteady movement. It is related to wave, and further back to weave.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Waver, with no i, means to hesitate or weaken; a waiver is the giving up of a right or claim.",
+      "pairings": [
+        "never wavered",
+        "faith wavered",
+        "wavered between"
+      ]
     },
     {
       "id": 314,
@@ -5585,8 +5742,15 @@
       "syllables": 2,
       "frequency_rank": 376524,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English wily, made of wile (\"a trick, a lure\") and the ending -y, so the word describes someone full of tricks.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "wily old fox",
+        "wily politician",
+        "wily foe"
+      ]
     },
     {
       "id": 315,
@@ -5596,8 +5760,17 @@
       "syllables": 2,
       "frequency_rank": 149519,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin zelosus, built on zelus, from Ancient Greek zelos (\"zeal, jealousy\"). Jealous comes from the same Latin word by a different route.",
+      "audio_url": null,
+      "roots": [
+        "zelos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "zealous advocate",
+        "zealous supporters",
+        "overly zealous"
+      ]
     },
     {
       "id": 316,
@@ -5618,8 +5791,17 @@
       "syllables": 4,
       "frequency_rank": 153829,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built on Latin insidiae (\"ambush\"), from in (\"in\") and sedere (\"to sit\"): the image is an enemy sitting hidden in wait. It came through Latin insidiosus and French insidieux.",
+      "audio_url": null,
+      "roots": [
+        "sedere"
+      ],
+      "watch_out": "Insidious means harmful in a slow, hidden way; invidious means unfair or likely to stir up resentment.",
+      "pairings": [
+        "insidious onset",
+        "insidious influence",
+        "insidious effects"
+      ]
     },
     {
       "id": 318,
@@ -12883,7 +13065,7 @@
       "definition": "Overblown and self-important in style, so each sentence feels heavier than it should.",
       "plain_language_definition": "Written in a puffed-up, wordy way that is a chore to read.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 515,
@@ -12899,7 +13081,7 @@
       "definition": "Encountered on every side, so widespread that hardly any place is without it.",
       "plain_language_definition": "So common that you see it almost anywhere you go.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 517,
@@ -12931,7 +13113,7 @@
       "definition": "Take someone harshly to task for a fault or misdeed.",
       "plain_language_definition": "To tell someone off harshly for a mistake.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 523,
@@ -12963,7 +13145,7 @@
       "definition": "Hold a person or thing in awe and show it the kind of honor usually kept for the holy.",
       "plain_language_definition": "Respect someone or something so much that it is close to worship.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 529,
@@ -12979,7 +13161,7 @@
       "definition": "Stretching a message out with words that add nothing to it.",
       "plain_language_definition": "Talking or writing much longer than needed.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 531,
@@ -12987,7 +13169,7 @@
       "definition": "Make someone cross, so that the matter keeps nagging at them.",
       "plain_language_definition": "To make someone annoyed or fed up.",
       "sense_order": 1,
-      "register": null
+      "register": "old-fashioned"
     },
     {
       "id": 534,
@@ -12995,7 +13177,7 @@
       "definition": "Paint a person or group as wicked through a stream of abuse and smears.",
       "plain_language_definition": "Talk about someone as if they were a villain, to turn others against them.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 535,
@@ -13011,7 +13193,7 @@
       "definition": "Bursting with spite and hate aimed at a chosen target.",
       "plain_language_definition": "Bitterly hateful and eager to hurt.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 541,
@@ -13019,7 +13201,7 @@
       "definition": "Thick in body, so that it moves sluggishly when tipped or stirred.",
       "plain_language_definition": "Thick and slow to drip or spread.",
       "sense_order": 1,
-      "register": null
+      "register": "technical"
     },
     {
       "id": 543,
@@ -13380,25 +13562,28 @@
       "id": 650,
       "word_id": 297,
       "definition": "Curve gently up and down along its length.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of land or a road, to go up and down in a series of gentle slopes.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 651,
       "word_id": 297,
       "definition": "Disturb the surface of water so that small ripples spread across it.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To ruffle calm water so that little waves run across it.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 653,
       "word_id": 301,
       "definition": "Weak and dull to the taste, with no tang left.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a drink, flat and tasteless because its fizz or bite has gone.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 654,
@@ -17160,33 +17345,37 @@
       "id": 1301,
       "word_id": 300,
       "definition": "Tip first to one side and then the other without quite falling over.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To rock from side to side, close to falling but staying up.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1302,
       "word_id": 305,
       "definition": "Leave someone stumped, as a hard problem does.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To keep someone puzzled, the way a hard question with no clear answer does.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1303,
       "word_id": 307,
       "definition": "Insist on a right or claim and argue in its defense.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To claim a right as your own and defend it against challenge.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1304,
       "word_id": 308,
       "definition": "Able to make its victims very sick very fast, said of a germ.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a germ or illness, quick to cause serious harm in the body.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1305,
@@ -17246,41 +17435,46 @@
       "id": 1311,
       "word_id": 292,
       "definition": "Of a body part or plant cell, stretched taut from within by built-up pressure.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a plant cell or body part, puffed up and firm from the fluid pressing outward inside it.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1312,
       "word_id": 309,
       "definition": "Gluey enough to cling to whatever touches it.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Sticky, like glue or syrup that clings to the fingers.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1313,
       "word_id": 311,
       "definition": "Quick to turn into vapor when left in open air.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In chemistry, quick to evaporate at ordinary temperatures, as alcohol does.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1314,
       "word_id": 313,
       "definition": "Sway or totter as though about to collapse.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To sway on unsteady legs, close to toppling over.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1315,
       "word_id": 313,
       "definition": "Shimmer or quaver instead of holding steady.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a voice or a light, to tremble and not hold steady.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1316,
@@ -17294,17 +17488,19 @@
       "id": 1317,
       "word_id": 317,
       "definition": "Pleasant to give in to, yet quietly ruinous.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Attractive and easy to give in to, while doing real harm.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1318,
       "word_id": 317,
       "definition": "Laid like a snare to catch someone off guard.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Set up as a trap to catch someone who is not expecting it.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1319,
@@ -71345,14 +71541,6 @@
       "revision": 3
     },
     {
-      "id": 658,
-      "word_id": 309,
-      "text": "Viscous comes from Latin viscum, mistletoe, whose berries were boiled into a sticky paste for trapping birds.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 659,
       "word_id": 310,
       "text": "Vituperate comes from Latin vitium, fault, and parare, to prepare: to vituperate is to lay out every fault you can find in someone, loudly.",
@@ -71484,14 +71672,6 @@
       "id": 679,
       "word_id": 305,
       "text": "Vex comes from Latin vexare, 'to shake or harass': a vexing habit shakes your calm.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 680,
-      "word_id": 313,
-      "text": "Waver is wave with an r added. Like a flag waving in shifting wind, a wavering mind swings one way and then the other.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -74180,6 +74360,22 @@
       "id": 1050,
       "word_id": 523,
       "text": "Broach comes from Old French broche, a pointed spike: to broach a barrel is to pierce it and tap it, and broaching a touchy subject taps it open.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1051,
+      "word_id": 309,
+      "text": "Viscous comes from Latin viscum, mistletoe, whose berries were made into a sticky paste for trapping birds.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1052,
+      "word_id": 313,
+      "text": "Waver looks like wave with an r added. Like a flag waving in shifting wind, a wavering mind swings one way and then the other.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -124741,8 +124937,8 @@
     },
     {
       "path": "definitions/1311.mp3",
-      "bytes": 19958,
-      "key": "ff2b3653bb836bba",
+      "bytes": 22988,
+      "key": "75a84aa4e5387f61",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124769,15 +124965,15 @@
     },
     {
       "path": "definitions/650.mp3",
-      "bytes": 12121,
-      "key": "eb1c9cfa7393c741",
+      "bytes": 18808,
+      "key": "f7243a3ced40f0e0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/651.mp3",
-      "bytes": 17554,
-      "key": "8fc7fa9992c32e96",
+      "bytes": 15778,
+      "key": "5b59887b6cda157b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124804,8 +125000,8 @@
     },
     {
       "path": "definitions/1301.mp3",
-      "bytes": 17972,
-      "key": "ae8ebbb2c9918870",
+      "bytes": 15987,
+      "key": "77d9b70f38ba9c10",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124818,8 +125014,8 @@
     },
     {
       "path": "definitions/653.mp3",
-      "bytes": 13479,
-      "key": "0c611e890dd8ba0b",
+      "bytes": 17659,
+      "key": "fad7dd4ab246f167",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124853,8 +125049,8 @@
     },
     {
       "path": "definitions/1302.mp3",
-      "bytes": 13375,
-      "key": "908f15f9ef2541ab",
+      "bytes": 19226,
+      "key": "9b030be83ce56a7b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124874,8 +125070,8 @@
     },
     {
       "path": "definitions/1303.mp3",
-      "bytes": 15047,
-      "key": "eb50fc85eb609dec",
+      "bytes": 15151,
+      "key": "85f05e777dcdb7e8",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124888,8 +125084,8 @@
     },
     {
       "path": "definitions/1304.mp3",
-      "bytes": 17659,
-      "key": "8f386d2c9ef1a8bc",
+      "bytes": 17032,
+      "key": "3b6aca2a2be3f337",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124902,8 +125098,8 @@
     },
     {
       "path": "definitions/1312.mp3",
-      "bytes": 11494,
-      "key": "f45904b7e2c2da32",
+      "bytes": 14733,
+      "key": "c38346af8ba0dc56",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124916,8 +125112,8 @@
     },
     {
       "path": "definitions/1313.mp3",
-      "bytes": 13897,
-      "key": "5804be331714b206",
+      "bytes": 21838,
+      "key": "baabfe5de8bf2ce5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124937,15 +125133,15 @@
     },
     {
       "path": "definitions/1314.mp3",
-      "bytes": 11807,
-      "key": "46f80a8f1e7eaa34",
+      "bytes": 14942,
+      "key": "f0689bfc8a150509",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1315.mp3",
-      "bytes": 12643,
-      "key": "6d85058b5f3e30a1",
+      "bytes": 15256,
+      "key": "1e3fb3b57cadaae1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124986,15 +125182,15 @@
     },
     {
       "path": "definitions/1317.mp3",
-      "bytes": 12957,
-      "key": "1f329e553322a4e2",
+      "bytes": 15987,
+      "key": "fa3e23c951681020",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1318.mp3",
-      "bytes": 11285,
-      "key": "088aa0ee63634021",
+      "bytes": 14942,
+      "key": "6201f00140855f35",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129858,8 +130054,8 @@
     },
     {
       "path": "hooks/309.mp3",
-      "bytes": 28421,
-      "key": "f08236aa387f283c",
+      "bytes": 27690,
+      "key": "ffa57b37c9a3cfb5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129879,8 +130075,8 @@
     },
     {
       "path": "hooks/313.mp3",
-      "bytes": 32914,
-      "key": "990914bc5ba0334e",
+      "bytes": 34482,
+      "key": "e844a8fb7505d4f9",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -181539,6 +181735,736 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin matches Wiktionary and the Latin page (extrico, ex- + tricae 'hindrances, trifles'; intrico). Hook 4: 'perplexities' is not Wiktionary's gloss and differs from the origin's 'hindrances or trifles' (Lewis and Short has it, so it is loose, not false). Pairings 4: both are reflexive patterns (himself, itself from) that repeat each other and do not show what one gets free of."
+    },
+    {
+      "id": 1481,
+      "word_id": 291,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested about 1540, Middle French, Latin truculentus \"fierce, savage\", from trux \"fierce, wild\") and the Wiktionary senses, which put \"cruel or savage\" first and \"eager to argue or fight\" later; Dictionary.com marks the savage sense archaic. No root: trux shows in no other common English word. Hook claim (from Latin trux, fierce) is true. Tone null: Oxford has formal and disapproving, Longman literary, Cambridge no label, so no label reaches two of three (formal needs all three). No common mix-up. Pairings from the tool's noun list, Ngram per billion: truculent attitude 1.57, truculent mood 1.57, truculent manner 1.51; all are low, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: attitude, mood and manner are the top three in the data (about 1.5 per billion each) but are near-interchangeable abstract nouns, so the third adds little. Origin checked against Wiktionary (c. 1540, Middle French, truculentus, trux); its first sense \"cruel or savage\" supports the shift. Tone null is right: Oxford formal and disapproving, Cambridge none, Longman literary."
+    },
+    {
+      "id": 1482,
+      "word_id": 292,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin turgidus \"swollen, inflated\", from turgeo \"to swell\") and the Wiktionary senses (distended first, pompous language later). No root: turgere shows only in technical words (turgor, turgescent). Hook claim (Latin turgere, to swell) is true. Tone formal: Oxford, Cambridge and Longman all mark the writing sense formal. Watch out: Vocabulary.com lists turbid and turgid as commonly confused; turbid means thick with suspended matter. Pairings: turgid prose 3.05, turgid style 1.25 per billion (turgid rhetoric 0.52 left out). The swollen sense is in all three learner's dictionaries (Cambridge alone labels it specialized), so it is shown with no label. Also means 4: the swollen sense leans toward biology and medicine.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Tone: first sense formal is right (Oxford, Cambridge and Longman all formal). The biology sense shown under Also means has no label; only Cambridge marks it specialized, so null passes the two-of-three rule, but the skill asks for technical on a shown specialist sense, so a careful editor might add it. Watch-out is true: Wiktionary and Cambridge give turgid of rivers as swollen or sluggish, never murky."
+    },
+    {
+      "id": 1483,
+      "word_id": 294,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (ubiquity + -ous, Medieval Latin ubiquitas, Latin ubique \"everywhere\", ubi \"where\" + -que \"each, ever\"). No root: ubi shows only in rare words. Hook claim (from Latin ubique, everywhere) is true. Tone formal: Oxford and Cambridge mark it \"formal or humorous\" and Longman \"formal\" (sometimes used humorously), so all three mark formal. No common mix-up. Pairings from the tool's lists: ubiquitous presence 70.27, become ubiquitous 65.38, ubiquitous feature 21.07 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin is one long chained sentence that starts mid-chain (\"Latin ubique ... gave\"); all facts match Wiktionary. Formal is confirmed by all three (Oxford and Cambridge \"formal or humorous\", Longman formal)."
+    },
+    {
+      "id": 1484,
+      "word_id": 295,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French and Old French ombrage, Latin umbraticus \"in the shade\", from umbra \"shadow, shade\") and the Wiktionary senses (obsolete shadow, shade; a feeling of doubt; anger at something offensive); AHD gives the Middle English sense as shade. The shadow over feelings is offered as a picture (\"as if\"), not as a recorded step. umbra also shows in umbrella and penumbra. Hook claim (Latin umbra, shade, the root of umbrella) is true; Dictionary.com also traces umbrella to umbra. Tone null: Oxford has \"formal or humorous\" and Cambridge formal, but Longman's cached page has only the phrase take umbrage with no label, so formal is not confirmed in all three. No common mix-up. Pairings: take umbrage 35.83, took umbrage at 24.19, took great umbrage 2.18 per billion (take, took and great are in the tool's lists). Scores: origin 4 because the step from shade to offense is given as an image, since no source here dates the senses; tone 4 because Longman may mark take umbrage formal on a page that is not cached.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"as if a shadow had fallen over someone's feelings\" is an image, not a documented step, but it is framed with \"as if\"; shade before offense matches Wiktionary's obsolete shade sense. Tone null is right: Oxford \"formal or humorous\", Cambridge formal, Longman's page only points to \"take umbrage\" with no label. Umbrella is from Latin umbella, a diminutive of umbra, so the hook holds."
+    },
+    {
+      "id": 1485,
+      "word_id": 297,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested 1664, New Latin undulatus, participle of undulo, from unattested *undula \"small wave\", diminutive of Latin unda \"wave\"); the unattested step is called unrecorded. unda is spelled as on inundate. Hook claim (from Latin unda, a wave) is true. Tone null: Oxford and Longman mark it formal, Cambridge does not, so formal is not met. No common mix-up. Pairings for the motion sense: undulating motion 8.97, her hips undulated 5.09 per billion (from the tool's lists: after undulating \"motion\", before undulated \"hips\"). The shape sense (undulating hills, country, terrain) is the most common use in the tool's data and is distinct from the motion sense, so it is shown; the ripple sense is rare and is not. Also means 4: learner's dictionaries fold shape and motion into one sense, so a strict reader may see the shape sense as close to the first.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"her hips undulated\" is real (Datamuse lists hips before undulated; 5 per billion) but narrow; \"body undulates\" would show the motion more generally. Origin matches Wiktionary (1664, New Latin undulatus, unattested undula, unda). Tone null is right: Oxford and Longman formal, Cambridge none."
+    },
+    {
+      "id": 1486,
+      "word_id": 298,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English upbreiden, Old English upbregdan, equivalent to up- + braid; Icelandic bregda \"to draw, brandish, braid ... upbraid\") and the origin notes in AHD, Dictionary.com and Oxford, which all give the Old English sense as bringing forward a fault as grounds for blame, with the scolding sense later (Oxford: Middle English). Longman glosses bregdan \"to move suddenly, seize\". No root: an Old English stem, not one learners spot. Hook claims (up plus the Old English verb that gave braid; first meant to bring up a fault against someone) are true. Tone formal: Oxford, Cambridge and Longman all mark it formal. No common mix-up. Pairings: upbraided him for 6.46, upbraided himself 3.65, bitterly upbraided 0.70 per billion (himself and bitterly top the tool's lists). Pairings 4: bitterly upbraided is low (0.70).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"first meant to bring up a fault ... only later to scold\" goes past Wiktionary, which lists those reproach senses as archaic or obsolete without dates; it agrees with the OED. Formal is confirmed by all three. \"bitterly upbraided\" is the top word before upbraided in Datamuse, though only 0.7 per billion in Google Books."
+    },
+    {
+      "id": 1487,
+      "word_id": 299,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (a variant of urban with -ane; urban from Middle French urbain or Latin urbanus \"of a city\", also of manners \"like those of city dwellers: cultivated, polished\", from urbs \"city\"); the hedged origin of urbs is left out. urbs also shows in urban and suburb. Hook claim (from Latin urbanus, of the city, like urban; city manners thought more polished) is true. Tone null: only Cambridge marks it approving. No watch-out: the card shows the meaning, and urbane for urban is not a common error. Pairings: urbane manner 2.96, urbane wit 1.84, urbane gentleman 1.51 per billion, all from the tool's noun list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says the word \"came to mean\" smooth and refined, while the origin rightly says Latin urbanus already had that sense; not contradictory. Tone null is right: only Cambridge marks it approving."
+    },
+    {
+      "id": 1488,
+      "word_id": 300,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin vacillatum, supine of vacillo \"sway, waver\") and the Wiktionary page for Latin vacillo (unknown origin; senses sway to and fro, stagger, totter, then waver, hesitate), so the unknown origin is stated. No root. Hook claim (Latin vacillare, to sway or totter) is true. Tone null: Oxford and Longman mark it formal, Cambridge disapproving, so neither label reaches the rule. No common mix-up. Pairings: vacillated between 68.67, vacillate between 43.90, vacillating policy 2.56 per billion (policy tops the tool's list after vacillating). The physical swaying sense is rare today and is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"vacillating policy\" is the top noun after vacillating in Datamuse but only 2.6 per billion in Google Books. \"Origin unknown\" checked on the Latin vacillo page ({{unk}}). Tone null is right: Oxford and Longman formal, Cambridge disapproving."
+    },
+    {
+      "id": 1489,
+      "word_id": 301,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (borrowed from Latin vapidus \"flat, vapid\") and the Wiktionary page for Latin vapidus (vapor + -idus; \"that has emitted steam or vapor, i.e. its spirit\"; of wine, flat). Oxford notes it was first used of drinks. vapor also shows in evaporate. Hook says vapidus was used of flat wine and is \"probably related to vapor\": true, and more cautious than Wiktionary. Tone null: Oxford and Cambridge mark it formal, Longman does not. No common mix-up. Pairings: vapid smile 2.29, vapid conversation 1.12 per billion (vapid talk 0.50 left out). The taste sense is rare today and is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says vapidus is \"probably related to vapor\" while the Latin vapidus page gives vapor + -idus with no hedge, so the hook is more cautious than needed (still true). The Latin page also supports \"wine that had breathed out its vapor\". Tone null is right: Oxford and Cambridge formal, Longman none."
+    },
+    {
+      "id": 1490,
+      "word_id": 302,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested 1623, Latin veneratus, participle of veneror \"to worship, venerate\") and the Wiktionary page for Latin veneror (from venus + -or, denominative; \"see also Venus\"). venus also shows in venerable and venereal. Hook claim (shares its Latin root with Venus) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. No common mix-up. Pairings: highly venerated 9.55, venerated as a saint 6.92, venerate their ancestors 1.09 per billion (from the tool's lists: highly, saints, ancestors).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the step from venus (\"love, charm\") to worship is not spelled out, though venerari already meant worship. Checked on the Latin veneror page: from venus + -or, see Venus. Formal is confirmed by all three."
+    },
+    {
+      "id": 1491,
+      "word_id": 303,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French veracite, Old French veracitie, Medieval Latin veracitas \"truthfulness\", Latin verax \"truthful\", verus \"true\"; see very). verus is spelled as on aver. Hook claim (Latin verus, true, root of verify and verdict) is true. Tone null: Oxford and Longman mark it formal, but the cached Cambridge page is a 502 error, so formal cannot be confirmed in all three. Watch out: Vocabulary.com lists veracious and voracious as commonly confused, and Wiktionary gives them as homophones. Pairings: historical veracity 23.32 (top of the tool's list), question the veracity 17.44 per billion. Tone 4: if Cambridge marks it formal, as Oxford and Longman do, formal would be right.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Tone: the cached Cambridge page is a 502 error page, so tone was checked on Oxford and Longman only. Both mark veracity formal; with Cambridge unconfirmed, null follows the all-three rule, but if Cambridge also marks it formal (as the other two do) the label would be warranted, as on this sheet's other all-three words. Origin and roots match Wiktionary (verus; very, verify, verdict are true)."
+    },
+    {
+      "id": 1492,
+      "word_id": 304,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin verbosus \"prolix, wordy\", from verbum \"word\" + -osus); the PIE step is left out. Hook claim (Latin verbum, word, as in verbal) is true. Tone disapproving: Oxford and Cambridge both mark it disapproving (and formal); Longman has neither, so formal is not met and disapproving is. No common mix-up. Pairings: overly verbose 2.72, verbose style 1.82 per billion; the tool's top pairings (verbose mode, output, logging) are a computing use and are left out.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: \"overly verbose\" uses an intensifier that fits any word, and verbose already means too wordy, so it shows little; \"verbose style\" is good. Tone disapproving is right (Oxford and Cambridge formal and disapproving, Longman none: two of three for disapproving only)."
+    },
+    {
+      "id": 1493,
+      "word_id": 305,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English vexen, Old French vexer, Latin vexare \"disturb, agitate, annoy\") and the Wiktionary page for Latin vexo (uncertain origin, De Vaan's suggestions hedged; senses shake or jolt violently, harass, annoy), so the uncertainty is stated. No root. Hook claim (Latin vexare, to shake or harass) is true. Tone old-fashioned: Oxford (\"old-fashioned or formal\"), Cambridge and Longman all mark it old-fashioned. No common mix-up. Pairings: greatly vexed 5.95, sorely vexed 5.44, vexed with him 5.04 per billion (sorely and greatly are in the tool's list). The puzzle sense (a question that has vexed scholars, vexing problem) is current and distinct, so it is shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the Also means sense (keeping someone puzzled) is close to the vexed/vexing question use and could be read as a near-repeat, but it is a distinct current meaning. Checked on the Latin vexo page: 'to shake or jolt violently; to harass, annoy', origin marked uncertain, so both the gloss and the hedge are right. Old-fashioned is confirmed by all three dictionaries."
+    },
+    {
+      "id": 1494,
+      "word_id": 306,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Late Latin vilificare; equivalent to vile + -ify) and the origin notes in AHD and Longman (vilificare \"to hold cheap, make less valuable\", from Latin vilis \"cheap\", the source of vile) and Oxford (first English sense \"lower in value\"). vilis also shows in vile and revile. Hook claim (contains vile, from Latin vilis, cheap or worthless) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. No common mix-up. Pairings: often vilified 6.11, vilified in the press 3.52, publicly vilified 2.64 per billion (often and publicly top the tool's list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: \"often vilified\" pairs a generic adverb (it fits any verb); \"publicly vilified\" and \"vilified in the press\" show the meaning. Origin's sense history (lowering the worth of a thing, then defaming) goes past Wiktionary but matches the OED. Formal is confirmed by all three."
+    },
+    {
+      "id": 1495,
+      "word_id": 307,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin vindicatus, participle of vindico \"lay legal claim to; set free; protect, avenge\", from vim, accusative of vis \"force\", + dico \"say; declare\") and the Wiktionary pages for Latin vindico (from vindex + -o) and vindex (\"protector, defender; claimant\", from vis + dico). Wiktionary marks \"to liberate, set free\" obsolete in English, and Oxford dates the first English sense as deliver or rescue. dicere also shows in diction, dictate and verdict. Hook: vindex is a true root and meant defender or claimant; \"a champion who stepped forward to defend a claim\" is a fair picture of that, though \"stepped forward\" is the hook's own image, so 4. Tone null: Oxford and Longman mark it formal, Cambridge does not. No common mix-up. Pairings: felt vindicated 37.16, vindicate himself 14.44, fully vindicated 11.64 per billion, all from the tool's lists. The claim-a-right sense is not in Oxford, Cambridge or Longman and is not shown.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: 'English first used it for setting free, then for clearing or proving right' goes past Wiktionary, which lists 'set free' and 'avenge' as obsolete senses without dates, so the order cannot be confirmed; 'Early English uses included setting free' would be safe. The rest checks out on the Latin vindex page (vis + dicere; protector, defender, claimant). Hook 4: a vindex was a claimant or protector; 'a champion who stepped forward to defend a claim' is an embellished picture, loose but not false."
+    },
+    {
+      "id": 1496,
+      "word_id": 308,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English virulent \"leaking or seeping pus\", Latin virulentus \"poisonous\", from virus \"poison; venom; slime\" + -ulentus); the hedged Middle English sense and the PIE step are left out. Oxford also notes it first described a poisoned wound. virus is an English word too. Hook claim (Latin virus meant poison or venom) is true. Tone formal: Oxford, Cambridge and Longman all mark the hate-filled sense formal. No common mix-up. Pairings for that sense: virulent racism 9.26, virulent attack 8.70, virulent criticism 4.05 per billion (attack is in the tool's list; the disease uses are left out). The disease sense is the most common use in the tool's data (virulent strain, form), so it is shown; no dictionary labels it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: Wiktionary's Middle English gloss is \"leaking or seeping pus\" without naming wounds; \"wounds oozing pus\" is a fair reading. Formal on the hate sense is confirmed by all three; the germ sense rightly has no label."
+    },
+    {
+      "id": 1497,
+      "word_id": 309,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (first attested 1605, Middle French visqueux and Late Latin viscosus, from Latin viscum \"birdlime\"; doublet of viscose) and the origin notes in Longman (viscum \"mistletoe, sticky substance used for catching birds\") and Dictionary.com (mistletoe; birdlime made with its berries). The Wiktionary page for Latin viscum could not be fetched (rate limit). viscum also shows in viscose and viscosity. Hook change: \"were boiled into a sticky paste\" became \"were made into a sticky paste\"; no source says the berries were boiled. Tone technical: Oxford (specialist) and Longman (technical) label it; Cambridge does not. No common mix-up. Pairings: viscous fluid 164.15, viscous liquid 107.92, highly viscous 72.26 per billion, all from the tool's lists. The gluey sense is close to the first and is not shown. Tone 4: technical follows the two-of-three rule, though viscous also turns up in everyday talk about honey or oil.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: technical on the first sense rests on Oxford (specialist) and Longman (technical), with Cambridge unlabelled; it passes the two-of-three rule, though viscous is common in everyday description. The hook change from \"boiled\" to \"made\" into a paste is right: Wiktionary does not support boiling."
+    },
+    {
+      "id": 1498,
+      "word_id": 311,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French volatile, Latin volatilis \"flying; swift; temporary\", from volo \"to fly\") and the Wiktionary senses (obsolete \"flying; having the power to fly\"); Oxford dates a Middle English noun sense \"creature that flies\". No root: volare shows plainly in no common English word (volition is from another verb). Hook claim (Latin volare, to fly) is true. Tone null for the mood sense: only Oxford labels it (\"often disapproving\"). No common mix-up. Pairings for the first sense: volatile situation 51.29, politically volatile 18.71, volatile temper 15.82 per billion (politically is in the tool's list; its noun list is all chemistry). The chemistry sense is common (volatile oils, volatile organic compounds), so it is shown; Oxford (specialist), Cambridge (specialized) and Longman (technical) all label it, so technical.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the chemistry plain definition opens \"In chemistry,\" which repeats its technical label. Origin matches Wiktionary, whose obsolete sense \"flying; having the power to fly\" supports the flying-creatures step."
+    },
+    {
+      "id": 1499,
+      "word_id": 312,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "tools/etymology.py printed an empty section, so the origin was checked against the raw Wiktionary entry (17th century, Latin vorax + -acious) and the Wiktionary pages for Latin vorax (from voro \"to devour\" + -ax; \"voracious, gluttonous\") and voro (to devour, swallow up; figuratively to read eagerly; derived terms devoro and -vorus, the sources of devour and carnivore). Hook claim (Latin vorare, root also in devour and carnivore) is true. Tone null: only Oxford marks it formal. No watch-out here; the veracity card carries the voracity mix-up. Pairings: voracious appetite 74.68, voracious reader 66.99, voracious predators 5.60 per billion, all from the tool's list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the English Wiktionary entry gives only vorax + -acious (17th century); the vorare claims, including 'read eagerly', were checked on the Latin voro page, which lists 'to devour; to swallow up' and, figuratively, 'to read eagerly'. Tone null is right: only Oxford marks it formal."
+    },
+    {
+      "id": 1500,
+      "word_id": 313,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English waveren \"to move back and forth, swing; to move unsteadily, totter\"; then possibly Old English, compare waefre \"flickering, wavering\", related to wafian \"to wave\", and/or Old Norse vafra \"to move unsteadily, flicker\", probably related to vefa \"to weave\"; both from Proto-Germanic \"to weave\"; doublet of wave). Wiktionary hedges the source, so the origin says \"possibly\". Oxford and Longman give Old Norse vafra; Dictionary.com gives wave + -er. Hook change: \"Waver is wave with an r added\" became \"Waver looks like wave with an r added\", since the sources disagree on whether waver was formed from wave. No root. Tone null: no label in Oxford, Cambridge or Longman. Watch out: writing waiver for waver is a common spelling slip; the two words mean different things. Pairings: never wavered 267.76, wavered between 56.27, faith wavered 3.43 per billion (faith is in the tool's list). The voice-and-light sense is current and common (her voice wavered 55.01), so it is shown; the tottering sense is close to it and is not.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"and further back to weave\" rests on a chain Wiktionary marks \"possibly\" and \"probably\"; the origin keeps \"possibly\" for the Old English or Old Norse source. The hook change to \"looks like wave\" is right: Wiktionary calls waver a doublet of wave, not wave + -er."
+    },
+    {
+      "id": 1501,
+      "word_id": 314,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English wily, wiley; by surface analysis wile + -y) and the origin notes in Longman (from wile) and Dictionary.com (see wile, -y). The origin of wile itself is left out (the page could not be fetched). No root. Hook claim (wile plus -y; a wile is a trick or lure) is true. Tone null: no label in Oxford, Cambridge or Longman. No common mix-up. Pairings: wily old fox 4.69, wily politician 3.90, wily foe 2.16 per billion, all from the tool's list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"full of tricks\" (in origin and hook) is Wiktionary's own definition wording, though a common phrase; Wiktionary gives wile + -y as surface analysis."
+    },
+    {
+      "id": 1502,
+      "word_id": 315,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English zelose, Latin zelosus, from zelus + -osus, from Ancient Greek zelos \"zeal, jealousy\", from zeloo \"to emulate, to be jealous\"; doublet of jealous). zelos also shows in zeal and zealot. Hook claims (from Greek zelos, ardor; jealous from the same Greek word) are true. Tone null: only Oxford marks it formal. No common mix-up. Pairings: overly zealous 21.48, zealous advocate 10.60, zealous supporters 4.03 per billion (advocate and supporters top the tool's list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"the same Latin word\" for jealous is slightly loose (jealous came through Old French from zelosus); it is true, and Wiktionary calls the two doublets."
+    },
+    {
+      "id": 1503,
+      "word_id": 317,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French insidieux, Latin insidiosus \"cunning, deceitful\", from insidiae \"a lying in wait, an ambush\" + -osus, from insideo \"to sit in or on\", from in + sedeo \"to sit\"). sedere also shows in sedentary, sediment and assiduous. Hook claim (Latin insidiae, an ambush, from sitting in wait) is true. Tone null: Oxford marks it formal and disapproving, Longman formal, Cambridge nothing. Watch out: Vocabulary.com lists insidious and invidious as commonly confused. Pairings: insidious onset 88.73, insidious effects 12.88, insidious influence 8.67 per billion, all from the tool's list. The two other senses (enticing but harmful; set as a trap) are not in Oxford, Cambridge or Longman and are not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"insidious onset\" is mostly medical, but it is the top collocate and fits the first sense. Watch-out insidious/invidious is a known confusable pair and is stated correctly. Tone null is right: Oxford formal and disapproving, Longman formal, Cambridge none."
     }
   ]
 }

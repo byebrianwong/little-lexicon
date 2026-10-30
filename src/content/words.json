@@ -32835,10 +32835,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 1037611,
-      "etymology": null,
+      "etymology": "Borrowed through French around 1540 from Latin truculentus, built on trux (\"wild, fierce\"). It first described savage cruelty and later settled on a readiness to fight or argue.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "truculent attitude",
+        "truculent mood",
+        "truculent manner"
+      ],
       "audioUrl": "audio/words/291.mp3?v=5169102e2837",
       "hookAudioUrl": "audio/hooks/291.mp3?v=3b492dfdd0b9",
       "senses": [
@@ -32954,10 +32958,13 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 1039060,
-      "etymology": null,
+      "etymology": "From Latin turgidus (\"swollen\"), from turgere (\"to swell\"). The word moved from swollen body parts to writing that is swollen with grand, heavy language.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Turgid means swollen or overblown, not murky; water clouded with mud is turbid.",
+      "pairings": [
+        "turgid prose",
+        "turgid style"
+      ],
       "audioUrl": "audio/words/292.mp3?v=2ae4a70f3db0",
       "hookAudioUrl": "audio/hooks/292.mp3?v=90717bfd3636",
       "senses": [
@@ -32966,7 +32973,7 @@
           "definition": "Overblown and self-important in style, so each sentence feels heavier than it should.",
           "plainLanguageDefinition": "Written in a puffed-up, wordy way that is a chore to read.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/513.mp3?v=e97e51c8b3d1",
           "examples": [
@@ -33021,11 +33028,11 @@
         {
           "senseId": 1311,
           "definition": "Of a body part or plant cell, stretched taut from within by built-up pressure.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a plant cell or body part, puffed up and firm from the fluid pressing outward inside it.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1311.mp3?v=059b0d19fc23",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1311.mp3?v=2fff7701afa9",
           "examples": [],
           "distractors": []
         }
@@ -33080,10 +33087,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 91687,
-      "etymology": null,
+      "etymology": "Latin ubique (\"everywhere\"), made of ubi (\"where\") and -que (\"ever\"), gave Medieval Latin ubiquitas; English turned that into ubiquity and added -ous.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ubiquitous presence",
+        "ubiquitous feature",
+        "become ubiquitous"
+      ],
       "audioUrl": "audio/words/294.mp3?v=8ca377448450",
       "hookAudioUrl": "audio/hooks/294.mp3?v=faa959c52218",
       "senses": [
@@ -33092,7 +33103,7 @@
           "definition": "Encountered on every side, so widespread that hardly any place is without it.",
           "plainLanguageDefinition": "So common that you see it almost anywhere you go.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/516.mp3?v=4cba4e86515a",
           "examples": [
@@ -33191,10 +33202,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1430664,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French ombrage, from Latin umbraticus (\"in the shade\"), built on umbra (\"shadow\"). In English it meant shade before it came to mean doubt or offense, as if a shadow had fallen over someone's feelings.",
+      "roots": [
+        "umbra"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "take umbrage at",
+        "took great umbrage"
+      ],
       "audioUrl": "audio/words/295.mp3?v=9c0c412da142",
       "hookAudioUrl": "audio/hooks/295.mp3?v=3661cad061b5",
       "senses": [
@@ -33290,10 +33306,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2595704,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin unda (\"wave\") is the root, also seen in inundate: an unrecorded diminutive, undula (\"little wave\"), gave New Latin undulatus, which English took up in the 1660s.",
+      "roots": [
+        "unda"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "undulating motion",
+        "her hips undulated"
+      ],
       "audioUrl": "audio/words/297.mp3?v=e76b1552b633",
       "hookAudioUrl": "audio/hooks/297.mp3?v=ad1119f23f33",
       "senses": [
@@ -33357,22 +33378,22 @@
         {
           "senseId": 650,
           "definition": "Curve gently up and down along its length.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of land or a road, to go up and down in a series of gentle slopes.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/650.mp3?v=a2e2e8962596",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/650.mp3?v=ba41b3d31743",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 651,
           "definition": "Disturb the surface of water so that small ripples spread across it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To ruffle calm water so that little waves run across it.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/651.mp3?v=ab9df70192a2",
+          "audioUrl": "audio/definitions/651.mp3?v=d5c5c6a71aad",
           "examples": [],
           "distractors": []
         }
@@ -33407,10 +33428,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2261297,
-      "etymology": null,
+      "etymology": "Old English upbregdan was made of up and bregdan, a verb of quick movement that also gave braid. It first meant to bring up a fault against someone, and only later to scold.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "upbraided him for",
+        "upbraided himself",
+        "bitterly upbraided"
+      ],
       "audioUrl": "audio/words/298.mp3?v=0b7110efccfc",
       "hookAudioUrl": "audio/hooks/298.mp3?v=c027158af0f8",
       "senses": [
@@ -33419,7 +33444,7 @@
           "definition": "Take someone harshly to task for a fault or misdeed.",
           "plainLanguageDefinition": "To tell someone off harshly for a mistake.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/522.mp3?v=709a2ef65df7",
           "examples": [
@@ -33523,10 +33548,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 518508,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Urbane and urban are two forms of one word, from Latin urbanus (\"of the city\"), built on urbs (\"city\"). In Latin it already described the polished manners of city people.",
+      "roots": [
+        "urbs"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "urbane manner",
+        "urbane wit",
+        "urbane gentleman"
+      ],
       "audioUrl": "audio/words/299.mp3?v=12d5f73f37bb",
       "hookAudioUrl": "audio/hooks/299.mp3?v=0ca00de68ff0",
       "senses": [
@@ -33638,10 +33669,13 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1761270,
-      "etymology": null,
+      "etymology": "From Latin vacillare (\"to sway, totter\"), a verb whose own origin is unknown. A body swaying to and fro became a mind swaying between choices.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "vacillate between",
+        "vacillating policy"
+      ],
       "audioUrl": "audio/words/300.mp3?v=143430e06d65",
       "hookAudioUrl": "audio/hooks/300.mp3?v=578b12154807",
       "senses": [
@@ -33705,11 +33739,11 @@
         {
           "senseId": 1301,
           "definition": "Tip first to one side and then the other without quite falling over.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To rock from side to side, close to falling but staying up.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1301.mp3?v=ea846cecf356",
+          "audioUrl": "audio/definitions/1301.mp3?v=5b7a696d8e26",
           "examples": [],
           "distractors": []
         }
@@ -33744,10 +33778,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1378565,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin vapidus, built on vapor (\"steam\"). It described wine that had breathed out its vapor and gone flat, and English carried the idea over to dull, lifeless talk.",
+      "roots": [
+        "vapor"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "vapid smile",
+        "vapid conversation"
+      ],
       "audioUrl": "audio/words/301.mp3?v=775f689d8a30",
       "hookAudioUrl": "audio/hooks/301.mp3?v=1be0fc1265f9",
       "senses": [
@@ -33811,11 +33850,11 @@
         {
           "senseId": 653,
           "definition": "Weak and dull to the taste, with no tang left.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a drink, flat and tasteless because its fizz or bite has gone.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/653.mp3?v=cb17f7de5c1e",
+          "audioUrl": "audio/definitions/653.mp3?v=9b09b25c4179",
           "examples": [],
           "distractors": []
         }
@@ -33870,10 +33909,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 1033545,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin venerari (\"to worship, revere\"), a verb formed from venus (\"love, charm\"), a word related to the name of the goddess Venus.",
+      "roots": [
+        "venus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "highly venerated",
+        "venerated as a saint",
+        "venerate their ancestors"
+      ],
       "audioUrl": "audio/words/302.mp3?v=a8208c633522",
       "hookAudioUrl": "audio/hooks/302.mp3?v=5b33d90f62ea",
       "senses": [
@@ -33882,7 +33927,7 @@
           "definition": "Hold a person or thing in awe and show it the kind of honor usually kept for the holy.",
           "plainLanguageDefinition": "Respect someone or something so much that it is close to worship.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/528.mp3?v=5c3e2d872ce6",
           "examples": [
@@ -33977,10 +34022,15 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 260414,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Medieval Latin veracitas (\"truthfulness\") by way of French, from Latin verax (\"truthful\"), built on verus (\"true\"), which also gives very, verify and verdict.",
+      "roots": [
+        "verus"
+      ],
+      "watchOut": "Veracity means truthfulness; voracity, with an o, is a huge appetite.",
+      "pairings": [
+        "historical veracity",
+        "question the veracity"
+      ],
       "audioUrl": "audio/words/303.mp3?v=16b43ca4e1ca",
       "hookAudioUrl": "audio/hooks/303.mp3?v=deaf3b09adfb",
       "senses": [
@@ -34080,10 +34130,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 786109,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin verbosus (\"wordy\"), from verbum (\"word\"), the noun behind verb, verbal and verbatim.",
+      "roots": [
+        "verbum"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "verbose style",
+        "overly verbose"
+      ],
       "audioUrl": "audio/words/304.mp3?v=b57da276f577",
       "hookAudioUrl": "audio/hooks/304.mp3?v=3f8a664b104c",
       "senses": [
@@ -34092,7 +34147,7 @@
           "definition": "Stretching a message out with words that add nothing to it.",
           "plainLanguageDefinition": "Talking or writing much longer than needed.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/530.mp3?v=18c57b15cdc3",
           "examples": [
@@ -34195,10 +34250,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 787347,
-      "etymology": null,
+      "etymology": "From Old French vexer, from Latin vexare, which meant to shake hard as well as to harass or annoy. Where vexare itself came from is uncertain.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "sorely vexed",
+        "greatly vexed",
+        "vexed with him"
+      ],
       "audioUrl": "audio/words/305.mp3?v=efa433b43929",
       "hookAudioUrl": "audio/hooks/305.mp3?v=742b6d64f18e",
       "senses": [
@@ -34207,7 +34266,7 @@
           "definition": "Make someone cross, so that the matter keeps nagging at them.",
           "plainLanguageDefinition": "To make someone annoyed or fed up.",
           "senseOrder": 1,
-          "register": null,
+          "register": "old-fashioned",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/531.mp3?v=25c313e2789d",
           "examples": [
@@ -34262,11 +34321,11 @@
         {
           "senseId": 1302,
           "definition": "Leave someone stumped, as a hard problem does.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To keep someone puzzled, the way a hard question with no clear answer does.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1302.mp3?v=8979585a6a79",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1302.mp3?v=8968e2b2a21b",
           "examples": [],
           "distractors": []
         }
@@ -34317,10 +34376,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2496156,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin vilis (\"cheap, worthless\"), the source of vile, gave Late Latin vilificare (\"to make cheap\"). English first used vilify for lowering the worth of a thing, then for running down a person.",
+      "roots": [
+        "vilis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "often vilified",
+        "vilified in the press",
+        "publicly vilified"
+      ],
       "audioUrl": "audio/words/306.mp3?v=2f6cce19884e",
       "hookAudioUrl": "audio/hooks/306.mp3?v=f5eae7fba35c",
       "senses": [
@@ -34329,7 +34394,7 @@
           "definition": "Paint a person or group as wicked through a stream of abuse and smears.",
           "plainLanguageDefinition": "Talk about someone as if they were a villain, to turn others against them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/534.mp3?v=7dac7d5c0f65",
           "examples": [
@@ -34436,10 +34501,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 359260,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin vindicare (\"to claim, set free, avenge\"), from vindex (\"claimant, defender\"), made of vis (\"force\") and dicere (\"to declare\"). English first used it for setting free, then for clearing or proving right.",
+      "roots": [
+        "dicere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "felt vindicated",
+        "fully vindicated",
+        "vindicate himself"
+      ],
       "audioUrl": "audio/words/307.mp3?v=bee19622fe50",
       "hookAudioUrl": "audio/hooks/307.mp3?v=818cfccdaa54",
       "senses": [
@@ -34503,11 +34574,11 @@
         {
           "senseId": 1303,
           "definition": "Insist on a right or claim and argue in its defense.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To claim a right as your own and defend it against challenge.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1303.mp3?v=2dae4bff479f",
+          "audioUrl": "audio/definitions/1303.mp3?v=b29b55ce5e5a",
           "examples": [],
           "distractors": []
         }
@@ -34550,10 +34621,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 172097,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin virulentus (\"poisonous\"), from virus (\"poison, venom\"). In Middle English it described wounds oozing pus; the sense of bitter, hate-filled attacks came later.",
+      "roots": [
+        "virus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "virulent attack",
+        "virulent racism",
+        "virulent criticism"
+      ],
       "audioUrl": "audio/words/308.mp3?v=0170c896a698",
       "hookAudioUrl": "audio/hooks/308.mp3?v=4cfa572857a0",
       "senses": [
@@ -34562,7 +34639,7 @@
           "definition": "Bursting with spite and hate aimed at a chosen target.",
           "plainLanguageDefinition": "Bitterly hateful and eager to hurt.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/538.mp3?v=64e5ba49df24",
           "examples": [
@@ -34617,11 +34694,11 @@
         {
           "senseId": 1304,
           "definition": "Able to make its victims very sick very fast, said of a germ.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a germ or illness, quick to cause serious harm in the body.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1304.mp3?v=593ec5adcc51",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1304.mp3?v=df3629d1876a",
           "examples": [],
           "distractors": []
         }
@@ -34676,19 +34753,25 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 94536,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin viscum meant mistletoe and the sticky birdlime made from its berries. From it came Late Latin viscosus (\"sticky\"), which reached English partly through French.",
+      "roots": [
+        "viscum"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "viscous liquid",
+        "viscous fluid",
+        "highly viscous"
+      ],
       "audioUrl": "audio/words/309.mp3?v=da7e2aec5e6e",
-      "hookAudioUrl": "audio/hooks/309.mp3?v=2576b36ad2e7",
+      "hookAudioUrl": "audio/hooks/309.mp3?v=417e0253c123",
       "senses": [
         {
           "senseId": 541,
           "definition": "Thick in body, so that it moves sluggishly when tipped or stirred.",
           "plainLanguageDefinition": "Thick and slow to drip or spread.",
           "senseOrder": 1,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/541.mp3?v=c12214b49bd9",
           "examples": [
@@ -34743,11 +34826,11 @@
         {
           "senseId": 1312,
           "definition": "Gluey enough to cling to whatever touches it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Sticky, like glue or syrup that clings to the fingers.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1312.mp3?v=6f30ff51b902",
+          "audioUrl": "audio/definitions/1312.mp3?v=8c03c9fba5b8",
           "examples": [],
           "distractors": []
         }
@@ -34779,7 +34862,7 @@
         }
       ],
       "mnemonics": [
-        "Viscous comes from Latin viscum, mistletoe, whose berries were boiled into a sticky paste for trapping birds."
+        "Viscous comes from Latin viscum, mistletoe, whose berries were made into a sticky paste for trapping birds."
       ]
     },
     {
@@ -34790,10 +34873,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 49413,
-      "etymology": null,
+      "etymology": "From Latin volatilis (\"flying, fleeting\"), from volare (\"to fly\"), through French. English once used it of flying creatures; liquids that quickly turn to vapor and sudden swings of mood came later.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "volatile situation",
+        "politically volatile",
+        "volatile temper"
+      ],
       "audioUrl": "audio/words/311.mp3?v=aaf67a67cef7",
       "hookAudioUrl": "audio/hooks/311.mp3?v=478693b750fc",
       "senses": [
@@ -34857,11 +34944,11 @@
         {
           "senseId": 1313,
           "definition": "Quick to turn into vapor when left in open air.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In chemistry, quick to evaporate at ordinary temperatures, as alcohol does.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1313.mp3?v=3a3a241966d5",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1313.mp3?v=85abc583058b",
           "examples": [],
           "distractors": []
         }
@@ -34916,10 +35003,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 439628,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin vorax (\"gluttonous\"), from vorare (\"to swallow up, devour\"), the verb also behind devour and carnivore. Latin vorare could also mean to read eagerly.",
+      "roots": [
+        "vorare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "voracious appetite",
+        "voracious reader",
+        "voracious predators"
+      ],
       "audioUrl": "audio/words/312.mp3?v=cc8597724621",
       "hookAudioUrl": "audio/hooks/312.mp3?v=e7d7d2e4c7a3",
       "senses": [
@@ -35019,12 +35112,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 467171,
-      "etymology": null,
+      "etymology": "From Middle English waveren (\"to swing, totter\"), possibly from an Old English or Old Norse word for flickering, unsteady movement. It is related to wave, and further back to weave.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Waver, with no i, means to hesitate or weaken; a waiver is the giving up of a right or claim.",
+      "pairings": [
+        "never wavered",
+        "faith wavered",
+        "wavered between"
+      ],
       "audioUrl": "audio/words/313.mp3?v=deae89159fa4",
-      "hookAudioUrl": "audio/hooks/313.mp3?v=bfc9724b9ae9",
+      "hookAudioUrl": "audio/hooks/313.mp3?v=c1701737c425",
       "senses": [
         {
           "senseId": 549,
@@ -35086,22 +35183,22 @@
         {
           "senseId": 1314,
           "definition": "Sway or totter as though about to collapse.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To sway on unsteady legs, close to toppling over.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1314.mp3?v=5b4a8aff492f",
+          "audioUrl": "audio/definitions/1314.mp3?v=d4d5e700250b",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1315,
           "definition": "Shimmer or quaver instead of holding steady.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a voice or a light, to tremble and not hold steady.",
           "senseOrder": 3,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1315.mp3?v=a7acbed4e408",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1315.mp3?v=f53ca046c729",
           "examples": [],
           "distractors": []
         }
@@ -35137,7 +35234,7 @@
         }
       ],
       "mnemonics": [
-        "Waver is wave with an r added. Like a flag waving in shifting wind, a wavering mind swings one way and then the other."
+        "Waver looks like wave with an r added. Like a flag waving in shifting wind, a wavering mind swings one way and then the other."
       ]
     },
     {
@@ -35148,10 +35245,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 376524,
-      "etymology": null,
+      "etymology": "From Middle English wily, made of wile (\"a trick, a lure\") and the ending -y, so the word describes someone full of tricks.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "wily old fox",
+        "wily politician",
+        "wily foe"
+      ],
       "audioUrl": "audio/words/314.mp3?v=9f00fdb4900c",
       "hookAudioUrl": "audio/hooks/314.mp3?v=6a98768b589b",
       "senses": [
@@ -35263,10 +35364,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 149519,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin zelosus, built on zelus, from Ancient Greek zelos (\"zeal, jealousy\"). Jealous comes from the same Latin word by a different route.",
+      "roots": [
+        "zelos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "zealous advocate",
+        "zealous supporters",
+        "overly zealous"
+      ],
       "audioUrl": "audio/words/315.mp3?v=5c298631009e",
       "hookAudioUrl": "audio/hooks/315.mp3?v=ebf2f9339c55",
       "senses": [
@@ -35496,10 +35603,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 153829,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Built on Latin insidiae (\"ambush\"), from in (\"in\") and sedere (\"to sit\"): the image is an enemy sitting hidden in wait. It came through Latin insidiosus and French insidieux.",
+      "roots": [
+        "sedere"
+      ],
+      "watchOut": "Insidious means harmful in a slow, hidden way; invidious means unfair or likely to stir up resentment.",
+      "pairings": [
+        "insidious onset",
+        "insidious influence",
+        "insidious effects"
+      ],
       "audioUrl": "audio/words/317.mp3?v=62e4f021cd42",
       "hookAudioUrl": "audio/hooks/317.mp3?v=9d1cfef60d52",
       "senses": [
@@ -35563,22 +35676,22 @@
         {
           "senseId": 1317,
           "definition": "Pleasant to give in to, yet quietly ruinous.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Attractive and easy to give in to, while doing real harm.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1317.mp3?v=f26f885b3f8b",
+          "audioUrl": "audio/definitions/1317.mp3?v=ae72474f8a8a",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1318,
           "definition": "Laid like a snare to catch someone off guard.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Set up as a trap to catch someone who is not expecting it.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1318.mp3?v=ecf7a3ea0653",
+          "audioUrl": "audio/definitions/1318.mp3?v=0670a98aa5ee",
           "examples": [],
           "distractors": []
         }
