@@ -60271,10 +60271,16 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 919628,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French feinte, from feindre, to pretend, which goes back to Latin fingere, to shape or to make up. Feign, fiction and figment come from the same Latin verb.",
+      "roots": [
+        "fingere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "make a feint",
+        "feint attack",
+        "diversionary feint"
+      ],
       "audioUrl": "audio/words/546.mp3?v=c30f2ca9a730",
       "hookAudioUrl": "audio/hooks/546.mp3?v=25a671e17235",
       "senses": [
@@ -60362,12 +60368,15 @@
       "syllables": 1,
       "difficultyTier": 5,
       "frequencyRank": 2177757,
-      "etymology": null,
+      "etymology": "Probably from an old Dutch verb vuisten, to hold in the hand, from vuist, fist. In English it first meant palming a die to sneak it into a game, which led to pushing unwanted things on people.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "foisted on the public",
+        "foisted upon them"
+      ],
       "audioUrl": "audio/words/547.mp3?v=631199ac5d7f",
-      "hookAudioUrl": "audio/hooks/547.mp3?v=d71722ce521b",
+      "hookAudioUrl": "audio/hooks/547.mp3?v=3aa9ad5a9f38",
       "senses": [
         {
           "senseId": 1080,
@@ -60434,11 +60443,11 @@
         {
           "senseId": 1219,
           "definition": "Sneak a passage, clause or item into something where it does not belong.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To sneak extra words or things in where they have no right to be.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1219.mp3?v=3371f237b931",
+          "audioUrl": "audio/definitions/1219.mp3?v=2c1f69686cbb",
           "examples": [],
           "distractors": []
         }
@@ -60466,7 +60475,7 @@
         }
       ],
       "mnemonics": [
-        "Foist goes back to a Dutch word for fist: cheats at dice would hide a loaded die in the hand and foist it into play."
+        "Foist probably goes back to a Dutch word for fist: cheats at dice would hide a loaded die in the hand and foist it into play."
       ]
     },
     {
@@ -60477,10 +60486,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 298512,
-      "etymology": null,
+      "etymology": "From forbear, to hold back, plus -ance. Forbear comes from Old English forberan, to refrain or to endure, built on beran, to bear: forbearance is bearing a wrong instead of striking back.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mutual forbearance",
+        "patient forbearance",
+        "exercise forbearance"
+      ],
       "audioUrl": "audio/words/548.mp3?v=f5197cfa070d",
       "hookAudioUrl": "audio/hooks/548.mp3?v=fd3c909f756c",
       "senses": [
@@ -60489,7 +60502,7 @@
           "definition": "Patient self-control in holding back from anger, revenge or punishment when there is cause for it.",
           "plainLanguageDefinition": "Holding back your temper and staying kind when you have a right to be angry.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1082.mp3?v=392762880dba",
           "examples": [
@@ -60549,11 +60562,11 @@
         {
           "senseId": 1220,
           "definition": "A lender's choice to hold off on collecting a debt, often by pausing payments for a set time.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In lending, an agreement to pause or lower loan payments for a while, as on a mortgage.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1220.mp3?v=bc8d6a5769da",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1220.mp3?v=74857b1b26ad",
           "examples": [],
           "distractors": []
         }
@@ -60600,10 +60613,14 @@
       "syllables": 1,
       "difficultyTier": 1,
       "frequencyRank": 136670,
-      "etymology": null,
+      "etymology": "From Middle English fraught, loaded, the past participle of a verb for loading a ship, from Middle Dutch vracht, cargo, which also gave English freight. A plan fraught with risk is loaded with it.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fraught with danger",
+        "fraught with difficulties",
+        "fraught with peril"
+      ],
       "audioUrl": "audio/words/549.mp3?v=ab965925156e",
       "hookAudioUrl": "audio/hooks/549.mp3?v=6f120688b649",
       "senses": [
@@ -60672,11 +60689,11 @@
         {
           "senseId": 1221,
           "definition": "Full of nervous strain that everyone present can sense.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Very tense and anxious, so that people feel on edge.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1221.mp3?v=cdb2540edb24",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1221.mp3?v=0c2367d343db",
           "examples": [],
           "distractors": []
         }
@@ -60719,10 +60736,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 626030,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Greek phrenetikos, delirious, through Latin and Old French, built on phren, mind; frantic and frenzy share the root. Once used of the insane, it now means wildly busy.",
+      "roots": [
+        "phren"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "frenetic pace",
+        "frenetic activity",
+        "frenetic energy"
+      ],
       "audioUrl": "audio/words/550.mp3?v=0f24c5833c52",
       "hookAudioUrl": "audio/hooks/550.mp3?v=3fe315b9d96d",
       "senses": [
@@ -60830,10 +60853,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 561308,
-      "etymology": null,
+      "etymology": "From the verb gall, to wear skin raw by rubbing, as a saddle can do to a horse. The verb later came to mean to vex, so something galling chafes at your pride.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "particularly galling",
+        "all the more galling",
+        "galling to see"
+      ],
       "audioUrl": "audio/words/551.mp3?v=6731f467a78e",
       "hookAudioUrl": "audio/hooks/551.mp3?v=1d215b0f57a5",
       "senses": [
@@ -60937,10 +60964,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 599244,
-      "etymology": null,
+      "etymology": "From Old French glener, from Late Latin glennare, to gather, whose source is uncertain, perhaps Celtic. It first meant gathering the grain left by reapers, then gathering facts bit by bit.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "glean information",
+        "glean insights",
+        "information gleaned from"
+      ],
       "audioUrl": "audio/words/552.mp3?v=317433cd7985",
       "hookAudioUrl": "audio/hooks/552.mp3?v=a422e8844975",
       "senses": [
@@ -61009,11 +61040,11 @@
         {
           "senseId": 1222,
           "definition": "Pick up the leftover grain that reapers missed after a harvest.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To pick up the grain or fruit left in a field once the harvest is in.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1222.mp3?v=c49b0a9de1fb",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1222.mp3?v=35892c06080b",
           "examples": [],
           "distractors": []
         }
@@ -61048,10 +61079,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1142309,
-      "etymology": null,
+      "etymology": "From Latin imbuere, to wet or to stain. A mind imbued with an idea has soaked it up the way cloth soaks up dye.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "deeply imbued",
+        "thoroughly imbued",
+        "imbued with a sense"
+      ],
       "audioUrl": "audio/words/553.mp3?v=33c20de7b924",
       "hookAudioUrl": "audio/hooks/553.mp3?v=265fff405c87",
       "senses": [
@@ -61060,7 +61095,7 @@
           "definition": "Give a person or a work a quality that becomes part of their very nature.",
           "plainLanguageDefinition": "To give someone a strong feeling or belief that becomes part of who they are.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1089.mp3?v=9b9141cd16a7",
           "examples": [
@@ -61120,11 +61155,11 @@
         {
           "senseId": 1232,
           "definition": "Soak or stain something thoroughly with a dye or liquid.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To wet or dye something all the way through.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1232.mp3?v=27ab1cba582a",
+          "audioUrl": "audio/definitions/1232.mp3?v=8dc3320eed5e",
           "examples": [],
           "distractors": []
         }
@@ -61163,10 +61198,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 800295,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin impellere, to drive on, made of in-, against or toward, and pellere, to drive or push. Compel, propel and repel come from the same verb.",
+      "roots": [
+        "pellere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "felt impelled to",
+        "impelled to act"
+      ],
       "audioUrl": "audio/words/554.mp3?v=9ef4d7d26007",
       "hookAudioUrl": "audio/hooks/554.mp3?v=366adc641529",
       "senses": [
@@ -61279,10 +61319,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 210961,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin impunitas, freedom from punishment, from impunis, unpunished, which joins in-, not, to poena, penalty. Penal and punish come from the same noun.",
+      "roots": [
+        "poena"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "act with impunity",
+        "culture of impunity",
+        "with relative impunity"
+      ],
       "audioUrl": "audio/words/555.mp3?v=ac4c042a3dde",
       "hookAudioUrl": "audio/hooks/555.mp3?v=7aea901975f8",
       "senses": [
@@ -61371,10 +61417,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 327758,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin indelebilis, that cannot be destroyed, made of in-, not, and delebilis, able to be wiped out, from delere, to blot out, the source of delete.",
+      "roots": [
+        "delere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "indelible mark",
+        "indelible impression",
+        "indelible ink"
+      ],
       "audioUrl": "audio/words/556.mp3?v=c0b232685c03",
       "hookAudioUrl": "audio/hooks/556.mp3?v=c83636e6b416",
       "senses": [
@@ -61483,10 +61535,14 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 350605,
-      "etymology": null,
+      "etymology": "From Late Latin indomitabilis, untamable, made of in-, not, and domitare, to tame, a form of domare. A spirit that nothing can tame is one that nothing can beat.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "indomitable spirit",
+        "indomitable courage",
+        "indomitable energy"
+      ],
       "audioUrl": "audio/words/557.mp3?v=ea7a21b8f428",
       "hookAudioUrl": "audio/hooks/557.mp3?v=b7472913ebd0",
       "senses": [
@@ -61603,10 +61659,16 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 523443,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inimitabilis, through Middle French: in-, not, plus imitabilis, imitable, from imitari, to imitate.",
+      "roots": [
+        "imitari"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inimitable style",
+        "own inimitable way",
+        "inimitable fashion"
+      ],
       "audioUrl": "audio/words/558.mp3?v=91953c1dee79",
       "hookAudioUrl": "audio/hooks/558.mp3?v=34c10dec1b5d",
       "senses": [
@@ -61719,10 +61781,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 276779,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inordinatus, disordered, from in-, not, and ordinare, to set in order. What is inordinate breaks the bounds that order would keep, so it means far too much.",
+      "roots": [
+        "ordinare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inordinate amount",
+        "inordinate delay",
+        "inordinate pride"
+      ],
       "audioUrl": "audio/words/559.mp3?v=0f85f9ea8e48",
       "hookAudioUrl": "audio/hooks/559.mp3?v=36b9d503268c",
       "senses": [
@@ -61839,10 +61907,16 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 871840,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin insinuare, to creep or wind one's way in, from in- and sinus, a bend or fold, as in sinuous. A hint that is insinuated works its way in sideways instead of being said outright.",
+      "roots": [
+        "sinus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "are you insinuating",
+        "insinuated that",
+        "insinuating tone"
+      ],
       "audioUrl": "audio/words/560.mp3?v=9bd8280ca05b",
       "hookAudioUrl": "audio/hooks/560.mp3?v=7f7f8643d1dc",
       "senses": [
@@ -61911,11 +61985,11 @@
         {
           "senseId": 1197,
           "definition": "Work oneself gradually and slyly into a place, a group or someone's favor.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To slowly and slyly work your way into a group or into someone's trust.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1197.mp3?v=2c3a7c0ec34d",
+          "register": "disapproving",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1197.mp3?v=8a879aaaad25",
           "examples": [],
           "distractors": []
         }
@@ -61962,10 +62036,16 @@
       "syllables": 5,
       "difficultyTier": 2,
       "frequencyRank": 225938,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin interminabilis, endless, made of in-, not, and terminare, to set a limit or end, from terminus, a boundary. Terminate comes from the same verb.",
+      "roots": [
+        "terminare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "interminable delays",
+        "interminable wait",
+        "interminable discussions"
+      ],
       "audioUrl": "audio/words/561.mp3?v=3ac064293958",
       "hookAudioUrl": "audio/hooks/561.mp3?v=400f002e7515",
       "senses": [
@@ -62074,10 +62154,16 @@
       "syllables": 5,
       "difficultyTier": 2,
       "frequencyRank": 250260,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin irrevocabilis, through Middle French: ir-, not, plus revocare, to call back, from re- and vocare, to call. Revoke comes from the same verb.",
+      "roots": [
+        "vocare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "irrevocable decision",
+        "irrevocable step",
+        "irrevocable loss"
+      ],
       "audioUrl": "audio/words/562.mp3?v=61ca0717f95f",
       "hookAudioUrl": "audio/hooks/562.mp3?v=3aff9cdd081f",
       "senses": [
@@ -62186,10 +62272,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1060963,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Anglo-Norman getteson, the throwing of cargo overboard, from Old French jeter, to throw, which comes from Latin iactare, a form of iacere, to throw, as in eject. It now means dumping any burden.",
+      "roots": [
+        "iacere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "jettison the idea",
+        "jettison everything",
+        "jettisoned altogether"
+      ],
       "audioUrl": "audio/words/563.mp3?v=05d902eba0eb",
       "hookAudioUrl": "audio/hooks/563.mp3?v=8d5ef65870d6",
       "senses": [
@@ -62258,11 +62350,11 @@
         {
           "senseId": 1198,
           "definition": "Dump cargo or fuel overboard or in flight so that a struggling vessel or plane is lighter.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To dump cargo or fuel from a ship or plane in trouble so it stays afloat or aloft.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1198.mp3?v=e33db68e7dbb",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1198.mp3?v=b317913402b8",
           "examples": [],
           "distractors": []
         }
@@ -62313,10 +62405,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 334584,
-      "etymology": null,
+      "etymology": "From Latin luridus, pale yellow or wan. In English it first described a sickly, ghastly color, and it now describes both harsh, glaring colors and stories that dwell on gruesome detail.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "lurid details",
+        "lurid tales",
+        "lurid accounts"
+      ],
       "audioUrl": "audio/words/564.mp3?v=763e1f90a259",
       "hookAudioUrl": "audio/hooks/564.mp3?v=9158c3f0552e",
       "senses": [
@@ -62325,7 +62421,7 @@
           "definition": "Dwelling on shocking or sordid details, usually of violence or sex, in order to excite.",
           "plainLanguageDefinition": "Shocking and full of gory or sexual details meant to grab attention.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1105.mp3?v=2c8d7c189292",
           "examples": [
@@ -62385,11 +62481,11 @@
         {
           "senseId": 1199,
           "definition": "Glaring or unnaturally bright in color, often with a harsh red or orange glow.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "So harshly bright that a color or light looks unnatural.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1199.mp3?v=b6019e1f14de",
+          "register": "disapproving",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1199.mp3?v=b2870ece3b5b",
           "examples": [],
           "distractors": []
         }
@@ -62548,10 +62644,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 157133,
-      "etymology": null,
+      "etymology": "From French malaise, made of mal, badly, and aise, ease or comfort: the state of being ill at ease, in body or in spirit.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "economic malaise",
+        "social malaise",
+        "spiritual malaise"
+      ],
       "audioUrl": "audio/words/566.mp3?v=2db074995114",
       "hookAudioUrl": "audio/hooks/566.mp3?v=c40ea3111423",
       "senses": [
@@ -62560,7 +62660,7 @@
           "definition": "A drained, uneasy mood with no clear cause, found in one person or across a whole community.",
           "plainLanguageDefinition": "A dull, hard-to-explain feeling that things are not right, often shared by many people.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1109.mp3?v=5ba594f7724a",
           "examples": [
@@ -62620,11 +62720,11 @@
         {
           "senseId": 1200,
           "definition": "Feeling slightly off and run-down in body without any named illness.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A vague feeling of being unwell and tired, with no clear illness to explain it.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1200.mp3?v=97c72ba654ab",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1200.mp3?v=f49651ece4ef",
           "examples": [],
           "distractors": []
         }
@@ -62679,10 +62779,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1222506,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French malfaisance, from malfaire, to do evil, which goes back to Latin male, badly, and facere, to do. In English it is mainly a legal word for wrongdoing in office.",
+      "roots": [
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "corporate malfeasance",
+        "official malfeasance",
+        "financial malfeasance"
+      ],
       "audioUrl": "audio/words/567.mp3?v=7f13dec8efdb",
       "hookAudioUrl": "audio/hooks/567.mp3?v=8907e283aa92",
       "senses": [
@@ -62782,10 +62888,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 996052,
-      "etymology": null,
+      "etymology": "From Old English metan, to measure, related to German messen. To mete out punishment is to measure out the share each person has earned.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mete out justice",
+        "mete out punishment",
+        "treatment meted out"
+      ],
       "audioUrl": "audio/words/568.mp3?v=7f6bdb1b13bf",
       "hookAudioUrl": "audio/hooks/568.mp3?v=f98bad2bffab",
       "senses": [
@@ -62794,7 +62904,7 @@
           "definition": "Deal out punishment, justice or harsh treatment to someone as their due.",
           "plainLanguageDefinition": "To hand out punishment or justice to someone.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1111.mp3?v=2b9fb2922803",
           "examples": [
@@ -62881,10 +62991,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 604158,
-      "etymology": null,
+      "etymology": "First a variant spelling of metal; the word was applied to a person's spirit or temper from the 1500s, and in the 1700s the mettle spelling settled on that sense.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "prove their mettle",
+        "test their mettle",
+        "true mettle"
+      ],
       "audioUrl": "audio/words/569.mp3?v=9057531f18dd",
       "hookAudioUrl": "audio/hooks/569.mp3?v=9cb957391d75",
       "senses": [

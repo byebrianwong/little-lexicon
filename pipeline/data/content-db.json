@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:11:38.853Z"
+    "updatedAt": "2026-10-30T08:12:16.795Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1048,
-    "reviews": 1436
+    "mnemonics": 1049,
+    "reviews": 1459
   },
   "words": [
     {
@@ -9217,8 +9217,17 @@
       "syllables": 1,
       "frequency_rank": 919628,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French feinte, from feindre, to pretend, which goes back to Latin fingere, to shape or to make up. Feign, fiction and figment come from the same Latin verb.",
+      "audio_url": null,
+      "roots": [
+        "fingere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "make a feint",
+        "feint attack",
+        "diversionary feint"
+      ]
     },
     {
       "id": 547,
@@ -9228,8 +9237,14 @@
       "syllables": 1,
       "frequency_rank": 2177757,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Probably from an old Dutch verb vuisten, to hold in the hand, from vuist, fist. In English it first meant palming a die to sneak it into a game, which led to pushing unwanted things on people.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "foisted on the public",
+        "foisted upon them"
+      ]
     },
     {
       "id": 548,
@@ -9239,8 +9254,15 @@
       "syllables": 3,
       "frequency_rank": 298512,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From forbear, to hold back, plus -ance. Forbear comes from Old English forberan, to refrain or to endure, built on beran, to bear: forbearance is bearing a wrong instead of striking back.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mutual forbearance",
+        "patient forbearance",
+        "exercise forbearance"
+      ]
     },
     {
       "id": 549,
@@ -9250,8 +9272,15 @@
       "syllables": 1,
       "frequency_rank": 136670,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English fraught, loaded, the past participle of a verb for loading a ship, from Middle Dutch vracht, cargo, which also gave English freight. A plan fraught with risk is loaded with it.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "fraught with danger",
+        "fraught with difficulties",
+        "fraught with peril"
+      ]
     },
     {
       "id": 550,
@@ -9261,8 +9290,17 @@
       "syllables": 3,
       "frequency_rank": 626030,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek phrenetikos, delirious, through Latin and Old French, built on phren, mind; frantic and frenzy share the root. Once used of the insane, it now means wildly busy.",
+      "audio_url": null,
+      "roots": [
+        "phren"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "frenetic pace",
+        "frenetic activity",
+        "frenetic energy"
+      ]
     },
     {
       "id": 551,
@@ -9272,8 +9310,15 @@
       "syllables": 2,
       "frequency_rank": 561308,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From the verb gall, to wear skin raw by rubbing, as a saddle can do to a horse. The verb later came to mean to vex, so something galling chafes at your pride.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "particularly galling",
+        "all the more galling",
+        "galling to see"
+      ]
     },
     {
       "id": 552,
@@ -9283,8 +9328,15 @@
       "syllables": 1,
       "frequency_rank": 599244,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French glener, from Late Latin glennare, to gather, whose source is uncertain, perhaps Celtic. It first meant gathering the grain left by reapers, then gathering facts bit by bit.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "glean information",
+        "glean insights",
+        "information gleaned from"
+      ]
     },
     {
       "id": 553,
@@ -9294,8 +9346,15 @@
       "syllables": 2,
       "frequency_rank": 1142309,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin imbuere, to wet or to stain. A mind imbued with an idea has soaked it up the way cloth soaks up dye.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "deeply imbued",
+        "thoroughly imbued",
+        "imbued with a sense"
+      ]
     },
     {
       "id": 554,
@@ -9305,8 +9364,16 @@
       "syllables": 2,
       "frequency_rank": 800295,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin impellere, to drive on, made of in-, against or toward, and pellere, to drive or push. Compel, propel and repel come from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "pellere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "felt impelled to",
+        "impelled to act"
+      ]
     },
     {
       "id": 555,
@@ -9316,8 +9383,17 @@
       "syllables": 4,
       "frequency_rank": 210961,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin impunitas, freedom from punishment, from impunis, unpunished, which joins in-, not, to poena, penalty. Penal and punish come from the same noun.",
+      "audio_url": null,
+      "roots": [
+        "poena"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "act with impunity",
+        "culture of impunity",
+        "with relative impunity"
+      ]
     },
     {
       "id": 556,
@@ -9327,8 +9403,17 @@
       "syllables": 4,
       "frequency_rank": 327758,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin indelebilis, that cannot be destroyed, made of in-, not, and delebilis, able to be wiped out, from delere, to blot out, the source of delete.",
+      "audio_url": null,
+      "roots": [
+        "delere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "indelible mark",
+        "indelible impression",
+        "indelible ink"
+      ]
     },
     {
       "id": 557,
@@ -9338,8 +9423,15 @@
       "syllables": 5,
       "frequency_rank": 350605,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin indomitabilis, untamable, made of in-, not, and domitare, to tame, a form of domare. A spirit that nothing can tame is one that nothing can beat.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "indomitable spirit",
+        "indomitable courage",
+        "indomitable energy"
+      ]
     },
     {
       "id": 558,
@@ -9349,8 +9441,17 @@
       "syllables": 5,
       "frequency_rank": 523443,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inimitabilis, through Middle French: in-, not, plus imitabilis, imitable, from imitari, to imitate.",
+      "audio_url": null,
+      "roots": [
+        "imitari"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inimitable style",
+        "own inimitable way",
+        "inimitable fashion"
+      ]
     },
     {
       "id": 559,
@@ -9360,8 +9461,17 @@
       "syllables": 4,
       "frequency_rank": 276779,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inordinatus, disordered, from in-, not, and ordinare, to set in order. What is inordinate breaks the bounds that order would keep, so it means far too much.",
+      "audio_url": null,
+      "roots": [
+        "ordinare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inordinate amount",
+        "inordinate delay",
+        "inordinate pride"
+      ]
     },
     {
       "id": 560,
@@ -9371,8 +9481,17 @@
       "syllables": 4,
       "frequency_rank": 871840,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin insinuare, to creep or wind one's way in, from in- and sinus, a bend or fold, as in sinuous. A hint that is insinuated works its way in sideways instead of being said outright.",
+      "audio_url": null,
+      "roots": [
+        "sinus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "are you insinuating",
+        "insinuated that",
+        "insinuating tone"
+      ]
     },
     {
       "id": 561,
@@ -9382,8 +9501,17 @@
       "syllables": 5,
       "frequency_rank": 225938,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin interminabilis, endless, made of in-, not, and terminare, to set a limit or end, from terminus, a boundary. Terminate comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "terminare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "interminable delays",
+        "interminable wait",
+        "interminable discussions"
+      ]
     },
     {
       "id": 562,
@@ -9393,8 +9521,17 @@
       "syllables": 5,
       "frequency_rank": 250260,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin irrevocabilis, through Middle French: ir-, not, plus revocare, to call back, from re- and vocare, to call. Revoke comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "vocare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "irrevocable decision",
+        "irrevocable step",
+        "irrevocable loss"
+      ]
     },
     {
       "id": 563,
@@ -9404,8 +9541,17 @@
       "syllables": 3,
       "frequency_rank": 1060963,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman getteson, the throwing of cargo overboard, from Old French jeter, to throw, which comes from Latin iactare, a form of iacere, to throw, as in eject. It now means dumping any burden.",
+      "audio_url": null,
+      "roots": [
+        "iacere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "jettison the idea",
+        "jettison everything",
+        "jettisoned altogether"
+      ]
     },
     {
       "id": 564,
@@ -9415,8 +9561,15 @@
       "syllables": 2,
       "frequency_rank": 334584,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin luridus, pale yellow or wan. In English it first described a sickly, ghastly color, and it now describes both harsh, glaring colors and stories that dwell on gruesome detail.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "lurid details",
+        "lurid tales",
+        "lurid accounts"
+      ]
     },
     {
       "id": 565,
@@ -9437,8 +9590,15 @@
       "syllables": 2,
       "frequency_rank": 157133,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French malaise, made of mal, badly, and aise, ease or comfort: the state of being ill at ease, in body or in spirit.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "economic malaise",
+        "social malaise",
+        "spiritual malaise"
+      ]
     },
     {
       "id": 567,
@@ -9448,8 +9608,17 @@
       "syllables": 3,
       "frequency_rank": 1222506,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French malfaisance, from malfaire, to do evil, which goes back to Latin male, badly, and facere, to do. In English it is mainly a legal word for wrongdoing in office.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "corporate malfeasance",
+        "official malfeasance",
+        "financial malfeasance"
+      ]
     },
     {
       "id": 568,
@@ -9459,8 +9628,15 @@
       "syllables": 1,
       "frequency_rank": 996052,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English metan, to measure, related to German messen. To mete out punishment is to measure out the share each person has earned.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mete out justice",
+        "mete out punishment",
+        "treatment meted out"
+      ]
     },
     {
       "id": 569,
@@ -9470,8 +9646,15 @@
       "syllables": 2,
       "frequency_rank": 604158,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "First a variant spelling of metal; the word was applied to a person's spirit or temper from the 1500s, and in the 1700s the mettle spelling settled on that sense.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "prove their mettle",
+        "test their mettle",
+        "true mettle"
+      ]
     },
     {
       "id": 570,
@@ -15308,7 +15491,7 @@
       "definition": "Patient self-control in holding back from anger, revenge or punishment when there is cause for it.",
       "plain_language_definition": "Holding back your temper and staying kind when you have a right to be angry.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1084,
@@ -15348,7 +15531,7 @@
       "definition": "Give a person or a work a quality that becomes part of their very nature.",
       "plain_language_definition": "To give someone a strong feeling or belief that becomes part of who they are.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1092,
@@ -15436,7 +15619,7 @@
       "definition": "Dwelling on shocking or sordid details, usually of violence or sex, in order to excite.",
       "plain_language_definition": "Shocking and full of gory or sexual details meant to grab attention.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 1108,
@@ -15452,7 +15635,7 @@
       "definition": "A drained, uneasy mood with no clear cause, found in one person or across a whole community.",
       "plain_language_definition": "A dull, hard-to-explain feeling that things are not right, often shared by many people.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1110,
@@ -15468,7 +15651,7 @@
       "definition": "Deal out punishment, justice or harsh treatment to someone as their due.",
       "plain_language_definition": "To hand out punishment or justice to someone.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1112,
@@ -15898,33 +16081,37 @@
       "id": 1197,
       "word_id": 560,
       "definition": "Work oneself gradually and slyly into a place, a group or someone's favor.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To slowly and slyly work your way into a group or into someone's trust.",
       "sense_order": 2,
-      "register": null
+      "register": "disapproving",
+      "also_means": true
     },
     {
       "id": 1198,
       "word_id": 563,
       "definition": "Dump cargo or fuel overboard or in flight so that a struggling vessel or plane is lighter.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To dump cargo or fuel from a ship or plane in trouble so it stays afloat or aloft.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1199,
       "word_id": 564,
       "definition": "Glaring or unnaturally bright in color, often with a harsh red or orange glow.",
-      "plain_language_definition": null,
+      "plain_language_definition": "So harshly bright that a color or light looks unnatural.",
       "sense_order": 2,
-      "register": null
+      "register": "disapproving",
+      "also_means": true
     },
     {
       "id": 1200,
       "word_id": 566,
       "definition": "Feeling slightly off and run-down in body without any named illness.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A vague feeling of being unwell and tired, with no clear illness to explain it.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1201,
@@ -16074,33 +16261,37 @@
       "id": 1219,
       "word_id": 547,
       "definition": "Sneak a passage, clause or item into something where it does not belong.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To sneak extra words or things in where they have no right to be.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1220,
       "word_id": 548,
       "definition": "A lender's choice to hold off on collecting a debt, often by pausing payments for a set time.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In lending, an agreement to pause or lower loan payments for a while, as on a mortgage.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1221,
       "word_id": 549,
       "definition": "Full of nervous strain that everyone present can sense.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Very tense and anxious, so that people feel on edge.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1222,
       "word_id": 552,
       "definition": "Pick up the leftover grain that reapers missed after a harvest.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To pick up the grain or fruit left in a field once the harvest is in.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1223,
@@ -16178,9 +16369,10 @@
       "id": 1232,
       "word_id": 553,
       "definition": "Soak or stain something thoroughly with a dye or liquid.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To wet or dye something all the way through.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1233,
@@ -72952,14 +73144,6 @@
       "revision": 3
     },
     {
-      "id": 937,
-      "word_id": 547,
-      "text": "Foist goes back to a Dutch word for fist: cheats at dice would hide a loaded die in the hand and foist it into play.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 938,
       "word_id": 548,
       "text": "Forbearance contains bear, as in bear with me: to show forbearance is to bear with someone instead of lashing out.",
@@ -73811,6 +73995,14 @@
       "id": 1048,
       "word_id": 360,
       "text": "Expiate shares a root with pious: Latin piare, 'to purify or appease', from pius. To expiate a sin is to make yourself clean of it again.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1049,
+      "word_id": 547,
+      "text": "Foist probably goes back to a Dutch word for fist: cheats at dice would hide a loaded die in the hand and foist it into play.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -126780,8 +126972,8 @@
     },
     {
       "path": "definitions/1219.mp3",
-      "bytes": 18808,
-      "key": "534f5c14219a5246",
+      "bytes": 16927,
+      "key": "0b944a5079b6bc77",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126794,8 +126986,8 @@
     },
     {
       "path": "definitions/1220.mp3",
-      "bytes": 24137,
-      "key": "a2f0327746cc2b4a",
+      "bytes": 22465,
+      "key": "4280dd618aeb1d6e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126809,7 +127001,7 @@
     {
       "path": "definitions/1221.mp3",
       "bytes": 14524,
-      "key": "380059ba0d978063",
+      "key": "e1ed7c19518ef091",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126836,8 +127028,8 @@
     },
     {
       "path": "definitions/1222.mp3",
-      "bytes": 17136,
-      "key": "98bec0252e76bd4f",
+      "bytes": 18913,
+      "key": "a3ea323a6ed1b753",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126850,8 +127042,8 @@
     },
     {
       "path": "definitions/1232.mp3",
-      "bytes": 15360,
-      "key": "fdc24ffe1cb438cb",
+      "bytes": 11494,
+      "key": "ef090d78c62de6e0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126906,8 +127098,8 @@
     },
     {
       "path": "definitions/1197.mp3",
-      "bytes": 21316,
-      "key": "e6a10486c8df83a2",
+      "bytes": 18913,
+      "key": "38a1a0ca1e1d1cb2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126934,8 +127126,8 @@
     },
     {
       "path": "definitions/1198.mp3",
-      "bytes": 24764,
-      "key": "37b4b58adc1798e4",
+      "bytes": 23406,
+      "key": "be3f7f09a3100c1b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126948,8 +127140,8 @@
     },
     {
       "path": "definitions/1199.mp3",
-      "bytes": 21525,
-      "key": "f6c8ae8f894cb22c",
+      "bytes": 15256,
+      "key": "234f773356cedcf0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -126969,8 +127161,8 @@
     },
     {
       "path": "definitions/1200.mp3",
-      "bytes": 18077,
-      "key": "6471b5db13bce3b7",
+      "bytes": 21107,
+      "key": "7bf2c7c952e69a86",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -131064,8 +131256,8 @@
     },
     {
       "path": "hooks/547.mp3",
-      "bytes": 29675,
-      "key": "cbb7818de3f54087",
+      "bytes": 32078,
+      "key": "140ed48a614a193c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -179789,6 +179981,723 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin and hook match Wiktionary (Early Modern French foible, modern faible; doublet of feeble). No labels in the three dictionaries, so null is right; hiding the fencing sense is right. Pairings are the tool's top adjectives. Weakest point: 'little foibles' is the most generic of the three."
+    },
+    {
+      "id": 1437,
+      "word_id": 546,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (feinte from feindre, from Latin fingere \"to fashion, shape; to feign, pretend\"; feign, fiction, figment listed as related) and AHD. Hook true as written. No labels in Oxford, Cambridge or Longman. No watch-out: feint and faint are homophones, but British \"feint\" (ruled lines) is itself a variant of faint, so a note would mislead. Pairings from the tool lists (making feints, feint attack, diversionary); all are low frequency in absolute terms, as the word is rare. Checked: make a feint 5.9, feint attack 6.5, diversionary feint 0.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'diversionary feint' is on Datamuse's adjective list but only 0.63 per billion in Google Books 2010-22 and nearly redundant (a feint is a diversion); 'make a feint' (5.6) and 'feint attack' (5.9) are fine. Origin matches Wiktionary (French feinte < feindre < Latin fingere; feign, fiction, figment related) and AHD."
+    },
+    {
+      "id": 1438,
+      "word_id": 547,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (probably from archaic Dutch vuisten \"to take into one's hand\", from vuyst \"fist\"; hedge kept), AHD (probably Dutch dialectal vuisten) and Oxford Learner's word origin, which gives the first English sense as hiding a die in the hand to bring it out at the right moment. Wiktionary gives no sense history, so the dice step rests on Oxford (and Etymonline, \"palm a false die\"). Hook change: added \"probably\" before \"goes back\", since Wiktionary and AHD hedge the Dutch source; the dice story itself is supported by Oxford and Etymonline. No labels in Oxford, Cambridge or Longman (their pages are the phrasal verb foist on/upon). Other sense (insert slyly into a text) is dated and in no learner's dictionary, so not shown. Pairings from --check \"foisted on the *\" and \"foisted upon *\" (on the public 1.8, upon them 10.3 per billion).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: Wiktionary gives only the probable Dutch vuisten < vuyst, fist (hedge kept); the dice sense is not in Wiktionary but Oxford's Word Origin supports it ('hide a dice in one's hand'). 'Palming a die to sneak it into a game' is close to Vocabulary.com's 'palming a loaded die into a game'; reword. Pairings 4: both common ('foisted upon them' 10.3, 'foisted on the public' 1.8, the top fill of its slot) but 'foisted upon them' has only a pronoun partner."
+    },
+    {
+      "id": 1439,
+      "word_id": 548,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (forbearance = forbear + -ance; forbear from Old English forberan \"abstain from, refrain; suffer, endure, tolerate\", equivalent to for- + bear). Hook true: the bear in forbear is the endure sense. Tone: Oxford, Cambridge and Longman all mark it formal. Other sense: the lending sense (AHD and Collins label it law) is shown with technical, since mortgage and student-loan forbearance is common in US news; a reviewer may judge it too specialist. Pairings checked: mutual 13.6, patient 4.0, exercise forbearance 2.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: pairings, 'exercise forbearance' (2.5 per billion) is also used of lenders and regulators (the other sense). Origin matches Wiktionary forbearance (forbear + -ance) and forbear (Old English forberan, for- + bear). Formal is marked by Oxford, Cambridge and Longman; technical fits the lending sense."
+    },
+    {
+      "id": 1440,
+      "word_id": 549,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (adjective from Middle English fraught \"burdened, loaded\", past participle of fraughten \"to load a ship with cargo\", from Middle Dutch vrachten, from vracht \"cargo\"; noun fraught is a doublet of freight) and AHD. Hook true (\"old cousin of freight\", ships once fraught with cargo). No register labels (Oxford marks the tense sense especially British, which is not a tone label). Pairings from --check \"fraught with *\" (danger 104.8, difficulties 78.5, peril 31.0 per billion). The tense sense is shown: common (fraught relationship 38 per billion) and in Oxford and Longman.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: origin compresses the chain (the Middle English verb came from Middle Dutch vrachten, from vracht), which is acceptable. Pairings are common (fraught with danger 106, difficulties 79, peril 32 per billion); the tense sense is current and well defined."
+    },
+    {
+      "id": 1441,
+      "word_id": 550,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Old French frenetike, Latin phreneticus, Greek phrenetikos \"delirious\", from phrenitis \"delirium\", from phren \"mind\"; doublet of frantic; frenzy listed as related; obsolete senses \"insane\" and \"delirium\") and Oxford word origin (first English sense insane). Hook true: frenzy shares phren. No labels. Pairings are the tool's top nouns. Checked: pace 44.5, activity 31.5, energy 18.9 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'frenzy shares the root' goes past the frenetic entry. Wiktionary's frenzy page would not load (429s), so I judged it on Wiktionary frenetic (phrenetikos < phrenitis, delirium < phren, mind) and Oxford and AHD, which trace frenetic to phrenitis; frenzy also comes from phrenitis via Latin phrenesis. 'Once used of the insane' matches Wiktionary's obsolete sense and Oxford."
+    },
+    {
+      "id": 1442,
+      "word_id": 551,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (gall + -ing; the adjective follows from the verb), dictionary.com (gall 2 + -ing) and the gall entries quoted in vocabulary.com and WordUp (gall: to chafe or rub sore; a raw spot on a working horse from saddle or harness). Wiktionary's gall page could not be fetched (rate limit), so the sore sense is checked against those dictionaries only. Hook: \"comes from gall, a sore\" is slightly loose (galling comes from the verb, which comes from the noun) but not false; left unchanged. No labels. Pairings: galling has few noun partners in its main sense (the tool's yoke, fetters and fire are the old chafing and harassing senses), so two are adverb frames; \"particularly galling\" is generic. Checked: particularly galling 23.9, all the more galling 6.7, galling to see 1.8 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'particularly galling' (24 per billion) and 'all the more galling' (6.7) are degree phrases that fit any adjective of annoyance, and 'galling to see' is only 1.8; 'galling for' (13) is more common. Origin checked against Wiktionary gall (fetched): Old English gealla, a saddle sore on a horse; verb to chafe, figuratively to exasperate."
+    },
+    {
+      "id": 1443,
+      "word_id": 552,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English glenen \"to gather heads of grain left by reapers\", Old French glener, Late Latin glen(n)are \"to make a collection\"; further origin uncertain, possibly Celtic: hedge kept), AHD and Oxford (probably Celtic). Hook true: the harvest sense is the first sense in Wiktionary and the Middle English gloss. No labels. The harvest sense is shown: Longman lists it, and gleaning is still practiced (food-bank gleaning, the Book of Ruth). Pairings checked: glean information 30.4, glean insights 8.3, information gleaned from 85.1 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: alsoMeans, the harvest sense is now met mostly in history, the Bible and food-rescue gleaning, but it is the literal meaning and worth showing. Wiktionary's hedge on glennare (uncertain, possibly Celtic) is kept."
+    },
+    {
+      "id": 1444,
+      "word_id": 553,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin imbuo \"wet, moisten\"), AHD (\"to moisten, stain\") and Longman (\"to make wet, stain\"). Hook true: \"to wet or soak\" fits. Tone: Oxford and Cambridge mark it formal, and Longman marks the entry imbue somebody/something with something formal (the main Longman page has no definition). No root: imbuere appears in no other English word (imbibe is from bibere). Other sense (soak with dye) is rare today and in no learner's dictionary, so not shown. Pairings checked: deeply imbued 31.1, thoroughly imbued 17.5, imbued with a sense 26.8 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'deeply imbued' (31 per billion) and 'thoroughly imbued' (17) are both intensifying adverbs; 'imbued with meaning' (16) would show the sense better. Formal is marked by Oxford, Cambridge and Longman (imbue with)."
+    },
+    {
+      "id": 1445,
+      "word_id": 554,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English impellen, from Latin impello) and AHD (in-, against + pellere, to drive). Hook true. Tone left null: Oxford and Longman mark it formal, but the Cambridge Advanced Learner's entry has no label (only Cambridge's American Dictionary has fml), so the all-three rule is not met. Pairings checked: felt impelled to 43.9, impelled to act 4.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. Formal rightly left off (Oxford and Longman mark it, Cambridge's learner's entry does not). Origin matches Wiktionary (Latin impello) and Oxford and AHD (in- + pellere, to drive)."
+    },
+    {
+      "id": 1446,
+      "word_id": 555,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle French impunite, Latin impunitas, from impunis \"without punishment\"), AHD (in- + poena, penalty) and Oxford. Hook true. Tone null: Oxford marks it formal and disapproving, but Cambridge's learner's entry and Longman give no label. Pairings checked: act with impunity 17.9, culture of impunity 35.3, with relative impunity 14.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. Origin matches Wiktionary (impunitas < impunis, without punishment); in- + poena and penal and punish from poena are standard. Oxford alone labels it formal and disapproving, so null is right."
+    },
+    {
+      "id": 1447,
+      "word_id": 556,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin indelebilis \"indestructible\", in- + delebilis \"destructible\"; Latin page fetched) and AHD (delebilis \"capable of being effaced\", from delere \"to wipe out\"). Hook true: delete is from delere. No labels. Pairings checked: mark 123, impression 64, ink 26 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: origin glosses delebilis as 'able to be wiped out' where Wiktionary has 'destructible'; both are fair for delere."
+    },
+    {
+      "id": 1448,
+      "word_id": 557,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Late Latin indomitabilis, from in- + domito, frequentative of domo \"to tame\"), AHD and Oxford. Hook true. No root: domare shows in no English word a learner could spot (daunt is too far removed). Tone null: Oxford marks it formal and approving, Longman formal, Cambridge nothing. Pairings are the tool's top three nouns (spirit 67.8, courage 19.6, energy 9.6 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'a form of domare' for the frequentative domitare is loose but true (Wiktionary). Empty roots are right: domare shows in no common English word."
+    },
+    {
+      "id": 1449,
+      "word_id": 558,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle French inimitable, Latin inimitabilis, in- + imitable) and AHD (imitabilis from imitari, to imitate). Hook true. Tone null: only Cambridge's American Dictionary marks it fml. Pairings from the tool lists, checked: inimitable style 24.7, own inimitable way 11.9, inimitable fashion 6.9 per billion (inimitable wit was only 1.0). All three are manner nouns, so pairings scored 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: origin is a bare chain with no comment, acceptable since the meaning follows plainly from in- + imitable (Wiktionary)."
+    },
+    {
+      "id": 1450,
+      "word_id": 559,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English inordinat, Latin inordinatus \"not arranged, disordered, irregular\", from in- + ordinatus, past participle of ordinare \"to arrange, order\"), AHD and Oxford. Hook true. Root ordinare links ordain, coordinate, subordinate. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings checked: amount 166, delay 15.2, pride 4.7 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'inordinate pride' (4.7 per billion) is the least common pairing. Origin matches Wiktionary (inordinatus, in- + ordinatus < ordinare). Formal is marked by Oxford and Cambridge only, so null is right."
+    },
+    {
+      "id": 1451,
+      "word_id": 560,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin insinuo \"to push in, creep in, steal in\", from in- + sinus \"a winding, bend, fold\"), AHD (sinuare, to curve, from sinus) and Oxford. I did not claim an English sense history: Oxford gives the first English sense as entering a document on a register. Hook true. Tone of the first sense null: only Oxford marks it (usually disapproving). Other sense shown (insinuate oneself is very common in the tool data); Oxford and Cambridge (phrasal entry insinuate yourself into) mark it formal and disapproving, Longman formal. Both labels qualify; I chose disapproving as the one that matters for use. Pairings checked: are you insinuating 28.1, insinuated that 84.6, insinuating tone 4.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: 'insinuated that' (85 per billion) is a bare clause pattern that fits any verb of saying; 'are you insinuating' (28) and 'insinuating tone' (4.6) are good. Disapproving on the other sense matches Oxford and Cambridge."
+    },
+    {
+      "id": 1452,
+      "word_id": 561,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English, from Middle French and Late Latin interminabilis; in- + terminable), Oxford (in- + terminare, from terminus \"end, boundary\") and Longman (from terminare, see terminate). Hook true. No labels. Pairings are tool nouns. Checked: delays 4.7, wait 13.9, discussions 4.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: origin says the Late Latin word is made of in- and terminare, where it is in- plus terminabilis, from terminare; close enough."
+    },
+    {
+      "id": 1453,
+      "word_id": 562,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle French irrevocable, Latin irrevocabilis; ir- + revoke + -able), Oxford (revocare) and Longman. Hook true. Root vocare as on equivocate. Tone null: only Oxford marks it formal. Pairings are tool nouns; irrevocable trust left out as a legal term. Checked: decision 12.7, step 10.9, loss 10.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. Origin matches Wiktionary (irrevocabilis via Middle French; ir- + revoke + -able). Formal is Oxford's alone, so null is right."
+    },
+    {
+      "id": 1454,
+      "word_id": 563,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Anglo-Norman getteson, Old French getaison, from geter/jeter, possibly from Vulgar Latin *iectatio from Latin iacto; noun sense \"the act of throwing goods overboard to lighten a ship\"), AHD and Oxford (jactare, frequentative of jacere). Wiktionary hedges only the step through a Vulgar Latin noun *iectatio; the origin leaves that step out and says only that jeter comes from Latin iactare, which Oxford and AHD give plainly (Wiktionary's jeter page could not be fetched because of the rate limit). Hook true on the same basis. Root iacere (eject, reject, project); Wiktionary itself does not name iacere, Oxford does. The literal sense is shown (planes jettison fuel). Pairings checked: jettison the idea 1.8, jettison everything 1.4, jettisoned altogether 1.2 per billion (all low; the word is uncommon), so scored 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: all three are under 2 per billion; 'jettisoned altogether' is a generic adverb and 'jettison everything' also fits the cargo sense, while 'jettison the idea' (1.8) is the top fill of its slot. Wiktionary hedges getaison < Vulgar Latin (possibly); the origin avoids that step, and Oxford and AHD give the Latin iactare link unhedged."
+    },
+    {
+      "id": 1455,
+      "word_id": 564,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (borrowed from Latin luridus \"pale yellow, wan\"; senses include \"ghastly, pale, wan\"), Oxford (first English sense pale and dismal in colour) and Longman. Hook: \"sallow or ghastly pale\" is close to \"pale yellow, wan\" and left unchanged. Tone: Oxford and Cambridge both put disapproving on the whole entry, covering both senses; Longman has no label. The color sense is shown (lurid green, a lurid glow). Pairings checked: details 21.4, tales 14.6, accounts 7.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. 'First described a sickly color' is supported by Oxford's Word Origin and AHD's word history, not by Wiktionary itself. Disapproving is entry-wide in Oxford and Cambridge, so both senses carry it."
+    },
+    {
+      "id": 1456,
+      "word_id": 566,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (French malaise \"ill ease\", from mal- + aise; compare ill at ease), Oxford and Longman. Hook true. No root: mal is a bare prefix and aise is not a stem. Tone: Oxford, Cambridge and Longman all mark the entry formal, and each entry covers the bodily sense, so both senses are formal. The bodily sense is shown (common in medical writing). Pairings checked: economic 32.7, social 22.1, spiritual 13.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. Formal is entry-wide in Oxford, Cambridge and Longman, so both senses may carry it; the bodily sense is current and distinct from the first."
+    },
+    {
+      "id": 1457,
+      "word_id": 567,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Old French malfaisance, from malfaire \"to do evil\", from Latin malefacio, from male + facio) and AHD. Hook true. Tone null: Oxford (law), Cambridge (specialized) and Longman (law) mark it a legal term, but technical is meant for other senses and the word is common in general news (corporate malfeasance), so I left it null; a reviewer could argue for technical. Pairings checked: corporate 12.3, official 2.8, financial 6.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: tone, all three dictionaries mark it as legal (Oxford law, Cambridge specialized, Longman law and formal); null is acceptable since technical is meant for other senses and the origin says it is mainly a legal word."
+    },
+    {
+      "id": 1458,
+      "word_id": 568,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English meten, Old English metan \"to measure, mete out\", cognate with German messen), AHD and Oxford. Hook true. Tone: the phrasal verb mete out is marked formal by Oxford (mete-out page), Cambridge and Longman (mete-out page), so formal. No watch-out: meet out for mete out is rare in print (0.19 against 14.90 per billion for punishment). Pairings checked: mete out justice 17.6, mete out punishment 14.9, treatment meted out 46.0.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing of note. Formal is marked on mete out by Oxford, Cambridge and Longman. Origin matches Wiktionary (Old English metan, to measure; German messen)."
+    },
+    {
+      "id": 1459,
+      "word_id": 569,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (figurative use of metal since the 16th century; the two spellings interchangeable at first, split by sense in the 18th century; mettle also listed as an obsolete spelling of metal) and Oxford. Written in a different order from Wiktionary's note, and reworded to stay clear of vocabulary.com's note (metal and mettle once used interchangeably). Hook true. No labels. No watch-out: mettle spelled metal is rare in print (test their metal 0.32 against test their mettle 8.18 per billion). Pairings checked: prove their mettle 8.3, test their mettle 8.2, true mettle 5.0.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin 4: it follows the sequence of Wiktionary's two sentences and AHD's word history closely (variant of metal, figurative from the 1500s, spelling fixed by sense in the 1700s), and it does not say why metal came to mean spirit (the stuff a person is made of). Recast in your own order and add that step."
     }
   ]
 }
