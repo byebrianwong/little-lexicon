@@ -26747,10 +26747,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 83769,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From New Latin propensitas, from Latin propensus, \"inclined\", the past participle of propendere, \"to hang forward\", which is built on pendere, \"to hang\".",
+      "roots": [
+        "pendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "natural propensity",
+        "strong propensity",
+        "propensity for violence"
+      ],
       "audioUrl": "audio/words/233.mp3?v=2649846069e0",
       "hookAudioUrl": "audio/hooks/233.mp3?v=de2777e9a1dc",
       "senses": [
@@ -26759,7 +26765,7 @@
           "definition": "A lasting, built-in lean toward behaving one particular way.",
           "plainLanguageDefinition": "Something you tend to do, often without even deciding to.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/399.mp3?v=d7abd3028b75",
           "examples": [
@@ -26846,10 +26852,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 267793,
-      "etymology": null,
+      "etymology": "From Latin prosa, \"prose\", through Medieval Latin prosaicus, \"in prose\", and Middle French. Prose lacks the rhythm of verse, so the word came to mean plain and dull.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "prosaic explanation",
+        "prosaic reality",
+        "prosaic details"
+      ],
       "audioUrl": "audio/words/235.mp3?v=0a3e4f30c28f",
       "hookAudioUrl": "audio/hooks/235.mp3?v=ea6e911ec56c",
       "senses": [
@@ -26949,10 +26959,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 626775,
-      "etymology": null,
+      "etymology": "Named after Proteus, a sea god of Greek myth who could turn himself into any shape he liked.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "protean nature",
+        "protean career",
+        "protean forms"
+      ],
       "audioUrl": "audio/words/236.mp3?v=21172a0e7f97",
       "hookAudioUrl": "audio/hooks/236.mp3?v=cbb3aca6a0bc",
       "senses": [
@@ -26961,7 +26975,7 @@
           "definition": "Capable of shifting easily from one form, role, or style to another.",
           "plainLanguageDefinition": "Changing easily into many different shapes, jobs or styles.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/406.mp3?v=9ac9d4fe55bc",
           "examples": [
@@ -27052,10 +27066,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 66131,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin prudens, a shortened form of providens, \"foreseeing\", from providere, made of pro- (\"ahead\") and videre (\"to see\"). Prude is an unrelated word.",
+      "roots": [
+        "videre"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "prudent course",
+        "prudent investor",
+        "prudent management"
+      ],
       "audioUrl": "audio/words/237.mp3?v=c86ee94befe7",
       "hookAudioUrl": "audio/hooks/237.mp3?v=5446b8ce7f17",
       "senses": [
@@ -27159,10 +27179,13 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 981528,
-      "etymology": null,
+      "etymology": "From Latin puerilis, \"childish\", from puer, \"boy\" or \"child\".",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "puerile jokes",
+        "puerile nonsense"
+      ],
       "audioUrl": "audio/words/238.mp3?v=106c2560fb0d",
       "hookAudioUrl": "audio/hooks/238.mp3?v=39188dc45b98",
       "senses": [
@@ -27171,7 +27194,7 @@
           "definition": "Foolish in a juvenile way that an adult ought to have outgrown.",
           "plainLanguageDefinition": "Acting like a ten-year-old when you are well past that age.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/408.mp3?v=540ce8eb2a7a",
           "examples": [
@@ -27226,11 +27249,11 @@
         {
           "senseId": 1306,
           "definition": "Having to do with children or the early years of life.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Relating to children or to childhood.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1306.mp3?v=157dc9d181a0",
+          "audioUrl": "audio/definitions/1306.mp3?v=8c28cb05648d",
           "examples": [],
           "distractors": []
         }
@@ -27277,10 +27300,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 976044,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin pugnax, \"combative\", from pugnare, \"to fight\", a verb formed from pugnus, \"fist\".",
+      "roots": [
+        "pugnare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pugnacious attitude",
+        "pugnacious face",
+        "pugnacious spirit"
+      ],
       "audioUrl": "audio/words/239.mp3?v=d39a1044e667",
       "hookAudioUrl": "audio/hooks/239.mp3?v=aaa3366da934",
       "senses": [
@@ -27289,7 +27318,7 @@
           "definition": "Eager for a clash, and ready to turn any disagreement into a fight.",
           "plainLanguageDefinition": "Always looking for a fight or an argument.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/410.mp3?v=9a33d09d90c4",
           "examples": [
@@ -27388,10 +27417,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 239814,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin pungens, \"pricking\", the present participle of pungere, \"to prick or sting\". Puncture comes from the same verb.",
+      "roots": [
+        "pungere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pungent smell",
+        "pungent odor",
+        "pungent aroma"
+      ],
       "audioUrl": "audio/words/241.mp3?v=9b44c4d3afca",
       "hookAudioUrl": "audio/hooks/241.mp3?v=e9094e8824a0",
       "senses": [
@@ -27455,11 +27490,11 @@
         {
           "senseId": 643,
           "definition": "Sharply critical or witty in a way that stings.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Biting and witty, as in a review or remark that stings its target.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/643.mp3?v=4854cc491f60",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/643.mp3?v=21fffd169620",
           "examples": [],
           "distractors": []
         }
@@ -27498,10 +27533,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 223943,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin quiescens, \"resting\", the present participle of quiescere, \"to rest or keep still\", which is formed from quies, \"rest\".",
+      "roots": [
+        "quiescere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "quiescent state",
+        "remain quiescent",
+        "quiescent period"
+      ],
       "audioUrl": "audio/words/242.mp3?v=4ff7cec04899",
       "hookAudioUrl": "audio/hooks/242.mp3?v=fe05e4c0a1af",
       "senses": [
@@ -27510,7 +27551,7 @@
           "definition": "Lying dormant during a pause in activity rather than finished for good.",
           "plainLanguageDefinition": "Resting quietly for a while instead of being over for good.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/415.mp3?v=0b499cf5330d",
           "examples": [
@@ -27593,10 +27634,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 702606,
-      "etymology": null,
+      "etymology": "From Don Quixote, the hero of Miguel de Cervantes's novel, who sets off as a knight to right the world's wrongs and charges at windmills he takes for giants.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "quixotic quest",
+        "quixotic attempt",
+        "quixotic gesture"
+      ],
       "audioUrl": "audio/words/243.mp3?v=cb47f038c101",
       "hookAudioUrl": "audio/hooks/243.mp3?v=3233a84f4fba",
       "senses": [
@@ -27704,10 +27749,14 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1063309,
-      "etymology": null,
+      "etymology": "From Latin quotidianus, \"daily\", partly by way of French. Its base, quotidie, \"every day\", was formed from quot (\"how many\") and a form of dies (\"day\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "quotidian life",
+        "quotidian reality",
+        "quotidian existence"
+      ],
       "audioUrl": "audio/words/244.mp3?v=8f0d22027ba5",
       "hookAudioUrl": "audio/hooks/244.mp3?v=67f20fb6635e",
       "senses": [
@@ -27811,10 +27860,13 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1677425,
-      "etymology": null,
+      "etymology": "Formed from rancor, \"a long-held grudge\", plus -ous. Rancor came into English through Old French from Latin rancor, which could mean a grudge.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "rancorous debate",
+        "rancorous dispute"
+      ],
       "audioUrl": "audio/words/245.mp3?v=e18c924ac0e7",
       "hookAudioUrl": "audio/hooks/245.mp3?v=0f56209e71de",
       "senses": [
@@ -27922,10 +27974,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 20999580,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin rarefacere, \"to make rare or thin\", through Old French. Its parts are rarus (\"thin, loose\"), in its adverb form rārē, and facere (\"to make\").",
+      "roots": [
+        "rarus",
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "rarefied air",
+        "rarefied gas"
+      ],
       "audioUrl": "audio/words/246.mp3?v=0d262ea1d37a",
       "hookAudioUrl": "audio/hooks/246.mp3?v=0fa196693bcb",
       "senses": [
@@ -27989,11 +28047,11 @@
         {
           "senseId": 1321,
           "definition": "Make a style or idea loftier and more delicate, further from the everyday.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To make a style or idea so subtle and lofty that few people can relate to it.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1321.mp3?v=364947cfafa1",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1321.mp3?v=a42cb127027b",
           "examples": [],
           "distractors": []
         }
@@ -28028,10 +28086,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 239540,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French récalcitrant, from Latin recalcitrare, \"to kick back with the heels\", as a balky horse does, from calx, \"heel\".",
+      "roots": [
+        "calx"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "recalcitrant child",
+        "recalcitrant states",
+        "recalcitrant members"
+      ],
       "audioUrl": "audio/words/247.mp3?v=6a6f1dd38964",
       "hookAudioUrl": "audio/hooks/247.mp3?v=ac298f4e90b9",
       "senses": [
@@ -28040,7 +28104,7 @@
           "definition": "Balking at commands and pushing back against whoever gives them.",
           "plainLanguageDefinition": "Openly stubborn with anyone who gives you orders.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/424.mp3?v=af2787d19b17",
           "examples": [
@@ -28148,19 +28212,21 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 84613,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin refractarius, \"obstinate\", from refringere, \"to break up\", a compound of frangere, \"to break\".",
+      "roots": [
+        "frangere"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/250.mp3?v=c7d48235503f",
-      "hookAudioUrl": "audio/hooks/250.mp3?v=ac634bfd3e56",
+      "hookAudioUrl": "audio/hooks/250.mp3?v=6c18693e08fa",
       "senses": [
         {
           "senseId": 429,
           "definition": "Unmanageable and quick to rebel against whoever is in charge.",
           "plainLanguageDefinition": "Fighting back against rules and the people who set them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/429.mp3?v=1e7f5097609d",
           "examples": [
@@ -28215,33 +28281,33 @@
         {
           "senseId": 1322,
           "definition": "Of an illness, failing to improve with the usual medicines.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of an illness, not getting better with the standard treatments.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1322.mp3?v=4f11a498bb8f",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1322.mp3?v=ac9985fb3673",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1323,
           "definition": "Of a nerve or muscle, briefly unable to react again just after firing.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a nerve or muscle, needing a short rest before it can fire again.",
           "senseOrder": 3,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1323.mp3?v=ddb35412198f",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1323.mp3?v=6422e5940b93",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1324,
           "definition": "Of a brick or ceramic, fit for lining furnaces because heat barely affects it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a brick or similar material, able to stand intense heat without damage.",
           "senseOrder": 4,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1324.mp3?v=4e72f1d358d9",
+          "audioUrl": "audio/definitions/1324.mp3?v=948042b8ae10",
           "examples": [],
           "distractors": []
         }
@@ -28285,7 +28351,7 @@
         }
       ],
       "mnemonics": [
-        "Refractory comes from Latin refringere, to break back, the same root as fracture: a refractory person breaks every rule you set."
+        "Refractory comes from Latin refringere, to break up, the same root as fracture: a refractory person breaks every rule you set."
       ]
     },
     {
@@ -28296,10 +28362,13 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 143500,
-      "etymology": null,
+      "etymology": "From Latin refutare, \"to check or push back\", a verb that also meant \"to disprove\".",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Strictly, refute means to prove a claim false; using it to mean simply deny is common but disputed.",
+      "pairings": [
+        "refute the claim",
+        "refute the argument"
+      ],
       "audioUrl": "audio/words/251.mp3?v=7e9fb9436164",
       "hookAudioUrl": "audio/hooks/251.mp3?v=86a995088293",
       "senses": [
@@ -28308,7 +28377,7 @@
           "definition": "Defeat a statement by producing facts it cannot survive.",
           "plainLanguageDefinition": "To prove that a claim is wrong, not just say that it is.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/432.mp3?v=0fa6b8d70f1b",
           "examples": [
@@ -28403,10 +28472,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 839028,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin relegare, \"to send away, banish\", built from re- (\"back\") and legare (\"to send\"), as in delegate. Even in Latin it could mean to set something aside.",
+      "roots": [
+        "legare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "relegated to the background",
+        "relegated to the margins",
+        "relegated to a footnote"
+      ],
       "audioUrl": "audio/words/252.mp3?v=d08378912a2d",
       "hookAudioUrl": "audio/hooks/252.mp3?v=9458af555d4e",
       "senses": [
@@ -28470,22 +28545,22 @@
         {
           "senseId": 1325,
           "definition": "Hand a matter over to someone else to settle.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To pass a question to another person or body to decide.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1325.mp3?v=7088c75018e6",
+          "audioUrl": "audio/definitions/1325.mp3?v=bc7875e212c4",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1326,
           "definition": "Order someone to leave the country and stay away.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To send a person into exile.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1326.mp3?v=6020dce5d52f",
+          "audioUrl": "audio/definitions/1326.mp3?v=a6f270849ea7",
           "examples": [],
           "distractors": []
         }
@@ -28528,19 +28603,24 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1379737,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin remonstrare, formed from re- and monstrare, \"to show\". The sense moved from pointing something out to protesting against it.",
+      "roots": [
+        "monstrare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "remonstrate with",
+        "gently remonstrated"
+      ],
       "audioUrl": "audio/words/253.mp3?v=4e7ef456f064",
-      "hookAudioUrl": "audio/hooks/253.mp3?v=4a6fbd4137a8",
+      "hookAudioUrl": "audio/hooks/253.mp3?v=c8e3fd9bc0f4",
       "senses": [
         {
           "senseId": 437,
           "definition": "Press objections on someone directly, laying out reasons against what they are doing.",
           "plainLanguageDefinition": "To complain to someone directly and argue that they should change course.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/437.mp3?v=cb2950f04167",
           "examples": [
@@ -28616,7 +28696,7 @@
         }
       ],
       "mnemonics": [
-        "Remonstrate comes from Latin re-, again, plus monstrare, to show: you remonstrate by showing someone, point by point, why they are wrong."
+        "Remonstrate comes from Latin re- plus monstrare, to show: you remonstrate by showing someone, point by point, why they are wrong."
       ]
     },
     {
@@ -28627,19 +28707,25 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1106244,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin reprobatus, \"condemned\", from reprobare, formed from re- and probare (\"to approve\"), which is based on probus (\"good\"). In Middle English it meant damned; now it means a person of low morals.",
+      "roots": [
+        "probare",
+        "probus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "old reprobate",
+        "young reprobate"
+      ],
       "audioUrl": "audio/words/254.mp3?v=381f7ab4c78e",
-      "hookAudioUrl": "audio/hooks/254.mp3?v=3a53df5aa1c5",
+      "hookAudioUrl": "audio/hooks/254.mp3?v=5d9af861e344",
       "senses": [
         {
           "senseId": 440,
           "definition": "A person given over to vice who no longer cares what decent people think.",
           "plainLanguageDefinition": "A person with bad habits and no shame about them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "humorous",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/440.mp3?v=72aedc373cfd",
           "examples": [
@@ -28719,7 +28805,7 @@
         }
       ],
       "mnemonics": [
-        "Reprobate comes from Latin reprobare, to reject after testing: a reprobate is someone who failed the test of decent behavior."
+        "Reprobate comes from Latin reprobare, to reject or condemn: a reprobate is someone who failed the test of decent behavior."
       ]
     },
     {
@@ -28730,10 +28816,13 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 285772,
-      "etymology": null,
+      "etymology": "From Latin repudiare, \"to cast off, reject\", from repudium, which meant a rejection and also a divorce.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "publicly repudiated",
+        "openly repudiated"
+      ],
       "audioUrl": "audio/words/255.mp3?v=473653d13213",
       "hookAudioUrl": "audio/hooks/255.mp3?v=75acdf77b66f",
       "senses": [
@@ -28742,7 +28831,7 @@
           "definition": "Publicly reject an idea, claim, or person and disown any link to it.",
           "plainLanguageDefinition": "To reject something completely and say you want nothing to do with it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/441.mp3?v=5f971f77fa22",
           "examples": [
@@ -28797,11 +28886,11 @@
         {
           "senseId": 636,
           "definition": "Refuse to honor a debt or a contract.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To refuse to pay a debt or keep the terms of a contract.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/636.mp3?v=3f1132bdb591",
+          "audioUrl": "audio/definitions/636.mp3?v=71b187eaa332",
           "examples": [],
           "distractors": []
         }
@@ -28844,10 +28933,13 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 719487,
-      "etymology": null,
+      "etymology": "From Latin rescindere, which meant \"to cut off\" and also \"to annul\", from re- (\"back\") and scindere (\"to cut\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "rescind the order",
+        "rescind the offer"
+      ],
       "audioUrl": "audio/words/256.mp3?v=a1ff1d1e55ca",
       "hookAudioUrl": "audio/hooks/256.mp3?v=7f3a805a5bea",
       "senses": [
@@ -28951,10 +29043,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 329216,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin reticens, the present participle of reticere, \"to keep silent\", formed from re- and tacere, \"to be silent\", the verb behind tacit and taciturn.",
+      "roots": [
+        "tacere"
+      ],
+      "watchOut": "Reticent means unwilling to talk about yourself; using it to mean reluctant, as in \"reticent to act\", is common but disputed.",
+      "pairings": [
+        "reticent about",
+        "naturally reticent"
+      ],
       "audioUrl": "audio/words/257.mp3?v=04488f291bb0",
       "hookAudioUrl": "audio/hooks/257.mp3?v=ffa386ae69e0",
       "senses": [
@@ -29018,11 +29115,11 @@
         {
           "senseId": 446,
           "definition": "Cool and formal in manner.",
-          "plainLanguageDefinition": "Someone who is reticent acts in a very formal, detached, and emotionally distant way.",
+          "plainLanguageDefinition": "Distant and stiff in the way one behaves with others.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/446.mp3?v=c955032baeb2",
+          "audioUrl": "audio/definitions/446.mp3?v=c22f59d6cfdf",
           "examples": [
             {
               "exampleId": 2062,
@@ -29080,11 +29177,11 @@
         {
           "senseId": 447,
           "definition": "Reluctant to draw attention to yourself.",
-          "plainLanguageDefinition": "Someone who is reticent tries to avoid being noticed by others.",
+          "plainLanguageDefinition": "Shy about standing out or being noticed by others.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/447.mp3?v=395ae2c25dd0",
+          "audioUrl": "audio/definitions/447.mp3?v=88e23cb35f92",
           "examples": [
             {
               "exampleId": 2066,
@@ -29182,10 +29279,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 428906,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin reverens, \"respectful\", the present participle of revereri, \"to stand in awe of\", partly by way of French. Revere comes from the same Latin verb.",
+      "roots": [
+        "revereri"
+      ],
+      "watchOut": "Reverent means full of respect and awe; do not confuse it with Reverend, the title given to members of the clergy.",
+      "pairings": [
+        "reverent silence",
+        "reverent awe",
+        "reverent hush"
+      ],
       "audioUrl": "audio/words/258.mp3?v=09555cc35839",
       "hookAudioUrl": "audio/hooks/258.mp3?v=1f57351be2f6",
       "senses": [
@@ -29289,10 +29392,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 57499,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin sanctio, a decree or the penalty for breaking one, from sancire, \"to make sacred\" or \"to confirm\": a sanction can approve a rule or punish a breach of it.",
+      "roots": [
+        "sancire"
+      ],
+      "watchOut": "Sanction can mean approval (the sanction of the court) or a penalty (trade sanctions), so check which sense is meant.",
+      "pairings": [
+        "official sanction",
+        "divine sanction",
+        "royal sanction"
+      ],
       "audioUrl": "audio/words/261.mp3?v=3a060527b85f",
       "hookAudioUrl": "audio/hooks/261.mp3?v=eea4f01cadfc",
       "senses": [
@@ -29356,11 +29465,11 @@
         {
           "senseId": 1327,
           "definition": "An economic or diplomatic penalty aimed at pressuring a state or group to change course.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A punishment, often a ban on trade, that pushes a country or group to change what it is doing.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1327.mp3?v=638784f6d59b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1327.mp3?v=c873a3eda236",
           "examples": [],
           "distractors": []
         }
@@ -29407,10 +29516,16 @@
       "syllables": 5,
       "difficultyTier": 5,
       "frequencyRank": 1272349,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From sanctimony, from Latin sanctimonia, \"holiness\", based on sanctus (\"holy\"), the past participle of sancire. Sanctimony once meant real holiness and later a show of it.",
+      "roots": [
+        "sancire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "sanctimonious tone",
+        "sanctimonious attitude",
+        "sanctimonious hypocrite"
+      ],
       "audioUrl": "audio/words/262.mp3?v=f0b54629bcf2",
       "hookAudioUrl": "audio/hooks/262.mp3?v=6eff1e9bec9c",
       "senses": [
@@ -29419,7 +29534,7 @@
           "definition": "Parading one's own goodness in a preachy way while judging others.",
           "plainLanguageDefinition": "Showing off how good you are and looking down on others for falling short.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/457.mp3?v=36c71225afbf",
           "examples": [

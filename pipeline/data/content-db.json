@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T07:56:14.903Z"
+    "updatedAt": "2026-10-30T07:57:04.734Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1035,
-    "reviews": 1259
+    "mnemonics": 1038,
+    "reviews": 1283
   },
   "words": [
     {
@@ -4303,8 +4303,17 @@
       "syllables": 4,
       "frequency_rank": 83769,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From New Latin propensitas, from Latin propensus, \"inclined\", the past participle of propendere, \"to hang forward\", which is built on pendere, \"to hang\".",
+      "audio_url": null,
+      "roots": [
+        "pendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "natural propensity",
+        "strong propensity",
+        "propensity for violence"
+      ]
     },
     {
       "id": 234,
@@ -4326,8 +4335,15 @@
       "syllables": 3,
       "frequency_rank": 267793,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin prosa, \"prose\", through Medieval Latin prosaicus, \"in prose\", and Middle French. Prose lacks the rhythm of verse, so the word came to mean plain and dull.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "prosaic explanation",
+        "prosaic reality",
+        "prosaic details"
+      ]
     },
     {
       "id": 236,
@@ -4337,8 +4353,15 @@
       "syllables": 3,
       "frequency_rank": 626775,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Named after Proteus, a sea god of Greek myth who could turn himself into any shape he liked.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "protean nature",
+        "protean career",
+        "protean forms"
+      ]
     },
     {
       "id": 237,
@@ -4348,8 +4371,17 @@
       "syllables": 2,
       "frequency_rank": 66131,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin prudens, a shortened form of providens, \"foreseeing\", from providere, made of pro- (\"ahead\") and videre (\"to see\"). Prude is an unrelated word.",
+      "audio_url": null,
+      "roots": [
+        "videre"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "prudent course",
+        "prudent investor",
+        "prudent management"
+      ]
     },
     {
       "id": 238,
@@ -4359,8 +4391,14 @@
       "syllables": 2,
       "frequency_rank": 981528,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin puerilis, \"childish\", from puer, \"boy\" or \"child\".",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "puerile jokes",
+        "puerile nonsense"
+      ]
     },
     {
       "id": 239,
@@ -4370,8 +4408,17 @@
       "syllables": 3,
       "frequency_rank": 976044,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin pugnax, \"combative\", from pugnare, \"to fight\", a verb formed from pugnus, \"fist\".",
+      "audio_url": null,
+      "roots": [
+        "pugnare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pugnacious attitude",
+        "pugnacious face",
+        "pugnacious spirit"
+      ]
     },
     {
       "id": 240,
@@ -4393,8 +4440,17 @@
       "syllables": 2,
       "frequency_rank": 239814,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin pungens, \"pricking\", the present participle of pungere, \"to prick or sting\". Puncture comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "pungere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pungent smell",
+        "pungent odor",
+        "pungent aroma"
+      ]
     },
     {
       "id": 242,
@@ -4404,8 +4460,17 @@
       "syllables": 3,
       "frequency_rank": 223943,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin quiescens, \"resting\", the present participle of quiescere, \"to rest or keep still\", which is formed from quies, \"rest\".",
+      "audio_url": null,
+      "roots": [
+        "quiescere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "quiescent state",
+        "remain quiescent",
+        "quiescent period"
+      ]
     },
     {
       "id": 243,
@@ -4415,8 +4480,15 @@
       "syllables": 3,
       "frequency_rank": 702606,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Don Quixote, the hero of Miguel de Cervantes's novel, who sets off as a knight to right the world's wrongs and charges at windmills he takes for giants.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "quixotic quest",
+        "quixotic attempt",
+        "quixotic gesture"
+      ]
     },
     {
       "id": 244,
@@ -4426,8 +4498,15 @@
       "syllables": 4,
       "frequency_rank": 1063309,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin quotidianus, \"daily\", partly by way of French. Its base, quotidie, \"every day\", was formed from quot (\"how many\") and a form of dies (\"day\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "quotidian life",
+        "quotidian reality",
+        "quotidian existence"
+      ]
     },
     {
       "id": 245,
@@ -4437,8 +4516,14 @@
       "syllables": 3,
       "frequency_rank": 1677425,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed from rancor, \"a long-held grudge\", plus -ous. Rancor came into English through Old French from Latin rancor, which could mean a grudge.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "rancorous debate",
+        "rancorous dispute"
+      ]
     },
     {
       "id": 246,
@@ -4448,8 +4533,17 @@
       "syllables": 3,
       "frequency_rank": 20999580,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin rarefacere, \"to make rare or thin\", through Old French. Its parts are rarus (\"thin, loose\"), in its adverb form rārē, and facere (\"to make\").",
+      "audio_url": null,
+      "roots": [
+        "rarus",
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "rarefied air",
+        "rarefied gas"
+      ]
     },
     {
       "id": 247,
@@ -4459,8 +4553,17 @@
       "syllables": 4,
       "frequency_rank": 239540,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French récalcitrant, from Latin recalcitrare, \"to kick back with the heels\", as a balky horse does, from calx, \"heel\".",
+      "audio_url": null,
+      "roots": [
+        "calx"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "recalcitrant child",
+        "recalcitrant states",
+        "recalcitrant members"
+      ]
     },
     {
       "id": 248,
@@ -4494,8 +4597,13 @@
       "syllables": 4,
       "frequency_rank": 84613,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin refractarius, \"obstinate\", from refringere, \"to break up\", a compound of frangere, \"to break\".",
+      "audio_url": null,
+      "roots": [
+        "frangere"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 251,
@@ -4505,8 +4613,14 @@
       "syllables": 2,
       "frequency_rank": 143500,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin refutare, \"to check or push back\", a verb that also meant \"to disprove\".",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Strictly, refute means to prove a claim false; using it to mean simply deny is common but disputed.",
+      "pairings": [
+        "refute the claim",
+        "refute the argument"
+      ]
     },
     {
       "id": 252,
@@ -4516,8 +4630,17 @@
       "syllables": 3,
       "frequency_rank": 839028,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin relegare, \"to send away, banish\", built from re- (\"back\") and legare (\"to send\"), as in delegate. Even in Latin it could mean to set something aside.",
+      "audio_url": null,
+      "roots": [
+        "legare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "relegated to the background",
+        "relegated to the margins",
+        "relegated to a footnote"
+      ]
     },
     {
       "id": 253,
@@ -4527,8 +4650,16 @@
       "syllables": 3,
       "frequency_rank": 1379737,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin remonstrare, formed from re- and monstrare, \"to show\". The sense moved from pointing something out to protesting against it.",
+      "audio_url": null,
+      "roots": [
+        "monstrare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "remonstrate with",
+        "gently remonstrated"
+      ]
     },
     {
       "id": 254,
@@ -4538,8 +4669,17 @@
       "syllables": 3,
       "frequency_rank": 1106244,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin reprobatus, \"condemned\", from reprobare, formed from re- and probare (\"to approve\"), which is based on probus (\"good\"). In Middle English it meant damned; now it means a person of low morals.",
+      "audio_url": null,
+      "roots": [
+        "probare",
+        "probus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "old reprobate",
+        "young reprobate"
+      ]
     },
     {
       "id": 255,
@@ -4549,8 +4689,14 @@
       "syllables": 4,
       "frequency_rank": 285772,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin repudiare, \"to cast off, reject\", from repudium, which meant a rejection and also a divorce.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "publicly repudiated",
+        "openly repudiated"
+      ]
     },
     {
       "id": 256,
@@ -4560,8 +4706,14 @@
       "syllables": 2,
       "frequency_rank": 719487,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin rescindere, which meant \"to cut off\" and also \"to annul\", from re- (\"back\") and scindere (\"to cut\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "rescind the order",
+        "rescind the offer"
+      ]
     },
     {
       "id": 257,
@@ -4571,8 +4723,16 @@
       "syllables": 3,
       "frequency_rank": 329216,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin reticens, the present participle of reticere, \"to keep silent\", formed from re- and tacere, \"to be silent\", the verb behind tacit and taciturn.",
+      "audio_url": null,
+      "roots": [
+        "tacere"
+      ],
+      "watch_out": "Reticent means unwilling to talk about yourself; using it to mean reluctant, as in \"reticent to act\", is common but disputed.",
+      "pairings": [
+        "reticent about",
+        "naturally reticent"
+      ]
     },
     {
       "id": 258,
@@ -4582,8 +4742,17 @@
       "syllables": 3,
       "frequency_rank": 428906,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin reverens, \"respectful\", the present participle of revereri, \"to stand in awe of\", partly by way of French. Revere comes from the same Latin verb.",
+      "audio_url": null,
+      "roots": [
+        "revereri"
+      ],
+      "watch_out": "Reverent means full of respect and awe; do not confuse it with Reverend, the title given to members of the clergy.",
+      "pairings": [
+        "reverent silence",
+        "reverent awe",
+        "reverent hush"
+      ]
     },
     {
       "id": 259,
@@ -4617,8 +4786,17 @@
       "syllables": 2,
       "frequency_rank": 57499,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin sanctio, a decree or the penalty for breaking one, from sancire, \"to make sacred\" or \"to confirm\": a sanction can approve a rule or punish a breach of it.",
+      "audio_url": null,
+      "roots": [
+        "sancire"
+      ],
+      "watch_out": "Sanction can mean approval (the sanction of the court) or a penalty (trade sanctions), so check which sense is meant.",
+      "pairings": [
+        "official sanction",
+        "divine sanction",
+        "royal sanction"
+      ]
     },
     {
       "id": 262,
@@ -4628,8 +4806,17 @@
       "syllables": 5,
       "frequency_rank": 1272349,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From sanctimony, from Latin sanctimonia, \"holiness\", based on sanctus (\"holy\"), the past participle of sancire. Sanctimony once meant real holiness and later a show of it.",
+      "audio_url": null,
+      "roots": [
+        "sancire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "sanctimonious tone",
+        "sanctimonious attitude",
+        "sanctimonious hypocrite"
+      ]
     },
     {
       "id": 263,
@@ -10591,7 +10778,7 @@
       "definition": "A lasting, built-in lean toward behaving one particular way.",
       "plain_language_definition": "Something you tend to do, often without even deciding to.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 402,
@@ -10615,7 +10802,7 @@
       "definition": "Capable of shifting easily from one form, role, or style to another.",
       "plain_language_definition": "Changing easily into many different shapes, jobs or styles.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 407,
@@ -10631,7 +10818,7 @@
       "definition": "Foolish in a juvenile way that an adult ought to have outgrown.",
       "plain_language_definition": "Acting like a ten-year-old when you are well past that age.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 410,
@@ -10639,7 +10826,7 @@
       "definition": "Eager for a clash, and ready to turn any disagreement into a fight.",
       "plain_language_definition": "Always looking for a fight or an argument.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 412,
@@ -10663,7 +10850,7 @@
       "definition": "Lying dormant during a pause in activity rather than finished for good.",
       "plain_language_definition": "Resting quietly for a while instead of being over for good.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 418,
@@ -10703,7 +10890,7 @@
       "definition": "Balking at commands and pushing back against whoever gives them.",
       "plain_language_definition": "Openly stubborn with anyone who gives you orders.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 426,
@@ -10727,7 +10914,7 @@
       "definition": "Unmanageable and quick to rebel against whoever is in charge.",
       "plain_language_definition": "Fighting back against rules and the people who set them.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 432,
@@ -10735,7 +10922,7 @@
       "definition": "Defeat a statement by producing facts it cannot survive.",
       "plain_language_definition": "To prove that a claim is wrong, not just say that it is.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 434,
@@ -10751,7 +10938,7 @@
       "definition": "Press objections on someone directly, laying out reasons against what they are doing.",
       "plain_language_definition": "To complain to someone directly and argue that they should change course.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 440,
@@ -10759,7 +10946,7 @@
       "definition": "A person given over to vice who no longer cares what decent people think.",
       "plain_language_definition": "A person with bad habits and no shame about them.",
       "sense_order": 1,
-      "register": null
+      "register": "humorous"
     },
     {
       "id": 441,
@@ -10767,7 +10954,7 @@
       "definition": "Publicly reject an idea, claim, or person and disown any link to it.",
       "plain_language_definition": "To reject something completely and say you want nothing to do with it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 444,
@@ -10789,17 +10976,19 @@
       "id": 446,
       "word_id": 257,
       "definition": "Cool and formal in manner.",
-      "plain_language_definition": "Someone who is reticent acts in a very formal, detached, and emotionally distant way.",
+      "plain_language_definition": "Distant and stiff in the way one behaves with others.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 447,
       "word_id": 257,
       "definition": "Reluctant to draw attention to yourself.",
-      "plain_language_definition": "Someone who is reticent tries to avoid being noticed by others.",
+      "plain_language_definition": "Shy about standing out or being noticed by others.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 448,
@@ -10839,7 +11028,7 @@
       "definition": "Parading one's own goodness in a preachy way while judging others.",
       "plain_language_definition": "Showing off how good you are and looking down on others for falling short.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 458,
@@ -11541,9 +11730,10 @@
       "id": 636,
       "word_id": 255,
       "definition": "Refuse to honor a debt or a contract.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To refuse to pay a debt or keep the terms of a contract.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 638,
@@ -11575,9 +11765,10 @@
       "id": 643,
       "word_id": 241,
       "definition": "Sharply critical or witty in a way that stings.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Biting and witty, as in a review or remark that stings its target.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 645,
@@ -15391,9 +15582,10 @@
       "id": 1306,
       "word_id": 238,
       "definition": "Having to do with children or the early years of life.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Relating to children or to childhood.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1307,
@@ -15515,57 +15707,64 @@
       "id": 1321,
       "word_id": 246,
       "definition": "Make a style or idea loftier and more delicate, further from the everyday.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To make a style or idea so subtle and lofty that few people can relate to it.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1322,
       "word_id": 250,
       "definition": "Of an illness, failing to improve with the usual medicines.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of an illness, not getting better with the standard treatments.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1323,
       "word_id": 250,
       "definition": "Of a nerve or muscle, briefly unable to react again just after firing.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a nerve or muscle, needing a short rest before it can fire again.",
       "sense_order": 3,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1324,
       "word_id": 250,
       "definition": "Of a brick or ceramic, fit for lining furnaces because heat barely affects it.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a brick or similar material, able to stand intense heat without damage.",
       "sense_order": 4,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1325,
       "word_id": 252,
       "definition": "Hand a matter over to someone else to settle.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To pass a question to another person or body to decide.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1326,
       "word_id": 252,
       "definition": "Order someone to leave the country and stay away.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To send a person into exile.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1327,
       "word_id": 261,
       "definition": "An economic or diplomatic penalty aimed at pressuring a state or group to change course.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A punishment, often a ban on trade, that pushes a country or group to change what it is doing.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1328,
@@ -69017,25 +69216,9 @@
       "revision": 3
     },
     {
-      "id": 585,
-      "word_id": 250,
-      "text": "Refractory comes from Latin refringere, to break back, the same root as fracture: a refractory person breaks every rule you set.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 587,
       "word_id": 252,
       "text": "Relegate comes from Latin relegare, to send away: when you relegate something, you send it away to a lesser place.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 589,
-      "word_id": 254,
-      "text": "Reprobate comes from Latin reprobare, to reject after testing: a reprobate is someone who failed the test of decent behavior.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -72065,14 +72248,6 @@
       "revision": 3
     },
     {
-      "id": 1000,
-      "word_id": 253,
-      "text": "Remonstrate comes from Latin re-, again, plus monstrare, to show: you remonstrate by showing someone, point by point, why they are wrong.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 1001,
       "word_id": 256,
       "text": "Rescind comes from Latin rescindere, to cut off: rescinding an order cuts it off so it no longer counts.",
@@ -72348,6 +72523,30 @@
       "id": 1035,
       "word_id": 280,
       "text": "Surreptitious is usually traced to Latin surripere, to snatch from under: a surreptitious act is done under cover.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1036,
+      "word_id": 250,
+      "text": "Refractory comes from Latin refringere, to break up, the same root as fracture: a refractory person breaks every rule you set.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1037,
+      "word_id": 253,
+      "text": "Remonstrate comes from Latin re- plus monstrare, to show: you remonstrate by showing someone, point by point, why they are wrong.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1038,
+      "word_id": 254,
+      "text": "Reprobate comes from Latin reprobare, to reject or condemn: a reprobate is someone who failed the test of decent behavior.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -122412,8 +122611,8 @@
     },
     {
       "path": "definitions/1306.mp3",
-      "bytes": 14420,
-      "key": "1f8e5fc0618df2b5",
+      "bytes": 11285,
+      "key": "fcc2b9d248a8e450",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122433,8 +122632,8 @@
     },
     {
       "path": "definitions/643.mp3",
-      "bytes": 12748,
-      "key": "7dae94c3d791761c",
+      "bytes": 18495,
+      "key": "58d7943a5db6fcbd",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122475,8 +122674,8 @@
     },
     {
       "path": "definitions/1321.mp3",
-      "bytes": 20480,
-      "key": "a4f9c4754754579d",
+      "bytes": 21629,
+      "key": "b8f8a668c92334e8",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122496,22 +122695,22 @@
     },
     {
       "path": "definitions/1322.mp3",
-      "bytes": 15673,
-      "key": "ec8a94db4ac083ae",
+      "bytes": 15360,
+      "key": "7f6bf58e3f4f224c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1323.mp3",
-      "bytes": 21211,
-      "key": "c17e2ead931f4388",
+      "bytes": 19226,
+      "key": "d545d746aaabc020",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1324.mp3",
-      "bytes": 20480,
-      "key": "5296b42ad223ed29",
+      "bytes": 20376,
+      "key": "4c1af538a12bb0c1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122531,15 +122730,15 @@
     },
     {
       "path": "definitions/1325.mp3",
-      "bytes": 11912,
-      "key": "874666127b625c9a",
+      "bytes": 16509,
+      "key": "2fd991b94b1c0a45",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1326.mp3",
-      "bytes": 13479,
-      "key": "4f807b88a133b5b9",
+      "bytes": 9509,
+      "key": "17624a4b8b3f58df",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122566,8 +122765,8 @@
     },
     {
       "path": "definitions/636.mp3",
-      "bytes": 11807,
-      "key": "532d39a0d6209eea",
+      "bytes": 15882,
+      "key": "aa1746f02705f0c5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122587,15 +122786,15 @@
     },
     {
       "path": "definitions/446.mp3",
-      "bytes": 23406,
-      "key": "c1cdc4bb63a50a7a",
+      "bytes": 14733,
+      "key": "8740b2bdfbddeb98",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/447.mp3",
-      "bytes": 17763,
-      "key": "e576bfc003dde11c",
+      "bytes": 13688,
+      "key": "e8f1e635d46768f1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -122615,8 +122814,8 @@
     },
     {
       "path": "definitions/1327.mp3",
-      "bytes": 23719,
-      "key": "55b6d085e6164b5b",
+      "bytes": 24660,
+      "key": "f170a8f65b93be0d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127669,8 +127868,8 @@
     },
     {
       "path": "hooks/250.mp3",
-      "bytes": 34273,
-      "key": "ba387edaeae920bd",
+      "bytes": 33750,
+      "key": "1b959adc268888c3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127690,15 +127889,15 @@
     },
     {
       "path": "hooks/253.mp3",
-      "bytes": 35213,
-      "key": "c4f7032f1fcd0229",
+      "bytes": 33228,
+      "key": "167111155af4fb44",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "hooks/254.mp3",
-      "bytes": 33228,
-      "key": "bd35a4ff345c42c7",
+      "bytes": 32810,
+      "key": "5479371cd276702e",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -172742,6 +172941,767 @@
         "alsoMeans": 5
       },
       "checker_notes": "Pairings 4: three of the four (criticism, critique, critic) are the same idea; all top the tool's list, but one could give way to another partner from it (style, observations, wit). Null tone is right: Longman says written, not formal. Origin matches Wiktionary (trenchier, present participle trenchant); trench comes from Old French trenche, from the same verb."
+    },
+    {
+      "id": 1260,
+      "word_id": 233,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (New Latin propensitas; surface propense + -ity) and the Wiktionary pages for English propense (from Latin propensus, participle of propendeo) and Latin propendeo (pro- + pendeo \"to hang\"; \"to hang forward\", figuratively \"to be inclined\"). Hook claim (propendere, to hang or lean forward) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from Ngram: natural propensity 35.7, propensity for violence 26.7, strong propensity 20.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check out against Wiktionary (propensity; Latin propendeo, propensus): New Latin propensitas, propensus 'inclined' as the participle of propendere, pro- + pendere 'hang'. formal: OALD, Cambridge and Longman all mark it. Pairings are in the tool, and 'propensity for violence' is 26.7 per billion. Weakest point: the origin is one chain of four 'from' steps. It reads clearly, but it is long."
+    },
+    {
+      "id": 1261,
+      "word_id": 235,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French prosaique, Medieval Latin prosaicus \"in prose\", Latin prosa \"prose\"); the second sentence explains the move from \"in prose\" to \"dull\", matching the Wiktionary senses. The deeper steps (prorsus, vertere) are left out, so no root: only prose itself shows prosa. Hook claim (grows from prose) is true. Tone null: Oxford says usually disapproving, Cambridge formal, Longman nothing, so no two agree. Pairings from Ngram: prosaic reality 5.5, prosaic explanation 5.4, prosaic details 2.9 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Latin prosa, Medieval Latin prosaicus, Middle French). The step from prose to dull is an inference, but a sound one. Null tone is right (OALD 'usually disapproving', Cambridge formal, Longman none). Weakest point: AHD and Longman call prosaicus Late Latin. The origin follows Wiktionary's Medieval Latin, which is fine."
+    },
+    {
+      "id": 1262,
+      "word_id": 236,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Proteus + -an, the shape-changing Greek sea god) and the Wiktionary page for Proteus (from Ancient Greek, a sea god who could change his shape). No root, as it is a name. Hook claim is true. Tone literary: Oxford, Cambridge and Longman all mark it literary. Pairings from Ngram: protean nature 14.1, protean career 12.6, protean forms 3.8 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Hook: 'so that no one could hold him' goes past Wiktionary, which says only that Proteus could change his shape at will. In the Odyssey, Menelaus does hold him through the changes, so the clause is a little off (he changed shape to escape whoever seized him). Origin is right and in its own words. literary: all three dictionaries agree."
+    },
+    {
+      "id": 1263,
+      "word_id": 237,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Old French prudent, Latin prudens, contracted from providens, participle of provideo; unrelated to prude) and the Wiktionary page for Latin provideo (pro- \"fore-\" + video \"to see\"). Root videre is shown in provide, video and evident. Hook says prudent is a shortened form of providens: true in substance, though it skips the Latin form prudens, so 4 and left as it is. Tone null: only Oxford marks it formal. Pairings from Ngram: prudent management 37.8, prudent course 37.6, prudent investor 37.2 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Hook: 'Prudent is a shortened form of Latin providens' skips a step. Per Wiktionary, English prudent comes from Latin prudens, and prudens is the contraction of providens. Smallest fix: make it 'comes from Latin prudens, a shortened form of providens'. Origin is right, and its note that prude is unrelated matches Wiktionary. Null tone is right (only OALD marks it formal)."
+    },
+    {
+      "id": 1264,
+      "word_id": 238,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin puerilis \"childish\", from puer \"child, boy\"). No root: puer shows only in rare words such as puerperal. Hook claim (Latin puer, boy) is true. Tone disapproving: Oxford and Cambridge mark it disapproving (Longman marks formal only). Pairings: the word is rare, and its most common content partners in Ngram are puerile jokes 0.66 and puerile nonsense 0.58 per billion (nonsense is also in the Datamuse list); low counts are the weakest point. Other sense (relating to children) is old and rare, so it is not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (puerilis from puer). Empty roots are right, since puer shows only in puerile and puerility. disapproving: OALD and Cambridge (Longman says formal). Hiding 'relating to children' is right. Weakest point: both pairings are rare in absolute terms (puerile jokes 0.66 and puerile nonsense 0.58 per billion), though they are among the word's most common partners."
+    },
+    {
+      "id": 1265,
+      "word_id": 239,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin pugnax, from pugno \"to fight\", from pugnus \"fist\") and the Wiktionary pages for Latin pugno and pugnax. Root pugnare links impugn (Latin impugno, im- + pugno). Hook claim (pugnare, to fight, from pugnus, fist) is true. Tone formal: all three mark it formal. Pairings from Ngram: pugnacious face 2.5, pugnacious attitude 1.8, pugnacious spirit 1.1 per billion; all low because the word is rare, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (pugnax from pugno, from pugnus 'fist'). pugnare is a good root (repugnant, impugn). formal: all three. Weakest point: 'pugnacious face' describes a look rather than behavior; 'pugnacious disposition' (top in the tool) shows the meaning better."
+    },
+    {
+      "id": 1266,
+      "word_id": 241,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin pungens, participle of pungo \"to sting\"; doublet of poignant) and the Wiktionary page for Latin pungo (\"to prick, to puncture, to sting\"). Root pungere matches expunge on worksheet e. Poignant is left out of the origin on purpose: it is one of this word's wrong answers. Hook claim (pungere, to prick, root of puncture) is true. Tone null on both senses: no label on the first; on the critical sense Cambridge says literary and Longman formal, which do not agree. Pairings from Ngram: pungent smell 135.3, pungent odor 78.2, pungent aroma 42.7 per billion. The stinging-criticism sense is current (pungent wit and satire are in the Datamuse list), so it is shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: smell, odor and aroma are the same partner three times. The definition also covers flavor, and 'pungent taste' (34482 in the tool) or 'pungent flavor' would show that half. Origin facts match Wiktionary (pungo 'prick, sting'; puncture comes from the same verb). Its first clause runs close to Dictionary.com's line (pungens 'pricking', present participle of pungere 'to prick'), but these are standard short facts. Also means: the stinging, witty sense is current (pungent wit, pungent satire) and the plain definition is clear. Null tone is right for both senses."
+    },
+    {
+      "id": 1267,
+      "word_id": 242,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (learned borrowing from Latin quiescens) and the Wiktionary page for Latin quiesco (quies \"rest\" + -sco; \"to rest, keep still\"). Root quiescere links acquiesce (Latin acquiesco, ad + quiesco). Acquiesce is not named in the origin because acquiescent is one of this word's wrong answers. Hook claim (quiescere, to rest, same root as quiet) is true. Tone formal: all three mark it formal. Pairings from Ngram: quiescent state 50.2, remain quiescent 13.3, quiescent period 10.4 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (quiesco from quies + -sco: rest, be still). The hook's 'same root as quiet' is true, since quietus is the participle of quiesco. quiescere links to acquiesce. formal: all three. Weakest point: 'quiescent state' and 'quiescent period' lean technical, though they are the top partners in the data."
+    },
+    {
+      "id": 1268,
+      "word_id": 243,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (from Spanish Quixote, the title character of the novel by Miguel de Cervantes, + -ic); the windmill episode is from the novel and matches the hook. No root, as it is a name. Tone null: Oxford says formal, Cambridge literary, Longman nothing. Pairings from Ngram: quixotic quest 8.8, quixotic attempt 3.4, quixotic gesture 2.1 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary and the novel. Null tone is right (OALD formal, Cambridge literary, Longman none). Weakest point: the origin is one long sentence, but it gives the step to today's meaning through the windmills."
+    },
+    {
+      "id": 1269,
+      "word_id": 244,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Anglo-Norman and Middle French cotidien and their source Latin quotidianus \"daily\", from quotidie \"every day\", from an unattested adjective from quot + the locative of dies); \"a form of dies\" covers that step. No root: dies is not plain to see in other English words. Hook claim (quotidie, every day, built from dies) is true. Tone null: Oxford and Cambridge say formal, Longman literary. Pairings from Ngram: quotidian life 23.1, quotidian reality 7.7, quotidian existence 7.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary: it came by way of Anglo-Norman and Middle French, and quotidie comes from quot plus a form of dies. 'A form of' fairly covers the locative and the unattested middle step. Null tone is right (formal in OALD and Cambridge only, literary in Longman). Weakest point: life, reality and existence are near-synonyms. 'quotidian details' or 'quotidian concerns' would vary them."
+    },
+    {
+      "id": 1270,
+      "word_id": 245,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (rancor + -ous) and the Wiktionary page for English rancor (Old French rancor, Latin rancor \"rancidity, grudge\", from ranceo \"to be rotten\"; rancid is a cognate). The rotten-smell root and rancid are left out on purpose: rancid is one of this word's wrong answers (\"too far gone to eat\"), and the trap list warns against pointing at a wrong answer. Hook claim (built on rancor) is true. Tone null: Oxford and Cambridge mark it formal, but Longman has no entry, so the all-three rule is not met. Pairings from Ngram: rancorous debate 5.9, rancorous dispute 1.2 per billion; the second is less common. Main session, after review 1: dropped \"also\" (reviewer: it implied an unstated other meaning).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the dangling 'also' is gone, and the origin is now true and complete. Wiktionary's Latin rancor meant rancidity and a grudge, so 'could mean' is accurate, and leaving out the rot meaning keeps the card away from the rancid wrong answer. Weakest point: the second sentence repeats the grudge gloss from the first, so the origin adds little beyond the route through Old French. Null tone is right (Longman has no entry; OALD and Cambridge mark it formal)."
+    },
+    {
+      "id": 1271,
+      "word_id": 246,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English rarefien, Old French rarefier, Latin rarefacere \"make rare\") and the Wiktionary pages for Latin rarefacio (rare + facio) and Latin rare (adverb of rarus \"thin, loose\"). Roots rarus (rare, rarity) and facere. Hook says rarus plus facere: the Latin verb uses the adverb rare, from rarus, so the claim is loose but true; 4 and left as it is. Tone null: Cambridge has no label and Oxford and Longman have no entry. Pairings use the participle: rarefied air 29.8, rarefied gas 28.0 per billion (rarefy the air only 0.4), the weakest point. The figurative sense is shown because readers often meet it in rarefied world and rarefied atmosphere.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin facts match Wiktionary (Old French rarefier, Latin rarefacere from rare + facio; rarus 'thin, loose'). The clause 'rarus ..., in its adverb form rārē,' is awkward, and it holds the only macrons on the card. Also means: the figurative sense is real, but learners mostly meet it as the adjective 'rarefied' (rarefied world, rarefied heights). The plain definition's 'few people can relate to it' adds an idea the definition does not have. Roots rarus (rare) and facere are fine."
+    },
+    {
+      "id": 1272,
+      "word_id": 247,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French recalcitrant, Latin recalcitro \"be disobedient, kick back [as a horse]\", from calx \"heel\"). No root: calx \"heel\" shows in no common English word, and calcium comes from a different calx. Hook claim (kick back with the heels, calx heel) is true. Tone formal: all three mark it formal. Pairings from Ngram: recalcitrant child 13.4, recalcitrant states 6.8, recalcitrant members 5.5 per billion. Main session, after review 1: set root calx (already named in the origin) so it links with inculcate.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the root calx ('heel') is right. Wiktionary derives recalcitro from re- + calcitro, from calx, and derives inculcate through calco ('tread') from calx 'heel' (its Etymology 2 entry). Worksheet s gives inculcate the same root, so the link is real, and calx is the correct nominative linking form, named in the origin. formal: all three dictionaries. Weakest point: the stem is hard to see in inculcate's spelling (culc), and Latin has a separate calx, 'limestone' (calcium, chalk), which must never get this root id."
+    },
+    {
+      "id": 1273,
+      "word_id": 250,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin refractarius \"obstinate\", from refractus, participle of refringere \"to break up\") and the Wiktionary page for Latin refringo (re- + frango; \"to break up or open\"). Root frangere matches fractious on worksheet e. Hook changed: \"to break back\" became \"to break up\", the gloss Wiktionary gives; the rest (same root as fracture) is true. Tone formal on the first sense: all three mark it formal; the illness, nerve and brick senses are technical (all three mark the illness sense medical). Pairings left empty: the first sense has no common partner (refractory child 1.3, refractory priests 4.8 is a historical term), and the common ones (refractory period, refractory materials) belong to other senses. Shown: the illness and nerve senses, which general readers meet (refractory period is the most common pairing in Datamuse); the furnace-brick sense is hidden.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: the list is empty, but 'refractory child' (1.25 per billion) and 'refractory children' (0.92) are attested for the first sense, about as often as pairings accepted elsewhere on this sheet. Origin matches Wiktionary (refractarius from refractus; refringere is re- + frango). Longman derives it from refragari instead, but Wiktionary and Dictionary.com agree with the origin. formal: all three. technical on the illness and nerve senses matches OALD and Longman 'medical' and Cambridge 'specialized'. The furnace-brick sense is about as common in the data as the nerve sense, so either choice for Also means is defensible."
+    },
+    {
+      "id": 1274,
+      "word_id": 251,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin refuto) and the Wiktionary page for Latin refuto (\"to check, repress; restrain, oppose; refute\"; from re- + an unattested *futo \"to beat\", left out). Hook claim (refutare, to drive back) matches the Latin \"check, repress\". Tone formal: all three mark it formal. Watch-out: Oxford and Longman list \"say something is not true\" as a second sense while usage guides object, so it is stated as a dispute. Pairings from Ngram: refute the claim 14.8, refute the argument 8.7 per billion (refute the charges 6.2 and refute the allegations 3.8 are left out because they usually mean deny).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary's Latin refuto ('check, repress; oppose; refute'). The watch-out calls the 'deny' sense disputed, as Wiktionary's usage note does, and it is a classic mix-up. formal: all three. Weakest point: the hook's 'drive back' paraphrases 'check, repress' rather than using Wiktionary's own gloss, but it agrees with the origin's 'push back'."
+    },
+    {
+      "id": 1275,
+      "word_id": 252,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin relegatus, participle of relego \"to dispatch, banish\") and the Wiktionary pages for Latin relego (relego from re- \"back\" + lego \"send, dispatch\"; figuratively \"to put aside, remove\") and Latin delego (de- + lego \"send\"). Root legare is shown in delegate and legate. Hook claim (relegare, to send away) is true. Tone null: only Longman marks it formal. No watch-out. Pairings from Ngram: relegated to the background 33.9, relegated to the margins 29.2, relegated to a footnote 5.5 per billion. Other senses hidden: \"hand a matter over to someone else to settle\" is rare and sits next to the meaning of delegate, so it could teach that mix-up (consider dropping it on a main worksheet); \"order someone to leave the country\" is historical. The common British sports sense (a team moved down a division) is missing from the record; add it on a main worksheet. That gap is why alsoMeans is 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary's Latin relego (re- + lego 'send'; 'send away, banish', and figuratively 'put aside'). legare is the right linking form (delegate, legate, legacy). Null tone is right (only Longman marks it formal). Hiding the 'refer' and 'exile' senses is right. Weakest point: the record has no British sports sense (a team moved down a division); that would be a main-worksheet change, not an extras one."
+    },
+    {
+      "id": 1276,
+      "word_id": 253,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Late Latin remonstro, from re- + monstro) and the Wiktionary pages for Latin remonstro (re- glossed \"against\" + monstro \"to show\") and monstro (\"to show, point out\"); the English page lists both \"to point out\" and \"to object\". Root monstrare. Demonstrate is not named in the origin because it is one of this word's wrong answers. Hook changed: \"re-, again\" became \"re-\", because Wiktionary glosses this re- as \"against\", not \"again\"; the rest is true. Tone formal: all three mark it formal. Pairings from Ngram: remonstrate with 54.9 (the usual pattern, remonstrate with someone), gently remonstrated 1.2 per billion; the second is less common, the weakest point. The hook's \"point by point\" sits near the demonstrate option (\"step by step\"); not an origin claim, so left alone.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings: 'remonstrate with' (54.9 per billion) is a grammar pattern, not a partner that shows the meaning, and 'gently remonstrated' is uncommon (1.15). The tool's top partner is 'strongly remonstrated'. Origin matches Wiktionary (re- + monstro 'show'), and the English entry keeps a 'point out, show' sense, which supports the stated shift. Wiktionary's Latin page says Medieval Latin while its English page says Late Latin; either is fine. formal: all three."
+    },
+    {
+      "id": 1277,
+      "word_id": 254,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English reprobat \"condemned, damned\", Latin reprobatus, participle of reprobo) and the Wiktionary pages for Latin reprobo (re- + probo, \"to disapprove, reject, condemn\") and probo (\"to approve; to test\"; equivalent to probus \"good\" + -o). Roots probare (approbation) and probus (probity), as the main session asked. Hook changed: \"to reject after testing\" became \"to reject or condemn\", since reprobare means to reject or condemn and \"after testing\" is not in any source; the rest is a metaphor. Tone humorous: Cambridge marks the noun formal and humorous, Longman formal and \"often used humorously\"; Oxford has only the adjective, so formal is not met by all three. Pairings from Ngram: old reprobate 15.7, young reprobate 1.9 per billion; both partners are generic adjectives, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Tone: humorous rests on Cambridge ('formal or humorous') and Longman ('formal', 'often used humorously'). Both pair it with formal, and next to a serious definition, 'humorous' alone may suggest the word is only ever a joke. It is defensible. Origin matches Wiktionary (reprobo from re- + probo; probo from probus 'good'; Middle English 'condemned, damned'). probare and probus both show in English words (prove, probation, probity)."
+    },
+    {
+      "id": 1278,
+      "word_id": 255,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin repudiatus, participle of repudio \"to cast off, reject\", from repudium \"rejection, repudiation, divorce\"). The Wiktionary page for Latin repudium gives re- + pudeo \"to feel ashamed\", but the English entry does not, so no root. Hook claim (repudium, a divorce) is true. Tone formal: all three mark it formal. Pairings from Ngram: publicly repudiated 5.0, openly repudiated 2.4 per billion. The debt-and-contract sense is legal (Oxford and Longman mark it law, Cambridge law and finance), so technical and hidden.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Hook: 'repudium, a formal divorce' is narrower than the source. Wiktionary gives repudium as repudiation, rejection and divorce, and 'formal' is extra. It is not false, but the origin's 'a rejection and also a divorce' is the checked version. Pairings: 'publicly repudiated' and 'openly repudiated' say the same thing twice; 'explicitly' or 'emphatically' (both in the tool) would vary them. formal: all three. Hiding the debt and contract sense is defensible."
+    },
+    {
+      "id": 1279,
+      "word_id": 256,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin rescindo \"to cut back\", from re- \"back\" + scindo \"to cut\") and the Wiktionary page for Latin rescindo (\"to cut off\"; figuratively \"to annul, revoke\"). No root: scindere shows only in rare words such as scission. Hook claim (rescindere, to cut off) is true. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings from Ngram: rescind the order 7.3, rescind the offer 3.9 per billion (rescind the decision 1.5 and rescind the ban 1.5 are rarer).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (rescindo: re- 'back' + scindo; 'cut off', and figuratively 'annul'). Empty roots are right. Null tone is right (OALD and Cambridge formal, Longman none). Weakest point: 'rescind the offer' (3.9 per billion) is the weaker pairing; the tool's top partner is 'contract'."
+    },
+    {
+      "id": 1280,
+      "word_id": 257,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin reticens, participle of reticeo \"to keep silence\") and the Wiktionary page for Latin reticeo (re- + taceo \"to be silent\"); tacit comes from tacitus, from tacere, and taciturn from tacitus. Root tacere links tacit and taciturn. Hook claim (reticere, built on tacere, root of tacit) is true. Tone null: Oxford and Cambridge mark it formal, Longman does not. Watch-out: Wiktionary marks the \"reluctant\" sense proscribed and AHD calls it a usage problem, so it is stated as a dispute. Both other senses are close to the first (\"cool and formal in manner\", \"reluctant to draw attention to yourself\") and are hidden; their old plain text named the word, so it was rewritten. Consider dropping them on a main worksheet. Pairings from Ngram: reticent about 90.5, naturally reticent 2.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out: the dispute over 'reluctant' is real and is rightly called disputed, but 'unwilling to talk about yourself' is narrower than the definition (private matters, or a subject such as a deal). Pairings: 'reticent about' (90 per billion) is a grammar pattern; 'naturally reticent' is fine, and a noun partner (reticent man, reticent nature) would show the meaning. Origin facts match Wiktionary (reticeo is re- + taceo). Its clause order is close to AHD's line, but these are standard short facts. Null tone is right (Longman has no label)."
+    },
+    {
+      "id": 1281,
+      "word_id": 258,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English and Middle French reverent and Latin reverens; surface revere + -ent) and the Wiktionary pages for Latin reverens (participle of revereor) and revereor (re- + vereor; \"to stand in awe of, respect\"). Root revereri is shown in revere, reverence and irreverent. Hook claim (revereri, to stand in awe) is true. Tone null: Oxford and Longman mark it formal, Cambridge does not. Watch-out: reverent and reverend are a common mix-up in writing. Pairings from Ngram: reverent silence 17.1, reverent awe 12.6, reverent hush 4.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Middle French and Latin reverens; revereor 'stand in awe of'; revere comes from the same verb). The watch-out names a real, common mix-up (reverent and Reverend), and what it says is true. Null tone is right (Cambridge has no label). Weakest point: 'reverent hush' (4.3 per billion) is the least common of the three; 'reverent attitude' is in the tool."
+    },
+    {
+      "id": 1282,
+      "word_id": 261,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French sanction, Latin sanctio) and the Wiktionary pages for Latin sanctio (sancio + -tio; \"law, decree; penalty\") and sancio (\"to make sacred; to forbid under pain of punishment; to decree, ratify\"). Root sancire links sanctimonious, which is on this sheet. Hook claim (sancire, to make sacred or decree) is true. Tone null: Oxford and Longman mark approval formal, but Cambridge British does not. Watch-out: the word has nearly opposite senses. Pairings from Ngram, all in the approval sense: official sanction 55.3, divine sanction 48.9, royal sanction 8.6 per billion (legal sanction 54.7 is left out because it often means a penalty). The penalty sense is very common (economic sanctions leads the Datamuse list), so it is shown. Main session, after review 1: added the confirm/ratify sense of sancire, which links the approval meaning.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the origin now matches Wiktionary in full. sanctio meant a decree or a penalty, and sancio meant 'make sacred' and also 'confirm, ratify', which gives the step to both of today's meanings. It is in its own words, not AHD's or Dictionary.com's. The watch-out is unchanged: a real mix-up, stated correctly, but its example 'the sanction of the court' is Oxford Learner's own example ('These changes will require the sanction of the court'), so use another. Null tone is right. The penalty sense under Also means is right, and its plain definition is clear."
+    },
+    {
+      "id": 1283,
+      "word_id": 262,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (sanctimony + -ous) and the Wiktionary pages for English sanctimony (Middle French sanctimonie, Latin sanctimonia, from sanctus \"holy\" + -monia; obsolete sense \"a state of holiness\") and Latin sanctus (participle of sancio). Root sancire links sanction. Hook claim (sanctus, holy, as in saint and sanctuary) is true. Tone disapproving: Oxford, Cambridge and Longman all mark it disapproving. Pairings from Ngram: sanctimonious tone 2.0, sanctimonious attitude 1.6, sanctimonious hypocrite 1.3 per billion; low because the word is rare, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary: sanctimony from Latin sanctimonia, from sanctus, which is sancio's participle, and sanctimony's obsolete 'state of holiness' sense. sancire links it with sanction. disapproving: all three dictionaries. Weakest point: the hook says it comes from sanctus, skipping sanctimonia, which is fine as ancestry."
     }
   ]
 }
