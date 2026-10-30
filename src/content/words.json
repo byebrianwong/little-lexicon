@@ -46747,10 +46747,17 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 224884,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin vicarius, a substitute, from vicis, a turn or someone's place, the root of vicar and of the vice in vice president. A vicarious thrill comes from putting yourself in someone else's place.",
+      "roots": [
+        "vicis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "vicarious experience",
+        "vicarious pleasure",
+        "vicarious thrill",
+        "vicarious satisfaction"
+      ],
       "audioUrl": "audio/words/414.mp3?v=bd940a3960bf",
       "hookAudioUrl": "audio/hooks/414.mp3?v=c61f8bdc9551",
       "senses": [
@@ -46814,11 +46821,11 @@
         {
           "senseId": 799,
           "definition": "Suffered or done by one person as a substitute for another.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Taken on by one person for someone else, as blame, punishment or legal liability can be.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/799.mp3?v=a9512caec11f",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/799.mp3?v=c31bda7b75d6",
           "examples": [
             {
               "exampleId": 3825,
@@ -46860,10 +46867,15 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 990935,
-      "etymology": null,
+      "etymology": "From vitriol, an old name for sulfuric acid, which came into English through Old French from Medieval Latin vitriolum. Words that burn like the acid are vitriolic.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "vitriolic attack",
+        "vitriolic criticism",
+        "vitriolic rhetoric",
+        "vitriolic language"
+      ],
       "audioUrl": "audio/words/415.mp3?v=77e7902f37e9",
       "hookAudioUrl": "audio/hooks/415.mp3?v=b9aa7467c5d9",
       "senses": [
@@ -46927,11 +46939,11 @@
         {
           "senseId": 828,
           "definition": "Able to burn or eat away other substances by chemical action.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a chemical, harsh enough to corrode metal or burn skin.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/828.mp3?v=c87184adf3c7",
+          "audioUrl": "audio/definitions/828.mp3?v=0368bfb52b5e",
           "examples": [],
           "distractors": []
         }
@@ -46986,10 +46998,18 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 461463,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin vocifer, made of vox, voice, and -fer, bearing, from ferre, to carry, with the English ending -ous: a vociferous critic makes sure the voice carries.",
+      "roots": [
+        "vox",
+        "ferre"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "vociferous opposition",
+        "vociferous critics",
+        "vociferous protests",
+        "vociferous minority"
+      ],
       "audioUrl": "audio/words/416.mp3?v=c4cbee51e3a7",
       "hookAudioUrl": "audio/hooks/416.mp3?v=58c72b96cd3c",
       "senses": [
@@ -47097,10 +47117,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 825260,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Through French from Latin venalis, for sale, from venum, a sale, the same word that lies behind vend and vendor: a venal official's favors can be bought.",
+      "roots": [
+        "venum"
+      ],
+      "watchOut": "Venal means open to bribery; do not confuse it with venial, which describes a small fault that is easily forgiven.",
+      "pairings": [
+        "venal politicians",
+        "venal officials",
+        "venal judges"
+      ],
       "audioUrl": "audio/words/417.mp3?v=0bad77ee45ed",
       "hookAudioUrl": "audio/hooks/417.mp3?v=f472a9aa89e2",
       "senses": [
@@ -47109,7 +47135,7 @@
           "definition": "Willing to be bribed or to sell one's honor for money.",
           "plainLanguageDefinition": "Easy to bribe, and ready to bend any rule for enough cash.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/803.mp3?v=2d7b66b5ed90",
           "examples": [
@@ -47209,10 +47235,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1483953,
-      "etymology": null,
+      "etymology": "From Ancient Greek akolouthos, a follower or attendant, through Late Latin and Old French, where it named a priest's helper at services. English uses it both for that helper and for any devoted follower.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "devoted acolyte",
+        "loyal acolyte",
+        "faithful acolyte"
+      ],
       "audioUrl": "audio/words/418.mp3?v=0cc633bb819e",
       "hookAudioUrl": "audio/hooks/418.mp3?v=bb0c3866f645",
       "senses": [
@@ -47221,7 +47251,7 @@
           "definition": "Someone who gathers around a powerful figure as an admirer and does that figure's bidding.",
           "plainLanguageDefinition": "An admirer who stays close to an important person and does whatever they ask.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/829.mp3?v=16b70cf83d87",
           "examples": [
@@ -47276,11 +47306,11 @@
         {
           "senseId": 989,
           "definition": "An assistant at a church service who carries candles or serves at the altar.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A helper at a church service, often a young altar server.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/989.mp3?v=d51739b7f3a9",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/989.mp3?v=1ad67fe26efb",
           "examples": [],
           "distractors": []
         }
@@ -47315,10 +47345,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 369275,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French acquiescer, from Latin acquiescere, to come to rest, formed from ad- and quiescere, to rest, which comes from quies, rest: to acquiesce is to let your objections rest.",
+      "roots": [
+        "quiescere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "reluctantly acquiesced",
+        "tacitly acquiesced",
+        "silently acquiesced"
+      ],
       "audioUrl": "audio/words/419.mp3?v=5aef618be25c",
       "hookAudioUrl": "audio/hooks/419.mp3?v=36d54f241f11",
       "senses": [
@@ -47327,7 +47363,7 @@
           "definition": "Go along with a plan or demand without objecting, despite private doubts.",
           "plainLanguageDefinition": "To give in and let something happen, even though you'd rather it didn't.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/830.mp3?v=cadf8d79dd57",
           "examples": [
@@ -47435,10 +47471,14 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 451409,
-      "etymology": null,
+      "etymology": "From French adulation, from Latin adulatio, flattery, a noun from the verb adulari, to fawn on someone: adulation is fawning, excessive praise.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "public adulation",
+        "uncritical adulation",
+        "excessive adulation"
+      ],
       "audioUrl": "audio/words/420.mp3?v=152d3551b44e",
       "hookAudioUrl": "audio/hooks/420.mp3?v=c7f56b01c9ff",
       "senses": [
@@ -47551,10 +47591,13 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 310690,
-      "etymology": null,
+      "etymology": "From Latin aegis, from Ancient Greek aigis, a goatskin and the name of Athena's shield, probably from aix, goat. Being under a god's shield became being under someone's protection and backing.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "under the aegis of",
+        "under its aegis"
+      ],
       "audioUrl": "audio/words/421.mp3?v=1bf9c79950a6",
       "hookAudioUrl": "audio/hooks/421.mp3?v=32dc068909c9",
       "senses": [
@@ -47563,7 +47606,7 @@
           "definition": "Support and oversight from an organization or person that lends its name and authority to something.",
           "plainLanguageDefinition": "The backing and protection of a powerful group or person that stands behind a project.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/832.mp3?v=b5ce966f9337",
           "examples": [
@@ -47618,11 +47661,11 @@
         {
           "senseId": 990,
           "definition": "In Greek myth, a shield belonging to Zeus that Athena also carried into battle.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "The shield of the Greek gods Zeus and Athena in myth.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/990.mp3?v=a4c31f9a730b",
+          "audioUrl": "audio/definitions/990.mp3?v=533eb934922f",
           "examples": [],
           "distractors": []
         }
@@ -47661,10 +47704,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 99255,
-      "etymology": null,
+      "etymology": "Through Anglo-Norman from Old French amener, to bring or lead, built on mener, to lead, from Late Latin minare, to drive. Someone amenable can be brought or led round to a view.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "amenable to persuasion",
+        "amenable to reason",
+        "amenable to suggestion"
+      ],
       "audioUrl": "audio/words/422.mp3?v=7add46fb3994",
       "hookAudioUrl": "audio/hooks/422.mp3?v=08c10d622a42",
       "senses": [
@@ -47728,22 +47775,22 @@
         {
           "senseId": 991,
           "definition": "Able to be handled or tested by a particular method.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Suited to being dealt with by a certain method, as a tumor that surgery can remove.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/991.mp3?v=fdff1d072061",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/991.mp3?v=359ec2fb475e",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 992,
           "definition": "Bound to obey a particular court, ruler or set of rules.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Answerable to a court or ruler and obliged to follow its rules.",
           "senseOrder": 3,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/992.mp3?v=01c5e1d376b2",
+          "audioUrl": "audio/definitions/992.mp3?v=1c8e4f2a5aa6",
           "examples": [],
           "distractors": []
         }
@@ -47802,19 +47849,24 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 576306,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin apostata, from Ancient Greek apostates, a rebel, from a verb meaning to withdraw or revolt, made of apo, away, and histanai, to stand: an apostate stands away from a former faith.",
+      "roots": [
+        "histanai"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "become an apostate",
+        "declared an apostate"
+      ],
       "audioUrl": "audio/words/423.mp3?v=fb49dc3c916a",
-      "hookAudioUrl": "audio/hooks/423.mp3?v=54a1040ced3f",
+      "hookAudioUrl": "audio/hooks/423.mp3?v=b78d29776541",
       "senses": [
         {
           "senseId": 837,
           "definition": "Someone who openly abandons the religion or political creed they used to hold.",
           "plainLanguageDefinition": "A person who quits their religion or beliefs and turns against them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/837.mp3?v=2c214f8a43a0",
           "examples": [
@@ -47894,7 +47946,7 @@
         }
       ],
       "mnemonics": [
-        "Apostate comes from Greek apostasis, a standing away (apo, away, and stasis, standing): an apostate stands away from a faith."
+        "Apostate is related to Greek apostasis, a standing away (apo, away, and stasis, standing): an apostate stands away from a faith."
       ]
     },
     {
@@ -47905,7 +47957,7 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 575765,
-      "etymology": null,
+      "etymology": "From the French phrase à propos, on the subject or to the purpose, built on propos, a remark or an aim. A comment that is apropos bears on the matter in hand.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -48025,10 +48077,17 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 248454,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin arbiter, an onlooker or witness and also a judge chosen to settle a dispute, through Old French; arbitrate and arbitrary come from it. Where the Latin word itself came from is uncertain.",
+      "roots": [
+        "arbiter"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "final arbiter",
+        "ultimate arbiter",
+        "sole arbiter",
+        "arbiter of taste"
+      ],
       "audioUrl": "audio/words/425.mp3?v=54ac72f2793a",
       "hookAudioUrl": "audio/hooks/425.mp3?v=35a21bc80ac9",
       "senses": [
@@ -48092,11 +48151,11 @@
         {
           "senseId": 993,
           "definition": "Someone picked by two sides to hear their quarrel and settle it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A neutral person brought in to decide a dispute between two sides.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/993.mp3?v=54409840329d",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/993.mp3?v=ab21c2057579",
           "examples": [],
           "distractors": []
         }
@@ -48135,10 +48194,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 162661,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in English from ascend or ascendant, from Latin ascendere, to climb up, made of ad, to, and scandere, to climb: the side with the ascendancy has climbed above its rivals.",
+      "roots": [
+        "scandere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "political ascendancy",
+        "in the ascendancy",
+        "gained the ascendancy"
+      ],
       "audioUrl": "audio/words/426.mp3?v=3455aee14c7e",
       "hookAudioUrl": "audio/hooks/426.mp3?v=510421fd68ad",
       "senses": [
@@ -48147,7 +48212,7 @@
           "definition": "A position of control in which one side holds sway over its rivals.",
           "plainLanguageDefinition": "Being on top, with more power or influence than your rivals.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/841.mp3?v=4608e7f90250",
           "examples": [
@@ -48246,10 +48311,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 518930,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin attenuatus, made thin, from attenuare, built on ad- and tenuis, thin, the root of tenuous: to attenuate something is to thin it out so that it grows weaker.",
+      "roots": [
+        "tenuis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "attenuate the effects",
+        "greatly attenuated",
+        "attenuate the impact"
+      ],
       "audioUrl": "audio/words/427.mp3?v=ea1c2e7e03dd",
       "hookAudioUrl": "audio/hooks/427.mp3?v=d3d45ec3db47",
       "senses": [
@@ -48258,7 +48329,7 @@
           "definition": "Cause something to lose strength or impact without removing it entirely.",
           "plainLanguageDefinition": "To turn down the strength of something so it has less effect.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/842.mp3?v=c250f8aebc9e",
           "examples": [
@@ -48313,22 +48384,22 @@
         {
           "senseId": 994,
           "definition": "Thin out a gas or liquid so that it becomes less dense.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In science, to make a gas or fluid less dense.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/994.mp3?v=d0079130f982",
+          "audioUrl": "audio/definitions/994.mp3?v=ec615f3092ad",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 995,
           "definition": "Make a germ or virus less harmful, as when preparing a vaccine.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To weaken a germ or virus so that it can be used safely in a vaccine.",
           "senseOrder": 3,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/995.mp3?v=a4bcd68053bc",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/995.mp3?v=1f9bbee19046",
           "examples": [],
           "distractors": []
         }
@@ -48379,10 +48450,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1208126,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Middle English begilen, formed from be- and guile, crafty deceit: to beguile someone is to work guile on them.",
+      "roots": [
+        "guile"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "beguiled into",
+        "easily beguiled"
+      ],
       "audioUrl": "audio/words/428.mp3?v=29aab25b26a3",
       "hookAudioUrl": "audio/hooks/428.mp3?v=244b3dc1b6cd",
       "senses": [
@@ -48446,11 +48522,11 @@
         {
           "senseId": 996,
           "definition": "Enchant someone and keep them pleasantly absorbed.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To charm someone and hold their attention in a pleasant way.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/996.mp3?v=a32be2422ef4",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/996.mp3?v=c04630ecc8ad",
           "examples": [],
           "distractors": []
         }
@@ -48489,10 +48565,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 263693,
-      "etymology": null,
+      "etymology": "An older past form of bereave, which goes back to Old English bereafian, to rob or deprive: someone bereft of hope has had it taken away.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bereft of hope",
+        "bereft of ideas",
+        "bereft of meaning"
+      ],
       "audioUrl": "audio/words/429.mp3?v=cc8e12413a07",
       "hookAudioUrl": "audio/hooks/429.mp3?v=0bbd6f361f4b",
       "senses": [
@@ -48561,11 +48641,11 @@
         {
           "senseId": 1018,
           "definition": "Grief-stricken and desolate after a death or a parting.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Very sad and alone after someone has died or gone away.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1018.mp3?v=71b597dba378",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1018.mp3?v=8283ffa3e686",
           "examples": [],
           "distractors": []
         }
@@ -48608,10 +48688,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 782938,
-      "etymology": null,
+      "etymology": "From French cabale, from Medieval Latin cabbala, from Hebrew kabbalah, literally something received, the name for Jewish mysticism. English used it first for that mystical lore, then for a secretive clique.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "secret cabal",
+        "small cabal",
+        "powerful cabal"
+      ],
       "audioUrl": "audio/words/430.mp3?v=65d56fc6680c",
       "hookAudioUrl": "audio/hooks/430.mp3?v=e53225ddf64e",
       "senses": [
@@ -48620,7 +48704,7 @@
           "definition": "A tight band of insiders working in secret to seize or hold on to power.",
           "plainLanguageDefinition": "A small secret group that schemes behind the scenes to gain control.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/848.mp3?v=e56865d7ebf4",
           "examples": [
@@ -48680,11 +48764,11 @@
         {
           "senseId": 1019,
           "definition": "A covert plan, hatched by a few, to do harm or break the law.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A plot made in secret by a small group.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1019.mp3?v=961fe9a009c2",
+          "audioUrl": "audio/definitions/1019.mp3?v=ab6586ab84fd",
           "examples": [],
           "distractors": []
         }
@@ -48719,10 +48803,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 235690,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From the noun cavalier, a horseman and then a dashing gentleman, which came through French and Italian from Latin caballus, horse. The adjective took on such a gallant's breezy, lofty air.",
+      "roots": [
+        "caballus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cavalier attitude",
+        "cavalier disregard",
+        "cavalier treatment"
+      ],
       "audioUrl": "audio/words/431.mp3?v=9844364099fa",
       "hookAudioUrl": "audio/hooks/431.mp3?v=2650ec4464fb",
       "senses": [
@@ -48826,10 +48916,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 282751,
-      "etymology": null,
+      "etymology": "From French chagrin, sorrow or grief, a word of uncertain origin. In English it shifted toward the vexed embarrassment that follows a failure or a blunder.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "to the chagrin of",
+        "much to his chagrin",
+        "deep chagrin"
+      ],
       "audioUrl": "audio/words/432.mp3?v=94e386462a57",
       "hookAudioUrl": "audio/hooks/432.mp3?v=a55e236f2809",
       "senses": [
@@ -48934,19 +49028,25 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 893936,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin circumscribere, made of circum, around, and scribere, to write: to circumscribe was to draw a line around something, and so to fix limits it may not cross.",
+      "roots": [
+        "scribere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "narrowly circumscribed",
+        "severely circumscribed",
+        "strictly circumscribed"
+      ],
       "audioUrl": "audio/words/433.mp3?v=3afbc5626c10",
-      "hookAudioUrl": "audio/hooks/433.mp3?v=e1ca35325b91",
+      "hookAudioUrl": "audio/hooks/433.mp3?v=884185c9a825",
       "senses": [
         {
           "senseId": 852,
           "definition": "Hem in by setting firm limits on what is allowed or possible.",
           "plainLanguageDefinition": "To limit how far something can go or what someone is allowed to do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/852.mp3?v=50276ff6a03d",
           "examples": [
@@ -49006,22 +49106,22 @@
         {
           "senseId": 1020,
           "definition": "Mark out an area by tracing a line around its edge.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To draw a line around the edge of an area to mark it off.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1020.mp3?v=042cd0b122a6",
+          "audioUrl": "audio/definitions/1020.mp3?v=4336e81a150b",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1021,
           "definition": "Draw one figure around another so that it touches at points without crossing it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In geometry, to draw a shape around another so that they touch at points but never cross.",
           "senseOrder": 3,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1021.mp3?v=5bc7c930fb5f",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1021.mp3?v=f92390353d6d",
           "examples": [],
           "distractors": []
         }
@@ -49057,7 +49157,7 @@
         }
       ],
       "mnemonics": [
-        "Circumscribe comes from Latin circum, around, and scribere, to write or draw: you draw a line around something, and it may not cross it."
+        "Circumscribe comes from Latin circum, around, and scribere, to write: you draw a line around something, and it may not cross it."
       ]
     },
     {
@@ -49068,10 +49168,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 71024,
-      "etymology": null,
+      "etymology": "Through French from Latin concomitans, accompanying, built from con-, together, and comitari, to go along with, from comes, a companion: a concomitant effect comes along with something.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "concomitant increase",
+        "concomitant rise",
+        "concomitant changes"
+      ],
       "audioUrl": "audio/words/434.mp3?v=21b11244b15e",
       "hookAudioUrl": "audio/hooks/434.mp3?v=a17a41ff17ca",
       "senses": [
@@ -49080,7 +49184,7 @@
           "definition": "Occurring with or following as a consequence.",
           "plainLanguageDefinition": "Happening along with something else, often as a side effect of it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/855.mp3?v=49228d27e9ab",
           "examples": [
@@ -49172,10 +49276,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2835142,
-      "etymology": null,
+      "etymology": "From Latin connivere, to shut the eyes or wink, partly through French: to connive at a wrong was to look away from it. The plotting sense may picture accomplices trading winks.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "connived with",
+        "connived to"
+      ],
       "audioUrl": "audio/words/435.mp3?v=ff711ffed35f",
       "hookAudioUrl": "audio/hooks/435.mp3?v=60b16353f8f0",
       "senses": [
@@ -49271,10 +49378,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 209254,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin consummatus, completed, from consummare, to sum up or finish, built on summa, a sum, from summus, highest. A consummate artist is complete, lacking nothing in skill.",
+      "roots": [
+        "summa"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "consummate skill",
+        "consummate professional",
+        "consummate politician"
+      ],
       "audioUrl": "audio/words/436.mp3?v=35a5e798062a",
       "hookAudioUrl": "audio/hooks/436.mp3?v=3acf98585508",
       "senses": [
@@ -49283,7 +49396,7 @@
           "definition": "Having or revealing supreme mastery or skill.",
           "plainLanguageDefinition": "So skilled at something that it is hard to imagine anyone doing it better.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/858.mp3?v=b13de34257ce",
           "examples": [
@@ -49343,22 +49456,22 @@
         {
           "senseId": 1022,
           "definition": "Complete and perfect, lacking nothing.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Perfect and whole in every part, with nothing missing.",
           "senseOrder": 2,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1022.mp3?v=b9e6959d7179",
+          "audioUrl": "audio/definitions/1022.mp3?v=352e81c847f0",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1023,
           "definition": "Total and utter, often of someone who fits a bad type through and through.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Total, used to stress how bad someone is, as in a born liar.",
           "senseOrder": 3,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1023.mp3?v=41e631e1cc0c",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1023.mp3?v=5563eceb3fa2",
           "examples": [],
           "distractors": []
         }
@@ -49413,10 +49526,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1156808,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French contravenir from Latin contravenire, made of contra, against, and venire, to come: to contravene a rule is to come up against it.",
+      "roots": [
+        "venire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "contravene the law",
+        "contravene the provisions",
+        "contravene international law"
+      ],
       "audioUrl": "audio/words/437.mp3?v=34476a93899b",
       "hookAudioUrl": "audio/hooks/437.mp3?v=d87ddc014751",
       "senses": [
@@ -49425,7 +49544,7 @@
           "definition": "Act in breach of a law, treaty or set of rules.",
           "plainLanguageDefinition": "To break a rule or law instead of following it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/861.mp3?v=35b6338d1644",
           "examples": [
@@ -49480,11 +49599,11 @@
         {
           "senseId": 1024,
           "definition": "Argue against or deny the truth of a claim.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To dispute a claim or deny that it is true.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1024.mp3?v=01a2234550f4",
+          "audioUrl": "audio/definitions/1024.mp3?v=bcf21f2a2c76",
           "examples": [],
           "distractors": []
         }
