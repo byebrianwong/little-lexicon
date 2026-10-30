@@ -1,7 +1,8 @@
 {
   "formatVersion": 2,
   "attribution": [
-    "Definitions, dictionary examples, synonyms, antonyms and pronunciations from Open English WordNet 2025 (https://en-word.net/), licensed CC BY 4.0."
+    "Definitions, dictionary examples, synonyms, antonyms and pronunciations from Open English WordNet 2025 (https://en-word.net/), licensed CC BY 4.0.",
+    "Word origins checked against Wiktionary (https://en.wiktionary.org/), licensed CC BY-SA."
   ],
   "words": [
     {
@@ -2914,10 +2915,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 153102,
-      "etymology": null,
+      "etymology": "Goes back to Ancient Greek austeros, harsh or bitter, a word first used of fruit and wine sharp enough to leave the mouth dry.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "austere life",
+        "austere beauty",
+        "austere room"
+      ],
       "audioUrl": "audio/words/26.mp3?v=4d079161d5e7",
       "hookAudioUrl": "audio/hooks/26.mp3?v=b13218fd8dbd",
       "senses": [
@@ -2981,11 +2986,11 @@
         {
           "senseId": 1254,
           "definition": "Grave and unsmiling in manner, keeping others at a distance.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Serious and stern, seldom smiling and hard to get close to.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1254.mp3?v=03534cb3690d",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1254.mp3?v=c1b63291d96b",
           "examples": [],
           "distractors": []
         }
@@ -3048,8 +3053,10 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 675637,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French averer, from a Medieval Latin verb built on Latin verus, true: to aver something is to declare it true.",
+      "roots": [
+        "verus"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/27.mp3?v=48e299460200",
@@ -3060,7 +3067,7 @@
           "definition": "Put something on record as true and stand behind it.",
           "plainLanguageDefinition": "To put your word behind a statement and stick to it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/57.mp3?v=71e90d37923e",
           "examples": [
@@ -3115,11 +3122,11 @@
         {
           "senseId": 1255,
           "definition": "In law, set out a fact in a pleading as something one will prove.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In a court case, to state a fact formally and promise to prove it.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1255.mp3?v=2b6e6772a552",
+          "audioUrl": "audio/definitions/1255.mp3?v=1f27e481be0d",
           "examples": [],
           "distractors": []
         }
@@ -3170,10 +3177,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 280119,
-      "etymology": null,
+      "etymology": "From French banal, built on ban, a feudal lord's authority: it first described things the lord owned and all his tenants shared, and so came to mean commonplace.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "banal conversation",
+        "banal observation",
+        "banal remark"
+      ],
       "audioUrl": "audio/words/28.mp3?v=62f85dcf5f13",
       "hookAudioUrl": "audio/hooks/28.mp3?v=d5dc86cdf326",
       "senses": [
@@ -3285,10 +3296,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 683583,
-      "etymology": null,
+      "etymology": "From Old English beleogan, to deceive with lies, made of be- and lie, to tell an untruth; an outward look that belies something gives a false picture of it.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Belie means to hide or contradict something, not to reveal it; using it for reveal or show is a common mistake.",
+      "pairings": [
+        "appearance belies",
+        "exterior belies",
+        "smile belied"
+      ],
       "audioUrl": "audio/words/29.mp3?v=d4e2c48ec308",
       "hookAudioUrl": "audio/hooks/29.mp3?v=d33b42cc898b",
       "senses": [
@@ -3352,11 +3367,11 @@
         {
           "senseId": 582,
           "definition": "Show that a claim or expectation was mistaken.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To clash with a claim or forecast, exposing it as wrong.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/582.mp3?v=355573f69baf",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/582.mp3?v=0a25a5278afe",
           "examples": [],
           "distractors": []
         }
@@ -3399,10 +3414,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 256075,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Built from Latin bene, well, and a form of facere, to do or make: a beneficent person is one who does good.",
+      "roots": [
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "beneficent god",
+        "beneficent power",
+        "beneficent rule"
+      ],
       "audioUrl": "audio/words/30.mp3?v=5121cfea5e96",
       "hookAudioUrl": "audio/hooks/30.mp3?v=8f4ac008e53c",
       "senses": [
@@ -3411,7 +3432,7 @@
           "definition": "Using one's wealth or power to do good for other people.",
           "plainLanguageDefinition": "Doing good for others, often by giving them money, time or care.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/62.mp3?v=1f5e3d9d0e45",
           "examples": [
@@ -3466,11 +3487,11 @@
         {
           "senseId": 583,
           "definition": "Having a helpful effect, as good weather does on a harvest.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Having good effects on people or things.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/583.mp3?v=6be62eef2f82",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/583.mp3?v=5a380318c888",
           "examples": [],
           "distractors": []
         }
@@ -3521,10 +3542,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 178248,
-      "etymology": null,
+      "etymology": "From Old English bolster, a pillow or cushion: to bolster something is to prop it up, as a pillow props up someone in bed.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bolster confidence",
+        "bolster morale",
+        "bolster the economy"
+      ],
       "audioUrl": "audio/words/31.mp3?v=ffa43dcc91e6",
       "hookAudioUrl": "audio/hooks/31.mp3?v=4ebe0ceec254",
       "senses": [
@@ -3588,22 +3613,22 @@
         {
           "senseId": 1260,
           "definition": "Raise someone to sitting in bed by stacking soft supports behind them.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To prop a person up in bed with pillows behind them.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1260.mp3?v=ac0095260ab8",
+          "audioUrl": "audio/definitions/1260.mp3?v=499eb6837c0d",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 563,
           "definition": "Fill out or line something with soft padding.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To pad or stuff something with soft material.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/563.mp3?v=cf6120e800cf",
+          "audioUrl": "audio/definitions/563.mp3?v=39b38108047e",
           "examples": [],
           "distractors": []
         }
@@ -3654,10 +3679,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1096164,
-      "etymology": null,
+      "etymology": "From bombast, cotton stuffing once used to pad clothes, which came through Old French from Late Latin bombax, cotton. The word moved from padded clothes to padded speech.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Bombastic comes from cotton padding and means puffed up with grand words; its colloquial use for loud or aggressive is common but disputed.",
+      "pairings": [
+        "bombastic rhetoric",
+        "bombastic style",
+        "bombastic language"
+      ],
       "audioUrl": "audio/words/32.mp3?v=a42f864bd2d5",
       "hookAudioUrl": "audio/hooks/32.mp3?v=151ee46b93be",
       "senses": [
@@ -3774,10 +3803,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1321842,
-      "etymology": null,
+      "etymology": "From boor, which English borrowed from Dutch boer, a peasant; boor shifted from meaning a country person to anyone with crude manners.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "boorish behavior",
+        "boorish manners"
+      ],
       "audioUrl": "audio/words/33.mp3?v=a9f806891e33",
       "hookAudioUrl": "audio/hooks/33.mp3?v=798daa9f0fd5",
       "senses": [
@@ -3893,10 +3925,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 4729474,
-      "etymology": null,
+      "etymology": "From Old French borjoner, a verb related to burjon, a bud: something that burgeons grows fast, like a plant putting out new shoots.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "burgeoning population",
+        "burgeoning field",
+        "burgeoning market"
+      ],
       "audioUrl": "audio/words/34.mp3?v=c395309f051c",
       "hookAudioUrl": "audio/hooks/34.mp3?v=2f094dba94bb",
       "senses": [
@@ -3960,11 +3996,11 @@
         {
           "senseId": 1261,
           "definition": "Of a plant, push out its first buds and green shoots of the season.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a plant, to put out new buds and shoots.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1261.mp3?v=a0bc3b25e6d1",
+          "audioUrl": "audio/definitions/1261.mp3?v=8038d0dc4d32",
           "examples": [],
           "distractors": []
         }
@@ -4023,10 +4059,13 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 300112,
-      "etymology": null,
+      "etymology": "From Old French ars bouterez, supporting arches, from a Germanic verb meaning to push: a buttress pushes back against a wall to keep it standing.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "buttress the argument",
+        "buttress the case"
+      ],
       "audioUrl": "audio/words/35.mp3?v=594b129af73e",
       "hookAudioUrl": "audio/hooks/35.mp3?v=01d680f2684d",
       "senses": [
@@ -4138,10 +4177,16 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 694589,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French cacophonie, from Ancient Greek kakophonia, made of kakos, bad, and phone, sound.",
+      "roots": [
+        "phone"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cacophony of voices",
+        "cacophony of sounds",
+        "deafening cacophony"
+      ],
       "audioUrl": "audio/words/36.mp3?v=fe2350d6b767",
       "hookAudioUrl": "audio/hooks/36.mp3?v=104b2e228158",
       "senses": [
@@ -4205,11 +4250,11 @@
         {
           "senseId": 1262,
           "definition": "Rough, grating sounds chosen by a writer to make a line hard on the ear.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In poetry, harsh-sounding words used on purpose for effect.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1262.mp3?v=a6d95b60ed58",
+          "audioUrl": "audio/definitions/1262.mp3?v=5ff4049d985b",
           "examples": [],
           "distractors": []
         }
@@ -4256,10 +4301,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1114628,
-      "etymology": null,
+      "etymology": "From French cajoler, probably a blend of two older French verbs, one for a jay's chattering and one for luring into a cage, which together suggest coaxing talk.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cajoled into",
+        "coax and cajole",
+        "cajoling tone"
+      ],
       "audioUrl": "audio/words/37.mp3?v=e8e231a169aa",
       "hookAudioUrl": "audio/hooks/37.mp3?v=fd0c33fa0e15",
       "senses": [
@@ -4355,10 +4404,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 287590,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin callosus, hard-skinned, from callum, hardened skin: a callous person's feelings have grown a tough, numb layer.",
+      "roots": [
+        "callum"
+      ],
+      "watchOut": "The noun for a patch of thick, hard skin is usually spelled callus; callous is the adjective, as in a callous remark.",
+      "pairings": [
+        "callous disregard",
+        "callous indifference",
+        "callous attitude"
+      ],
       "audioUrl": "audio/words/38.mp3?v=0139719ded4d",
       "hookAudioUrl": "audio/hooks/38.mp3?v=d18131b32e99",
       "senses": [
@@ -4422,11 +4477,11 @@
         {
           "senseId": 1263,
           "definition": "Of the palms or soles, toughened into thick pads by long wear.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of skin on the hands or feet, thick and hard from long use.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1263.mp3?v=373c2717a225",
+          "audioUrl": "audio/definitions/1263.mp3?v=b502f4e0b02b",
           "examples": [],
           "distractors": []
         }
@@ -4481,10 +4536,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 267402,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin candor, a bright whiteness, from candere, to shine, a word Latin also used for an open, honest character. English took the whiteness sense first and the frank sense by about 1600.",
+      "roots": [
+        "candere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "complete candor",
+        "refreshing candor",
+        "disarming candor"
+      ],
       "audioUrl": "audio/words/39.mp3?v=8c2b84fccdc9",
       "hookAudioUrl": "audio/hooks/39.mp3?v=e8019fa4d443",
       "senses": [
@@ -4553,11 +4614,11 @@
         {
           "senseId": 572,
           "definition": "Ability to make judgments free from discrimination or dishonesty.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Fairness in judging, without bias or deceit.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/572.mp3?v=367f9f59e6e4",
+          "audioUrl": "audio/definitions/572.mp3?v=359fa297258c",
           "examples": [],
           "distractors": []
         }
@@ -4608,10 +4669,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 214305,
-      "etymology": null,
+      "etymology": "Through French from Italian capriccio, a whim. Capriccio grew from caporiccio, which sources explain either as curly head, curls being taken as a sign of an unruly nature, or as a fright or sudden start.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "capricious behavior",
+        "capricious weather",
+        "capricious gods"
+      ],
       "audioUrl": "audio/words/40.mp3?v=d83ffab021ac",
       "hookAudioUrl": "audio/hooks/40.mp3?v=407bcaffa76c",
       "senses": [
@@ -4675,11 +4740,11 @@
         {
           "senseId": 79,
           "definition": "Determined by chance or impulse or whim rather than by necessity or reason.",
-          "plainLanguageDefinition": "Capricious describes actions or decisions driven by sudden whims rather than careful thought.",
+          "plainLanguageDefinition": "Decided on a whim rather than for a good reason.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/79.mp3?v=cdb73e9954ba",
+          "audioUrl": "audio/definitions/79.mp3?v=1959d487c200",
           "examples": [
             {
               "exampleId": 616,
@@ -4789,10 +4854,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1962154,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin castigare, to correct or punish, formed on a stem meaning purity that is related to castus, chaste. Chastise and chasten come from the same Latin verb.",
+      "roots": [
+        "castus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "publicly castigated",
+        "roundly castigated"
+      ],
       "audioUrl": "audio/words/41.mp3?v=761e7d6e8cab",
       "hookAudioUrl": "audio/hooks/41.mp3?v=cc4987470962",
       "senses": [
@@ -4801,7 +4871,7 @@
           "definition": "Attack someone's conduct with fierce words of blame.",
           "plainLanguageDefinition": "To tear into someone with angry words about what they did wrong.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/80.mp3?v=cfbfe10db127",
           "examples": [
@@ -4856,11 +4926,11 @@
         {
           "senseId": 81,
           "definition": "Inflict severe punishment on.",
-          "plainLanguageDefinition": "To castigate means to punish someone severely for wrongdoing.",
+          "plainLanguageDefinition": "To punish someone harshly.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/81.mp3?v=82792c4c6177",
+          "audioUrl": "audio/definitions/81.mp3?v=3d65299cc1fe",
           "examples": [
             {
               "exampleId": 624,
@@ -4954,10 +5024,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 45557,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From catalysis, a chemistry word for speeding up a reaction, from Ancient Greek katalysis, a dissolving, made of kata, down, and lyein, to loosen. The sense of setting off any change grew from the chemical one.",
+      "roots": [
+        "lyein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "catalyst for change",
+        "act as a catalyst",
+        "catalyst for reform"
+      ],
       "audioUrl": "audio/words/42.mp3?v=d0891228c2a6",
       "hookAudioUrl": "audio/hooks/42.mp3?v=87e4cf131630",
       "senses": [
@@ -5015,11 +5091,11 @@
         {
           "senseId": 1244,
           "definition": "In chemistry, a helper substance that lowers the energy a reaction needs and can be recovered afterward.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In chemistry, a substance that speeds up a reaction and comes out of it intact.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1244.mp3?v=d67fc04de940",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1244.mp3?v=3489961a8203",
           "examples": [],
           "distractors": []
         }
@@ -5054,10 +5130,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 159330,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin causticus, from Ancient Greek kaustikos, burning, from kaustos, burnt: caustic words sting the way a burn does.",
+      "roots": [
+        "kaustos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "caustic wit",
+        "caustic remarks",
+        "caustic criticism"
+      ],
       "audioUrl": "audio/words/43.mp3?v=f91df4e167ec",
       "hookAudioUrl": "audio/hooks/43.mp3?v=613b557a058a",
       "senses": [
@@ -5126,11 +5208,11 @@
         {
           "senseId": 1245,
           "definition": "Of a chemical, strong enough to damage flesh and wear down other matter it touches.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Harsh enough as a chemical to injure skin, as drain cleaner can.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1245.mp3?v=001207eff1e6",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1245.mp3?v=13a7dc121970",
           "examples": [],
           "distractors": []
         }
@@ -5173,10 +5255,14 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 1031855,
-      "etymology": null,
+      "etymology": "From French chicanerie, trickery, from the verb chicaner, to quibble or squabble over small points.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "political chicanery",
+        "financial chicanery",
+        "legal chicanery"
+      ],
       "audioUrl": "audio/words/44.mp3?v=ed53219864e1",
       "hookAudioUrl": "audio/hooks/44.mp3?v=254ad3bfa2fd",
       "senses": [
@@ -5185,7 +5271,7 @@
           "definition": "Sly maneuvering with rules, words or paperwork to win by deceit rather than merit.",
           "plainLanguageDefinition": "Sneaky tricks with rules or words that let someone cheat while seeming to play fair.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/86.mp3?v=ae54d71d7a07",
           "examples": [
@@ -5280,10 +5366,17 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1320216,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin coagulare, to curdle, from coagulum, rennet, which comes from cogere, to bring together, itself made of co- and agere, to drive.",
+      "roots": [
+        "cogere",
+        "agere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "coagulated blood",
+        "blood coagulates",
+        "proteins coagulate"
+      ],
       "audioUrl": "audio/words/45.mp3?v=ed8b55124bae",
       "hookAudioUrl": "audio/hooks/45.mp3?v=5a8272282d69",
       "senses": [
@@ -5388,10 +5481,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 292485,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Latin coalescere joined co-, together, with alescere, to grow or increase: parts that coalesce grow into a single whole. Adolescent is built on the same verb.",
+      "roots": [
+        "alescere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "coalesce into",
+        "coalesce around",
+        "droplets coalesce"
+      ],
       "audioUrl": "audio/words/46.mp3?v=c518e2a509a1",
       "hookAudioUrl": "audio/hooks/46.mp3?v=78aba96aa5cb",
       "senses": [
@@ -5400,7 +5499,7 @@
           "definition": "Draw together from scattered pieces until they form one united thing.",
           "plainLanguageDefinition": "To slowly blend from many separate bits into one.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/89.mp3?v=51321d2afb0f",
           "examples": [
@@ -5508,10 +5607,17 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 259791,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Latin cogens, a form of cogere, to drive together or compel, made of co- and agere, to drive: a cogent case forces agreement.",
+      "roots": [
+        "cogere",
+        "agere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cogent argument",
+        "cogent reasons",
+        "cogent evidence"
+      ],
       "audioUrl": "audio/words/47.mp3?v=30e47a066e53",
       "hookAudioUrl": "audio/hooks/47.mp3?v=0faf67872f48",
       "senses": [
@@ -5520,7 +5626,7 @@
           "definition": "Convincing because the reasoning behind it is sound, clear and to the point.",
           "plainLanguageDefinition": "So clear and sensible that people find it convincing.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/91.mp3?v=6874f7bc0a94",
           "examples": [
@@ -5621,10 +5727,15 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 172174,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin commensuratus, measured together, from com-, with, and mensurare, to measure, which comes from mensura, a measure.",
+      "roots": [
+        "mensura"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "commensurate with experience",
+        "commensurate increase"
+      ],
       "audioUrl": "audio/words/48.mp3?v=164be0faf815",
       "hookAudioUrl": "audio/hooks/48.mp3?v=2cfdc488e386",
       "senses": [
@@ -5712,10 +5823,16 @@
       "syllables": 6,
       "difficultyTier": 1,
       "frequencyRank": 198446,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Goes back to Latin conciliare, to bring together or win over, from concilium, a council or meeting; reconcile comes from the same verb.",
+      "roots": [
+        "conciliare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "conciliatory tone",
+        "conciliatory gesture",
+        "conciliatory approach"
+      ],
       "audioUrl": "audio/words/50.mp3?v=88fa1cd6dc85",
       "hookAudioUrl": "audio/hooks/50.mp3?v=95419da7501f",
       "senses": [
@@ -5784,11 +5901,11 @@
         {
           "senseId": 573,
           "definition": "Making or willing to make concessions.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Ready to give ground in order to reach an agreement.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/573.mp3?v=5b85c1009ace",
+          "audioUrl": "audio/definitions/573.mp3?v=b0e5fdc6f1e0",
           "examples": [],
           "distractors": []
         }
@@ -5831,10 +5948,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 435175,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin condonare, to give up or forgive, made of con- and donare, to give: to condone a wrong is to let it go.",
+      "roots": [
+        "donare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "condone violence",
+        "tacitly condoned",
+        "condone such behavior"
+      ],
       "audioUrl": "audio/words/51.mp3?v=d717b6d27b4c",
       "hookAudioUrl": "audio/hooks/51.mp3?v=cbb4ee3deeac",
       "senses": [

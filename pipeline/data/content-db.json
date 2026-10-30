@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-29T19:29:22.325Z"
+    "updatedAt": "2026-10-30T06:03:23.785Z"
   },
   "counters": {
     "words": 617,
@@ -11,7 +11,7 @@
     "word_relations": 6605,
     "distractors": 7333,
     "mnemonics": 1023,
-    "reviews": 1016
+    "reviews": 1041
   },
   "words": [
     {
@@ -297,8 +297,15 @@
       "syllables": 2,
       "frequency_rank": 153102,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Goes back to Ancient Greek austeros, harsh or bitter, a word first used of fruit and wine sharp enough to leave the mouth dry.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "austere life",
+        "austere beauty",
+        "austere room"
+      ]
     },
     {
       "id": 27,
@@ -308,8 +315,13 @@
       "syllables": 2,
       "frequency_rank": 675637,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French averer, from a Medieval Latin verb built on Latin verus, true: to aver something is to declare it true.",
+      "audio_url": null,
+      "roots": [
+        "verus"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 28,
@@ -319,8 +331,15 @@
       "syllables": 2,
       "frequency_rank": 280119,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French banal, built on ban, a feudal lord's authority: it first described things the lord owned and all his tenants shared, and so came to mean commonplace.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "banal conversation",
+        "banal observation",
+        "banal remark"
+      ]
     },
     {
       "id": 29,
@@ -330,8 +349,15 @@
       "syllables": 2,
       "frequency_rank": 683583,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English beleogan, to deceive with lies, made of be- and lie, to tell an untruth; an outward look that belies something gives a false picture of it.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Belie means to hide or contradict something, not to reveal it; using it for reveal or show is a common mistake.",
+      "pairings": [
+        "appearance belies",
+        "exterior belies",
+        "smile belied"
+      ]
     },
     {
       "id": 30,
@@ -341,8 +367,17 @@
       "syllables": 4,
       "frequency_rank": 256075,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built from Latin bene, well, and a form of facere, to do or make: a beneficent person is one who does good.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "beneficent god",
+        "beneficent power",
+        "beneficent rule"
+      ]
     },
     {
       "id": 31,
@@ -352,8 +387,15 @@
       "syllables": 2,
       "frequency_rank": 178248,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English bolster, a pillow or cushion: to bolster something is to prop it up, as a pillow props up someone in bed.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "bolster confidence",
+        "bolster morale",
+        "bolster the economy"
+      ]
     },
     {
       "id": 32,
@@ -363,8 +405,15 @@
       "syllables": 3,
       "frequency_rank": 1096164,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From bombast, cotton stuffing once used to pad clothes, which came through Old French from Late Latin bombax, cotton. The word moved from padded clothes to padded speech.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Bombastic comes from cotton padding and means puffed up with grand words; its colloquial use for loud or aggressive is common but disputed.",
+      "pairings": [
+        "bombastic rhetoric",
+        "bombastic style",
+        "bombastic language"
+      ]
     },
     {
       "id": 33,
@@ -374,8 +423,14 @@
       "syllables": 2,
       "frequency_rank": 1321842,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From boor, which English borrowed from Dutch boer, a peasant; boor shifted from meaning a country person to anyone with crude manners.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "boorish behavior",
+        "boorish manners"
+      ]
     },
     {
       "id": 34,
@@ -385,8 +440,15 @@
       "syllables": 2,
       "frequency_rank": 4729474,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French borjoner, a verb related to burjon, a bud: something that burgeons grows fast, like a plant putting out new shoots.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "burgeoning population",
+        "burgeoning field",
+        "burgeoning market"
+      ]
     },
     {
       "id": 35,
@@ -396,8 +458,14 @@
       "syllables": 2,
       "frequency_rank": 300112,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French ars bouterez, supporting arches, from a Germanic verb meaning to push: a buttress pushes back against a wall to keep it standing.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "buttress the argument",
+        "buttress the case"
+      ]
     },
     {
       "id": 36,
@@ -407,8 +475,17 @@
       "syllables": 4,
       "frequency_rank": 694589,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French cacophonie, from Ancient Greek kakophonia, made of kakos, bad, and phone, sound.",
+      "audio_url": null,
+      "roots": [
+        "phone"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "cacophony of voices",
+        "cacophony of sounds",
+        "deafening cacophony"
+      ]
     },
     {
       "id": 37,
@@ -418,8 +495,15 @@
       "syllables": 2,
       "frequency_rank": 1114628,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French cajoler, probably a blend of two older French verbs, one for a jay's chattering and one for luring into a cage, which together suggest coaxing talk.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "cajoled into",
+        "coax and cajole",
+        "cajoling tone"
+      ]
     },
     {
       "id": 38,
@@ -429,8 +513,17 @@
       "syllables": 2,
       "frequency_rank": 287590,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin callosus, hard-skinned, from callum, hardened skin: a callous person's feelings have grown a tough, numb layer.",
+      "audio_url": null,
+      "roots": [
+        "callum"
+      ],
+      "watch_out": "The noun for a patch of thick, hard skin is usually spelled callus; callous is the adjective, as in a callous remark.",
+      "pairings": [
+        "callous disregard",
+        "callous indifference",
+        "callous attitude"
+      ]
     },
     {
       "id": 39,
@@ -440,8 +533,17 @@
       "syllables": 2,
       "frequency_rank": 267402,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin candor, a bright whiteness, from candere, to shine, a word Latin also used for an open, honest character. English took the whiteness sense first and the frank sense by about 1600.",
+      "audio_url": null,
+      "roots": [
+        "candere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "complete candor",
+        "refreshing candor",
+        "disarming candor"
+      ]
     },
     {
       "id": 40,
@@ -451,8 +553,15 @@
       "syllables": 3,
       "frequency_rank": 214305,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Italian capriccio, a whim. Capriccio grew from caporiccio, which sources explain either as curly head, curls being taken as a sign of an unruly nature, or as a fright or sudden start.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "capricious behavior",
+        "capricious weather",
+        "capricious gods"
+      ]
     },
     {
       "id": 41,
@@ -462,8 +571,16 @@
       "syllables": 3,
       "frequency_rank": 1962154,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin castigare, to correct or punish, formed on a stem meaning purity that is related to castus, chaste. Chastise and chasten come from the same Latin verb.",
+      "audio_url": null,
+      "roots": [
+        "castus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "publicly castigated",
+        "roundly castigated"
+      ]
     },
     {
       "id": 42,
@@ -473,8 +590,17 @@
       "syllables": 3,
       "frequency_rank": 45557,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From catalysis, a chemistry word for speeding up a reaction, from Ancient Greek katalysis, a dissolving, made of kata, down, and lyein, to loosen. The sense of setting off any change grew from the chemical one.",
+      "audio_url": null,
+      "roots": [
+        "lyein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "catalyst for change",
+        "act as a catalyst",
+        "catalyst for reform"
+      ]
     },
     {
       "id": 43,
@@ -484,8 +610,17 @@
       "syllables": 2,
       "frequency_rank": 159330,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin causticus, from Ancient Greek kaustikos, burning, from kaustos, burnt: caustic words sting the way a burn does.",
+      "audio_url": null,
+      "roots": [
+        "kaustos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "caustic wit",
+        "caustic remarks",
+        "caustic criticism"
+      ]
     },
     {
       "id": 44,
@@ -495,8 +630,15 @@
       "syllables": 4,
       "frequency_rank": 1031855,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French chicanerie, trickery, from the verb chicaner, to quibble or squabble over small points.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "political chicanery",
+        "financial chicanery",
+        "legal chicanery"
+      ]
     },
     {
       "id": 45,
@@ -506,8 +648,18 @@
       "syllables": 4,
       "frequency_rank": 1320216,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin coagulare, to curdle, from coagulum, rennet, which comes from cogere, to bring together, itself made of co- and agere, to drive.",
+      "audio_url": null,
+      "roots": [
+        "cogere",
+        "agere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "coagulated blood",
+        "blood coagulates",
+        "proteins coagulate"
+      ]
     },
     {
       "id": 46,
@@ -517,8 +669,17 @@
       "syllables": 3,
       "frequency_rank": 292485,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin coalescere joined co-, together, with alescere, to grow or increase: parts that coalesce grow into a single whole. Adolescent is built on the same verb.",
+      "audio_url": null,
+      "roots": [
+        "alescere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "coalesce into",
+        "coalesce around",
+        "droplets coalesce"
+      ]
     },
     {
       "id": 47,
@@ -528,8 +689,18 @@
       "syllables": 2,
       "frequency_rank": 259791,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin cogens, a form of cogere, to drive together or compel, made of co- and agere, to drive: a cogent case forces agreement.",
+      "audio_url": null,
+      "roots": [
+        "cogere",
+        "agere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "cogent argument",
+        "cogent reasons",
+        "cogent evidence"
+      ]
     },
     {
       "id": 48,
@@ -539,8 +710,16 @@
       "syllables": 4,
       "frequency_rank": 172174,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin commensuratus, measured together, from com-, with, and mensurare, to measure, which comes from mensura, a measure.",
+      "audio_url": null,
+      "roots": [
+        "mensura"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "commensurate with experience",
+        "commensurate increase"
+      ]
     },
     {
       "id": 49,
@@ -562,8 +741,17 @@
       "syllables": 6,
       "frequency_rank": 198446,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Goes back to Latin conciliare, to bring together or win over, from concilium, a council or meeting; reconcile comes from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "conciliare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "conciliatory tone",
+        "conciliatory gesture",
+        "conciliatory approach"
+      ]
     },
     {
       "id": 51,
@@ -573,8 +761,17 @@
       "syllables": 2,
       "frequency_rank": 435175,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin condonare, to give up or forgive, made of con- and donare, to give: to condone a wrong is to let it go.",
+      "audio_url": null,
+      "roots": [
+        "donare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "condone violence",
+        "tacitly condoned",
+        "condone such behavior"
+      ]
     },
     {
       "id": 52,
@@ -6919,7 +7116,7 @@
       "definition": "Put something on record as true and stand behind it.",
       "plain_language_definition": "To put your word behind a statement and stick to it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 59,
@@ -6943,7 +7140,7 @@
       "definition": "Using one's wealth or power to do good for other people.",
       "plain_language_definition": "Doing good for others, often by giving them money, time or care.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 64,
@@ -7029,9 +7226,10 @@
       "id": 79,
       "word_id": 40,
       "definition": "Determined by chance or impulse or whim rather than by necessity or reason.",
-      "plain_language_definition": "Capricious describes actions or decisions driven by sudden whims rather than careful thought.",
+      "plain_language_definition": "Decided on a whim rather than for a good reason.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 80,
@@ -7039,15 +7237,16 @@
       "definition": "Attack someone's conduct with fierce words of blame.",
       "plain_language_definition": "To tear into someone with angry words about what they did wrong.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 81,
       "word_id": 41,
       "definition": "Inflict severe punishment on.",
-      "plain_language_definition": "To castigate means to punish someone severely for wrongdoing.",
+      "plain_language_definition": "To punish someone harshly.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 82,
@@ -7071,7 +7270,7 @@
       "definition": "Sly maneuvering with rules, words or paperwork to win by deceit rather than merit.",
       "plain_language_definition": "Sneaky tricks with rules or words that let someone cheat while seeming to play fair.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 87,
@@ -7087,7 +7286,7 @@
       "definition": "Draw together from scattered pieces until they form one united thing.",
       "plain_language_definition": "To slowly blend from many separate bits into one.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 91,
@@ -7095,7 +7294,7 @@
       "definition": "Convincing because the reasoning behind it is sound, clear and to the point.",
       "plain_language_definition": "So clear and sensible that people find it convincing.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 92,
@@ -9413,9 +9612,10 @@
       "id": 563,
       "word_id": 31,
       "definition": "Fill out or line something with soft padding.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To pad or stuff something with soft material.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 565,
@@ -9429,17 +9629,19 @@
       "id": 572,
       "word_id": 39,
       "definition": "Ability to make judgments free from discrimination or dishonesty.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Fairness in judging, without bias or deceit.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 573,
       "word_id": 50,
       "definition": "Making or willing to make concessions.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Ready to give ground in order to reach an agreement.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 579,
@@ -9461,17 +9663,19 @@
       "id": 582,
       "word_id": 29,
       "definition": "Show that a claim or expectation was mistaken.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To clash with a claim or forecast, exposing it as wrong.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 583,
       "word_id": 30,
       "definition": "Having a helpful effect, as good weather does on a harvest.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Having good effects on people or things.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 588,
@@ -12885,17 +13089,19 @@
       "id": 1244,
       "word_id": 42,
       "definition": "In chemistry, a helper substance that lowers the energy a reaction needs and can be recovered afterward.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In chemistry, a substance that speeds up a reaction and comes out of it intact.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1245,
       "word_id": 43,
       "definition": "Of a chemical, strong enough to damage flesh and wear down other matter it touches.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Harsh enough as a chemical to injure skin, as drain cleaner can.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1246,
@@ -12965,17 +13171,19 @@
       "id": 1254,
       "word_id": 26,
       "definition": "Grave and unsmiling in manner, keeping others at a distance.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Serious and stern, seldom smiling and hard to get close to.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1255,
       "word_id": 27,
       "definition": "In law, set out a fact in a pleading as something one will prove.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In a court case, to state a fact formally and promise to prove it.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1256,
@@ -13013,33 +13221,37 @@
       "id": 1260,
       "word_id": 31,
       "definition": "Raise someone to sitting in bed by stacking soft supports behind them.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To prop a person up in bed with pillows behind them.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1261,
       "word_id": 34,
       "definition": "Of a plant, push out its first buds and green shoots of the season.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a plant, to put out new buds and shoots.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1262,
       "word_id": 36,
       "definition": "Rough, grating sounds chosen by a writer to make a line hard on the ear.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In poetry, harsh-sounding words used on purpose for effect.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1263,
       "word_id": 38,
       "definition": "Of the palms or soles, toughened into thick pads by long wear.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of skin on the hands or feet, thick and hard from long use.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1264,
@@ -118412,8 +118624,8 @@
     },
     {
       "path": "definitions/1254.mp3",
-      "bytes": 16614,
-      "key": "5110a4e6eff8a748",
+      "bytes": 17659,
+      "key": "f33173971a047114",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118426,8 +118638,8 @@
     },
     {
       "path": "definitions/1255.mp3",
-      "bytes": 16196,
-      "key": "d4332b8e1acc5e09",
+      "bytes": 16614,
+      "key": "8860f5f099be08c1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118447,8 +118659,8 @@
     },
     {
       "path": "definitions/582.mp3",
-      "bytes": 13897,
-      "key": "10888a9fe8168934",
+      "bytes": 17136,
+      "key": "da0486c198da24ea",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118461,8 +118673,8 @@
     },
     {
       "path": "definitions/583.mp3",
-      "bytes": 16196,
-      "key": "9cd22c3d791f9d1c",
+      "bytes": 10762,
+      "key": "3850e570247001cb",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118475,15 +118687,15 @@
     },
     {
       "path": "definitions/563.mp3",
-      "bytes": 11076,
-      "key": "32787b97a00e6f32",
+      "bytes": 12852,
+      "key": "cc69befb47e346da",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1260.mp3",
-      "bytes": 18808,
-      "key": "b3609919503f0cfb",
+      "bytes": 14524,
+      "key": "b56601cf9101c063",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118510,8 +118722,8 @@
     },
     {
       "path": "definitions/1261.mp3",
-      "bytes": 17345,
-      "key": "017433ef25080fcc",
+      "bytes": 11703,
+      "key": "4a71979f60a335f9",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118531,8 +118743,8 @@
     },
     {
       "path": "definitions/1262.mp3",
-      "bytes": 20062,
-      "key": "cec6ddbd2a57137e",
+      "bytes": 17032,
+      "key": "ed5e64106a573ee5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118552,8 +118764,8 @@
     },
     {
       "path": "definitions/1263.mp3",
-      "bytes": 17554,
-      "key": "aba9614c37854376",
+      "bytes": 16509,
+      "key": "a0d1d280b71c48e2",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118566,8 +118778,8 @@
     },
     {
       "path": "definitions/572.mp3",
-      "bytes": 18599,
-      "key": "8dfccbe37cd826de",
+      "bytes": 13479,
+      "key": "04f0995a2a01d6a3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118580,8 +118792,8 @@
     },
     {
       "path": "definitions/79.mp3",
-      "bytes": 24869,
-      "key": "c030854b3764aee0",
+      "bytes": 14211,
+      "key": "db96d70478f72c48",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118594,8 +118806,8 @@
     },
     {
       "path": "definitions/81.mp3",
-      "bytes": 16509,
-      "key": "8ad68649bc18e1ae",
+      "bytes": 8046,
+      "key": "032e59084c85defc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118608,8 +118820,8 @@
     },
     {
       "path": "definitions/1244.mp3",
-      "bytes": 29571,
-      "key": "232f398a51d88a6a",
+      "bytes": 21211,
+      "key": "7752bb71169c1b5a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118622,8 +118834,8 @@
     },
     {
       "path": "definitions/1245.mp3",
-      "bytes": 20898,
-      "key": "40bebf0904228b12",
+      "bytes": 18077,
+      "key": "734cf65a5a6357e7",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118671,8 +118883,8 @@
     },
     {
       "path": "definitions/573.mp3",
-      "bytes": 11494,
-      "key": "b12a2dcf0e9a6423",
+      "bytes": 13270,
+      "key": "ffd01e2dea8fa14a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -163063,6 +163275,792 @@
         "related": 4
       },
       "checker_notes": "All 4 or more. Weakest: ambivalent 'both drawn to and put off by the same thing' tracks Random House (Dictionary.com) 'positive and negative feelings toward the same person, object ... drawing that individual in opposite directions', though Oxford and Cambridge share the mixed-feelings meaning. plain 'Wanting to hurt others' matches Longman 'wants to harm other people', shared with Oxford and Cambridge. Example 2 'malevolent envy' is an odd pairing and malicious fits as well. Antonym benevolent shares -volent, an easy pick in the antonym game."
+    },
+    {
+      "id": 1017,
+      "word_id": 26,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary austere (Ancient Greek austeros, bitter, harsh, astringent; first of fruit and wine, drying the tongue). No root: austeros shows in no other English word. Tone null: Oxford, Cambridge and Longman give no label. Pairings from Ngram 2010-2022: austere life 20.8, austere beauty 10.1, austere room 5.9 per billion. Showing the person sense (stern, unsmiling): current and common (austere man, austere face). Hook claim (Greek word for a dry, harsh taste) matches Wiktionary; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin skips the Latin austerus and Old French steps (\"Goes back to\" covers them) and keeps Wiktionary's order of facts (bitter or harsh, first used of fruit and wine, mouth-drying), though in the writer's own words. Every claim matches Wiktionary. No learner's dictionary labels the word, so null is right. The pairings are common (austere life 20.8, austere beauty 10.1, austere room 5.9 per billion). The grave-manner sense is current, and its plain definition is clear."
+    },
+    {
+      "id": 1018,
+      "word_id": 27,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary aver, Etymology 1 (Middle English averren, Old French averer, Medieval Latin advero, from Latin verus, true). Root verus also in veracity and verify. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings left empty: the only common pattern is the generic \"averred that\" (116 per billion); \"solemnly aver\" (0.8) and \"safely aver\" (0.7) are rare, and \"plaintiff avers\" belongs to the legal sense. Legal sense not shown (specialist), labeled technical. Hook claim (from Latin verus, root of verify and veracity) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. The origin matches Wiktionary (Old French averer, an Early Medieval Latin verb built on Latin verus). verus is a good root (verify, veracity), and the hook's claim about it is true. Oxford, Cambridge and Longman all mark the word formal. Empty pairings are right, since the tool's data is mostly the legal \"plaintiff avers\". The legal sense is rightly hidden and labelled technical."
+    },
+    {
+      "id": 1019,
+      "word_id": 28,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary banal (English: from French banal, held in common, relating to feudal service, commonplace; ban + -al; Medieval Latin bannalis, Latin bannus, jurisdiction) and the French entry banal (historic: owned by feudal lords; legal: public, shared; then trite). No root: bannus is not a stem learners would spot. Tone null: only Oxford marks it disapproving (Cambridge and Longman have no label), so no two agree. Hook: \"comes from French ban, a lord's decree\" holds through French banal (ban + -al); the shared village oven is a fair example of the feudal sense, though Wiktionary does not name ovens. Unchanged. Pairings: banal conversation 5.5, banal observation 3.3, banal remark 1.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: roots is empty, though ban (Latin bannus) also shows in banish and abandon. Leaving it out is allowed. The origin and the hook match Wiktionary's French entry (historically, owned by feudal lords; \"un four banal\", a village oven) and Oxford's word origin (the feudal sense meant compulsory; ban, a proclamation). Only Oxford marks the word disapproving, so null is right. All three pairings are in the tool's list of nouns."
+    },
+    {
+      "id": 1020,
+      "word_id": 29,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary belie, Etymology 2, which covers the current senses (Old English beleogan, to deceive by lying; be- + lie, to deceive). Etymology 1 (to lie around) is the obsolete surrounding sense, left out. Tone formal: Oxford (formal) and Cambridge American Dictionary (fml). Watch-out: Wiktionary lists the reveal/show use as \"perhaps nonstandard\", so the note calls it disputed, not wrong. Pairings: appearance belies 4.0, exterior belies 3.4, smile belied 7.5 per billion. Showing the contradict sense (the numbers belie the claim), a current meaning. Hook (contains lie, from an Old English word for deceiving) is true; unchanged. Round 2: register set to null on both senses, since formal now needs all three dictionaries and Longman gives no label (no other label has two of three). Watch-out now calls the reveal use a common mistake, as no dictionary gives that sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Weakest point: the origin's gloss \"to deceive with lies\" is very close to Wiktionary's and Oxford's \"deceive by lying\", but it is a short shared fact. Both registers are now null, which is right because Longman has no label. The watch-out is now true: no dictionary gives a \"reveal\" sense, and calling that use a common mistake matches usage guides. The origin, hook, pairings and Also means sense are unchanged and sound."
+    },
+    {
+      "id": 1021,
+      "word_id": 30,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary beneficent (Latin *beneficens, from bene, well, + -ficens from facere, to make or do). Roots: facere (bene is on the affix stoplist). Tone formal: Oxford, Cambridge and Longman agree. Pairings for the agent sense: beneficent god 9.4, beneficent creator 5.5, beneficent ruler 2.0 per billion; beneficent influence (10.5) left out because it is the other sense. Showing the helpful-effect sense: AHD and Longman give it and it is the most common use (beneficent influence, beneficent effects). No watch-out: beneficent and benevolent are near synonyms, not a common misreading. Hook (bene well, -ficent from facere) is true; unchanged. Round 2: pairing beneficent ruler (2.0 per billion, not in the tool's lists) and beneficent creator (same point as god) swapped for beneficent power (7.0) and beneficent rule (4.1), both in the tool's lists. The effect sense's register set to null: Oxford and Cambridge do not give that sense, so formal (now all three) is not met for it. The first sense stays formal: all three mark it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Weakest point: \"beneficent power\" can also be read in the effect sense (Oxford's example is \"the beneficent powers of Nature\"), though it fits the first sense as well. All three pairings are now in the tool's list of nouns (beneficent God 5.8, power 6.4, rule 4.1 per billion). Formal on the first sense is marked by all three dictionaries. A null register on the effect sense fits the all-three rule, since only Longman's definition covers that sense."
+    },
+    {
+      "id": 1022,
+      "word_id": 31,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary bolster (Old English bolster, pillow; Proto-Germanic *bulstraz, pillow, cushion; noun and verb share one etymology). No root. Tone null: no label in Oxford, Cambridge or Longman. Pairings: bolster confidence 7.6, bolster morale 4.5, bolster the economy 4.5 per billion. The two other senses (propping someone up in bed, padding) are rare and not shown. Hook makes no claim beyond the pillow noun; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: \"a pillow or cushion\" merges the Old English gloss (pillow) with the Proto-Germanic one (pillow, cushion), which is harmless. The origin and the hook match Wiktionary. No dictionary labels the word. The pairings are in the tool's top lists. The two hidden senses (propping someone up in bed, padding) are rare and rightly hidden."
+    },
+    {
+      "id": 1023,
+      "word_id": 32,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary bombastic (bombast + -ic) and bombast (Old French bombace, cotton wadding; Late Latin bombax, cotton; senses: cotton used to stuff garments, then high-sounding words). Wiktionary says the sense was possibly influenced by bomb and bombard; I left that hedge out rather than state it. No root. Tone null: Oxford says formal, Cambridge mainly disapproving, Longman nothing, so no two agree (disapproving would be defensible). Watch-out: the bomb sound-alike leads learners to read it as explosive; the note is true per Wiktionary (bomb is unrelated). Pairings: bombastic style 4.9, rhetoric 3.8, language 2.4 per billion. Hook (bombast, cotton stuffing to pad out clothes) matches Wiktionary sense 2 of bombast; unchanged. Round 2: watch-out rewritten: Wiktionary lists a colloquial loud, aggressive, explosive sense and Cambridge starts its definition with forceful, so the note now calls that use common but disputed and no longer says the word has nothing to do with bomb (Wiktionary says the sense was possibly influenced by bomb and bombard). It keeps the cotton-padding origin.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. Weakest point: the watch-out leads with the origin rather than with what the word does not mean, but it is one true sentence. It now describes the loud or aggressive use as common but disputed, which matches Wiktionary's colloquial sense and Cambridge's \"forceful\". It also no longer says flatly that the word is not from bomb, which Wiktionary hedges on. The origin, hook, tone and pairings are unchanged and sound."
+    },
+    {
+      "id": 1024,
+      "word_id": 33,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary boorish (boor + -ish) and boor (from Dutch boer, peasant; senses peasant, yokel or country bumpkin, uncultured person). No root. Tone null: no label in Oxford, Cambridge or Longman. Pairings: boorish behavior 12.8, boorish manners 1.7 per billion. Hook: Dutch boer, a farmer, is true (Wiktionary glosses peasant); \"city snobs once used boor for anyone they thought had rough country manners\" goes beyond Wiktionary, which shows only the peasant to bumpkin to rude-person shift. Not false, so unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "hook 4 (weakest point): \"city snobs once used boor for anyone...\" is a colorful detail that Wiktionary does not give. Wiktionary says only that boor comes from Dutch boer, peasant, and compares the change of sense with pagan. The detail is not false, so no change is needed. The origin matches Wiktionary's entries for boorish and boor. No dictionary labels the word. The pairings are the tool's top two."
+    },
+    {
+      "id": 1025,
+      "word_id": 34,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary burgeon: verb from Middle English burjounen, Old French borjoner; noun from Old French burjon, a bud. Wiktionary gives two accounts of where burjon itself comes from (Frankish or Latin burra), so the origin stops at Old French. No root. Tone formal: Oxford and Longman (Cambridge says literary). Pairings: burgeoning field 52.3, population 29.8, market 12.9 per billion. The plant sense is marked archaic in Wiktionary and is not shown. Hook (from an old French word for a bud) is true; unchanged. Round 2: register set to null: Oxford and Longman say formal but Cambridge says literary, and formal now needs all three.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The register is now null, which is right because Cambridge marks the word literary while Oxford and Longman mark it formal. Weakest point: the hook's \"an old French word for a bud\" skips the verb borjoner, but it is not false. Everything else is unchanged and sound."
+    },
+    {
+      "id": 1026,
+      "word_id": 35,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary buttress (Old French ars bouterez, supporting arcs, from bouteret, from Frankish *botan, Proto-Germanic *bautana, to push). No root. Tone formal: Oxford (buttress verb page, fetched separately) and Longman mark the verb formal; Cambridge has no label. Pairings: buttress the argument 2.2, buttress the case 1.7 per billion (buttress his argument 3.0). Hook: \"an old French word meaning to push against\" is loose but not false: Wiktionary's chain goes from bouterez straight to Frankish, and the French entry bouter shows Old French bouter, to strike or push, from the same Frankish verb. Unchanged. Round 2: register set to null: Oxford (verb page) and Longman say formal, Cambridge gives the verb no label, and formal now needs all three.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The register is now null, which is right because Cambridge's verb senses have no label. Weakest point: the pairings are the most common figurative uses in the tool's data but are not frequent (about 2 per billion). The origin and hook are unchanged and match Wiktionary and Oxford's boter (to strike or thrust)."
+    },
+    {
+      "id": 1027,
+      "word_id": 36,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary cacophony (French cacophonie, Ancient Greek kakophonia, kakos bad + phone sound). Root phone (telephone, symphony, euphony); kakos left out because it shows only in rare words. Tone null: only Oxford marks it formal. Pairings: cacophony of voices 38.1, of sounds 17.9, deafening cacophony 5.6 per billion. The poetry sense is a specialist term, labeled technical and not shown. Hook (kakos bad, phone sound) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin is a bare chain in Wiktionary's order with no closing clause, though the meaning (bad sound) is plain from it. The root phone is in the linking form (telephone, symphony). Only Oxford marks the word formal, so null is right. The pairings are common (cacophony of voices 38 per billion). The poetry sense is technical and rightly hidden."
+    },
+    {
+      "id": 1028,
+      "word_id": 37,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cajole (French cajoler, probably a blend of Middle French cageoler, chatter like a jay, and Old French gaioler, entice into a cage); the hedge is kept with \"probably\". No root: Latin cavea, cage, sits behind only the hedged half. Tone null: no label in Oxford, Cambridge or Longman (Cambridge's labels are on synonyms in its thesaurus box). Pairings: cajoled into 33.9, cajoling tone 5.4, coax and cajole 2.3 per billion. Hook is a sound-alike (cajole rhymes with goal: kuh-JOLE, gole); it does rhyme, and it makes no origin claim. Unchanged. Round 2: origin reworded so it no longer uses Wiktionary's gloss word for word, and it now ties the jay and the cage to coaxing. The probably hedge stays.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The origin keeps Wiktionary's hedge (probably) and now describes the two verbs in its own words (a jay's chattering, luring into a cage). It also ties them to today's sense. Weakest point: \"which together suggest coaxing talk\" is the writer's reading rather than a sense history from a source, though it is fairly framed as a suggestion. The hook and pairings are unchanged and sound."
+    },
+    {
+      "id": 1029,
+      "word_id": 38,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary callous (Latin callosus, hard-skinned, from callum, hardened skin) and callus (from Latin callum). Root callum (callus). Tone null: no label in Oxford, Cambridge or Longman. Watch-out: callous and callus are often mixed up in spelling; Wiktionary also lists callous as a noun form, so the note says \"usually\". Pairings: callous disregard 35.9, indifference 22.3, attitude 12.8 per billion. The hardened-skin sense is uncommon (calloused is the usual word) and not shown. Hook (shares callum with callus) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the root callum shows up in English mainly through callus, the noun the watch-out names. The origin and the hook match Wiktionary (callosus, hard-skinned, from callum). The watch-out is about a real, common spelling mix-up and is true (Wiktionary also gives callous as a noun spelling, which \"usually\" allows for). The pairings are the tool's top three. The skin sense is rightly hidden."
+    },
+    {
+      "id": 1030,
+      "word_id": 39,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary candor (Latin candor, brightness, whiteness, from candeo, to shine), candle (Latin candela, from candeo) and candid (Latin candidus, white). Root candere. Tone null: no label in Oxford, Cambridge or Longman. Pairings: refreshing candor 2.4, disarming candor 2.0, brutal candor 1.7 per billion. The impartiality sense is old and rare, not shown. Hook (shares candere with candid and candle) is true; unchanged. Round 2: origin now gives the step to today's meaning: Wiktionary's Latin candor already had a sense of frankness, openness and purity of character, and its English entry dates the obsolete whiteness sense from about 1500 and the frank-speech sense from about 1600. Pairing brutal candor swapped for complete candor (6.3 per billion).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. origin 4 (weakest point): the facts are right. Wiktionary's Latin candor has the sense \"of mind or character: frankness, openness\", and its English entry dates the whiteness sense to c. 1500 and the frank sense to c. 1600. But \"a word Latin also used for an open, honest character\" comes right after \"candere, to shine\", so it reads as if the verb had that sense; it was the noun candor. Moving that clause next to candor would fix it. The pairings are now the tool's own list (complete 6.3, refreshing 2.4, disarming 2.0 per billion)."
+    },
+    {
+      "id": 1031,
+      "word_id": 40,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary capricious (Middle French capricieux, Italian capriccioso, from capriccio), caprice (Italian capriccio, from caporiccio) and the Italian entry capriccio (from earlier caporiccio, capo + riccio, literally curly head). English and Italian Wiktionary gloss caporiccio differently (fright, sudden start; curly head), so the origin names its parts and does not explain how they led to whim. The goat (capra) story is not in Wiktionary and is left out. No root. Tone null: Oxford says formal, Cambridge literary, Longman nothing on this sense. Pairings: capricious gods 3.7, behavior 3.1, weather 2.6 per billion. The other sense (decided on a whim) is close to the first and not shown; its old plain definition named the word, so it is rewritten. Hook makes no origin claim; unchanged. Round 2: origin now gives both accounts of caporiccio, hedged: Wiktionary's Italian capriccio (capo + riccio, curly head, curls taken as a sign of an unruly character) and its English caprice (fright, sudden start).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. origin 4 (weakest point): it now gives the missing step with a fair hedge. It covers both of Wiktionary's explanations (curly hair thought a sign of an unruly character; caporiccio as a fright or sudden start). But the second sentence is long and hard to follow, and \"taken as a sign of an unruly nature\" and \"a fright or sudden start\" stay close to Wiktionary's own wording. These are short facts, so this is not a copy. Tone null, the pairings and the hidden arbitrary-decision sense are unchanged and sound."
+    },
+    {
+      "id": 1032,
+      "word_id": 41,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary castigate (Latin castigatus, from castigo, to reprove, from castus, pure; doublet of chastise and chasten) and the Latin entry castigo, which is more careful: from an unattested noun *castis, purity, with the same root as castus. The origin follows the Latin entry. Root castus (chaste, chastity). Tone formal: Oxford, Cambridge and Longman agree. Pairings: publicly castigated 2.3, roundly castigated 1.4 per billion. The punish sense is old and not shown; its old plain definition named the word, so it is rewritten. Hook (Latin castigare, to correct or punish) matches the Latin entry; unchanged.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "origin 4 (weakest point): it matches Wiktionary's Latin entry (castīgō from an unattested *castis, purity, with the same root as castus; chastise and chasten are doublets). But \"formed on a stem meaning purity that is related to castus\" reads awkwardly, and it drops the -igō (make) part that turns purity into correcting. The root castus can be spotted only through chaste and caste. All three dictionaries mark the word formal. The pairings are in the tool's data."
+    },
+    {
+      "id": 1033,
+      "word_id": 42,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary catalyst (catalysis + -ist) and catalysis (Ancient Greek katalysis, dissolution, from katalyo, from kata, down, + lyo, to loose). Root lyein, the dictionary form of lyo (analysis, paralysis). Tone null for the first sense; the chemistry sense is technical (Oxford chemistry, Cambridge specialized, Longman technical). Showing the chemistry sense: it is the base meaning and the commonest use in the data (acid catalyst, catalyst surface). Pairings: catalyst for change 83.9, act as a catalyst 76.8, catalyst for reform 3.2 per billion. Hook (Greek katalysis, dissolving) is true through catalysis; unchanged. Round 2: origin now gives the step to today's meaning: catalysis is a chemistry term for speeding up a reaction (Wiktionary's only sense for it), and the general sense of setting off change grew from the chemical one.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The origin now gives the chemistry step (catalysis, speeding up a reaction, Wiktionary's only sense for it) and says the general sense grew from it. Every claim matches Wiktionary and Oxford's word origin. Weakest point: at 210 characters it is close to the limit. The root lyein, the technical chemistry sense and the pairings are unchanged and sound."
+    },
+    {
+      "id": 1034,
+      "word_id": 43,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary caustic (Latin causticus, Ancient Greek kaustikos, burning, from kaustos, burnt). Root kaustos (holocaust). Tone null: no register label in Oxford, Cambridge or Longman for either sense. Showing the chemical sense: current and common (caustic soda, caustic cleaners). Pairings: caustic remarks 11.9, wit 11.0, criticism 4.0 per billion. Hook (Greek kaustikos, burning) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "alsoMeans 4 (weakest point): in the plain definition, \"as a chemical\" sits awkwardly in the middle of \"Harsh enough as a chemical to injure skin\". Lead with the chemical. The chemical sense is current (caustic soda) and rightly shown, with no label, as in the dictionaries. The origin and the hook match Wiktionary (causticus, kaustikos, kaustos). The root kaustos shows in holocaust."
+    },
+    {
+      "id": 1035,
+      "word_id": 44,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary chicanery (French chicanerie, trickery, from chicaner) and the French entry chicaner (to quibble, squabble; from Middle Low German schicken, to arrange). The deeper Germanic source is left out. No root. Tone formal: Oxford, Cambridge and Longman agree. Pairings: political chicanery 8.0, financial 3.7, legal 3.0 per billion. Hook (French chicaner, to quibble) matches the French entry; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin is a short chain that Oxford's word origin also gives (chicanerie, from chicaner, to quibble). These are shared facts, and they match Wiktionary's French chicaner (quibble, squabble). All three dictionaries mark the word formal. The pairings are the tool's top three."
+    },
+    {
+      "id": 1036,
+      "word_id": 45,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary coagulate (Latin coagulatus, from coagulo, to curdle, from coagulum, rennet, from cogo, bring together, from co- + ago, drive). Roots cogere (shared with cogent) and agere (agent, act). Tone null: no label in Oxford, Cambridge or Longman. Pairings: coagulated blood 28.4, blood coagulates 3.9, proteins coagulate 2.0 per billion. Hook (Latin coagulum, rennet) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: a four-step chain is long for a card, though every step matches Wiktionary (coāgulō, to curdle; coāgulum, rennet; cōgō, to bring together; co- + agō, to drive). The roots cogere and agere are spelled the same way as on cogent. The pairings are common in the tool's data."
+    },
+    {
+      "id": 1037,
+      "word_id": 46,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary coalesce (Latin coalesco, from co- + alesco, grow up) and the Latin entries coalesco and alesco (derived terms include adolesco and adulescens). Root alescere (adolescent). Tone formal: Oxford, Cambridge and Longman agree. Pairings: coalesce into 140.6, coalesce around 62.8, droplets coalesce 2.6 per billion. Hook (co-, together, and alescere, to grow) is true; unchanged. Round 2: origin reworded so its glosses no longer follow Oxford's word-origin note; alescere is glossed from Wiktionary's Latin alesco (grow, increase).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The origin now uses Wiktionary's glosses in its own words (alēscō, to grow, to increase) instead of following Oxford's word origin. The adolescent link is supported by Wiktionary's adolescent entry (ad- + alēscere). Weakest point: it opens with \"Latin coalescere joined...\" without saying that English took the word from Latin, and the root alescere shows in adolescent only as -olesc-. Formal is marked by all three dictionaries."
+    },
+    {
+      "id": 1038,
+      "word_id": 47,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cogent (French cogent, Latin cogens, present participle of cogo, drive together, compel, from co + ago, drive). Roots cogere (shared with coagulate) and agere. Tone formal: Oxford, Cambridge and Longman agree. Pairings: cogent reasons 30.9, argument 28.9, evidence 17.6 per billion. Hook (Latin cogere, to drive together or compel) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. The origin matches Wiktionary (French cogent; Latin cōgēns, from cōgō, co- + agō), and the roots match coagulate's. All three dictionaries mark the word formal. The pairings are the tool's top nouns."
+    },
+    {
+      "id": 1039,
+      "word_id": 48,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary commensurate (Late Latin commensuratus, com- + mensuratus, from mensuro, to measure, from Latin mensura, measure; first attested 1641). Root mensura (measure). Tone formal: Oxford and Cambridge (Longman has no label). Pairings: commensurate with experience 5.6, commensurate increase 17.8 per billion; the bare \"commensurate with\" (768) is the usual frame. Hook (shares a root with measure) is true; unchanged. Round 2: register set to null: Oxford and Cambridge say formal, Longman gives no label, and formal now needs all three.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. The register is now null, which is right because Longman gives no label. Weakest point: the root mensura shows in English mostly through measure and mensuration. The origin, hook and pairings are unchanged and sound."
+    },
+    {
+      "id": 1040,
+      "word_id": 50,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "The English entry conciliatory has no etymology; checked against Wiktionary conciliate (Latin conciliatus, from concilio, to unite, from concilium, council, meeting), the Latin entry concilio (unite, bring together, win over) and the Latin entry reconcilio (re- + concilio). Root conciliare (conciliate, reconcile). Tone null: only Oxford marks it formal. Pairings: conciliatory tone 59.4, approach 30.8, gesture 24.7 per billion. The concessions sense is a near-repeat of the first and is not shown. Hook (Latin conciliare, to bring together or win over, root of reconcile) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: Wiktionary gives conciliatory itself no etymology. The origin rightly says \"Goes back to\", and its glosses match the entries for conciliate and Latin conciliō (unite, bring together, win over; concilium, council or meeting). Only Oxford marks the word formal, so null is right. The concessions sense is a near-repeat of the first and rightly hidden."
+    },
+    {
+      "id": 1041,
+      "word_id": 51,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary condone (learned borrowing from Latin condonare, to forgive) and the Latin entry condono (con- + dono; senses give, surrender, forgive, permit). Root donare (donate, donor). Tone null: only Cambridge (its American entry) marks it disapproving. Pairings: condone violence 12.6, tacitly condoned 3.5, condone such behavior 2.2 per billion. Hook (shares donare, to give, with donate) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: none of substance. Wiktionary's Latin condōnō supports \"give up\" (surrender) and \"forgive\", and the con- + dōnō formation. The root donare (donate, donor) and the hook match. Only Cambridge marks the word disapproving, so null is right. The pairings are in the tool's data."
     }
   ]
 }
