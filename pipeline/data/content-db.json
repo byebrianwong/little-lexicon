@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:07:33.840Z"
+    "updatedAt": "2026-10-30T08:11:02.684Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1045,
-    "reviews": 1392
+    "mnemonics": 1047,
+    "reviews": 1413
   },
   "words": [
     {
@@ -7449,8 +7449,15 @@
       "syllables": 3,
       "frequency_rank": 540512,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French coterie, which first meant a community of peasants under a feudal lord and later any exclusive circle. Through Medieval Latin coteria it goes back to Old English cot (\"cottage\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "small coterie",
+        "coterie of friends",
+        "literary coterie"
+      ]
     },
     {
       "id": 439,
@@ -7460,8 +7467,17 @@
       "syllables": 3,
       "frequency_rank": 63904,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French contenance, which goes back to Latin continere (\"to hold together\"), built on tenere (\"to hold\"). The English noun meant a face and also favor or support, the sense the verb keeps.",
+      "audio_url": null,
+      "roots": [
+        "tenere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "refused to countenance",
+        "willing to countenance",
+        "countenance the idea"
+      ]
     },
     {
       "id": 440,
@@ -7471,8 +7487,15 @@
       "syllables": 2,
       "frequency_rank": 256733,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of uncertain origin: Middle English cravant came either from Old French cravanté (\"defeated\") or from creaunt (\"defeated\") reshaped to look like crave. A craven person gives in without a fight.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "craven fear",
+        "craven coward",
+        "craven submission"
+      ]
     },
     {
       "id": 441,
@@ -7482,8 +7505,17 @@
       "syllables": 1,
       "frequency_rank": 914441,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Old French from Latin dignare (\"to judge worthy\"), built on dignus (\"worthy\"), the root of dignity. To deign is to judge a task worthy of you, though only just.",
+      "audio_url": null,
+      "roots": [
+        "dignus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "deign to answer",
+        "did not deign",
+        "scarcely deigned"
+      ]
     },
     {
       "id": 442,
@@ -7493,8 +7525,18 @@
       "syllables": 3,
       "frequency_rank": 758311,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Ancient Greek demagogos, a popular leader or a mob leader, made of demos (\"people\") and agogos (\"guide, leader\"). In English it mostly keeps the darker sense.",
+      "audio_url": null,
+      "roots": [
+        "demos",
+        "agogos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "populist demagogue",
+        "dangerous demagogue",
+        "political demagogue"
+      ]
     },
     {
       "id": 443,
@@ -7504,8 +7546,15 @@
       "syllables": 3,
       "frequency_rank": 2080005,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French denzein, formed from deinz (\"within\"), which goes back to Late Latin de intus (\"from within\"): a denizen is one of those inside a place.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "denizens of the deep",
+        "denizens of the forest",
+        "local denizens"
+      ]
     },
     {
       "id": 444,
@@ -7515,8 +7564,15 @@
       "syllables": 4,
       "frequency_rank": 134729,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English from dis- (\"not\") and interested in its sense of \"having a stake\", or from the verb disinterest (\"to make impartial\"). Either way it describes someone with nothing to gain.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Using it to mean \"not interested\" is common but disputed; many editors keep it for \"impartial, with nothing to gain.\"",
+      "pairings": [
+        "disinterested observer",
+        "disinterested party",
+        "disinterested third party"
+      ]
     },
     {
       "id": 445,
@@ -7537,8 +7593,15 @@
       "syllables": 1,
       "frequency_rank": 685828,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French drôle (\"funny, odd\"), earlier a noun for a clown or a likable rogue. The French word goes back to Middle Dutch drol, a stout little man or a goblin.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "droll humor",
+        "droll stories",
+        "droll smile"
+      ]
     },
     {
       "id": 447,
@@ -7559,8 +7622,15 @@
       "syllables": 2,
       "frequency_rank": 255761,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English from erst, an old word meaning \"first\" or \"formerly\", and while.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "erstwhile allies",
+        "erstwhile friend",
+        "erstwhile colleagues"
+      ]
     },
     {
       "id": 449,
@@ -7570,8 +7640,16 @@
       "syllables": 2,
       "frequency_rank": 686576,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Middle French from Latin evincere (\"to conquer completely\", and also \"to prove beyond doubt\"), built on vincere (\"to conquer\"). From proving a thing, it came to mean showing it plainly.",
+      "audio_url": null,
+      "roots": [
+        "vincere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "evinced little interest",
+        "evince interest"
+      ]
     },
     {
       "id": 450,
@@ -7581,8 +7659,17 @@
       "syllables": 2,
       "frequency_rank": 69607,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin extans, from extare (\"to stand out, to exist\"), made of ex- (\"out\") and stare (\"to stand\"): what is extant still stands when others of its kind have gone.",
+      "audio_url": null,
+      "roots": [
+        "stare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "still extant",
+        "earliest extant",
+        "extant manuscripts"
+      ]
     },
     {
       "id": 451,
@@ -7592,8 +7679,17 @@
       "syllables": 2,
       "frequency_rank": 231125,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin facilis (\"easy\"), built on facere (\"to do\"). It first meant simply easy; the sense of too simple and shallow appeared in the 1800s.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "facile solution",
+        "facile optimism",
+        "facile assumption"
+      ]
     },
     {
       "id": 452,
@@ -7603,8 +7699,17 @@
       "syllables": 3,
       "frequency_rank": 703249,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman feauté, from Latin fidelitas (\"faithfulness\"), which in the Middle Ages also meant a vassal's sworn loyalty. It goes back to fides (\"faith\"), as fidelity does.",
+      "audio_url": null,
+      "roots": [
+        "fides"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "swear fealty",
+        "oath of fealty",
+        "pledged fealty"
+      ]
     },
     {
       "id": 453,
@@ -7614,8 +7719,15 @@
       "syllables": 2,
       "frequency_rank": 392186,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin furtivus (\"stolen, hidden\"), from furtum (\"theft\"), which comes from fur (\"thief\"): a furtive glance is a thief's glance.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "furtive glance",
+        "furtive look",
+        "furtive movements"
+      ]
     },
     {
       "id": 454,
@@ -7625,8 +7737,11 @@
       "syllables": 1,
       "frequency_rank": 686178,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French gauche (\"awkward, clumsy\"), from gauchir (\"to bend, warp\"). The French word took on its other meaning, \"left\", only in the 1500s, replacing an older word.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 455,
@@ -7636,8 +7751,15 @@
       "syllables": 4,
       "frequency_rank": 4345861,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Coined in 1812 by the Boston Gazette, joining the name of Massachusetts governor Elbridge Gerry with salamander, after a district on a map he signed that looked like one.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "partisan gerrymandering",
+        "gerrymandered districts",
+        "racially gerrymandered"
+      ]
     },
     {
       "id": 456,
@@ -7647,8 +7769,15 @@
       "syllables": 1,
       "frequency_rank": 607352,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Shortened from glibbery, an old English word for slippery, or from its Low German or Dutch source, glibberig: glib talk slides smoothly past what matters.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "glib tongue",
+        "glib answer",
+        "glib talk"
+      ]
     },
     {
       "id": 457,
@@ -7658,8 +7787,16 @@
       "syllables": 2,
       "frequency_rank": 304463,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English around 1400 from hap (\"luck\"), an old word still heard in happen and mishap, and -less.",
+      "audio_url": null,
+      "roots": [
+        "hap"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "hapless victim",
+        "hapless creature"
+      ]
     },
     {
       "id": 458,
@@ -7680,8 +7817,15 @@
       "syllables": 2,
       "frequency_rank": 285237,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin impingere (\"to push or dash against\"), the verb that also gave impact. It first meant to strike a surface, and figuratively came to mean to press in on rights or time.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "impinge on the rights",
+        "impinge on the lives",
+        "directly impinge"
+      ]
     },
     {
       "id": 460,
@@ -7691,8 +7835,17 @@
       "syllables": 2,
       "frequency_rank": 1656715,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Middle French from Latin impugnare (\"to fight against\"), built on pugnare (\"to fight\"), from pugnus (\"fist\"). To impugn a claim is to attack it with words.",
+      "audio_url": null,
+      "roots": [
+        "pugnare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "impugn the integrity",
+        "impugn the motives",
+        "impugn the character"
+      ]
     },
     {
       "id": 461,
@@ -7702,8 +7855,17 @@
       "syllables": 3,
       "frequency_rank": 296344,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin incisivus, from Latin incidere (\"to cut into\"), built on caedere (\"to cut\"), the verb also behind incision and incisor. An incisive mind cuts to the point.",
+      "audio_url": null,
+      "roots": [
+        "caedere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "incisive analysis",
+        "incisive comments",
+        "incisive mind"
+      ]
     },
     {
       "id": 462,
@@ -13807,7 +13969,7 @@
       "definition": "Allow or go along with something, or give it one's approval.",
       "plain_language_definition": "To be willing to accept or allow something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 867,
@@ -13815,7 +13977,7 @@
       "definition": "Cowardly in a spineless, shameful way.",
       "plain_language_definition": "So scared of trouble that you act in a weak, shameful way.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 868,
@@ -13823,7 +13985,7 @@
       "definition": "Lower oneself, with an air of superiority, to do something.",
       "plain_language_definition": "To grudgingly do something you feel is too lowly for someone of your rank.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 869,
@@ -13831,7 +13993,7 @@
       "definition": "A political figure who gains power by inflaming the public's resentments and telling crowds what they want to hear.",
       "plain_language_definition": "A leader who wins over crowds by playing on what they fear and hate.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 870,
@@ -13839,7 +14001,7 @@
       "definition": "A person or creature that lives in a certain spot, or haunts it so often that it seems to belong there.",
       "plain_language_definition": "A person who lives somewhere, or turns up there so often that they seem part of the place.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 872,
@@ -13879,7 +14041,7 @@
       "definition": "Having filled a certain role or held a certain status in the past, but no longer.",
       "plain_language_definition": "Describing what someone or something used to be, but is not anymore.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 880,
@@ -13887,7 +14049,7 @@
       "definition": "Let a feeling or trait be plainly seen through what one says or does.",
       "plain_language_definition": "To give clear signs of an emotion or trait, often without putting it into words.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 881,
@@ -13895,7 +14057,7 @@
       "definition": "Having lasted into the present, when others of its kind were lost or destroyed.",
       "plain_language_definition": "Still around today, when you might expect it to have been lost or destroyed.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 882,
@@ -13911,7 +14073,7 @@
       "definition": "Loyalty owed and pledged to a lord, ruler or leader, often under a formal oath.",
       "plain_language_definition": "A promise to stay loyal to someone in power, like a knight's promise to his lord.",
       "sense_order": 1,
-      "register": null
+      "register": "old-fashioned"
     },
     {
       "id": 886,
@@ -13935,7 +14097,7 @@
       "definition": "Draw the borders of election districts so that one party ends up with an unfair edge.",
       "plain_language_definition": "To redraw voting maps on purpose so that one party is sure to win more seats.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 890,
@@ -13943,7 +14105,7 @@
       "definition": "Said or speaking with an easy fluency that glosses over how hard or serious a matter really is.",
       "plain_language_definition": "Smooth and quick with words, but too easy and shallow to be trusted.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 893,
@@ -13975,7 +14137,7 @@
       "definition": "Openly question whether a person can be trusted or whether a claim holds up.",
       "plain_language_definition": "To say in public that someone's motives or statements are dishonest or wrong.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 898,
@@ -14341,9 +14503,10 @@
       "id": 988,
       "word_id": 459,
       "definition": "Strike or land on a surface, as a beam of light or a jet of water does.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To strike or fall on a surface, as light or a stream of water does.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 989,
@@ -14413,9 +14576,10 @@
       "id": 997,
       "word_id": 443,
       "definition": "A plant or animal from elsewhere that has settled in and now grows wild in a new region.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A plant or animal brought from elsewhere that now grows wild in its new home.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 998,
@@ -14429,17 +14593,19 @@
       "id": 999,
       "word_id": 451,
       "definition": "Done with the smooth, practiced ease of a skilled performer.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Done smoothly and with little effort, the way a practiced expert works.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1000,
       "word_id": 451,
       "definition": "Able to speak or write with easy fluency.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Able to speak or write smoothly and easily.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1001,
@@ -14660,9 +14826,10 @@
       "id": 1026,
       "word_id": 461,
       "definition": "Shaped or used for cutting, as front teeth are.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Made for cutting, like the front teeth.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1027,
@@ -71605,14 +71772,6 @@
       "revision": 3
     },
     {
-      "id": 807,
-      "word_id": 454,
-      "text": "Gauche is French for left: an old prejudice held that left-handed people were clumsy, so gauche came to mean socially awkward.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 808,
       "word_id": 482,
       "text": "Pastiche comes through French from Italian pasticcio, a pie filled with a mix of ingredients: a pastiche bakes borrowed styles into one dish.",
@@ -71864,14 +72023,6 @@
       "id": 840,
       "word_id": 437,
       "text": "Contravene comes from Latin contra, against, and venire, to come: to contravene a rule is to come up against it head-on.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 841,
-      "word_id": 438,
-      "text": "Coterie goes back to French cote, a hut, the root of cottage: picture a few friends in their own little cottage with the door shut to outsiders.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -73456,6 +73607,22 @@
       "id": 1045,
       "word_id": 486,
       "text": "Philistine comes from the Philistines, the Bible's foes of Israel; German students used Philister for dull townsfolk, and Matthew Arnold popularized the insult in English.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1046,
+      "word_id": 438,
+      "text": "Coterie goes back to cot, an old word for a hut, kin to cottage: picture a few friends in their own little cottage with the door shut to outsiders.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1047,
+      "word_id": 454,
+      "text": "Gauche is French for left and also for awkward: picture a right-handed guest fumbling with the left hand at a formal dinner.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -125466,8 +125633,8 @@
     },
     {
       "path": "definitions/997.mp3",
-      "bytes": 24869,
-      "key": "ec9fce65dde48ae8",
+      "bytes": 20271,
+      "key": "bffbfa2fd33ba430",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125536,15 +125703,15 @@
     },
     {
       "path": "definitions/999.mp3",
-      "bytes": 15569,
-      "key": "3c96a0c968b485c6",
+      "bytes": 18599,
+      "key": "11da35e4fcf04f7d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1000.mp3",
-      "bytes": 12852,
-      "key": "747dfd5f0dc0cff3",
+      "bytes": 13061,
+      "key": "de3001432b101246",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125613,8 +125780,8 @@
     },
     {
       "path": "definitions/988.mp3",
-      "bytes": 20689,
-      "key": "88c0120648f02cfa",
+      "bytes": 18808,
+      "key": "6d01f7756c04d2b0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125634,8 +125801,8 @@
     },
     {
       "path": "definitions/1026.mp3",
-      "bytes": 12643,
-      "key": "da330204662e8128",
+      "bytes": 10136,
+      "key": "8a439803b785d1ea",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -130030,8 +130197,8 @@
     },
     {
       "path": "hooks/438.mp3",
-      "bytes": 35213,
-      "key": "4f47a210b74302ca",
+      "bytes": 37721,
+      "key": "8f18ea38dd54c37f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -130142,8 +130309,8 @@
     },
     {
       "path": "hooks/454.mp3",
-      "bytes": 32496,
-      "key": "4b778fb4ea49b5ae",
+      "bytes": 31660,
+      "key": "b352dbb7ac966340",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -178051,6 +178218,664 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin matches Wiktionary (Middle English remisse, Latin remissus, from remitto) and its Latin page (send back, relax); mittere joins surmise. Hook is a sound-alike with no origin claim. formal: all three. Pairings: 'would be remiss' (176.3) is the stock frame and shows no meaning; 'remiss in failing to' (1.9) and 'in his duty' (1.0) are low but fit."
+    },
+    {
+      "id": 1393,
+      "word_id": 438,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (borrowed from French coterie), the French section of the same Wiktionary page (learned borrowing of Medieval Latin coteria, from Old English cot; historical sense \"feudal community of peasants\", figurative sense \"clique\") and the Wiktionary pages cot (Old English cot \"cottage\"; \"more distantly related to cottage\") and cottage (from Anglo-Norman cot, Old French cote \"cottage, hut\"). No root: nothing else in the list shares cot. Hook changed: it said coterie \"goes back to French cote\", but Wiktionary traces coterie to Old English cot, not French cote; the smallest fix names cot, \"an old word for a hut, kin to cottage\". Tone null: Oxford \"formal, often disapproving\", Longman formal, Cambridge nothing, so neither label meets its rule. Pairings: small coterie 25.0, coterie of friends 6.2, literary coterie 5.1 per billion (small and literary top the Datamuse list); small is the generic one.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (origin): it says flatly that Medieval Latin coteria goes back to Old English cot. Wiktionary's French entry supports that, but Oxford Learner's traces the French word to Middle Low German kote, so the sources differ; \"from a Germanic word for a hut, kin to English cot\" would hold under both. The peasant-community sense matches Wiktionary's French entry (marked historical) and Oxford (\"an association of tenants\"). Tone null is right: Oxford formal and often disapproving, Cambridge none, Longman formal. Pairings pass --check: small coterie 25.0, coterie of friends 6.2, literary coterie 5.1 per billion. Hook change checked: the record's \"French cote, a hut, the root of cottage\" had no source; the new \"cot, an old word for a hut, kin to cottage\" fits Wiktionary (cot: archaic, a cottage; cottage listed as related)."
+    },
+    {
+      "id": 1394,
+      "word_id": 439,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English contenaunce, Anglo-Norman and Old French contenance, from the present participle of contenir, or from Late Latin continentia; doublet of continence), the Wiktionary Latin page contineo (con- \"together\" + teneo \"to hold\"; \"to hold or keep together\") and the Wiktionary noun senses (face and expression; \"favour, support, encouragement\") against the verb sense (to tolerate, support, approve). Both of Wiktionary's routes go back to continere, so the origin says \"goes back to\" and skips the either/or. Root tenere links abstain, impertinent, untenable and retinue. Hook (countenance is also a word for a face) is true and makes no false origin claim. Tone formal: the Oxford verb entry (countenance_2), Cambridge and Longman all mark the verb formal. Pairings from the Ngram wildcard lists: refused to countenance 25.7, willing to countenance 14.6, countenance the idea 8.6 per billion; Datamuse's lists for this word are mostly the noun.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (origin): it goes from continere \"to hold together\" straight to \"a face\" without the middle step (Oxford: Old French contenance meant bearing or demeanour, then facial expression, then the face). The noun sense \"favour, support\" is on Wiktionary, so the link to the verb holds, and tenere is a good root. formal is right: Oxford's verb page (saved by the writer), Cambridge and Longman all mark the verb formal. Pairings pass --check: refused to countenance 25.7, willing to countenance 14.6, countenance the idea 8.6."
+    },
+    {
+      "id": 1395,
+      "word_id": 440,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English cravant, either from Old French cravanté \"defeated\", past participle of cravanter, ultimately from Latin crepare, or a modification of creaunt \"defeated\" after craven \"to crave\"). The either/or is kept as \"Of uncertain origin\". No root: crepare sits only in one branch of the hedge, so it is left out. Hook is a sound-alike (craven, cave in) and makes no origin claim. Tone: Oxford \"formal, disapproving\", Cambridge \"formal, disapproving\", Longman formal; formal and disapproving both qualify, and disapproving is set, as on intransigent and sycophant, because it is the label that matters for use. Pairings from the Datamuse noun list: craven fear 5.6, craven coward 3.2, craven submission 0.84 per billion; submission is the weak one.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest points: the origin's first sentence tracks Wiktionary's single sentence closely (same either/or order, both \"defeated\" glosses, its \"a modification of creaunt after craven\" reworded as \"reshaped to look like crave\"); it is facts only, but recast it if the entry is touched again. \"Of uncertain origin\" is a fair hedge (Oxford also says \"perhaps\"). \"craven submission\" is only 0.84 per billion for 2010 to 2022, the weakest pairing; craven fear 5.6 and craven coward 3.2 are fine. Tone: disapproving on Oxford and Cambridge (all three also mark it formal; one label only)."
+    },
+    {
+      "id": 1396,
+      "word_id": 441,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English deinen, Old French daigner, from Latin dignare, of digno \"to deem fitting, suitable or worthy; to condescend\", from dignus \"worthy\") and the Wiktionary page dignity (Latin dignitas, from dignus; \"cognate to deign\"). Root dignus (dignity, indignant, dignitary). Hook kept: it gives the Latin as dignari, the deponent form of the same verb (Wiktionary cites the active dignare); \"to think worthy\" and dignus, root of dignity, are true. Tone disapproving: Oxford and Cambridge both label the verb disapproving (Longman gives the phrase only). Pairings: did not deign 30.5, deign to answer 11.5, scarcely deigned 2.4 per billion (scarcely, even and hardly lead the Datamuse lists).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook names Latin dignari while the origin (and Wiktionary) say dignare. Oxford gives both forms, so neither is wrong, but the card will show two spellings. disapproving matches Oxford and Cambridge (Longman's cached page is a stub). Pairings pass --check: did not deign 30.5, deign to answer 11.5, scarcely deigned 2.4."
+    },
+    {
+      "id": 1397,
+      "word_id": 442,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French démagogue, from Ancient Greek demagogos \"popular leader, mob leader\", from demos \"people\" + agogos \"guide\") and the Wiktionary senses (pejorative political sense first; \"a leader of the people\" marked historical). Roots: demos (democracy, demography, epidemic) and agogos, which the Wiktionary pedagogue page also gives (paidagogos, from pais \"child\" + agogos \"guide\"). Hook (demos, the people, and agogos, leader) is true. Tone disapproving: Oxford and Cambridge label it, and Longman says it is used to show disapproval. Pairings from the Datamuse lists: populist demagogue 2.0, dangerous demagogue 1.7, political demagogue 1.4 per billion; all modest, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (pairings): all three are in the tool's lists but modest and partly generic: populist demagogue 2.0, dangerous demagogue 1.7 (dangerous fits any noun), political demagogue 1.4. Origin matches Wiktionary and Oxford; agogos also shows in pedagogue (Wiktionary). disapproving on all three."
+    },
+    {
+      "id": 1398,
+      "word_id": 443,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English denisein, Old French denzein, from deinz \"within\" + -ein, from Late Latin de intus \"from within\"). No root: intus is not a stem a learner would spot. Hook (Old French deinz, inside) is true. Tone literary: Cambridge and Longman mark it literary; Oxford says \"formal or humorous\". Pairings: denizens of the deep 7.9, denizens of the forest 5.0, local denizens 2.4 per billion (local and forest are in the Datamuse list). The other sense, a plant or animal naturalized in a new region, is a biology term a general reader seldom meets, so it is not shown and is marked technical.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. Origin matches Wiktionary and Oxford (Old French deinz, Late Latin de intus). literary matches Cambridge and Longman (Oxford: formal or humorous). Sense 997 (a naturalized species) is rightly hidden and labelled technical. Pairings pass --check: denizens of the deep 7.9, denizens of the forest 5.0, local denizens 2.4."
+    },
+    {
+      "id": 1399,
+      "word_id": 444,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (from disinterest, verb, \"to cause to be impartial\", + -ed, or from dis- \"not\" + interested \"having a stake in\"); both routes are kept. No root. Hook (dis- plus interest in its older stake sense, as in conflict of interest) agrees with the second route. Tone null: no label on the impartial sense in Oxford, Cambridge or Longman. Watch out: Wiktionary's usage note calls the \"uninterested\" use disputed, Longman says many teachers think it is not correct, and Oxford marks it informal, so the note describes a dispute. Pairings: disinterested observer 14.9, disinterested party 11.1, disinterested third party 7.5 per billion (observer and party lead the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (pairings): \"disinterested party\" (11.1) and \"disinterested third party\" (7.5) repeat one pattern; a different partner from the tool's list (motives, service), checked with --check, would teach more. Origin keeps both of Wiktionary's derivations. The watch-out rightly calls the \"not interested\" use disputed (Oxford labels it informal, Longman says many teachers reject it)."
+    },
+    {
+      "id": 1400,
+      "word_id": 446,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French drôle \"comical, odd, funny\", from drôle \"buffoon\", Middle French drolle \"a merry fellow, pleasant rascal\", Old French drolle, from Middle Dutch drol \"fat little man, goblin\", from Old Norse troll). The troll link is left out to keep it short. No root. Hook (French drôle, funny or odd) is true. Tone null: only Oxford labels it (\"old-fashioned or ironic\"). Pairings: droll stories 5.7, droll smile 4.8, droll humor 3.4 per billion (stories, humor and smile are in the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin states the Middle Dutch drol link flatly; Wiktionary does too, though Oxford hedges it with \"perhaps\". Tone null is right (only Oxford labels it: old-fashioned or ironic). Pairings pass --check: droll stories 5.7 (partly Balzac's title), droll smile 4.8, droll humor 3.4."
+    },
+    {
+      "id": 1401,
+      "word_id": 448,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against the Wiktionary page (the tool could not read its ety template; the template gives erst \"first, formerly\" + while). No root. Hook (erst, an old word for formerly, with while) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. No watch-out: Wiktionary lists a proscribed sense \"respected\", but none of the learner's dictionaries mentions a common mix-up. Pairings: erstwhile friend 14.5, erstwhile allies 14.3, erstwhile colleagues 7.1 per billion (the top of the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin is one short sentence, which is enough here since \"formerly\" makes the link plain (Wiktionary: erst, \"first, formerly\", plus while). formal on all three. Pairings pass --check: erstwhile allies 14.3, erstwhile friend 14.5, erstwhile colleagues 7.1."
+    },
+    {
+      "id": 1402,
+      "word_id": 449,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French évincer, from Latin evinco \"conquer entirely, prevail over; prove exhaustively\", from e- intensive + vinco \"conquer\"; doublet of evict). Root vincere (victory, invincible, convince). Hook (Latin evincere, to prove) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the Datamuse lists (interest, little, great): evinced little interest 3.3, evince interest 1.8 per billion; evinced great interest is only 1.0, so it is left out. Both are modest, the weakest point.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (pairings): the two pairings are one pattern, \"evinced little interest\" (3.3) and \"evince interest\" (1.8). evince is rare in any pairing, so this is acceptable, but a second, different partner would teach more. Origin matches Wiktionary and Oxford (Oxford gives \"prove by argument or evidence\" as the first English sense). formal on all three."
+    },
+    {
+      "id": 1403,
+      "word_id": 450,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin extans, present participle of exto \"to stand out, exist, be extant\", from ex- \"out\" + sto \"stand\"). Root stare links obstinate. Hook (Latin exstare, to stand out or exist) is true; exstare is the other spelling of the same verb. Tone formal: Oxford and Longman mark it formal, and Cambridge marks the headword formal. Pairings: still extant 122, earliest extant 94, extant manuscripts 50 per billion (still, earliest and manuscripts lead the Datamuse lists).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook spells the Latin verb exstare and the origin extare; both are real spellings (Oxford uses exstare), but the card will show both. No watch-out is fine, since the hook already sets extant against extinct. formal on all three. Pairings very common (still extant 122, earliest extant 94, extant manuscripts 50)."
+    },
+    {
+      "id": 1404,
+      "word_id": 451,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French facile, from Latin facilis \"easy to do\", from facere \"to do, make\") and the dates on the Wiktionary senses (easy from the 15th century, effortless from the 17th, simplistic and superficial from the 19th). Root facere links beneficent, efficacy and prolific. Hook (Latin facilis, easy, as in facility) is true. Tone null: Oxford marks this sense disapproving, but Cambridge and Longman give no label. The effortless sense is current and distinct, so it is shown; the fluent-speaker sense repeats it and is not shown. Pairings from the Datamuse noun list for the shallow sense: facile solution 4.0, facile optimism 3.6, facile assumption 3.5 per billion; facile pen (4.0) belongs to the fluent sense and is left out.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. The 1800s date for the shallow sense matches Wiktionary's sense dates (from the 19th century; \"easy\" from the 15th). Tone null is right (disapproving only on Oxford). Showing sense 999 (effortless, practised) is right: \"facile pen\" is the top pairing in the data. Pairings pass --check (solution 4.0, optimism 3.6, assumption 3.5)."
+    },
+    {
+      "id": 1405,
+      "word_id": 452,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English feaute, Anglo-Norman feauté, from Latin fidelitas \"faithfulness\", \"homage, fealty\" in Medieval Latin, from fidelis + -tas; doublet of fidelity) and the Wiktionary Latin page fidelis (fides \"faith, trust\" + -elis). Root fides links perfidious. Hook (through Old French from Latin fidelitas, the root of fidelity) is true; Anglo-Norman is the Old French of England. Tone old-fashioned: Oxford and Cambridge say \"old use\" and Longman \"old-fashioned\". Pairings: swear fealty 28.7, oath of fealty 28.5, pledged fealty 3.3 per billion (swear and pledged lead the Datamuse list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the hook says \"through Old French\" where the origin says Anglo-Norman; Oxford says Old French, so both hold. fides is supported (Wiktionary fidelis entry, Oxford). old-fashioned matches Oxford and Cambridge (old use) and Longman (old-fashioned). Pairings: swear fealty 28.7, oath of fealty 28.5, pledged fealty 3.3."
+    },
+    {
+      "id": 1406,
+      "word_id": 453,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French furtif, from Latin furtivus \"clandestine, secret; hidden; stolen\", from furtum \"theft\", from fur \"thief\"). No root: fur shows up in no other common English word. Hook (Latin fur, thief) is true. Tone null: only Oxford marks it disapproving. Pairings: furtive glance 81.9, furtive look 29.4, furtive movements 8.2 per billion (the top of the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing. furtivus from furtum from fur matches Wiktionary and Oxford. Tone null is right (disapproving only on Oxford). Pairings very common: furtive glance 81.9, furtive look 29.4, furtive movements 8.2."
+    },
+    {
+      "id": 1407,
+      "word_id": 454,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "hook"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French gauche \"left, awkward\", from gauchir \"to veer, turn\", from Old French gaucher \"to trample, walk clumsily\", Frankish *walkan) and the French sections of the Wiktionary pages gauche (from gauchir \"to bend, dodge, warp\"; gauche replaced senestre as the word for \"left\" in the sixteenth century; senses \"left\" and \"awkward, clumsy\") and gauchir. Hook changed: it said a prejudice against left-handers made gauche come to mean awkward, but the word comes from a verb for bending and warping and became the word for left later, so that story runs the wrong way. The fix keeps \"French for left\", adds \"and also for awkward\", and turns the rest into a picture with no origin claim. Tone null: no label in Oxford, Cambridge or Longman. Pairings left empty: Datamuse's lists are French text and chemistry (gauche conformation), and the English phrases are rare (rather gauche 2.2, gauche and awkward 1.3, socially gauche 0.52 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing of substance. gauchir \"to bend, warp\" and the 16th-century replacement of the older word for \"left\" are both in Wiktionary's French entries, retold in the writer's own words. Empty pairings are right: the data is French and chemistry, and the English candidates are rare (socially gauche 0.52, gauche manners 0.32, gauche remark 0.19). Hook change checked: the record's story that a prejudice against left-handers made gauche mean awkward runs against Wiktionary's French entry (awkward came first; \"left\" replaced senestre in the 1500s), and the new hook only states the two current meanings."
+    },
+    {
+      "id": 1408,
+      "word_id": 455,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (blend of Gerry + salamander, after Elbridge Gerry, then governor of Massachusetts; coined by the editors of the Boston Gazette in a 26 March 1812 article comparing a district he signed into law to a salamander). No root. Hook (Gerry, the governor who signed an 1812 map, and salamander) is true. Tone disapproving: Oxford and Cambridge label it disapproving (Longman has no entry). Pairings from the Datamuse lists: partisan gerrymandering 25.7, gerrymandered districts 3.9, racially gerrymandered 1.2 per billion; the last is modest.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point (origin and hook): both say Gerry signed a map. Wiktionary says the district boundary was signed into law by him, and Oxford says the map was drawn while he was in office. \"a district he signed into law\" would be exact. The date, the Boston Gazette and the salamander blend are right. disapproving on Oxford and Cambridge."
+    },
+    {
+      "id": 1409,
+      "word_id": 456,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (a shortening of obsolete English glibbery \"slippery\" or of its source, Low German or Dutch glibberig \"slippery\"; archaic literal sense \"smooth or slippery\"). No root. Hook kept, scored 4: \"related to old Dutch and German words for slippery\" is loose (Wiktionary says shortened from glibbery or its Low German or Dutch source) but not false. Tone disapproving: Oxford labels it and Longman says it is used to show disapproval; Cambridge gives no label. Pairings: glib tongue 18.4, glib answer 5.7, glib talk 3.2 per billion (the top of the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest points: the origin follows Wiktionary's sentence closely (same either/or order, keeps \"its source\"), and \"an old English word\" can be read as Old English; Wiktionary calls glibbery obsolete English. The hook calls the Dutch and German words \"old\", but Dutch and Low German glibberig are current words; dropping \"old\" fixes it. disapproving on Oxford and Longman. Pairings pass --check: glib tongue 18.4, glib answer 5.7, glib talk 3.2."
+    },
+    {
+      "id": 1410,
+      "word_id": 457,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (from about 1400, from hap \"luck\" + -less) and the Wiktionary page hap (derived terms include happen, mishap, perhaps and haphazard). Root hap (happen, mishap, perhaps, haphazard). Hook (hap, still heard in happen and mishap) is true. Tone null: Oxford and Cambridge say formal, Longman literary, so neither label meets its rule. Pairings: hapless victim 24.3, hapless creature 4.6 per billion (both in the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: only two pairings, and \"hapless creature\" (4.6) is a little old-fashioned beside \"hapless victim\" (24.3). The root hap shows in happen, mishap and haphazard (Wiktionary's hap entry). Tone null is right: formal on Oxford and Cambridge only, literary on Longman."
+    },
+    {
+      "id": 1411,
+      "word_id": 459,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (borrowed from Latin impingo \"dash against\"; compare impact, from its perfect passive participle), the Wiktionary Latin page impingo (in- + pango \"fasten, drive in\"; \"to push, strike, dash against; to drive, thrust\") and the English senses (physical impact first, the others marked figurative). No root: pangere is not a stem a learner would spot. Hook (impingere, to drive or push into) matches the Latin page. Tone null: only Oxford marks it formal. The physical sense (light or a jet striking a surface) is from physics and engineering and not shown, marked technical. Pairings from the Ngram wildcard lists and Datamuse (directly): directly impinge 6.2, impinge on the rights 3.6, impinge on the lives 1.7 per billion; directly is generic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Weakest points: \"directly impinge\" (6.2) uses a generic adverb; the two \"impinge on the ...\" pairings are fine (rights 3.6, lives 1.7). Sense 988 (light or a jet striking a surface) is hidden, though it is the most frequent use in the tool's data (light, beam, waves, jets); hiding it as technical is defensible, and showing it would be too. Origin matches Wiktionary and Oxford (literal sense first, \"encroach\" later). Tone null is right (formal only on Oxford)."
+    },
+    {
+      "id": 1412,
+      "word_id": 460,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French impugner, from Latin impugno, im- + pugno \"fight\", from pugnus \"fist\") and the obsolete English sense \"to assault, attack\". Root pugnare links pugnacious. Hook (impugnare, to fight against, from pugnare, as in pugnacious) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the Ngram wildcard list (Datamuse also has motives and character): impugn the integrity 2.7, impugn the motives 2.6, impugn the character 1.7 per billion; all modest.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing. impugnare from pugnare from pugnus matches Wiktionary; pugnare is a good root (pugnacious, repugnant). formal on all three. Pairings pass --check: impugn the integrity 2.7, the motives 2.6, the character 1.7."
+    },
+    {
+      "id": 1413,
+      "word_id": 461,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Medieval Latin incisivus, from incido \"to cut in, cut through\" + -ivus) and the Wiktionary Latin page incido, etymology 2 (in- + caedo \"to cut\"; derived Latin incisio and incisor). Root caedere (incision, concise, decide). Hook (incidere, to cut into, root of incision and incisor) is true. Tone null: only Oxford labels it (approving). The cutting sense belongs to anatomy (incisive teeth, incisive canal), so it is not shown and is marked technical. Pairings: incisive analysis 20.9, incisive comments 15.8, incisive mind 6.4 per billion (all in the Datamuse noun list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: nothing. incidere from caedere is right (Oxford gives the same), and caedere shows in decide, concise and the -cide words. Tone null is right (approving only on Oxford). Sense 1026 (cutting teeth) is rightly hidden. Pairings common: incisive analysis 20.9, comments 15.8, mind 6.4."
     }
   ]
 }

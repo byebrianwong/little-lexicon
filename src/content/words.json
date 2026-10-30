@@ -49300,12 +49300,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 540512,
-      "etymology": null,
+      "etymology": "From French coterie, which first meant a community of peasants under a feudal lord and later any exclusive circle. Through Medieval Latin coteria it goes back to Old English cot (\"cottage\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "small coterie",
+        "coterie of friends",
+        "literary coterie"
+      ],
       "audioUrl": "audio/words/438.mp3?v=86ebc7c1b44b",
-      "hookAudioUrl": "audio/hooks/438.mp3?v=b5215be91ae6",
+      "hookAudioUrl": "audio/hooks/438.mp3?v=34f8171acf65",
       "senses": [
         {
           "senseId": 863,
@@ -49389,7 +49393,7 @@
         }
       ],
       "mnemonics": [
-        "Coterie goes back to French cote, a hut, the root of cottage: picture a few friends in their own little cottage with the door shut to outsiders."
+        "Coterie goes back to cot, an old word for a hut, kin to cottage: picture a few friends in their own little cottage with the door shut to outsiders."
       ]
     },
     {
@@ -49400,10 +49404,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 63904,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French contenance, which goes back to Latin continere (\"to hold together\"), built on tenere (\"to hold\"). The English noun meant a face and also favor or support, the sense the verb keeps.",
+      "roots": [
+        "tenere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "refused to countenance",
+        "willing to countenance",
+        "countenance the idea"
+      ],
       "audioUrl": "audio/words/439.mp3?v=b872eb7b0c19",
       "hookAudioUrl": "audio/hooks/439.mp3?v=22f2166a4d79",
       "senses": [
@@ -49412,7 +49422,7 @@
           "definition": "Allow or go along with something, or give it one's approval.",
           "plainLanguageDefinition": "To be willing to accept or allow something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/864.mp3?v=44ca8812e01f",
           "examples": [
@@ -49511,10 +49521,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 256733,
-      "etymology": null,
+      "etymology": "Of uncertain origin: Middle English cravant came either from Old French cravanté (\"defeated\") or from creaunt (\"defeated\") reshaped to look like crave. A craven person gives in without a fight.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "craven fear",
+        "craven coward",
+        "craven submission"
+      ],
       "audioUrl": "audio/words/440.mp3?v=5988dfdc24db",
       "hookAudioUrl": "audio/hooks/440.mp3?v=01e22eed1e2c",
       "senses": [
@@ -49523,7 +49537,7 @@
           "definition": "Cowardly in a spineless, shameful way.",
           "plainLanguageDefinition": "So scared of trouble that you act in a weak, shameful way.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/867.mp3?v=d0a13165fead",
           "examples": [
@@ -49627,10 +49641,16 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 914441,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Old French from Latin dignare (\"to judge worthy\"), built on dignus (\"worthy\"), the root of dignity. To deign is to judge a task worthy of you, though only just.",
+      "roots": [
+        "dignus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "deign to answer",
+        "did not deign",
+        "scarcely deigned"
+      ],
       "audioUrl": "audio/words/441.mp3?v=b04c01d8048f",
       "hookAudioUrl": "audio/hooks/441.mp3?v=b7e068155f50",
       "senses": [
@@ -49639,7 +49659,7 @@
           "definition": "Lower oneself, with an air of superiority, to do something.",
           "plainLanguageDefinition": "To grudgingly do something you feel is too lowly for someone of your rank.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/868.mp3?v=8304529042dc",
           "examples": [
@@ -49723,10 +49743,17 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 758311,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Ancient Greek demagogos, a popular leader or a mob leader, made of demos (\"people\") and agogos (\"guide, leader\"). In English it mostly keeps the darker sense.",
+      "roots": [
+        "demos",
+        "agogos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "populist demagogue",
+        "dangerous demagogue",
+        "political demagogue"
+      ],
       "audioUrl": "audio/words/442.mp3?v=a0952df20a5d",
       "hookAudioUrl": "audio/hooks/442.mp3?v=2c89706ea6fc",
       "senses": [
@@ -49735,7 +49762,7 @@
           "definition": "A political figure who gains power by inflaming the public's resentments and telling crowds what they want to hear.",
           "plainLanguageDefinition": "A leader who wins over crowds by playing on what they fear and hate.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/869.mp3?v=47384305cd28",
           "examples": [
@@ -49814,10 +49841,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2080005,
-      "etymology": null,
+      "etymology": "From Old French denzein, formed from deinz (\"within\"), which goes back to Late Latin de intus (\"from within\"): a denizen is one of those inside a place.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "denizens of the deep",
+        "denizens of the forest",
+        "local denizens"
+      ],
       "audioUrl": "audio/words/443.mp3?v=7ec0b180c466",
       "hookAudioUrl": "audio/hooks/443.mp3?v=9aa986c2daae",
       "senses": [
@@ -49826,7 +49857,7 @@
           "definition": "A person or creature that lives in a certain spot, or haunts it so often that it seems to belong there.",
           "plainLanguageDefinition": "A person who lives somewhere, or turns up there so often that they seem part of the place.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/870.mp3?v=f0ca1b45d7ff",
           "examples": [
@@ -49881,11 +49912,11 @@
         {
           "senseId": 997,
           "definition": "A plant or animal from elsewhere that has settled in and now grows wild in a new region.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A plant or animal brought from elsewhere that now grows wild in its new home.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/997.mp3?v=4b2e16caafba",
+          "audioUrl": "audio/definitions/997.mp3?v=9d9da28f0a33",
           "examples": [],
           "distractors": []
         }
@@ -49928,10 +49959,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 134729,
-      "etymology": null,
+      "etymology": "Formed in English from dis- (\"not\") and interested in its sense of \"having a stake\", or from the verb disinterest (\"to make impartial\"). Either way it describes someone with nothing to gain.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Using it to mean \"not interested\" is common but disputed; many editors keep it for \"impartial, with nothing to gain.\"",
+      "pairings": [
+        "disinterested observer",
+        "disinterested party",
+        "disinterested third party"
+      ],
       "audioUrl": "audio/words/444.mp3?v=4622199d1f6f",
       "hookAudioUrl": "audio/hooks/444.mp3?v=4b8989c156b3",
       "senses": [
@@ -50178,10 +50213,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 685828,
-      "etymology": null,
+      "etymology": "From French drôle (\"funny, odd\"), earlier a noun for a clown or a likable rogue. The French word goes back to Middle Dutch drol, a stout little man or a goblin.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "droll humor",
+        "droll stories",
+        "droll smile"
+      ],
       "audioUrl": "audio/words/446.mp3?v=69a262b8bfb4",
       "hookAudioUrl": "audio/hooks/446.mp3?v=6b106e1f1a5d",
       "senses": [
@@ -50408,10 +50447,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 255761,
-      "etymology": null,
+      "etymology": "Formed in English from erst, an old word meaning \"first\" or \"formerly\", and while.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "erstwhile allies",
+        "erstwhile friend",
+        "erstwhile colleagues"
+      ],
       "audioUrl": "audio/words/448.mp3?v=adeb5b5d489d",
       "hookAudioUrl": "audio/hooks/448.mp3?v=0f968ecb8530",
       "senses": [
@@ -50420,7 +50463,7 @@
           "definition": "Having filled a certain role or held a certain status in the past, but no longer.",
           "plainLanguageDefinition": "Describing what someone or something used to be, but is not anymore.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/879.mp3?v=f6987403c45f",
           "examples": [
@@ -50511,10 +50554,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 686576,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Middle French from Latin evincere (\"to conquer completely\", and also \"to prove beyond doubt\"), built on vincere (\"to conquer\"). From proving a thing, it came to mean showing it plainly.",
+      "roots": [
+        "vincere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "evinced little interest",
+        "evince interest"
+      ],
       "audioUrl": "audio/words/449.mp3?v=0cbb130f1cd4",
       "hookAudioUrl": "audio/hooks/449.mp3?v=f904ef4e20f9",
       "senses": [
@@ -50523,7 +50571,7 @@
           "definition": "Let a feeling or trait be plainly seen through what one says or does.",
           "plainLanguageDefinition": "To give clear signs of an emotion or trait, often without putting it into words.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/880.mp3?v=344bf5b5bba5",
           "examples": [
@@ -50622,10 +50670,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 69607,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin extans, from extare (\"to stand out, to exist\"), made of ex- (\"out\") and stare (\"to stand\"): what is extant still stands when others of its kind have gone.",
+      "roots": [
+        "stare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "still extant",
+        "earliest extant",
+        "extant manuscripts"
+      ],
       "audioUrl": "audio/words/450.mp3?v=43d054dc6e85",
       "hookAudioUrl": "audio/hooks/450.mp3?v=89ea545a3569",
       "senses": [
@@ -50634,7 +50688,7 @@
           "definition": "Having lasted into the present, when others of its kind were lost or destroyed.",
           "plainLanguageDefinition": "Still around today, when you might expect it to have been lost or destroyed.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/881.mp3?v=f4e064f8c929",
           "examples": [
@@ -50725,10 +50779,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 231125,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Latin facilis (\"easy\"), built on facere (\"to do\"). It first meant simply easy; the sense of too simple and shallow appeared in the 1800s.",
+      "roots": [
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "facile solution",
+        "facile optimism",
+        "facile assumption"
+      ],
       "audioUrl": "audio/words/451.mp3?v=a686e7f3992d",
       "hookAudioUrl": "audio/hooks/451.mp3?v=f3122b733b0f",
       "senses": [
@@ -50792,22 +50852,22 @@
         {
           "senseId": 999,
           "definition": "Done with the smooth, practiced ease of a skilled performer.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Done smoothly and with little effort, the way a practiced expert works.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/999.mp3?v=98580573d753",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/999.mp3?v=f8209821ffa9",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1000,
           "definition": "Able to speak or write with easy fluency.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Able to speak or write smoothly and easily.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1000.mp3?v=c20152c70bfc",
+          "audioUrl": "audio/definitions/1000.mp3?v=8f65540b829e",
           "examples": [],
           "distractors": []
         }
@@ -50850,10 +50910,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 703249,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Anglo-Norman feauté, from Latin fidelitas (\"faithfulness\"), which in the Middle Ages also meant a vassal's sworn loyalty. It goes back to fides (\"faith\"), as fidelity does.",
+      "roots": [
+        "fides"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "swear fealty",
+        "oath of fealty",
+        "pledged fealty"
+      ],
       "audioUrl": "audio/words/452.mp3?v=173b8a39f667",
       "hookAudioUrl": "audio/hooks/452.mp3?v=46c9c9d819f2",
       "senses": [
@@ -50862,7 +50928,7 @@
           "definition": "Loyalty owed and pledged to a lord, ruler or leader, often under a formal oath.",
           "plainLanguageDefinition": "A promise to stay loyal to someone in power, like a knight's promise to his lord.",
           "senseOrder": 1,
-          "register": null,
+          "register": "old-fashioned",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/885.mp3?v=da4928eb9057",
           "examples": [
@@ -50958,10 +51024,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 392186,
-      "etymology": null,
+      "etymology": "Through French from Latin furtivus (\"stolen, hidden\"), from furtum (\"theft\"), which comes from fur (\"thief\"): a furtive glance is a thief's glance.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "furtive glance",
+        "furtive look",
+        "furtive movements"
+      ],
       "audioUrl": "audio/words/453.mp3?v=e6ed2b09d524",
       "hookAudioUrl": "audio/hooks/453.mp3?v=c5a483e7a3a4",
       "senses": [
@@ -51073,12 +51143,12 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 686178,
-      "etymology": null,
+      "etymology": "From French gauche (\"awkward, clumsy\"), from gauchir (\"to bend, warp\"). The French word took on its other meaning, \"left\", only in the 1500s, replacing an older word.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/454.mp3?v=62538cab82cb",
-      "hookAudioUrl": "audio/hooks/454.mp3?v=b1c3f2e27499",
+      "hookAudioUrl": "audio/hooks/454.mp3?v=c1522e668147",
       "senses": [
         {
           "senseId": 888,
@@ -51181,7 +51251,7 @@
         }
       ],
       "mnemonics": [
-        "Gauche is French for left: an old prejudice held that left-handed people were clumsy, so gauche came to mean socially awkward."
+        "Gauche is French for left and also for awkward: picture a right-handed guest fumbling with the left hand at a formal dinner."
       ]
     },
     {
@@ -51192,10 +51262,14 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 4345861,
-      "etymology": null,
+      "etymology": "Coined in 1812 by the Boston Gazette, joining the name of Massachusetts governor Elbridge Gerry with salamander, after a district on a map he signed that looked like one.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "partisan gerrymandering",
+        "gerrymandered districts",
+        "racially gerrymandered"
+      ],
       "audioUrl": "audio/words/455.mp3?v=334a95971a75",
       "hookAudioUrl": "audio/hooks/455.mp3?v=bbf3b139d507",
       "senses": [
@@ -51204,7 +51278,7 @@
           "definition": "Draw the borders of election districts so that one party ends up with an unfair edge.",
           "plainLanguageDefinition": "To redraw voting maps on purpose so that one party is sure to win more seats.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/889.mp3?v=1dac754d376c",
           "examples": [
@@ -51275,10 +51349,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 607352,
-      "etymology": null,
+      "etymology": "Shortened from glibbery, an old English word for slippery, or from its Low German or Dutch source, glibberig: glib talk slides smoothly past what matters.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "glib tongue",
+        "glib answer",
+        "glib talk"
+      ],
       "audioUrl": "audio/words/456.mp3?v=7a605c591383",
       "hookAudioUrl": "audio/hooks/456.mp3?v=c4617dd742e3",
       "senses": [
@@ -51287,7 +51365,7 @@
           "definition": "Said or speaking with an easy fluency that glosses over how hard or serious a matter really is.",
           "plainLanguageDefinition": "Smooth and quick with words, but too easy and shallow to be trusted.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/890.mp3?v=034f2f0882da",
           "examples": [
@@ -51386,10 +51464,15 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 304463,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in English around 1400 from hap (\"luck\"), an old word still heard in happen and mishap, and -less.",
+      "roots": [
+        "hap"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "hapless victim",
+        "hapless creature"
+      ],
       "audioUrl": "audio/words/457.mp3?v=154584bf7f56",
       "hookAudioUrl": "audio/hooks/457.mp3?v=c991aa69116b",
       "senses": [
@@ -51607,10 +51690,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 285237,
-      "etymology": null,
+      "etymology": "From Latin impingere (\"to push or dash against\"), the verb that also gave impact. It first meant to strike a surface, and figuratively came to mean to press in on rights or time.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "impinge on the rights",
+        "impinge on the lives",
+        "directly impinge"
+      ],
       "audioUrl": "audio/words/459.mp3?v=33a2905985be",
       "hookAudioUrl": "audio/hooks/459.mp3?v=980d60c8d214",
       "senses": [
@@ -51679,11 +51766,11 @@
         {
           "senseId": 988,
           "definition": "Strike or land on a surface, as a beam of light or a jet of water does.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To strike or fall on a surface, as light or a stream of water does.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/988.mp3?v=da5176c5000b",
+          "audioUrl": "audio/definitions/988.mp3?v=4138c06e4bce",
           "examples": [],
           "distractors": []
         }
@@ -51718,10 +51805,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1656715,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Middle French from Latin impugnare (\"to fight against\"), built on pugnare (\"to fight\"), from pugnus (\"fist\"). To impugn a claim is to attack it with words.",
+      "roots": [
+        "pugnare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "impugn the integrity",
+        "impugn the motives",
+        "impugn the character"
+      ],
       "audioUrl": "audio/words/460.mp3?v=706c8b3408fd",
       "hookAudioUrl": "audio/hooks/460.mp3?v=b39b1b726363",
       "senses": [
@@ -51730,7 +51823,7 @@
           "definition": "Openly question whether a person can be trusted or whether a claim holds up.",
           "plainLanguageDefinition": "To say in public that someone's motives or statements are dishonest or wrong.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/897.mp3?v=5504239cab6e",
           "examples": [
@@ -51825,10 +51918,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 296344,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin incisivus, from Latin incidere (\"to cut into\"), built on caedere (\"to cut\"), the verb also behind incision and incisor. An incisive mind cuts to the point.",
+      "roots": [
+        "caedere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "incisive analysis",
+        "incisive comments",
+        "incisive mind"
+      ],
       "audioUrl": "audio/words/461.mp3?v=ce2a9262e775",
       "hookAudioUrl": "audio/hooks/461.mp3?v=807c39828a02",
       "senses": [
@@ -51892,11 +51991,11 @@
         {
           "senseId": 1026,
           "definition": "Shaped or used for cutting, as front teeth are.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Made for cutting, like the front teeth.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1026.mp3?v=e3ab60a5a4b0",
+          "audioUrl": "audio/definitions/1026.mp3?v=f3cf8b6f55f2",
           "examples": [],
           "distractors": []
         }
