@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:03:46.699Z"
+    "updatedAt": "2026-10-30T08:07:33.840Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1043,
-    "reviews": 1369
+    "mnemonics": 1045,
+    "reviews": 1392
   },
   "words": [
     {
@@ -7713,8 +7713,17 @@
       "syllables": 4,
       "frequency_rank": 226724,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin incongruus, made of in- (\"not\") and congruus (\"fitting, in agreement\"), from congruere (\"to come together, agree\"): what is incongruous does not agree with its setting.",
+      "audio_url": null,
+      "roots": [
+        "congruere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "incongruous sight",
+        "incongruous mixture",
+        "strangely incongruous"
+      ]
     },
     {
       "id": 463,
@@ -7724,8 +7733,17 @@
       "syllables": 3,
       "frequency_rank": 435710,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inculcare (\"to press in by treading\"), from in- (\"in\") and calcare (\"to trample\"), from calx (\"heel\"): a lesson that is inculcated is stamped into the mind by repetition.",
+      "audio_url": null,
+      "roots": [
+        "calx"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inculcate values",
+        "inculcate habits",
+        "inculcate respect"
+      ]
     },
     {
       "id": 464,
@@ -7735,8 +7753,17 @@
       "syllables": 4,
       "frequency_rank": 1230860,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Italian ingraziare or a Medieval Latin verb, both built on the Latin phrase in gratiam (\"into favor\"), from gratia (\"favor, thanks\"): you ingratiate yourself by working your way into favor.",
+      "audio_url": null,
+      "roots": [
+        "gratia"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ingratiate himself with",
+        "tried to ingratiate",
+        "ingratiating smile"
+      ]
     },
     {
       "id": 465,
@@ -7746,8 +7773,17 @@
       "syllables": 4,
       "frequency_rank": 307058,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin inscrutabilis, from in- (\"not\") and scrutari (\"to search, examine\"), the verb behind scrutiny: what is inscrutable cannot be searched into and understood.",
+      "audio_url": null,
+      "roots": [
+        "scrutari"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inscrutable expression",
+        "inscrutable face",
+        "inscrutable smile"
+      ]
     },
     {
       "id": 466,
@@ -7757,8 +7793,17 @@
       "syllables": 5,
       "frequency_rank": 460674,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin interlocutor, a noun formed from Latin interloqui, from inter- (\"between\") and loqui (\"to speak\"): someone who talks with another, back and forth.",
+      "audio_url": null,
+      "roots": [
+        "loqui"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "my interlocutor",
+        "imaginary interlocutor",
+        "principal interlocutor"
+      ]
     },
     {
       "id": 467,
@@ -7768,8 +7813,15 @@
       "syllables": 2,
       "frequency_rank": 1739796,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French lampon (\"satire\"), probably from lampons (\"let us drink\"), a refrain of rowdy mocking songs, from lamper (\"to gulp down\"). Such songs jeered at public figures.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mercilessly lampooned",
+        "often lampooned",
+        "cartoons lampooning"
+      ]
     },
     {
       "id": 468,
@@ -7779,8 +7831,15 @@
       "syllables": 3,
       "frequency_rank": 309709,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek litaneia (\"prayer, supplication\"), through Latin and Old French. A church litany runs through a long series of petitions, and the word spread to any tiresome list.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "litany of complaints",
+        "long litany",
+        "familiar litany"
+      ]
     },
     {
       "id": 469,
@@ -7790,8 +7849,15 @@
       "syllables": 1,
       "frequency_rank": 359312,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English loth, from Old English lath (\"hateful, hostile\") or a related Old Norse word; the verb loathe comes from the same source. Being unwilling grew out of finding a thing hateful.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Do not confuse loath, an adjective meaning unwilling (\"loath to leave\"), with the verb loathe, meaning to hate.",
+      "pairings": [
+        "loath to admit",
+        "loath to leave",
+        "loath to part with"
+      ]
     },
     {
       "id": 482,
@@ -7801,8 +7867,17 @@
       "syllables": 2,
       "frequency_rank": 795411,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Italian pasticcio, a pie with a mixed filling, from Late Latin pasta (\"dough, paste\"): a pastiche mixes or copies borrowed styles as such a pie mixes ingredients.",
+      "audio_url": null,
+      "roots": [
+        "pasta"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "postmodern pastiche",
+        "literary pastiche",
+        "mere pastiche"
+      ]
     },
     {
       "id": 483,
@@ -7812,8 +7887,17 @@
       "syllables": 2,
       "frequency_rank": 144750,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek pathos (\"suffering,\" also \"strong feeling\"), the root of sympathy, empathy and pathetic: pathos is what makes an audience feel for someone who suffers.",
+      "audio_url": null,
+      "roots": [
+        "pathos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "full of pathos",
+        "touching pathos",
+        "tragic pathos"
+      ]
     },
     {
       "id": 484,
@@ -7834,8 +7918,15 @@
       "syllables": 2,
       "frequency_rank": 775439,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of uncertain origin: either Anglo-Norman peruser (\"to use up\") or a Medieval Latin verb for \"wear out,\" in form per- (\"thoroughly\") and use. The using-up sense died out; going through a thing with care remained.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Peruse traditionally means to read with care; using it to mean skim or browse is common but disputed.",
+      "pairings": [
+        "carefully perused",
+        "peruse the contents",
+        "peruse the pages"
+      ]
     },
     {
       "id": 486,
@@ -7845,8 +7936,14 @@
       "syllables": 3,
       "frequency_rank": 394961,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From the Philistines, foes of Israel in the Bible, through German Philister, a student word for townspeople outside the university and then for anyone without culture. Thomas Carlyle brought it into English.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "bourgeois philistine",
+        "cultural philistine"
+      ]
     },
     {
       "id": 487,
@@ -7856,8 +7953,14 @@
       "syllables": 1,
       "frequency_rank": 583548,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French pique (\"resentment, a quarrel\"), from the verb piquer (\"to prick, sting\"): pique is the sting a person feels when their pride is pricked.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "The verb meaning to stir interest is spelled pique (\"piqued my curiosity\"), not peak or peek, which sound the same.",
+      "pairings": [
+        "fit of pique",
+        "personal pique"
+      ]
     },
     {
       "id": 488,
@@ -7867,8 +7970,16 @@
       "syllables": 3,
       "frequency_rank": 488760,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin plebeius (\"of the common people\"), from plebs, the ordinary citizens of Rome as opposed to the patrician families. It came to mean common in a way that snobs look down on.",
+      "audio_url": null,
+      "roots": [
+        "plebs"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "plebeian culture",
+        "plebeian origins"
+      ]
     },
     {
       "id": 489,
@@ -7878,8 +7989,17 @@
       "syllables": 4,
       "frequency_rank": 792471,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin pontificare, from pontifex, a Roman high priest and later the pope, a word made of pons (\"bridge\") and facere (\"to make\"): to pontificate is to talk with a pope's air of authority.",
+      "audio_url": null,
+      "roots": [
+        "pontifex",
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pontificate about",
+        "pontificate on"
+      ]
     },
     {
       "id": 490,
@@ -7889,8 +8009,16 @@
       "syllables": 2,
       "frequency_rank": 1065067,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin portendere (\"to foretell\"), from por- (\"forward\") and tendere (\"to stretch\"): an omen that portends something reaches forward to what is coming.",
+      "audio_url": null,
+      "roots": [
+        "tendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "portend disaster",
+        "portended trouble"
+      ]
     },
     {
       "id": 491,
@@ -7900,8 +8028,17 @@
       "syllables": 2,
       "frequency_rank": 255049,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin positus (\"placed\"), a form of ponere (\"to put, place\"), which also gave position and deposit: to posit a claim is to set it down as a starting point.",
+      "audio_url": null,
+      "roots": [
+        "ponere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "theory posits",
+        "theorists posit",
+        "posit the existence"
+      ]
     },
     {
       "id": 492,
@@ -7911,8 +8048,17 @@
       "syllables": 2,
       "frequency_rank": 205382,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praeceptum (\"a rule, an instruction\"), from praecipere, from prae (\"before\") and capere (\"to take\"): praecipere meant to take beforehand and also to instruct.",
+      "audio_url": null,
+      "roots": [
+        "capere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "moral precepts",
+        "ethical precepts",
+        "basic precept"
+      ]
     },
     {
       "id": 493,
@@ -7922,8 +8068,14 @@
       "syllables": 3,
       "frequency_rank": 638217,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin promulgare (\"to make known, publish\"), whose own source is uncertain: either pro- (\"forth\") with vulgare (\"to make public\") or mulgere (\"to milk,\" and so \"to bring out\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "promulgated the idea",
+        "promulgated the doctrine"
+      ]
     },
     {
       "id": 494,
@@ -7933,8 +8085,16 @@
       "syllables": 3,
       "frequency_rank": 134873,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle French putatif, from Latin putativus (\"supposed\"), from putare (\"to think, reckon\"), also the root of reputation and compute: a putative fact is one that people reckon true.",
+      "audio_url": null,
+      "roots": [
+        "putare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "putative father",
+        "putative author"
+      ]
     },
     {
       "id": 495,
@@ -7944,8 +8104,15 @@
       "syllables": 1,
       "frequency_rank": 1982443,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of uncertain origin, perhaps Old English cwealm (\"death, plague\") or a Dutch or German word for vapor or daze. It meant a fit of faintness before it meant a pang of doubt or conscience.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "moral qualms",
+        "few qualms",
+        "no qualms about"
+      ]
     },
     {
       "id": 496,
@@ -7955,8 +8122,14 @@
       "syllables": 2,
       "frequency_rank": 1544382,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French régaler (\"to entertain, to feast\"), from Old French gale (\"merriment, fun\"), probably of Germanic origin: to regale people is to fill them with enjoyment.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "regaled us with",
+        "regaled with stories"
+      ]
     },
     {
       "id": 497,
@@ -7966,8 +8139,17 @@
       "syllables": 2,
       "frequency_rank": 873033,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin remissus (\"slack, careless\"), from remittere (\"to send back, let go, relax\"), from mittere (\"to send\"): a remiss person has let their attention to a duty go slack.",
+      "audio_url": null,
+      "roots": [
+        "mittere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "would be remiss",
+        "remiss in failing to",
+        "remiss in his duty"
+      ]
     },
     {
       "id": 498,
@@ -13817,7 +13999,7 @@
       "definition": "Train someone into a lasting belief or habit by never letting up on the lesson.",
       "plain_language_definition": "To teach an idea again and again until it sticks for good.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 902,
@@ -13825,7 +14007,7 @@
       "definition": "Set out to make oneself liked by someone, usually with flattery and for one's own gain.",
       "plain_language_definition": "To make an effort to win someone's approval, often because they can help you.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 903,
@@ -13841,7 +14023,7 @@
       "definition": "One of the people talking in a conversation or formal discussion, often the one you are speaking with.",
       "plain_language_definition": "Whoever you are trading words with in a conversation or debate.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 906,
@@ -13865,7 +14047,7 @@
       "definition": "Strongly disinclined to do something and slow to agree to it.",
       "plain_language_definition": "Holding back from something you would much rather not do.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 928,
@@ -13897,7 +14079,7 @@
       "definition": "Read or inspect something closely, taking in the details.",
       "plain_language_definition": "To go over a text or document slowly and with care.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 937,
@@ -13905,7 +14087,7 @@
       "definition": "A person who scorns or shrugs off art, literature and serious ideas, valuing only practical or material things.",
       "plain_language_definition": "A person with no interest in art, books or ideas, who may even sneer at them.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 938,
@@ -13921,7 +14103,7 @@
       "definition": "Belonging to or typical of ordinary working people, and so seen by snobs as lacking refinement.",
       "plain_language_definition": "Ordinary and common, lacking the polish that upper-class people prize.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 941,
@@ -13929,7 +14111,7 @@
       "definition": "Hold forth with lofty self-importance, as if one's opinions were beyond question.",
       "plain_language_definition": "To talk on and on about your opinions as if you were the expert on everything.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 942,
@@ -13945,7 +14127,7 @@
       "definition": "Lay down a claim as true for the time being, so that an argument or theory can rest on it.",
       "plain_language_definition": "To suggest an idea as true so you can build an argument on it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 946,
@@ -13953,7 +14135,7 @@
       "definition": "A principle or instruction that sets out how a person ought to act.",
       "plain_language_definition": "A rule or lesson about the right way to behave.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 948,
@@ -13961,7 +14143,7 @@
       "definition": "Spread word of a creed, theory or policy far and wide by preaching or publishing it.",
       "plain_language_definition": "To push an idea or a new rule out to the public until nearly everyone has heard of it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 950,
@@ -13969,7 +14151,7 @@
       "definition": "Taken by most people to be the case, though never firmly proven.",
       "plain_language_definition": "Believed or said to be true or real, even though nobody has proved it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 951,
@@ -13993,7 +14175,7 @@
       "definition": "Falling short in one's duties through carelessness or neglect.",
       "plain_language_definition": "Letting slide a job or task that was yours to take care of.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 955,
@@ -14265,15 +14447,17 @@
       "definition": "A musical piece stitched together from songs or passages by several different composers.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1002,
       "word_id": 483,
       "definition": "In rhetoric, an appeal to the listeners' feelings rather than to logic or to the speaker's character.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A way of persuading people by stirring their emotions, one of the three classic appeals with ethos and logos.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1003,
@@ -14287,9 +14471,10 @@
       "id": 1004,
       "word_id": 486,
       "definition": "A member of an ancient people who lived on the coast of what is now southern Israel and Gaza.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Someone from an ancient people on the coast around Gaza, who fought Israel in Bible stories.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1005,
@@ -14297,15 +14482,17 @@
       "definition": "A cotton cloth with a textured weave of fine cords or small diamonds, used for polo shirts.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1006,
       "word_id": 488,
       "definition": "Belonging to the ordinary citizens of ancient Rome rather than to its noble families.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of Rome's common people in ancient times, the citizens outside the old ruling families.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1007,
@@ -14313,7 +14500,8 @@
       "definition": "Lead a church service in the role of a bishop or pope.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1008,
@@ -14321,7 +14509,8 @@
       "definition": "Set or place something firmly in a particular spot.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1009,
@@ -14329,15 +14518,17 @@
       "definition": "A written order from a court or official directing someone to act.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1010,
       "word_id": 493,
       "definition": "Bring a statute or decree into force by publishing it in an official notice.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To publish a rule or law officially so that it becomes binding.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1011,
@@ -14345,15 +14536,17 @@
       "definition": "A passing bout of slight nausea.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1012,
       "word_id": 496,
       "definition": "Serve someone generous helpings of fine food and drink.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To give guests a lavish feast.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1013,
@@ -14475,17 +14668,19 @@
       "id": 1027,
       "word_id": 466,
       "definition": "A go-between who speaks to one side on behalf of another, as in peace talks.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A person who carries talks between two sides, speaking for one of them.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1028,
       "word_id": 468,
       "definition": "A form of worship in which a list of requests to God is chanted, with the people repeating one reply throughout.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A church prayer made of many short requests, with the congregation giving the same answer to each one.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1029,
@@ -71450,14 +71645,6 @@
       "revision": 3
     },
     {
-      "id": 812,
-      "word_id": 486,
-      "text": "Philistine comes from the Philistines, the Bible's foes of Israel; German students used Philister for dull townsfolk, and Matthew Arnold brought the insult into English.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 813,
       "word_id": 487,
       "text": "Pique comes from French piquer, to prick or sting: a fit of pique is the sting of hurt pride.",
@@ -71765,14 +71952,6 @@
       "id": 851,
       "word_id": 463,
       "text": "Inculcate comes from Latin inculcare, to press in with the heel (calx, heel): picture a lesson trodden into the mind step after step until it stays put.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 852,
-      "word_id": 464,
-      "text": "Ingratiate grows out of Latin gratia, favor or thanks (the root of gratitude and grace): you ingratiate yourself to get into someone's good graces.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -73261,6 +73440,22 @@
       "id": 1043,
       "word_id": 401,
       "text": "Peripatetic comes from Greek peripatein, \"to walk around\" (peri, \"around\"). Aristotle's pupils perhaps got the name from the covered walk where he taught.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1044,
+      "word_id": 464,
+      "text": "Ingratiate grows out of Latin gratia, favor or thanks (related to gratitude and grace): you ingratiate yourself to get into someone's good graces.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1045,
+      "word_id": 486,
+      "text": "Philistine comes from the Philistines, the Bible's foes of Israel; German students used Philister for dull townsfolk, and Matthew Arnold popularized the insult in English.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -125481,8 +125676,8 @@
     },
     {
       "path": "definitions/1027.mp3",
-      "bytes": 19853,
-      "key": "ba00107fd103a860",
+      "bytes": 18390,
+      "key": "a507ac788f6ad5b4",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125502,8 +125697,8 @@
     },
     {
       "path": "definitions/1028.mp3",
-      "bytes": 27899,
-      "key": "9dea2f87371c0c0b",
+      "bytes": 26122,
+      "key": "e3eddc6732f21638",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125537,8 +125732,8 @@
     },
     {
       "path": "definitions/1002.mp3",
-      "bytes": 24451,
-      "key": "41f9a2a1526547f8",
+      "bytes": 28944,
+      "key": "340342be8e99c876",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125572,8 +125767,8 @@
     },
     {
       "path": "definitions/1004.mp3",
-      "bytes": 24973,
-      "key": "988cb0b2ba6041ad",
+      "bytes": 23824,
+      "key": "2f6c52998667af7f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125600,8 +125795,8 @@
     },
     {
       "path": "definitions/1006.mp3",
-      "bytes": 23510,
-      "key": "68ce183aef6ed48a",
+      "bytes": 23824,
+      "key": "c7e7b0f3a6d7cdac",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125663,8 +125858,8 @@
     },
     {
       "path": "definitions/1010.mp3",
-      "bytes": 20167,
-      "key": "7c9b7bb259120e42",
+      "bytes": 17450,
+      "key": "8ab93839c46bfc87",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125698,8 +125893,8 @@
     },
     {
       "path": "definitions/1012.mp3",
-      "bytes": 14942,
-      "key": "ec2f3bdfa8c067d8",
+      "bytes": 9300,
+      "key": "5296fe6e01243dcc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -130017,8 +130212,8 @@
     },
     {
       "path": "hooks/464.mp3",
-      "bytes": 39602,
-      "key": "95fc30a4187074a9",
+      "bytes": 40020,
+      "key": "9633284152eeab0f",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -130087,8 +130282,8 @@
     },
     {
       "path": "hooks/486.mp3",
-      "bytes": 43259,
-      "key": "3543f232f6e4e5d7",
+      "bytes": 44931,
+      "key": "a716285e53cadc55",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -177127,6 +177322,735 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin matches Wiktionary's temeritas and temere entries, including the older form meaning 'in darkness, blindly'. Hook (4): glosses Latin temere as 'blindly', which is the sense of its reconstructed ancestor; Latin temere itself means 'by chance, rashly'. Pairings (4): 'had the temerity to' (99.7) is right; 'his own temerity' (4.53) rests on a generic 'own'. formal is right on all three dictionaries."
+    },
+    {
+      "id": 1370,
+      "word_id": 462,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (incongruous; Latin congruus and congruo, which gives \"come together, meet\" and \"agree, fit\"). Root congruere also shows in congruent. Tone null: no label in Oxford, Cambridge or Longman. No common mix-up. Pairings from the collocation lists, all checked in Google Books. Hook claims are true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (incongruus, in- + congruus); the gloss of congruere ('come together, agree') matches Wiktionary's Latin congruo page. Null tone is right (no label in Oxford, Cambridge or Longman). Pairings are all in the tool's lists (incongruous sight 8.1, mixture 3.2, strangely incongruous 3.9 per billion). Weakest point: congruere links no other word in the list yet."
+    },
+    {
+      "id": 1371,
+      "word_id": 463,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (inculcate: inculco from in- and calco, from calx \"heel\", the heel sense, not the lime sense). Root calx links with recalcitrant, whose origin on worksheet j names calx but sets no root. Tone formal: Oxford, Cambridge and Longman all mark it formal. No common mix-up. Pairings from the collocation lists. Hook (press in with the heel) agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (inculcatus, in- + calco 'tread upon', from calx 'heel') and AHD ('to force upon', calcare 'to trample'). The Latin inculco page would not load (429), so the literal gloss 'press in by treading' was judged against those two. calx links correctly to recalcitrant (heel). formal: all three dictionaries. Pairings in the tool's lists (values 6.0, habits 2.3, respect 1.9). Weakest point: no note on the criticized 'inculcate someone with' construction; null is defensible, since it is not a misreading of the meaning."
+    },
+    {
+      "id": 1372,
+      "word_id": 464,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary (ingratiate: Italian ingraziare or Medieval Latin, from in gratiam), which gives the two sources as alternatives, so the origin names both. Root gratia also links with gratuitous (Latin gratuitus, from gratia). Tone disapproving: Oxford and Cambridge label it disapproving and Longman says it is used to show disapproval. Hook changed: it called gratia \"the root of gratitude and grace\", but Wiktionary derives gratitude from gratus, the adjective behind gratia, so \"the root of\" became \"related to\". Pairings from the collocation lists (the verb is nearly always reflexive).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: Wiktionary has Italian ingraziare or Medieval Latin *ingratiatus, the asterisk marking an unattested form, and 'a Medieval Latin verb' states it as a real word (small nit). 'into favor' for in gratiam matches AHD. Hook: the change to 'related to gratitude and grace' is right (gratitude comes from gratus, not gratia). Tone: disapproving in Oxford, Cambridge and Longman ('used to show disapproval'). Pairings: 'tried to ingratiate' (6.4) is generic; 'ingratiate himself with' (60.4) and 'ingratiating smile' (23.8) are strong."
+    },
+    {
+      "id": 1373,
+      "word_id": 465,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (inscrutable: Late Latin inscrutabilis, from in- and scruto \"to examine\"; scrutari is the usual deponent form, as in Oxford's note). Root scrutari shows in scrutiny and scrutinize. Tone null: no label in any of the three. No common mix-up. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Late Latin inscrutabilis, in- + scruto); scrutari is the usual deponent form, and scrutiny does come from it. No tone label in any of the three. Pairings all in the tool's lists (expression 22.1, face 12.1, smile 11.1). Weakest point: scrutari links no other word in the list yet."
+    },
+    {
+      "id": 1374,
+      "word_id": 466,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (interlocutor etymology 1: Medieval Latin interlocutor, from interloquor, from inter- and loquor). Root loqui matches eloquent and loquacious. Tone formal: all three dictionaries mark it formal. Also Means shows the go-between sense, which Oxford and Cambridge give (news writing uses it for a party speaking for one side in talks); register null because Longman lacks the sense. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Medieval Latin interlocutor, from interloquor, inter- + loquor); loqui joins eloquent, loquacious and grandiloquent. formal: all three for the first sense; null on the go-between sense is right under the all-three rule (Longman lacks that sense). Pairings: 'my interlocutor' (26.9) is a generic possessive; 'imaginary' (6.4) and 'principal' (2.8) are in the tool's list. Also means: the sense is current (diplomatic go-betweens), but 'carries talks' is unidiomatic and a careful editor would reword it."
+    },
+    {
+      "id": 1375,
+      "word_id": 467,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (lampoon: French lampon, built on lampons \"let us drink\", a refrain for scurrilous songs, from lamper; Littre quotes such a song mocking James II). Wiktionary states it plainly, but Oxford (\"said to be\") and Longman (\"probably\") hedge the lampons step, so the origin says probably, as the hook says may. No roots: nothing in English shows lamper. Tone null. No common mix-up. Pairings from the collocation lists; none is very frequent in Google Books (1 to 2 per billion), so pairings get 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (lampon, built on lampons 'let us drink', from lamper) and AHD; 'probably' sits between Wiktionary (no hedge) and AHD ('perhaps'), which is fine, and songs mocking public figures are supported by Littre's song against James II. Hook keeps 'may'. No tone label (Cambridge's 'informal' belongs to a word in its Compare list). Pairings: all in the tool's lists, but 'often lampooned' (1.7) is generic and all three sit at 1.0 to 1.7 per billion."
+    },
+    {
+      "id": 1376,
+      "word_id": 468,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (litany: Old French letanie, Latin litania, Greek litaneia \"prayer\", from lite). No root a learner could spot elsewhere. Tone null: only Oxford marks the list sense formal and only Longman marks disapproval. No common mix-up. Also Means shows the church prayer, which all three learner's dictionaries give and which explains the list sense. Pairings checked in Google Books (litany of complaints 24 per billion). Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Old French letanie, Latin litania, Greek litaneia 'prayer', from lite 'prayer, entreaty'), with the step to a tiresome list given. Null tone is right: only Longman marks disapproval and only Oxford marks formal. Pairings strong (of complaints 24.3, long 14.2, familiar 8.5). Also means: the church sense is current and the plain is clear, but 'the same answer to each one' overstates; the dictionaries say set responses, and some litanies change the reply from section to section."
+    },
+    {
+      "id": 1377,
+      "word_id": 469,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (loath: Middle English loth, from Old English lath or Old Norse leid, from Proto-Germanic laithaz; its obsolete senses \"hostile\" and \"loathsome\" show the shift). Wiktionary gives Old English or Old Norse, so the origin names both. Tone formal: Oxford and Cambridge mark loath formal and Longman marks \"be loath to do something\" formal. Watch-out: Wiktionary's usage note warns against confusing it with loathe. Pairings checked in Google Books. Hook makes no origin claim; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle English loth, from Old English lath or Old Norse leid, either/or kept); 'hateful, hostile' is a fair gloss of the Old English word (Wiktionary has 'evil; loathsome', with 'hostile' at the Proto-Germanic step). formal: Oxford, Cambridge and Longman (its 'be loath to do something' page). Watch-out is the classic loath/loathe mix-up, stated correctly. 'loath to part with' checked at 8.2 per billion. Weakest point: the watch-out repeats the hook, which is allowed."
+    },
+    {
+      "id": 1378,
+      "word_id": 482,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (pastiche: French pastiche, Italian pasticcio \"pie, something blended\", Late Latin pasta). Root pasta shows in paste and pastry. Tone null: no label in any of the three. No common mix-up. The other sense (a musical medley by several composers) is rare, so it is not shown. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (French pastiche, Italian pasticcio 'pie, something blended', Late Latin pasta); pasta shows in paste and pastry. No tone label in any of the three. The musical-medley sense is rightly hidden. Pairings are the tool's top three adjectives, but 'mere pastiche' (1.6) leans on a generic modifier and 'literary pastiche' is low (1.2)."
+    },
+    {
+      "id": 1379,
+      "word_id": 483,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (pathos: Ancient Greek pathos \"suffering\"; the Greek entry also gives \"any strong feeling, passion, emotion\"). Root pathos matches antipathy and apathy. Tone null: only Cambridge marks it literary. No common mix-up. Also Means shows the rhetoric sense with technical, since students meet ethos, pathos and logos in school. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Greek pathos 'suffering'; its Greek page also gives 'any strong feeling'); sympathy, empathy and pathetic share the root, and pathos joins antipathy and apathy. Null tone is right (only Cambridge marks literary). The rhetoric sense with the technical label is one students meet in writing classes; the plain is clear (19 words). Weakest point: the plain leans on ethos and logos, which a learner may not know."
+    },
+    {
+      "id": 1380,
+      "word_id": 485,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (peruse: either Medieval Latin peruto, perusito \"wear out\" or Anglo-Norman peruser \"use up\", by surface analysis per- + use; only the \"examine\" line survives) and Oxford's note (perhaps per- + use). No roots. Tone formal: Oxford (formal or humorous), Cambridge and Longman all mark it formal. Watch-out: Wiktionary's usage note says the skimming sense is proscribed by some authorities and Cambridge's American dictionary gives both, so it is stated as a dispute. Hook says \"probably built from per- and use\" and \"first meant to use something up\"; Longman says probably per- + use and Oxford dates the use-up sense first, so it stands, scored 4 because Wiktionary treats per- + use only as surface analysis. Pairings: carefully perused is on the collocation lists; the other two come from the tool's check of \"peruse the *\" (about 2 per billion each), skipping peruse the menu, which is the disputed browsing sense.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: facts match Wiktionary (Anglo-Norman peruser or Medieval Latin perusito; per- + use; the using-up sense died out), but 'in form per- (\"thoroughly\") and use' is awkward, and 'Of uncertain origin' is strong when both candidates are per- + use (AHD gives Middle English perusen 'to use up' with no hedge). Hook: 'first meant to use something up' agrees with AHD. formal: all three (Oxford 'formal or humorous'). Watch-out calls the skim sense disputed, which matches AHD's usage note, in own words. Pairings: carefully perused 5.5 (tool list), peruse the contents 2.4 and the pages 2.2 (checked); the two object pairings are generic and fit the disputed browse sense as well."
+    },
+    {
+      "id": 1381,
+      "word_id": 486,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (philistine: from Philistine via German Philister, used at German universities for people outside the university and then for people indifferent to culture; brought into English by Thomas Carlyle and popularized by Matthew Arnold). The 1693 Jena sermon story is left out: Wiktionary says it is often told but the OED finds the word in that sense in 1687. Hook changed: it said Matthew Arnold \"brought the insult into English\", but Wiktionary credits Carlyle with introducing it and Arnold with popularizing it, so it now says Arnold \"popularized the insult in English\". Tone disapproving: Oxford and Cambridge. Also Means shows the ancient people, the sense most of the word's uses in books refer to (Philistine cities, army, giant). Pairings from the collocation lists (adjectives used with it); only two fit the first sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin matches Wiktionary (from Philistine, influenced by German Philister, the students' word for townspeople outside the university; Carlyle introduced it to English); 'through German' is a little stronger than 'influenced by' but right for the cultural sense. Hook: changing Arnold from 'brought' to 'popularized' is the right fix. disapproving: Oxford and Cambridge. Pairings: both are in the tool's lists but are the rarest in this sheet (bourgeois 1.0, cultural 0.8 per billion). Also means: fine to show, but 'in Bible stories' can read as if the people were only legendary; 'in the Bible' is safer."
+    },
+    {
+      "id": 1382,
+      "word_id": 487,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (pique etymology 1: the noun from Middle French pique \"a quarrel; resentment\", from piquer \"to prick, sting\"). The deeper source of piquer (imitative or Frankish) is hedged there, so it is left out. No roots. Tone null: only Oxford marks it formal. Watch-out: Wiktionary's usage note says the verb is often confused with peek and peak. The other sense (a ribbed cotton cloth) is a variant of the separate word pique with an accent, said differently, so it is not shown. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (noun from Middle French pique 'a quarrel; resentment', from piquer 'to prick, sting'). Null tone is right (only Oxford marks formal). Cloth sense rightly hidden. Pairings strong (fit of pique 41.8, personal 6.7). Watch-out: the peak/peek misspelling is real, common and stated correctly, but it concerns the verb ('piqued my curiosity'), a sense this noun entry does not show."
+    },
+    {
+      "id": 1383,
+      "word_id": 488,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (plebeian: Latin plebeius, from plebes, plus -an; a possible Middle French influence is hedged there and left out). Root plebs shows in plebiscite. Tone disapproving: Oxford and Cambridge label it and Longman says it is used to show disapproval; only Cambridge adds formal. Also Means shows the ancient Roman sense, which most book uses refer to (plebeian tribunes, assembly). Pairings: plebeian culture and plebeian origins come from the collocation lists, which are dominated by the Roman sense; plebeian tastes was dropped as rare (0.85 per billion). Two pairings, the second modest, so 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (plebeius, from plebes; the 'possibly' Middle French influence is left out, which is allowed); plebs is the usual nominative. disapproving: Cambridge, Longman ('used to show disapproval') and Oxford's no-culture sense. The Roman sense is current (plebeian tribunes, assembly) and its plain is accurate. Pairings: plebeian culture (6.8) and origins (1.7) fit the 'ordinary people' half of the sense but show none of the snobbish shade, and 'plebeian culture' is mostly historians' neutral term."
+    },
+    {
+      "id": 1384,
+      "word_id": 489,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (pontificate etymology 2: Medieval Latin pontifico, from pontifex \"high priest\", from pons and facere). Roots pontifex (pontiff, pontifical) and facere. Tone disapproving: Oxford and Cambridge. No common mix-up. The other sense (leading a service as a bishop) is rare, so it is not shown. Pairings: the collocation lists mostly show the noun (a pope's reign), so the pairings are the verb's usual patterns, pontificate about and pontificate on (Longman gives both; about 11 and 12 per billion in Google Books). Prepositions only, so 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Medieval Latin pontifico, from pontifex 'high priest', pons + facere); pontifex shows in pontiff, and facere joins prolific and efficacy. disapproving: Oxford and Cambridge. Officiating sense rightly hidden. Pairings: both are bare prepositions (about 10.6, on 12.2), common but neither shows the meaning; the tool's lists offer little else (most hits are the noun)."
+    },
+    {
+      "id": 1385,
+      "word_id": 490,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (portend: Latin portendere, from por- and tendere). Root tendere matches distend. Tone null: Oxford and Cambridge mark it formal but Longman marks it literary, so neither label has the agreement it needs. No common mix-up. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (portendere 'to foretell', por- + tendere); tendere joins distend. Hook: 'portendere, to stretch forward' gives the literal makeup as if it were the Latin verb's meaning, which was 'to foretell'; adding 'literally' would fix it. Null tone is right: Oxford and Cambridge mark formal, Longman literary. Pairings in the tool's lists (disaster 1.1, trouble 1.1)."
+    },
+    {
+      "id": 1386,
+      "word_id": 491,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (posit: Latin positus, perfect participle of pono \"put, place\"). Root ponere links with expound (Latin exponere), which is on worksheet u. Tone formal: all three mark it formal. No common mix-up. The other sense (to place something firmly) is rare, so it is not shown. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (positus, perfect participle of pono); position and deposit do come from ponere. formal: all three. Physical-placing sense rightly hidden. Pairings strong (theory posits 76.5, posit the existence 24.0, theorists posit 5.6). Weakest point: ponere links no other word yet (expound has no roots set)."
+    },
+    {
+      "id": 1387,
+      "word_id": 492,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (precept: Late Latin praeceptum, from praecipio, from prae and capio; the Latin praecipio entry gives both \"take beforehand, anticipate\" and \"teach, instruct\"). Root capere matches incipient. Tone formal: all three mark it formal. No common mix-up. The other sense (a court's written order) is rare, so it is not shown. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (praeceptum, from praecipio, prae + capio) and its Latin page ('take beforehand', 'teach, instruct'); capere joins incipient. Hook: the parts are right, but 'lessons you take in before life tests you' reads as the meaning of prae + capere from the learner's side, while the Latin verb went from taking beforehand to instructing (the teacher's act); a memory picture, so loose rather than false. formal: all three. Pairings strong (moral precepts 82.4)."
+    },
+    {
+      "id": 1388,
+      "word_id": 493,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (promulgate: Latin promulgo, either from provulgo or from mulgeo \"to milk, bring forth\"; the Latin entry is marked for etymology review), so the origin says the source is uncertain and sets no root. Tone formal: all three mark the entry formal. Also Means shows the law sense with formal: it is the sense most uses in books have (promulgate regulations, rules, laws), and all three dictionaries give it. Pairings: the collocation lists are all for the law sense, so the two first-sense pairings come from the tool's check (promulgated the idea 3.4 per billion, the doctrine 1.1); scored 4. Hook says Roman officials made new laws known this way. That matches Roman practice and the word's law sense, but Wiktionary's Latin entries (promulgo, promulgatio) only say \"publish, proclaim\", so hook gets 4; unchanged.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: facts match Wiktionary (promulgo, from pro + vulgo or from mulgeo; its Latin page flags the etymology, so 'uncertain' is right), but it keeps Wiktionary's gloss and either/or order, and 'either pro- with vulgare or mulgere' reads as if the second option had no pro-. Hook: the Roman-laws claim goes past Wiktionary but is right (Lewis and Short: used especially of laws). formal: all three, on both senses. Pairings: first-sense pairings are moderate (the idea 3.4, the doctrine 1.1); the word's commonest use is the legal sense, shown under Also means."
+    },
+    {
+      "id": 1389,
+      "word_id": 494,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (putative: Middle French putatif, Latin putativus, from putatus, from puto \"to think, reckon\"). Root putare matches impute. Tone formal: Oxford (formal or law), Cambridge and Longman. No common mix-up. Pairings from the collocation lists. Hook agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Middle French putatif, Latin putativus, from puto); reputation and compute share putare, which joins impute. formal: all three (Oxford 'formal or law'). Pairings strong (father 51.7, author 7.7). Weakest point: only two pairings, which is fine."
+    },
+    {
+      "id": 1390,
+      "word_id": 495,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (qualm: perhaps Old English cwealm, or Dutch kwalm or German Qualm \"vapor\", earlier \"daze\"; faintness from 1530, doubt from 1553, scruple of conscience from 1649) and Oxford's note (perhaps related to cwealm); the hedge is kept. No roots. Tone null: no labels. No common mix-up. The other sense (a spell of nausea) is rare today, so it is not shown. Pairings: moral qualms and few qualms are on the collocation lists; no qualms about is very common in Google Books (280 per billion). Hook is a rhyme with no origin claim (qualm and calm do rhyme); unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge ('perhaps' Old English cwealm, or Dutch/German Qualm 'vapor', earlier 'daze') and gives the sense history (faintness, then doubt, then conscience) in own words; AHD says origin unknown. Hook is a true rhyme with no origin claim. No tone label in any of the three. Nausea sense rightly hidden. Pairings strong (no qualms about 279.6, moral 21.5, few 19.5)."
+    },
+    {
+      "id": 1391,
+      "word_id": 496,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (regale: French regaler, from Old French regale, from gale \"merriment\", probably Germanic; influenced by se rigoler, of unknown origin, left out) and Oxford's and Longman's notes. No roots. Tone null: only Longman marks it (written). No common mix-up. Also Means shows the food-and-drink sense: Wiktionary dates it from the 17th century alongside the story sense, and the collocation lists show it is common in books (regaled themselves). Learner's dictionaries omit it, so alsoMeans gets 4. Pairings checked in Google Books (regaled us with 21 per billion, regaled with stories 3); the collocation lists show mostly the reflexive feasting use, so pairings get 4. Hook says regale contains gale as in a gale of laughter, a sound-alike with no origin claim; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin matches Wiktionary and AHD (French regaler, from Old French gale 'merriment', 'probably' Germanic, hedge kept). Hook: no false claim, but the gale of 'a gale of laughter' is the wind word, not the Old French gale the origin names, so the two lines invite a learner to merge them. Null tone is right (only Longman marks 'written'). Pairings: 'regaled us with' (21.1) is the bare frame and fits the feast sense too; 'regaled with stories' (3.1) is good. Also means: the feast sense is in AHD and common in older books ('regaled themselves with'), but none of the three learner's dictionaries lists it; acceptable."
+    },
+    {
+      "id": 1392,
+      "word_id": 497,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (remiss: Latin remissus \"languid, negligent\", from remitto; the Latin remitto entry gives re- + mitto and the senses \"send back\", \"relax, diminish\"). Root mittere shows in remit, mission, transmit. Tone formal: all three mark it formal. No common mix-up. Pairings checked in Google Books (would be remiss 176 per billion; the other two about 1 to 2). Hook says remiss contains miss, a spelling hook with no origin claim; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle English remisse, Latin remissus, from remitto) and its Latin page (send back, relax); mittere joins surmise. Hook is a sound-alike with no origin claim. formal: all three. Pairings: 'would be remiss' (176.3) is the stock frame and shows no meaning; 'remiss in failing to' (1.9) and 'in his duty' (1.0) are low but fit."
     }
   ]
 }

@@ -51951,10 +51951,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 226724,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin incongruus, made of in- (\"not\") and congruus (\"fitting, in agreement\"), from congruere (\"to come together, agree\"): what is incongruous does not agree with its setting.",
+      "roots": [
+        "congruere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "incongruous sight",
+        "incongruous mixture",
+        "strangely incongruous"
+      ],
       "audioUrl": "audio/words/462.mp3?v=54279d7055d9",
       "hookAudioUrl": "audio/hooks/462.mp3?v=e782672dbfc6",
       "senses": [
@@ -52062,10 +52068,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 435710,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inculcare (\"to press in by treading\"), from in- (\"in\") and calcare (\"to trample\"), from calx (\"heel\"): a lesson that is inculcated is stamped into the mind by repetition.",
+      "roots": [
+        "calx"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inculcate values",
+        "inculcate habits",
+        "inculcate respect"
+      ],
       "audioUrl": "audio/words/463.mp3?v=eb864f950a72",
       "hookAudioUrl": "audio/hooks/463.mp3?v=2c7473a6f9b2",
       "senses": [
@@ -52074,7 +52086,7 @@
           "definition": "Train someone into a lasting belief or habit by never letting up on the lesson.",
           "plainLanguageDefinition": "To teach an idea again and again until it sticks for good.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/901.mp3?v=1c0fb63c6370",
           "examples": [
@@ -52161,19 +52173,25 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1230860,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Italian ingraziare or a Medieval Latin verb, both built on the Latin phrase in gratiam (\"into favor\"), from gratia (\"favor, thanks\"): you ingratiate yourself by working your way into favor.",
+      "roots": [
+        "gratia"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ingratiate himself with",
+        "tried to ingratiate",
+        "ingratiating smile"
+      ],
       "audioUrl": "audio/words/464.mp3?v=298705cc0009",
-      "hookAudioUrl": "audio/hooks/464.mp3?v=460cc90b8c1e",
+      "hookAudioUrl": "audio/hooks/464.mp3?v=1fb58d177c6a",
       "senses": [
         {
           "senseId": 902,
           "definition": "Set out to make oneself liked by someone, usually with flattery and for one's own gain.",
           "plainLanguageDefinition": "To make an effort to win someone's approval, often because they can help you.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/902.mp3?v=6c2f8ad16be7",
           "examples": [
@@ -52261,7 +52279,7 @@
         }
       ],
       "mnemonics": [
-        "Ingratiate grows out of Latin gratia, favor or thanks (the root of gratitude and grace): you ingratiate yourself to get into someone's good graces."
+        "Ingratiate grows out of Latin gratia, favor or thanks (related to gratitude and grace): you ingratiate yourself to get into someone's good graces."
       ]
     },
     {
@@ -52272,10 +52290,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 307058,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin inscrutabilis, from in- (\"not\") and scrutari (\"to search, examine\"), the verb behind scrutiny: what is inscrutable cannot be searched into and understood.",
+      "roots": [
+        "scrutari"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inscrutable expression",
+        "inscrutable face",
+        "inscrutable smile"
+      ],
       "audioUrl": "audio/words/465.mp3?v=ee5f3c2b2248",
       "hookAudioUrl": "audio/hooks/465.mp3?v=4fb8a500babc",
       "senses": [
@@ -52379,10 +52403,16 @@
       "syllables": 5,
       "difficultyTier": 3,
       "frequencyRank": 460674,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin interlocutor, a noun formed from Latin interloqui, from inter- (\"between\") and loqui (\"to speak\"): someone who talks with another, back and forth.",
+      "roots": [
+        "loqui"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "my interlocutor",
+        "imaginary interlocutor",
+        "principal interlocutor"
+      ],
       "audioUrl": "audio/words/466.mp3?v=b45a2e726aad",
       "hookAudioUrl": "audio/hooks/466.mp3?v=8eb35dbf69fe",
       "senses": [
@@ -52391,7 +52421,7 @@
           "definition": "One of the people talking in a conversation or formal discussion, often the one you are speaking with.",
           "plainLanguageDefinition": "Whoever you are trading words with in a conversation or debate.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/904.mp3?v=447b8ed34cf6",
           "examples": [
@@ -52446,11 +52476,11 @@
         {
           "senseId": 1027,
           "definition": "A go-between who speaks to one side on behalf of another, as in peace talks.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A person who carries talks between two sides, speaking for one of them.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1027.mp3?v=b7aaa7380acf",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1027.mp3?v=85978eacb213",
           "examples": [],
           "distractors": []
         }
@@ -52477,10 +52507,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1739796,
-      "etymology": null,
+      "etymology": "From French lampon (\"satire\"), probably from lampons (\"let us drink\"), a refrain of rowdy mocking songs, from lamper (\"to gulp down\"). Such songs jeered at public figures.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mercilessly lampooned",
+        "often lampooned",
+        "cartoons lampooning"
+      ],
       "audioUrl": "audio/words/467.mp3?v=25e31aa80ab2",
       "hookAudioUrl": "audio/hooks/467.mp3?v=4d671cfa321a",
       "senses": [
@@ -52588,10 +52622,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 309709,
-      "etymology": null,
+      "etymology": "From Ancient Greek litaneia (\"prayer, supplication\"), through Latin and Old French. A church litany runs through a long series of petitions, and the word spread to any tiresome list.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "litany of complaints",
+        "long litany",
+        "familiar litany"
+      ],
       "audioUrl": "audio/words/468.mp3?v=61cfbd60b534",
       "hookAudioUrl": "audio/hooks/468.mp3?v=51081ca5c2ca",
       "senses": [
@@ -52655,11 +52693,11 @@
         {
           "senseId": 1028,
           "definition": "A form of worship in which a list of requests to God is chanted, with the people repeating one reply throughout.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A church prayer made of many short requests, with the congregation giving the same answer to each one.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1028.mp3?v=436356fe9cf3",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1028.mp3?v=d18c07df4d14",
           "examples": [],
           "distractors": []
         }
@@ -52694,10 +52732,14 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 359312,
-      "etymology": null,
+      "etymology": "From Middle English loth, from Old English lath (\"hateful, hostile\") or a related Old Norse word; the verb loathe comes from the same source. Being unwilling grew out of finding a thing hateful.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Do not confuse loath, an adjective meaning unwilling (\"loath to leave\"), with the verb loathe, meaning to hate.",
+      "pairings": [
+        "loath to admit",
+        "loath to leave",
+        "loath to part with"
+      ],
       "audioUrl": "audio/words/469.mp3?v=db4a66d2d9ae",
       "hookAudioUrl": "audio/hooks/469.mp3?v=c1bb1b698339",
       "senses": [
@@ -52706,7 +52748,7 @@
           "definition": "Strongly disinclined to do something and slow to agree to it.",
           "plainLanguageDefinition": "Holding back from something you would much rather not do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/908.mp3?v=67e0bd84ee3c",
           "examples": [
@@ -52805,10 +52847,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 795411,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French from Italian pasticcio, a pie with a mixed filling, from Late Latin pasta (\"dough, paste\"): a pastiche mixes or copies borrowed styles as such a pie mixes ingredients.",
+      "roots": [
+        "pasta"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "postmodern pastiche",
+        "literary pastiche",
+        "mere pastiche"
+      ],
       "audioUrl": "audio/words/482.mp3?v=7720b792a3d0",
       "hookAudioUrl": "audio/hooks/482.mp3?v=be9f849618e9",
       "senses": [
@@ -52916,10 +52964,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 144750,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Ancient Greek pathos (\"suffering,\" also \"strong feeling\"), the root of sympathy, empathy and pathetic: pathos is what makes an audience feel for someone who suffers.",
+      "roots": [
+        "pathos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "full of pathos",
+        "touching pathos",
+        "tragic pathos"
+      ],
       "audioUrl": "audio/words/483.mp3?v=47d1a4686c92",
       "hookAudioUrl": "audio/hooks/483.mp3?v=47b6e36e4371",
       "senses": [
@@ -52983,11 +53037,11 @@
         {
           "senseId": 1002,
           "definition": "In rhetoric, an appeal to the listeners' feelings rather than to logic or to the speaker's character.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A way of persuading people by stirring their emotions, one of the three classic appeals with ethos and logos.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1002.mp3?v=6fbed2ab6e98",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1002.mp3?v=167db4a7fe1a",
           "examples": [],
           "distractors": []
         }
@@ -53116,10 +53170,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 775439,
-      "etymology": null,
+      "etymology": "Of uncertain origin: either Anglo-Norman peruser (\"to use up\") or a Medieval Latin verb for \"wear out,\" in form per- (\"thoroughly\") and use. The using-up sense died out; going through a thing with care remained.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Peruse traditionally means to read with care; using it to mean skim or browse is common but disputed.",
+      "pairings": [
+        "carefully perused",
+        "peruse the contents",
+        "peruse the pages"
+      ],
       "audioUrl": "audio/words/485.mp3?v=98acf84c8668",
       "hookAudioUrl": "audio/hooks/485.mp3?v=c2eb3abd9cb5",
       "senses": [
@@ -53128,7 +53186,7 @@
           "definition": "Read or inspect something closely, taking in the details.",
           "plainLanguageDefinition": "To go over a text or document slowly and with care.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/936.mp3?v=3f910a641167",
           "examples": [
@@ -53211,19 +53269,22 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 394961,
-      "etymology": null,
+      "etymology": "From the Philistines, foes of Israel in the Bible, through German Philister, a student word for townspeople outside the university and then for anyone without culture. Thomas Carlyle brought it into English.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bourgeois philistine",
+        "cultural philistine"
+      ],
       "audioUrl": "audio/words/486.mp3?v=a42ffbb9b818",
-      "hookAudioUrl": "audio/hooks/486.mp3?v=baf689038cf9",
+      "hookAudioUrl": "audio/hooks/486.mp3?v=aa51160771f3",
       "senses": [
         {
           "senseId": 937,
           "definition": "A person who scorns or shrugs off art, literature and serious ideas, valuing only practical or material things.",
           "plainLanguageDefinition": "A person with no interest in art, books or ideas, who may even sneer at them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/937.mp3?v=aa5cc0974ba9",
           "examples": [
@@ -53278,11 +53339,11 @@
         {
           "senseId": 1004,
           "definition": "A member of an ancient people who lived on the coast of what is now southern Israel and Gaza.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Someone from an ancient people on the coast around Gaza, who fought Israel in Bible stories.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1004.mp3?v=5e025996f763",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1004.mp3?v=9e925abd20a7",
           "examples": [],
           "distractors": []
         }
@@ -53314,7 +53375,7 @@
         }
       ],
       "mnemonics": [
-        "Philistine comes from the Philistines, the Bible's foes of Israel; German students used Philister for dull townsfolk, and Matthew Arnold brought the insult into English."
+        "Philistine comes from the Philistines, the Bible's foes of Israel; German students used Philister for dull townsfolk, and Matthew Arnold popularized the insult in English."
       ]
     },
     {
@@ -53325,10 +53386,13 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 583548,
-      "etymology": null,
+      "etymology": "From French pique (\"resentment, a quarrel\"), from the verb piquer (\"to prick, sting\"): pique is the sting a person feels when their pride is pricked.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "The verb meaning to stir interest is spelled pique (\"piqued my curiosity\"), not peak or peek, which sound the same.",
+      "pairings": [
+        "fit of pique",
+        "personal pique"
+      ],
       "audioUrl": "audio/words/487.mp3?v=e4f0b4c3848f",
       "hookAudioUrl": "audio/hooks/487.mp3?v=2d2b094383e2",
       "senses": [
@@ -53435,10 +53499,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 488760,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin plebeius (\"of the common people\"), from plebs, the ordinary citizens of Rome as opposed to the patrician families. It came to mean common in a way that snobs look down on.",
+      "roots": [
+        "plebs"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "plebeian culture",
+        "plebeian origins"
+      ],
       "audioUrl": "audio/words/488.mp3?v=22016558eb52",
       "hookAudioUrl": "audio/hooks/488.mp3?v=a7b012536fb1",
       "senses": [
@@ -53447,7 +53516,7 @@
           "definition": "Belonging to or typical of ordinary working people, and so seen by snobs as lacking refinement.",
           "plainLanguageDefinition": "Ordinary and common, lacking the polish that upper-class people prize.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/940.mp3?v=8d411324243e",
           "examples": [
@@ -53502,11 +53571,11 @@
         {
           "senseId": 1006,
           "definition": "Belonging to the ordinary citizens of ancient Rome rather than to its noble families.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of Rome's common people in ancient times, the citizens outside the old ruling families.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1006.mp3?v=5d1373ef5046",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1006.mp3?v=bedbe6d52a14",
           "examples": [],
           "distractors": []
         }
@@ -53557,10 +53626,16 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 792471,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin pontificare, from pontifex, a Roman high priest and later the pope, a word made of pons (\"bridge\") and facere (\"to make\"): to pontificate is to talk with a pope's air of authority.",
+      "roots": [
+        "pontifex",
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pontificate about",
+        "pontificate on"
+      ],
       "audioUrl": "audio/words/489.mp3?v=37323f37a7ae",
       "hookAudioUrl": "audio/hooks/489.mp3?v=f5fc806db3cb",
       "senses": [
@@ -53569,7 +53644,7 @@
           "definition": "Hold forth with lofty self-importance, as if one's opinions were beyond question.",
           "plainLanguageDefinition": "To talk on and on about your opinions as if you were the expert on everything.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/941.mp3?v=36b4044c102a",
           "examples": [
@@ -53663,10 +53738,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1065067,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin portendere (\"to foretell\"), from por- (\"forward\") and tendere (\"to stretch\"): an omen that portends something reaches forward to what is coming.",
+      "roots": [
+        "tendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "portend disaster",
+        "portended trouble"
+      ],
       "audioUrl": "audio/words/490.mp3?v=6f5b6bf42fb0",
       "hookAudioUrl": "audio/hooks/490.mp3?v=206fd7498291",
       "senses": [
@@ -53766,10 +53846,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 255049,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin positus (\"placed\"), a form of ponere (\"to put, place\"), which also gave position and deposit: to posit a claim is to set it down as a starting point.",
+      "roots": [
+        "ponere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "theory posits",
+        "theorists posit",
+        "posit the existence"
+      ],
       "audioUrl": "audio/words/491.mp3?v=bd36ef1e6a1a",
       "hookAudioUrl": "audio/hooks/491.mp3?v=b4f9e5470436",
       "senses": [
@@ -53778,7 +53864,7 @@
           "definition": "Lay down a claim as true for the time being, so that an argument or theory can rest on it.",
           "plainLanguageDefinition": "To suggest an idea as true so you can build an argument on it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/943.mp3?v=b4c6a38c73f5",
           "examples": [
@@ -53876,10 +53962,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 205382,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin praeceptum (\"a rule, an instruction\"), from praecipere, from prae (\"before\") and capere (\"to take\"): praecipere meant to take beforehand and also to instruct.",
+      "roots": [
+        "capere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "moral precepts",
+        "ethical precepts",
+        "basic precept"
+      ],
       "audioUrl": "audio/words/492.mp3?v=6110d1738698",
       "hookAudioUrl": "audio/hooks/492.mp3?v=cb86c87398db",
       "senses": [
@@ -53888,7 +53980,7 @@
           "definition": "A principle or instruction that sets out how a person ought to act.",
           "plainLanguageDefinition": "A rule or lesson about the right way to behave.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/946.mp3?v=c7a0762731c0",
           "examples": [
@@ -53986,10 +54078,13 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 638217,
-      "etymology": null,
+      "etymology": "From Latin promulgare (\"to make known, publish\"), whose own source is uncertain: either pro- (\"forth\") with vulgare (\"to make public\") or mulgere (\"to milk,\" and so \"to bring out\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "promulgated the idea",
+        "promulgated the doctrine"
+      ],
       "audioUrl": "audio/words/493.mp3?v=d5b67a95feec",
       "hookAudioUrl": "audio/hooks/493.mp3?v=acddce44fec8",
       "senses": [
@@ -53998,7 +54093,7 @@
           "definition": "Spread word of a creed, theory or policy far and wide by preaching or publishing it.",
           "plainLanguageDefinition": "To push an idea or a new rule out to the public until nearly everyone has heard of it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/948.mp3?v=81f541eafea8",
           "examples": [
@@ -54053,11 +54148,11 @@
         {
           "senseId": 1010,
           "definition": "Bring a statute or decree into force by publishing it in an official notice.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To publish a rule or law officially so that it becomes binding.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1010.mp3?v=afc59611ced2",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1010.mp3?v=595de8dfbaef",
           "examples": [],
           "distractors": []
         }
@@ -54096,10 +54191,15 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 134873,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Middle French putatif, from Latin putativus (\"supposed\"), from putare (\"to think, reckon\"), also the root of reputation and compute: a putative fact is one that people reckon true.",
+      "roots": [
+        "putare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "putative father",
+        "putative author"
+      ],
       "audioUrl": "audio/words/494.mp3?v=5b51f94c57b2",
       "hookAudioUrl": "audio/hooks/494.mp3?v=853128cf2d29",
       "senses": [
@@ -54108,7 +54208,7 @@
           "definition": "Taken by most people to be the case, though never firmly proven.",
           "plainLanguageDefinition": "Believed or said to be true or real, even though nobody has proved it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/950.mp3?v=bda68846b0b3",
           "examples": [
@@ -54185,10 +54285,14 @@
       "syllables": 1,
       "difficultyTier": 5,
       "frequencyRank": 1982443,
-      "etymology": null,
+      "etymology": "Of uncertain origin, perhaps Old English cwealm (\"death, plague\") or a Dutch or German word for vapor or daze. It meant a fit of faintness before it meant a pang of doubt or conscience.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "moral qualms",
+        "few qualms",
+        "no qualms about"
+      ],
       "audioUrl": "audio/words/495.mp3?v=810457a5973a",
       "hookAudioUrl": "audio/hooks/495.mp3?v=328505c36d15",
       "senses": [
@@ -54281,10 +54385,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1544382,
-      "etymology": null,
+      "etymology": "From French régaler (\"to entertain, to feast\"), from Old French gale (\"merriment, fun\"), probably of Germanic origin: to regale people is to fill them with enjoyment.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "regaled us with",
+        "regaled with stories"
+      ],
       "audioUrl": "audio/words/496.mp3?v=1670d2030260",
       "hookAudioUrl": "audio/hooks/496.mp3?v=a6af97bd57fe",
       "senses": [
@@ -54342,11 +54449,11 @@
         {
           "senseId": 1012,
           "definition": "Serve someone generous helpings of fine food and drink.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To give guests a lavish feast.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1012.mp3?v=493b2a8ea7cc",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1012.mp3?v=208c6e1b54b8",
           "examples": [],
           "distractors": []
         }
@@ -54385,10 +54492,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 873033,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin remissus (\"slack, careless\"), from remittere (\"to send back, let go, relax\"), from mittere (\"to send\"): a remiss person has let their attention to a duty go slack.",
+      "roots": [
+        "mittere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "would be remiss",
+        "remiss in failing to",
+        "remiss in his duty"
+      ],
       "audioUrl": "audio/words/497.mp3?v=9397ccf7404c",
       "hookAudioUrl": "audio/hooks/497.mp3?v=42d9620f138b",
       "senses": [
@@ -54397,7 +54510,7 @@
           "definition": "Falling short in one's duties through carelessness or neglect.",
           "plainLanguageDefinition": "Letting slide a job or task that was yours to take care of.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/954.mp3?v=13b5ea4bf74e",
           "examples": [
