@@ -38434,10 +38434,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 148840,
-      "etymology": null,
+      "etymology": "From Latin clandestinus, 'secret, hidden', which was formed from the Latin adverb clam, 'secretly'.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "clandestine operations",
+        "clandestine meetings",
+        "clandestine activities"
+      ],
       "audioUrl": "audio/words/342.mp3?v=319a73a49da2",
       "hookAudioUrl": "audio/hooks/342.mp3?v=3fd4c6175d2b",
       "senses": [
@@ -38549,10 +38553,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1534307,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin conflare, 'to blow together', used for kindling a fire and fusing metal, from flare, 'to blow'. Conflated ideas are melted into one.",
+      "roots": [
+        "flare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mistakenly conflate",
+        "conflate the two"
+      ],
       "audioUrl": "audio/words/343.mp3?v=cd3aafdba819",
       "hookAudioUrl": "audio/hooks/343.mp3?v=445c2ba303f2",
       "senses": [
@@ -38656,10 +38665,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 179781,
-      "etymology": null,
+      "etymology": "From French consternation, from Latin consternatio, a noun formed from consternare, 'to alarm, to throw into confusion'.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "caused consternation",
+        "utter consternation",
+        "great consternation"
+      ],
       "audioUrl": "audio/words/344.mp3?v=5f8bee885117",
       "hookAudioUrl": "audio/hooks/344.mp3?v=e781f9d55738",
       "senses": [
@@ -38764,10 +38777,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 439515,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Old French from Latin culpabilis, built on culpa, 'fault', the same root as in exculpate: someone culpable is at fault.",
+      "roots": [
+        "culpa"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "morally culpable",
+        "culpable negligence",
+        "held culpable"
+      ],
       "audioUrl": "audio/words/345.mp3?v=3a536f431534",
       "hookAudioUrl": "audio/hooks/345.mp3?v=c468553abcb6",
       "senses": [
@@ -38776,7 +38795,7 @@
           "definition": "Answerable for a wrong or harm in a way that justly earns blame.",
           "plainLanguageDefinition": "At fault for something bad, so that blaming you is fair.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/699.mp3?v=b0a4e45ce72a",
           "examples": [
@@ -38867,10 +38886,16 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 947537,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Through French from Latin cupiditas, 'strong desire', from cupidus, 'eager', and in turn cupere, 'to long for', the verb behind the name Cupid. In English it names greed, mostly for money.",
+      "roots": [
+        "cupere"
+      ],
+      "watchOut": "Despite the link to Cupid, cupidity means greed for wealth and goods, not love or romantic desire.",
+      "pairings": [
+        "insatiable cupidity",
+        "human cupidity",
+        "selfish cupidity"
+      ],
       "audioUrl": "audio/words/346.mp3?v=12f3d47ce241",
       "hookAudioUrl": "audio/hooks/346.mp3?v=4e9044721313",
       "senses": [
@@ -38879,7 +38904,7 @@
           "definition": "Greed for wealth so strong that no amount of it is ever enough.",
           "plainLanguageDefinition": "A greedy urge to get rich, and then richer still.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/700.mp3?v=911fcb4ef682",
           "examples": [
@@ -38970,10 +38995,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 855473,
-      "etymology": null,
+      "etymology": "From French decrier, earlier descrier, 'to shout', with de- probably taken as 'down': to cry something down. In French it could also mean to proclaim a coin devalued.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "critics decry",
+        "widely decried",
+        "publicly decried"
+      ],
       "audioUrl": "audio/words/347.mp3?v=f4d2d4abda73",
       "hookAudioUrl": "audio/hooks/347.mp3?v=b1e61aa7ac2f",
       "senses": [
@@ -38982,7 +39011,7 @@
           "definition": "Raise one's voice in public against something, branding it a wrong.",
           "plainLanguageDefinition": "Say loudly and in public that something is bad.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/701.mp3?v=6fc7f5a43033",
           "examples": [
@@ -39081,10 +39110,15 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 1024179,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Old French demorer, 'to stay, linger', from Latin demorari, 'to delay', built on morari, 'to delay'. Someone who demurs holds back from agreeing.",
+      "roots": [
+        "morari"
+      ],
+      "watchOut": "Demur, a verb meaning to object or hold back, is easily confused with demure, an adjective meaning modest and reserved.",
+      "pairings": [
+        "politely demurred",
+        "demurred at"
+      ],
       "audioUrl": "audio/words/348.mp3?v=f47ac0965b87",
       "hookAudioUrl": "audio/hooks/348.mp3?v=47930f489b76",
       "senses": [
@@ -39192,10 +39226,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 751651,
-      "etymology": null,
+      "etymology": "From Latin denigrare, 'to blacken', built on nigrare, 'to make black'. To denigrate people is to blacken their reputation.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "denigrating remarks",
+        "denigrating comments",
+        "systematically denigrated"
+      ],
       "audioUrl": "audio/words/349.mp3?v=7545f3b2c14e",
       "hookAudioUrl": "audio/hooks/349.mp3?v=46e62c07b13a",
       "senses": [
@@ -39299,10 +39337,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1368633,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin deprecari, from de- and precari, 'to pray': to pray for a danger to be kept away. From there it came to mean openly disapproving of something.",
+      "roots": [
+        "precari"
+      ],
+      "watchOut": "Deprecate means to disapprove of; some usage guides object to its common use for 'belittle', as in self-deprecating, as a mix-up with depreciate.",
+      "pairings": [
+        "strongly deprecate",
+        "earnestly deprecate"
+      ],
       "audioUrl": "audio/words/350.mp3?v=490b09ffb184",
       "hookAudioUrl": "audio/hooks/350.mp3?v=be3a1f3b111c",
       "senses": [
@@ -39311,7 +39354,7 @@
           "definition": "Make known that one firmly objects to a practice or idea.",
           "plainLanguageDefinition": "Say plainly that you strongly dislike or object to something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/705.mp3?v=996a38a8edce",
           "examples": [
@@ -39366,11 +39409,11 @@
         {
           "senseId": 1333,
           "definition": "Tell users of a software feature to stop relying on it because support for it will end.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In software, to flag a feature as old and set to be removed in a later version.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1333.mp3?v=efdbfa4f4923",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1333.mp3?v=ccf7fc81b1bb",
           "examples": [],
           "distractors": []
         }
@@ -39413,10 +39456,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 930686,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Italian dilettante, 'delighting', a form of dilettare, which goes back to Latin delectare, the source of delectable: someone who dabbles for the pleasure of it.",
+      "roots": [
+        "delectare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mere dilettante",
+        "wealthy dilettante",
+        "literary dilettante"
+      ],
       "audioUrl": "audio/words/351.mp3?v=e5635075be9b",
       "hookAudioUrl": "audio/hooks/351.mp3?v=2b84c91ea694",
       "senses": [
@@ -39425,7 +39474,7 @@
           "definition": "A casual follower of an art or field who never puts in the work to master it.",
           "plainLanguageDefinition": "Someone who dabbles in a subject for fun but never learns it deeply.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/707.mp3?v=fe3f8a3e1b89",
           "examples": [
@@ -39508,10 +39557,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 8656809,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Old French desconfire, 'to undo, destroy', from Latin conficere, built on facere, 'to make'. It meant 'defeat'; the sense 'unsettle' came through confusion with discomfort.",
+      "roots": [
+        "facere"
+      ],
+      "watchOut": "Discomfit is a verb, not a form of discomfort; most dictionaries accept its sense 'unsettle', though some usage guides still limit it to 'defeat'.",
+      "pairings": [
+        "discomfiting questions",
+        "looked discomfited"
+      ],
       "audioUrl": "audio/words/352.mp3?v=b58dc41bb973",
       "hookAudioUrl": "audio/hooks/352.mp3?v=81cae7f560d7",
       "senses": [
@@ -39619,10 +39673,16 @@
       "syllables": 5,
       "difficultyTier": 4,
       "frequencyRank": 733777,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed in English from dis- and ingenuous, 'innocent and frank', from Latin ingenuus, which meant both 'freeborn' and 'noble, candid'.",
+      "roots": [
+        "ingenuus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "disingenuous argument",
+        "disingenuous claim",
+        "disingenuous attempt"
+      ],
       "audioUrl": "audio/words/353.mp3?v=cb1156ad7d91",
       "hookAudioUrl": "audio/hooks/353.mp3?v=475126cef5af",
       "senses": [
@@ -39631,7 +39691,7 @@
           "definition": "Insincere in a sly way, using feigned candor or ignorance to mislead.",
           "plainLanguageDefinition": "Putting on a show of honesty to cover up the truth.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/709.mp3?v=6a5c51ed2605",
           "examples": [
@@ -39722,10 +39782,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 584418,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin dissolutus, 'loose, lax', a form of dissolvere, 'to unfasten', which is built on solvere, 'to loosen'. A dissolute life has slipped its moral ties.",
+      "roots": [
+        "solvere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "dissolute life",
+        "dissolute habits",
+        "dissolute youth"
+      ],
       "audioUrl": "audio/words/354.mp3?v=a6b8a0708ddc",
       "hookAudioUrl": "audio/hooks/354.mp3?v=50e75a43f70c",
       "senses": [
@@ -39833,10 +39899,15 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 339524,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Built on Latin duplex, 'double, twofold', the source of duplicate as well: a double game, with one face shown and another hidden.",
+      "roots": [
+        "duplex"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "political duplicity",
+        "moral duplicity"
+      ],
       "audioUrl": "audio/words/355.mp3?v=bbbc4e456b99",
       "hookAudioUrl": "audio/hooks/355.mp3?v=181242e093a8",
       "senses": [
@@ -39940,10 +40011,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 522385,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin egregius, from e-, 'out of', and grex, 'flock': picked out from the herd. It began as praise; the bad sense appeared in the late 1500s, probably through irony.",
+      "roots": [
+        "grex"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "egregious error",
+        "egregious blunder",
+        "egregious violations"
+      ],
       "audioUrl": "audio/words/356.mp3?v=60703ad18fa3",
       "hookAudioUrl": "audio/hooks/356.mp3?v=87b0f1980870",
       "senses": [
@@ -39952,7 +40029,7 @@
           "definition": "Shockingly bad, to a degree that no one can overlook.",
           "plainLanguageDefinition": "So bad that it seems hard to believe or excuse.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/713.mp3?v=e236bd30b1e4",
           "examples": [
@@ -40154,10 +40231,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 481289,
-      "etymology": null,
+      "etymology": "From Anglo-Norman eschiver, from a Frankish verb meaning to dread or shun. Skew comes from a northern French form of the same verb, and shy is a Germanic relative.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "eschew violence",
+        "eschew politics",
+        "deliberately eschewed"
+      ],
       "audioUrl": "audio/words/358.mp3?v=d390489ee2ce",
       "hookAudioUrl": "audio/hooks/358.mp3?v=f2b53f586a7d",
       "senses": [
@@ -40166,7 +40247,7 @@
           "definition": "Deliberately keep clear of something one disapproves of.",
           "plainLanguageDefinition": "To stay away from something by choice, and to stick with that choice.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/715.mp3?v=dd80bf372181",
           "examples": [
@@ -40258,10 +40339,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 606558,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Old French from Latin exhortari, 'to encourage', from ex- and hortari, 'to urge on', the verb also behind hortatory.",
+      "roots": [
+        "hortari"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "earnestly exhort",
+        "exhorts believers",
+        "exhorting people"
+      ],
       "audioUrl": "audio/words/359.mp3?v=8b27a0772246",
       "hookAudioUrl": "audio/hooks/359.mp3?v=c2faa631fff9",
       "senses": [
@@ -40270,7 +40357,7 @@
           "definition": "Call on someone, with earnest and impassioned words, to do something.",
           "plainLanguageDefinition": "To push someone hard, with serious words, to do something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/716.mp3?v=139370af7be0",
           "examples": [
@@ -40361,19 +40448,24 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1297131,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin expiare, 'to atone for', from ex- and piare, 'to appease, purify', a verb formed from pius, 'devout', the source of pious.",
+      "roots": [
+        "pius"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "expiate sin",
+        "expiate guilt"
+      ],
       "audioUrl": "audio/words/360.mp3?v=ae2b9913ae46",
-      "hookAudioUrl": "audio/hooks/360.mp3?v=6c3a0dde9d2d",
+      "hookAudioUrl": "audio/hooks/360.mp3?v=138940a07f8a",
       "senses": [
         {
           "senseId": 718,
           "definition": "Make up for a wrong or sin by accepting a penalty or doing good in return.",
           "plainLanguageDefinition": "To pay for a wrong you did, by suffering or by doing good.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/718.mp3?v=d9f9ac05475f",
           "examples": [
@@ -40442,7 +40534,7 @@
         }
       ],
       "mnemonics": [
-        "Expiate shares a root with pious: Latin piare, 'to make holy or appease'. To expiate a sin is to make yourself clean of it again."
+        "Expiate shares a root with pious: Latin piare, 'to purify or appease', from pius. To expiate a sin is to make yourself clean of it again."
       ]
     },
     {
@@ -40453,10 +40545,14 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 329992,
-      "etymology": null,
+      "etymology": "Latin fastidium meant loathing, and also a choosy, dainty taste; its adjective fastidiosus gave English the word. Someone easily put off is hard to please.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fastidious taste",
+        "fastidious attention",
+        "fastidious care"
+      ],
       "audioUrl": "audio/words/361.mp3?v=23465c336e16",
       "hookAudioUrl": "audio/hooks/361.mp3?v=04330b5c3442",
       "senses": [
@@ -40520,11 +40616,11 @@
         {
           "senseId": 812,
           "definition": "In biology, needing special nutrients or conditions in order to grow, as some bacteria do.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In biology, of a germ, needing exact nutrients or conditions before it will grow.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/812.mp3?v=7106f7b63a4d",
+          "audioUrl": "audio/definitions/812.mp3?v=b9587340d648",
           "examples": [],
           "distractors": []
         }
@@ -40571,10 +40667,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1536070,
-      "etymology": null,
+      "etymology": "From Scots, a shortened form of effectless, with feck standing for effect: a feckless person gets nothing done.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "feckless husband",
+        "feckless father",
+        "feckless youth"
+      ],
       "audioUrl": "audio/words/362.mp3?v=30c88bcb6d61",
       "hookAudioUrl": "audio/hooks/362.mp3?v=e12b023e1ffc",
       "senses": [
@@ -40678,10 +40778,13 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1095065,
-      "etymology": null,
+      "etymology": "Through French from Latin fecundus, 'fertile', a relative of the Latin words that gave English fetus and feminine.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fecund soil",
+        "fecund earth"
+      ],
       "audioUrl": "audio/words/363.mp3?v=4f8c72dc2601",
       "hookAudioUrl": "audio/hooks/363.mp3?v=0be4fbe6e62a",
       "senses": [
@@ -40690,7 +40793,7 @@
           "definition": "Very fertile, with a great capacity to breed or to grow plants.",
           "plainLanguageDefinition": "Bursting with life, so that it breeds or grows a great deal.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/723.mp3?v=8da593434d28",
           "examples": [
@@ -40745,11 +40848,11 @@
         {
           "senseId": 813,
           "definition": "Rich in new ideas and creative work.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Full of fresh ideas, always turning out something new.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/813.mp3?v=c7d164db1f16",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/813.mp3?v=6538972e1ecf",
           "examples": [],
           "distractors": []
         }
@@ -40792,10 +40895,17 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 363110,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin floridus, 'flowery, in bloom', from flos, 'flower'. Florid prose is flowery in the same way, and a florid face has a blooming color.",
+      "roots": [
+        "flos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "florid style",
+        "florid prose",
+        "florid language",
+        "florid rhetoric"
+      ],
       "audioUrl": "audio/words/364.mp3?v=27b7b6402cc4",
       "hookAudioUrl": "audio/hooks/364.mp3?v=6a55cf82befe",
       "senses": [
@@ -40864,11 +40974,11 @@
         {
           "senseId": 1334,
           "definition": "Of skin, especially the face, a strong flushed red.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Red in the face, with skin that looks flushed.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1334.mp3?v=2acb8b23e12b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1334.mp3?v=378fea44ea1d",
           "examples": [],
           "distractors": []
         }
@@ -40915,10 +41025,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2744207,
-      "etymology": null,
+      "etymology": "From an older spelling of French faible, 'weak', which makes it a twin of English feeble. A foible is a slight flaw in a person's makeup.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "human foibles",
+        "personal foibles",
+        "little foibles"
+      ],
       "audioUrl": "audio/words/365.mp3?v=4db3a11071ef",
       "hookAudioUrl": "audio/hooks/365.mp3?v=a2adf92c1b64",
       "senses": [
@@ -40982,11 +41096,11 @@
         {
           "senseId": 815,
           "definition": "In fencing, the outer half of a blade, nearer the tip and easier to deflect.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In fencing, the end half of the blade toward the point, where it is weakest.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/815.mp3?v=0624a0c2d80d",
+          "audioUrl": "audio/definitions/815.mp3?v=b4812a654a47",
           "examples": [],
           "distractors": []
         }

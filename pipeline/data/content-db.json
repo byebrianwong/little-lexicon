@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:11:02.684Z"
+    "updatedAt": "2026-10-30T08:11:38.853Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1047,
-    "reviews": 1413
+    "mnemonics": 1048,
+    "reviews": 1436
   },
   "words": [
     {
@@ -6042,8 +6042,15 @@
       "syllables": 3,
       "frequency_rank": 148840,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin clandestinus, 'secret, hidden', which was formed from the Latin adverb clam, 'secretly'.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "clandestine operations",
+        "clandestine meetings",
+        "clandestine activities"
+      ]
     },
     {
       "id": 343,
@@ -6053,8 +6060,16 @@
       "syllables": 2,
       "frequency_rank": 1534307,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin conflare, 'to blow together', used for kindling a fire and fusing metal, from flare, 'to blow'. Conflated ideas are melted into one.",
+      "audio_url": null,
+      "roots": [
+        "flare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "mistakenly conflate",
+        "conflate the two"
+      ]
     },
     {
       "id": 344,
@@ -6064,8 +6079,15 @@
       "syllables": 4,
       "frequency_rank": 179781,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French consternation, from Latin consternatio, a noun formed from consternare, 'to alarm, to throw into confusion'.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "caused consternation",
+        "utter consternation",
+        "great consternation"
+      ]
     },
     {
       "id": 345,
@@ -6075,8 +6097,17 @@
       "syllables": 3,
       "frequency_rank": 439515,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Old French from Latin culpabilis, built on culpa, 'fault', the same root as in exculpate: someone culpable is at fault.",
+      "audio_url": null,
+      "roots": [
+        "culpa"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "morally culpable",
+        "culpable negligence",
+        "held culpable"
+      ]
     },
     {
       "id": 346,
@@ -6086,8 +6117,17 @@
       "syllables": 4,
       "frequency_rank": 947537,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin cupiditas, 'strong desire', from cupidus, 'eager', and in turn cupere, 'to long for', the verb behind the name Cupid. In English it names greed, mostly for money.",
+      "audio_url": null,
+      "roots": [
+        "cupere"
+      ],
+      "watch_out": "Despite the link to Cupid, cupidity means greed for wealth and goods, not love or romantic desire.",
+      "pairings": [
+        "insatiable cupidity",
+        "human cupidity",
+        "selfish cupidity"
+      ]
     },
     {
       "id": 347,
@@ -6097,8 +6137,15 @@
       "syllables": 2,
       "frequency_rank": 855473,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French decrier, earlier descrier, 'to shout', with de- probably taken as 'down': to cry something down. In French it could also mean to proclaim a coin devalued.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "critics decry",
+        "widely decried",
+        "publicly decried"
+      ]
     },
     {
       "id": 348,
@@ -6108,8 +6155,16 @@
       "syllables": 2,
       "frequency_rank": 1024179,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French demorer, 'to stay, linger', from Latin demorari, 'to delay', built on morari, 'to delay'. Someone who demurs holds back from agreeing.",
+      "audio_url": null,
+      "roots": [
+        "morari"
+      ],
+      "watch_out": "Demur, a verb meaning to object or hold back, is easily confused with demure, an adjective meaning modest and reserved.",
+      "pairings": [
+        "politely demurred",
+        "demurred at"
+      ]
     },
     {
       "id": 349,
@@ -6119,8 +6174,15 @@
       "syllables": 3,
       "frequency_rank": 751651,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin denigrare, 'to blacken', built on nigrare, 'to make black'. To denigrate people is to blacken their reputation.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "denigrating remarks",
+        "denigrating comments",
+        "systematically denigrated"
+      ]
     },
     {
       "id": 350,
@@ -6130,8 +6192,16 @@
       "syllables": 3,
       "frequency_rank": 1368633,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin deprecari, from de- and precari, 'to pray': to pray for a danger to be kept away. From there it came to mean openly disapproving of something.",
+      "audio_url": null,
+      "roots": [
+        "precari"
+      ],
+      "watch_out": "Deprecate means to disapprove of; some usage guides object to its common use for 'belittle', as in self-deprecating, as a mix-up with depreciate.",
+      "pairings": [
+        "strongly deprecate",
+        "earnestly deprecate"
+      ]
     },
     {
       "id": 351,
@@ -6141,8 +6211,17 @@
       "syllables": 3,
       "frequency_rank": 930686,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Italian dilettante, 'delighting', a form of dilettare, which goes back to Latin delectare, the source of delectable: someone who dabbles for the pleasure of it.",
+      "audio_url": null,
+      "roots": [
+        "delectare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "mere dilettante",
+        "wealthy dilettante",
+        "literary dilettante"
+      ]
     },
     {
       "id": 352,
@@ -6152,8 +6231,16 @@
       "syllables": 3,
       "frequency_rank": 8656809,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French desconfire, 'to undo, destroy', from Latin conficere, built on facere, 'to make'. It meant 'defeat'; the sense 'unsettle' came through confusion with discomfort.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": "Discomfit is a verb, not a form of discomfort; most dictionaries accept its sense 'unsettle', though some usage guides still limit it to 'defeat'.",
+      "pairings": [
+        "discomfiting questions",
+        "looked discomfited"
+      ]
     },
     {
       "id": 353,
@@ -6163,8 +6250,17 @@
       "syllables": 5,
       "frequency_rank": 733777,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in English from dis- and ingenuous, 'innocent and frank', from Latin ingenuus, which meant both 'freeborn' and 'noble, candid'.",
+      "audio_url": null,
+      "roots": [
+        "ingenuus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "disingenuous argument",
+        "disingenuous claim",
+        "disingenuous attempt"
+      ]
     },
     {
       "id": 354,
@@ -6174,8 +6270,17 @@
       "syllables": 3,
       "frequency_rank": 584418,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin dissolutus, 'loose, lax', a form of dissolvere, 'to unfasten', which is built on solvere, 'to loosen'. A dissolute life has slipped its moral ties.",
+      "audio_url": null,
+      "roots": [
+        "solvere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "dissolute life",
+        "dissolute habits",
+        "dissolute youth"
+      ]
     },
     {
       "id": 355,
@@ -6185,8 +6290,16 @@
       "syllables": 4,
       "frequency_rank": 339524,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built on Latin duplex, 'double, twofold', the source of duplicate as well: a double game, with one face shown and another hidden.",
+      "audio_url": null,
+      "roots": [
+        "duplex"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "political duplicity",
+        "moral duplicity"
+      ]
     },
     {
       "id": 356,
@@ -6196,8 +6309,17 @@
       "syllables": 3,
       "frequency_rank": 522385,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin egregius, from e-, 'out of', and grex, 'flock': picked out from the herd. It began as praise; the bad sense appeared in the late 1500s, probably through irony.",
+      "audio_url": null,
+      "roots": [
+        "grex"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "egregious error",
+        "egregious blunder",
+        "egregious violations"
+      ]
     },
     {
       "id": 357,
@@ -6218,8 +6340,15 @@
       "syllables": 2,
       "frequency_rank": 481289,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman eschiver, from a Frankish verb meaning to dread or shun. Skew comes from a northern French form of the same verb, and shy is a Germanic relative.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "eschew violence",
+        "eschew politics",
+        "deliberately eschewed"
+      ]
     },
     {
       "id": 359,
@@ -6229,8 +6358,17 @@
       "syllables": 2,
       "frequency_rank": 606558,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Old French from Latin exhortari, 'to encourage', from ex- and hortari, 'to urge on', the verb also behind hortatory.",
+      "audio_url": null,
+      "roots": [
+        "hortari"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "earnestly exhort",
+        "exhorts believers",
+        "exhorting people"
+      ]
     },
     {
       "id": 360,
@@ -6240,8 +6378,16 @@
       "syllables": 3,
       "frequency_rank": 1297131,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin expiare, 'to atone for', from ex- and piare, 'to appease, purify', a verb formed from pius, 'devout', the source of pious.",
+      "audio_url": null,
+      "roots": [
+        "pius"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "expiate sin",
+        "expiate guilt"
+      ]
     },
     {
       "id": 361,
@@ -6251,8 +6397,15 @@
       "syllables": 4,
       "frequency_rank": 329992,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Latin fastidium meant loathing, and also a choosy, dainty taste; its adjective fastidiosus gave English the word. Someone easily put off is hard to please.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "fastidious taste",
+        "fastidious attention",
+        "fastidious care"
+      ]
     },
     {
       "id": 362,
@@ -6262,8 +6415,15 @@
       "syllables": 2,
       "frequency_rank": 1536070,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Scots, a shortened form of effectless, with feck standing for effect: a feckless person gets nothing done.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "feckless husband",
+        "feckless father",
+        "feckless youth"
+      ]
     },
     {
       "id": 363,
@@ -6273,8 +6433,14 @@
       "syllables": 2,
       "frequency_rank": 1095065,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French from Latin fecundus, 'fertile', a relative of the Latin words that gave English fetus and feminine.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "fecund soil",
+        "fecund earth"
+      ]
     },
     {
       "id": 364,
@@ -6284,8 +6450,18 @@
       "syllables": 2,
       "frequency_rank": 363110,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin floridus, 'flowery, in bloom', from flos, 'flower'. Florid prose is flowery in the same way, and a florid face has a blooming color.",
+      "audio_url": null,
+      "roots": [
+        "flos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "florid style",
+        "florid prose",
+        "florid language",
+        "florid rhetoric"
+      ]
     },
     {
       "id": 365,
@@ -6295,8 +6471,15 @@
       "syllables": 2,
       "frequency_rank": 2744207,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From an older spelling of French faible, 'weak', which makes it a twin of English feeble. A foible is a slight flaw in a person's makeup.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "human foibles",
+        "personal foibles",
+        "little foibles"
+      ]
     },
     {
       "id": 366,
@@ -13098,7 +13281,7 @@
       "definition": "Answerable for a wrong or harm in a way that justly earns blame.",
       "plain_language_definition": "At fault for something bad, so that blaming you is fair.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 700,
@@ -13106,7 +13289,7 @@
       "definition": "Greed for wealth so strong that no amount of it is ever enough.",
       "plain_language_definition": "A greedy urge to get rich, and then richer still.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 701,
@@ -13114,7 +13297,7 @@
       "definition": "Raise one's voice in public against something, branding it a wrong.",
       "plain_language_definition": "Say loudly and in public that something is bad.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 702,
@@ -13138,7 +13321,7 @@
       "definition": "Make known that one firmly objects to a practice or idea.",
       "plain_language_definition": "Say plainly that you strongly dislike or object to something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 707,
@@ -13146,7 +13329,7 @@
       "definition": "A casual follower of an art or field who never puts in the work to master it.",
       "plain_language_definition": "Someone who dabbles in a subject for fun but never learns it deeply.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 708,
@@ -13162,7 +13345,7 @@
       "definition": "Insincere in a sly way, using feigned candor or ignorance to mislead.",
       "plain_language_definition": "Putting on a show of honesty to cover up the truth.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 710,
@@ -13186,7 +13369,7 @@
       "definition": "Shockingly bad, to a degree that no one can overlook.",
       "plain_language_definition": "So bad that it seems hard to believe or excuse.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 714,
@@ -13202,7 +13385,7 @@
       "definition": "Deliberately keep clear of something one disapproves of.",
       "plain_language_definition": "To stay away from something by choice, and to stick with that choice.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 716,
@@ -13210,7 +13393,7 @@
       "definition": "Call on someone, with earnest and impassioned words, to do something.",
       "plain_language_definition": "To push someone hard, with serious words, to do something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 718,
@@ -13218,7 +13401,7 @@
       "definition": "Make up for a wrong or sin by accepting a penalty or doing good in return.",
       "plain_language_definition": "To pay for a wrong you did, by suffering or by doing good.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 719,
@@ -13242,7 +13425,7 @@
       "definition": "Very fertile, with a great capacity to breed or to grow plants.",
       "plain_language_definition": "Bursting with life, so that it breeds or grows a great deal.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 725,
@@ -13724,25 +13907,28 @@
       "id": 812,
       "word_id": 361,
       "definition": "In biology, needing special nutrients or conditions in order to grow, as some bacteria do.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In biology, of a germ, needing exact nutrients or conditions before it will grow.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 813,
       "word_id": 363,
       "definition": "Rich in new ideas and creative work.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Full of fresh ideas, always turning out something new.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 815,
       "word_id": 365,
       "definition": "In fencing, the outer half of a blade, nearer the tip and easier to deflect.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In fencing, the end half of the blade toward the point, where it is weakest.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 817,
@@ -16881,17 +17067,19 @@
       "id": 1333,
       "word_id": 350,
       "definition": "Tell users of a software feature to stop relying on it because support for it will end.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In software, to flag a feature as old and set to be removed in a later version.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1334,
       "word_id": 364,
       "definition": "Of skin, especially the face, a strong flushed red.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Red in the face, with skin that looks flushed.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1335,
@@ -71244,14 +71432,6 @@
       "revision": 3
     },
     {
-      "id": 724,
-      "word_id": 360,
-      "text": "Expiate shares a root with pious: Latin piare, 'to make holy or appease'. To expiate a sin is to make yourself clean of it again.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 725,
       "word_id": 361,
       "text": "Fastidious comes from Latin fastidium, 'disgust': a fastidious person is put off by the smallest smudge or mistake.",
@@ -73623,6 +73803,14 @@
       "id": 1047,
       "word_id": 454,
       "text": "Gauche is French for left and also for awkward: picture a right-handed guest fumbling with the left hand at a formal dinner.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1048,
+      "word_id": 360,
+      "text": "Expiate shares a root with pious: Latin piare, 'to purify or appease', from pius. To expiate a sin is to make yourself clean of it again.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -124723,8 +124911,8 @@
     },
     {
       "path": "definitions/1333.mp3",
-      "bytes": 21943,
-      "key": "f4450ec28574f2e4",
+      "bytes": 22570,
+      "key": "ca082653b09802bf",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124807,8 +124995,8 @@
     },
     {
       "path": "definitions/812.mp3",
-      "bytes": 25496,
-      "key": "e75a5ff79ceccfd4",
+      "bytes": 23406,
+      "key": "0108a5220f8f9060",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124828,8 +125016,8 @@
     },
     {
       "path": "definitions/813.mp3",
-      "bytes": 11598,
-      "key": "606d692232914929",
+      "bytes": 14733,
+      "key": "9d953ed1392ffd48",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124842,8 +125030,8 @@
     },
     {
       "path": "definitions/1334.mp3",
-      "bytes": 15047,
-      "key": "a514e92ea9e0016b",
+      "bytes": 12016,
+      "key": "b67f08217d0e14ac",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124856,8 +125044,8 @@
     },
     {
       "path": "definitions/815.mp3",
-      "bytes": 20376,
-      "key": "63e11ce51e5e0c6c",
+      "bytes": 19017,
+      "key": "facf954ab3133323",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129651,8 +129839,8 @@
     },
     {
       "path": "hooks/360.mp3",
-      "bytes": 34795,
-      "key": "6ee7753b48881d48",
+      "bytes": 38243,
+      "key": "7e4bf642035b7096",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -178876,6 +179064,731 @@
         "alsoMeans": 5
       },
       "checker_notes": "Weakest point: nothing. incidere from caedere is right (Oxford gives the same), and caedere shows in decide, concise and the -cide words. Tone null is right (approving only on Oxford). Sense 1026 (cutting teeth) is rightly hidden. Pairings common: incisive analysis 20.9, comments 15.8, mind 6.4."
+    },
+    {
+      "id": 1414,
+      "word_id": 342,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary clandestine and the Latin page clandestinus (from an earlier adverb built on clam, 'secretly'); Oxford Learner's and Longman origin notes agree. No root: clam shows in no other English word. Tone: Oxford and Cambridge mark it formal, Longman does not, so null. Pairings from the collocations list (operations, meetings, activities; all over 34 per billion in Google Books). Hook claim (clam, 'secretly') is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook checked against Wiktionary clandestine and its Latin page clandestinus (from an earlier adverb *clamde, built on clam 'secretly'), so the clam claim holds; Oxford and Longman give the same. Tone null is right: Oxford and Cambridge mark it formal, Longman does not. Pairings are the tool's top three nouns. Weakest point: the origin says 'formed from clam' where Wiktionary has an intermediate adverb, a fair simplification."
+    },
+    {
+      "id": 1415,
+      "word_id": 343,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary conflate (conflatus, participle of conflo, 'fuse, kindle, blow together') and the Latin page conflo; Oxford's note gives con- plus flare, 'to blow'. Root flare also shows in inflate and deflate. Tone: Oxford and Longman mark it formal, Cambridge does not, so null. Pairings from the collocations lists (mistakenly before conflate and conflates); 'conflate the two' is 18 per billion in Google Books. Hook (conflare, 'to blow together', used for fusing metals) agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (conflo 'fuse, kindle, blow together') and Oxford's note that the English word first meant fusing metal; the step to today's meaning is given. Root flare is the right linking form (inflate, deflate). Tone null is right (Oxford and Longman formal, Cambridge not). Weakest point: pairings. 'conflate the two' is common (18.3 per billion in Google Books 2010 to 2022), but 'mistakenly conflate' is thin there (0.8) though Datamuse lists it."
+    },
+    {
+      "id": 1416,
+      "word_id": 344,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary consternation and the Latin page consterno (sense 'to alarm, shock, throw into confusion'). Wiktionary ties it to sternere, 'to strew', but calls the derivation of the ending disputed, so the origin stops at consternare and no root is given. Tone: only Oxford marks it formal, so null. Pairings from the collocations list (caused, utter, great before consternation); 'great' is generic, so pairings 4. Hook is a sound-alike picture (stern in the middle) and makes no origin claim; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French consternation, Latin consternatio); the gloss of consternare goes past the English page (the Latin page consterno would not load under rate limits) and agrees with Oxford ('lay prostrate, terrify') and Longman ('to frighten'). Hook is a spelling picture with no origin claim. Tone null is right (only Oxford marks it formal). Pairings: 'great consternation' (41 per billion) and 'utter consternation' (6.9) are intensifiers that fit any noun; only 'caused consternation' (31) shows the word at work."
+    },
+    {
+      "id": 1417,
+      "word_id": 345,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary culpable (Old French culpable, Latin culpabilis, culpo, culpa 'fault'). Root culpa matches exculpate in the record. Tone: Oxford, Cambridge and Longman all mark it formal. Pairings from the collocations lists (morally, held before; negligence after). Hook (culpa, fault, as in mea culpa) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (culpabilis, from culpo, from culpa 'fault'); exculpate and mea culpa are true relatives, and culpa is spelled as on exculpate. Formal in Oxford, Cambridge and Longman. Pairings are all high in the tool's lists. Weakest point: 'culpable negligence' leans toward the legal use Longman lists separately, though it fits the first sense."
+    },
+    {
+      "id": 1418,
+      "word_id": 346,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cupidity (French cupidite, Latin cupiditas 'strong desire', cupidus; compare Cupid) ; Oxford and Longman origin notes give cupidus from cupere, 'to desire' (Wiktionary's cupidus page could not be fetched, rate limit). Root cupere also shows in Cupid and concupiscence. Tone: all three mark it formal. Watch-out: the Cupid link tempts learners to read it as love, a classic test trap. Pairings from the collocations list (insatiable, human, selfish). Hook is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French cupidite, Latin cupiditas, cupidus) and Oxford and AHD for cupidus from cupere; Cupid is a true relative and the step to 'greed for money' is given. Formal in all three dictionaries. The Cupid watch-out is a real trap for this word. Weakest point: pairings. 'selfish cupidity' is thin (0.22 per billion against 0.89 for 'insatiable' and 1.23 for 'human') and says little, since cupidity is selfish by definition. Root cupere shows in few English words besides cupid."
+    },
+    {
+      "id": 1419,
+      "word_id": 347,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary decry (Middle French decrier, Old French descrier 'to shout'; the run-down sense and the currency sense were in French by the 13th century, 'presumably' from reading de- as 'down', a hedge kept as 'probably'). Oxford's note also gives the coin sense. No root. Tone: all three mark it formal. Pairings from the collocations lists (critics before decry; widely, publicly before decried). Hook (through French from crier, to cry out) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle French decrier, Old French descrier 'to shout') and keeps its hedge on de- read as 'down' ('presumably' becomes 'probably'); the coin sense is in Wiktionary and Oxford. Hook's 'from crier' agrees with AHD (des- + crier). Formal in all three. Pairings all in the tool's lists. Weakest point: the coin sentence is a side fact that a learner does not need."
+    },
+    {
+      "id": 1420,
+      "word_id": 348,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary demur (Middle English demuren, Old French demorer 'to remain, stay', Latin demorari, from de- and moror 'to delay'); the Indo-European step Wiktionary hedges is left out. Root morari also shows in moratorium. Tone: Oxford and Cambridge mark it formal, Longman does not, so null. Watch-out: demur and demure are a common look-alike pair. Pairings: 'politely' is in the collocations list before demurs, and Google Books gives 'politely demurred' 2.2 and 'demurred at' 12 per billion ('demurred at' shows the construction but is generic, so pairings 4); 'little demur' and 'without demur' use the noun and were left out. Hook (demorari, to linger or delay) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Old French demorer, Latin demorari, moror 'to delay') and leave out its hedged PIE part; morari shows in moratorium. Tone null is right (Oxford and Cambridge formal, Longman not). The demure watch-out is the classic mix-up and is true. Weakest point: pairings. 'politely demurred' is good (2.2 per billion), but 'demurred at' (12.1) is only a preposition and does not show the meaning."
+    },
+    {
+      "id": 1421,
+      "word_id": 349,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary denigrate (denigratus, from de- and nigro 'to blacken'; it keeps the literal 'to blacken' as a rare sense) ; Oxford's note agrees. No root: niger shows in no common English word. Tone: only Oxford marks it formal, so null. Pairings from the collocations lists (remarks, comments after denigrating; systematically before denigrated). Hook (denigrare, to blacken) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (denigro 'to blacken', from nigro). Tone null is right (only Oxford marks it formal). Pairings are in the tool's lists ('denigrating remarks' 13602, 'denigrating comments' 10839, 'systematically denigrated' 7600). Weakest point: two of the three pairings use the -ing adjective rather than the verb."
+    },
+    {
+      "id": 1422,
+      "word_id": 350,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary deprecate (deprecatus, from deprecor 'to pray against', from de- and precor 'to pray'); Oxford's note gives the early 17th-century sense 'pray against'. Root precari also shows in imprecation and precarious. Tone: all three mark it formal. Watch-out follows Wiktionary's usage note: the 'belittle' sense is sometimes condemned as a confusion with depreciate, but AHD reports it as widespread, so it is stated as an objection, not an error. Pairings from the collocations lists (strongly, earnestly before deprecate). Software sense shown: Oxford Learner's lists it (computing) and 'deprecated features' is common; labelled technical. Hook is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (deprecor 'to pray against', from precor) and give the step to disapproval. Formal in all three; technical on the software sense matches Oxford's computing label. Watch-out is a real mix-up and frames the 'belittle' use as a dispute, but the sentence is crowded and AHD treats that use as a development rather than a mix-up. Pairings: 'earnestly deprecate' is dated (0.74 per billion in 2010 to 2022). Also means: 'flag a feature as old' is loose; deprecation marks it as discouraged or superseded."
+    },
+    {
+      "id": 1423,
+      "word_id": 351,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary dilettante (present participle of Italian dilettare, from Latin delectare; related terms delectable, delight). Root delectare also shows in delectable. Tone: Oxford (noun entry dilettante_2, fetched) marks it disapproving and Cambridge 'usually disapproving'; Longman has no label. Pairings from the collocations list (mere, wealthy, literary). Hook (dilettare, to delight) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Italian present participle of dilettare, from Latin delectare); delectable is a true relative and the step to dabbling for pleasure is given. Disapproving matches Oxford and Cambridge ('usually disapproving'); Longman has no label. Pairings are the tool's top adjectives. Weakest point: 'literary dilettante' is the thinnest pairing (0.64 per billion)."
+    },
+    {
+      "id": 1424,
+      "word_id": 352,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary discomfit (Old French desconfit, desconfire 'to undo, to destroy', confire, Latin conficio from com- and facio; the later sense 'to embarrass, disconcert' from confusion with the unrelated discomfort). Oxford's note gives the first sense 'defeat in battle'. Root facere is spelled as in the record. Tone: Oxford literary, Cambridge and Longman formal; no label reaches the rule, so null. Watch-out follows Wiktionary's usage note (prescriptive guides call the 'embarrass' sense a mistake; Merriam-Webster calls it established), stated as a dispute. Pairings from the collocations lists (questions after discomfiting; looked before discomfited); the 'utterly discomfited army' pairings belong to the old 'defeat' sense and were left out. Hook (sounds like discomfort, though the roots differ) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary, including the later sense from confusion with discomfort, and Oxford's 'defeat in battle'; facere is the right root. Hook's 'the roots differ' is true. Tone null is right (Oxford literary, Cambridge and Longman formal). Watch-out: the discomfort mix-up is real (Vocabulary.com lists the pair), but the note packs two points into one long sentence, and 'some usage guides still limit it to defeat' could not be checked in the cached pages."
+    },
+    {
+      "id": 1425,
+      "word_id": 353,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary disingenuous (dis- plus ingenuous), ingenuous and the Latin page ingenuus. Root ingenuus links to ingenuous in the list. Tone: all three mark it formal. Pairings from the collocations list (argument, claim, attempt). Hook (dis- plus ingenuous) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (dis- + ingenuous; ingenuous is a learned borrowing of Latin ingenuus 'of noble character, frank'); 'freeborn' goes past that page and agrees with Vocabulary.com's note. Formal in all three. Pairings are the tool's top nouns and appear in Wiktionary's collocation list. Weakest point: root ingenuus links mostly to ingenuous, the same word without dis-; ingenue is the only other English word that shows it."
+    },
+    {
+      "id": 1426,
+      "word_id": 354,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary dissolute (Middle English, Latin dissolutus), the Latin pages dissolutus (adjective 'loose, lax, negligent'; participle of dissolvo) and dissolvo (dis- and solvo). Oxford and Longman notes agree. Root solvere also shows in solve, dissolve and absolve. Tone: Oxford formal and disapproving, Cambridge literary, Longman none; no label reaches the rule, so null. Pairings from the collocations list (life, habits, youth). Hook (dissolutus, loosened) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary's English page stops at Latin dissolutus; the dissolvere and solvere steps agree with Oxford, Longman and AHD, and the wording is not theirs. Tone null follows the rule (Oxford formal and disapproving, Cambridge literary, Longman none). Pairings are the tool's top nouns. Weakest point: the origin's 'loose, lax' gloss of dissolutus is not on Wiktionary's English page, though Oxford gives 'disconnected, loose'."
+    },
+    {
+      "id": 1427,
+      "word_id": 355,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary duplicity (from Latin duplicare, equivalent to duplex plus -ity) (Wiktionary has no Latin page duplicitas); Oxford and Longman notes give French duplicite from Latin duplex. Root duplex also shows in duplicate and duplex. Tone: Oxford and Cambridge mark it formal; Longman's main entry does not (only its business dictionary does), so null. Pairings from the collocations list (political, moral). Hook (duplex, double) is true; unchanged.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin is true but loose: 'Built on Latin duplex' names no source for the word itself (Late Latin duplicitas, through French, per Oxford, Longman and AHD; Wiktionary has only 'from duplicare, equivalent to duplex + -ity'). Tone null is right (Oxford and Cambridge formal, Longman's main dictionary not). Pairings 'political duplicity' (1.69 per billion) and 'moral duplicity' (1.33) are common but are classifiers that show little of the deceit."
+    },
+    {
+      "id": 1428,
+      "word_id": 356,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary egregious (Latin egregius from e- and grex 'flock'; usage note: the negative meaning arose in the late 16th century, 'probably' from irony, and before that it meant outstanding in a good way). The hedge is kept as 'probably'. Root grex is spelled as on gregarious. Tone: all three mark it formal (Cambridge also disapproving, only one source). Pairings from the collocations list (error, blunder, violations). Hook (e- and grex, stands out from the herd) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (egregius, e- + grex), and its usage note supports the late-16th-century bad sense 'probably' from irony, hedge kept; the wording is not Wiktionary's or Oxford's. grex is spelled as on gregarious. Formal in all three. Pairings are the tool's top nouns. Weakest point: none of substance; 'herd' in the origin against 'flock' in the gloss is a small inconsistency."
+    },
+    {
+      "id": 1429,
+      "word_id": 358,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary eschew (Middle English eschewen, Anglo-Norman eschiver, Frankish *skiuhijan 'to dread, shun, avoid'; a doublet of skew; the page lists shy under See also); Oxford Learner's origin note says the French word is of Germanic origin and related to shy. Wiktionary's shy page could not be fetched (rate limit). No root (Germanic). Tone: all three mark it formal. Pairings from the collocations lists (violence, politics after eschew; deliberately before eschewed). Hook (an Old French word related to English shy) agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Anglo-Norman eschiver, from Frankish *skiuhijan 'to dread, shun'; a doublet of skew, whose form comes through Old Northern French eskiver). Shy as a Germanic relative goes past that page (the shy page would not load) and agrees with Oxford, AHD and Dictionary.com, so the hook's 'related to English shy' holds. Formal in all three. Pairings are in the tool's lists ('eschew violence' 4.1 per billion, 'deliberately eschewed' 4.2, 'eschew politics' 2.2). Weakest point: the origin follows Wiktionary's order of steps and packs three languages into two sentences; it is reworded, but dense for a learner."
+    },
+    {
+      "id": 1430,
+      "word_id": 359,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary exhort (Middle English exorten, Old French exhorter, Latin exhortari 'to encourage', from ex- and hortari 'to incite, spur'). Root hortari also shows in hortatory. Tone: all three mark it formal. Pairings from the collocations lists (earnestly before exhort; believers after exhorts; people after exhorting). Hook (hortari, to urge, as in hortatory) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Old French exhorter, Latin exhortari, hortari 'to incite, spur'); hortatory is a true relative. Formal in all three. Weakest point: pairings. 'exhorting people' (6.5 per billion) has a generic object; 'earnestly exhort' (1.9) and 'exhorts believers' (5.6) are fine."
+    },
+    {
+      "id": 1431,
+      "word_id": 360,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary expiate (expiatus, participle of expio 'atone for'), the Latin pages expio (ex- and pio 'appease; expiate; avenge'), pio and pius; Oxford and Longman notes give piare from pius. Root pius also shows in pious and piety. Tone: all three mark it formal. Pairings from the collocations lists (sin, guilt after expiate). Hook changed: it named piare as the shared root of pious and glossed it 'to make holy', which Wiktionary's pio does not support (it gives 'to appease, propitiate; to purify, expiate', from pius). Smallest fix: the gloss is now 'to purify or appease' and the hook adds 'from pius', so the root pious shares is named correctly.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and the changed hook match Wiktionary: expio 'atone for', and the Latin page pio gives 'to appease, propitiate; to purify, expiate', formed from pius; Oxford and AHD agree, and pious is a true relative. The hook change ('make holy' to 'purify', adding 'from pius') makes it closer to the source. Formal in all three. Weakest point: pairings 'expiate sin' (2.2 per billion) and 'expiate guilt' (1.1) are right, but the bare 'expiate sin' reads less naturally than 'expiate his sins' (2.2)."
+    },
+    {
+      "id": 1432,
+      "word_id": 361,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary fastidious (Latin fastidiosus, from fastidium 'loathing, aversion, disgust, niceness of taste, daintiness'); the further step Wiktionary hedges ('perhaps' from fastus and taedium) is left out. No root. Tone: only Oxford labels it ('sometimes disapproving', on the cleanliness sense), so null. Pairings from the collocations list (taste, attention, care); 'fastidious organisms' belongs to the biology sense and was left out. Biology sense not shown: a general reader rarely meets it. Hook (fastidium, 'disgust') is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (fastidiosus, from fastidium 'loathing, niceness of taste') and leave out its hedged fastus + taedium split; the step to 'hard to please' is given. Tone null is right (Oxford's 'sometimes disapproving' is on its second sense only). Hiding the biology sense is right. Pairings are in the tool's lists ('fastidious taste' 7.4 per billion). Weakest point: 'Someone easily put off is hard to please' is a little abstract for the step."
+    },
+    {
+      "id": 1433,
+      "word_id": 362,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary feckless (Scots feckless, variant of fectless, an aphetic form of effectless) ; Oxford and Longman origin notes give Scots feck as a form of effect. No root. Tone: Oxford disapproving, Cambridge formal, Longman none, so null. Pairings from the collocations list (husband, father, youth). Hook (Scots feck, a shortened form of effect) agrees; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Scots feckless, variant of fectless, a shortened effectless); the hook's 'Scots feck, a shortened form of effect' goes past that page and agrees with Oxford, AHD and Dictionary.com. Tone null follows the rule (Oxford disapproving, Cambridge formal, Longman none). Pairings are in the tool's lists ('feckless father' 2.4 per billion, 'husband' 2.1, 'youth' 1.2). Weakest point: no watch-out, though feckless is often taken to mean reckless; a note could earn its place here."
+    },
+    {
+      "id": 1434,
+      "word_id": 363,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary fecund (Middle French fecond, Latin fecundus 'fertile', related to fetus and femina 'woman'). No root: the shared fe- is too short to spot. Tone: Oxford, Cambridge and Longman all mark the first sense formal. The 'ideas' sense is shown ('fecund imagination' is common); it gets no label because Longman does not list that sense. Pairings from the collocations lists (soil, earth); 'fecund imagination' belongs to the other sense. Hook (shares fe- with fetus) agrees with Wiktionary's 'related to fetus'; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle French fecond, Latin fecundus, related to fetus and femina) in new words; the hook's shared fe- agrees with Dictionary.com's fe- (see fetus). Formal in all three; null on the creative sense is right since Longman lacks it. The creative sense is current ('fecund imagination' is high in the tool) and its plain definition is clear. Weakest point: pairings 'fecund soil' (1.5 per billion) and 'fecund earth' (2.5) are fine but only two."
+    },
+    {
+      "id": 1435,
+      "word_id": 364,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary florid (French floride, Latin floridus 'flowery, blooming') ; flos is from the Oxford and Longman origin notes (Wiktionary's floridus page could not be fetched, rate limit). Root flos also shows in floral and flora. Tone: first sense only Oxford ('usually disapproving'), so null; face sense Cambridge formal, Longman literary, Oxford none, so null. Face sense shown: 'florid complexion' and 'florid face' are the most common pairings of the word. Pairings for the first sense from the collocations list (style, prose, language, rhetoric). Hook (floridus, flowery) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Oxford and Longman (Latin floridus, from flos); Wiktionary adds French floride, which the origin skips. Tone null follows the rule (Oxford 'usually disapproving' on the decoration sense, Longman literary, Cambridge none). Pairings are the tool's top nouns. Also means: the face sense is current ('florid complexion' tops the tool), but 'Red in the face' suggests a passing flush from anger or effort, while Oxford notes a florid face is red by nature."
+    },
+    {
+      "id": 1436,
+      "word_id": 365,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary foible (1640s, Early Modern French foible 'feeble', modern faible; a doublet of feeble). No root. Tone: no source labels it, so null. Pairings from the collocations list (human, personal, little). Fencing sense not shown: rare outside fencing; labelled technical. Hook (an old French word for weak, the same word that gave feeble) is true; unchanged.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (Early Modern French foible, modern faible; doublet of feeble). No labels in the three dictionaries, so null is right; hiding the fencing sense is right. Pairings are the tool's top adjectives. Weakest point: 'little foibles' is the most generic of the three."
     }
   ]
 }
