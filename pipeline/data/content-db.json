@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:35:52.067Z"
+    "updatedAt": "2026-10-30T08:36:19.197Z"
   },
   "counters": {
     "words": 617,
@@ -11,7 +11,7 @@
     "word_relations": 6605,
     "distractors": 7333,
     "mnemonics": 1054,
-    "reviews": 1527
+    "reviews": 1550
   },
   "words": [
     {
@@ -10204,8 +10204,18 @@
       "syllables": 2,
       "frequency_rank": 64742,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from French milieu, \"middle\", made of mi (\"middle\", from Latin medius) and lieu (\"place\", from Latin locus): your milieu is the world you stand in the middle of.",
+      "audio_url": null,
+      "roots": [
+        "medius",
+        "locus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "social milieu",
+        "cultural milieu",
+        "intellectual milieu"
+      ]
     },
     {
       "id": 571,
@@ -10215,8 +10225,13 @@
       "syllables": 3,
       "frequency_rank": 1723639,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French mescreant, \"misbelieving\", from mes- (\"wrongly\") and a verb for believe that goes back to Latin credere. The word first meant a heretic, then any villain.",
+      "audio_url": null,
+      "roots": [
+        "credere"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 572,
@@ -10226,8 +10241,16 @@
       "syllables": 3,
       "frequency_rank": 458347,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman mesnomer, \"to misname\", from mes- (\"wrongly\") and nomer (\"to name\"), which goes back to Latin nomen (\"name\"). It began as a legal term for getting a person's name wrong.",
+      "audio_url": null,
+      "roots": [
+        "nomen"
+      ],
+      "watch_out": "It means a misleading name, not a false belief; that wider use is common but widely treated as an error.",
+      "pairings": [
+        "complete misnomer",
+        "slight misnomer"
+      ]
     },
     {
       "id": 573,
@@ -10237,8 +10260,17 @@
       "syllables": 2,
       "frequency_rank": 147605,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin mores, \"customs, ways\", the plural of mos (\"custom\"), which also gave English moral: a group's mores are the customs it holds to be right.",
+      "audio_url": null,
+      "roots": [
+        "mos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "social mores",
+        "sexual mores",
+        "cultural mores"
+      ]
     },
     {
       "id": 574,
@@ -10248,8 +10280,15 @@
       "syllables": 3,
       "frequency_rank": 434264,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin moribundus (\"dying\"), built on mori (\"to die\"): a moribund patient is near death, and a moribund trade is near its end.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "moribund patient",
+        "moribund economy",
+        "moribund institution"
+      ]
     },
     {
       "id": 575,
@@ -10259,8 +10298,15 @@
       "syllables": 3,
       "frequency_rank": 438936,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From myopia, \"nearsightedness\", from Ancient Greek myein (\"to close\") and ops (\"eye\"). An eye that sees only what is near gave the sense of seeing only the short term.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "myopic view",
+        "myopic focus",
+        "myopic policy"
+      ]
     },
     {
       "id": 576,
@@ -10270,8 +10316,16 @@
       "syllables": 4,
       "frequency_rank": 267583,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Probably borrowed from French, German or Late Latin words built on Latin nihil (\"nothing\"), which also sits inside annihilate: nihilism holds that nothing has real worth.",
+      "audio_url": null,
+      "roots": [
+        "nihil"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "moral nihilism",
+        "ethical nihilism"
+      ]
     },
     {
       "id": 577,
@@ -10281,8 +10335,14 @@
       "syllables": 2,
       "frequency_rank": 52796,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin obliquus (\"slanting\"), through French: an oblique remark comes at its subject on a slant instead of straight on.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "oblique reference",
+        "oblique allusion"
+      ]
     },
     {
       "id": 578,
@@ -10292,8 +10352,17 @@
       "syllables": 2,
       "frequency_rank": 398673,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Taken straight from Latin onus (\"load, burden\"), the word behind onerous and exonerate: the onus is the weight of a task that one side has to carry.",
+      "audio_url": null,
+      "roots": [
+        "onus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "the onus is on",
+        "onus of proof",
+        "shift the onus"
+      ]
     },
     {
       "id": 579,
@@ -10303,8 +10372,17 @@
       "syllables": 4,
       "frequency_rank": 336913,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French ostensible, from Latin ostensus (\"shown\"), a form of ostendere (\"to show\"): the ostensible reason is the one put on display.",
+      "audio_url": null,
+      "roots": [
+        "ostendere"
+      ],
+      "watch_out": "Do not confuse it with ostentatious, meaning showy: an ostensible reason is the one given, which may not be the real one.",
+      "pairings": [
+        "ostensible purpose",
+        "ostensible reason",
+        "ostensible aim"
+      ]
     },
     {
       "id": 580,
@@ -10314,8 +10392,14 @@
       "syllables": 2,
       "frequency_rank": 1243843,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French panache, \"plume\", which came through Italian from Late Latin pinnaculum, also the source of pinnacle. The feathered crest on a helmet lent its name to bold, showy style.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "with panache",
+        "great panache"
+      ]
     },
     {
       "id": 581,
@@ -10325,8 +10409,17 @@
       "syllables": 2,
       "frequency_rank": 333044,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Anglo-Norman parlance, built on parler (\"to speak\"), the verb behind parley and parliament too: a field's parlance is the way its people talk.",
+      "audio_url": null,
+      "roots": [
+        "parler"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "common parlance",
+        "legal parlance",
+        "military parlance"
+      ]
     },
     {
       "id": 582,
@@ -10336,8 +10429,14 @@
       "syllables": 4,
       "frequency_rank": 122374,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin parochialis, from parochia (\"parish, diocese\"), which goes back to Greek paroikia, a church community. Its narrow sense grew from caring only about one's own parish.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "parochial interests",
+        "parochial concerns"
+      ]
     },
     {
       "id": 583,
@@ -10347,8 +10446,17 @@
       "syllables": 3,
       "frequency_rank": 158566,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin prodigiosus, from prodigium (\"omen, wonder\"), which also gave English prodigy. The word first described ominous signs, then anything so great it seemed a marvel.",
+      "audio_url": null,
+      "roots": [
+        "prodigium"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "prodigious memory",
+        "prodigious amount",
+        "prodigious strength"
+      ]
     },
     {
       "id": 584,
@@ -10358,8 +10466,17 @@
       "syllables": 2,
       "frequency_rank": 975378,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French poroffrir, from por- (\"forth\") and offrir (\"to offer\"), which goes back to Latin offerre, built on ferre (\"to carry\"): to proffer is to hold an offer out.",
+      "audio_url": null,
+      "roots": [
+        "ferre"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "proffered hand",
+        "proffer advice",
+        "proffered assistance"
+      ]
     },
     {
       "id": 585,
@@ -10369,8 +10486,15 @@
       "syllables": 4,
       "frequency_rank": 2067124,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From proselyte (\"a convert\"), which came through Latin from Greek proselytos (\"newcomer\"), from pros (\"toward\") and a verb meaning come: to proselytize is to win people over to a faith.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "proselytizing efforts",
+        "proselytizing activities",
+        "proselytizing zeal"
+      ]
     },
     {
       "id": 586,
@@ -10380,8 +10504,17 @@
       "syllables": 3,
       "frequency_rank": 196116,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French provenance, from provenir (\"to come from\"), which goes back to Latin provenire, from pro- (\"forth\") and venire (\"to come\"): a thing's provenance is where it came from.",
+      "audio_url": null,
+      "roots": [
+        "venire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "unknown provenance",
+        "uncertain provenance",
+        "dubious provenance"
+      ]
     },
     {
       "id": 587,
@@ -10402,8 +10535,15 @@
       "syllables": 3,
       "frequency_rank": 736837,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From quag (\"bog\") and mire (\"deep mud\"), first recorded in the 1500s, though it may come instead from an earlier quakemire. The sense of a hopeless tangle dates from the 1700s.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "political quagmire",
+        "legal quagmire",
+        "moral quagmire"
+      ]
     },
     {
       "id": 589,
@@ -10413,8 +10553,14 @@
       "syllables": 3,
       "frequency_rank": 249113,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from French rapprochement, from rapprocher (\"to bring together\"), which adds re- to approcher (\"to approach\"): in a rapprochement, rivals draw near each other again.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "gradual rapprochement",
+        "political rapprochement"
+      ]
     },
     {
       "id": 590,
@@ -10424,8 +10570,17 @@
       "syllables": 5,
       "frequency_rank": 423953,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French récidivisme, from Latin recidivus (\"recurring\"), which comes from recidere (\"to fall back\"), built on cadere (\"to fall\"). A recidivist falls back into crime.",
+      "audio_url": null,
+      "roots": [
+        "cadere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "recidivism rates",
+        "reduce recidivism",
+        "criminal recidivism"
+      ]
     },
     {
       "id": 591,
@@ -10435,8 +10590,17 @@
       "syllables": 5,
       "frequency_rank": 816329,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French récrimination, from a Latin verb joining re- (\"back\") and criminari (\"to accuse\"), from crimen (\"charge, crime\"): a recrimination is an accusation thrown back.",
+      "audio_url": null,
+      "roots": [
+        "crimen"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "mutual recrimination",
+        "bitter recriminations",
+        "angry recriminations"
+      ]
     },
     {
       "id": 592,
@@ -10446,8 +10610,15 @@
       "syllables": 2,
       "frequency_rank": 110655,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French redrecier, \"to set upright again\", from re- (\"again\") and drecier, a verb that goes back to Latin directus (\"straight\"). To give redress is to set a wrong straight.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "seek redress",
+        "legal redress",
+        "redress of grievances"
+      ]
     },
     {
       "id": 593,
@@ -10457,8 +10628,17 @@
       "syllables": 3,
       "frequency_rank": 297096,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French retenue, a form of retenir (\"to retain\"), from Latin retinere, built on tenere (\"to hold\"): a retinue is the band of people a great person keeps in service.",
+      "audio_url": null,
+      "roots": [
+        "tenere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "royal retinue",
+        "large retinue",
+        "armed retinue"
+      ]
     },
     {
       "id": 594,
@@ -16227,7 +16407,7 @@
       "definition": "The mix of people, ideas and customs that make up the world a person moves in.",
       "plain_language_definition": "The world of people, places and habits that surrounds someone.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1114,
@@ -16251,7 +16431,7 @@
       "definition": "The unwritten rules of conduct and moral standards that a group expects its members to follow.",
       "plain_language_definition": "What a group sees as proper and decent behavior, even if no law says so.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1117,
@@ -16267,7 +16447,7 @@
       "definition": "Fixed on the short term or a narrow view, with little thought for what comes later.",
       "plain_language_definition": "Thinking only about what is close at hand and ignoring what comes later.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 1121,
@@ -16291,7 +16471,7 @@
       "definition": "A duty that falls to one particular party, especially the task of proving a disputed claim.",
       "plain_language_definition": "The job of doing or proving something, which rests on one person or side.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1127,
@@ -16323,7 +16503,7 @@
       "definition": "Taking an interest only in local affairs and the concerns of one's own community, while ignoring the larger picture.",
       "plain_language_definition": "Caring only about your own small area or group and not about the rest of the world.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 1134,
@@ -16339,7 +16519,7 @@
       "definition": "Hold out or put forward something for another person to take or turn down.",
       "plain_language_definition": "To hold out your hand, a gift or an idea for someone to take.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1138,
@@ -16347,7 +16527,7 @@
       "definition": "Actively seek converts to one's own religion, or press any belief on others with the same zeal.",
       "plain_language_definition": "To keep pushing other people to join your religion or agree with your beliefs.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 1139,
@@ -16379,7 +16559,7 @@
       "definition": "The mending of a rift between former rivals, especially states, so that they can cooperate again.",
       "plain_language_definition": "When two sides that were enemies or rivals start to get along again.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1143,
@@ -16403,7 +16583,7 @@
       "definition": "Compensation or other action that makes up for an injustice a person has suffered.",
       "plain_language_definition": "Making up for harm done to someone, by fixing it or paying them back.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1147,
@@ -16609,17 +16789,19 @@
       "id": 1193,
       "word_id": 582,
       "definition": "Run by or tied to the church of a local district.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Linked to a local church, such as a school it runs.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1194,
       "word_id": 586,
       "definition": "The paper trail showing each hand a valuable object has passed through since it was made.",
-      "plain_language_definition": null,
+      "plain_language_definition": "The list of past owners of an artwork or antique, used to show that it is genuine.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1195,
@@ -16633,9 +16815,10 @@
       "id": 1196,
       "word_id": 588,
       "definition": "Ground so soft and waterlogged that it sinks under a person's weight.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Boggy, muddy ground too soft to hold a person up.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1197,
@@ -16743,31 +16926,35 @@
       "definition": "Stuck and lifeless, showing no growth, energy or new ideas.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1210,
       "word_id": 575,
       "definition": "Unable to make out distant things clearly, though near objects look sharp.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Having eyes that focus well up close but poorly on anything far off.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1211,
       "word_id": 576,
       "definition": "A radical movement of young Russians in the 1860s that scorned church, state and family authority alike.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A movement of young Russian radicals in the 1860s who rejected the rule of church, state and family.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1212,
       "word_id": 577,
       "definition": "Sloping at an angle, so that it is neither level, upright nor at a right angle to a given line.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Running on a slant rather than level or straight up.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1213,
@@ -16775,7 +16962,8 @@
       "definition": "A plume of feathers worn on top of a helmet or hat.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1214,
@@ -127819,8 +128007,8 @@
     },
     {
       "path": "definitions/1210.mp3",
-      "bytes": 18913,
-      "key": "793599816e6d72ad",
+      "bytes": 19331,
+      "key": "26d67cac2913950a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127833,8 +128021,8 @@
     },
     {
       "path": "definitions/1211.mp3",
-      "bytes": 29675,
-      "key": "aa3d1b30c5ccfd63",
+      "bytes": 29884,
+      "key": "8502d048ab51ce3c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127847,8 +128035,8 @@
     },
     {
       "path": "definitions/1212.mp3",
-      "bytes": 24346,
-      "key": "7dcc86e4c2e23b2a",
+      "bytes": 13375,
+      "key": "7211eefd8b09634a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127896,8 +128084,8 @@
     },
     {
       "path": "definitions/1193.mp3",
-      "bytes": 14838,
-      "key": "5c302f4debd04370",
+      "bytes": 14211,
+      "key": "257fbc49e71cc034",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127931,8 +128119,8 @@
     },
     {
       "path": "definitions/1194.mp3",
-      "bytes": 23510,
-      "key": "a3f411258e9895d3",
+      "bytes": 21316,
+      "key": "7ceda09c5d796667",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -127959,8 +128147,8 @@
     },
     {
       "path": "definitions/1196.mp3",
-      "bytes": 18286,
-      "key": "50388b6e3cb59dbc",
+      "bytes": 14524,
+      "key": "67558ad6e4b05dc3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -183433,6 +183621,726 @@
         "alsoMeans": 5
       },
       "checker_notes": "Weakest: 'contravene international law' is the least common pairing (1.43 per billion). Formal in all three."
+    },
+    {
+      "id": 1528,
+      "word_id": 570,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary milieu (French, from Old French \"middle\", from mi- \"half, middle\", from Latin medius, plus lieu \"place\", from Latin locus) and AHD (mi, middle + lieu, place). Roots medius (medium, median, mediate) and locus (local, locate, dislocate). Hook (mi middle, lieu place) is true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings from the tool's adjective list, Google Books 2010 to 2022: cultural milieu 179, social milieu 178, intellectual milieu 48 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: French milieu is glossed only as 'middle', which is fine. Roots medius and locus are both visible in English. Formal in all three."
+    },
+    {
+      "id": 1529,
+      "word_id": 571,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots"
+      ],
+      "notes": "Origin checked against Wiktionary miscreant (Old French mescreant \"mis-believer\", present participle of mescreire; theology sense \"one who holds a false religious belief\"), AHD (Middle English \"heretic\"; mes- + croire, from Latin credere) and Oxford's note. Root credere (credulous, credible). Hook (mes- wrongly, creant believing; heretic to villain) agrees; unchanged. Tone null: Cambridge and Longman mark it formal, Oxford \"Indian English or literary\", so neither formal (needs all three) nor literary (one) applies. Pairings left empty: the tool's best are rare and generic (local miscreants 0.89, young miscreants 0.85, vile miscreant 0.48 per billion). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: empty pairings, defensible for a rare noun. The heretic-to-villain step matches Oxford's 'disbelieving'. Null tone right (formal only in Cambridge and Longman)."
+    },
+    {
+      "id": 1530,
+      "word_id": 572,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary misnomer (Late Middle English misnoumer, a law term for misidentifying a person; Anglo-Norman mesnomer, from mes- \"wrongly\" + nomer \"to name\", from Latin nominare, from nomen) and AHD. Root nomen, as on ignominious (also nominal, nominate). Hook: \"mis-, wrongly\" is the English form of the Old French prefix mes-, which AHD refers to MIS-; Old French nomer is right; unchanged. Tone null: no labels. Watch-out: Wiktionary marks the \"mistaken belief, myth\" use nonstandard and proscribed, and Oxford, Cambridge and Longman give only the naming sense; the note calls the wider use common but widely treated as an error, not a settled error. Pairings: complete misnomer 2.7, slight misnomer 2.3 per billion, the tool's top adjectives; both are low and slight is generic, so 4. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "hook 4: pairs English mis- with Old French nomer; the source word was Anglo-Norman/Old French mesnomer (mes- + nomer), so the mix is loose, not false. pairings 4: complete and slight are generic modifiers. The watch-out rightly treats 'misnomer' for 'misconception' as disputed."
+    },
+    {
+      "id": 1531,
+      "word_id": 573,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary mores (Latin mores \"ways, character, morals\", plural of mos), Wiktionary morose (from mos; \"see moral\"), AHD and Longman (plural of mos, see MORAL). Root mos, which links it to morose. Hook (Latin plural of mos, custom, root of moral; said MOR-ayz) is true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: social mores 161, sexual mores 79, cultural mores 52 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. mos as the root of moral checks out. Formal in all three."
+    },
+    {
+      "id": 1532,
+      "word_id": 574,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary moribund (Latin moribundus \"dying\"), the Latin page moribundus (morior \"die\" + -bundus), AHD, Oxford and Longman (from mori, to die). No root: mori shows in no other common English word (mortal and mortuary come from the related noun mors). Hook (\"mori, the same root as mortal\") holds: mortal is built on mors, from the same root as mori; unchanged. Tone null: Oxford formal, Cambridge formal and disapproving, Longman no label on the decline sense (literary only on \"slowly dying\"). Pairings: moribund patient 7.0, moribund economy 3.8, moribund institution 1.2 per billion, all in the tool's noun list. Other sense 1209 (\"stuck and lifeless\") stays hidden: the first sense already covers a moribund trade or economy in decline, so it would read as a near-repeat.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "hook 4: says mori is 'the same root as mortal'; mortal comes from mors, death, a related word from the same older root, not from mori, so this is loose. Null tone right (Longman unlabeled)."
+    },
+    {
+      "id": 1533,
+      "word_id": 575,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary myopic (myopia + -ic) and myopia (Ancient Greek myopia, from myo \"to shut, close\" + ops \"eye\"), and AHD (myein, to close the eyes + ops, eye). No root: ops is not a stem a learner would spot elsewhere. Hook (myein shut, ops eye) agrees; unchanged. Tone disapproving: Oxford \"formal, disapproving\", Cambridge \"disapproving\", Longman \"used to show disapproval\". Pairings for the figurative sense: myopic view 18.9, myopic focus 14.4, myopic policy 3.9 per billion (eye, eyes and vision in the tool's list belong to the eye sense). Other sense 1210, the eye sense, is shown with technical: Oxford \"specialist\", Cambridge \"specialized\", Longman \"medical\"; it is the most common use in the corpus (myopic eye, myopic eyes) and explains the figurative one. Its plain definition avoids WordUp's \"distant objects only as a blur\".",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: origin skips Greek myops, the step between myein + ops and myopia (AHD has it). Disapproving matches Oxford and Cambridge; the medical sense is rightly technical and shown."
+    },
+    {
+      "id": 1534,
+      "word_id": 576,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary nihilism (\"probably\" borrowed from French nihilisme, German Nihilismus or Late Latin nihilismus, all from Latin nihil \"nothing\"); the hedge is kept as \"Probably\". Oxford, Longman and Dictionary.com agree on nihil; Dictionary.com annihilate (Late Latin annihilare, from an- + nihil) confirms the annihilate link. Root nihil (annihilate, nil). Hook (nihil, root of annihilate) is true; unchanged. Tone null: Oxford gives only a subject label (philosophy), Cambridge \"specialized\", Longman none. Pairings: moral nihilism 13.0, ethical nihilism 2.4 per billion; only two common ones. Other sense 1211, the Russian movement of the 1860s, is shown: Wiktionary lists it (historical), Dictionary.com and Longman give the political sense, and \"Russian nihilism\" is high in the tool's list; register null. Scored 4 because it is a historical meaning.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "alsoMeans 4: shows the 1860s Russian movement, a historical sense; borderline as a meaning a learner will meet, though it appears in history and literature. The 'probably' hedge is kept."
+    },
+    {
+      "id": 1535,
+      "word_id": 577,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary oblique (from Middle French oblique, borrowed from Latin obliquus), Oxford and Longman (Latin obliquus) and Dictionary.com (Latin obliquus \"slanting\", itself of uncertain origin, which I leave out). The Latin Wiktionary page could not be fetched (rate limit). No root. Hook (Latin obliquus, slanting) matches Dictionary.com; unchanged. Tone null: no label on the indirect sense. Pairings: oblique reference 52.1 per billion (from the tool's list; most of its other nouns, muscle, angle, line, are the slanting sense) and oblique allusion 4.1 (from --check only), so 4. Other sense 1212, slanting, is shown with register null: a current meaning (oblique angle, oblique line) that Oxford and Cambridge list.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. Wiktionary has Middle French oblique from Latin obliquus."
+    },
+    {
+      "id": 1536,
+      "word_id": 578,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary onus (learned borrowing from Latin onus, \"burden\"), Oxford (\"load or burden\"), and Wiktionary exonerate (ex- + onero, from onus) and onerous. Root onus, which links exonerate and onerous. Hook (Latin for a load, root of onerous) is true; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: the onus is on 89.5, onus of proof 52.1, shift the onus 4.1 per billion (lies, rests, falls and shifts lead the tool's list). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. Formal in all three."
+    },
+    {
+      "id": 1537,
+      "word_id": 579,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary ostensible (French ostensible, from Latin ostensus, past participle of ostendo \"show\", from obs- + tendo) and AHD. Root ostendere, the same form as on ostentatious. Hook (ostendere, to show) is true; unchanged. Tone null: Oxford and Cambridge mark it formal, Longman does not. Watch-out: ostensible and ostentatious share a root and look alike, and both are in the list; the note says what ostensible means instead of calling any use wrong (Wiktionary also keeps an older \"meant for open display\" sense). Scored 4: a real look-alike pair, but I found no usage note that calls it a frequent error. Pairings: ostensible purpose 35.1, reason 26.9, aim 6.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: the ostentatious mix-up is real but less common than the classic misreadings; the note is true and brief. Null tone right (Longman unlabeled)."
+    },
+    {
+      "id": 1538,
+      "word_id": 580,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary panache (French panache, from Middle French pennache \"plume of feathers\", from Italian pennacchio, from Late Latin pinnaculum; doublet of pinnacle) and pinnacle (Late Latin pinnaculum), AHD (plume, verve) and Oxford. No root: pinna shows only in rare words. Hook: Wiktionary's first sense is a plume on a helmet; \"a knight's helmet\" is a picture the sources do not give, so 4; unchanged. Tone null: no labels. Pairings: with panache 28.4, great panache 4.5 per billion (great is generic). Plume sense 1213 stays hidden: rare today, and the hook already tells it.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "pairings 4: 'great panache' is a generic intensifier; 'with panache' is the core use. The plume sense is rightly hidden."
+    },
+    {
+      "id": 1539,
+      "word_id": 581,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary parlance (Anglo-Norman parlance, from parler \"to talk\" + -ance), parley and parliament (both from Old French parler), AHD and Longman. Root parler, a French verb like trenchier on trenchant, links parley and parliament. Hook (French parler, to speak) is true; unchanged. Tone null: Oxford and Cambridge mark it formal; Longman's phrase entries (in common parlance, in medical/advertising etc parlance) carry no label. Pairings: common parlance 115.8, legal parlance 10.8, military parlance 9.9 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: root parler is a French verb, not a Latin or Greek stem in linking form (Oxford traces it to Latin parabola), though it is visible in parley and parliament. Null tone right (Longman unlabeled)."
+    },
+    {
+      "id": 1540,
+      "word_id": 582,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary parochial (Late Latin parochialis, an alteration of paroecialis, from Greek paroikia \"stay in a foreign land\", later \"community, diocese\") and parish (Late Latin parochia), AHD (parochia, diocese) and Oxford. The closing clause was written to avoid Vocabulary.com's \"no further than the limits of the parish\". No root: oikos is too far back for a learner to spot. Hook (parochia shared with parish) is true; unchanged. Tone disapproving: Oxford, Cambridge and Longman (\"used to show disapproval\"). Pairings: parochial interests 24.5, parochial concerns 8.3 per billion (schools and clergy belong to the church sense). Other sense 1193 is shown with register null (only Oxford marks it formal): parochial school is the commonest use in the corpus.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: paroikia is glossed as 'a church community', its later sense (first 'stay in a foreign land'). Disapproving in all three; the parish-school sense is rightly shown."
+    },
+    {
+      "id": 1541,
+      "word_id": 583,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary prodigious (Late Middle English \"warning of disaster, portentous\"; Latin prodigiosus, from prodigium \"omen, portent; wonder\"; analysable as prodigy + -ous), Oxford (\"in the sense portentous\") and Dictionary.com (see prodigy). Root prodigium, which links prodigy. Hook (prodigy and prodigious both from prodigium, a marvel or omen) is true; unchanged. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings: prodigious memory 20.2, amount 19.9, strength 12.2 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. Wiktionary's 'warning of disaster' first sense supports the omen step. Null tone right (Longman unlabeled)."
+    },
+    {
+      "id": 1542,
+      "word_id": 584,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary proffer (Anglo-Norman profrer, Old French poroffrir, from por- + offrir, from Latin offerre, from ob- + ferre), AHD (por-, forth, from Latin pro-) and Wiktionary offer. Root ferre, as on deference (offer, transfer). Hook (\"pro-, forward, plus offer\") agrees with AHD and Oxford, which trace the prefix to Latin pro-, and Longman, which glosses por- \"forward\"; unchanged. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: proffered hand 83.7, proffer advice 3.1, proffered assistance 2.7 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "origin 4: glosses Old French por- as 'forth'; Wiktionary glosses it as 'through' or intensive, and Oxford gives Latin pro- 'before', so the gloss is loose. Formal in all three."
+    },
+    {
+      "id": 1543,
+      "word_id": 585,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary proselytize (proselyte + -ize) and proselyte (Old French proselite, Late Latin proselytus, from Greek proselytos \"newcomer, convert\", from pros \"to, towards\" and a stem of the verb for \"come\"). No root. Hook (\"proselyte, Greek for one who has come over\") is loose: proselyte is the English form of Greek proselytos, a newcomer; not false, so unchanged, scored 4. Tone disapproving: Cambridge \"disapproving\", Oxford \"often disapproving\", Longman \"used especially when you disapprove\". All three also mark it formal; only one label fits, and the disapproving tone matters more for using the word. Pairings: proselytizing efforts 6.0, activities 5.3, zeal 2.4 per billion; the -ing form leads the tool's lists. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "hook 4: calls proselyte 'Greek for one who has come over'; the Greek word is proselytos, which reached English through Latin, so this is loose. pairings 4: efforts and activities are generic nouns; zeal is good. Disapproving in all three."
+    },
+    {
+      "id": 1544,
+      "word_id": 586,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary provenance (French provenance, from provenant, present participle of provenir \"come forth, arise\", from Latin provenio), AHD and Oxford (pro- forth + venire come). Root venire (convene, intervene, venue). Hook (provenir, to come from) is true; unchanged. Tone null: Oxford \"specialist\", Cambridge and Longman formal. Pairings: unknown provenance 28.5, uncertain provenance 9.0, dubious provenance 6.9 per billion. Other sense 1194, the ownership history of an artwork, is shown with register null: Wiktionary (arts) and AHD give it and art and museum news use it often; the learner's dictionaries do not label it separately.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. The chain matches Wiktionary and Oxford. Null tone right (Oxford says specialist, not formal)."
+    },
+    {
+      "id": 1545,
+      "word_id": 588,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary quagmire (recorded since 1579 from quag + mire; \"apparently\" perhaps a variation of earlier quakemire; the figurative sense recorded since 1775) and quag (itself of uncertain origin, which I do not claim), Oxford (quag \"marshy or boggy place\" + mire) and Dictionary.com. The quakemire hedge is kept (\"it may come instead\"). No root. Hook (quag, an old word for a bog; mire, deep mud) agrees with Oxford and Wiktionary; unchanged. Tone null: no labels. Pairings: political quagmire 5.9, legal quagmire 4.3, moral quagmire 2.5 per billion. Other sense 1196, boggy ground, is shown with register null: Oxford, Cambridge and Longman all list it; its plain definition avoids Cambridge's and Collins's \"sink into\" and \"gives way under\" wording.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: nothing material. The quakemire alternative is kept as a hedge, and the 1500s and 1700s dates match Wiktionary."
+    },
+    {
+      "id": 1546,
+      "word_id": 589,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary rapprochement (French, from rapprocher \"to near, to approach\" + -ment), AHD (rapprocher, to bring together: re- + approcher) and Oxford (re- intensive + approcher). I glossed rapprocher as \"to bring together\" without \"again\", since Oxford reads re- as intensive. Hook: \"to bring back together\" is loose on that point but not false (AHD lists the prefix as re-), and its end is about the English meaning; unchanged, scored 4. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: political rapprochement 6.0, gradual rapprochement 3.2 per billion (most of the tool's adjectives are national names, which would start with a capital). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "hook 4: glosses rapprocher as 'to bring back together'; dictionaries give 'to bring together' or 'bring near' (Oxford calls the re- intensive), so 'back' is loose. pairings 4: 'gradual rapprochement' is generic. Formal in all three."
+    },
+    {
+      "id": 1547,
+      "word_id": 590,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary recidivism (French recidivisme, from Latin recidivus \"returning, recurring\"), AHD (recidivus \"falling back\", from recidere, re- + cadere) and Dictionary.com (recidivus \"relapsing\", from recidere \"to fall back\", re- + cadere \"to fall\"). Root cadere (decadent, cadence, accident). Hook (recidivus, falling back) matches AHD; unchanged. Tone null: Oxford formal, Cambridge \"specialized\", and Longman has only recidivist (technical), so no label has two votes. Pairings: recidivism rates 86.4, reduce recidivism 45.8, criminal recidivism 17.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: Cambridge (specialized) and Longman (technical) mark it as a specialist term; null is right, since technical is for other senses. recidere and cadere confirmed by Dictionary.com."
+    },
+    {
+      "id": 1548,
+      "word_id": 591,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary recrimination (French recrimination), recriminate (Latin recriminatus, from recrimino; re- + criminate) and the Latin page criminor (from crimen, \"to accuse\"), Oxford and Longman (medieval Latin recriminare, from re- + criminari \"to accuse\", from crimen) and Dictionary.com (\"to accuse in turn\"). Root crimen (crime, criminal, incriminate). Hook (re-, back, with Latin criminari, to accuse) agrees; unchanged. Tone null: no labels. Pairings: mutual recrimination 9.5 (plural 14.3), bitter recriminations 8.7, angry recriminations 2.2 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'a Latin verb' is medieval Latin recriminari (Oxford), which is fine. Null tone right."
+    },
+    {
+      "id": 1549,
+      "word_id": 592,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary redress (Middle English redressen, from Anglo-Norman and Middle French redresser, from Old French redrecier \"to stand up again\", from re- + drecier, from Vulgar Latin, from Latin directus \"straight\"; its \"uncertain\" note is about the older source of re-, which I leave out), Longman (drecier \"to make straight\"), Dictionary.com (drecier \"to straighten\", see dress) and AHD. No root. Hook (\"re- plus dress in its old sense of set straight\"): the prefix was added in French, but English dress comes from the same verb drecier and still means \"align\" in \"dress the ranks\"; loose, not false; unchanged, scored 4. Tone formal: Oxford (its noun page redress_2), Cambridge and Longman all mark the noun formal. Pairings: seek redress 92.0, redress of grievances 78.4, legal redress 64.4 per billion. No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: the origin could have named Latin directus as a root (direct, direction). Formal in all three for the noun (Oxford's noun page checked)."
+    },
+    {
+      "id": 1550,
+      "word_id": 593,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary retinue (Old French retenue, past participle of retenir \"retain\") and retain (Latin retinere, from re- + teneo \"to hold\"), and Oxford (feminine past participle used as a noun). Root tenere, as on abstain and untenable. Hook (\"retenue, a body of people kept on, from retenir, to retain\"): the sources give retenue as the participle \"kept back\" used as a noun, so the gloss is an interpretation; fair, unchanged, scored 4. Tone null: no labels (only Cambridge's American dictionary marks it formal). Pairings: large retinue 18.1, royal retinue 7.7, armed retinue 3.1 per billion (large is generic). No other senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "pairings 4: 'large retinue' is generic, though the most common. The tenere root matches the record."
     }
   ]
 }
