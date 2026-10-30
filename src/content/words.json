@@ -11838,10 +11838,14 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 415935,
-      "etymology": null,
+      "etymology": "From Ancient Greek euphemismos, from eu, \"well\", and pheme, \"speech\". The Greek root word described speech that avoided words of ill omen.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "a euphemism for",
+        "polite euphemism",
+        "euphemism for death"
+      ],
       "audioUrl": "audio/words/105.mp3?v=9a1ab6dd23e3",
       "hookAudioUrl": "audio/hooks/105.mp3?v=ba567236a70b",
       "senses": [
@@ -11921,10 +11925,15 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 474796,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Via French from Latin evanescere, \"to vanish, fade away\", built on vanus, \"empty\". Vanish and vain come from the same Latin source.",
+      "roots": [
+        "vanus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "evanescent beauty",
+        "evanescent moment"
+      ],
       "audioUrl": "audio/words/106.mp3?v=dd3c2ff00020",
       "hookAudioUrl": "audio/hooks/106.mp3?v=f91369b5b10d",
       "senses": [
@@ -11933,7 +11942,7 @@
           "definition": "So faint and brief that it slips away even as you notice it.",
           "plainLanguageDefinition": "Fading away almost as soon as it shows up.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/187.mp3?v=28a6c30611ea",
           "examples": [
@@ -12028,10 +12037,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 224579,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin exacerbare, \"to provoke\", from ex-, \"thoroughly\", and acerbare, \"to make bitter\", which comes from acerbus, \"harsh, bitter\". Acerbic shares the root.",
+      "roots": [
+        "acerbus"
+      ],
+      "watchOut": "Exacerbate is not exasperate: you exacerbate a problem by making it worse, but you exasperate a person by annoying them.",
+      "pairings": [
+        "exacerbate the problem",
+        "exacerbate symptoms",
+        "exacerbate tensions"
+      ],
       "audioUrl": "audio/words/107.mp3?v=0de97001991b",
       "hookAudioUrl": "audio/hooks/107.mp3?v=98fbd8fef033",
       "senses": [
@@ -12144,10 +12159,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2922370,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin exculpare, from ex-, \"out of\", and culpa, \"blame\": to exculpate someone is to free them from blame. Culpable comes from culpa too.",
+      "roots": [
+        "culpa"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "exculpate himself",
+        "exculpate the accused"
+      ],
       "audioUrl": "audio/words/108.mp3?v=e704e0885913",
       "hookAudioUrl": "audio/hooks/108.mp3?v=418570e82794",
       "senses": [
@@ -12156,7 +12176,7 @@
           "definition": "Lift suspicion off a person by showing that the fault lay with someone else or with no one.",
           "plainLanguageDefinition": "To take the blame off someone by showing the facts.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/190.mp3?v=7c36a6a3d611",
           "examples": [
@@ -12255,10 +12275,15 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2081928,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin exigere, \"to demand\", formed from ex-, \"out\", and agere, \"to drive\". Exact and exigency come from the same verb.",
+      "roots": [
+        "agere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "exigent circumstances",
+        "exigent need"
+      ],
       "audioUrl": "audio/words/109.mp3?v=5dfd45ff59d7",
       "hookAudioUrl": "audio/hooks/109.mp3?v=23f4de526a58",
       "senses": [
@@ -12322,11 +12347,11 @@
         {
           "senseId": 1297,
           "definition": "Expecting more effort or care from others than is fair.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Hard to please because it sets the bar too high for others.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1297.mp3?v=65928e1a698b",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1297.mp3?v=9d60855cf721",
           "examples": [],
           "distractors": []
         }
@@ -12369,10 +12394,15 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1118879,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin exonerare, \"to unload\", from ex-, \"off\", and onus, \"a burden\": to exonerate someone is to lift a burden of blame. Onerous shares the root.",
+      "roots": [
+        "onus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "completely exonerated",
+        "officially exonerated"
+      ],
       "audioUrl": "audio/words/110.mp3?v=964ab1a1c12c",
       "hookAudioUrl": "audio/hooks/110.mp3?v=3b1f79c5ec5f",
       "senses": [
@@ -12480,10 +12510,15 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 94673,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin expedire, \"to free the feet from a snare\", from ex, \"out\", and pes, \"foot\". It came to mean to help along, and so to be useful or advantageous.",
+      "roots": [
+        "pes"
+      ],
+      "watchOut": "Expedient is not a synonym for expeditious (fast and efficient); it means convenient for getting a result, often at the cost of what is right.",
+      "pairings": [
+        "politically expedient",
+        "expedient solution"
+      ],
       "audioUrl": "audio/words/111.mp3?v=d2f670959214",
       "hookAudioUrl": "audio/hooks/111.mp3?v=737664fe70e9",
       "senses": [
@@ -12599,19 +12634,24 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1706380,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin expungere, \"to strike out\", from ex-, \"out\", and pungere, \"to prick\". Pungent and puncture come from the same verb.",
+      "roots": [
+        "pungere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "expunged from the record",
+        "expunge the record"
+      ],
       "audioUrl": "audio/words/112.mp3?v=71bbc8def139",
-      "hookAudioUrl": "audio/hooks/112.mp3?v=ac48200cd644",
+      "hookAudioUrl": "audio/hooks/112.mp3?v=e161d6939c2a",
       "senses": [
         {
           "senseId": 196,
           "definition": "Strike out an entry or a passage so that the record no longer shows it.",
           "plainLanguageDefinition": "To wipe something off the books as if it was never there.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/196.mp3?v=20cf2cffcbe6",
           "examples": [
@@ -12687,7 +12727,7 @@
         }
       ],
       "mnemonics": [
-        "Expunge comes from Latin pungere, to prick, as in puncture: scribes pricked dots under a name to strike it from a list."
+        "Expunge comes from Latin pungere, to prick, as in puncture: to expunge a name is to prick it out of a list."
       ]
     },
     {
@@ -12698,10 +12738,13 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 743632,
-      "etymology": null,
+      "etymology": "From Latin extollere, \"to raise up\", from ex-, \"up, out\", and tollere, \"to lift\": to extol someone is to lift them up with praise.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "extol the virtues of",
+        "extol the benefits of"
+      ],
       "audioUrl": "audio/words/113.mp3?v=21a8a50be68d",
       "hookAudioUrl": "audio/hooks/113.mp3?v=b09c44d60b05",
       "senses": [
@@ -12710,7 +12753,7 @@
           "definition": "Speak or write of someone or something in glowing, admiring terms.",
           "plainLanguageDefinition": "To talk up something's good points with real warmth.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/197.mp3?v=19ddb0a3e857",
           "examples": [
@@ -12824,10 +12867,13 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 142546,
-      "etymology": null,
+      "etymology": "From Latin extraneus, \"from outside, foreign\", built on extra, \"outside\". Through Old French, the same Latin word also gave English strange and estrange.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "extraneous information",
+        "extraneous considerations"
+      ],
       "audioUrl": "audio/words/114.mp3?v=ee4d3c6ffabb",
       "hookAudioUrl": "audio/hooks/114.mp3?v=5e11ee5c03fc",
       "senses": [
@@ -12908,11 +12954,11 @@
         {
           "senseId": 597,
           "definition": "Coming from outside the thing it is found in, rather than belonging to it.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Coming in from outside rather than belonging to the thing itself.",
           "senseOrder": 3,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/597.mp3?v=e0fbf00bfbc7",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/597.mp3?v=ae9518cef664",
           "examples": [],
           "distractors": []
         }
@@ -12955,10 +13001,13 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 771172,
-      "etymology": null,
+      "etymology": "From French facétieux, from Latin facetia, \"a jest\", which comes from facetus, \"witty\".",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "facetious remark",
+        "facetious tone"
+      ],
       "audioUrl": "audio/words/115.mp3?v=e24594cdaff5",
       "hookAudioUrl": "audio/hooks/115.mp3?v=c479d37381fb",
       "senses": [
@@ -12967,7 +13016,7 @@
           "definition": "Using humor that is out of place, so that a weighty topic sounds trivial.",
           "plainLanguageDefinition": "Cracking jokes at a time that calls for a straight face.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/201.mp3?v=5488f0b45d8c",
           "examples": [
@@ -13067,10 +13116,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 334718,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Via Old French from Latin fallacia, \"deceit\", from fallax, \"deceptive\", from fallere, \"to deceive\". False and fallacy come from the same verb.",
+      "roots": [
+        "fallere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fallacious reasoning",
+        "fallacious argument",
+        "fallacious assumption"
+      ],
       "audioUrl": "audio/words/116.mp3?v=c43fe783b7c0",
       "hookAudioUrl": "audio/hooks/116.mp3?v=b6be8f8aa317",
       "senses": [
@@ -13079,7 +13134,7 @@
           "definition": "Based on faulty reasoning or a mistaken belief, and so likely to mislead.",
           "plainLanguageDefinition": "Based on a flawed argument or incorrect logic.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/202.mp3?v=0ea6a593a7aa",
           "examples": [
@@ -13185,10 +13240,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 863626,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin fatuus, \"foolish\". Infatuate shares the root: the Latin verb infatuare meant to make a fool of someone.",
+      "roots": [
+        "fatuus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fatuous remark",
+        "fatuous grin",
+        "fatuous optimism"
+      ],
       "audioUrl": "audio/words/117.mp3?v=257755d55df3",
       "hookAudioUrl": "audio/hooks/117.mp3?v=887be1a054f8",
       "senses": [
@@ -13297,10 +13358,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 328408,
-      "etymology": null,
+      "etymology": "From Old English ficol, \"changeable, crafty, deceitful\", related to an old verb meaning to flatter or deceive.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fickle public",
+        "fickle lover",
+        "fickle crowd"
+      ],
       "audioUrl": "audio/words/119.mp3?v=fc6c127dc61b",
       "hookAudioUrl": "audio/hooks/119.mp3?v=069e3766b824",
       "senses": [
@@ -13309,7 +13374,7 @@
           "definition": "Quick to drop one loyalty or love for another, so that no one can count on it.",
           "plainLanguageDefinition": "Quick to lose interest in a friend, partner or team and move on.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/208.mp3?v=19d7020e71d9",
           "examples": [
@@ -13364,11 +13429,11 @@
         {
           "senseId": 1299,
           "definition": "Varying from hour to hour in ways no one can forecast.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Liable to shift at any moment, as weather or luck can.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1299.mp3?v=47a1e99da4ef",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1299.mp3?v=d0c87dfff21d",
           "examples": [],
           "distractors": []
         }
@@ -13419,10 +13484,14 @@
       "syllables": 1,
       "difficultyTier": 5,
       "frequencyRank": 1213963,
-      "etymology": null,
+      "etymology": "Of uncertain origin, perhaps from Middle English flouten, \"to play the flute\". An older meaning, now rare, is to mock or jeer at someone.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Flout is not flaunt: you flout a rule by openly ignoring it, but you flaunt something by showing it off.",
+      "pairings": [
+        "flout convention",
+        "flout authority",
+        "openly flouted"
+      ],
       "audioUrl": "audio/words/120.mp3?v=81e4d39d6d9d",
       "hookAudioUrl": "audio/hooks/120.mp3?v=50924b34e0bc",
       "senses": [
@@ -13592,10 +13661,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 1008459,
-      "etymology": null,
+      "etymology": "From Latin fomentum, \"a warm compress\", from fovere, \"to keep warm\". In Middle English it meant to treat the body with warm liquids; the sense of stirring up trouble came later.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "foment rebellion",
+        "foment trouble",
+        "foment discord"
+      ],
       "audioUrl": "audio/words/121.mp3?v=ba19b44e6c5b",
       "hookAudioUrl": "audio/hooks/121.mp3?v=41f68074516b",
       "senses": [
@@ -13661,7 +13734,7 @@
           "definition": "Soothe an aching body part with hot, damp packs.",
           "plainLanguageDefinition": null,
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1300.mp3?v=244bcd518fec",
           "examples": [],
@@ -13714,10 +13787,13 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 246765,
-      "etymology": null,
+      "etymology": "From Old English foresteall, \"an ambush\", from fore, \"in front\", and steall, \"a standing place\". In Middle English it meant to waylay someone on the road; now it means to head off trouble.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "forestall criticism",
+        "forestall disaster"
+      ],
       "audioUrl": "audio/words/122.mp3?v=178180f9d742",
       "hookAudioUrl": "audio/hooks/122.mp3?v=341ab772f9b9",
       "senses": [
@@ -13824,10 +13900,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 227327,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin fortuitus, \"happening by chance\", which is thought to be built on fors, \"chance\". Fortune comes from the same Latin family.",
+      "roots": [
+        "fors"
+      ],
+      "watchOut": "Fortuitous traditionally means happening by chance; its use to mean simply lucky is now common, though some careful writers object.",
+      "pairings": [
+        "purely fortuitous",
+        "fortuitous coincidence",
+        "fortuitous circumstances"
+      ],
       "audioUrl": "audio/words/123.mp3?v=234186fa4de2",
       "hookAudioUrl": "audio/hooks/123.mp3?v=1d1053e7eb7c",
       "senses": [
@@ -13836,7 +13918,7 @@
           "definition": "Owing its occurrence to luck or coincidence rather than to anyone's design.",
           "plainLanguageDefinition": "The result of luck or coincidence, not of anyone's plan.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/216.mp3?v=15967ed2e44f",
           "examples": [
@@ -13951,10 +14033,15 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1124227,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From fraction in an old sense, \"discord\", plus -ous. Fraction goes back to Latin frangere, \"to break\", which is also the source of fracture.",
+      "roots": [
+        "frangere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "fractious horse",
+        "fractious coalition"
+      ],
       "audioUrl": "audio/words/124.mp3?v=d7e247266b85",
       "hookAudioUrl": "audio/hooks/124.mp3?v=f6ddbac423af",
       "senses": [
@@ -14021,7 +14108,7 @@
           "plainLanguageDefinition": "Grouchy, touchy, and easily set off by minor inconveniences.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
+          "alsoMeans": true,
           "audioUrl": "audio/definitions/219.mp3?v=750ff252b1e1",
           "examples": [
             {
@@ -14186,10 +14273,13 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 369676,
-      "etymology": null,
+      "etymology": "Via French from Latin frugalis, from frux, \"produce, crops\". A related Latin word, frugi, \"fit for food\", came to mean useful, honest and thrifty.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "frugal habits",
+        "frugal living"
+      ],
       "audioUrl": "audio/words/125.mp3?v=ffb50c70fdfb",
       "hookAudioUrl": "audio/hooks/125.mp3?v=2a9eb60c8478",
       "senses": [
@@ -14302,10 +14392,13 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 868659,
-      "etymology": null,
+      "etymology": "From Latin garrulus, \"talkative\", from garrire, \"to chatter\", a verb of imitative origin.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "garrulous old man",
+        "became garrulous"
+      ],
       "audioUrl": "audio/words/126.mp3?v=987407b20bf3",
       "hookAudioUrl": "audio/hooks/126.mp3?v=705027916f9c",
       "senses": [
@@ -14413,10 +14506,13 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 582480,
-      "etymology": null,
+      "etymology": "From Old English gad, a pointed stick for driving cattle. The Lombards, an early Germanic people, had a related word for a spear.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "goaded into action",
+        "goaded beyond endurance"
+      ],
       "audioUrl": "audio/words/127.mp3?v=70727cd124fa",
       "hookAudioUrl": "audio/hooks/127.mp3?v=95bb2f030962",
       "senses": [
@@ -14531,10 +14627,15 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 387261,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin gregarius, \"of the flock\", from grex, \"flock, herd\". Congregate, aggregate and egregious come from the same root.",
+      "roots": [
+        "grex"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "gregarious nature",
+        "naturally gregarious"
+      ],
       "audioUrl": "audio/words/128.mp3?v=dba5e8067847",
       "hookAudioUrl": "audio/hooks/128.mp3?v=78a9f249c057",
       "senses": [
@@ -14598,11 +14699,11 @@
         {
           "senseId": 1296,
           "definition": "Of animals, banding together in herds or flocks by instinct.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of animals, living and moving in groups, like sheep or starlings.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1296.mp3?v=7843c608ff79",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1296.mp3?v=dcbd7611ddf8",
           "examples": [],
           "distractors": []
         }
@@ -14653,10 +14754,13 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 454241,
-      "etymology": null,
+      "etymology": "From Old French guile, \"deceit\", from a Frankish word for a ruse. English wile, as in wily, comes from the same Germanic word.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "without guile",
+        "political guile"
+      ],
       "audioUrl": "audio/words/129.mp3?v=1966a9bed3d8",
       "hookAudioUrl": "audio/hooks/129.mp3?v=a6e36555550d",
       "senses": [
@@ -14665,7 +14769,7 @@
           "definition": "A sly talent for scheming and outwitting others through deceit.",
           "plainLanguageDefinition": "Sneaky cleverness that helps someone fool others.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/228.mp3?v=a316c04a8b57",
           "examples": [

@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:09:02.412Z"
+    "updatedAt": "2026-10-30T06:17:08.997Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1026,
-    "reviews": 1090
+    "mnemonics": 1027,
+    "reviews": 1114
   },
   "words": [
     {
@@ -1756,8 +1756,15 @@
       "syllables": 4,
       "frequency_rank": 415935,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Ancient Greek euphemismos, from eu, \"well\", and pheme, \"speech\". The Greek root word described speech that avoided words of ill omen.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "a euphemism for",
+        "polite euphemism",
+        "euphemism for death"
+      ]
     },
     {
       "id": 106,
@@ -1767,8 +1774,16 @@
       "syllables": 4,
       "frequency_rank": 474796,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Via French from Latin evanescere, \"to vanish, fade away\", built on vanus, \"empty\". Vanish and vain come from the same Latin source.",
+      "audio_url": null,
+      "roots": [
+        "vanus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "evanescent beauty",
+        "evanescent moment"
+      ]
     },
     {
       "id": 107,
@@ -1778,8 +1793,17 @@
       "syllables": 4,
       "frequency_rank": 224579,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin exacerbare, \"to provoke\", from ex-, \"thoroughly\", and acerbare, \"to make bitter\", which comes from acerbus, \"harsh, bitter\". Acerbic shares the root.",
+      "audio_url": null,
+      "roots": [
+        "acerbus"
+      ],
+      "watch_out": "Exacerbate is not exasperate: you exacerbate a problem by making it worse, but you exasperate a person by annoying them.",
+      "pairings": [
+        "exacerbate the problem",
+        "exacerbate symptoms",
+        "exacerbate tensions"
+      ]
     },
     {
       "id": 108,
@@ -1789,8 +1813,16 @@
       "syllables": 3,
       "frequency_rank": 2922370,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin exculpare, from ex-, \"out of\", and culpa, \"blame\": to exculpate someone is to free them from blame. Culpable comes from culpa too.",
+      "audio_url": null,
+      "roots": [
+        "culpa"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "exculpate himself",
+        "exculpate the accused"
+      ]
     },
     {
       "id": 109,
@@ -1800,8 +1832,16 @@
       "syllables": 3,
       "frequency_rank": 2081928,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin exigere, \"to demand\", formed from ex-, \"out\", and agere, \"to drive\". Exact and exigency come from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "agere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "exigent circumstances",
+        "exigent need"
+      ]
     },
     {
       "id": 110,
@@ -1811,8 +1851,16 @@
       "syllables": 4,
       "frequency_rank": 1118879,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin exonerare, \"to unload\", from ex-, \"off\", and onus, \"a burden\": to exonerate someone is to lift a burden of blame. Onerous shares the root.",
+      "audio_url": null,
+      "roots": [
+        "onus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "completely exonerated",
+        "officially exonerated"
+      ]
     },
     {
       "id": 111,
@@ -1822,8 +1870,16 @@
       "syllables": 4,
       "frequency_rank": 94673,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin expedire, \"to free the feet from a snare\", from ex, \"out\", and pes, \"foot\". It came to mean to help along, and so to be useful or advantageous.",
+      "audio_url": null,
+      "roots": [
+        "pes"
+      ],
+      "watch_out": "Expedient is not a synonym for expeditious (fast and efficient); it means convenient for getting a result, often at the cost of what is right.",
+      "pairings": [
+        "politically expedient",
+        "expedient solution"
+      ]
     },
     {
       "id": 112,
@@ -1833,8 +1889,16 @@
       "syllables": 2,
       "frequency_rank": 1706380,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin expungere, \"to strike out\", from ex-, \"out\", and pungere, \"to prick\". Pungent and puncture come from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "pungere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "expunged from the record",
+        "expunge the record"
+      ]
     },
     {
       "id": 113,
@@ -1844,8 +1908,14 @@
       "syllables": 2,
       "frequency_rank": 743632,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin extollere, \"to raise up\", from ex-, \"up, out\", and tollere, \"to lift\": to extol someone is to lift them up with praise.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "extol the virtues of",
+        "extol the benefits of"
+      ]
     },
     {
       "id": 114,
@@ -1855,8 +1925,14 @@
       "syllables": 4,
       "frequency_rank": 142546,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin extraneus, \"from outside, foreign\", built on extra, \"outside\". Through Old French, the same Latin word also gave English strange and estrange.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "extraneous information",
+        "extraneous considerations"
+      ]
     },
     {
       "id": 115,
@@ -1866,8 +1942,14 @@
       "syllables": 3,
       "frequency_rank": 771172,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French facétieux, from Latin facetia, \"a jest\", which comes from facetus, \"witty\".",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "facetious remark",
+        "facetious tone"
+      ]
     },
     {
       "id": 116,
@@ -1877,8 +1959,17 @@
       "syllables": 3,
       "frequency_rank": 334718,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Via Old French from Latin fallacia, \"deceit\", from fallax, \"deceptive\", from fallere, \"to deceive\". False and fallacy come from the same verb.",
+      "audio_url": null,
+      "roots": [
+        "fallere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "fallacious reasoning",
+        "fallacious argument",
+        "fallacious assumption"
+      ]
     },
     {
       "id": 117,
@@ -1888,8 +1979,17 @@
       "syllables": 3,
       "frequency_rank": 863626,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin fatuus, \"foolish\". Infatuate shares the root: the Latin verb infatuare meant to make a fool of someone.",
+      "audio_url": null,
+      "roots": [
+        "fatuus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "fatuous remark",
+        "fatuous grin",
+        "fatuous optimism"
+      ]
     },
     {
       "id": 118,
@@ -1911,8 +2011,15 @@
       "syllables": 2,
       "frequency_rank": 328408,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English ficol, \"changeable, crafty, deceitful\", related to an old verb meaning to flatter or deceive.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "fickle public",
+        "fickle lover",
+        "fickle crowd"
+      ]
     },
     {
       "id": 120,
@@ -1922,8 +2029,15 @@
       "syllables": 1,
       "frequency_rank": 1213963,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of uncertain origin, perhaps from Middle English flouten, \"to play the flute\". An older meaning, now rare, is to mock or jeer at someone.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Flout is not flaunt: you flout a rule by openly ignoring it, but you flaunt something by showing it off.",
+      "pairings": [
+        "flout convention",
+        "flout authority",
+        "openly flouted"
+      ]
     },
     {
       "id": 121,
@@ -1933,8 +2047,15 @@
       "syllables": 2,
       "frequency_rank": 1008459,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin fomentum, \"a warm compress\", from fovere, \"to keep warm\". In Middle English it meant to treat the body with warm liquids; the sense of stirring up trouble came later.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "foment rebellion",
+        "foment trouble",
+        "foment discord"
+      ]
     },
     {
       "id": 122,
@@ -1944,8 +2065,14 @@
       "syllables": 2,
       "frequency_rank": 246765,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English foresteall, \"an ambush\", from fore, \"in front\", and steall, \"a standing place\". In Middle English it meant to waylay someone on the road; now it means to head off trouble.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "forestall criticism",
+        "forestall disaster"
+      ]
     },
     {
       "id": 123,
@@ -1955,8 +2082,17 @@
       "syllables": 4,
       "frequency_rank": 227327,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin fortuitus, \"happening by chance\", which is thought to be built on fors, \"chance\". Fortune comes from the same Latin family.",
+      "audio_url": null,
+      "roots": [
+        "fors"
+      ],
+      "watch_out": "Fortuitous traditionally means happening by chance; its use to mean simply lucky is now common, though some careful writers object.",
+      "pairings": [
+        "purely fortuitous",
+        "fortuitous coincidence",
+        "fortuitous circumstances"
+      ]
     },
     {
       "id": 124,
@@ -1966,8 +2102,16 @@
       "syllables": 2,
       "frequency_rank": 1124227,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From fraction in an old sense, \"discord\", plus -ous. Fraction goes back to Latin frangere, \"to break\", which is also the source of fracture.",
+      "audio_url": null,
+      "roots": [
+        "frangere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "fractious horse",
+        "fractious coalition"
+      ]
     },
     {
       "id": 125,
@@ -1977,8 +2121,14 @@
       "syllables": 2,
       "frequency_rank": 369676,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Via French from Latin frugalis, from frux, \"produce, crops\". A related Latin word, frugi, \"fit for food\", came to mean useful, honest and thrifty.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "frugal habits",
+        "frugal living"
+      ]
     },
     {
       "id": 126,
@@ -1988,8 +2138,14 @@
       "syllables": 3,
       "frequency_rank": 868659,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin garrulus, \"talkative\", from garrire, \"to chatter\", a verb of imitative origin.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "garrulous old man",
+        "became garrulous"
+      ]
     },
     {
       "id": 127,
@@ -1999,8 +2155,14 @@
       "syllables": 1,
       "frequency_rank": 582480,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English gad, a pointed stick for driving cattle. The Lombards, an early Germanic people, had a related word for a spear.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "goaded into action",
+        "goaded beyond endurance"
+      ]
     },
     {
       "id": 128,
@@ -2010,8 +2172,16 @@
       "syllables": 4,
       "frequency_rank": 387261,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin gregarius, \"of the flock\", from grex, \"flock, herd\". Congregate, aggregate and egregious come from the same root.",
+      "audio_url": null,
+      "roots": [
+        "grex"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "gregarious nature",
+        "naturally gregarious"
+      ]
     },
     {
       "id": 129,
@@ -2021,8 +2191,14 @@
       "syllables": 1,
       "frequency_rank": 454241,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French guile, \"deceit\", from a Frankish word for a ruse. English wile, as in wily, comes from the same Germanic word.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "without guile",
+        "political guile"
+      ]
     },
     {
       "id": 130,
@@ -8172,7 +8348,7 @@
       "definition": "So faint and brief that it slips away even as you notice it.",
       "plain_language_definition": "Fading away almost as soon as it shows up.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 188,
@@ -8188,7 +8364,7 @@
       "definition": "Lift suspicion off a person by showing that the fault lay with someone else or with no one.",
       "plain_language_definition": "To take the blame off someone by showing the facts.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 191,
@@ -8220,7 +8396,7 @@
       "definition": "Strike out an entry or a passage so that the record no longer shows it.",
       "plain_language_definition": "To wipe something off the books as if it was never there.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 197,
@@ -8228,7 +8404,7 @@
       "definition": "Speak or write of someone or something in glowing, admiring terms.",
       "plain_language_definition": "To talk up something's good points with real warmth.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 198,
@@ -8244,7 +8420,7 @@
       "definition": "Using humor that is out of place, so that a weighty topic sounds trivial.",
       "plain_language_definition": "Cracking jokes at a time that calls for a straight face.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 202,
@@ -8252,7 +8428,7 @@
       "definition": "Based on faulty reasoning or a mistaken belief, and so likely to mislead.",
       "plain_language_definition": "Based on a flawed argument or incorrect logic.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 205,
@@ -8276,7 +8452,7 @@
       "definition": "Quick to drop one loyalty or love for another, so that no one can count on it.",
       "plain_language_definition": "Quick to lose interest in a friend, partner or team and move on.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 210,
@@ -8292,7 +8468,8 @@
       "definition": "Laugh at with contempt and derision.",
       "plain_language_definition": "Mocking or making fun of something with disrespect.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 212,
@@ -8316,7 +8493,7 @@
       "definition": "Owing its occurrence to luck or coincidence rather than to anyone's design.",
       "plain_language_definition": "The result of luck or coincidence, not of anyone's plan.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 218,
@@ -8332,7 +8509,8 @@
       "definition": "Easily irritated or annoyed.",
       "plain_language_definition": "Grouchy, touchy, and easily set off by minor inconveniences.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 220,
@@ -8340,7 +8518,8 @@
       "definition": "Unpredictably difficult in operation; likely to be troublesome.",
       "plain_language_definition": "Hard to manage or handle because it tends to cause problems.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 221,
@@ -8380,7 +8559,7 @@
       "definition": "A sly talent for scheming and outwitting others through deceit.",
       "plain_language_definition": "Sneaky cleverness that helps someone fool others.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 231,
@@ -10081,15 +10260,17 @@
       "definition": "Beyond what is needed; not essential to the whole.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 597,
       "word_id": 114,
       "definition": "Coming from outside the thing it is found in, rather than belonging to it.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Coming in from outside rather than belonging to the thing itself.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 598,
@@ -10097,7 +10278,8 @@
       "definition": "Intended to deceive or trick.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 601,
@@ -13902,7 +14084,8 @@
       "definition": "Turning out well through a stroke of luck.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1295,
@@ -13910,23 +14093,26 @@
       "definition": "Keep a herd moving by jabbing the animals with a spiked rod.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1296,
       "word_id": 128,
       "definition": "Of animals, banding together in herds or flocks by instinct.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of animals, living and moving in groups, like sheep or starlings.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1297,
       "word_id": 109,
       "definition": "Expecting more effort or care from others than is fair.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Hard to please because it sets the bar too high for others.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1298,
@@ -13934,15 +14120,17 @@
       "definition": "Handy and effective for the task at hand.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1299,
       "word_id": 119,
       "definition": "Varying from hour to hour in ways no one can forecast.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Liable to shift at any moment, as weather or luck can.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1300,
@@ -13950,7 +14138,8 @@
       "definition": "Soothe an aching body part with hot, damp packs.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1301,
@@ -66965,14 +67154,6 @@
       "revision": 3
     },
     {
-      "id": 490,
-      "word_id": 112,
-      "text": "Expunge comes from Latin pungere, to prick, as in puncture: scribes pricked dots under a name to strike it from a list.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 491,
       "word_id": 113,
       "text": "Extol comes from Latin extollere, to lift up: when you extol someone, you lift them up with praise.",
@@ -70944,6 +71125,14 @@
       "id": 1026,
       "word_id": 101,
       "text": "Equivocate joins the Latin aequus, equal, and vocare, to call (from vox, voice): words that speak with two equal voices, so no one can tell which meaning you intend.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1027,
+      "word_id": 112,
+      "text": "Expunge comes from Latin pungere, to prick, as in puncture: to expunge a name is to prick it out of a list.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -119783,8 +119972,8 @@
     },
     {
       "path": "definitions/1297.mp3",
-      "bytes": 14629,
-      "key": "e8bc74cb7b3e8d80",
+      "bytes": 15673,
+      "key": "ebc095a967ea9df1",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119839,8 +120028,8 @@
     },
     {
       "path": "definitions/597.mp3",
-      "bytes": 18599,
-      "key": "031a656da1e65482",
+      "bytes": 17032,
+      "key": "e1a330cf71393ec0",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119881,8 +120070,8 @@
     },
     {
       "path": "definitions/1299.mp3",
-      "bytes": 16509,
-      "key": "8f9a9f9e719f8a9e",
+      "bytes": 15360,
+      "key": "480f43f26f363013",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119993,8 +120182,8 @@
     },
     {
       "path": "definitions/1296.mp3",
-      "bytes": 17868,
-      "key": "804e92aff4965d05",
+      "bytes": 17345,
+      "key": "b9a35bed0d65943c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125383,8 +125572,8 @@
     },
     {
       "path": "hooks/112.mp3",
-      "bytes": 31242,
-      "key": "e41deb3497f3f303",
+      "bytes": 29048,
+      "key": "1f8cd867d8f9ec05",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -166004,6 +166193,758 @@
         "alsoMeans": 5
       },
       "checker_notes": "Watch-out 4: the new clause no longer follows Oxford Learner's, but \"a tribute praising someone, most often given at a funeral\" now runs close to WordUp (\"a spoken or written tribute honoring a person who has just died, typically presented at a funeral\") with words swapped, and AHD has \"tribute, especially one praising someone\". Each part is shared by three or more sources (Oxford has \"a speech given at a funeral praising\"), so it is not a fail, but praise named without \"tribute\" and \"given at a funeral\" would be safer."
+    },
+    {
+      "id": 1091,
+      "word_id": 105,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): euphemismos < euphemizein < euphemos (\"of good omen, avoiding ill-omened words\") < eu \"well\" + pheme \"voice, talk\"; and the cached AHD etymology agrees. No root: pheme is not visible in a common English word (dysphemism is modelled on euphemism, and Wiktionary does not split blasphemy). Hook glosses eu as \"good\"; AHD gives eu- as \"good, well\", so kept. Tone null: no label in Oxford, Cambridge or Longman. Pairings from Datamuse and Ngram (\"a euphemism for\" 204, \"euphemism for death\" 5.5, \"polite euphemism\" 3.5 per billion); \"a euphemism for\" is a frame, hence 4.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (euphemismos from euphemizo from euphemos, 'abstaining from inauspicious words', from eu 'well' + pheme): true and in the writer's words. Weakest points: 'The Greek root word' is vague (it was euphemos that meant avoiding ill-omened words), and pheme, which also shows in blasphemy and dysphemism, could serve as a root. Pairings: 'a euphemism for' (204 per billion) is a frame of function words rather than a partner that shows the meaning; 'polite euphemism' (3.5, Datamuse's second adjective) and 'euphemism for death' (5.5) are good."
+    },
+    {
+      "id": 1092,
+      "word_id": 106,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): French évanescent < Latin evanescens < evanescere < ex- + vanescere < vanus \"empty\"; Wiktionary vanish (< Old French esvanir < evanescere < vanus) and vain (< vanus) confirm the family. Hook true. Tone literary: Oxford and Longman mark it literary, Cambridge formal. Pairings: the physics uses (evanescent wave, field) are left out; \"evanescent beauty\" 1.3 and \"evanescent moment\" 1.5 per billion are modest, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (French evanescent from Latin evanescere, from vanescere, from vanus 'empty'; vanish comes from Vulgar Latin *exvanire from evanescere, and vain from vanus). Tone: Oxford Learner's and Longman mark it literary (Cambridge formal), so literary is right. Weakest point: the pairings are modest, 'evanescent beauty' 1.3 and 'evanescent moment' 1.5 per billion (the most common uses are physics terms: wave, field), but both rest on the data."
+    },
+    {
+      "id": 1093,
+      "word_id": 107,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) and the Latin pages acerbo (\"to make harsh or bitter, to aggravate\") and acerbus (\"harsh, bitter\"); acerbic < acerbus confirms the hook. Tone null: only Oxford marks it formal. Watch-out: the exasperate mix-up is a classic. Pairings: Ngram 46, 23 and 9.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (exacerbo 'to provoke', from ex- 'thoroughly' + acerbo; the Latin page derives acerbo from acerbus 'harsh, bitter'; acerbic is from acerbus). The exasperate watch-out is the classic mix-up and is stated correctly. Tone: only Oxford Learner's marks formal, so null is right. Pairings are 46, 23 and 10 per billion. Weakest point: nothing of note."
+    },
+    {
+      "id": 1094,
+      "word_id": 108,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): Medieval Latin exculpatus < exculpare < ex- + culpa \"fault, blame\"; Wiktionary culpable < culpabilis < culpo < culpa; and the cached AHD etymology agrees. Hook true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: \"exculpate himself\" is the top Datamuse partner (Ngram 9.1) but reflexive and generic, \"exculpate the accused\" 1.8, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (Medieval Latin exculpo, from ex- + culpa 'fault, blame'; culpable from culpabilis from culpa). formal: Oxford Learner's, Cambridge and Longman all mark it. Weakest point: pairings. 'exculpate himself' (9.1 per billion) shows a pronoun pattern rather than a partner that shows the meaning, and 'exculpate the accused' is 1.8 per billion."
+    },
+    {
+      "id": 1095,
+      "word_id": 109,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (exigens < exigo \"demand, require\"), the Latin page exigo (ex- + ago \"to drive\"), and Wiktionary exact (< exactus, participle of exigo) and exigency (< exigere); and the cached AHD etymology agrees. Root agere matches cogent on another worksheet. Hook true. Tone null: Cambridge and Longman mark it formal, but Oxford has no entry, so not all three. Also means: the \"demanding too much of people\" sense is in Cambridge, Longman and AHD, so shown. Pairings: \"exigent circumstances\" 92, \"exigent need\" 1.6 per billion. Main session, after review 1: showed the \"asks too much of others\" sense under Also means with a new plain definition (reviewer: current meaning, Longman lists it first).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Round 2. All scores 4 or more. Sense 1297 is now shown, which is right: Longman lists 'demanding a lot of attention from other people in a way that is unreasonable' first, and Cambridge and Collins give both meanings. The new plain definition, 'Hard to please because it sets the bar too high for others.', is correct and does not follow any cached dictionary (Cambridge 'demanding too much from other people', Collins 'exacting; demanding', Vocabulary.com 'requiring precise accuracy'; WordUp has only the urgent sense). Weakest point: 'it' reads oddly for a person (Cambridge's example is 'an exigent manager'), and 'hard to please' leans a little toward fussiness. Null tone on both senses is right: Oxford Learner's has no entry, so formal cannot meet the three-dictionary rule. Origin, hook and pairings are unchanged from round 1 and still check out."
+    },
+    {
+      "id": 1096,
+      "word_id": 110,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): Middle English exoneraten < Latin exoneratus < exonero \"to discharge, unload\" < ex- + onero < onus \"burden\"; the Latin pages exonero and onus and and the cached AHD etymology (\"to free from a burden\") agree. Hook true. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings: \"completely exonerated\" (Ngram 10 per billion, a little generic) and \"officially exonerated\" (Datamuse 6069), which shows the official decision.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (exonero 'to discharge, unload', from ex- + onero, from onus 'burden'; onerous from onus). Tone: Longman has no formal label, so null is right. Weakest point: both pairings are adverbs, and 'completely exonerated' (9.9 per billion) uses a generic intensifier; 'officially exonerated' (1.8, in Datamuse's list) is fine."
+    },
+    {
+      "id": 1097,
+      "word_id": 111,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): Middle English < Old French < Latin expediens < expedire < ex + pes \"foot\"; the Latin page expedio gives \"to free feet from snares\" first and \"to be profitable, advantageous\" later; and the cached AHD etymology agrees. Root pes links impede, pedal, expedite. Hook true. Tone null: only Cambridge marks it formal. Watch-out: AHD marks the \"speedy\" sense obsolete, and the expeditious mix-up is real but less famous than flout/flaunt, hence 4. Also means: shown the neutral \"practical\" sense (AHD sense 1), which differs from the first sense by having no moral cast; a reviewer may see it as close, hence 4. Pairings: \"politically expedient\" 58, \"expedient solution\" 6.5 per billion. Main session, after review 1: watch-out no longer says flatly that it never means quick (Longman includes quick in its definition).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. All scores 5. The new watch-out is true and brief. Expeditious means fast and efficient, and AHD lists 'speedy; expeditious' as an obsolete sense of expedient. The mix-up is a recognized one: Vocabulary.com has a 'commonly confused' note on expedient and expeditious. The note no longer claims that expedient never involves speed, which matters because Longman's definition includes 'quickly'. The wording is the writer's own (AHD says 'what is of use or advantage rather than what is right or just'; only the stock phrase 'what is right' is shared). Weakest point: 'often at the cost of what is right' is a bit stronger than Oxford Learner's 'not always fair or right' or Cambridge's 'sometimes not morally acceptable', though it matches the record's first definition. Other fields are unchanged from round 1 and still check out."
+    },
+    {
+      "id": 1098,
+      "word_id": 112,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (borrowed from Latin expungere), the Latin pages expungo (ex- + pungo; \"to strike out, cross out, erase\") and pungo (\"prick\"), Latin punctura (< punctus < pungo) and Wiktionary pungent (< pungens < pungo); and the cached AHD etymology agrees. Hook changed: the old hook said scribes pricked dots under a name to strike it from a list. Neither Wiktionary nor AHD tells that story, so I kept \"pungere, to prick, as in puncture\" and replaced the story with what the parts say (ex- \"out\" + pungere \"prick\"). Tone formal: all three learner's dictionaries. Pairings: \"expunged from the record\" 3.7, \"expunge the record\" 1.2 per billion; the two overlap, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin: Wiktionary has a learned borrowing from Latin expungo, and the Latin page gives 'to strike out' and ex- + pungo; pungent is from pungo. The changed hook drops the old 'scribes pricked dots under a name' story, which Wiktionary does not support, and keeps only the ex- + pungere reading: correct fix. formal: all three dictionaries mark it. Weakest point: pairings. 'expunged from the record' (3.7 per billion) and 'expunge the record' (1.2) repeat the same partner."
+    },
+    {
+      "id": 1099,
+      "word_id": 113,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (extollo \"elevate, raise high\"), the Latin pages extollo (ex- + tollo) and tollo (\"to raise, lift up\"); and the cached AHD etymology agrees. No root: tollere shows in no common English word. Hook true. Tone formal: all three learner's dictionaries. Pairings: \"extol the virtues\" 36 and \"extolling the virtues\" 73, \"extol the benefits\" 4.1 per billion; Longman lists the same frame.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin: Wiktionary has extollo 'elevate, raise high', and the Latin page gives ex- + tollo; empty roots are right, since tollere shows in no common English word. formal: all three dictionaries mark it. Weakest point: both pairings use one frame ('extol the virtues of' 38 and 'extol the benefits of' 4.0 per billion)."
+    },
+    {
+      "id": 1100,
+      "word_id": 114,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (extraneus, doublet of strange, cognate with estrange), the Latin pages extraneus (extra + -aneus) and extra (\"outside\"), and Wiktionary strange and estrange (both via Old French from extraneus); and the cached AHD etymology agrees. No root: extra is a stoplisted prefix and extraneus is not visible in strange. Hook: \"Extra means outside\" is true of Latin extra, but the hook leans on English extra (additional), so 4; not false, so unchanged. Tone null: Oxford and Longman mark it formal, Cambridge does not. Also means: shown \"coming from outside\" (Longman 2, AHD 3, \"extraneous matter, noise\"); hidden \"not essential\", which is close to the first sense. Pairings from Datamuse (information 21301, considerations 16848).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (extraneus from extra 'outside' + -aneus; doublet of strange, cognate with estrange). Small points: estrange came through Old French estranger, a verb made from extraneus, so 'the same Latin word also gave ... estrange' compresses a step. Hook: 'Extra means outside' is true of Latin extra and the prefix extra-, not of English extra ('additional'); acceptable as a mnemonic. Also means: showing sense 597 is right (Longman's second sense is 'coming from outside'), but its plain definition is the record definition lightly reworded and stays abstract ('the thing itself')."
+    },
+    {
+      "id": 1101,
+      "word_id": 115,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) and the Latin pages facetia (\"jest, wit, humour\") and facetus (\"witty, elegant\"); and the cached AHD etymology agrees. No root. Hook true. Tone disapproving: Oxford and Cambridge mark it so. Pairings: top Datamuse partners (remarks 35483, tone 16980).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Facts match Wiktionary (French facetieux from Latin facetia 'jest, wit' from facetus 'witty'). Tone: Oxford Learner's and Cambridge mark it disapproving, so the label is right. Weakest point: the origin is Wiktionary's sentence with its chain and first glosses kept and one 'from' changed to 'which comes from'. Short shared facts, so not a copy under the rule, but it adds nothing of its own."
+    },
+    {
+      "id": 1102,
+      "word_id": 116,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Old French fallacieux < fallacia < fallax < fallere), the Latin page fallo (\"to deceive\"), and Wiktionary false (< falsus, participle of fallo) and fallacy (< fallacia < fallere). Hook true. Tone formal: all three learner's dictionaries. Other sense hidden: the first definition already says \"likely to mislead\". Its definition, \"Intended to deceive or trick\", overstates intent (dictionaries say \"tending to mislead\"); worth fixing on a main worksheet. Pairings: top Datamuse partners.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (Old French fallacieux from Latin fallacia, from fallax, from fallere); false and fallacy from fallere are standard. formal: all three dictionaries mark it. Pairings 18, 14 and 4.2 per billion. Weakest point: nothing of note; the old 'intended to deceive' sense is rightly hidden."
+    },
+    {
+      "id": 1103,
+      "word_id": 117,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (fatuus \"foolish, silly\"), the Latin page infatuo (in- + fatuus, \"to make a fool of\") and Wiktionary infatuate (< infatuatus); and the cached AHD etymology agrees. Hook true. Tone null: Oxford and Cambridge mark it formal, Longman does not. Pairings from Datamuse (smile/grin, remark, optimism).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (fatuus 'foolish'; infatuate from infatuatus, participle of infatuo, which the Latin page glosses 'to make a fool of', from in- + fatuus). Tone: Longman has no formal label (Oxford Learner's and Cambridge do), so null is right. Weakest point: pairings. 'fatuous optimism' is 0.5 per billion in Google Books (though in Datamuse's list), and the most common pairing, 'fatuous smile' (3.2), is left out."
+    },
+    {
+      "id": 1104,
+      "word_id": 119,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py): Middle English fikel < Old English ficol (\"fickle, cunning, tricky, deceitful\") = fike + -le; Wiktionary fike gives Old English fician \"to wheedle, flatter\", Proto-Germanic \"to deceive\"; and the cached AHD etymology agrees. Hook true. Tone disapproving: Oxford and Cambridge label it, and Longman says it is used to show disapproval. Also means: the weather and luck sense is in Oxford, Cambridge and Longman. Pairings from Datamuse for the loyalty sense (public, lover, crowd); fickle fortune left out as the other sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (Old English ficol 'fickle, cunning, tricky, deceitful', fike + -le; fike goes back to Old English fician 'to wheedle, flatter', also in befician 'to deceive'). disapproving: Oxford Learner's, Cambridge and Longman ('used to show disapproval'). The weather and luck sense is rightly shown; all three dictionaries have it. Weakest point: 'changeable' as a gloss of ficol is a paraphrase of Wiktionary's 'fickle'."
+    },
+    {
+      "id": 1105,
+      "word_id": 120,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py), which hedges (\"perhaps from Middle English flouten, to play the flute\"); the hedge is kept. AHD gives the same hedged origin and marks the mocking sense archaic, which supports \"older, now rare\". Hook is a sound-alike (flout rhymes with out) with no origin claim. Tone null. Watch-out: the flaunt mix-up is a classic. Other sense (mock) hidden as archaic. Pairings from Datamuse (convention 22397, authority 11007, openly flouted 71626).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Hedge kept (Wiktionary: 'Perhaps from Middle English flouten, to play the flute'). The second sentence matches Wiktionary's archaic sense 'to scorn' and the noun 'a mockery or insult'. The flaunt watch-out is the classic mix-up and is correct; the hook's rhyme with 'out' holds. Weakest point: the step from playing the flute to mocking stays unexplained, but Wiktionary gives none, so saying no more is right."
+    },
+    {
+      "id": 1106,
+      "word_id": 121,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Middle English fomenten < Old French fomenter < Late Latin fomentare < fomentum \"lotion\" < fovere \"heat, cherish\"), the Latin pages fomentum (warm application, poultice) and foveo (\"to warm, keep warm\"), and AHD (Middle English fomenten \"to apply warm liquids to the skin\"). No root. Hook true. Tone null: Oxford and Cambridge mark it formal, Longman does not. Other sense (warm packs) hidden and marked technical (medicine). Pairings: Datamuse, and Longman lists foment revolution/trouble/discord.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (Old French fomenter from Late Latin fomentare from fomentum 'warm application, compress, poultice', from foveo 'keep warm'); the Middle English entry fomenten has only the medical sense, so 'the sense of stirring up trouble came later' holds. Tone: Longman's page has no formal label, so null is right; technical on the hidden medical sense matches Wiktionary's medicine label. Weakest point: 'warm liquids' narrows Middle English 'a warm, soft medicament', which includes poultices."
+    },
+    {
+      "id": 1107,
+      "word_id": 122,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Middle English forestallen \"intercept, ambush, waylay\" < Old English foresteall \"hindrance, ambush, waylaying on the highway\" < fore- + steall \"position\"), Wiktionary stall (steall \"standing place\") and and the cached AHD etymology. Hook: \"literally a standing in front\" matches fore + steall; \"of someone on the road\" comes from the noun's waylaying sense rather than the literal parts, so 4; true, so unchanged. Tone null: Oxford and Longman mark it formal, Cambridge does not. Pairings from Datamuse (criticism 9917, disaster 3536).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (Old English foresteall 'ambush', from fore- + steall 'position'; Middle English forestallen 'intercept, ambush, waylay'). Weakest point: the hook's 'literally a standing in front of someone on the road' puts the road into the literal meaning. Literally it is 'a position in front'; the highway comes from the Old English legal sense (waylaying on the highway). Loose, not false."
+    },
+    {
+      "id": 1108,
+      "word_id": 123,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (fortuitus < *fortu- + -itus; \"*fortu- is thought to be from *fortus, from fors\") and the Latin pages fortuitus and fortuna (both traced to *fortus, from fors or fero); the hedge \"thought to be\" is kept. Hook states the fors link without the hedge and calls fors the \"same root as fortune\", which matches, so 4 and unchanged. Tone formal: all three learner's dictionaries. Watch-out describes the lucky/fortunate use as a dispute; the \"turning out well\" other sense is hidden for the same reason. Pairings from Datamuse.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin keeps Wiktionary's hedge ('is thought to be built on fors'); Wiktionary derives Latin fortuna from *fortus, linked to fero or fors, so 'the same Latin family' holds. The watch-out states the chance or lucky dispute as a dispute. formal: all three dictionaries mark it. Weak points: 'from the same Latin family' is vague as the link for the root fors, and the hook says flatly 'comes from Latin fors', dropping the hedge the origin keeps."
+    },
+    {
+      "id": 1109,
+      "word_id": 124,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (fraction \"discord\" + -ous), Wiktionary fraction (< Latin fractio < fractus < frangere \"to break\") and fracture (< fractura < frangere); AHD marks the discord sense of fraction obsolete. Hook true. Tone null: only Oxford marks this sense formal. Also means: the irritable sense (\"a fractious child\") is the main sense in Cambridge and Longman, so shown with its existing plain; the \"troublesome in operation\" sense hidden as rare. Pairings for the unruly sense from Datamuse (horse 25928, coalition 10433); \"fractious child\" left out as the other sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (fraction 'discord', now obsolete, + -ous; fraction from fractio from frangere). Showing 'easily irritated' is right: Oxford Learner's, Cambridge and Longman all lead with it, and its plain definition is clear. 'fractious horse' (2.3 per billion) and 'fractious coalition' (1.7) fit the first sense; the top pairing, 'fractious child', belongs to the shown sense. Weakest point: nothing of note."
+    },
+    {
+      "id": 1110,
+      "word_id": 125,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Middle French < Latin frugalis \"virtuous, thrifty\"), the Latin pages frugalis (< frux \"fruits of the earth, produce\"), frux and frugi (dative of frux, \"fit for food\"; adjective \"frugal, worthy, honest, useful\"); and the cached AHD etymology agrees. No root: frux shows in no common English word. Hook true. Tone null. Pairings for the thrifty sense from Datamuse (habits 26231, living 23608); \"frugal meal\" left out as a different use.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. The origin goes past the English entry and matches the Latin pages: frugalis from frux 'fruits of the earth, produce'; frugi was the dative of frux, originally '(fit) for food', later 'frugal, worthy, honest, useful'. Worded differently from the Dictionary.com and AHD etymologies. Weakest point: 'Via French' for Wiktionary's Middle French is a simplification."
+    },
+    {
+      "id": 1111,
+      "word_id": 126,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (garrulus + -ous, from garrio \"to chatter\"), the Latin pages garrulus and garrio (imitative origin); and the cached AHD etymology agrees. Hook true. Tone null. Pairings from Datamuse (old man 133133, became 5463); \"became garrulous\" is a little generic, hence 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 4 or more. Origin matches Wiktionary (garrulus 'talkative', from garrio 'to chatter'; the Latin page marks garrio as imitative). Weakest point: 'became garrulous' (0.8 per billion) pairs it with a linking verb that fits any adjective; 'garrulous old man' (2.3) is good."
+    },
+    {
+      "id": 1112,
+      "word_id": 127,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Middle English gode < Old English gad < Proto-Germanic *gaido, compare Lombardic gaida \"spear\"), and the cached AHD etymology. Hook true (a goad is a pointed stick for driving cattle). Tone null. Other sense (driving a herd with a rod) hidden as rare in current use; the hook already explains it. Pairings: Ngram 3.4 and 3.3 per billion; Datamuse lists \"goaded beyond\". Main session, after review 1: origin now names the one Germanic spear word Wiktionary gives (Lombardic), not \"words\".",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2. All scores 5. The new origin matches Wiktionary: Old English gad, from Proto-Germanic *gaido, which Wiktionary compares with Lombardic gaida, 'spear'. 'The Lombards, an early Germanic people, had a related word for a spear' now names the one word Wiktionary gives and no longer pulls in Old Norse gedda (a pike). Weakest point: the Lombard sentence is trivia that does not help with the meaning; the first sentence carries the useful part. Other fields are unchanged from round 1 and still check out."
+    },
+    {
+      "id": 1113,
+      "word_id": 128,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (borrowed from gregarius), the Latin pages gregarius (grex + -arius, \"of the herd\") and grex (\"flock\"), and Wiktionary congregate, aggregate and egregious (all from grex); and the cached AHD etymology agrees. Hook true. Tone null for the first sense. Also means: the animal sense is labelled biology/specialized/technical by Oxford, Cambridge and Longman, so marked technical, and shown because general readers meet it often (Datamuse: gregarious animals 44923, species 23842). Pairings from Datamuse (nature 19930, naturally 11210).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches the Latin page (gregarius 'of the herd', from grex 'flock, herd'); egregious from grex is confirmed in Wiktionary. technical on the animal sense matches Oxford Learner's (biology), Cambridge (specialized) and Longman (technical), and the sense is worth showing. Weakest point: 'naturally gregarious' (4.6 per billion) has a fairly generic adverb, though it shows the trait."
+    },
+    {
+      "id": 1114,
+      "word_id": 129,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Checked against Wiktionary (tools/etymology.py) (Middle English gile < Anglo-Norman gile < Old French guile \"deception\" < Frankish *wil \"ruse\"; cognate with wile), Wiktionary wile (doublet of guile) and wily (wile + -y), Wiktionary beguile (be- + guile); AHD says of Germanic origin. Hook true. Tone formal: all three learner's dictionaries. Pairings: Ngram \"without guile\" 37, \"political guile\" 1.6 per billion; Datamuse lists political.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All scores 5. Origin matches Wiktionary (Old French guile 'deception', from Frankish *wil 'ruse'; wile goes back to Proto-Germanic *wila and is a doublet of guile). formal: all three dictionaries mark it. The hook's beguile (be- + guile) is right. Weakest point: nothing of note."
     }
   ]
 }
