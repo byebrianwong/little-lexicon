@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:01:41.229Z"
+    "updatedAt": "2026-10-30T08:02:38.342Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1038,
-    "reviews": 1302
+    "mnemonics": 1039,
+    "reviews": 1324
   },
   "words": [
     {
@@ -7626,8 +7626,17 @@
       "syllables": 2,
       "frequency_rank": 1945752,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin renegare, to deny, built on Latin negare, to deny; renegade comes from the same verb. To renege on a deal is to deny a promise already given.",
+      "audio_url": null,
+      "roots": [
+        "negare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "renege on a promise",
+        "reneged on the deal",
+        "government reneged"
+      ]
     },
     {
       "id": 499,
@@ -7637,8 +7646,17 @@
       "syllables": 2,
       "frequency_rank": 189329,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin repletus, filled up, a form of replere, made of re-, again, and plere, to fill. The same plere is in complete and deplete.",
+      "audio_url": null,
+      "roots": [
+        "plere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "replete with examples",
+        "replete with references",
+        "history is replete with"
+      ]
     },
     {
       "id": 500,
@@ -7648,8 +7666,17 @@
       "syllables": 3,
       "frequency_rank": 373315,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin resplendere, to shine out or glitter, built on splendere, to shine, which also gave splendid and splendor.",
+      "audio_url": null,
+      "roots": [
+        "splendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "looked resplendent",
+        "resplendent in white",
+        "resplendent uniforms"
+      ]
     },
     {
       "id": 501,
@@ -7659,8 +7686,15 @@
       "syllables": 1,
       "frequency_rank": 254448,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English rife, plentiful or frequent, a Germanic word with relatives in Dutch and Icelandic. Today it is used mostly of bad things that are spreading, such as disease or rumor.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "rife with corruption",
+        "corruption is rife",
+        "speculation is rife"
+      ]
     },
     {
       "id": 502,
@@ -7670,8 +7704,15 @@
       "syllables": 1,
       "frequency_rank": 4282729,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of uncertain origin, perhaps from French rouiller, to make muddy or rusty. In English it can still mean to stir up the mud in water, which shows the link to churning.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "roiling clouds",
+        "roiling sea",
+        "stomach roiled"
+      ]
     },
     {
       "id": 503,
@@ -7681,8 +7722,17 @@
       "syllables": 3,
       "frequency_rank": 1995243,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ruminari, which meant both to chew the cud and to mull something over, from rumen, the throat or gullet. The word ruminant, for cud-chewing animals, has the same root.",
+      "audio_url": null,
+      "roots": [
+        "rumen"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ruminate on",
+        "ruminate about",
+        "ruminate over"
+      ]
     },
     {
       "id": 504,
@@ -7692,8 +7742,17 @@
       "syllables": 3,
       "frequency_rank": 59532,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin saliens, leaping, a form of salire, to leap. The sense most noticeable came through the phrase salient point, Latin punctum saliens, the throbbing speck of heart Aristotle described in an egg.",
+      "audio_url": null,
+      "roots": [
+        "salire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "salient features",
+        "salient points",
+        "salient facts"
+      ]
     },
     {
       "id": 505,
@@ -7714,8 +7773,17 @@
       "syllables": 3,
       "frequency_rank": 476749,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French, from Medieval Latin subterfugium, from Latin subterfugere, to escape in secret, made of subter, beneath, and fugere, to flee, the root of fugitive and refuge.",
+      "audio_url": null,
+      "roots": [
+        "fugere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "resort to subterfuge",
+        "elaborate subterfuge",
+        "clever subterfuge"
+      ]
     },
     {
       "id": 507,
@@ -7725,8 +7793,17 @@
       "syllables": 2,
       "frequency_rank": 245446,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French surmis, a form of surmettre, to accuse, made of sur, upon, and mettre, to put, from Latin mittere. In English it first meant to allege, and later to suppose without proof.",
+      "audio_url": null,
+      "roots": [
+        "mittere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "correctly surmised",
+        "rightly surmised",
+        "can only surmise"
+      ]
     },
     {
       "id": 508,
@@ -7736,8 +7813,15 @@
       "syllables": 3,
       "frequency_rank": 199330,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "First recorded in English in the 1600s, from Anglo-French tant amunter or from Italian tanto montare, both meaning to amount to as much; the sources do not agree on which.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Tantamount means equal in effect and comes before to; it does not mean most important, which is paramount.",
+      "pairings": [
+        "tantamount to treason",
+        "tantamount to admitting",
+        "almost tantamount"
+      ]
     },
     {
       "id": 509,
@@ -7747,8 +7831,15 @@
       "syllables": 1,
       "frequency_rank": 586849,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old English thræl, a slave, which came from Old Norse thræll. Being in thrall is being held as if enslaved, and enthrall is built on the same word.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "in thrall to",
+        "in the thrall of",
+        "held in thrall"
+      ]
     },
     {
       "id": 510,
@@ -7758,8 +7849,17 @@
       "syllables": 1,
       "frequency_rank": 333038,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin tropus, from Ancient Greek tropos, a turn or manner, which was also used for a figure of speech. The sense of a stock theme in stories is much newer.",
+      "audio_url": null,
+      "roots": [
+        "tropos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "common trope",
+        "familiar trope",
+        "cultural trope"
+      ]
     },
     {
       "id": 511,
@@ -7769,8 +7869,17 @@
       "syllables": 4,
       "frequency_rank": 171288,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From un- and tenable, which came from French tenir, to hold, going back to Latin tenere. An untenable position or idea is one that cannot be held against attack.",
+      "audio_url": null,
+      "roots": [
+        "tenere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "untenable position",
+        "untenable situation",
+        "became untenable"
+      ]
     },
     {
       "id": 512,
@@ -7780,8 +7889,15 @@
       "syllables": 2,
       "frequency_rank": 283184,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From un- and toward, an old adjective for willing, easy to teach or promising. Something untoward is the reverse: unruly, unlucky or out of place.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "nothing untoward",
+        "untoward effects",
+        "untoward incident"
+      ]
     },
     {
       "id": 513,
@@ -7791,8 +7907,17 @@
       "syllables": 2,
       "frequency_rank": 346536,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French vestige, from Latin vestigium, a footprint or track. A footprint stays after the walker has gone, so the word came to mean any trace that is left.",
+      "audio_url": null,
+      "roots": [
+        "vestigium"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "last vestiges",
+        "remaining vestiges",
+        "slightest vestige"
+      ]
     },
     {
       "id": 514,
@@ -7802,8 +7927,17 @@
       "syllables": 3,
       "frequency_rank": 194366,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French volition and Medieval Latin volitio, built on Latin velle, to wish, the verb behind voluntary and benevolent.",
+      "audio_url": null,
+      "roots": [
+        "velle"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "of their own volition",
+        "conscious volition",
+        "free volition"
+      ]
     },
     {
       "id": 515,
@@ -7813,8 +7947,16 @@
       "syllables": 2,
       "frequency_rank": 214730,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English wantowen, undisciplined, made of wan-, not, and towen, brought up or trained. Lack of restraint led to its sense of doing harm with no reason or limit.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "wanton destruction",
+        "wanton cruelty",
+        "wanton violence",
+        "wanton disregard"
+      ]
     },
     {
       "id": 516,
@@ -7824,8 +7966,15 @@
       "syllables": 2,
       "frequency_rank": 473349,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English welteren, to roll about or wallow, a Germanic verb related to wallow itself. The noun went from a tossing, tumbling motion to a tumbled heap of things.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "confusing welter",
+        "welter of emotions",
+        "welter of information"
+      ]
     },
     {
       "id": 517,
@@ -7835,8 +7984,16 @@
       "syllables": 1,
       "frequency_rank": 267680,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English wrien, to turn or twist, from Old English wrigian; awry is a relative. Wry first meant twisted, as of a face pulled to one side, and then dryly mocking.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "wry smile",
+        "wry grin",
+        "wry humor",
+        "wry amusement"
+      ]
     },
     {
       "id": 518,
@@ -7846,8 +8003,17 @@
       "syllables": 4,
       "frequency_rank": 696792,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin adjudicare, from ad, to, and judicare, to judge, a verb built on judex, a judge; judicial and judicious share the root.",
+      "audio_url": null,
+      "roots": [
+        "judex"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "adjudicate disputes",
+        "adjudicate cases",
+        "adjudicate claims"
+      ]
     },
     {
       "id": 519,
@@ -7857,8 +8023,18 @@
       "syllables": 3,
       "frequency_rank": 427676,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Taken straight from Latin animus, the mind or spirit, a word Romans also used for strong feeling and anger. Animosity comes from the same root.",
+      "audio_url": null,
+      "roots": [
+        "animus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "racial animus",
+        "personal animus",
+        "animus toward",
+        "animus against"
+      ]
     },
     {
       "id": 520,
@@ -7868,8 +8044,17 @@
       "syllables": 4,
       "frequency_rank": 123815,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Latin from Ancient Greek antithesis, a setting against, made of anti, against, and thesis, a placing, the word also behind hypothesis and synthesis.",
+      "audio_url": null,
+      "roots": [
+        "thesis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "very antithesis",
+        "complete antithesis",
+        "direct antithesis"
+      ]
     },
     {
       "id": 521,
@@ -13462,7 +13647,7 @@
       "definition": "Break one's word by backing out of a deal or a commitment.",
       "plain_language_definition": "To back out of a promise or deal after giving your word.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 956,
@@ -13470,7 +13655,7 @@
       "definition": "Thoroughly filled or richly stocked with something.",
       "plain_language_definition": "Full of something, or having a great deal of it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 958,
@@ -13478,7 +13663,7 @@
       "definition": "Brilliant and grand in appearance, glowing with color or light.",
       "plain_language_definition": "Dazzling to look at, in bold colors or fine clothes that make people stare.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 959,
@@ -13502,7 +13687,7 @@
       "definition": "Think about something at length, going back to it again and again.",
       "plain_language_definition": "To think about something slowly and deeply, again and again.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 965,
@@ -13534,7 +13719,7 @@
       "definition": "Arrive at a likely idea of the facts from scant or partial evidence.",
       "plain_language_definition": "To make an educated guess when you only have part of the story.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 973,
@@ -13550,7 +13735,7 @@
       "definition": "Strong control that a person or thing has over someone, leaving that person captive or spellbound.",
       "plain_language_definition": "Being in someone's power, or so gripped by something that you cannot pull away.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 976,
@@ -13566,7 +13751,7 @@
       "definition": "Unable to hold up under challenge, or impossible to keep going as things stand.",
       "plain_language_definition": "Too weak to defend, or too hard to keep going.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 978,
@@ -13582,7 +13767,7 @@
       "definition": "A surviving scrap of something that has otherwise faded away or come to an end.",
       "plain_language_definition": "The little that is still left of something that has almost vanished.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 981,
@@ -13590,7 +13775,7 @@
       "definition": "The use of one's own will in choosing or deciding what to do.",
       "plain_language_definition": "Choosing for yourself because you want to, not because you were told to.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 983,
@@ -13820,9 +14005,10 @@
       "id": 1013,
       "word_id": 499,
       "definition": "Having eaten so much that one can hold no more.",
-      "plain_language_definition": null,
+      "plain_language_definition": "So full after a meal that you could not eat another bite.",
       "sense_order": 2,
-      "register": null
+      "register": "old-fashioned",
+      "also_means": true
     },
     {
       "id": 1014,
@@ -13830,15 +14016,17 @@
       "definition": "Make water murky by disturbing the mud beneath it.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1015,
       "word_id": 503,
       "definition": "Chew food that has been brought back up from the stomach.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To chew the cud, as cows and goats do with food they have already swallowed once.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1016,
@@ -13846,7 +14034,8 @@
       "definition": "Pointing out beyond the line of the parts around it.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1017,
@@ -13950,15 +14139,17 @@
       "definition": "A person owned by or bound to serve a lord or master.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1030,
       "word_id": 510,
       "definition": "Language that bends a word away from its plain, literal meaning.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Words used to mean something other than what they literally say, as in a metaphor.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1031,
@@ -13966,7 +14157,8 @@
       "definition": "Crooked or turned askew.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1032,
@@ -13982,7 +14174,7 @@
       "definition": "A lasting grudge or bitter dislike aimed at a particular person or group.",
       "plain_language_definition": "A strong dislike of someone that lasts and shapes how you treat them.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 1035,
@@ -15100,9 +15292,10 @@
       "id": 1234,
       "word_id": 518,
       "definition": "Judge the entries in a contest and choose the winners.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To decide who wins a contest, such as a talent show or a music festival.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1235,
@@ -15110,7 +15303,8 @@
       "definition": "The purpose or motive that drives someone's actions.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1236,
@@ -15118,7 +15312,8 @@
       "definition": "A way of writing that pairs opposed ideas in two phrases built the same way, for effect.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1237,
@@ -71292,14 +71487,6 @@
       "revision": 3
     },
     {
-      "id": 860,
-      "word_id": 508,
-      "text": "Tantamount ends in amount: if one thing is tantamount to another, it amounts to the same thing. It comes from Anglo-French tant amunter, 'to amount to as much'.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 861,
       "word_id": 509,
       "text": "Thrall is the root of enthrall. To be in thrall, like a thrall (an old word for a slave), is to be held captive, whether by a master or by a gripping story.",
@@ -72703,6 +72890,14 @@
       "id": 1038,
       "word_id": 254,
       "text": "Reprobate comes from Latin reprobare, to reject or condemn: a reprobate is someone who failed the test of decent behavior.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1039,
+      "word_id": 508,
+      "text": "Tantamount ends in amount: if one thing is tantamount to another, it amounts to the same thing. It may come from Anglo-French tant amunter, 'to amount to as much'.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -125168,8 +125363,8 @@
     },
     {
       "path": "definitions/1013.mp3",
-      "bytes": 13166,
-      "key": "e21ba2ddc10213f8",
+      "bytes": 14942,
+      "key": "2d43db60fcf10f09",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125210,8 +125405,8 @@
     },
     {
       "path": "definitions/1015.mp3",
-      "bytes": 13270,
-      "key": "8ba1f5b5cf167ad7",
+      "bytes": 20167,
+      "key": "b68c49104b2a6316",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125287,8 +125482,8 @@
     },
     {
       "path": "definitions/1030.mp3",
-      "bytes": 16405,
-      "key": "822ad72176c704fd",
+      "bytes": 19540,
+      "key": "14449deb50423cd5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125357,8 +125552,8 @@
     },
     {
       "path": "definitions/1234.mp3",
-      "bytes": 13897,
-      "key": "8e9587915125c10a",
+      "bytes": 21211,
+      "key": "d5671290b5d85bd7",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -129683,8 +129878,8 @@
     },
     {
       "path": "hooks/508.mp3",
-      "bytes": 41900,
-      "key": "36f78ebec66b18bd",
+      "bytes": 42736,
+      "key": "e1936180433d155b",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -174454,6 +174649,698 @@
         "alsoMeans": 5
       },
       "checker_notes": "Origin 4: Wiktionary's English entry derives it from circumspecto; the circumspicere route is backed by Latin circumspectus (its participle, also 'prudent'), so it holds, but 'from which this word comes' is clumsy. Hook 4: circle is a sibling of circum (both from circus), not built on it, so 'as in circle' is loose. Pairings 4: 'remained circumspect' (2.54) uses a generic verb."
+    },
+    {
+      "id": 1303,
+      "word_id": 498,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin renego from nego; renegade from Medieval Latin renegatus), Oxford and AHD (Medieval Latin renegare). Left out Wiktionary's hedged \"possibly influenced by renegotiate\". Hook claim (renege and renegade both from negare) is true. Formal: Oxford, Cambridge and Longman all mark it. Pairings: \"government reneged\" from the tool list; \"renege on * promise\" 16.5 and \"reneged on the deal\" 7.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'renege on a promise' is modest in Google Books (2.6 per billion; 'renege on the/their/his' are commoner), still fine. Origin checked against Wiktionary (renego, nego) and Oxford, AHD, Longman (Medieval Latin renegare); leaving out Wiktionary's hedged 'possibly influenced by renegotiate' is allowed. Formal in Oxford, Cambridge and Longman."
+    },
+    {
+      "id": 1304,
+      "word_id": 499,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "English Wiktionary stops at Latin repletus; the Latin page repleo gives re- + pleo (plere), with depleo and compleo beside it; Oxford and AHD agree. Hook is true. Formal on all three learner's dictionaries. The food sense is in all three; Oxford (old-fashioned or formal) and Longman (old-fashioned) give old-fashioned. Pairings from --check (\"replete with examples\" 52, \"references\" 26, \"history is replete with\" 44; history is in the tool list).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch out (4): AHD lists 'replete with' used to mean only 'complete with' (a computer replete with printer) as a usage problem; a note describing that dispute could help, though null is defensible. Origin skips the Old French step (Wiktionary, AHD), a small simplification; plere 'to fill' is in AHD, Oxford and Dictionary.com. Tones match: formal in all three; food sense old-fashioned in Oxford and Longman."
+    },
+    {
+      "id": 1305,
+      "word_id": 500,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Wiktionary gives two routes (via an obsolete English verb, or resplend + -ent from Latin resplendere); both end in Latin splendere, and Oxford and AHD take it from Latin resplendere, so the origin names only the shared Latin. Hook (resplendere, splendere, splendid) is true. Tone: Oxford \"formal or literary\" and Cambridge \"literary\" give literary; Longman says formal, so not formal under the three-of-three rule. Pairings: \"looked resplendent\" and \"uniforms\" from the tool lists (\"resplendent uniforms\" is only 1.25 per billion), \"resplendent in white\" 4.0.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'resplendent uniforms' is in Datamuse's list but only 1.25 per billion in Google Books. Wiktionary's own etymology is muddled (splendish, or resplend + -ent); the origin follows AHD, Oxford, Longman and Dictionary.com (Latin resplendere, splendere), which is right. Literary: Oxford (formal or literary) and Cambridge."
+    },
+    {
+      "id": 1306,
+      "word_id": 501,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Old English rife \"abundant, frequent\", Dutch rijf, Icelandic rifur) and AHD; Oxford instead suggests Old Norse, so the origin does not name a Norse source. Hook is a rhyme with no origin claim (rife and strife rhyme). Only Cambridge marks it formal, so null. Pairings: corruption and speculation are the tool's top nouns; --check 9.2, 4.8, 2.9.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: two of the three pairings use corruption. Origin matches Wiktionary (Old English rife, Dutch and Icelandic cognates) in own words. Dictionary.com warns about rife and ripe, but 'ripe with corruption' is rare (0.29 vs 9.22 per billion), so a null watch-out is right. Formal only in Cambridge, so null tone is right."
+    },
+    {
+      "id": 1307,
+      "word_id": 502,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Wiktionary says origin uncertain, possibly French rouiller; AHD says origin unknown. The origin keeps the hedge and leaves out the Latin chain. Hook is a sound-alike (roil and boil rhyme). Only Oxford marks literary, so null. The muddy-water sense is Wiktionary's first but none of the three learner's dictionaries has it, so not shown. Pairings from the tool lists: \"stomach roiled\" 74, \"roiling clouds\" 11.5, \"roiling sea\" 10.1.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: none of substance. Wiktionary's hedge is kept (origin uncertain, possibly French rouiller 'to rust, make muddy'); the hook is a true rhyme with boil. Oxford's literary label is alone (Cambridge none, Longman has no entry), so null is right."
+    },
+    {
+      "id": 1308,
+      "word_id": 503,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin ruminor, from rumen \"throat, gullet\"; its hedge is about where rumen itself comes from, which the origin does not claim), Oxford and AHD. Hook (ruminari, chew the cud) is true. Formal on all three. Cud sense: Longman technical, Cambridge specialized, so technical; shown because ruminant animals are a common topic. Pairings are prepositional patterns (52.7, 22.1, 16.0 per billion); the tool lists gave no common noun partner.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings (4): all three are the same preposition frame (on, about, over), so none shows the meaning; Datamuse has few better partners (sat ruminating 1.9, ruminated aloud 1.0 per billion), so trimming to two would do. Origin matches Wiktionary (ruminari, rumen 'throat, gullet'); leaving out its 'uncertain' note on rumen itself is fine. Cud sense technical in Cambridge and Longman."
+    },
+    {
+      "id": 1309,
+      "word_id": 504,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin saliens, salio; the prominent sense comes from salient point, a calque of punctum saliens, Aristotle's term for the embryo's heart), Oxford and AHD. Hook (salire, to leap) is true. Cambridge and Longman mark formal, Oxford does not, so null. The projecting sense is military or geometric and absent from the learner's dictionaries, so not shown. Pairings are the tool's top three nouns.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): the facts match Wiktionary (salire; salient point from punctum saliens, Aristotle's moving heart in the egg) in own words, but 'The sense most noticeable came through' reads awkwardly without quotes, and how a leaping point came to mean 'most important' is left to the reader. Tone null right: only Cambridge and Longman mark formal."
+    },
+    {
+      "id": 1310,
+      "word_id": 506,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle French, Medieval Latin subterfugium, Latin subterfugio, subter + fugio), Oxford and AHD. Hook is true. Oxford and Longman mark formal, Cambridge does not, so null. Pairings: \"elaborate\" and \"clever\" from the tool list (1.8, 1.4 per billion), \"resort to subterfuge\" 3.5; none is very frequent.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): the facts are right (Wiktionary: Middle French, Medieval Latin subterfugium, subterfugere from subter + fugere), but it is a bare chain that tracks Oxford's word origin clause for clause ('from French', 'escape secretly', 'beneath', 'flee'), and it never says how a secret escape became a trick or dodge (only the hook does). Wiktionary has Middle French. Tone null right: Oxford and Longman formal, Cambridge not."
+    },
+    {
+      "id": 1311,
+      "word_id": 507,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Old French surmis, surmettre \"to accuse\", sur- + metre), the French Wiktionary entry mettre (from Old French metre, from Latin mittere), AHD (Middle English surmisen \"to accuse\"; mettre from mittere) and Oxford (earliest English senses \"allege\"). Hook (surmettre from sur and mettre) is true; it does not say what surmettre meant. Formal on all three. Pairings: \"correctly\" and \"rightly\" from the tool list (14.1, 3.9), \"can only surmise\" 46.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings (4): 'correctly surmised' and 'rightly surmised' say the same thing, so one slot could go to a different partner. Origin matches Wiktionary (surmis, surmettre 'to accuse', sur + metre) and AHD (mettre from Latin mittere); 'first meant to allege' is backed by Oxford's word origin. Formal in all three."
+    },
+    {
+      "id": 1312,
+      "word_id": 508,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Wiktionary gives two possible sources (Anglo-Norman tant amunter, or Italian tanto montare); Oxford gives Italian and AHD Anglo-Norman, so the origin keeps both. Hook changed from \"It comes from Anglo-French\" to \"It may come from Anglo-French\", since the source is not settled. Oxford and Cambridge mark formal, Longman does not, so null. Watch-out: \"tantamount importance\" is the tool's top following word and nouns-described entry (about 1.9 per billion in Google Books against 674 for \"paramount importance\"); no dictionary accepts this use, so the note calls it a plain error, not a dispute. Wiktionary notes it is used almost only in \"tantamount to\".",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): facts and the either/or hedge are right (Wiktionary, AHD, Longman, Oxford disagree on Anglo-French or Italian), but the sentence follows Dictionary.com's closely ('First recorded in ...; from Anglo-French tant amunter or Italian tanto montare, to amount to as much'). Pairings (4): 'almost tantamount' is a generic adverb. The watch-out is well founded: Datamuse's top noun after tantamount is 'importance'. The hook change to 'may come from' is correct."
+    },
+    {
+      "id": 1313,
+      "word_id": 509,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Old English thrael from Old Norse thraell; enthrall = en- + thrall), Oxford and AHD; the hedged Proto-Indo-European step is left out. Hook is true. Oxford and Cambridge mark \"in thrall\" literary. The slave sense is literary or archaic in Wiktionary and absent from the learner's dictionaries, so not shown. The tool lists for thrall are mostly names, so the pairings rest on --check (137, 39, 12 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: none of substance. Origin matches Wiktionary and AHD (Old English thrael from Old Norse thraell) and gives the step to 'in thrall'; hiding the slave sense is right since origin and hook explain it. Literary in Oxford and Cambridge; the three pairings are the word's set phrases and all common in Google Books."
+    },
+    {
+      "id": 1314,
+      "word_id": 510,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin tropus, Greek tropos \"turn, way; figure of speech\"), Oxford (marks the theme sense as new) and AHD. Hook (tropos, a turn) is true. First sense: only Cambridge labels it (specialized), Oxford gives it no label, so null. The figure-of-speech sense is labeled specialist, specialized and technical by all three, and learners meet it in literature classes, so shown as technical. Pairings from the tool list (41, 20, 10 per billion); \"literary trope\" left out as it also fits the other sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Tone (4): Oxford's (specialist) label sits on the whole entry and Cambridge marks the theme sense specialized, so two of three would make the first sense technical; null is defensible because the stock-theme sense is now everyday and the skill keeps technical for other senses. Other sense technical in all three. Pairings rightly avoid 'rhetorical trope', which is the other sense."
+    },
+    {
+      "id": 1315,
+      "word_id": 511,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "English Wiktionary gives un- + tenable and tenable from French tenir; the French Wiktionary entry tenir traces it to Latin tenere. Hook (contains tenere, as in tenant) is true. Formal on all three. Pairings from the tool lists (53, 31, 30 per billion).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): Wiktionary's English page gives only un- + tenable; tenable came from French tenable, built on tenir, so 'tenable, which came from French tenir' skips a step. 'Cannot be held against attack' echoes Dictionary.com's note ('unable to be held against attack'), though the idea is the standard one. Formal in all three."
+    },
+    {
+      "id": 1316,
+      "word_id": 512,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (un- + toward; toward as an adjective once meant docile, apt to learn, promising; untoward also meant unruly). Hook is true. Only Longman marks formal, so null. Pairings from the tool lists (111, 43, 15 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: the hook's 'heads away from' picture leans on toward as a direction word, while the word was built on the old adjective toward (docile, promising); not false. The origin matches Wiktionary's senses of toward and untoward in own words. Tone null right: only Longman marks formal."
+    },
+    {
+      "id": 1317,
+      "word_id": 513,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (French vestige, Latin vestigium; English sense 1 is a footprint, extended to any trace), Oxford and AHD. Hook is true. Formal on all three. Pairings from the tool list (164, 14, 3 per billion). Root vestigium also shows in vestigial.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings (4): 'slightest vestige' belongs to the 'not even a trace' use that Oxford and Longman give as a separate sense, and 'last vestiges' and 'remaining vestiges' overlap. Origin matches Wiktionary (French vestige, Latin vestigium 'footprint, track') and gives the step; formal in all three."
+    },
+    {
+      "id": 1318,
+      "word_id": 514,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (French volition, Medieval Latin volitio, Latin volo; the Latin page volo gives the infinitive velle), AHD (velle) and Oxford (volo). Hook (volo, I wish, as in voluntary) is true. Formal on all three (Longman on the \"power to choose\" sense). Pairings from the tool list (135, 13, 6 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: 'From French volition and Medieval Latin volitio' (Wiktionary has French from Medieval Latin; Oxford 'from French, or from medieval Latin'), a tiny nit. velle is the right linking form (AHD, Longman) and the hook's volo is the same verb. Formal in all three."
+    },
+    {
+      "id": 1319,
+      "word_id": 515,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (wantowen, wan- \"not\" + towen \"educated, led\", from Old English teon), Oxford and AHD. Hook glosses (wan- lacking, towen trained) match AHD and Longman. Oxford and Cambridge mark formal, Longman does not, so null. Pairings are the tool's top nouns (72, 17, 13, 18 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings (4): 'wanton disregard' (17.9 per billion) means reckless, heedless disregard rather than harm done on purpose, so it fits this first sense loosely. Origin matches Wiktionary, AHD and Oxford (wantowen from wan- + towen) and gives the step. Tone null right: Longman gives the sense no formal label."
+    },
+    {
+      "id": 1320,
+      "word_id": 516,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (welteren, welt + frequentative -er; akin to wallow; noun senses \"a tossing or rolling about\" and \"a confused muddle\"), Oxford (Middle Dutch or Middle Low German, sense \"wallow\") and AHD. Wiktionary also calls it akin to Latin volvere, but that is a cognate, so no root is linked. Hook (helter rhyme; old verb for rolling or tossing) is true. Only Oxford marks formal, so null. Pairings: \"confusing\" from the tool list (2.1), \"welter of emotions\" 4.1, \"welter of information\" 1.6; all fairly rare.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin (4): welteren, the link to wallow and the noun's 'tossing or rolling' sense are all in Wiktionary, but the order 'went from a tossing motion to a heap' is not shown by the sources; Longman gives 'state of confusion' as the older noun sense. Pairings check out (welter of emotions 4.1 per billion; confusing welter tops Datamuse)."
+    },
+    {
+      "id": 1321,
+      "word_id": 517,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (Middle English wrien, Old English wrigian \"to turn, twist, bend\"; compare awry) and Oxford (first sense \"contorted\"). Hook (once meant twisted, Old English verb to turn) is true. No learner's dictionary labels it. The crooked sense is not in the learner's dictionaries (they treat \"wry face\" under the humor sense), so not shown. Pairings from the tool list (785, 167, 33, 34 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: none of substance. Origin matches Wiktionary (wrien, wrigian, compare awry) and Oxford (first sense 'contorted'); the pairings are the top four in Datamuse; hiding 'crooked' is right."
+    },
+    {
+      "id": 1322,
+      "word_id": 518,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin adiudico, ad + iudico; the Latin page iudico derives it from iudex), Oxford (judicare from judex) and AHD. Root spelled judex as in Oxford, matching jurare elsewhere. Hook is true. No register label in any of the three. The contest sense is a numbered sense in Oxford and Longman, so shown. Pairings are the tool's top objects (22, 12, 10 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: the chain 'ad, to, and judicare, to judge, a verb built on judex, a judge' follows Oxford's word origin in order, though it is a bare chain of facts with its own added clause. The contest sense is in all three learner's dictionaries and rightly shown."
+    },
+    {
+      "id": 1323,
+      "word_id": 519,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary (learned borrowing of Latin animus, whose senses include passion and wrath) and Oxford. Hook (same root as animosity) is true. Formal on all three. The motive sense is mostly legal and sits close to the first, so not shown. Pairings from the tool lists (24, 13, 28, 36 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest: none of substance. Origin matches Wiktionary's gloss (mind, spirit, passion, wrath) in own words; root animus already links magnanimous in the record. Formal in all three; pairings all common (animus against 36.4, animus toward 28.3 per billion)."
+    },
+    {
+      "id": 1324,
+      "word_id": 520,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary (Latin from Greek antithesis; anti- + thesis), Oxford (antitithenai \"set against\") and AHD. Hook is true. Oxford and Longman mark formal, Cambridge does not, so null. The rhetoric sense is in Wiktionary but none of the learner's dictionaries, so not shown (a judgment call). Pairings: \"complete\" and \"direct\" from the tool list (15, 8), \"very antithesis\" 55.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Also means (4): the rhetorical-device sense is hidden; Oxford calls it the earliest current sense and a learner may meet it in literature classes, so showing it with technical is worth considering. Origin follows Wiktionary's surface analysis (anti- + thesis); dictionaries derive it from antitithenai, which agrees. Tone null right: Oxford and Longman formal, Cambridge not."
     }
   ]
 }

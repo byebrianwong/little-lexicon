@@ -54270,10 +54270,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1945752,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin renegare, to deny, built on Latin negare, to deny; renegade comes from the same verb. To renege on a deal is to deny a promise already given.",
+      "roots": [
+        "negare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "renege on a promise",
+        "reneged on the deal",
+        "government reneged"
+      ],
       "audioUrl": "audio/words/498.mp3?v=9061e22e1efa",
       "hookAudioUrl": "audio/hooks/498.mp3?v=60bec2607011",
       "senses": [
@@ -54282,7 +54288,7 @@
           "definition": "Break one's word by backing out of a deal or a commitment.",
           "plainLanguageDefinition": "To back out of a promise or deal after giving your word.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/955.mp3?v=c0b718806484",
           "examples": [
@@ -54355,10 +54361,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 189329,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin repletus, filled up, a form of replere, made of re-, again, and plere, to fill. The same plere is in complete and deplete.",
+      "roots": [
+        "plere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "replete with examples",
+        "replete with references",
+        "history is replete with"
+      ],
       "audioUrl": "audio/words/499.mp3?v=a65473aded31",
       "hookAudioUrl": "audio/hooks/499.mp3?v=cf690363b4e6",
       "senses": [
@@ -54367,7 +54379,7 @@
           "definition": "Thoroughly filled or richly stocked with something.",
           "plainLanguageDefinition": "Full of something, or having a great deal of it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/956.mp3?v=dd3503e255f1",
           "examples": [
@@ -54416,11 +54428,11 @@
         {
           "senseId": 1013,
           "definition": "Having eaten so much that one can hold no more.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "So full after a meal that you could not eat another bite.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1013.mp3?v=14b6f8f12e25",
+          "register": "old-fashioned",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1013.mp3?v=01ce0c1e801e",
           "examples": [],
           "distractors": []
         }
@@ -54463,10 +54475,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 373315,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin resplendere, to shine out or glitter, built on splendere, to shine, which also gave splendid and splendor.",
+      "roots": [
+        "splendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "looked resplendent",
+        "resplendent in white",
+        "resplendent uniforms"
+      ],
       "audioUrl": "audio/words/500.mp3?v=211a66f2a0e1",
       "hookAudioUrl": "audio/hooks/500.mp3?v=aae789f89fc5",
       "senses": [
@@ -54475,7 +54493,7 @@
           "definition": "Brilliant and grand in appearance, glowing with color or light.",
           "plainLanguageDefinition": "Dazzling to look at, in bold colors or fine clothes that make people stare.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/958.mp3?v=035418bb1968",
           "examples": [
@@ -54564,10 +54582,14 @@
       "syllables": 1,
       "difficultyTier": 2,
       "frequencyRank": 254448,
-      "etymology": null,
+      "etymology": "From Old English rife, plentiful or frequent, a Germanic word with relatives in Dutch and Icelandic. Today it is used mostly of bad things that are spreading, such as disease or rumor.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "rife with corruption",
+        "corruption is rife",
+        "speculation is rife"
+      ],
       "audioUrl": "audio/words/501.mp3?v=df5d2f824722",
       "hookAudioUrl": "audio/hooks/501.mp3?v=aaaa9c35338f",
       "senses": [
@@ -54661,10 +54683,14 @@
       "syllables": 1,
       "difficultyTier": 5,
       "frequencyRank": 4282729,
-      "etymology": null,
+      "etymology": "Of uncertain origin, perhaps from French rouiller, to make muddy or rusty. In English it can still mean to stir up the mud in water, which shows the link to churning.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "roiling clouds",
+        "roiling sea",
+        "stomach roiled"
+      ],
       "audioUrl": "audio/words/502.mp3?v=0ecc8efa2d41",
       "hookAudioUrl": "audio/hooks/502.mp3?v=994e6878e4db",
       "senses": [
@@ -54775,10 +54801,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1995243,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin ruminari, which meant both to chew the cud and to mull something over, from rumen, the throat or gullet. The word ruminant, for cud-chewing animals, has the same root.",
+      "roots": [
+        "rumen"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ruminate on",
+        "ruminate about",
+        "ruminate over"
+      ],
       "audioUrl": "audio/words/503.mp3?v=ea2d9223d251",
       "hookAudioUrl": "audio/hooks/503.mp3?v=0ef5255565b9",
       "senses": [
@@ -54787,7 +54819,7 @@
           "definition": "Think about something at length, going back to it again and again.",
           "plainLanguageDefinition": "To think about something slowly and deeply, again and again.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/963.mp3?v=40fb99ea0a86",
           "examples": [
@@ -54836,11 +54868,11 @@
         {
           "senseId": 1015,
           "definition": "Chew food that has been brought back up from the stomach.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To chew the cud, as cows and goats do with food they have already swallowed once.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1015.mp3?v=29167fd14d1d",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1015.mp3?v=6bb6388fe1f2",
           "examples": [],
           "distractors": []
         }
@@ -54879,10 +54911,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 59532,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin saliens, leaping, a form of salire, to leap. The sense most noticeable came through the phrase salient point, Latin punctum saliens, the throbbing speck of heart Aristotle described in an egg.",
+      "roots": [
+        "salire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "salient features",
+        "salient points",
+        "salient facts"
+      ],
       "audioUrl": "audio/words/504.mp3?v=1202f78403bc",
       "hookAudioUrl": "audio/hooks/504.mp3?v=b2eeebf7eb06",
       "senses": [
@@ -54942,7 +54980,7 @@
           "definition": "Pointing out beyond the line of the parts around it.",
           "plainLanguageDefinition": null,
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1016.mp3?v=14531ed2e6ea",
           "examples": [],
@@ -55095,10 +55133,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 476749,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French, from Medieval Latin subterfugium, from Latin subterfugere, to escape in secret, made of subter, beneath, and fugere, to flee, the root of fugitive and refuge.",
+      "roots": [
+        "fugere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "resort to subterfuge",
+        "elaborate subterfuge",
+        "clever subterfuge"
+      ],
       "audioUrl": "audio/words/506.mp3?v=2fe8acb7c0ed",
       "hookAudioUrl": "audio/hooks/506.mp3?v=b6be133e1c18",
       "senses": [
@@ -55211,10 +55255,16 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 245446,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French surmis, a form of surmettre, to accuse, made of sur, upon, and mettre, to put, from Latin mittere. In English it first meant to allege, and later to suppose without proof.",
+      "roots": [
+        "mittere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "correctly surmised",
+        "rightly surmised",
+        "can only surmise"
+      ],
       "audioUrl": "audio/words/507.mp3?v=ad020a566ca0",
       "hookAudioUrl": "audio/hooks/507.mp3?v=886708bc42ee",
       "senses": [
@@ -55223,7 +55273,7 @@
           "definition": "Arrive at a likely idea of the facts from scant or partial evidence.",
           "plainLanguageDefinition": "To make an educated guess when you only have part of the story.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/971.mp3?v=029ed6d3bb77",
           "examples": [
@@ -55319,12 +55369,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 199330,
-      "etymology": null,
+      "etymology": "First recorded in English in the 1600s, from Anglo-French tant amunter or from Italian tanto montare, both meaning to amount to as much; the sources do not agree on which.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Tantamount means equal in effect and comes before to; it does not mean most important, which is paramount.",
+      "pairings": [
+        "tantamount to treason",
+        "tantamount to admitting",
+        "almost tantamount"
+      ],
       "audioUrl": "audio/words/508.mp3?v=4ee55c4448de",
-      "hookAudioUrl": "audio/hooks/508.mp3?v=77e5fc31c144",
+      "hookAudioUrl": "audio/hooks/508.mp3?v=c695b102d415",
       "senses": [
         {
           "senseId": 973,
@@ -55395,7 +55449,7 @@
         }
       ],
       "mnemonics": [
-        "Tantamount ends in amount: if one thing is tantamount to another, it amounts to the same thing. It comes from Anglo-French tant amunter, 'to amount to as much'."
+        "Tantamount ends in amount: if one thing is tantamount to another, it amounts to the same thing. It may come from Anglo-French tant amunter, 'to amount to as much'."
       ]
     },
     {
@@ -55406,10 +55460,14 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 586849,
-      "etymology": null,
+      "etymology": "From Old English thræl, a slave, which came from Old Norse thræll. Being in thrall is being held as if enslaved, and enthrall is built on the same word.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "in thrall to",
+        "in the thrall of",
+        "held in thrall"
+      ],
       "audioUrl": "audio/words/509.mp3?v=f9830667da19",
       "hookAudioUrl": "audio/hooks/509.mp3?v=f1ce6f99c4e8",
       "senses": [
@@ -55418,7 +55476,7 @@
           "definition": "Strong control that a person or thing has over someone, leaving that person captive or spellbound.",
           "plainLanguageDefinition": "Being in someone's power, or so gripped by something that you cannot pull away.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/974.mp3?v=f4a500c89b0a",
           "examples": [
@@ -55528,10 +55586,16 @@
       "syllables": 1,
       "difficultyTier": 2,
       "frequencyRank": 333038,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin tropus, from Ancient Greek tropos, a turn or manner, which was also used for a figure of speech. The sense of a stock theme in stories is much newer.",
+      "roots": [
+        "tropos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "common trope",
+        "familiar trope",
+        "cultural trope"
+      ],
       "audioUrl": "audio/words/510.mp3?v=f225025e0047",
       "hookAudioUrl": "audio/hooks/510.mp3?v=7dec252aeeab",
       "senses": [
@@ -55600,11 +55664,11 @@
         {
           "senseId": 1030,
           "definition": "Language that bends a word away from its plain, literal meaning.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Words used to mean something other than what they literally say, as in a metaphor.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1030.mp3?v=de4cb1123060",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1030.mp3?v=acd0648511e3",
           "examples": [],
           "distractors": []
         }
@@ -55639,10 +55703,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 171288,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From un- and tenable, which came from French tenir, to hold, going back to Latin tenere. An untenable position or idea is one that cannot be held against attack.",
+      "roots": [
+        "tenere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "untenable position",
+        "untenable situation",
+        "became untenable"
+      ],
       "audioUrl": "audio/words/511.mp3?v=b2cb150583a8",
       "hookAudioUrl": "audio/hooks/511.mp3?v=4e6776316909",
       "senses": [
@@ -55651,7 +55721,7 @@
           "definition": "Unable to hold up under challenge, or impossible to keep going as things stand.",
           "plainLanguageDefinition": "Too weak to defend, or too hard to keep going.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/977.mp3?v=0348f24072d3",
           "examples": [
@@ -55746,10 +55816,14 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 283184,
-      "etymology": null,
+      "etymology": "From un- and toward, an old adjective for willing, easy to teach or promising. Something untoward is the reverse: unruly, unlucky or out of place.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "nothing untoward",
+        "untoward effects",
+        "untoward incident"
+      ],
       "audioUrl": "audio/words/512.mp3?v=ea87758c2b78",
       "hookAudioUrl": "audio/hooks/512.mp3?v=9bf1c9c6d321",
       "senses": [
@@ -55862,10 +55936,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 346536,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French vestige, from Latin vestigium, a footprint or track. A footprint stays after the walker has gone, so the word came to mean any trace that is left.",
+      "roots": [
+        "vestigium"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "last vestiges",
+        "remaining vestiges",
+        "slightest vestige"
+      ],
       "audioUrl": "audio/words/513.mp3?v=731c3cde5e1e",
       "hookAudioUrl": "audio/hooks/513.mp3?v=ae6369e411ad",
       "senses": [
@@ -55874,7 +55954,7 @@
           "definition": "A surviving scrap of something that has otherwise faded away or come to an end.",
           "plainLanguageDefinition": "The little that is still left of something that has almost vanished.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/980.mp3?v=2acbc42d51c6",
           "examples": [
@@ -55961,10 +56041,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 194366,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French volition and Medieval Latin volitio, built on Latin velle, to wish, the verb behind voluntary and benevolent.",
+      "roots": [
+        "velle"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "of their own volition",
+        "conscious volition",
+        "free volition"
+      ],
       "audioUrl": "audio/words/514.mp3?v=63cd83ae293d",
       "hookAudioUrl": "audio/hooks/514.mp3?v=a89f7cac10b6",
       "senses": [
@@ -55973,7 +56059,7 @@
           "definition": "The use of one's own will in choosing or deciding what to do.",
           "plainLanguageDefinition": "Choosing for yourself because you want to, not because you were told to.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/981.mp3?v=33064f4636ea",
           "examples": [
@@ -56073,10 +56159,15 @@
       "syllables": 2,
       "difficultyTier": 2,
       "frequencyRank": 214730,
-      "etymology": null,
+      "etymology": "From Middle English wantowen, undisciplined, made of wan-, not, and towen, brought up or trained. Lack of restraint led to its sense of doing harm with no reason or limit.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "wanton destruction",
+        "wanton cruelty",
+        "wanton violence",
+        "wanton disregard"
+      ],
       "audioUrl": "audio/words/515.mp3?v=1cdf7c4caf41",
       "hookAudioUrl": "audio/hooks/515.mp3?v=6bba5291a7ac",
       "senses": [
@@ -56188,10 +56279,14 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 473349,
-      "etymology": null,
+      "etymology": "From Middle English welteren, to roll about or wallow, a Germanic verb related to wallow itself. The noun went from a tossing, tumbling motion to a tumbled heap of things.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "confusing welter",
+        "welter of emotions",
+        "welter of information"
+      ],
       "audioUrl": "audio/words/516.mp3?v=0eb5016f4984",
       "hookAudioUrl": "audio/hooks/516.mp3?v=e8ed0f41afbf",
       "senses": [
@@ -56291,10 +56386,15 @@
       "syllables": 1,
       "difficultyTier": 2,
       "frequencyRank": 267680,
-      "etymology": null,
+      "etymology": "From Middle English wrien, to turn or twist, from Old English wrigian; awry is a relative. Wry first meant twisted, as of a face pulled to one side, and then dryly mocking.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "wry smile",
+        "wry grin",
+        "wry humor",
+        "wry amusement"
+      ],
       "audioUrl": "audio/words/517.mp3?v=5a0e2784df0a",
       "hookAudioUrl": "audio/hooks/517.mp3?v=f4ff0255adcb",
       "senses": [
@@ -56409,10 +56509,16 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 696792,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin adjudicare, from ad, to, and judicare, to judge, a verb built on judex, a judge; judicial and judicious share the root.",
+      "roots": [
+        "judex"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "adjudicate disputes",
+        "adjudicate cases",
+        "adjudicate claims"
+      ],
       "audioUrl": "audio/words/518.mp3?v=013ed35025ab",
       "hookAudioUrl": "audio/hooks/518.mp3?v=b5ec39eca716",
       "senses": [
@@ -56481,11 +56587,11 @@
         {
           "senseId": 1234,
           "definition": "Judge the entries in a contest and choose the winners.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To decide who wins a contest, such as a talent show or a music festival.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1234.mp3?v=7e4063635bcf",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1234.mp3?v=f91779bc888e",
           "examples": [],
           "distractors": []
         }
@@ -56524,10 +56630,17 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 427676,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Taken straight from Latin animus, the mind or spirit, a word Romans also used for strong feeling and anger. Animosity comes from the same root.",
+      "roots": [
+        "animus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "racial animus",
+        "personal animus",
+        "animus toward",
+        "animus against"
+      ],
       "audioUrl": "audio/words/519.mp3?v=7efe2ccf516e",
       "hookAudioUrl": "audio/hooks/519.mp3?v=216eda1ed02f",
       "senses": [
@@ -56536,7 +56649,7 @@
           "definition": "A lasting grudge or bitter dislike aimed at a particular person or group.",
           "plainLanguageDefinition": "A strong dislike of someone that lasts and shapes how you treat them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1034.mp3?v=a973a5e14e26",
           "examples": [
@@ -56651,10 +56764,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 123815,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through Latin from Ancient Greek antithesis, a setting against, made of anti, against, and thesis, a placing, the word also behind hypothesis and synthesis.",
+      "roots": [
+        "thesis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "very antithesis",
+        "complete antithesis",
+        "direct antithesis"
+      ],
       "audioUrl": "audio/words/520.mp3?v=dbb2e66e5644",
       "hookAudioUrl": "audio/hooks/520.mp3?v=16bae1fb3171",
       "senses": [
@@ -56725,7 +56844,7 @@
           "definition": "A way of writing that pairs opposed ideas in two phrases built the same way, for effect.",
           "plainLanguageDefinition": null,
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1236.mp3?v=beeaec3d6417",
           "examples": [],
