@@ -6066,10 +6066,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 328401,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin conflagratio, a great burning, from conflagrare, to burn up, built on flagrare, to burn or blaze.",
+      "roots": [
+        "flagrare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "great conflagration",
+        "major conflagration",
+        "conflagration spread"
+      ],
       "audioUrl": "audio/words/52.mp3?v=ce101db55ffc",
       "hookAudioUrl": "audio/hooks/52.mp3?v=91e7ea9c8bd1",
       "senses": [
@@ -6078,7 +6084,7 @@
           "definition": "A fire grown to enormous size, consuming whole streets or hillsides.",
           "plainLanguageDefinition": "A huge fire that keeps spreading and burns down everything near it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/97.mp3?v=8dd4e9ad5ae7",
           "examples": [
@@ -6138,11 +6144,11 @@
         {
           "senseId": 1246,
           "definition": "A war or uprising that flares up and engulfs a whole region.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A war or violent conflict that spreads across many places at once.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1246.mp3?v=896ae83df318",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1246.mp3?v=45c6c8794438",
           "examples": [],
           "distractors": []
         }
@@ -6173,10 +6179,16 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 450464,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Borrowed from French in the early 1700s: a connoisseur was literally a knower, from the verb connaître, to know, which goes back to Latin cognoscere.",
+      "roots": [
+        "cognoscere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "wine connoisseur",
+        "art connoisseur",
+        "true connoisseur"
+      ],
       "audioUrl": "audio/words/53.mp3?v=67b371cf7617",
       "hookAudioUrl": "audio/hooks/53.mp3?v=ff276954c82b",
       "senses": [
@@ -6277,10 +6289,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 669249,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin contritus, crushed, the past participle of conterere, to grind, built on terere, to rub: a contrite person is ground down by guilt.",
+      "roots": [
+        "terere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "contrite heart",
+        "looked contrite",
+        "truly contrite"
+      ],
       "audioUrl": "audio/words/54.mp3?v=cb507a86533d",
       "hookAudioUrl": "audio/hooks/54.mp3?v=6f4c26ec2f17",
       "senses": [
@@ -6289,7 +6307,7 @@
           "definition": "Humbled by remorse over a fault of one's own and openly owning the harm it caused.",
           "plainLanguageDefinition": "Ashamed of a wrong you did and ready to say so.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/99.mp3?v=a8cd4645a5e1",
           "examples": [
@@ -6393,10 +6411,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 481767,
-      "etymology": null,
+      "etymology": "Of unknown origin. One etymologist's best guess ties it to 16th-century Jesuit commentaries on Aristotle from Coimbra, whose arguments played on double meanings.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "moral conundrum",
+        "philosophical conundrum",
+        "poses a conundrum"
+      ],
       "audioUrl": "audio/words/55.mp3?v=fcc45c4074d1",
       "hookAudioUrl": "audio/hooks/55.mp3?v=ef88287a5eec",
       "senses": [
@@ -6492,10 +6514,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 258214,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From convolute, taken from Latin convolutus, rolled together, the past participle of convolvere, built on volvere, to roll, as in revolve and involve.",
+      "roots": [
+        "volvere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "convoluted plot",
+        "convoluted process",
+        "convoluted logic"
+      ],
       "audioUrl": "audio/words/56.mp3?v=55ab3659ff46",
       "hookAudioUrl": "audio/hooks/56.mp3?v=e4de6b535d8a",
       "senses": [
@@ -6564,11 +6592,11 @@
         {
           "senseId": 1273,
           "definition": "Physically bent into many tight coils or ridges.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Looped back on itself again and again, like a coil of rope or the ridges of a brain.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1273.mp3?v=627f0f3f8524",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1273.mp3?v=1927ad8b4616",
           "examples": [],
           "distractors": []
         }
@@ -6623,10 +6651,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 168551,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin copiosus, plentiful, from copia, abundance, itself built from ops, wealth. Copia also gave cornucopia, the horn of plenty.",
+      "roots": [
+        "copia"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "copious notes",
+        "copious amounts",
+        "copious tears"
+      ],
       "audioUrl": "audio/words/57.mp3?v=8db38d9cee1c",
       "hookAudioUrl": "audio/hooks/57.mp3?v=a4369ea11643",
       "senses": [
@@ -6739,10 +6773,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 354130,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin corroborare, to strengthen, built on robur, hard oak wood and so strength, the same word that gave robust.",
+      "roots": [
+        "robur"
+      ],
+      "watchOut": "Corroborate is not collaborate: it means to back up a claim with further evidence, not to work together.",
+      "pairings": [
+        "corroborating evidence",
+        "corroborate the story",
+        "independently corroborated"
+      ],
       "audioUrl": "audio/words/58.mp3?v=e63fe68fe121",
       "hookAudioUrl": "audio/hooks/58.mp3?v=56e50f07bf91",
       "senses": [
@@ -6751,7 +6791,7 @@
           "definition": "Confirm a statement independently, so that it no longer rests on one source alone.",
           "plainLanguageDefinition": "To back up what someone has said with proof from a second, separate source.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/105.mp3?v=942de6e51dac",
           "examples": [
@@ -6854,10 +6894,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 520523,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin credulus, quick to believe, from credere, to believe, the verb behind credit, creed and credible.",
+      "roots": [
+        "credere"
+      ],
+      "watchOut": "Credulous describes a person who believes too easily; a claim that deserves belief is credible, not credulous.",
+      "pairings": [
+        "credulous people",
+        "credulous public"
+      ],
       "audioUrl": "audio/words/59.mp3?v=8923cad6c251",
       "hookAudioUrl": "audio/hooks/59.mp3?v=e99883ec4ba1",
       "senses": [
@@ -6866,7 +6911,7 @@
           "definition": "Disposed to believe on little evidence.",
           "plainLanguageDefinition": "Quick to believe things without needing much proof.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/108.mp3?v=37aba33913e5",
           "examples": [
@@ -6967,10 +7012,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 220356,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin cursorius, of running, from cursor, a runner, from currere, to run: a cursory look runs over the surface.",
+      "roots": [
+        "currere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cursory glance",
+        "cursory examination",
+        "cursory look"
+      ],
       "audioUrl": "audio/words/60.mp3?v=652f925be0f3",
       "hookAudioUrl": "audio/hooks/60.mp3?v=21315eb5b3af",
       "senses": [
@@ -7088,10 +7139,14 @@
       "syllables": 1,
       "difficultyTier": 2,
       "frequencyRank": 217121,
-      "etymology": null,
+      "etymology": "From Middle English derthe, made up of dear and the noun ending -th, as warmth is made from warm. Its Germanic source meant costliness: when goods run short, they grow dear.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "dearth of information",
+        "relative dearth",
+        "dearth of evidence"
+      ],
       "audioUrl": "audio/words/61.mp3?v=705ba9ee1e03",
       "hookAudioUrl": "audio/hooks/61.mp3?v=3c45feda2e54",
       "senses": [
@@ -7199,10 +7254,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 283644,
-      "etymology": null,
+      "etymology": "From French débâcle, the breakup of ice on a river, from débâcler, to unbar or set loose. In both languages it came to mean any sudden, disastrous collapse.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "financial debacle",
+        "military debacle",
+        "political debacle"
+      ],
       "audioUrl": "audio/words/62.mp3?v=c91fdaa5d49a",
       "hookAudioUrl": "audio/hooks/62.mp3?v=f9fdb247fa08",
       "senses": [
@@ -7268,7 +7327,7 @@
           "definition": "Flooding caused by a tumultuous breakup of ice in a river during the spring or summer.",
           "plainLanguageDefinition": "Flooding caused by broken ice rushing down a river.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/114.mp3?v=2d556a988cf7",
           "examples": [
@@ -7364,10 +7423,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1906520,
-      "etymology": null,
+      "etymology": "Formed in 1923 from de- and bunk, nonsense, short for bunkum. Bunkum goes back to a long, empty 1820 speech in Congress that its speaker said was meant for Buncombe County, North Carolina.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "debunk the myth",
+        "thoroughly debunked",
+        "debunk the notion"
+      ],
       "audioUrl": "audio/words/63.mp3?v=0282df6638c0",
       "hookAudioUrl": "audio/hooks/63.mp3?v=1e03de0954b7",
       "senses": [
@@ -7467,10 +7530,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 212696,
-      "etymology": null,
+      "etymology": "From Latin decorum, that which is fitting, a form of decorus, proper or seemly, from decor, grace.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "sense of decorum",
+        "proper decorum",
+        "breach of decorum"
+      ],
       "audioUrl": "audio/words/64.mp3?v=89da5dc86f2b",
       "hookAudioUrl": "audio/hooks/64.mp3?v=71afd9df3903",
       "senses": [
@@ -7479,7 +7546,7 @@
           "definition": "Dignified, restrained behavior that keeps to what a solemn or formal setting expects.",
           "plainLanguageDefinition": "Proper, dignified conduct suited to a serious or formal place.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/117.mp3?v=d845630f9f8e",
           "examples": [
@@ -7570,10 +7637,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 103204,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From French déférence, linked to defer in its sense of yielding to someone else's judgment. Both go back to Latin deferre, to carry down or hand over, built on ferre, to carry.",
+      "roots": [
+        "ferre"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "in deference to",
+        "out of deference",
+        "deference to authority"
+      ],
       "audioUrl": "audio/words/65.mp3?v=d8fbc53575d9",
       "hookAudioUrl": "audio/hooks/65.mp3?v=2a247ba9b978",
       "senses": [
@@ -7749,10 +7822,14 @@
       "syllables": 5,
       "difficultyTier": 1,
       "frequencyRank": 155573,
-      "etymology": null,
+      "etymology": "From Greek deleterios, harmful, from deleter, a destroyer, from a verb meaning to hurt or spoil. Despite the look, it is not related to delete.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "deleterious effects",
+        "deleterious consequences",
+        "deleterious substances"
+      ],
       "audioUrl": "audio/words/66.mp3?v=39f920926fea",
       "hookAudioUrl": "audio/hooks/66.mp3?v=863793a72e51",
       "senses": [
@@ -7761,7 +7838,7 @@
           "definition": "Damaging to health, to living things or to the proper working of something.",
           "plainLanguageDefinition": "Bad for something, harming its health or how well it works.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/121.mp3?v=1e77ce60e096",
           "examples": [
@@ -7869,10 +7946,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1166067,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin deridere, to laugh at or mock, from de-, down, and ridere, to laugh, which also gives ridicule.",
+      "roots": [
+        "ridere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "widely derided",
+        "openly derided",
+        "derided as"
+      ],
       "audioUrl": "audio/words/67.mp3?v=ff4d6c075e8b",
       "hookAudioUrl": "audio/hooks/67.mp3?v=ffc2ff4149e6",
       "senses": [
@@ -7881,7 +7964,7 @@
           "definition": "Belittle a person, plan or piece of work with sneering, ridiculing remarks.",
           "plainLanguageDefinition": "To mock or make fun of someone in a mean way.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/122.mp3?v=62798a4b8ff5",
           "examples": [
@@ -7981,10 +8064,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 39759,
-      "etymology": null,
+      "etymology": "From French dérivatif, from Latin derivare, to draw off, a verb built on rivus, a brook or channel: derivative work is drawn off from an earlier source.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "largely derivative",
+        "merely derivative",
+        "highly derivative"
+      ],
       "audioUrl": "audio/words/68.mp3?v=9b005e50ef64",
       "hookAudioUrl": "audio/hooks/68.mp3?v=8881015ea029",
       "senses": [
@@ -7993,7 +8080,7 @@
           "definition": "Patterned on earlier, better-known work rather than conceived independently.",
           "plainLanguageDefinition": "Feels like a copy of something you have already seen or heard.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/123.mp3?v=a1f99dac7723",
           "examples": [
@@ -8089,10 +8176,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 8698678,
-      "etymology": null,
+      "etymology": "From Latin desiccare, to dry up completely, built on siccus, dry.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "desiccated coconut",
+        "desiccating winds",
+        "desiccated remains"
+      ],
       "audioUrl": "audio/words/69.mp3?v=edc1695b8709",
       "hookAudioUrl": "audio/hooks/69.mp3?v=8887eebe9251",
       "senses": [
@@ -8161,11 +8252,11 @@
         {
           "senseId": 1247,
           "definition": "Wither the spirit of a person or thing until only a husk remains.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To kill off the warmth and spark in a person, a group or a piece of work.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1247.mp3?v=7037fada93ac",
+          "audioUrl": "audio/definitions/1247.mp3?v=00b4660ef2f6",
           "examples": [],
           "distractors": []
         }
@@ -8216,10 +8307,16 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 1489487,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin diaphanus, from Greek diaphanes, see-through, from dia-, through, and phainein, to show or to shine.",
+      "roots": [
+        "phainein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "diaphanous gown",
+        "diaphanous veil",
+        "diaphanous material"
+      ],
       "audioUrl": "audio/words/71.mp3?v=6681a1fb11e4",
       "hookAudioUrl": "audio/hooks/71.mp3?v=fbc6787eca33",
       "senses": [
@@ -8228,7 +8325,7 @@
           "definition": "Gauzy and fine, so that light glows through and what lies behind shows as a faint outline.",
           "plainLanguageDefinition": "Fine and filmy, like a veil you can partly see through.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/130.mp3?v=00315f801ddc",
           "examples": [
@@ -8332,10 +8429,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 671945,
-      "etymology": null,
+      "etymology": "From Greek diatribe, built on tribein, to rub or wear away: a way of wearing away time, so a pastime, and also a lecture. Latin used it for a learned discourse.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "diatribe against",
+        "long diatribe",
+        "political diatribe"
+      ],
       "audioUrl": "audio/words/72.mp3?v=d74eb04ec911",
       "hookAudioUrl": "audio/hooks/72.mp3?v=b7d7a3a66f2b",
       "senses": [
@@ -8344,7 +8445,7 @@
           "definition": "A sustained outpouring of furious criticism aimed at one target.",
           "plainLanguageDefinition": "A long, furious rant that tears into a person or idea.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/131.mp3?v=f2f68e4f7aa1",
           "examples": [
@@ -8444,10 +8545,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 124065,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Greek didaktikos, apt at teaching, from didaskein, to teach, by way of French didactique.",
+      "roots": [
+        "didaskein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "didactic tone",
+        "overtly didactic",
+        "didactic purpose"
+      ],
       "audioUrl": "audio/words/73.mp3?v=889793331fff",
       "hookAudioUrl": "audio/hooks/73.mp3?v=0200b397bbbe",
       "senses": [
@@ -8456,7 +8563,7 @@
           "definition": "Written or spoken mainly to drive home a lesson, often with a heavy, lecturing hand.",
           "plainLanguageDefinition": "Made mostly to teach a lesson, and often feels like being scolded.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/132.mp3?v=c243eb326b4b",
           "examples": [
@@ -8540,10 +8647,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 674791,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin diffidere, to distrust, from dis-, not, and fidere, to trust, the verb behind confident. It once meant distrustful of others; now it means unsure of oneself.",
+      "roots": [
+        "fidere"
+      ],
+      "watchOut": "Diffident does not mean indifferent: a diffident person may care a great deal but lacks the confidence to push forward.",
+      "pairings": [
+        "diffident manner",
+        "diffident smile",
+        "shy and diffident"
+      ],
       "audioUrl": "audio/words/74.mp3?v=be0a9c04e91c",
       "hookAudioUrl": "audio/hooks/74.mp3?v=d432fe224548",
       "senses": [
@@ -8656,10 +8769,14 @@
       "syllables": 1,
       "difficultyTier": 4,
       "frequencyRank": 741420,
-      "etymology": null,
+      "etymology": "From Latin dirige, steer or guide, the first word of a chant in the church's service for the dead; it came to mean any song of mourning.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "funeral dirge",
+        "mournful dirge",
+        "solemn dirge"
+      ],
       "audioUrl": "audio/words/76.mp3?v=7d1660adcbfc",
       "hookAudioUrl": "audio/hooks/76.mp3?v=de7fccae20e5",
       "senses": [
@@ -8751,10 +8868,14 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2130888,
-      "etymology": null,
+      "etymology": "Built from dis-, reversing, and abuse in an old sense, to deceive: to disabuse someone is to undo a deception. French has the matching verb désabuser.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Disabuse does not mean to stop abusing someone; it means to free them from a false belief.",
+      "pairings": [
+        "disabuse them of",
+        "quickly disabused",
+        "disabused of the notion"
+      ],
       "audioUrl": "audio/words/77.mp3?v=837fb3ecad53",
       "hookAudioUrl": "audio/hooks/77.mp3?v=f432524148a0",
       "senses": [
@@ -8763,7 +8884,7 @@
           "definition": "Break the hold of an error or illusion on someone's mind.",
           "plainLanguageDefinition": "To clear up someone's wrong idea about something.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/137.mp3?v=618022e24ebc",
           "examples": [
@@ -8851,10 +8972,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 238981,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French discordant, from Latin discordare, to disagree, from discors, at odds, made of dis-, apart, and cor, heart.",
+      "roots": [
+        "cor"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "discordant results",
+        "discordant findings",
+        "discordant views"
+      ],
       "audioUrl": "audio/words/78.mp3?v=e8eddd47b5d4",
       "hookAudioUrl": "audio/hooks/78.mp3?v=abc6531523f6",
       "senses": [
@@ -8923,11 +9050,11 @@
         {
           "senseId": 1248,
           "definition": "Sour-sounding, with tones that jar when heard together.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Grating to listen to, like an out-of-tune piano or instruments playing in different keys.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1248.mp3?v=37c56a668c3a",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1248.mp3?v=2a8e98411f93",
           "examples": [],
           "distractors": []
         }

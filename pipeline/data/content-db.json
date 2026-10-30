@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:03:23.785Z"
+    "updatedAt": "2026-10-30T06:08:12.339Z"
   },
   "counters": {
     "words": 617,
@@ -11,7 +11,7 @@
     "word_relations": 6605,
     "distractors": 7333,
     "mnemonics": 1023,
-    "reviews": 1041
+    "reviews": 1066
   },
   "words": [
     {
@@ -781,8 +781,17 @@
       "syllables": 4,
       "frequency_rank": 328401,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin conflagratio, a great burning, from conflagrare, to burn up, built on flagrare, to burn or blaze.",
+      "audio_url": null,
+      "roots": [
+        "flagrare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "great conflagration",
+        "major conflagration",
+        "conflagration spread"
+      ]
     },
     {
       "id": 53,
@@ -792,8 +801,17 @@
       "syllables": 3,
       "frequency_rank": 450464,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from French in the early 1700s: a connoisseur was literally a knower, from the verb connaître, to know, which goes back to Latin cognoscere.",
+      "audio_url": null,
+      "roots": [
+        "cognoscere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "wine connoisseur",
+        "art connoisseur",
+        "true connoisseur"
+      ]
     },
     {
       "id": 54,
@@ -803,8 +821,17 @@
       "syllables": 2,
       "frequency_rank": 669249,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin contritus, crushed, the past participle of conterere, to grind, built on terere, to rub: a contrite person is ground down by guilt.",
+      "audio_url": null,
+      "roots": [
+        "terere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "contrite heart",
+        "looked contrite",
+        "truly contrite"
+      ]
     },
     {
       "id": 55,
@@ -814,8 +841,15 @@
       "syllables": 3,
       "frequency_rank": 481767,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Of unknown origin. One etymologist's best guess ties it to 16th-century Jesuit commentaries on Aristotle from Coimbra, whose arguments played on double meanings.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "moral conundrum",
+        "philosophical conundrum",
+        "poses a conundrum"
+      ]
     },
     {
       "id": 56,
@@ -825,8 +859,17 @@
       "syllables": 4,
       "frequency_rank": 258214,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From convolute, taken from Latin convolutus, rolled together, the past participle of convolvere, built on volvere, to roll, as in revolve and involve.",
+      "audio_url": null,
+      "roots": [
+        "volvere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "convoluted plot",
+        "convoluted process",
+        "convoluted logic"
+      ]
     },
     {
       "id": 57,
@@ -836,8 +879,17 @@
       "syllables": 3,
       "frequency_rank": 168551,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin copiosus, plentiful, from copia, abundance, itself built from ops, wealth. Copia also gave cornucopia, the horn of plenty.",
+      "audio_url": null,
+      "roots": [
+        "copia"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "copious notes",
+        "copious amounts",
+        "copious tears"
+      ]
     },
     {
       "id": 58,
@@ -847,8 +899,17 @@
       "syllables": 4,
       "frequency_rank": 354130,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin corroborare, to strengthen, built on robur, hard oak wood and so strength, the same word that gave robust.",
+      "audio_url": null,
+      "roots": [
+        "robur"
+      ],
+      "watch_out": "Corroborate is not collaborate: it means to back up a claim with further evidence, not to work together.",
+      "pairings": [
+        "corroborating evidence",
+        "corroborate the story",
+        "independently corroborated"
+      ]
     },
     {
       "id": 59,
@@ -858,8 +919,16 @@
       "syllables": 3,
       "frequency_rank": 520523,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin credulus, quick to believe, from credere, to believe, the verb behind credit, creed and credible.",
+      "audio_url": null,
+      "roots": [
+        "credere"
+      ],
+      "watch_out": "Credulous describes a person who believes too easily; a claim that deserves belief is credible, not credulous.",
+      "pairings": [
+        "credulous people",
+        "credulous public"
+      ]
     },
     {
       "id": 60,
@@ -869,8 +938,17 @@
       "syllables": 3,
       "frequency_rank": 220356,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin cursorius, of running, from cursor, a runner, from currere, to run: a cursory look runs over the surface.",
+      "audio_url": null,
+      "roots": [
+        "currere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "cursory glance",
+        "cursory examination",
+        "cursory look"
+      ]
     },
     {
       "id": 61,
@@ -880,8 +958,15 @@
       "syllables": 1,
       "frequency_rank": 217121,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle English derthe, made up of dear and the noun ending -th, as warmth is made from warm. Its Germanic source meant costliness: when goods run short, they grow dear.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "dearth of information",
+        "relative dearth",
+        "dearth of evidence"
+      ]
     },
     {
       "id": 62,
@@ -891,8 +976,15 @@
       "syllables": 3,
       "frequency_rank": 283644,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French débâcle, the breakup of ice on a river, from débâcler, to unbar or set loose. In both languages it came to mean any sudden, disastrous collapse.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "financial debacle",
+        "military debacle",
+        "political debacle"
+      ]
     },
     {
       "id": 63,
@@ -902,8 +994,15 @@
       "syllables": 2,
       "frequency_rank": 1906520,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed in 1923 from de- and bunk, nonsense, short for bunkum. Bunkum goes back to a long, empty 1820 speech in Congress that its speaker said was meant for Buncombe County, North Carolina.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "debunk the myth",
+        "thoroughly debunked",
+        "debunk the notion"
+      ]
     },
     {
       "id": 64,
@@ -913,8 +1012,15 @@
       "syllables": 3,
       "frequency_rank": 212696,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin decorum, that which is fitting, a form of decorus, proper or seemly, from decor, grace.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "sense of decorum",
+        "proper decorum",
+        "breach of decorum"
+      ]
     },
     {
       "id": 65,
@@ -924,8 +1030,17 @@
       "syllables": 3,
       "frequency_rank": 103204,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French déférence, linked to defer in its sense of yielding to someone else's judgment. Both go back to Latin deferre, to carry down or hand over, built on ferre, to carry.",
+      "audio_url": null,
+      "roots": [
+        "ferre"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "in deference to",
+        "out of deference",
+        "deference to authority"
+      ]
     },
     {
       "id": 66,
@@ -935,8 +1050,15 @@
       "syllables": 5,
       "frequency_rank": 155573,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek deleterios, harmful, from deleter, a destroyer, from a verb meaning to hurt or spoil. Despite the look, it is not related to delete.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "deleterious effects",
+        "deleterious consequences",
+        "deleterious substances"
+      ]
     },
     {
       "id": 67,
@@ -946,8 +1068,17 @@
       "syllables": 2,
       "frequency_rank": 1166067,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin deridere, to laugh at or mock, from de-, down, and ridere, to laugh, which also gives ridicule.",
+      "audio_url": null,
+      "roots": [
+        "ridere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "widely derided",
+        "openly derided",
+        "derided as"
+      ]
     },
     {
       "id": 68,
@@ -957,8 +1088,15 @@
       "syllables": 4,
       "frequency_rank": 39759,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French dérivatif, from Latin derivare, to draw off, a verb built on rivus, a brook or channel: derivative work is drawn off from an earlier source.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "largely derivative",
+        "merely derivative",
+        "highly derivative"
+      ]
     },
     {
       "id": 69,
@@ -968,8 +1106,15 @@
       "syllables": 3,
       "frequency_rank": 8698678,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin desiccare, to dry up completely, built on siccus, dry.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "desiccated coconut",
+        "desiccating winds",
+        "desiccated remains"
+      ]
     },
     {
       "id": 70,
@@ -991,8 +1136,17 @@
       "syllables": 4,
       "frequency_rank": 1489487,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin diaphanus, from Greek diaphanes, see-through, from dia-, through, and phainein, to show or to shine.",
+      "audio_url": null,
+      "roots": [
+        "phainein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "diaphanous gown",
+        "diaphanous veil",
+        "diaphanous material"
+      ]
     },
     {
       "id": 72,
@@ -1002,8 +1156,15 @@
       "syllables": 3,
       "frequency_rank": 671945,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek diatribe, built on tribein, to rub or wear away: a way of wearing away time, so a pastime, and also a lecture. Latin used it for a learned discourse.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "diatribe against",
+        "long diatribe",
+        "political diatribe"
+      ]
     },
     {
       "id": 73,
@@ -1013,8 +1174,17 @@
       "syllables": 3,
       "frequency_rank": 124065,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek didaktikos, apt at teaching, from didaskein, to teach, by way of French didactique.",
+      "audio_url": null,
+      "roots": [
+        "didaskein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "didactic tone",
+        "overtly didactic",
+        "didactic purpose"
+      ]
     },
     {
       "id": 74,
@@ -1024,8 +1194,17 @@
       "syllables": 3,
       "frequency_rank": 674791,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin diffidere, to distrust, from dis-, not, and fidere, to trust, the verb behind confident. It once meant distrustful of others; now it means unsure of oneself.",
+      "audio_url": null,
+      "roots": [
+        "fidere"
+      ],
+      "watch_out": "Diffident does not mean indifferent: a diffident person may care a great deal but lacks the confidence to push forward.",
+      "pairings": [
+        "diffident manner",
+        "diffident smile",
+        "shy and diffident"
+      ]
     },
     {
       "id": 75,
@@ -1047,8 +1226,15 @@
       "syllables": 1,
       "frequency_rank": 741420,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin dirige, steer or guide, the first word of a chant in the church's service for the dead; it came to mean any song of mourning.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "funeral dirge",
+        "mournful dirge",
+        "solemn dirge"
+      ]
     },
     {
       "id": 77,
@@ -1058,8 +1244,15 @@
       "syllables": 3,
       "frequency_rank": 2130888,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Built from dis-, reversing, and abuse in an old sense, to deceive: to disabuse someone is to undo a deception. French has the matching verb désabuser.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Disabuse does not mean to stop abusing someone; it means to free them from a false belief.",
+      "pairings": [
+        "disabuse them of",
+        "quickly disabused",
+        "disabused of the notion"
+      ]
     },
     {
       "id": 78,
@@ -1069,8 +1262,17 @@
       "syllables": 3,
       "frequency_rank": 238981,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French discordant, from Latin discordare, to disagree, from discors, at odds, made of dis-, apart, and cor, heart.",
+      "audio_url": null,
+      "roots": [
+        "cor"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "discordant results",
+        "discordant findings",
+        "discordant views"
+      ]
     },
     {
       "id": 79,
@@ -7334,7 +7536,7 @@
       "definition": "A fire grown to enormous size, consuming whole streets or hillsides.",
       "plain_language_definition": "A huge fire that keeps spreading and burns down everything near it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 98,
@@ -7350,7 +7552,7 @@
       "definition": "Humbled by remorse over a fault of one's own and openly owning the harm it caused.",
       "plain_language_definition": "Ashamed of a wrong you did and ready to say so.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 100,
@@ -7382,7 +7584,7 @@
       "definition": "Confirm a statement independently, so that it no longer rests on one source alone.",
       "plain_language_definition": "To back up what someone has said with proof from a second, separate source.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 108,
@@ -7390,7 +7592,7 @@
       "definition": "Disposed to believe on little evidence.",
       "plain_language_definition": "Quick to believe things without needing much proof.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 110,
@@ -7422,7 +7624,8 @@
       "definition": "Flooding caused by a tumultuous breakup of ice in a river during the spring or summer.",
       "plain_language_definition": "Flooding caused by broken ice rushing down a river.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 116,
@@ -7438,7 +7641,7 @@
       "definition": "Dignified, restrained behavior that keeps to what a solemn or formal setting expects.",
       "plain_language_definition": "Proper, dignified conduct suited to a serious or formal place.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 118,
@@ -7454,7 +7657,8 @@
       "definition": "Courteous regard for people's feelings.",
       "plain_language_definition": "Being thoughtful and polite about other people's feelings.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 121,
@@ -7462,7 +7666,7 @@
       "definition": "Damaging to health, to living things or to the proper working of something.",
       "plain_language_definition": "Bad for something, harming its health or how well it works.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 122,
@@ -7470,7 +7674,7 @@
       "definition": "Belittle a person, plan or piece of work with sneering, ridiculing remarks.",
       "plain_language_definition": "To mock or make fun of someone in a mean way.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 123,
@@ -7478,7 +7682,7 @@
       "definition": "Patterned on earlier, better-known work rather than conceived independently.",
       "plain_language_definition": "Feels like a copy of something you have already seen or heard.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 126,
@@ -7502,7 +7706,7 @@
       "definition": "Gauzy and fine, so that light glows through and what lies behind shows as a faint outline.",
       "plain_language_definition": "Fine and filmy, like a veil you can partly see through.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 131,
@@ -7510,7 +7714,7 @@
       "definition": "A sustained outpouring of furious criticism aimed at one target.",
       "plain_language_definition": "A long, furious rant that tears into a person or idea.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 132,
@@ -7518,7 +7722,7 @@
       "definition": "Written or spoken mainly to drive home a lesson, often with a heavy, lecturing hand.",
       "plain_language_definition": "Made mostly to teach a lesson, and often feels like being scolded.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 133,
@@ -7550,7 +7754,7 @@
       "definition": "Break the hold of an error or illusion on someone's mind.",
       "plain_language_definition": "To clear up someone's wrong idea about something.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 138,
@@ -13107,25 +13311,28 @@
       "id": 1246,
       "word_id": 52,
       "definition": "A war or uprising that flares up and engulfs a whole region.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A war or violent conflict that spreads across many places at once.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1247,
       "word_id": 69,
       "definition": "Wither the spirit of a person or thing until only a husk remains.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To kill off the warmth and spark in a person, a group or a piece of work.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1248,
       "word_id": 78,
       "definition": "Sour-sounding, with tones that jar when heard together.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Grating to listen to, like an out-of-tune piano or instruments playing in different keys.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1249,
@@ -13329,9 +13536,10 @@
       "id": 1273,
       "word_id": 56,
       "definition": "Physically bent into many tight coils or ridges.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Looped back on itself again and again, like a coil of rope or the ridges of a brain.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1274,
@@ -118904,8 +119112,8 @@
     },
     {
       "path": "definitions/1246.mp3",
-      "bytes": 16614,
-      "key": "5e25c1df648943e7",
+      "bytes": 18913,
+      "key": "28f5d50c58871413",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -118939,8 +119147,8 @@
     },
     {
       "path": "definitions/1273.mp3",
-      "bytes": 13270,
-      "key": "1ebd5675eff3e710",
+      "bytes": 21316,
+      "key": "d518b1059d7151ec",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119051,8 +119259,8 @@
     },
     {
       "path": "definitions/1247.mp3",
-      "bytes": 17763,
-      "key": "6edf6be9274ce438",
+      "bytes": 19331,
+      "key": "699ce744086f0cda",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119107,8 +119315,8 @@
     },
     {
       "path": "definitions/1248.mp3",
-      "bytes": 15151,
-      "key": "3014e348955a4764",
+      "bytes": 22988,
+      "key": "196b4b4cd746c82a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -164061,6 +164269,791 @@
         "alsoMeans": 5
       },
       "checker_notes": "Weakest point: none of substance. Wiktionary's Latin condōnō supports \"give up\" (surrender) and \"forgive\", and the con- + dōnō formation. The root donare (donate, donor) and the hook match. Only Cambridge marks the word disapproving, so null is right. The pairings are in the tool's data."
+    },
+    {
+      "id": 1042,
+      "word_id": 52,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary conflagration (Latin conflagratio) and the Latin pages conflagratio (conflagro + -tio), conflagro (con- + flagro, burn) and flagro (to burn, blaze); Middle French step left out. Hook claims (conflagrare, flagrare) match; unchanged. Tone formal: Oxford, Cambridge and Longman all mark the fire sense formal. Other sense (war) shown, a common use (world, general, nuclear conflagration); Oxford has no war sense, so no formal label there.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin facts check against Wiktionary (conflagratio from conflagro, con- + flagro 'burn, blaze'); weakest point there is 'a great burning', which adds 'great' to a gloss that is just 'a burning', and the Middle French step is skipped. formal is right: Oxford, Cambridge and Longman all mark it. Pairings: 'great' and 'major' are generic size words; only 'conflagration spread' shows the sense. Also means: the war sense is current and worth showing (general, European and nuclear conflagration are top collocates), but 'spreads across many places at once' is slightly off, since the sense is a war that spreads widely, not one that breaks out everywhere at the same moment."
+    },
+    {
+      "id": 1043,
+      "word_id": 53,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary connoisseur (French, 1705 to 1715, from connoître, old spelling of connaître) and French connaître (Old French conoistre, from Latin cognoscere). Hook (old French word for to know, related to recognize) is true; unchanged. No tone label in any learner's dictionary. Pairings: true connoisseur is a little generic. Round 2: origin rewritten so it no longer walks through Wiktionary's sentence or keeps the old-spelling aside; it now explains the word as 'a knower' from connaître, from Latin cognoscere (facts as before).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new origin checks against Wiktionary (French connoisseur from connoître, the old spelling of connaître; Latin cognoscere via Old French conoistre) and no longer follows Wiktionary's sentence; 'knower' is a one-word gloss (Dictionary.com glosses Latin cognoscitor the same way), not copying. Weakest point: 'true connoisseur' is a generic pairing beside 'wine' and 'art'."
+    },
+    {
+      "id": 1044,
+      "word_id": 54,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary contrite (contritus, past participle of conterere, from con- + terere, rub) and trite (also from terere, so the root links). Hook (contritus, crushed) matches; unchanged. Formal in all three learner's dictionaries. Pairings from Datamuse and Ngram (contrite heart 66, looked contrite 17, truly contrite 6 per billion); truly is generic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks (contritus, past participle of contero 'grind, crush', con- + tero 'rub'); terere is a good root (trite, attrition). formal is marked by all three learner's dictionaries. Weakest point: 'truly contrite' uses an intensifier that fits any adjective."
+    },
+    {
+      "id": 1045,
+      "word_id": 55,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Wiktionary calls the origin unknown and says it spread as a mock scholastic Latin word; the origin keeps the hedge and leaves out the Coimbra theory. Hook is a sound-alike with no origin claim. Pairings: moral and philosophical conundrum about 6 per billion, poses a conundrum 2.5. Round 2: dropped the mock-Latin sentence that paraphrased Wiktionary; kept the unknown-origin hedge and added the Coimbra theory Wiktionary credits to Anatoly Liberman, worded as one etymologist's best guess.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the Coimbra theory is the one Wiktionary credits to Anatoly Liberman (the Conimbricenses, 16th-century Jesuit commentaries on Aristotle that lean on words with several meanings), and 'best guess' after 'Of unknown origin' keeps it a guess. Weakest point: the second sentence follows Wiktionary's clause in order and in most of its nouns (largely unavoidable proper nouns), and it drops Wiktionary's condition that the theory applies only if the word is more than a nonce coinage, along with the better-supported point that it caught on as mock scholastic Latin."
+    },
+    {
+      "id": 1046,
+      "word_id": 56,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Wiktionary convoluted has no etymology; checked convolute (from Latin convolutum, past participle of convolvere, to roll together; lists convoluted as derived) and convolve (con- + volvo, roll; compare revolve, involve). Hook matches; unchanged. First sense has no tone label; the coiled sense is formal only in Oxford and Longman, so null. Shown under Also means because Oxford and Longman list it as a general sense (brain folds, coiled shells); Wiktionary marks it chiefly anatomy, so a reviewer may judge it technical. Round 2: coiled-sense plain rewritten to drop WordUp's twists, curves and folds trio; it now says looped back on itself, like a coil of rope or the ridges of a brain.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new plain definition for the coiled sense, 'Looped back on itself again and again, like a coil of rope or the ridges of a brain', follows no dictionary's wording or examples (WordUp's are pipes, rivers, blood vessels and wires). Weakest point: a brain's ridges are folded more than looped; minor."
+    },
+    {
+      "id": 1047,
+      "word_id": 57,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary copious (copiosus, from copia, from co- + ops) and Latin cornucopia (cornu + copia), which supports the hook; hook unchanged. No tone labels. Pairings: copious amounts is the most common but a little generic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check. Weakest point: 'built from ops' leaves out the co- that Wiktionary gives (copia is co- + ops); harmless."
+    },
+    {
+      "id": 1048,
+      "word_id": 58,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary corroborate (corroboro, from con- + roboro, from robur, strength), Latin robur (oak tree, hardness, strength; earlier robus) and robustus (from robus, oak). The hook says corroborate and robust share robur; robust comes from robus, the earlier form of the same word, so it holds; unchanged. Formal in all three. Watch-out on the common collaborate mix-up.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "robur 'hard oak wood and so strength' checks against the Latin entry (tough-wooded oak, hardness, strength), and robust comes from robustus, from robur. formal is marked by all three. Weakest point: the watch-out is a real sound-alike slip (collaborate) but less of a classic misreading than the usual watch-outs; it is true and brief."
+    },
+    {
+      "id": 1049,
+      "word_id": 59,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary credulous (credulus, from credo, infinitive credere). Hook (credere, like credit and creed) matches; unchanged. Formal in all three. Watch-out: credulous and credible are a classic test pair. Only two pairings are common enough (credulous people 7, credulous public 3 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check (credulus from credo). formal is marked by all three. The watch-out on credible is a classic mix-up. Weakest point: 'credulous people' is a plain noun, though it is the top collocate."
+    },
+    {
+      "id": 1050,
+      "word_id": 60,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary cursory (Middle French cursoire, Latin cursorius) and Latin cursorius (from cursor) and cursor (from curro, run). Hook says cursory comes from cursor, runner, which holds through cursorius; unchanged. Tone null: only Oxford labels it (often disapproving).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Weakest point: the origin skips Wiktionary's Middle French step (cursoire), and its glosses 'of running' and 'runner' match AHD's; these are short shared facts. Null tone is right (only Oxford labels it, 'often disapproving')."
+    },
+    {
+      "id": 1051,
+      "word_id": 61,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary dearth (Middle English derthe, corresponding to dear + -th; first sense a time when food is scarce and dear). The Old English step is hedged (probably), so the origin leaves it out. Hook matches; unchanged. Tone null: Oxford and Cambridge mark it formal but Longman does not, so the all-three rule leaves it unlabelled. Round 2: origin no longer rewords Wiktionary's sense line; it now gives the Proto-Germanic meaning (costliness) from the Wiktionary etymology and links scarcity to high cost; 'which matches' replaced.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new origin checks (Proto-Germanic *diuriþō 'costliness, preciousness', corresponding to dear + -th); 'Its Germanic source' stays clear of the 'probably' that Wiktionary puts on the Old English step, and the scarcity-makes-dear link is in the writer's own words (Vocabulary.com argues the other direction). Weakest point: 'relative dearth' is a generic pairing."
+    },
+    {
+      "id": 1052,
+      "word_id": 62,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary debacle (French debacle, from debacler, de- + bacler; the bacler step is hedged with perhaps and left out) and French debacle (geology: break-up of ice dam; figurative: fiasco), which also supports the hook; unchanged. Other sense (ice-dam flood) is geology: labelled technical and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check: French débâcle has both the ice-breakup and the figurative fiasco senses on Wiktionary, so 'in both languages' holds. Weakest point: none of substance; the ice-flood other sense is rightly hidden."
+    },
+    {
+      "id": 1053,
+      "word_id": 63,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary debunk (de- + bunk, from bunkum, from Buncombe County, 1923) and bunkum (Felix Walker's 1820 speech he said was for Buncombe). Hook matches; unchanged. Cambridge alone marks it informal, so null. Pairings: debunk the notion is about 3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "The Buncombe story matches Wiktionary's bunkum entry (Felix Walker, 1820, speaking 'to Buncombe'), and bunk is a clipping of bunkum. Weakest point: 'thoroughly debunked' uses a generic intensifier."
+    },
+    {
+      "id": 1054,
+      "word_id": 64,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary decorum (neuter of decorus) and the Latin pages decorus (from decor) and decor (from decet). No root: nothing in common English shows decorus clearly. Hook matches; unchanged. Formal in all three.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check (decorum is the neuter of decorus, which the Latin entry derives from decor). formal is marked by all three. Weakest point: none of substance."
+    },
+    {
+      "id": 1055,
+      "word_id": 65,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary deference (French deference; defer + -ence), defer etymology 2 (Middle French deferer, from Latin defero; the yielding sense; lists deference as derived), French deferer and Latin defero (de- + fero; carry down, hand over). Hook (from defer, to yield) matches; unchanged. Tone null: Oxford gives no label. Other sense (courteous regard) not shown: learner's dictionaries treat respect and yielding as one sense, so it reads as a near-repeat.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check (French déférence; Latin dēferō; ferre is a good root). Null tone is right (Oxford has no label). Weakest point: the hook's 'comes from defer' compresses the route through French déférence, but Wiktionary calls it morphologically defer + -ence, so it holds."
+    },
+    {
+      "id": 1056,
+      "word_id": 66,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary deleterious (Greek deleterios, from deleter, destroyer, from deleomai, hurt, spoil; not related to delete). Hook matches; unchanged. Formal in all three. Pairings: effects and consequences are common but broad; substances shows the health sense.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check, including 'not related to delete'. formal is marked by all three. Weakest point: 'Greek' could be 'Ancient Greek'."
+    },
+    {
+      "id": 1057,
+      "word_id": 67,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary deride (Latin derideo, de- + rideo; the PIE step for rideo is hedged and left out). Hook (ridere, root of ridicule) matches; unchanged. Formal in all three. Pairings: derided as is common but loose.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks; Wiktionary's hedge covers only the Indo-European root, which is left out. formal is marked by all three. Weakest point: the pairings are all adverb or preposition frames ('widely derided', 'openly derided', 'derided as'); a subject such as 'critics derided' (3.7 per billion) would show the meaning better."
+    },
+    {
+      "id": 1058,
+      "word_id": 68,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary derivative (Middle French derivatif, Latin derivatus, derivo) and the Latin pages derivo (de- + rivo, to draw off) and rivo (from rivus, brook, channel). No root: rivus is not visible in common English words. Hook has no origin claim beyond derived; unchanged. Disapproving: Cambridge and Longman (used to show disapproval). Pairings are all adverbs; noun pairings are rare or belong to other senses (derivative work is legal, derivative plot is calculus).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks (derivo 'draw off', from rivus 'brook, channel'); Wiktionary says Middle French rather than French. disapproving matches Cambridge and Longman. Weakest point: all three pairings are degree adverbs that fit any adjective; noun pairings for this sense are rare in the data ('derivative style' 0.88 per billion), so this is acceptable."
+    },
+    {
+      "id": 1059,
+      "word_id": 69,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary desiccate (desicco, de- completely + sicco, from siccus, dry). No root: siccus shows only in desiccant and rare siccative. Hook matches; unchanged. No tone labels. Other sense (wither the spirit) is rare as a verb: not shown, plain written. Round 2: hidden figurative sense rewritten after reading dictionary-defs output (WordUp script text included): no drain, life and feeling, or dull and empty result; it now speaks of killing off warmth and spark.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the hidden figurative sense's new plain definition, 'To kill off the warmth and spark in a person, a group or a piece of work', no longer follows WordUp's 'drain ... of its liveliness, emotion ... flat, empty' frame or any other dictionary's definition. Weakest point: its person, group and work loosely echo the kinds of thing in WordUp's examples (a person's spirit, an art scene, a director's films), though not their wording; hiding the sense is right."
+    },
+    {
+      "id": 1060,
+      "word_id": 71,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary diaphanous (Medieval Latin diaphanus, Greek diaphanes, dia- + phaino) and Greek phaino (to show, bring to light; to shine), which supports the hook's to show; unchanged. Root phainein, in the infinitive form other worksheets use for Greek verbs (graphein, lyein); it also links sycophant. Literary: Cambridge and Longman.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check (diaphanes from dia- + phaino). Weakest point: none of substance; literary matches Cambridge and Longman (Oxford says formal)."
+    },
+    {
+      "id": 1061,
+      "word_id": 72,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary diatribe (French, Latin diatriba, learned discourse, Greek diatribe, way of spending time, lecture, from dia + tribo) and Greek tribo (rub; rub away, wear away), which supports the hook; unchanged. Formal in all three. Round 2: origin now links wearing away to a pastime (wearing away time), using tribo's 'to waste, wear away' gloss; dropped the English-sense clause to keep it short.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the facts check (Greek diatribe 'a way of spending time; pastime; lecture', from tribo 'rub, wear away'; Latin diatriba 'learned discourse'), and 'wearing away time, so a pastime' now links the steps. Weakest point: the origin stops at Latin's 'learned discourse' and no longer says that English uses the word for a bitter attack, so the move to today's meaning is left out; the glosses (pastime, lecture, rub, wear away) are shared by Wiktionary, AHD and Vocabulary.com, so they count as facts, not copying."
+    },
+    {
+      "id": 1062,
+      "word_id": 73,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary didactic (French didactique, Greek didaktikos, from didaktos, from didasko). Root didaskein also in autodidact. Hook matches; unchanged. Tone: Oxford (usually disapproving, on its lecturing sense) and Cambridge (mainly disapproving) agree, and the definition carries that lecturing sense; formal was also possible (Oxford headword, Cambridge US).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check. Weakest point: didaskein shows in English mainly as didact- (autodidact), and disapproving matches Oxford ('usually') and Cambridge ('mainly') although common genre uses such as 'didactic poetry' and the pairing 'didactic purpose' are neutral."
+    },
+    {
+      "id": 1063,
+      "word_id": 74,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary diffident (Latin diffidere; archaic sense distrustful of others), Latin diffido (dis- + fido) and fido (to trust), and confident (from confidere). Hook matches; unchanged. No tone labels. Watch-out on reading diffident as indifferent; judgment call on how common that is.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin checks (diffido is dis- + fido; the archaic 'distrustful' sense is on Wiktionary). Weakest point: diffident read as indifferent is a real mix-up (Vocabulary.com warns the manner can be taken for aloofness) but less established than the classic watch-outs; the note is true."
+    },
+    {
+      "id": 1064,
+      "word_id": 76,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary dirge (Latin dirige, steer, direct, first word of the antiphon in matins for the dead). Hook matches; unchanged. Oxford's informal, disapproving label is for a slow, dull song, a sense not in the record, so null.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check against Wiktionary (dirige, opening the first antiphon of matins for the dead). Weakest point: the record lacks the 'any too slow, dreary song' sense that Oxford (informal, disapproving) and Longman give, a main-worksheet matter."
+    },
+    {
+      "id": 1065,
+      "word_id": 77,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary disabuse (dis- + abuse; compare French desabuser) and abuse (obsolete verb sense: to deceive, impose on), which supports the hook; unchanged. Formal in all three. Watch-out on the classic misreading as stopping abuse.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "'abuse' in its obsolete sense 'to deceive' is on Wiktionary (late 15th to early 19th century), and formal is marked by all three. Weakest point: 'quickly disabused' uses a generic adverb."
+    },
+    {
+      "id": 1066,
+      "word_id": 78,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary discordant (Anglo-Norman, Middle and Old French discordant, Latin discordare, from discors, from dis- apart + cor heart). Hook matches; unchanged. Tone null: Oxford and Longman mark the disagreement sense formal, Cambridge does not. Sound sense shown: it is the most common use (discordant note, sounds). Round 2: sound-sense plain rewritten after reading dictionary-defs output: no 'because the sounds ... blend' frame; it now describes the sound through an out-of-tune piano and clashing keys.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new plain definition for the sound sense, 'Grating to listen to, like an out-of-tune piano or instruments playing in different keys', no longer follows WordUp's 'because the sounds do not blend' frame, and its examples differ from every dictionary's (WordUp's trumpet, buzzing speaker, voices and guitar chord; Vocabulary.com's traffic horns). Weakest point: 'Grating to listen to' alone could fit any harsh noise, though the examples make the clash of tones clear."
     }
   ]
 }
