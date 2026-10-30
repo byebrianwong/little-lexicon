@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:17:08.997Z"
+    "updatedAt": "2026-10-30T06:19:33.976Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1027,
-    "reviews": 1114
+    "mnemonics": 1028,
+    "reviews": 1138
   },
   "words": [
     {
@@ -2508,8 +2508,17 @@
       "syllables": 4,
       "frequency_rank": 138588,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed from in- (\"not\") and tractable, which goes back through Latin tractabilis to tractare (\"to handle\"), itself from trahere (\"to pull\"): an intractable problem refuses to be managed.",
+      "audio_url": null,
+      "roots": [
+        "trahere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "intractable problem",
+        "intractable pain",
+        "intractable conflict"
+      ]
     },
     {
       "id": 158,
@@ -2519,8 +2528,17 @@
       "syllables": 4,
       "frequency_rank": 536955,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Reached English through French intransigeant and Spanish intransigente, from Latin in- (\"not\") and transigere (\"to come to terms\"), built from trans (\"across\") and agere (\"to do\").",
+      "audio_url": null,
+      "roots": [
+        "agere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "intransigent attitude",
+        "intransigent position",
+        "remained intransigent"
+      ]
     },
     {
       "id": 159,
@@ -2530,8 +2548,17 @@
       "syllables": 3,
       "frequency_rank": 2450188,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inundare (\"to flood, overflow\"), built on unda (\"wave\"), the noun behind undulate too: an inundated office gets hit by wave after wave.",
+      "audio_url": null,
+      "roots": [
+        "unda"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inundated with requests",
+        "inundated with calls",
+        "inundated with letters"
+      ]
     },
     {
       "id": 160,
@@ -2541,8 +2568,17 @@
       "syllables": 4,
       "frequency_rank": 411914,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin inveteratus (\"long-standing\"), from veterare (\"to grow old\"), from vetus (\"old\"), the source of veteran. Here in- means \"in\", not \"not\".",
+      "audio_url": null,
+      "roots": [
+        "vetus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "inveterate gambler",
+        "inveterate liar",
+        "inveterate smoker"
+      ]
     },
     {
       "id": 161,
@@ -2552,8 +2588,16 @@
       "syllables": 4,
       "frequency_rank": 729718,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin irascibilis, by way of Old French, from irasci (\"to become angry\"), from ira (\"anger\"), which also gives irate.",
+      "audio_url": null,
+      "roots": [
+        "ira"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "irascible temper",
+        "irascible old man"
+      ]
     },
     {
       "id": 162,
@@ -2563,8 +2607,17 @@
       "syllables": 4,
       "frequency_rank": 204684,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin itinerari (\"to travel\"), from iter (\"journey, road\"), whose stem itiner- also gives itinerary.",
+      "audio_url": null,
+      "roots": [
+        "iter"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "itinerant preacher",
+        "itinerant workers",
+        "itinerant traders"
+      ]
     },
     {
       "id": 163,
@@ -2574,8 +2627,15 @@
       "syllables": 3,
       "frequency_rank": 560087,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Spartans were famous for answering in very few words; their region, Laconia, gave Greek Lakonikos, which reached English through Latin Laconicus.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Strictly, laconic means using few words; it is also often used to mean laid-back or languid, a use some usage guides reject.",
+      "pairings": [
+        "laconic reply",
+        "laconic style",
+        "laconic manner"
+      ]
     },
     {
       "id": 164,
@@ -2597,8 +2657,17 @@
       "syllables": 1,
       "frequency_rank": 363072,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin laudare (\"to praise\"), from laus (\"praise, glory\"), by way of Old French and Middle English; laudable has the same source.",
+      "audio_url": null,
+      "roots": [
+        "laus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "widely lauded",
+        "critically lauded",
+        "lauded as a hero"
+      ]
     },
     {
       "id": 166,
@@ -2608,8 +2677,14 @@
       "syllables": 3,
       "frequency_rank": 467958,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek lethargikos, from lethargos (\"forgetful\"), joining lethe (\"forgetting\") and argos (\"idle\"). The Greek noun lethargia already meant drowsiness, the heavy, sluggish state the word names now.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "tired and lethargic",
+        "lethargic state"
+      ]
     },
     {
       "id": 167,
@@ -2619,8 +2694,16 @@
       "syllables": 3,
       "frequency_rank": 517843,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin levitas (\"lightness\"), from levis (\"light in weight\"), the root of lever, elevate and alleviate: levity treats a heavy moment lightly.",
+      "audio_url": null,
+      "roots": [
+        "levis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "moment of levity",
+        "a bit of levity"
+      ]
     },
     {
       "id": 168,
@@ -2630,8 +2713,13 @@
       "syllables": 3,
       "frequency_rank": 1192731,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin loquax (\"talkative\"), from loqui (\"to speak\"), the verb behind eloquent and soliloquy.",
+      "audio_url": null,
+      "roots": [
+        "loqui"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 169,
@@ -2641,8 +2729,17 @@
       "syllables": 2,
       "frequency_rank": 147721,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin lucidus, from lucere (\"to shine\"); elucidate is built on lucidus too. A lucid account lets light into its subject.",
+      "audio_url": null,
+      "roots": [
+        "lucere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "lucid explanation",
+        "lucid account",
+        "lucid prose"
+      ]
     },
     {
       "id": 170,
@@ -2652,8 +2749,17 @@
       "syllables": 3,
       "frequency_rank": 90076,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin luminosus (\"full of light\"), from lumen (\"light\"), through Middle French; illuminate comes from the same noun.",
+      "audio_url": null,
+      "roots": [
+        "lumen"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "luminous paint",
+        "luminous dial",
+        "faintly luminous"
+      ]
     },
     {
       "id": 171,
@@ -2663,8 +2769,18 @@
       "syllables": 4,
       "frequency_rank": 455797,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin magnanimus (\"great-souled\"), joining magnus (\"great\") with animus (\"mind, spirit\"), the noun also behind equanimity.",
+      "audio_url": null,
+      "roots": [
+        "magnus",
+        "animus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "magnanimous gesture",
+        "magnanimous in victory",
+        "magnanimous offer"
+      ]
     },
     {
       "id": 172,
@@ -2674,8 +2790,11 @@
       "syllables": 3,
       "frequency_rank": 11007882,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Apparently from French malingre (\"frail, puny\"): a malingerer plays the weakling to dodge work.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Despite the linger inside it, malinger does not mean to hang about; it means to fake or play up an illness to avoid work.",
+      "pairings": []
     },
     {
       "id": 173,
@@ -2685,8 +2804,16 @@
       "syllables": 4,
       "frequency_rank": 299127,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin malleabilis, through Middle French, from malleare (\"to hammer\"), from malleus (\"hammer\"), which is also the source of mallet.",
+      "audio_url": null,
+      "roots": [
+        "malleus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "infinitely malleable",
+        "malleable minds"
+      ]
     },
     {
       "id": 174,
@@ -2696,8 +2823,15 @@
       "syllables": 2,
       "frequency_rank": 919882,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Maudelen, a Middle English spelling of Magdalene. Artists usually showed Mary Magdalene weeping, so her name came to mean tearfully sentimental.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "get maudlin",
+        "maudlin sentimentality",
+        "maudlin tears"
+      ]
     },
     {
       "id": 175,
@@ -2707,8 +2841,11 @@
       "syllables": 3,
       "frequency_rank": 2273781,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin mendax (\"lying\"), through mendacium (\"a lie\") and Middle French. Mendax first meant \"faulty\" and is related to mendum (\"flaw\"), behind amend and mend.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 176,
@@ -2718,8 +2855,15 @@
       "syllables": 4,
       "frequency_rank": 468967,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin mercurialis (\"of Mercury\"), from Mercurius, the Roman messenger god. In astrology, people under the influence of Mercury were thought quick and changeable.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mercurial temperament",
+        "mercurial personality",
+        "mercurial nature"
+      ]
     },
     {
       "id": 177,
@@ -2729,8 +2873,16 @@
       "syllables": 4,
       "frequency_rank": 137813,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin meticulosus (\"fearful, timid\"), from metus (\"fear\"). The sense of great care over details came later, from French méticuleux.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "meticulous care",
+        "meticulous attention to detail",
+        "meticulous research",
+        "meticulous records"
+      ]
     },
     {
       "id": 178,
@@ -2740,8 +2892,17 @@
       "syllables": 3,
       "frequency_rank": 142959,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin mitigare (\"to soften, tame\"), from mitis (\"mild, gentle\"): to mitigate a harm is to make it milder.",
+      "audio_url": null,
+      "roots": [
+        "mitis"
+      ],
+      "watch_out": "Mitigate means to lessen; to work against is militate, so most usage guides count \"mitigate against\" as an error.",
+      "pairings": [
+        "mitigate the risk",
+        "mitigate the effects",
+        "mitigate the impact"
+      ]
     },
     {
       "id": 179,
@@ -2751,8 +2912,13 @@
       "syllables": 3,
       "frequency_rank": 1164692,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin mollificare, built on Latin mollis (\"soft\"), which also gives emollient: to mollify people is to soften their anger.",
+      "audio_url": null,
+      "roots": [
+        "mollis"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 180,
@@ -2762,8 +2928,17 @@
       "syllables": 2,
       "frequency_rank": 490997,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin morosus (\"fussy, peevish, self-willed\"), from mos (\"custom; self-will\"), the root of moral and mores, by way of French.",
+      "audio_url": null,
+      "roots": [
+        "mos"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "morose silence",
+        "morose expression",
+        "grew morose"
+      ]
     },
     {
       "id": 181,
@@ -2773,8 +2948,15 @@
       "syllables": 2,
       "frequency_rank": 99480,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through Old French mondain from Late Latin mundanus, from mundus (\"world\"): mundane things belong to the ordinary world of every day.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "mundane tasks",
+        "mundane details",
+        "mundane chores"
+      ]
     },
     {
       "id": 182,
@@ -8799,7 +8981,7 @@
       "definition": "Holding out against every remedy or method applied to it.",
       "plain_language_definition": "So stubborn or tangled that nothing you try seems to fix or control it.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 276,
@@ -8807,7 +8989,7 @@
       "definition": "Refusing to give ground or accept any compromise, however strong the arguments or appeals.",
       "plain_language_definition": "Refusing to budge or meet the other side halfway, no matter what.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 277,
@@ -8823,7 +9005,7 @@
       "definition": "Grown old in a habit or pastime, so that it now marks the person.",
       "plain_language_definition": "Stuck with a habit for so many years that it is part of who you are.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 280,
@@ -8863,7 +9045,7 @@
       "definition": "Speak or write of in glowing terms, holding up as worthy of honor.",
       "plain_language_definition": "To say in public how great someone or something is.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 288,
@@ -8879,7 +9061,7 @@
       "definition": "Lightheartedness that breaks into a grave mood, whether as welcome relief or as disrespect.",
       "plain_language_definition": "Jokes and fun at a serious time.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 291,
@@ -8887,7 +9069,7 @@
       "definition": "Fond of talking and quick to fill any silence with conversation.",
       "plain_language_definition": "Very chatty, and hard to stop once started.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 292,
@@ -8919,7 +9101,7 @@
       "definition": "Use a sham or overstated ailment as cover for dodging one's duties.",
       "plain_language_definition": "To play sick to get out of doing your job.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 299,
@@ -8943,7 +9125,7 @@
       "definition": "Making a practice of lying, with little regard for the truth.",
       "plain_language_definition": "Lying often, so that what you say cannot be trusted.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 303,
@@ -8951,7 +9133,8 @@
       "definition": "Intentionally untrue.",
       "plain_language_definition": "Deliberately false and deceptive.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": false
     },
     {
       "id": 304,
@@ -8959,7 +9142,7 @@
       "definition": "Prone to abrupt reversals of temper or intention that others cannot foresee.",
       "plain_language_definition": "Changing mood or mind so often and so fast that others are always caught off guard.",
       "sense_order": 1,
-      "register": null
+      "register": "literary"
     },
     {
       "id": 306,
@@ -8967,7 +9150,7 @@
       "definition": "Thorough down to the smallest particular, letting no slip pass however minor.",
       "plain_language_definition": "So careful that even the tiniest part of a job is done right.",
       "sense_order": 1,
-      "register": null
+      "register": "approving"
     },
     {
       "id": 308,
@@ -8975,7 +9158,7 @@
       "definition": "Reduce the harm, force or seriousness of something bad, without removing it entirely.",
       "plain_language_definition": "To soften the damage that something bad can do.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 310,
@@ -10303,15 +10486,17 @@
       "definition": "Physical lightness, the property of having little weight.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 610,
       "word_id": 178,
       "definition": "Make a wrong or crime seem less serious, as facts offered in someone's defense can.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To make a wrongdoing seem less bad, for example when a court hears why it happened.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 613,
@@ -10365,9 +10550,10 @@
       "id": 632,
       "word_id": 173,
       "definition": "Able to be beaten flat or worked into a shape without breaking apart, as gold and copper are.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Soft enough to be hammered thin or pressed into shape, like gold or copper.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 636,
@@ -13653,9 +13839,10 @@
       "id": 1243,
       "word_id": 170,
       "definition": "Of writing or a performance: unusually clear, vivid and beautiful.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Clear, vivid and moving, as praise for writing, music or acting.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1244,
@@ -13954,17 +14141,19 @@
       "id": 1278,
       "word_id": 159,
       "definition": "Spread water over land until it lies submerged.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To put fields, streets or towns under floodwater.",
       "sense_order": 2,
-      "register": null
+      "register": "formal",
+      "also_means": true
     },
     {
       "id": 1279,
       "word_id": 169,
       "definition": "Able to reason and recognize people again after a period of mental fog.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In your right mind and making sense, often only for a short spell during an illness.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1280,
@@ -13972,7 +14161,8 @@
       "definition": "Glowing or glassy, so that light shines from it or through it.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1281,
@@ -14036,15 +14226,17 @@
       "definition": "Involving the liquid metal mercury, whether as an ingredient or as the cause of an illness.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1289,
       "word_id": 176,
       "definition": "Sharp-witted and full of darting energy in talk or thought.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Fast-thinking and full of bright energy, jumping nimbly from one idea to the next.",
       "sense_order": 3,
-      "register": null
+      "register": "literary",
+      "also_means": true
     },
     {
       "id": 1290,
@@ -14052,7 +14244,8 @@
       "definition": "Take the stiffness out of a material.",
       "plain_language_definition": null,
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1291,
@@ -14060,7 +14253,8 @@
       "definition": "Soften the edge of a criticism or a demand so it stings less.",
       "plain_language_definition": null,
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1292,
@@ -67402,14 +67596,6 @@
       "revision": 3
     },
     {
-      "id": 525,
-      "word_id": 176,
-      "text": "Mercurial comes from Mercury, the swift messenger god, and the metal named after him, which slides and splits apart unpredictably.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 526,
       "word_id": 177,
       "text": "Meticulous comes from Latin metus, fear: a meticulous worker is almost afraid of making even one small mistake.",
@@ -71133,6 +71319,14 @@
       "id": 1027,
       "word_id": 112,
       "text": "Expunge comes from Latin pungere, to prick, as in puncture: to expunge a name is to prick it out of a list.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1028,
+      "word_id": 176,
+      "text": "Mercurial comes from Mercury, the swift messenger god, like the metal named after him, which slides and splits apart unpredictably.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -120455,8 +120649,8 @@
     },
     {
       "path": "definitions/1278.mp3",
-      "bytes": 14420,
-      "key": "0a8797186d85b389",
+      "bytes": 14733,
+      "key": "461d7ee9c890aed4",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120532,8 +120726,8 @@
     },
     {
       "path": "definitions/1279.mp3",
-      "bytes": 21420,
-      "key": "a35641992f57c717",
+      "bytes": 21211,
+      "key": "a9082b72028dd3a4",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120553,8 +120747,8 @@
     },
     {
       "path": "definitions/1243.mp3",
-      "bytes": 19435,
-      "key": "4488003d9f124e50",
+      "bytes": 18495,
+      "key": "a4fc5a68dccf5fd5",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120581,8 +120775,8 @@
     },
     {
       "path": "definitions/632.mp3",
-      "bytes": 24137,
-      "key": "8dc4fc8d8901c56a",
+      "bytes": 20271,
+      "key": "b4d014a311ee4485",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120623,8 +120817,8 @@
     },
     {
       "path": "definitions/1289.mp3",
-      "bytes": 15987,
-      "key": "06103a1f6333669f",
+      "bytes": 22779,
+      "key": "c1ddf341e7579d95",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -120644,8 +120838,8 @@
     },
     {
       "path": "definitions/610.mp3",
-      "bytes": 21734,
-      "key": "8177c47d42f3281a",
+      "bytes": 20689,
+      "key": "8906a94085f11686",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125985,8 +126179,8 @@
     },
     {
       "path": "hooks/176.mp3",
-      "bytes": 34586,
-      "key": "7576fbb2a73ece0d",
+      "bytes": 34168,
+      "key": "b7a46121f733659c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -166945,6 +167139,760 @@
         "alsoMeans": 5
       },
       "checker_notes": "All scores 5. Origin matches Wiktionary (Old French guile 'deception', from Frankish *wil 'ruse'; wile goes back to Proto-Germanic *wila and is a doublet of guile). formal: all three dictionaries mark it. The hook's beguile (be- + guile) is right. Weakest point: nothing of note."
+    },
+    {
+      "id": 1115,
+      "word_id": 157,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py: the intractable page gives only in- (\"not\") + tractable (ety template, read raw); the tractable page gives Latin tractabilis from tracto (\"take in hand, handle\"), frequentative of traho (\"draw\"). Root trahere (the base verb, also in attract, traction). Hook (Latin tractare, to handle) is true as the ultimate source. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings per billion (Ngram 2010-2022): intractable problem 60.8, intractable pain 65.8, intractable conflict 35.7.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary's tractable entry (Latin tractabilis, from tractare 'handle', frequentative of trahere 'draw'). formal is marked by Oxford, Cambridge and Longman. Pairings are all in the tool's top lists. Weakest point: the hook's 'comes from tractare' holds only through tractabilis and tractable, which is close enough."
+    },
+    {
+      "id": 1116,
+      "word_id": 158,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French intransigeant, from Spanish intransigente, from Latin in- + transigens, participle of transigo \"to come to an understanding\", from trans + ago \"to do\"). Root agere, spelled as on the exigent and cogent entries. Hook (via Spanish from transigere, to settle a deal, plus in- not) is true. Tone: Oxford and Cambridge mark it formal and disapproving, Longman formal; all three mark formal, but disapproving (two of three) is the label that matters for use, so it is the one set. Pairings: intransigent attitude 5.0, remained intransigent 5.3, intransigent position 4.0 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (French, from Spanish, from Latin in- + transigere, from trans + agere). disapproving is marked by Oxford and Cambridge (Longman only formal). Weakest point: 'remained intransigent' uses a generic verb partner; 'intransigent attitude' and 'intransigent position' show the meaning. The hook skips the French step but says nothing false."
+    },
+    {
+      "id": 1117,
+      "word_id": 159,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin inundatus, from inundo \"to flood, overflow\", from in- + undo, from unda \"wave\") and the cached undulate page (from *undula, diminutive of Latin unda). Hook (Latin unda, a wave) is true. Tone: the three learner's dictionaries put formal only on the flood sense (all three), so the first sense is null and the flood sense is formal. The flood sense is current (inundated areas, land) and shown. Pairings: inundated with requests 13.4, with calls 7.6, with letters 4.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (inundare, from unda 'wave'; its undulate page derives undulate from unda through undula). First sense rightly unlabeled; the flood sense is formal in all three dictionaries and its plain definition is the writer's own. Pairings 4.5 to 13 per billion. Weakest point: all three pairings repeat the 'inundated with' frame."
+    },
+    {
+      "id": 1118,
+      "word_id": 160,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin inveteratus \"of long standing\", from in- \"in, into\" + vetero \"to age\", from vetus, veteris \"old\"; Wiktionary also notes the false surface reading in- \"not\") and the Latin veteranus page (from the stem veter- of vetus). Hook (shares veter-, old, with veteran) is true. Tone disapproving: Oxford \"formal, often disapproving\", Cambridge \"usually disapproving\", Longman \"written\"; two of three, and all four examples are bad habits. Not formal (Cambridge and Longman do not mark it). Pairings: inveterate gambler 9.2, liar 4.5, smoker 3.1 per billion (inveterate enemy is commoner but is the long-standing hatred use, not a habit).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary, including in- meaning 'in, into'; veteran from vetus is right. disapproving: Oxford 'often disapproving', Cambridge 'usually disapproving'. Weakest point: the plain label is a little stronger than the dictionaries' 'often' and 'usually'."
+    },
+    {
+      "id": 1119,
+      "word_id": 161,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English, from Old French irascible, from Late Latin irascibilis, from Latin irasci \"to be angry\") and the irate page (Latin iratus, from irascor, from ira \"anger\"). Hook (irascible and irate both from Latin ira) is true. Tone null: Oxford and Cambridge mark formal, Longman marks written, so the all-three rule for formal is not met. Pairings: irascible temper 3.7, irascible old man 2.2 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Old French, Late Latin irascibilis, irasci); ira and irate confirmed on Wiktionary's irate page. Null tone is right: formal in Oxford and Cambridge only, Longman says written. Weakest point: only two pairings, though both are common."
+    },
+    {
+      "id": 1120,
+      "word_id": 162,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Late Latin itinerantem, participle of itineror \"travel\", from itiner-), the Latin itineror page (from iter, stem itiner-) and the itinerary page (Latin itinerarium, from iter \"a way, journey\"). Hook (shares iter, a journey, with itinerary) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. Pairings: itinerant preacher 34.4, workers 13.2, traders 13.3 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (itineror, stem itiner-; its itinerary page derives itinerary from iter). Null tone is right (formal in Oxford and Longman only). Weakest point: the gloss 'journey, road' matches Oxford's word origin, a short shared fact."
+    },
+    {
+      "id": 1121,
+      "word_id": 163,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin Laconicus \"Spartan\", from Greek Lakonikos \"Laconian\"; Laconia was ruled by the Spartans, known for brevity). No root: a place name. Hook origin claim (from Laconia, home of the terse Spartans) is true; the \"If\" reply is an ancient anecdote (Plutarch tells it of Philip of Macedon), not an origin claim, so the hook is unchanged. Tone null: only Cambridge marks formal. Pairings: laconic reply 9.2, style 7.3, manner 3.7 per billion. Round 2: origin recast so it no longer follows Wiktionary's sentence order (the Spartan trait first, then the region and the borrowing chain). Added a watch-out: Wiktionary marks the \"languid, lackadaisical, laid-back\" sense \"common, sometimes proscribed\" and its usage note cites a 1997 Guide to Canadian English Usage and later critics, so the note presents it as a disputed use, not an error.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the recast origin no longer follows Wiktionary's or Oxford's sentence shape, and its facts match Wiktionary (Laconia, Greek Lakonikos, Latin Laconicus, Spartan brevity). The watch-out matches Wiktionary's 'common, sometimes proscribed' label for the laid-back sense and describes it as a dispute. Weakest point: no learner's dictionary records that sense, so the note rests on Wiktionary alone, which its 'some usage guides' wording reflects."
+    },
+    {
+      "id": 1122,
+      "word_id": 165,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English lauden, from Old French lauder, from Latin laudo, laudare, from laus \"praise, glory, fame\"), the laudable page (Latin laudabilis, laud + -able) and the applaud page (ad + plaudere \"to clap\", a different root, as the hook says). Hook is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings: widely lauded 8.9, critically lauded 4.3, lauded as a hero 2.8 per billion; the bare verb is rare in Datamuse because of Archbishop Laud, and widely is a generic partner.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (laudare, laus; laudable from the same source), and the hook rightly says applaud has a different root. formal in all three. Weakest point: 'widely lauded' uses a generic adverb; 'critically lauded' and 'lauded as a hero' show the meaning better."
+    },
+    {
+      "id": 1123,
+      "word_id": 166,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Greek lethargikos, from lethargos \"forgetful, lethargic\", from lethe \"forgetfulness\", whence the river Lethe, + argos \"not working\"). No root: lethe shows in no other common English word (lethal is from unrelated Latin letum, so linking it would mislead). Hook (lethe, forgetfulness, river of forgetting, plus argos, idle) is true. Tone null: no label in Oxford, Cambridge or Longman. Pairings: become lethargic 12.0, feel lethargic 11.2, tired and lethargic 6.1 per billion; the verbs are generic partners. Round 2: origin now gives the step to today's sense, checked against the Wiktionary lethargy page (Late Latin lethargia, from Greek lethargia \"drowsiness\", from lethargos \"forgetful, lethargic\"); the river is left to the hook. Pairings: dropped the generic feel and become lethargic; kept tired and lethargic (6.1 per billion) and added lethargic state (8.2), which Datamuse ranks first.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the new step is supported by Wiktionary's lethargy entry (Ancient Greek lethargia, 'drowsiness', from lethargos), in the writer's own words. Both pairings are common (6.1 and 8.2 per billion). Weakest point: 'lethargic state' was my round 1 suggestion and 'state' is a broad noun, so a fresh reader could confirm it; 'Greek' could be 'Ancient Greek'."
+    },
+    {
+      "id": 1124,
+      "word_id": 167,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (coined 1564 from Latin levitas \"lightness, frivolity\", from levis; cognate to lever), the elevate page (e- + levo \"to lift\", from levis \"light\") and the alleviate page (lev-). Root levis, spelled as on alleviate. Hook (levis, light, behind elevate and lever) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. The physical-lightness sense is old and not in the learner's dictionaries, so it is not shown. Pairings: moment of levity 12.4, a bit of levity 6.1 per billion; \"a bit of\" is generic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (levitas, levis); lever, elevate and alleviate all go back to levis. formal in all three. The physical sense is rightly hidden. Weakest point: 'a bit of levity' uses a generic quantity phrase; 'moment of levity' carries the pairings."
+    },
+    {
+      "id": 1125,
+      "word_id": 168,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin loquax, loquacis \"talkative\" + -ous, ultimately from loquor), the eloquent page (e + loquor) and the soliloquy page (solus + loquor). Root loqui, as on eloquent. Hook is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. Pairings left empty: no partner is common (loquacious man 1.9, loquacious mood 0.7, became loquacious 1.0 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (loquax, loquor; its eloquent and soliloquy pages derive both from loquor). formal in all three. Empty pairings are right: the best noun pairing, 'loquacious man', is under 2 per billion. Weakest point: none of note."
+    },
+    {
+      "id": 1126,
+      "word_id": 169,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin lucidus, from luceo \"shine\" + -idus) and the elucidate page (Late Latin elucido, from ex- + lucidus). Hook (lucere, to shine) is true. Tone null: no label in Oxford, Cambridge or Longman. The clear-headed sense is current (lucid intervals 37,731 and lucid moments in Datamuse) and shown; the glowing sense is literary and rare, not shown. Pairings: lucid account 15.9, explanation 9.6, prose 7.3 per billion (lucid intervals and lucid dreaming belong to other uses).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (lucidus, from luceo; its elucidate page builds on lucidus). No dictionary labels either shown sense. The clear-minded sense is current (lucid intervals, lucid moments) and its plain definition is the writer's own. Weakest point: 'during an illness' narrows a sense also used of confusion or old age, though 'often' hedges it."
+    },
+    {
+      "id": 1127,
+      "word_id": 170,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French lumineus, from Latin luminosus), the Latin luminosus page (lumen \"light\" + -osus, \"full of light\") and the illuminate page (in + lumino, from lumen). Hook (lumen, light, same root as illuminate) is true. Tone null: Oxford and Longman label only other senses (figurative bright colour, technical). The praise-for-art sense is current in reviews (Cambridge \"very beautiful\", Dictionary.com and AHD give it) and shown. Pairings: luminous dial 13.6, paint 10.5, faintly luminous 9.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary's luminous entry stops at Latin luminosus; lumen and illuminate are confirmed by Wiktionary's illuminate page and Oxford's word origin. No tone label applies. The writing and performance sense is current and well glossed. Weakest point: the gloss 'full of light' for luminosus is not on Wiktionary's English page, though it is the plain sense of lumen + -osus."
+    },
+    {
+      "id": 1128,
+      "word_id": 171,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin magnanimus, from magnus \"great\" + animus \"soul, mind\") and the equanimity page (aequus + animus). Hook is true. Tone null: Oxford and Cambridge mark formal, Longman does not. Pairings: magnanimous gesture 14.0, in victory 4.5, offer 3.8 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (magnus + animus); equanimity from animus confirmed on its equanimity page. Null tone is right (formal in Oxford and Cambridge only). Weakest point: 'magnanimous offer' is the least frequent pairing (3.8 per billion), still common."
+    },
+    {
+      "id": 1129,
+      "word_id": 172,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French malingrer, from the adjective malingre \"delicate, fragile\") and the French malingre page (mal- + Old French heingre; \"delicate, fragile, puny\"). No root (mal- is a bare prefix). Hook (French malingre, sickly) agrees: sickly is a fair gloss of frail, puny. Tone disapproving: Oxford and Cambridge mark it disapproving. Watch-out: malinger and malingering are often used as if they meant linger or lingering; the note says what it means instead. Pairings left empty: the phrases are clinical or rare (accused of malingering 1.0, suspected of malingering 1.3 per billion). Round 2: origin now names only French malingre and keeps Oxford's hedge (\"apparently\"), since Wiktionary routes it through French malingrer while Oxford calls the verb a back-formation from malingerer.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: naming only French malingre with 'apparently' fits both Wiktionary (via malingrer) and Oxford (back-formation, hedged), and keeps the step to the meaning. The hook's unhedged 'comes from French malingre' is still supported by Wiktionary. Weakest point: the watch-out's linger confusion is plausible but not recorded by any dictionary checked."
+    },
+    {
+      "id": 1130,
+      "word_id": 173,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French malleable, from Late Latin malleabilis, from Latin malleare \"to hammer\", from malleus \"hammer\") and, for mallet, the Middle English maylet page (Old French maillet, from mail, from Latin malleus). Root malleus, also in mallet. Hook (malleus, hammer) is true. Tone: first sense null (only Longman marks formal); the metal sense is technical (Oxford specialist, Longman technical) and shown, since general readers meet it often (malleable iron, gold is malleable). Pairings: infinitely malleable 13.2, malleable minds 2.0 per billion; infinitely is a generic partner.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (malleabilis, malleare, malleus); mallet from malleus is standard. technical on the metal sense matches Oxford (specialist) and Longman (technical), and it is a sense general readers meet. Weakest point: 'infinitely malleable' uses a generic intensifier."
+    },
+    {
+      "id": 1131,
+      "word_id": 174,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English Maudelen, a dialectal form of Mary Magdalene, typically depicted weeping, from Old French Madelaine, from Late Latin Magdalena). Hook (from Magdalene, once pronounced maudlin, often painted weeping) agrees with it. Tone null: no label in Oxford, Cambridge or Longman. Pairings: get maudlin 6.6, maudlin sentimentality 3.6, maudlin tears 2.2 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Maudelen, Mary Magdalene typically depicted weeping) and gives the step to today's sense in the writer's own words. No dictionary labels it. Weakest point: 'get maudlin' uses a generic verb, though it is the most common pairing."
+    },
+    {
+      "id": 1132,
+      "word_id": 175,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle French mendacieux, from Latin mendacium \"lie\", from mendax \"lying\"), the Latin mendax page (from Proto-Indo-European *mend- \"fault\", whence also mendum; original meaning \"faulty\", shifted toward \"deceitful\" under the influence of mentior \"to lie\"), and the amend and mend pages (Latin emendare, from ex + mendum \"fault\"). No root: mendax and mendum share only a deeper root, so no Latin stem is shared with amend. Hook (mendax related to mendum, source of mend and amend) is true. Tone formal: Oxford, Cambridge and Longman all mark it formal. The \"intentionally untrue\" sense repeats the first for statements, so it is not shown. Pairings left empty: none is common (mendacious propaganda 0.7, claims 0.4 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Checked against Wiktionary's English entry and its Latin mendax page, which says mendax first meant 'faulty' and shares a root with mendum; Wiktionary's amend page derives amend from mendum. formal in all three. Empty pairings are right (all under 1 per billion). Weakest point: the origin leaves out that the shift to 'lying' came under the influence of mentior, which is fine to omit."
+    },
+    {
+      "id": 1133,
+      "word_id": 176,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "hook",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Latin mercurialis \"pertaining to the god Mercury\", from Mercurius; later adjective uses may come directly from Latin mercurialis, whence Middle English mercurial \"under the astrological influence of the planet Mercury\"; the hedges are about the plant sense and the route, and every route starts from mercurialis) and the page's adjective senses (the astrological sense: \"having the characteristics of a person under such influence\", pointing to the lively, volatile sense). Hook changed: \"and the metal named after him\" said the word comes from the metal, but the changeable sense comes from the god and the planet; \"and\" became \"like\", so the metal is a picture with the same source. Tone literary: Oxford, Cambridge and Longman all mark the first and the lively sense literary, and the mercury sense specialist or technical. The lively sense is shown; the mercury sense is mostly in old medical texts, not shown. Pairings: mercurial nature 9.4, temperament 6.8, personality 3.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary, including its astrology sense (a person born under Mercury, quick-witted or volatile); Wiktionary's hedges concern the plant noun and the route, not the Latin source. literary on both senses is marked by all three dictionaries; technical on the hidden mercury sense matches. The hook fix (and to like) removes the claim that the word comes from the metal. Weakest point: none of note."
+    },
+    {
+      "id": 1134,
+      "word_id": 177,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (learned borrowing from Latin meticulosus \"full of fear, timid\", from metus \"fear\" + -culosus; the careful-attention sense is a semantic loan from French meticuleux). No root: metus shows in no other common English word. Hook (Latin metus, fear) is true. Tone approving: Oxford and Cambridge mark it approving. Pairings: meticulous care 70.6, attention to detail 34.2, research 33.2, records 24.5 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (meticulosus, metus; the detail sense a semantic loan from French meticuleux) in the writer's own words. approving: Oxford and Cambridge. Weakest point: the origin gives the route of the new sense but not why fear turned into care; the hook covers that."
+    },
+    {
+      "id": 1135,
+      "word_id": 178,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English mitigaten, from Latin mitigatus, participle of mitigo \"to make soft, ripe; to tame, pacify\", from mitis \"gentle, mild, ripe\" + -igo; the hedge is about the origin of mitis, which the origin does not go into). Root mitis links mitigate with unmitigated. Hook (mitis, mild) is true. Tone formal: Oxford, Cambridge and Longman all mark the verb formal; the court sense is set formal too, since the whole entry is marked. Watch-out: the mitigate/militate mix-up is a classic, stated as what usage guides say. The court sense is shown: mitigating circumstances (185,229) and mitigating factors lead the Datamuse list. Pairings: mitigate the effects 155.7, risk 115.7, impact 106.7 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (mitigo, mitis) and leave out its hedged PIE step. formal in all three. The watch-out describes 'mitigate against' as what usage guides count as an error, which is accurate. The court sense is current (mitigating circumstances) and its plain definition is the writer's own. Weakest point: mitis links only to unmitigated, which is in the list."
+    },
+    {
+      "id": 1136,
+      "word_id": 179,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English mollifien, from Late Latin mollifico, from Latin mollis \"soft\") and the emollient page (Latin emollio, from ex- + mollio, from mollis). Hook (mollis, soft) is true. Tone null: Oxford and Longman mark formal, Cambridge does not. Neither other sense is shown: softening a material is rare, and softening a demand is uncommon and close to the first. Pairings: somewhat mollified 23.0, seemed mollified 5.9 per billion; mollify critics is rare (1.2), so the partners are generic. Round 2: pairings emptied. The partners that show the meaning are rare in Ngram (mollifying tone 1.7, mollify critics 1.2, mollifying effect 1.2 per billion), and the common ones (somewhat mollified, seemed mollified) are generic.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: empty pairings are right, since every partner that shows the meaning ('mollify critics', 'mollifying tone') is under 2 per billion. Origin and hook match Wiktionary (mollificare, mollis; emollient from mollis). Null tone is right (formal in Oxford and Longman only). Weakest point: none of note."
+    },
+    {
+      "id": 1137,
+      "word_id": 180,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (French morose, from Latin morosus \"particular, fastidious, self-willed, fretful, peevish\", from mos \"way, custom, habit, self-will\"; see moral) and the mores page (Latin mores, plural of mos). Root mos links morose with mores. Hook (morosus, peevish or hard to please) is true. Tone null: only Cambridge's American entry marks formal. Pairings: morose expression 5.5, silence 5.2, grew morose 2.6 per billion.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (morosus, mos; its mores page derives mores from mos). No tone label applies. Weakest point: 'grew morose' uses a generic verb; 'morose silence' and 'morose expression' carry the pairings."
+    },
+    {
+      "id": 1138,
+      "word_id": 181,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against tools/etymology.py (Middle English mondeyne, from Old French mondain, from Late Latin mundanus, from Latin mundus \"world\"). No root: mundus shows in no other common English word. Hook (mundus, world) is true. Tone null: only Oxford marks it \"often disapproving\". Pairings: mundane tasks 73.0, details 30.4, chores 12.6 per billion (mundane world and affairs lean to the worldly, non-religious use).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Origin and hook match Wiktionary (mondain, mundanus, mundus). Null tone is right (only Oxford says 'often disapproving'). alsoMeans: the record lacks the 'of this world, not spiritual' sense (Longman, literary), which readers meet in 'mundane affairs' and 'the mundane world'; it could be added on a main worksheet."
     }
   ]
 }

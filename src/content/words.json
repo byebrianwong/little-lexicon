@@ -17597,10 +17597,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 138588,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Formed from in- (\"not\") and tractable, which goes back through Latin tractabilis to tractare (\"to handle\"), itself from trahere (\"to pull\"): an intractable problem refuses to be managed.",
+      "roots": [
+        "trahere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "intractable problem",
+        "intractable pain",
+        "intractable conflict"
+      ],
       "audioUrl": "audio/words/157.mp3?v=45d68a8d0638",
       "hookAudioUrl": "audio/hooks/157.mp3?v=ff5e2203a282",
       "senses": [
@@ -17609,7 +17615,7 @@
           "definition": "Holding out against every remedy or method applied to it.",
           "plainLanguageDefinition": "So stubborn or tangled that nothing you try seems to fix or control it.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/275.mp3?v=7dba709d22b5",
           "examples": [
@@ -17708,10 +17714,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 536955,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Reached English through French intransigeant and Spanish intransigente, from Latin in- (\"not\") and transigere (\"to come to terms\"), built from trans (\"across\") and agere (\"to do\").",
+      "roots": [
+        "agere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "intransigent attitude",
+        "intransigent position",
+        "remained intransigent"
+      ],
       "audioUrl": "audio/words/158.mp3?v=eaee274affa4",
       "hookAudioUrl": "audio/hooks/158.mp3?v=5bf2028744c1",
       "senses": [
@@ -17720,7 +17732,7 @@
           "definition": "Refusing to give ground or accept any compromise, however strong the arguments or appeals.",
           "plainLanguageDefinition": "Refusing to budge or meet the other side halfway, no matter what.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/276.mp3?v=968d427aa264",
           "examples": [
@@ -17824,10 +17836,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2450188,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inundare (\"to flood, overflow\"), built on unda (\"wave\"), the noun behind undulate too: an inundated office gets hit by wave after wave.",
+      "roots": [
+        "unda"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inundated with requests",
+        "inundated with calls",
+        "inundated with letters"
+      ],
       "audioUrl": "audio/words/159.mp3?v=244126d61071",
       "hookAudioUrl": "audio/hooks/159.mp3?v=9fe19c871e3b",
       "senses": [
@@ -17897,11 +17915,11 @@
         {
           "senseId": 1278,
           "definition": "Spread water over land until it lies submerged.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To put fields, streets or towns under floodwater.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1278.mp3?v=67ce112a5f67",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1278.mp3?v=20bcebffcb86",
           "examples": [],
           "distractors": []
         }
@@ -17940,10 +17958,16 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 411914,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin inveteratus (\"long-standing\"), from veterare (\"to grow old\"), from vetus (\"old\"), the source of veteran. Here in- means \"in\", not \"not\".",
+      "roots": [
+        "vetus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "inveterate gambler",
+        "inveterate liar",
+        "inveterate smoker"
+      ],
       "audioUrl": "audio/words/160.mp3?v=ac874e0e4807",
       "hookAudioUrl": "audio/hooks/160.mp3?v=b975e6a5e351",
       "senses": [
@@ -17952,7 +17976,7 @@
           "definition": "Grown old in a habit or pastime, so that it now marks the person.",
           "plainLanguageDefinition": "Stuck with a habit for so many years that it is part of who you are.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/279.mp3?v=ed0c476e72e3",
           "examples": [
@@ -18048,10 +18072,15 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 729718,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin irascibilis, by way of Old French, from irasci (\"to become angry\"), from ira (\"anger\"), which also gives irate.",
+      "roots": [
+        "ira"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "irascible temper",
+        "irascible old man"
+      ],
       "audioUrl": "audio/words/161.mp3?v=1f796bd719a5",
       "hookAudioUrl": "audio/hooks/161.mp3?v=f3a7e6197ed1",
       "senses": [
@@ -18164,10 +18193,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 204684,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin itinerari (\"to travel\"), from iter (\"journey, road\"), whose stem itiner- also gives itinerary.",
+      "roots": [
+        "iter"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "itinerant preacher",
+        "itinerant workers",
+        "itinerant traders"
+      ],
       "audioUrl": "audio/words/162.mp3?v=ab3dd75c9828",
       "hookAudioUrl": "audio/hooks/162.mp3?v=2165a456bed3",
       "senses": [
@@ -18267,10 +18302,14 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 560087,
-      "etymology": null,
+      "etymology": "Spartans were famous for answering in very few words; their region, Laconia, gave Greek Lakonikos, which reached English through Latin Laconicus.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Strictly, laconic means using few words; it is also often used to mean laid-back or languid, a use some usage guides reject.",
+      "pairings": [
+        "laconic reply",
+        "laconic style",
+        "laconic manner"
+      ],
       "audioUrl": "audio/words/163.mp3?v=54d0cf9e69ef",
       "hookAudioUrl": "audio/hooks/163.mp3?v=b25391844573",
       "senses": [
@@ -18386,10 +18425,16 @@
       "syllables": 1,
       "difficultyTier": 3,
       "frequencyRank": 363072,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin laudare (\"to praise\"), from laus (\"praise, glory\"), by way of Old French and Middle English; laudable has the same source.",
+      "roots": [
+        "laus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "widely lauded",
+        "critically lauded",
+        "lauded as a hero"
+      ],
       "audioUrl": "audio/words/165.mp3?v=b27e7ed03bb2",
       "hookAudioUrl": "audio/hooks/165.mp3?v=26ab2c5cffa6",
       "senses": [
@@ -18398,7 +18443,7 @@
           "definition": "Speak or write of in glowing terms, holding up as worthy of honor.",
           "plainLanguageDefinition": "To say in public how great someone or something is.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/287.mp3?v=b098075b7410",
           "examples": [
@@ -18501,10 +18546,13 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 467958,
-      "etymology": null,
+      "etymology": "From Greek lethargikos, from lethargos (\"forgetful\"), joining lethe (\"forgetting\") and argos (\"idle\"). The Greek noun lethargia already meant drowsiness, the heavy, sluggish state the word names now.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "tired and lethargic",
+        "lethargic state"
+      ],
       "audioUrl": "audio/words/166.mp3?v=a4c574e9e1c6",
       "hookAudioUrl": "audio/hooks/166.mp3?v=3d68025267d4",
       "senses": [
@@ -18612,10 +18660,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 517843,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin levitas (\"lightness\"), from levis (\"light in weight\"), the root of lever, elevate and alleviate: levity treats a heavy moment lightly.",
+      "roots": [
+        "levis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "moment of levity",
+        "a bit of levity"
+      ],
       "audioUrl": "audio/words/167.mp3?v=0882d6d0fc3b",
       "hookAudioUrl": "audio/hooks/167.mp3?v=1d1880fa22ce",
       "senses": [
@@ -18624,7 +18677,7 @@
           "definition": "Lightheartedness that breaks into a grave mood, whether as welcome relief or as disrespect.",
           "plainLanguageDefinition": "Jokes and fun at a serious time.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/289.mp3?v=5df85f9104c5",
           "examples": [
@@ -18730,8 +18783,10 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1192731,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin loquax (\"talkative\"), from loqui (\"to speak\"), the verb behind eloquent and soliloquy.",
+      "roots": [
+        "loqui"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/168.mp3?v=c9fa47f64ce8",
@@ -18742,7 +18797,7 @@
           "definition": "Fond of talking and quick to fill any silence with conversation.",
           "plainLanguageDefinition": "Very chatty, and hard to stop once started.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/291.mp3?v=d17d8775751c",
           "examples": [
@@ -18841,10 +18896,16 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 147721,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin lucidus, from lucere (\"to shine\"); elucidate is built on lucidus too. A lucid account lets light into its subject.",
+      "roots": [
+        "lucere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "lucid explanation",
+        "lucid account",
+        "lucid prose"
+      ],
       "audioUrl": "audio/words/169.mp3?v=58ce8c1dd769",
       "hookAudioUrl": "audio/hooks/169.mp3?v=295385e7c7d8",
       "senses": [
@@ -18908,11 +18969,11 @@
         {
           "senseId": 1279,
           "definition": "Able to reason and recognize people again after a period of mental fog.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In your right mind and making sense, often only for a short spell during an illness.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1279.mp3?v=fb156228d3b2",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1279.mp3?v=2b7200207147",
           "examples": [],
           "distractors": []
         },
@@ -18982,10 +19043,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 90076,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin luminosus (\"full of light\"), from lumen (\"light\"), through Middle French; illuminate comes from the same noun.",
+      "roots": [
+        "lumen"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "luminous paint",
+        "luminous dial",
+        "faintly luminous"
+      ],
       "audioUrl": "audio/words/170.mp3?v=56a4c26cd681",
       "hookAudioUrl": "audio/hooks/170.mp3?v=2b21c19f98a0",
       "senses": [
@@ -19049,11 +19116,11 @@
         {
           "senseId": 1243,
           "definition": "Of writing or a performance: unusually clear, vivid and beautiful.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Clear, vivid and moving, as praise for writing, music or acting.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1243.mp3?v=d7b00668cd3a",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1243.mp3?v=164dd865ff01",
           "examples": [],
           "distractors": []
         }
@@ -19108,10 +19175,17 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 455797,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin magnanimus (\"great-souled\"), joining magnus (\"great\") with animus (\"mind, spirit\"), the noun also behind equanimity.",
+      "roots": [
+        "magnus",
+        "animus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "magnanimous gesture",
+        "magnanimous in victory",
+        "magnanimous offer"
+      ],
       "audioUrl": "audio/words/171.mp3?v=ed6c028ab8c1",
       "hookAudioUrl": "audio/hooks/171.mp3?v=95c130dbc0ac",
       "senses": [
@@ -19231,9 +19305,9 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 11007882,
-      "etymology": null,
+      "etymology": "Apparently from French malingre (\"frail, puny\"): a malingerer plays the weakling to dodge work.",
       "roots": [],
-      "watchOut": null,
+      "watchOut": "Despite the linger inside it, malinger does not mean to hang about; it means to fake or play up an illness to avoid work.",
       "pairings": [],
       "audioUrl": "audio/words/172.mp3?v=abfbb3b6e595",
       "hookAudioUrl": "audio/hooks/172.mp3?v=89ea0ec61689",
@@ -19243,7 +19317,7 @@
           "definition": "Use a sham or overstated ailment as cover for dodging one's duties.",
           "plainLanguageDefinition": "To play sick to get out of doing your job.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/298.mp3?v=ca90ec34f10c",
           "examples": [
@@ -19322,10 +19396,15 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 299127,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin malleabilis, through Middle French, from malleare (\"to hammer\"), from malleus (\"hammer\"), which is also the source of mallet.",
+      "roots": [
+        "malleus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "infinitely malleable",
+        "malleable minds"
+      ],
       "audioUrl": "audio/words/173.mp3?v=925ee4000cd5",
       "hookAudioUrl": "audio/hooks/173.mp3?v=4e8de96a27ca",
       "senses": [
@@ -19389,11 +19468,11 @@
         {
           "senseId": 632,
           "definition": "Able to be beaten flat or worked into a shape without breaking apart, as gold and copper are.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Soft enough to be hammered thin or pressed into shape, like gold or copper.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/632.mp3?v=15916899925b",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/632.mp3?v=b24542ca4c09",
           "examples": [],
           "distractors": []
         }
@@ -19452,10 +19531,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 919882,
-      "etymology": null,
+      "etymology": "From Maudelen, a Middle English spelling of Magdalene. Artists usually showed Mary Magdalene weeping, so her name came to mean tearfully sentimental.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "get maudlin",
+        "maudlin sentimentality",
+        "maudlin tears"
+      ],
       "audioUrl": "audio/words/174.mp3?v=565db73daaf3",
       "hookAudioUrl": "audio/hooks/174.mp3?v=53a5b4b293cf",
       "senses": [
@@ -19572,7 +19655,7 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 2273781,
-      "etymology": null,
+      "etymology": "From Latin mendax (\"lying\"), through mendacium (\"a lie\") and Middle French. Mendax first meant \"faulty\" and is related to mendum (\"flaw\"), behind amend and mend.",
       "roots": [],
       "watchOut": null,
       "pairings": [],
@@ -19584,7 +19667,7 @@
           "definition": "Making a practice of lying, with little regard for the truth.",
           "plainLanguageDefinition": "Lying often, so that what you say cannot be trusted.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/302.mp3?v=d2ced10dc69b",
           "examples": [
@@ -19641,7 +19724,7 @@
           "definition": "Intentionally untrue.",
           "plainLanguageDefinition": "Deliberately false and deceptive.",
           "senseOrder": 2,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/303.mp3?v=56ec664fd5de",
           "examples": [
@@ -19751,19 +19834,23 @@
       "syllables": 4,
       "difficultyTier": 3,
       "frequencyRank": 468967,
-      "etymology": null,
+      "etymology": "From Latin mercurialis (\"of Mercury\"), from Mercurius, the Roman messenger god. In astrology, people under the influence of Mercury were thought quick and changeable.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mercurial temperament",
+        "mercurial personality",
+        "mercurial nature"
+      ],
       "audioUrl": "audio/words/176.mp3?v=5776c62381d1",
-      "hookAudioUrl": "audio/hooks/176.mp3?v=a865b4c69725",
+      "hookAudioUrl": "audio/hooks/176.mp3?v=91284504c598",
       "senses": [
         {
           "senseId": 304,
           "definition": "Prone to abrupt reversals of temper or intention that others cannot foresee.",
           "plainLanguageDefinition": "Changing mood or mind so often and so fast that others are always caught off guard.",
           "senseOrder": 1,
-          "register": null,
+          "register": "literary",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/304.mp3?v=eae2c975c4ee",
           "examples": [
@@ -19825,7 +19912,7 @@
           "definition": "Involving the liquid metal mercury, whether as an ingredient or as the cause of an illness.",
           "plainLanguageDefinition": null,
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/1288.mp3?v=6bcb518fa549",
           "examples": [],
@@ -19834,11 +19921,11 @@
         {
           "senseId": 1289,
           "definition": "Sharp-witted and full of darting energy in talk or thought.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Fast-thinking and full of bright energy, jumping nimbly from one idea to the next.",
           "senseOrder": 3,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1289.mp3?v=578a8a144b81",
+          "register": "literary",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1289.mp3?v=f6d6dcfeff96",
           "examples": [],
           "distractors": []
         }
@@ -19886,7 +19973,7 @@
         }
       ],
       "mnemonics": [
-        "Mercurial comes from Mercury, the swift messenger god, and the metal named after him, which slides and splits apart unpredictably."
+        "Mercurial comes from Mercury, the swift messenger god, like the metal named after him, which slides and splits apart unpredictably."
       ]
     },
     {
@@ -19897,10 +19984,15 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 137813,
-      "etymology": null,
+      "etymology": "From Latin meticulosus (\"fearful, timid\"), from metus (\"fear\"). The sense of great care over details came later, from French méticuleux.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "meticulous care",
+        "meticulous attention to detail",
+        "meticulous research",
+        "meticulous records"
+      ],
       "audioUrl": "audio/words/177.mp3?v=bc09038f61e4",
       "hookAudioUrl": "audio/hooks/177.mp3?v=cc49a95c7e87",
       "senses": [
@@ -19909,7 +20001,7 @@
           "definition": "Thorough down to the smallest particular, letting no slip pass however minor.",
           "plainLanguageDefinition": "So careful that even the tiniest part of a job is done right.",
           "senseOrder": 1,
-          "register": null,
+          "register": "approving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/306.mp3?v=ab14a4c75432",
           "examples": [
@@ -20016,10 +20108,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 142959,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin mitigare (\"to soften, tame\"), from mitis (\"mild, gentle\"): to mitigate a harm is to make it milder.",
+      "roots": [
+        "mitis"
+      ],
+      "watchOut": "Mitigate means to lessen; to work against is militate, so most usage guides count \"mitigate against\" as an error.",
+      "pairings": [
+        "mitigate the risk",
+        "mitigate the effects",
+        "mitigate the impact"
+      ],
       "audioUrl": "audio/words/178.mp3?v=52ce531708c9",
       "hookAudioUrl": "audio/hooks/178.mp3?v=3642102b55fb",
       "senses": [
@@ -20028,7 +20126,7 @@
           "definition": "Reduce the harm, force or seriousness of something bad, without removing it entirely.",
           "plainLanguageDefinition": "To soften the damage that something bad can do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/308.mp3?v=bbb43108aab2",
           "examples": [
@@ -20083,11 +20181,11 @@
         {
           "senseId": 610,
           "definition": "Make a wrong or crime seem less serious, as facts offered in someone's defense can.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To make a wrongdoing seem less bad, for example when a court hears why it happened.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/610.mp3?v=ad7463f8e41e",
+          "register": "formal",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/610.mp3?v=0128528d3a2d",
           "examples": [],
           "distractors": []
         }
@@ -20146,8 +20244,10 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1164692,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Late Latin mollificare, built on Latin mollis (\"soft\"), which also gives emollient: to mollify people is to soften their anger.",
+      "roots": [
+        "mollis"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/179.mp3?v=648d5ff66cc1",
@@ -20291,10 +20391,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 490997,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin morosus (\"fussy, peevish, self-willed\"), from mos (\"custom; self-will\"), the root of moral and mores, by way of French.",
+      "roots": [
+        "mos"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "morose silence",
+        "morose expression",
+        "grew morose"
+      ],
       "audioUrl": "audio/words/180.mp3?v=3ec93fc3971e",
       "hookAudioUrl": "audio/hooks/180.mp3?v=331c3a5a4a20",
       "senses": [
@@ -20410,10 +20516,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 99480,
-      "etymology": null,
+      "etymology": "Through Old French mondain from Late Latin mundanus, from mundus (\"world\"): mundane things belong to the ordinary world of every day.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "mundane tasks",
+        "mundane details",
+        "mundane chores"
+      ],
       "audioUrl": "audio/words/181.mp3?v=ed3482287101",
       "hookAudioUrl": "audio/hooks/181.mp3?v=b0006d213da8",
       "senses": [
