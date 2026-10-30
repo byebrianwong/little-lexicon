@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T07:46:28.678Z"
+    "updatedAt": "2026-10-30T07:47:19.636Z"
   },
   "counters": {
     "words": 617,
@@ -11,7 +11,7 @@
     "word_relations": 6605,
     "distractors": 7333,
     "mnemonics": 1034,
-    "reviews": 1211
+    "reviews": 1235
   },
   "words": [
     {
@@ -3832,8 +3832,15 @@
       "syllables": 3,
       "frequency_rank": 126670,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin perniciosus (\"destructive\"), by way of Old French. Its base, pernicies (\"ruin\"), goes back to per (\"through\") and nex (\"violent death\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "pernicious influence",
+        "pernicious effects",
+        "pernicious habit"
+      ]
     },
     {
       "id": 209,
@@ -3843,8 +3850,17 @@
       "syllables": 4,
       "frequency_rank": 2272293,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin perspicax (\"keen-eyed\"), from perspicere (\"to see through\"), which joins per (\"through\") and specere (\"to look\"), the verb behind perspective.",
+      "audio_url": null,
+      "roots": [
+        "specere"
+      ],
+      "watch_out": "Easily mixed up with perspicuous, which means clearly expressed; perspicacious describes a sharp mind, not clear writing.",
+      "pairings": [
+        "perspicacious reader",
+        "perspicacious observer",
+        "perspicacious critic"
+      ]
     },
     {
       "id": 210,
@@ -3854,8 +3870,17 @@
       "syllables": 3,
       "frequency_rank": 53300,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From the Latin verb pervadere (\"to spread through\"), made of per (\"through\") and vadere (\"to go\"); vadere also gives English invade.",
+      "audio_url": null,
+      "roots": [
+        "vadere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pervasive influence",
+        "pervasive problem",
+        "pervasive theme"
+      ]
     },
     {
       "id": 211,
@@ -3865,8 +3890,17 @@
       "syllables": 3,
       "frequency_rank": 703813,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin petulans (\"saucy, impudent\"), by way of Middle French; the Latin word is traced to petere (\"to aim at, ask for\").",
+      "audio_url": null,
+      "roots": [
+        "petere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "petulant child",
+        "petulant tone",
+        "petulant voice"
+      ]
     },
     {
       "id": 212,
@@ -3888,8 +3922,15 @@
       "syllables": 2,
       "frequency_rank": 768767,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From pith, the spongy core of a plant stem and so the heart of a matter, plus -y. Pith goes back to Old English; where it came from before that is unknown.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "pithy sayings",
+        "pithy remark",
+        "pithy phrase"
+      ]
     },
     {
       "id": 214,
@@ -3899,8 +3940,17 @@
       "syllables": 2,
       "frequency_rank": 394363,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin placare (\"to calm, appease\"), which is related to placere (\"to please\"), the source of please and placid.",
+      "audio_url": null,
+      "roots": [
+        "placare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "placating gesture",
+        "placating tone",
+        "easily placated"
+      ]
     },
     {
       "id": 215,
@@ -3910,8 +3960,17 @@
       "syllables": 3,
       "frequency_rank": 1250700,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from French platitude, which means flatness and also dullness, from plat (\"flat\").",
+      "audio_url": null,
+      "roots": [
+        "plat"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pious platitudes",
+        "empty platitudes",
+        "mouthing platitudes"
+      ]
     },
     {
       "id": 216,
@@ -3921,8 +3980,15 @@
       "syllables": 3,
       "frequency_rank": 229961,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed through Late Latin from Greek plethora (\"fullness\"), from plethein (\"to be full\"). The Greek verb shares an ancient root with Latin plenus, the source of plenty.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Traditionally it means an excess, more than is needed, but it is now widely used for simply a large amount, which some editors dislike.",
+      "pairings": [
+        "a plethora of information",
+        "a plethora of studies",
+        "a plethora of options"
+      ]
     },
     {
       "id": 217,
@@ -3932,8 +3998,15 @@
       "syllables": 3,
       "frequency_rank": 218616,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French polémique, which goes back to Greek polemos (\"war\") through the adjective polemikos (\"warlike\"): a polemic wages a war of words.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "bitter polemic",
+        "political polemic",
+        "religious polemic"
+      ]
     },
     {
       "id": 218,
@@ -3943,8 +4016,17 @@
       "syllables": 3,
       "frequency_rank": 319658,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ponderosus (\"heavy, weighty\"), from pondus (\"weight\"), the noun that also gave English ponder and pound.",
+      "audio_url": null,
+      "roots": [
+        "pondus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "ponderous mass",
+        "ponderous weight",
+        "ponderous machinery"
+      ]
     },
     {
       "id": 219,
@@ -3954,8 +4036,17 @@
       "syllables": 3,
       "frequency_rank": 42434,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek pragmatikos (\"versed in affairs\"), via Late Latin and French, from pragma (\"a deed\"), from prassein (\"to do\"), which also lies behind practical.",
+      "audio_url": null,
+      "roots": [
+        "prassein"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "pragmatic approach",
+        "pragmatic reasons",
+        "pragmatic considerations"
+      ]
     },
     {
       "id": 220,
@@ -3965,8 +4056,15 @@
       "syllables": 2,
       "frequency_rank": 1190499,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed from prate (\"to chatter\") with -le, an ending that marks repeated action; prate came into Middle English either from Old English or from Middle Dutch or Middle Low German.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "childish prattle",
+        "idle prattle",
+        "endless prattle"
+      ]
     },
     {
       "id": 221,
@@ -3976,8 +4074,17 @@
       "syllables": 4,
       "frequency_rank": 52820,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praecipitare (\"to fling down headfirst\"), built on praeceps (\"headlong\"): prae (\"before\") plus -ceps, a form related to caput (\"head\").",
+      "audio_url": null,
+      "roots": [
+        "caput"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "precipitate a crisis",
+        "precipitating factor",
+        "precipitating event"
+      ]
     },
     {
       "id": 222,
@@ -3987,8 +4094,16 @@
       "syllables": 2,
       "frequency_rank": 86270,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praecludere (\"to close off, block\"), from prae (\"before\") and claudere (\"to shut\"), the verb that also gave English close.",
+      "audio_url": null,
+      "roots": [
+        "claudere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "preclude the possibility",
+        "preclude the use"
+      ]
     },
     {
       "id": 223,
@@ -3998,8 +4113,17 @@
       "syllables": 3,
       "frequency_rank": 223796,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praecox (\"ripened early\"), from prae (\"before\") and coquere (\"to cook, ripen\"). Apricot, a fruit that ripens early, comes from a form of the same Latin word.",
+      "audio_url": null,
+      "roots": [
+        "coquere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "precocious child",
+        "precocious talent",
+        "precocious genius"
+      ]
     },
     {
       "id": 224,
@@ -4009,8 +4133,17 @@
       "syllables": 4,
       "frequency_rank": 227454,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Borrowed from Medieval Latin praedilectio, from praediligere (\"to prefer\"), made of prae (\"before\") and diligere (\"to love, single out\"), the verb behind diligent.",
+      "audio_url": null,
+      "roots": [
+        "diligere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "strong predilection",
+        "personal predilections",
+        "natural predilection"
+      ]
     },
     {
       "id": 225,
@@ -4020,8 +4153,17 @@
       "syllables": 2,
       "frequency_rank": 798390,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praesciens (\"knowing beforehand\"), from praescire, made of prae (\"before\") and scire (\"to know\"), the verb behind science.",
+      "audio_url": null,
+      "roots": [
+        "scire"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "prescient warning",
+        "prescient observation",
+        "proved prescient"
+      ]
     },
     {
       "id": 226,
@@ -4031,8 +4173,11 @@
       "syllables": 4,
       "frequency_rank": 5695539,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin praevaricari (\"to walk crookedly\"), from prae and varicare (\"to straddle\"). The Latin verb also meant to play a double part, as a lawyer secretly working for the other side.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "Easily confused with procrastinate, which means to put things off; to prevaricate is to speak evasively so as to avoid the truth.",
+      "pairings": []
     },
     {
       "id": 227,
@@ -4042,8 +4187,15 @@
       "syllables": 2,
       "frequency_rank": 208595,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin pristinus (\"former, original\"), by way of Middle French: something pristine is still in its first, unspoiled state.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "pristine condition",
+        "pristine beaches",
+        "pristine white"
+      ]
     },
     {
       "id": 228,
@@ -4053,8 +4205,17 @@
       "syllables": 3,
       "frequency_rank": 662041,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin probitas (\"honesty\"), by way of Middle French, from probus (\"good, upright\"), the adjective that also lies behind prove and probe.",
+      "audio_url": null,
+      "roots": [
+        "probus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "moral probity",
+        "financial probity",
+        "personal probity"
+      ]
     },
     {
       "id": 229,
@@ -4064,8 +4225,15 @@
       "syllables": 4,
       "frequency_rank": 693329,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin proclivitas, from proclivis (\"sloping downward, prone to\"), made of pro (\"forward\") and clivus (\"slope\"): a proclivity is a leaning you slide into.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "natural proclivity",
+        "strong proclivity",
+        "political proclivities"
+      ]
     },
     {
       "id": 230,
@@ -4075,8 +4243,16 @@
       "syllables": 3,
       "frequency_rank": 263258,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Goes back to Latin prodigus (\"lavish, wasteful\") and the verb prodigere, \"to squander\", which literally meant to drive forth, from agere (\"to drive\").",
+      "audio_url": null,
+      "roots": [
+        "agere"
+      ],
+      "watch_out": "From the parable, many take it to mean returning home after an absence, but the son was called prodigal for wasting his inheritance.",
+      "pairings": [
+        "prodigal son",
+        "prodigal expenditure"
+      ]
     },
     {
       "id": 231,
@@ -4086,8 +4262,17 @@
       "syllables": 3,
       "frequency_rank": 619725,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin profligatus, which meant \"depraved\" and comes from profligare (\"to strike down, overthrow\"), built on fligere (\"to strike\"), the verb also found in inflict.",
+      "audio_url": null,
+      "roots": [
+        "fligere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "profligate spending",
+        "profligate use",
+        "profligate expenditure"
+      ]
     },
     {
       "id": 232,
@@ -4097,8 +4282,18 @@
       "syllables": 3,
       "frequency_rank": 119250,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Through French prolifique from Latin prolificus, made of proles (\"offspring\") and facere (\"to make\"): a prolific writer keeps producing new work.",
+      "audio_url": null,
+      "roots": [
+        "proles",
+        "facere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "prolific writer",
+        "prolific author",
+        "prolific composer"
+      ]
     },
     {
       "id": 233,
@@ -9996,7 +10191,7 @@
       "definition": "Doing serious damage by degrees, often before anyone realizes the danger.",
       "plain_language_definition": "Slowly and secretly doing a great deal of harm.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 363,
@@ -10004,7 +10199,7 @@
       "definition": "Gifted with sharp insight, so that one grasps the heart of a matter quickly.",
       "plain_language_definition": "Good at seeing the truth of a situation that most people miss.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 365,
@@ -10052,7 +10247,7 @@
       "definition": "A familiar, safe remark that fills a silence without adding any thought.",
       "plain_language_definition": "A tired saying people repeat when they have nothing fresh to add.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 371,
@@ -10060,7 +10255,7 @@
       "definition": "An oversupply of something, with far more on hand than the situation calls for.",
       "plain_language_definition": "Far more of something than anyone needs.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 372,
@@ -10068,7 +10263,7 @@
       "definition": "An all-out attack in words, usually in print, meant to demolish an opposing view.",
       "plain_language_definition": "An angry, one-sided essay or speech that tears into someone else's views.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 374,
@@ -10100,7 +10295,7 @@
       "definition": "Be the spark that makes a looming trouble break out sooner than it otherwise would.",
       "plain_language_definition": "To make something bad happen suddenly, before its time.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 382,
@@ -10108,7 +10303,7 @@
       "definition": "Shut off a possibility ahead of time, so that it can never come about.",
       "plain_language_definition": "To prevent something from happening before it can even start.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 384,
@@ -10124,7 +10319,7 @@
       "definition": "A long-standing taste for a certain kind of thing, which shows in the choices a person keeps making.",
       "plain_language_definition": "A thing you always lean toward and pick when you can.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 388,
@@ -10132,7 +10327,7 @@
       "definition": "Perceiving the significance of events before they occur.",
       "plain_language_definition": "Seeing what is coming before others do.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 389,
@@ -10140,7 +10335,7 @@
       "definition": "Be deliberately ambiguous or unclear in order to mislead or withhold information.",
       "plain_language_definition": "To talk around the truth on purpose, giving vague answers that mislead.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 390,
@@ -10156,7 +10351,7 @@
       "definition": "Strict and reliable honesty in the way a person carries out a position of trust.",
       "plain_language_definition": "Being so honest that people trust you with money or power.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 393,
@@ -10164,7 +10359,7 @@
       "definition": "A pull in a person's character that they give in to again and again, frequently to their cost.",
       "plain_language_definition": "An urge you keep giving in to, often for something that is bad for you.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 394,
@@ -10172,7 +10367,7 @@
       "definition": "Careless with money or goods to the point of throwing a fortune away.",
       "plain_language_definition": "Spending money so freely on fun that you end up broke.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 395,
@@ -10180,7 +10375,7 @@
       "definition": "Squandering wealth freely and shamelessly, with no thought of limits.",
       "plain_language_definition": "Throwing away money or supplies as if they would never run out.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 396,
@@ -10188,7 +10383,8 @@
       "definition": "Unrestrained by convention or morality.",
       "plain_language_definition": "Living in a way that ignores all moral rules and social standards.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 397,
@@ -11189,33 +11385,37 @@
       "id": 645,
       "word_id": 219,
       "definition": "Relating to the school of philosophy that tests the truth of an idea by its practical effects.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In philosophy, judging whether an idea is true by how well it works when tried.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 646,
       "word_id": 219,
       "definition": "Relating to how context and a speaker's purpose shape the meaning of language.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In linguistics, about how setting and purpose affect what a speaker's words mean.",
       "sense_order": 3,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 647,
       "word_id": 223,
       "definition": "Of a plant, blooming or bearing fruit ahead of the usual season.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of a plant, blossoming or fruiting before the normal time of year.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 648,
       "word_id": 227,
       "definition": "Existing in the earliest, original form, before later changes.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Still in the state it was in at the very beginning, before anything altered it.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 649,
@@ -14983,9 +15183,10 @@
       "id": 1305,
       "word_id": 232,
       "definition": "Breeding fast and often, so that numbers grow quickly.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of animals or plants, reproducing fast so that there are soon many more of them.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1306,
@@ -15183,25 +15384,28 @@
       "id": 1330,
       "word_id": 217,
       "definition": "A heated public dispute, often over religious or political teaching.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A fierce public quarrel, usually over a matter of religious or political belief.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1331,
       "word_id": 217,
       "definition": "Someone who makes a habit of attacking other people's doctrines in print, especially in religion.",
-      "plain_language_definition": null,
+      "plain_language_definition": "A writer who keeps attacking other people's beliefs in print, often in religion.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1332,
       "word_id": 218,
       "definition": "Of a speech or book, plodding and heavy-handed, with no lightness of touch.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Of writing or a speech, so labored and solemn that it is tiring to get through.",
       "sense_order": 2,
-      "register": null
+      "register": "disapproving",
+      "also_means": true
     },
     {
       "id": 1333,
@@ -121800,15 +122004,15 @@
     },
     {
       "path": "definitions/1330.mp3",
-      "bytes": 19435,
-      "key": "82cab393205f7cdd",
+      "bytes": 21629,
+      "key": "c7e4e59cb32c072d",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1331.mp3",
-      "bytes": 23824,
-      "key": "b234210a9aa368c6",
+      "bytes": 20584,
+      "key": "1977995ddb742604",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121821,8 +122025,8 @@
     },
     {
       "path": "definitions/1332.mp3",
-      "bytes": 19958,
-      "key": "b694f295e9a41500",
+      "bytes": 21002,
+      "key": "565d8f49a23bfb02",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121835,15 +122039,15 @@
     },
     {
       "path": "definitions/645.mp3",
-      "bytes": 24764,
-      "key": "de47eb64edfdbd4a",
+      "bytes": 20584,
+      "key": "a5dde10bb9a809d7",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/646.mp3",
-      "bytes": 19017,
-      "key": "f695919e9cb68486",
+      "bytes": 20898,
+      "key": "451eb2ebdcdd69df",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121877,8 +122081,8 @@
     },
     {
       "path": "definitions/647.mp3",
-      "bytes": 17032,
-      "key": "e62ac057da8cf8ab",
+      "bytes": 17241,
+      "key": "6e00b6827ecf4b9a",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121912,8 +122116,8 @@
     },
     {
       "path": "definitions/648.mp3",
-      "bytes": 18808,
-      "key": "03e94ee16d8fb654",
+      "bytes": 19122,
+      "key": "ad94c201701ceb72",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -121961,8 +122165,8 @@
     },
     {
       "path": "definitions/1305.mp3",
-      "bytes": 14942,
-      "key": "57b7d81af33566e6",
+      "bytes": 20898,
+      "key": "90fe9deebf456a45",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -170822,6 +171026,766 @@
         "alsoMeans": 5
       },
       "checker_notes": "Round 2: the recast origin has its own shape and checks out against Wiktionary (audeo 'to dare', audax 'bold', audacia, + -ious). Weakest point: Longman routes the word through French audacieux, which Wiktionary does not mention, so leaving it out is fine; the other sense's plain sits near Dictionary.com's 'recklessly bold in defiance of convention, propriety', though it follows the record's own definition."
+    },
+    {
+      "id": 1212,
+      "word_id": 208,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pernicious (Old French pernicios, Latin perniciosus, pernicies, per + nex) and Latin pernicies (ruin, destruction; from perneco). Hook checked: internecine goes back through internecio and interneco to inter + neco, and Latin neco is formed from nex, so \"the same root found in internecine\" holds; hook kept. Roots left empty: nex shows only faintly in internecine, through necare. Etymology 2 (pernix, swift) is an obsolete adjective and is left out. Tone: Oxford, Cambridge and Longman all mark it formal. No common mix-up. Pairings from Datamuse (influence, effects, habit); pernicious anemia left out as a medical term.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All claims check out against Wiktionary (perniciosus, pernicies, per + nex), and nex does sit behind internecine (via necare). Formal is marked by Oxford, Cambridge and Longman. Weakest point: roots is empty although the hook links nex to internecine; fine while internecine is not in the list."
+    },
+    {
+      "id": 1213,
+      "word_id": 209,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary perspicacious (Late Latin perspicacitas, Latin perspicax, perspicio, per- + specio) and perspective (from perspicere, per- + specere). Hook (perspicere, the same root as perspective) agrees; kept. Root specere is shared by circumspect and specious in the list, so their writers should use the same form. Tone: all three learner dictionaries mark it formal (Cambridge also approving, alone). Watch-out: perspicuous is the classic confusion and is already a look-alike in the quiz; the note is written in my own words, away from that option and from Cambridge. Pairings from Datamuse (reader, observer, critic).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (perspicax, perspicere, per + specere) in the writer's own words; specere is a good linking root (spectator, inspect). Formal on all three learner's dictionaries. Weakest point: skips the Late Latin perspicacitas step Wiktionary gives, which a learner does not need."
+    },
+    {
+      "id": 1214,
+      "word_id": 210,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pervasive (pervasus, pervado, per + vado) and invade, with Latin invado (in- + vado, to go). Hook (per and vadere, as in invade) agrees; kept. Tone: only Cambridge marks it formal, so null. No common mix-up. Pairings from Datamuse (influence, problem, theme).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (pervadere, per + vadere); vadere links invade and evade. Null tone is right (only Cambridge marks it formal). Weakest point: English pervasive is formed from the participle pervasus or from pervade, not straight from the verb, a nit."
+    },
+    {
+      "id": 1215,
+      "word_id": 211,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary petulant (Middle French, Latin petulans, \"akin to\" peto) and Latin petulans (pert, saucy, impudent; from an unattested *petulo, from peto, to aim at, ask). Because the step runs through an unattested form and the English page says only \"akin to\", the origin says \"is traced to\" rather than \"comes from\"; origin 4 for that softness. Root petere would also link impetuous (impetus, from impetere) if that writer uses the same form. Hook is a sound-alike (starts with pet, said PET-) and makes no origin claim; kept. Tone: only Cambridge marks it disapproving, and the meaning already carries it, so null. Pairings from Datamuse (child, tone, voice).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: Wiktionary says petulans is only akin to peto; 'traced to petere' is a little firmer than that (the Latin page could not be fetched; Wiktionary rate-limited it), and the origin stops at 'saucy, impudent' without the shift to today's childish sulkiness (English first meant pert or insolent, now obsolete). Null tone is right (only Cambridge marks it disapproving)."
+    },
+    {
+      "id": 1216,
+      "word_id": 213,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary pithy (pith + -y) and pith (Middle English pith, Old English pitha, Proto-Germanic; \"further etymology unknown\", a hedge the origin keeps). Hook (pith, the soft core of a plant stem) agrees; kept. No roots: an English word with no Latin or Greek stem. Tone: only Oxford marks it approving, so null. Pairings from Datamuse (sayings, remark, phrase).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: Wiktionary takes pith back past Old English to Proto-Germanic (with Dutch pit as a cognate) before 'further etymology unknown', so 'where it came from before that is unknown' puts the unknown one step too early. Tone null is right (only Oxford marks it approving)."
+    },
+    {
+      "id": 1217,
+      "word_id": 214,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary placate (Latin placatus, placo, related to placeo; \"more at please\") and placid (French placide, Latin placidus, from placeo). The literal \"smooth\" sense and the Proto-Indo-European root are hedged (\"thought to be\") on Wiktionary, so they are left out. Root placare matches implacable on worksheet f. Hook (placare, a cousin of placid) agrees; kept. Tone: only Longman marks it formal, so null. Pairings: placating gesture (20 per billion) and placating tone (10) in Google Books; easily placated (3.8) is the top Datamuse partner but fits many verbs, so pairings 4. Placate critics (1.2) was too rare.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (placo, related to placeo; placid from placeo); placare matches implacable's root in the record. Tone null is right (only Longman marks formal). Pairings: all three use participle forms and 'easily placated' (3.8 per billion) is a generic partner; the base verb with an object would show the meaning better."
+    },
+    {
+      "id": 1218,
+      "word_id": 215,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary platitude (French platitude, from plat) and the French entry on the same page (flatness; figuratively blandness, triteness). Root plat is the French stem also seen in plateau and platform; origin 4 because a reviewer may prefer no root for a French stem. Hook (French plat, flat) agrees; kept. Tone: Oxford and Cambridge mark it disapproving and Longman says it is used to show disapproval. Pairings from Datamuse (pious, empty, mouthing).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "French platitude 'flatness' and figurative 'blandness, triteness' is on Wiktionary's French entry, so the step to today's meaning is supported. Disapproving is marked by all three learner's dictionaries. Weakest point: plat is a French stem; it is visible in plateau and platform, so it is acceptable."
+    },
+    {
+      "id": 1219,
+      "word_id": 216,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary plethora (Late Latin plethora, Greek plethora, from pletho, to be full), Greek pletho (from Proto-Indo-European *pleh1-) and plenty (Latin plenus, from *pl.h1-nos). Hook (\"a distant cousin of plenty\") agrees with that shared root; kept. No roots: plethein shows in no other common English word. Tone: Oxford, Cambridge and Longman (a plethora of something) all mark it formal. Watch-out: Wiktionary gives \"an excessive amount or number; an abundance\" and Cambridge \"especially a larger amount than you need\", so the note describes the excess-versus-abundance use as a dispute. Pairings from Google Books: a plethora of information (19 per billion), studies (14), options (7).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 4,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: fullness to oversupply skips the medical history (Wiktionary keeps a medical sense, an excess of blood) that explains the 'too much' meaning. Tone: Oxford and Cambridge mark it formal; Longman's cached page only cross-refers to 'a plethora of something', so the third formal mark is unverified. Watch-out describes the excess/large-amount dispute as a dispute, good."
+    },
+    {
+      "id": 1220,
+      "word_id": 217,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary polemic (French polemique, Greek polemikos, of war, from polemos, war). Hook (Greek polemos, war) agrees; kept. No roots: polemos shows only in polemic's own derivatives (polemical, polemicist). Tone: all three learner dictionaries mark it formal. Pairings from Datamuse (bitter, political, religious). Other senses not shown: 1330 (a heated public dispute) is close to the uncountable \"polemics\" sense and rare as a countable noun in English; 1331 (a person) is rare, polemicist being the usual word.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (French polemique, Greek polemikos, polemos 'war'). Formal on all three. Weakest point: polemikos is glossed 'warlike' where Wiktionary has 'of war', a nit. Hiding the dispute and polemicist senses is right."
+    },
+    {
+      "id": 1221,
+      "word_id": 218,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary ponderous (Latin ponderosus), Latin ponderosus (pondus + -osus), ponder (Latin ponderare, from pondus) and pound (borrowed early from Latin pondo, ablative of pondus). Hook (pondus, the same root as pound and ponder) agrees; kept. Tone: first (physical) sense null, since only Cambridge marks the whole entry; the writing sense is disapproving in Oxford and Cambridge. Formal is in Oxford and Cambridge only. Pairings from Datamuse for the physical sense (mass, weight, machinery); all are 1 to 6 per billion in Google Books, so pairings 4. Ponderous tomes left out as it leans to the writing sense. Other sense 1332 (ponderous prose) is a common current meaning, shown with a plain definition written away from Oxford, Cambridge and Longman.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary supports pound via Latin pondo, the ablative of pondus, and ponder via ponderare. First-sense null is right (Longman has no label; Oxford and Cambridge mark formal), and the writing sense's disapproving has Oxford and Cambridge. Weakest point: 'ponderous weight' is a little redundant."
+    },
+    {
+      "id": 1222,
+      "word_id": 219,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary pragmatic (Middle French pragmatique, Late Latin pragmaticus, Greek pragmatikos, active, versed in affairs, from pragma, a thing done, from prasso, to do, \"whence English practical\"). Root prassein chosen over pragma because practical and practice show it, while pragma shows only in pragmatic's own family; origin 4 because the stem is spelled prag- and prac- in English. Hook (Greek pragma, a deed or thing done) agrees; kept. Tone: no label in any of the three. Pairings from Datamuse and Google Books (approach, reasons, considerations 58 per billion). Other senses (philosophy, linguistics) labeled technical and not shown: a general reader rarely meets the adjective in these senses.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (pragmatikos, pragma, prasso, whence practical). Hiding the philosophy and linguistics senses is right. Weakest point: roots prassein is a stem few learners will see in practical; acceptable."
+    },
+    {
+      "id": 1223,
+      "word_id": 220,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary prattle (prate + -le, early modern English frequentative suffix; compare Dutch pruttelen) and prate (Middle English praten, either inherited from Old English or borrowed from Middle Dutch or Middle Low German); the either-or is kept. Hook is a sound-alike (rattle) with no origin claim; kept. No roots. Tone: only Oxford labels it (old-fashioned, often disapproving), so null. Pairings from Datamuse (childish, idle, endless).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin keeps Wiktionary's hedge on prate (Old English or Middle Dutch/Middle Low German) and explains the frequentative -le. Tone null is right (only Oxford labels it). Weakest point: the second clause on prate's source is more detail than a learner needs."
+    },
+    {
+      "id": 1224,
+      "word_id": 221,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary precipitate (praecipitatus, praecipito, throw headlong, from praeceps, prae + -ceps, headed), Latin praeceps (headfirst, headlong) and Latin -ceps (from the same root as caput). Root caput would also link capitulate (worksheet m) if that writer uses the same form. Hook (Latin praeceps, headlong) agrees; kept. Tone: the verb sense is formal in Oxford, Cambridge and Longman. No watch-out: the precipitate/precipitous mix-up concerns the adjective, not this verb. Pairings from Google Books: precipitating event (56 per billion), precipitating factor (49), precipitate a crisis (9).",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin facts match Wiktionary (praecipitare, praeceps, prae + -ceps from caput), but it stops at 'headlong' and does not say how flinging headlong became bringing something on suddenly; only the hook makes that step. Formal on all three. Pairings checked: 'precipitate a crisis' 9.4 per billion."
+    },
+    {
+      "id": 1225,
+      "word_id": 222,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary preclude (learned borrowing from Latin praecludere; read from the ety template), Latin praecludo (prae- + claudo; to close or block) and close (Old French clos, Latin clausus, from claudo). Hook (close and closet, Latin claudere) agrees: closet is Old French closet, from clos, from Latin clausum. Kept. Tone: formal in all three. Pairings from Google Books: preclude the possibility (109 per billion), preclude the use (64).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Wiktionary has only 'learned borrowing from praecludere'; prae + claudere and close from claudere (close and closet pages) check out. Formal on all three. Weakest point: two pairings only, though both are common ('preclude the possibility' 109 per billion)."
+    },
+    {
+      "id": 1226,
+      "word_id": 223,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary precocious (Latin praecox, from praecoquo, prae + coquo; doublet of apricot), Latin praecox (praecoquo + -s), and apricot (from Late Latin praecoquum, \"which ripens early\", through Greek, Arabic and Catalan). Hook (praecox, prae and coquere) agrees; kept. Tone: Oxford \"sometimes disapproving\", Cambridge marks a separate UK sense disapproving, and Longman says sometimes disapproving in British English. Left null because the first sense as defined (talent, knowledge) is neutral and the label would mislead on precocious talent. Pairings from Datamuse (child, talent, genius); precocious puberty left out as medical. The botanical other sense is labeled technical and not shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (praecox, praecoquo, prae + coquo; apricot from Late Latin praecoquum, 'which ripens early'). Null tone right (Oxford 'sometimes disapproving', Cambridge only on a UK sub-sense). Weakest point: coquere is a stem learners see only in concoct and cook."
+    },
+    {
+      "id": 1227,
+      "word_id": 224,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary predilection (borrowed from Medieval Latin praedilectio; read from the ety template), Latin praedilectio (praediligo, to prefer or love greatly, + -tio), Latin diligo (to esteem, love; to set apart by choosing, single out) and diligent (from diligens, of diligo). Latin legere is left out: Wiktionary gives two possible sources for diligo (dis- + lego, to choose, or a Proto-Italic *lego, to care). Hook (diligere, to single out and love, the root of diligent) agrees; kept. Tone: formal in all three. Pairings from Datamuse (strong, personal, natural).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: Medieval Latin praedilectio agrees with Wiktionary; diligere ('to love, esteem', literally 'to choose') behind diligent checks out. Formal on all three. Pairings: common, but 'strong' and 'personal' fit any noun; 'a predilection for' is the pattern that shows the meaning."
+    },
+    {
+      "id": 1228,
+      "word_id": 225,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary prescient (Latin praesciens, praescio, prae- + scio) and science (Latin scientia, from sciens, of scire). Root scire would also link unconscionable (worksheet x) if that writer uses the same form. Hook (prae and scire, the root of science) agrees; kept. Tone: formal in all three. Pairings from Datamuse (warning, observation, proved prescient).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (praesciens, praescire, prae + scire). Formal on all three. Weakest point: none of note; 'proved prescient' is a good pick from the data."
+    },
+    {
+      "id": 1229,
+      "word_id": 226,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "watchOut"
+      ],
+      "notes": "Origin checked against Wiktionary prevaricate (Latin praevaricatus, praevaricor, to walk crookedly, to play a double part, from prae- + varico, to straddle, from varicus) and Latin praevaricor (also: to collude; in law, to be a false advocate colluding with the opposing party). Hook (praevaricari, to walk crookedly) agrees; kept. No roots: varicare shows in no common English word. Tone: formal in all three. Watch-out: the procrastinate mix-up is the one usage guides name; watchOut 4 because Collins also allows \"avoid making a firm decision\", which sits near delay. Pairings left empty: every candidate is rare in Google Books (stop prevaricating 1.2 per billion, prevaricate about 1.2).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (praevaricor 'walk crookedly; play a double part', varico 'straddle'), and English Wiktionary's legal sense (collusion in a sham prosecution) backs the lawyer example. Formal on all three. Watch-out is a real, common confusion and true. Weakest point: empty pairings, rightly."
+    },
+    {
+      "id": 1230,
+      "word_id": 227,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary pristine (Middle French pristin, Latin pristinus) and Latin pristinus (former, old; early, original). Etymology 2 (Greek pristis, sawfish) is a separate zoological adjective and is left out. Hook (pristinus, former or original) agrees; kept. Tone: only Cambridge labels it (formal, approving), so null. Pairings from Datamuse (condition, beaches, white). Other sense 648 (original, unchanged) is current and common (pristine wilderness), so it is shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (Middle French pristin, Latin pristinus) and gives the step to 'unspoiled'. Null tone right (only Cambridge labels it). The shown 'original state' sense is current (Oxford and Longman list it). Weakest point: 'pristine condition' fits both senses."
+    },
+    {
+      "id": 1231,
+      "word_id": 228,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary probity (Middle English probyte, Middle French probite, Latin probitas, from probus; \"see probe, prove\") and prove (Latin probo, from probus; doublet of probe). Hook (probus, which also gave us prove) agrees, since prove comes through probare from probus; kept. Root probus: reprobate (worksheet j) and approbation (worksheet m) come from probare, which comes from probus, so naming probus there too would link all three. Opprobrium is unrelated (probrum). Tone: formal in all three. Pairings from Datamuse (moral, financial, personal).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin matches Wiktionary (probitas, probus; see probe, prove). Formal on all three. Pairings: common, but 'personal' is a partner that fits any noun; moral and financial probity show the meaning."
+    },
+    {
+      "id": 1232,
+      "word_id": 229,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary proclivity (Latin proclivitas, from proclivis, prone to), Latin proclivis (pro- + clivus; sloping downward, prone to) and Latin clivus (slope, hill). Hook (pro, forward, and clivus, a slope) agrees; kept. Its downhill picture no longer points at a look-alike: the current wrong answers are proclamation, productivity, proficiency and profundity. Roots left empty: clivus shows only in rare declivity and acclivity. Tone: formal in all three. Pairings from Datamuse (natural, strong, political).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Latin proclivis (pro + clivus; 'downward, downhill; prone to') checks out on Wiktionary's Latin entry. Formal on all three. Pairings: common, but 'strong' fits any noun; 'a proclivity for' would show the meaning."
+    },
+    {
+      "id": 1233,
+      "word_id": 230,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary prodigal (Middle French prodigal, Late Latin prodigalis, Latin prodigus, prodigo, to consume, squander, drive forth, prod- + ago, to drive; unrelated to prodigy). Root agere matches the form on other worksheets. Hook (prodigere, to drive away or squander; the parable son squandered his inheritance) agrees; kept. Tone: formal in all three (Oxford also disapproving, alone). Watch-out: Wiktionary and Cambridge record the \"returning\" use, so the note does not call it an error; it says where it comes from and what the word means. Pairings: prodigal son (431 per billion) uses the wasteful sense of the parable; prodigal expenditure is in Datamuse's list but only 1.3 per billion in Google Books, so pairings 4.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out: true and a real mix-up, but Cambridge and Vocabulary.com now record the noun 'a prodigal' for someone who returns, so 'many take it to mean' reads as a plain misreading where it is an allusive extension. Pairings: 'prodigal expenditure' is only 1.3 per billion (2010 to 2022), and 'prodigal son' is now mostly used for a returnee. Formal on all three."
+    },
+    {
+      "id": 1234,
+      "word_id": 231,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary profligate (Latin profligatus, of profligo, to strike down, cast down, pro- + fligo, to strike), Latin profligatus (profligate; depraved, wanton), Latin profligo (to strike to the ground; overthrow; dishearten, debase) and inflict (Latin infligo, in- + fligo). Hook (\"to strike down or ruin\") is close: Wiktionary gives strike down, overthrow and debase rather than ruin; hook 4, kept as not false. Tone: formal in all three on the wasteful sense; the immoral other sense is not in Oxford, so it stays null. Pairings from Datamuse (spending, use, expenditure). Other sense 396 (dissolute) is current and shown; its existing plain definition was kept.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin: profligatus 'depraved' explains the immoral sense (the shown other sense) but not how the word came to mean wasteful, today's main sense; that step is missing. Facts check out (profligo 'strike down', fligo 'strike', inflict from infligo); the hook's 'ruin' is backed by Wiktionary's participial sense 'overthrown, ruined'. Formal on all three; the shown immoral sense is current."
+    },
+    {
+      "id": 1235,
+      "word_id": 232,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary prolific (French prolifique and Latin prolificus, from proles, offspring, + -ficus, making; -ficus is the combining form of facere). Hook (proles shared with proliferate) agrees: proliferate is a back-formation from proliferation, which also goes back to proles. Kept. Tone: no label in any of the three. Pairings from Datamuse (writer, author, composer). Other sense 1305 (breeding fast) is current and shown.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Origin and hook match Wiktionary (prolificus, proles + -ficus from facere; proliferate shares proles). Roots match the record (facere). Weakest point: the origin is close to the skill's own model sentence, which is fine."
     }
   ]
 }

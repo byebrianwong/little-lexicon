@@ -23877,10 +23877,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 126670,
-      "etymology": null,
+      "etymology": "From Latin perniciosus (\"destructive\"), by way of Old French. Its base, pernicies (\"ruin\"), goes back to per (\"through\") and nex (\"violent death\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pernicious influence",
+        "pernicious effects",
+        "pernicious habit"
+      ],
       "audioUrl": "audio/words/208.mp3?v=11373f23b676",
       "hookAudioUrl": "audio/hooks/208.mp3?v=883ced74fb07",
       "senses": [
@@ -23889,7 +23893,7 @@
           "definition": "Doing serious damage by degrees, often before anyone realizes the danger.",
           "plainLanguageDefinition": "Slowly and secretly doing a great deal of harm.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/361.mp3?v=05d9017f0e19",
           "examples": [
@@ -23988,10 +23992,16 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 2272293,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Latin perspicax (\"keen-eyed\"), from perspicere (\"to see through\"), which joins per (\"through\") and specere (\"to look\"), the verb behind perspective.",
+      "roots": [
+        "specere"
+      ],
+      "watchOut": "Easily mixed up with perspicuous, which means clearly expressed; perspicacious describes a sharp mind, not clear writing.",
+      "pairings": [
+        "perspicacious reader",
+        "perspicacious observer",
+        "perspicacious critic"
+      ],
       "audioUrl": "audio/words/209.mp3?v=4b371ff03728",
       "hookAudioUrl": "audio/hooks/209.mp3?v=9c7f3e7b3f05",
       "senses": [
@@ -24000,7 +24010,7 @@
           "definition": "Gifted with sharp insight, so that one grasps the heart of a matter quickly.",
           "plainLanguageDefinition": "Good at seeing the truth of a situation that most people miss.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/363.mp3?v=0ccaf17d81d7",
           "examples": [
@@ -24099,10 +24109,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 53300,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From the Latin verb pervadere (\"to spread through\"), made of per (\"through\") and vadere (\"to go\"); vadere also gives English invade.",
+      "roots": [
+        "vadere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pervasive influence",
+        "pervasive problem",
+        "pervasive theme"
+      ],
       "audioUrl": "audio/words/210.mp3?v=f955a4471d60",
       "hookAudioUrl": "audio/hooks/210.mp3?v=aad5e38f8e15",
       "senses": [
@@ -24210,10 +24226,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 703813,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin petulans (\"saucy, impudent\"), by way of Middle French; the Latin word is traced to petere (\"to aim at, ask for\").",
+      "roots": [
+        "petere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "petulant child",
+        "petulant tone",
+        "petulant voice"
+      ],
       "audioUrl": "audio/words/211.mp3?v=ae37ccdddc74",
       "hookAudioUrl": "audio/hooks/211.mp3?v=7e60b7b72f2b",
       "senses": [
@@ -24325,10 +24347,14 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 768767,
-      "etymology": null,
+      "etymology": "From pith, the spongy core of a plant stem and so the heart of a matter, plus -y. Pith goes back to Old English; where it came from before that is unknown.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pithy sayings",
+        "pithy remark",
+        "pithy phrase"
+      ],
       "audioUrl": "audio/words/213.mp3?v=17832a3b27be",
       "hookAudioUrl": "audio/hooks/213.mp3?v=c6dbba004240",
       "senses": [
@@ -24436,10 +24462,16 @@
       "syllables": 2,
       "difficultyTier": 3,
       "frequencyRank": 394363,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin placare (\"to calm, appease\"), which is related to placere (\"to please\"), the source of please and placid.",
+      "roots": [
+        "placare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "placating gesture",
+        "placating tone",
+        "easily placated"
+      ],
       "audioUrl": "audio/words/214.mp3?v=2bcd05804528",
       "hookAudioUrl": "audio/hooks/214.mp3?v=3c2f5db8d666",
       "senses": [
@@ -24551,10 +24583,16 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1250700,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Borrowed from French platitude, which means flatness and also dullness, from plat (\"flat\").",
+      "roots": [
+        "plat"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pious platitudes",
+        "empty platitudes",
+        "mouthing platitudes"
+      ],
       "audioUrl": "audio/words/215.mp3?v=445e7e25f052",
       "hookAudioUrl": "audio/hooks/215.mp3?v=dd87a250bc52",
       "senses": [
@@ -24563,7 +24601,7 @@
           "definition": "A familiar, safe remark that fills a silence without adding any thought.",
           "plainLanguageDefinition": "A tired saying people repeat when they have nothing fresh to add.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/370.mp3?v=60f979654010",
           "examples": [
@@ -24650,10 +24688,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 229961,
-      "etymology": null,
+      "etymology": "Borrowed through Late Latin from Greek plethora (\"fullness\"), from plethein (\"to be full\"). The Greek verb shares an ancient root with Latin plenus, the source of plenty.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "Traditionally it means an excess, more than is needed, but it is now widely used for simply a large amount, which some editors dislike.",
+      "pairings": [
+        "a plethora of information",
+        "a plethora of studies",
+        "a plethora of options"
+      ],
       "audioUrl": "audio/words/216.mp3?v=99fe55fc9081",
       "hookAudioUrl": "audio/hooks/216.mp3?v=135a9292f8c4",
       "senses": [
@@ -24662,7 +24704,7 @@
           "definition": "An oversupply of something, with far more on hand than the situation calls for.",
           "plainLanguageDefinition": "Far more of something than anyone needs.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/371.mp3?v=754f5f5413e9",
           "examples": [
@@ -24765,10 +24807,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 218616,
-      "etymology": null,
+      "etymology": "From French polémique, which goes back to Greek polemos (\"war\") through the adjective polemikos (\"warlike\"): a polemic wages a war of words.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "bitter polemic",
+        "political polemic",
+        "religious polemic"
+      ],
       "audioUrl": "audio/words/217.mp3?v=2f2f784054e4",
       "hookAudioUrl": "audio/hooks/217.mp3?v=989ea7d36164",
       "senses": [
@@ -24777,7 +24823,7 @@
           "definition": "An all-out attack in words, usually in print, meant to demolish an opposing view.",
           "plainLanguageDefinition": "An angry, one-sided essay or speech that tears into someone else's views.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/372.mp3?v=868afdec291b",
           "examples": [
@@ -24832,22 +24878,22 @@
         {
           "senseId": 1330,
           "definition": "A heated public dispute, often over religious or political teaching.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A fierce public quarrel, usually over a matter of religious or political belief.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1330.mp3?v=5457695c69c6",
+          "audioUrl": "audio/definitions/1330.mp3?v=ac42415355cb",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1331,
           "definition": "Someone who makes a habit of attacking other people's doctrines in print, especially in religion.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "A writer who keeps attacking other people's beliefs in print, often in religion.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1331.mp3?v=f75b5b5e938a",
+          "audioUrl": "audio/definitions/1331.mp3?v=8f39d8691940",
           "examples": [],
           "distractors": []
         }
@@ -24898,10 +24944,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 319658,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin ponderosus (\"heavy, weighty\"), from pondus (\"weight\"), the noun that also gave English ponder and pound.",
+      "roots": [
+        "pondus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ponderous mass",
+        "ponderous weight",
+        "ponderous machinery"
+      ],
       "audioUrl": "audio/words/218.mp3?v=91e178157fb3",
       "hookAudioUrl": "audio/hooks/218.mp3?v=e7f53dece3b3",
       "senses": [
@@ -24965,11 +25017,11 @@
         {
           "senseId": 1332,
           "definition": "Of a speech or book, plodding and heavy-handed, with no lightness of touch.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of writing or a speech, so labored and solemn that it is tiring to get through.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1332.mp3?v=1321f1b9027c",
+          "register": "disapproving",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1332.mp3?v=8e8f59f8a656",
           "examples": [],
           "distractors": []
         }
@@ -25024,10 +25076,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 42434,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Greek pragmatikos (\"versed in affairs\"), via Late Latin and French, from pragma (\"a deed\"), from prassein (\"to do\"), which also lies behind practical.",
+      "roots": [
+        "prassein"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pragmatic approach",
+        "pragmatic reasons",
+        "pragmatic considerations"
+      ],
       "audioUrl": "audio/words/219.mp3?v=8bb8408397ff",
       "hookAudioUrl": "audio/hooks/219.mp3?v=94cde749b894",
       "senses": [
@@ -25091,22 +25149,22 @@
         {
           "senseId": 645,
           "definition": "Relating to the school of philosophy that tests the truth of an idea by its practical effects.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In philosophy, judging whether an idea is true by how well it works when tried.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/645.mp3?v=9442bbfbe805",
+          "audioUrl": "audio/definitions/645.mp3?v=47001c431de2",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 646,
           "definition": "Relating to how context and a speaker's purpose shape the meaning of language.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In linguistics, about how setting and purpose affect what a speaker's words mean.",
           "senseOrder": 3,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/646.mp3?v=352163bb71ea",
+          "audioUrl": "audio/definitions/646.mp3?v=d24aa55e0c52",
           "examples": [],
           "distractors": []
         }
@@ -25165,10 +25223,14 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 1190499,
-      "etymology": null,
+      "etymology": "Formed from prate (\"to chatter\") with -le, an ending that marks repeated action; prate came into Middle English either from Old English or from Middle Dutch or Middle Low German.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "childish prattle",
+        "idle prattle",
+        "endless prattle"
+      ],
       "audioUrl": "audio/words/220.mp3?v=c0e7b8fc585e",
       "hookAudioUrl": "audio/hooks/220.mp3?v=d48fc504272d",
       "senses": [
@@ -25268,10 +25330,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 52820,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin praecipitare (\"to fling down headfirst\"), built on praeceps (\"headlong\"): prae (\"before\") plus -ceps, a form related to caput (\"head\").",
+      "roots": [
+        "caput"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "precipitate a crisis",
+        "precipitating factor",
+        "precipitating event"
+      ],
       "audioUrl": "audio/words/221.mp3?v=e15e956c2571",
       "hookAudioUrl": "audio/hooks/221.mp3?v=c62c63db1ff9",
       "senses": [
@@ -25280,7 +25348,7 @@
           "definition": "Be the spark that makes a looming trouble break out sooner than it otherwise would.",
           "plainLanguageDefinition": "To make something bad happen suddenly, before its time.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/381.mp3?v=9b1fc40c78af",
           "examples": [
@@ -25367,10 +25435,15 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 86270,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin praecludere (\"to close off, block\"), from prae (\"before\") and claudere (\"to shut\"), the verb that also gave English close.",
+      "roots": [
+        "claudere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "preclude the possibility",
+        "preclude the use"
+      ],
       "audioUrl": "audio/words/222.mp3?v=028c1570ab6e",
       "hookAudioUrl": "audio/hooks/222.mp3?v=2de5cdb0774e",
       "senses": [
@@ -25379,7 +25452,7 @@
           "definition": "Shut off a possibility ahead of time, so that it can never come about.",
           "plainLanguageDefinition": "To prevent something from happening before it can even start.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/382.mp3?v=f9e8b726cdd0",
           "examples": [
@@ -25478,10 +25551,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 223796,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin praecox (\"ripened early\"), from prae (\"before\") and coquere (\"to cook, ripen\"). Apricot, a fruit that ripens early, comes from a form of the same Latin word.",
+      "roots": [
+        "coquere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "precocious child",
+        "precocious talent",
+        "precocious genius"
+      ],
       "audioUrl": "audio/words/223.mp3?v=b2ed675a493c",
       "hookAudioUrl": "audio/hooks/223.mp3?v=544fe1f1fd6c",
       "senses": [
@@ -25545,11 +25624,11 @@
         {
           "senseId": 647,
           "definition": "Of a plant, blooming or bearing fruit ahead of the usual season.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of a plant, blossoming or fruiting before the normal time of year.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/647.mp3?v=14e9c3c08390",
+          "audioUrl": "audio/definitions/647.mp3?v=eab73992966b",
           "examples": [],
           "distractors": []
         }
@@ -25588,10 +25667,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 227454,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Borrowed from Medieval Latin praedilectio, from praediligere (\"to prefer\"), made of prae (\"before\") and diligere (\"to love, single out\"), the verb behind diligent.",
+      "roots": [
+        "diligere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "strong predilection",
+        "personal predilections",
+        "natural predilection"
+      ],
       "audioUrl": "audio/words/224.mp3?v=1f3093c756b1",
       "hookAudioUrl": "audio/hooks/224.mp3?v=bba4b95f99b4",
       "senses": [
@@ -25600,7 +25685,7 @@
           "definition": "A long-standing taste for a certain kind of thing, which shows in the choices a person keeps making.",
           "plainLanguageDefinition": "A thing you always lean toward and pick when you can.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/386.mp3?v=c00591850f89",
           "examples": [
@@ -25703,10 +25788,16 @@
       "syllables": 2,
       "difficultyTier": 4,
       "frequencyRank": 798390,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin praesciens (\"knowing beforehand\"), from praescire, made of prae (\"before\") and scire (\"to know\"), the verb behind science.",
+      "roots": [
+        "scire"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "prescient warning",
+        "prescient observation",
+        "proved prescient"
+      ],
       "audioUrl": "audio/words/225.mp3?v=be6cf66b6291",
       "hookAudioUrl": "audio/hooks/225.mp3?v=84a0cec3dcfe",
       "senses": [
@@ -25715,7 +25806,7 @@
           "definition": "Perceiving the significance of events before they occur.",
           "plainLanguageDefinition": "Seeing what is coming before others do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/388.mp3?v=92da74548127",
           "examples": [
@@ -25806,9 +25897,9 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 5695539,
-      "etymology": null,
+      "etymology": "From Latin praevaricari (\"to walk crookedly\"), from prae and varicare (\"to straddle\"). The Latin verb also meant to play a double part, as a lawyer secretly working for the other side.",
       "roots": [],
-      "watchOut": null,
+      "watchOut": "Easily confused with procrastinate, which means to put things off; to prevaricate is to speak evasively so as to avoid the truth.",
       "pairings": [],
       "audioUrl": "audio/words/226.mp3?v=d72aaa628d14",
       "hookAudioUrl": "audio/hooks/226.mp3?v=817a72c9a8e5",
@@ -25818,7 +25909,7 @@
           "definition": "Be deliberately ambiguous or unclear in order to mislead or withhold information.",
           "plainLanguageDefinition": "To talk around the truth on purpose, giving vague answers that mislead.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/389.mp3?v=f23d42487784",
           "examples": [
@@ -25897,10 +25988,14 @@
       "syllables": 2,
       "difficultyTier": 1,
       "frequencyRank": 208595,
-      "etymology": null,
+      "etymology": "From Latin pristinus (\"former, original\"), by way of Middle French: something pristine is still in its first, unspoiled state.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "pristine condition",
+        "pristine beaches",
+        "pristine white"
+      ],
       "audioUrl": "audio/words/227.mp3?v=17158dbbba8c",
       "hookAudioUrl": "audio/hooks/227.mp3?v=07f7c6fe13a3",
       "senses": [
@@ -25964,11 +26059,11 @@
         {
           "senseId": 648,
           "definition": "Existing in the earliest, original form, before later changes.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Still in the state it was in at the very beginning, before anything altered it.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/648.mp3?v=204c3f65a635",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/648.mp3?v=7e2a45f64435",
           "examples": [],
           "distractors": []
         }
@@ -26023,10 +26118,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 662041,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin probitas (\"honesty\"), by way of Middle French, from probus (\"good, upright\"), the adjective that also lies behind prove and probe.",
+      "roots": [
+        "probus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "moral probity",
+        "financial probity",
+        "personal probity"
+      ],
       "audioUrl": "audio/words/228.mp3?v=dc8ed67ffdff",
       "hookAudioUrl": "audio/hooks/228.mp3?v=dc30acbaef04",
       "senses": [
@@ -26035,7 +26136,7 @@
           "definition": "Strict and reliable honesty in the way a person carries out a position of trust.",
           "plainLanguageDefinition": "Being so honest that people trust you with money or power.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/392.mp3?v=21f99823287f",
           "examples": [
@@ -26130,10 +26231,14 @@
       "syllables": 4,
       "difficultyTier": 4,
       "frequencyRank": 693329,
-      "etymology": null,
+      "etymology": "From Latin proclivitas, from proclivis (\"sloping downward, prone to\"), made of pro (\"forward\") and clivus (\"slope\"): a proclivity is a leaning you slide into.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "natural proclivity",
+        "strong proclivity",
+        "political proclivities"
+      ],
       "audioUrl": "audio/words/229.mp3?v=a7e7b61ca773",
       "hookAudioUrl": "audio/hooks/229.mp3?v=edd49a847760",
       "senses": [
@@ -26142,7 +26247,7 @@
           "definition": "A pull in a person's character that they give in to again and again, frequently to their cost.",
           "plainLanguageDefinition": "An urge you keep giving in to, often for something that is bad for you.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/393.mp3?v=08c29642c076",
           "examples": [
@@ -26237,10 +26342,15 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 263258,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "Goes back to Latin prodigus (\"lavish, wasteful\") and the verb prodigere, \"to squander\", which literally meant to drive forth, from agere (\"to drive\").",
+      "roots": [
+        "agere"
+      ],
+      "watchOut": "From the parable, many take it to mean returning home after an absence, but the son was called prodigal for wasting his inheritance.",
+      "pairings": [
+        "prodigal son",
+        "prodigal expenditure"
+      ],
       "audioUrl": "audio/words/230.mp3?v=8107c5740aa9",
       "hookAudioUrl": "audio/hooks/230.mp3?v=16562420c0e8",
       "senses": [
@@ -26249,7 +26359,7 @@
           "definition": "Careless with money or goods to the point of throwing a fortune away.",
           "plainLanguageDefinition": "Spending money so freely on fun that you end up broke.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/394.mp3?v=4b8187efff3d",
           "examples": [
@@ -26340,10 +26450,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 619725,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin profligatus, which meant \"depraved\" and comes from profligare (\"to strike down, overthrow\"), built on fligere (\"to strike\"), the verb also found in inflict.",
+      "roots": [
+        "fligere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "profligate spending",
+        "profligate use",
+        "profligate expenditure"
+      ],
       "audioUrl": "audio/words/231.mp3?v=422a25a279d7",
       "hookAudioUrl": "audio/hooks/231.mp3?v=ba8c017910d9",
       "senses": [
@@ -26352,7 +26468,7 @@
           "definition": "Squandering wealth freely and shamelessly, with no thought of limits.",
           "plainLanguageDefinition": "Throwing away money or supplies as if they would never run out.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/395.mp3?v=e7b23134010c",
           "examples": [
@@ -26410,7 +26526,7 @@
           "plainLanguageDefinition": "Living in a way that ignores all moral rules and social standards.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
+          "alsoMeans": true,
           "audioUrl": "audio/definitions/396.mp3?v=858e762fc514",
           "examples": [
             {
@@ -26509,10 +26625,17 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 119250,
-      "etymology": null,
-      "roots": [],
+      "etymology": "Through French prolifique from Latin prolificus, made of proles (\"offspring\") and facere (\"to make\"): a prolific writer keeps producing new work.",
+      "roots": [
+        "proles",
+        "facere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "prolific writer",
+        "prolific author",
+        "prolific composer"
+      ],
       "audioUrl": "audio/words/232.mp3?v=9ca1e7ed318e",
       "hookAudioUrl": "audio/hooks/232.mp3?v=3dfba3941590",
       "senses": [
@@ -26581,11 +26704,11 @@
         {
           "senseId": 1305,
           "definition": "Breeding fast and often, so that numbers grow quickly.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Of animals or plants, reproducing fast so that there are soon many more of them.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1305.mp3?v=f76fb3b8b38f",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1305.mp3?v=0a90da5a728b",
           "examples": [],
           "distractors": []
         }
