@@ -4227,3 +4227,152 @@ byte for byte.
 ### Not run
 
 - The iOS simulator and the Android emulator.
+
+## Word extras, rotating examples and hook audio (2026-10-30)
+
+Seven changes from the content review of the 579 words, in one PR with a
+commit for each part.
+
+### What was built
+
+- **Example rotation** (bad3e78). `src/lib/examples.ts` picks
+  `examples[visit % count]` from the first sense. In sessions the visit is the
+  SRS review count (`reps`), so each return shows the next sentence. Practice
+  sets `SessionItem.visit` from the word's earlier answers. All words has a
+  "Next example" control.
+- **Extras plumbing** (b102d34). New record fields `WordRow.roots`,
+  `watch_out`, `pairings` and `SenseRow.also_means`; `etymology` and
+  `register` are now filled. Words file format 2 carries them as
+  `WordContent.etymology`, `roots`, `watchOut`, `pairings` and
+  `SenseContent.register`, `alsoMeans`. Extras worksheets have their own
+  rubric (`rubric: 'extras'`, version 1) and commands:
+  `npx tsx src/curate.ts extras status | next | check | apply`. New tools:
+  `tools/etymology.py` (Wiktionary through the MediaWiki API, cached) and
+  `tools/collocations.py` (Datamuse, plus Google Books Ngram checks).
+- **Hook audio** (16701b9, fe6f0d7). Stage 04 makes a Kokoro clip of each
+  word's shown hook at `public/audio/hooks/<word id>.mp3`. The new-word card
+  and All words have a "Hook" button (`speakHook`), and the offline pack
+  includes the clips. A rewritten hook makes its clip stale, so `apply`
+  remakes it.
+- **Extras on screen** (ef0dbe8, 9b0f381). Pure logic in
+  `src/lib/wordExtras.ts`, shared lines in `src/components/WordExtras.tsx`.
+  - All words: tone label in every row; an open row shows Watch out, Also
+    means, Similar, Opposite, Often used, Origin and Same root. A Same root
+    word is a link to that word's row.
+  - New-word card: tone label, Watch out, Similar, Opposite and Origin. Also
+    means, Often used and Same root sit behind "More about this word".
+  - Discover feed: tone label and Watch out only.
+  - Reveal: Watch out only.
+- **Content.** 555 of 579 words have extras: an origin for all 555, roots
+  for 338 (62 roots link two or more words), a watch-out note for 63,
+  pairings for 529, and 123 second senses shown under Also means. Each
+  worksheet had a writer and an independent second reviewer. Origins were
+  checked against Wiktionary and written in new wording; the words file
+  credits Wiktionary (CC BY-SA 4.0). 32 memory hooks were corrected where
+  they made an origin claim the sources do not support, and their clips
+  remade.
+
+### Decisions
+
+- **Hooks and origins both stay**, even where they repeat a fact (Brian's
+  choice). The hook is the memory trick, the origin is the history.
+- **Tone labels.** `formal` only when Oxford Learner's, Cambridge and
+  Longman all mark the sense formal; every other label needs two of the
+  three. Under a two-of-three rule the first worksheets marked 13 of 24
+  words formal. With all three required, 184 of 555 words are still formal
+  (33%). If that is too many to be useful, the app could hide the `formal`
+  label and keep the others.
+- **Technical second senses** are shown only when a general reader often
+  meets them (catalyst in chemistry), with the `technical` label.
+- **Same root** links words that share a root string exactly. Roots are
+  written in one form (`specere`, `caput`, `probus`) so the links meet.
+- **Word families were left out** (Brian's choice). Pairings and hook audio
+  were the two extras chosen from the lower-value list.
+- **No fix rounds for the last 13 worksheets**, to limit session cost. The
+  first 11 worksheets (a to k) went through fix rounds until every word
+  passed. From worksheet l on, words the reviewer scored under 4 were held
+  back and not applied.
+
+### Held back (no extras yet)
+
+These 24 words failed the second review. `extras next` will offer them
+again, because they have no extras review. The reviewer's reason:
+
+- abjure, callow, canard, chimera, elucidate, equanimity, ossify, subsume,
+  supplant: pairings that are rare in Google Books or fit any word
+  ("callow student", "further elucidate").
+- capitulate (also its pairings), histrionic, patina, phlegmatic, zenith:
+  origin wording too close to Wiktionary's or a dictionary's, or a step in
+  the meaning that is unclear or not in the sources.
+- dour, disaffected, efface, purview: the hook says more than the sources
+  or disagrees with the origin (dour "probably" from durus where they say
+  "perhaps"; efface split as e- plus face instead of ef-). purview's hook is
+  the existing one.
+- bandy, machination: tone label missing (old-fashioned for "bandy words",
+  disapproving for machination).
+- redolent, spate, whet: the Also means line (redolent's retells an Oxford
+  example, spate's defines the river instead of the flood, whet's blade
+  sense is archaic).
+- careen: the watch-out note follows the frame of Wiktionary's usage
+  note.
+
+### Follow-ups
+
+Main-worksheet issues the extras reviewers noticed (not fixed here):
+
+- assuage: its second sense ("gain the good will of") is conciliate's
+  meaning. usurp: its second sense ("push aside and take over the role of
+  something else") is supplant's meaning. Every sense's definition goes
+  into the pool of fallback wrong answers (`src/features/games/optionPool.ts`),
+  so either can show up as a wrong option for the word it actually defines.
+- fallacious: the hidden sense "intended to deceive or trick" overstates
+  intent.
+- Missing senses: conundrum (a riddle), dirge (a slow, dreary song), mundane
+  (of this world, not spiritual), sublime (extreme, as in sublime
+  indifference), inure (the legal "inure to the benefit of"), connive
+  ("connive at"), relegate (the British sports sense; its "hand over to
+  settle" sense is rare).
+- reticent: its other senses are near-repeats of the first.
+- Hooks that sound like a quiz wrong answer: reprobate (probationer),
+  remonstrate (demonstrate), sanction (sanctity).
+
+Extras:
+
+- Roots that do not link yet: judicious names `judicare` and adjudicate
+  `judex` (both could name `judex`); beguile names `guile` but guile has no
+  roots; hegemony and exegesis share Greek hegeisthai ("to lead") and name
+  no roots. Most other shared stems already match (`gratia`, `nomen`,
+  `calx`, `ponere`, `specere`, `probus`).
+- Kokoro misreads some Latin in hooks: the mores hook "MOR-ayz" is read as
+  "more eyes". Listen to the hook clips of words whose hook spells out a
+  pronunciation.
+- `tools/etymology.py` sends the repository URL in its User-Agent. Agents
+  that fetch pages should send a generic User-Agent with no personal details.
+- The new-word card needs about 147 px more scrolling at 375 x 667 (235 px
+  with a watch-out note). The Origin line is about 50 px of that. If the card
+  feels long, Origin can move behind "More about this word".
+- Chromatic shows the new extras lines as visual changes; a person has to
+  accept the new baselines.
+
+### Sizes
+
+- `src/content/words.json`: 2,131 KB on main, 2,383 KB now (gzip: 390 KB
+  to 453 KB).
+- Audio: 92.70 MB in `public/audio` (hook clips 17.4 MB of it), which is
+  also the first offline-pack download.
+
+### Verified
+
+- `npx tsc --noEmit`, `npx eslint .` and `npx jest` (43 suites, 428 tests)
+  pass. Pipeline: `tsc` and `npm run test:unit` (102 tests) pass.
+- `extras apply` ran its fixed checks on every applied worksheet, and
+  `src/content/audio.test.ts` confirms every hook has a clip.
+- Web, demo mode, headless Chromium at 375 x 667: example rotation (feed,
+  All words, a session's first and second visit, practice) and the extras
+  lines on each screen.
+- Storybook stories for every screen with a word that has every extra and
+  one with none.
+
+### Not run
+
+- The iOS simulator and the Android emulator.
