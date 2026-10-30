@@ -9105,12 +9105,18 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 55920,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin discrepantia, from discrepare (\"to differ, disagree\"), which joins dis- (\"apart\") and crepare (\"to rattle, creak\").",
+      "roots": [
+        "crepare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "apparent discrepancy",
+        "explain the discrepancy",
+        "slight discrepancy"
+      ],
       "audioUrl": "audio/words/79.mp3?v=8248e2e25e63",
-      "hookAudioUrl": "audio/hooks/79.mp3?v=8e0efa8880a2",
+      "hookAudioUrl": "audio/hooks/79.mp3?v=84c8e4cc29ea",
       "senses": [
         {
           "senseId": 140,
@@ -9202,7 +9208,7 @@
         }
       ],
       "mnemonics": [
-        "Discrepancy comes from Latin discrepare, to sound different: when two accounts do not sound the same, there is a discrepancy."
+        "Discrepancy comes from Latin discrepare, to differ or disagree: when two accounts do not sound the same, there is a discrepancy."
       ]
     },
     {
@@ -9213,10 +9219,14 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 686530,
-      "etymology": null,
+      "etymology": "From Old French desparagier, from des- (\"dis-\") and parage (\"rank\"), built on pair (\"equal\"), from Latin par. English once also used it to mean to match unequally or to degrade, senses now obsolete.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "disparaging remarks",
+        "disparaging comments",
+        "disparage others"
+      ],
       "audioUrl": "audio/words/80.mp3?v=109b2a9c0371",
       "hookAudioUrl": "audio/hooks/80.mp3?v=70052768b7e9",
       "senses": [
@@ -9325,10 +9335,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 103622,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin disparatus (\"divided\"), perhaps by way of Middle French, from disparare (\"to divide\"), made of dis- (\"apart\") and parare (\"to arrange\"), the verb that is also inside separate.",
+      "roots": [
+        "parare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "seemingly disparate",
+        "disparate elements",
+        "disparate sources"
+      ],
       "audioUrl": "audio/words/81.mp3?v=73fe930cc24a",
       "hookAudioUrl": "audio/hooks/81.mp3?v=665f2e96b12e",
       "senses": [
@@ -9337,7 +9353,7 @@
           "definition": "Unlike one another in their basic makeup, sharing few or no features.",
           "plainLanguageDefinition": "Of very different kinds, with almost nothing alike about them.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/143.mp3?v=c680062c0c91",
           "examples": [
@@ -9436,9 +9452,11 @@
       "syllables": 3,
       "difficultyTier": 5,
       "frequencyRank": 1551407,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
+      "etymology": "From Old French dessembler, a reshaping of Latin dissimulare (\"to hide, disguise\") under the influence of sembler (\"to seem\"). The Latin verb comes from dissimilis (\"unlike\"), built on similis (\"like\").",
+      "roots": [
+        "similis"
+      ],
+      "watchOut": "Dissemble does not mean disassemble (take apart); it means to hide your real feelings or plans behind a pretense.",
       "pairings": [],
       "audioUrl": "audio/words/82.mp3?v=1916f36fb456",
       "hookAudioUrl": "audio/hooks/82.mp3?v=40b40f0352ef",
@@ -9544,10 +9562,16 @@
       "syllables": 4,
       "difficultyTier": 2,
       "frequencyRank": 235505,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin disseminare (\"to scatter, broadcast\"), made of dis- (\"in all directions\") and seminare (\"to sow\"), from semen (\"seed\").",
+      "roots": [
+        "semen"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "disseminate information",
+        "disseminate knowledge",
+        "widely disseminated"
+      ],
       "audioUrl": "audio/words/83.mp3?v=b10a1f950755",
       "hookAudioUrl": "audio/hooks/83.mp3?v=7054e2850450",
       "senses": [
@@ -9556,7 +9580,7 @@
           "definition": "Put news, knowledge or findings into wide circulation so that the public at large comes to hear of them.",
           "plainLanguageDefinition": "To pass news or knowledge around until it is known far and wide.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/148.mp3?v=2a18fca09c63",
           "examples": [
@@ -9655,10 +9679,16 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 150274,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Middle French dissonance, from Latin dissonantia, from dissonare (\"to clash in sound, disagree\"), made of dis- (\"apart\") and sonare (\"to sound\").",
+      "roots": [
+        "sonare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "cognitive dissonance",
+        "cultural dissonance",
+        "reduce dissonance"
+      ],
       "audioUrl": "audio/words/84.mp3?v=06ce4a045095",
       "hookAudioUrl": "audio/hooks/84.mp3?v=3adc333565da",
       "senses": [
@@ -9667,7 +9697,7 @@
           "definition": "An uneasy tension between beliefs, statements or actions that point in opposite directions.",
           "plainLanguageDefinition": "A jarring mismatch between what someone believes, says or does.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/149.mp3?v=f2b812e6c437",
           "examples": [
@@ -9722,11 +9752,11 @@
         {
           "senseId": 1268,
           "definition": "In music, a grating combination of notes that leaves the ear waiting for relief.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "In music, a clash of notes that sounds harsh and unresolved.",
           "senseOrder": 2,
-          "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1268.mp3?v=9d4f25b2fc54",
+          "register": "technical",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1268.mp3?v=28d33483c4f0",
           "examples": [],
           "distractors": []
         }
@@ -9785,10 +9815,16 @@
       "syllables": 2,
       "difficultyTier": 5,
       "frequencyRank": 2023865,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin distendere (\"to stretch out, swell\"), made of dis- (\"apart\") and tendere (\"to stretch\").",
+      "roots": [
+        "tendere"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "distended abdomen",
+        "distended bladder",
+        "distended veins"
+      ],
       "audioUrl": "audio/words/85.mp3?v=908538ed71a9",
       "hookAudioUrl": "audio/hooks/85.mp3?v=fa78a73571c8",
       "senses": [
@@ -9905,10 +9941,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 108846,
-      "etymology": null,
+      "etymology": "From Greek dogmatikos (\"didactic\"), from dogma (\"an opinion, belief or decree\"), by way of Late Latin dogmaticus and Middle French dogmatique.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "dogmatic approach",
+        "dogmatic assertion",
+        "dogmatic attitude"
+      ],
       "audioUrl": "audio/words/86.mp3?v=0151af5b4b62",
       "hookAudioUrl": "audio/hooks/86.mp3?v=3ee5a8fbe981",
       "senses": [
@@ -9917,7 +9957,7 @@
           "definition": "Unwilling to let any fact or argument loosen one's grip on a cherished position.",
           "plainLanguageDefinition": "Treating your own opinions as rules nobody may argue with.",
           "senseOrder": 1,
-          "register": null,
+          "register": "disapproving",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/155.mp3?v=d6230e34cfeb",
           "examples": [
@@ -9972,11 +10012,11 @@
         {
           "senseId": 1269,
           "definition": "Having to do with the formal teachings of a religion or school of thought.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Tied to the official beliefs that a church or school of thought teaches.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1269.mp3?v=132532c8b7b3",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1269.mp3?v=044ef28cc90e",
           "examples": [],
           "distractors": []
         }
@@ -10027,10 +10067,17 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 73049,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin dubius (\"wavering, doubtful\"), a relative of doubt. Its deeper origin is uncertain, but it probably goes back to a root meaning \"two\", as in a mind torn between two choices.",
+      "roots": [
+        "dubius"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "dubious claims",
+        "morally dubious",
+        "dubious reputation",
+        "dubious practices"
+      ],
       "audioUrl": "audio/words/87.mp3?v=74c97df8db71",
       "hookAudioUrl": "audio/hooks/87.mp3?v=2a6c737d25ad",
       "senses": [
@@ -10094,22 +10141,22 @@
         {
           "senseId": 1270,
           "definition": "Of a person, holding back belief in something while still weighing it up.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Unsure about something and not yet ready to believe it.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1270.mp3?v=84be4c4a4514",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1270.mp3?v=7fbdbb9052ec",
           "examples": [],
           "distractors": []
         },
         {
           "senseId": 1271,
           "definition": "Of a result, hanging in the balance with no clear sign of which way it will go.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Not yet settled, so it could still turn out either way.",
           "senseOrder": 3,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1271.mp3?v=f0536471f581",
+          "audioUrl": "audio/definitions/1271.mp3?v=ed7c48372ee7",
           "examples": [],
           "distractors": []
         }
@@ -10164,12 +10211,15 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 900456,
-      "etymology": null,
+      "etymology": "From Latin ebulliens, a form of ebullire (\"to boil or bubble up\"), from ex- (\"out\") and bullire (\"to bubble\"), the source of English boil.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ebullient mood",
+        "ebullient personality"
+      ],
       "audioUrl": "audio/words/88.mp3?v=34ffe05e9882",
-      "hookAudioUrl": "audio/hooks/88.mp3?v=008039c09b77",
+      "hookAudioUrl": "audio/hooks/88.mp3?v=76f6d13a023e",
       "senses": [
         {
           "senseId": 161,
@@ -10268,7 +10318,7 @@
         }
       ],
       "mnemonics": [
-        "Ebullient comes from the Latin ebullire, \"to boil over\": an ebullient person bubbles over with joy."
+        "Ebullient comes from the Latin ebullire, \"to boil up\": an ebullient person bubbles over with joy."
       ]
     },
     {
@@ -10279,10 +10329,14 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 147825,
-      "etymology": null,
+      "etymology": "From French éclectique, from Greek eklektikos (\"selective\"), from eklegein (\"to pick out\"), made of ek (\"out\") and legein (\"to choose\"). It is a distant relative of elect.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "eclectic mix",
+        "eclectic approach",
+        "eclectic collection"
+      ],
       "audioUrl": "audio/words/89.mp3?v=71fd73638427",
       "hookAudioUrl": "audio/hooks/89.mp3?v=c12e9f376ed6",
       "senses": [
@@ -10382,10 +10436,16 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 24416,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Late Latin efficacia, from efficax (\"effective\"), from efficere (\"to bring about\"), made of ex- (\"out\") and facere (\"to do, make\"); it came into English through Old French efficace.",
+      "roots": [
+        "facere"
+      ],
+      "watchOut": "Efficacy is not efficiency (doing a job with little waste); it is whether something produces the result it is meant to.",
+      "pairings": [
+        "clinical efficacy",
+        "therapeutic efficacy",
+        "proven efficacy"
+      ],
       "audioUrl": "audio/words/90.mp3?v=7903a80cc3ac",
       "hookAudioUrl": "audio/hooks/90.mp3?v=78b19d19fe26",
       "senses": [
@@ -10394,7 +10454,7 @@
           "definition": "A remedy's or plan's power to bring about the change it aims at.",
           "plainLanguageDefinition": "How well something, like a medicine or plan, actually does the job it is meant to do.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/163.mp3?v=114cdd67ded3",
           "examples": [
@@ -10477,10 +10537,14 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 249567,
-      "etymology": null,
+      "etymology": "From Greek elegeia, short for a phrase meaning \"elegiac song\", from elegos (\"a song of lament\"), which may come from Phrygian. It reached English through Latin elegia and Middle French elegie.",
       "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "watchOut": "An elegy is not a speech praising the dead (that is a eulogy); it is a poem or song of mourning.",
+      "pairings": [
+        "funeral elegy",
+        "pastoral elegy",
+        "an elegy for"
+      ],
       "audioUrl": "audio/words/92.mp3?v=a858544cfd7a",
       "hookAudioUrl": "audio/hooks/92.mp3?v=4ef8f10b4ff2",
       "senses": [
@@ -10573,10 +10637,17 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 82501,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin eloquens (\"speaking\"), a form of eloqui (\"to speak out\"), from e- (\"out\") and loqui (\"to speak\"), by way of Old French.",
+      "roots": [
+        "loqui"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "eloquent speech",
+        "eloquent speaker",
+        "eloquent plea",
+        "waxed eloquent"
+      ],
       "audioUrl": "audio/words/93.mp3?v=acf7d4e27e73",
       "hookAudioUrl": "audio/hooks/93.mp3?v=4b9c5e89125e",
       "senses": [
@@ -10645,11 +10716,11 @@
         {
           "senseId": 1272,
           "definition": "Of a gesture or expression, conveying a message as plainly as speech would.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "Saying something clearly with no words at all, as a look or a long silence can.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1272.mp3?v=1b4bf9fb5405",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1272.mp3?v=74de05b3ee36",
           "examples": [],
           "distractors": []
         }
@@ -10692,10 +10763,16 @@
       "syllables": 3,
       "difficultyTier": 4,
       "frequencyRank": 646640,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French embellir (\"to make beautiful\"), made of em- and bel (\"beautiful\"), which comes from Latin bellus.",
+      "roots": [
+        "bellus"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "embellish the story",
+        "embellished version",
+        "embellish the truth"
+      ],
       "audioUrl": "audio/words/94.mp3?v=5d6afa5fc764",
       "hookAudioUrl": "audio/hooks/94.mp3?v=4ebbf5b8bfb5",
       "senses": [
@@ -10753,11 +10830,11 @@
         {
           "senseId": 1256,
           "definition": "Give a plain object or room a fancier look by adding trimmings, carving or other ornament.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To decorate something with ornaments, trim or other fancy touches.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1256.mp3?v=ca2c3b4f9d13",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1256.mp3?v=f1b268668144",
           "examples": [],
           "distractors": []
         }
@@ -10800,10 +10877,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 10477,
-      "etymology": null,
+      "etymology": "Formed from empiric, which goes back through Latin empiricus to Greek empeiria (\"experience\"), built on peira (\"a trial\"): knowledge won by trying things. The look-alike empire has a separate history.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "empirical evidence",
+        "empirical research",
+        "empirical data"
+      ],
       "audioUrl": "audio/words/95.mp3?v=290de03d7f10",
       "hookAudioUrl": "audio/hooks/95.mp3?v=ad3b750615ad",
       "senses": [
@@ -10894,10 +10975,13 @@
       "syllables": 3,
       "difficultyTier": 1,
       "frequencyRank": 145250,
-      "etymology": null,
+      "etymology": "From Latin aemulatus, a form of aemulari (\"to try to equal or outdo, to rival\"), from aemulus (\"a rival\").",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "worth emulating",
+        "emulate the success"
+      ],
       "audioUrl": "audio/words/96.mp3?v=2ffa283ac427",
       "hookAudioUrl": "audio/hooks/96.mp3?v=720a224dc550",
       "senses": [
@@ -10961,11 +11045,11 @@
         {
           "senseId": 1257,
           "definition": "Mimic a different machine in software so that its programs run unchanged.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To copy how another machine works, in software, so its programs can run.",
           "senseOrder": 2,
-          "register": null,
+          "register": "technical",
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1257.mp3?v=4962f7f92767",
+          "audioUrl": "audio/definitions/1257.mp3?v=457cdf57a59d",
           "examples": [],
           "distractors": []
         }
@@ -10996,10 +11080,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 254585,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Old French engendrer, from Latin ingenerare (\"to implant\"), made of in- (\"in\") and generare (\"to beget, produce\"), which comes from genus (\"birth, descent\").",
+      "roots": [
+        "generare"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "engender trust",
+        "engender confidence",
+        "engender fear"
+      ],
       "audioUrl": "audio/words/98.mp3?v=7c08ac1b3938",
       "hookAudioUrl": "audio/hooks/98.mp3?v=44433808d742",
       "senses": [
@@ -11008,7 +11098,7 @@
           "definition": "Breed a reaction in others, or a new state of affairs.",
           "plainLanguageDefinition": "To make people come to feel something, such as trust or fear.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/177.mp3?v=1eedbe79c45f",
           "examples": [
@@ -11063,11 +11153,11 @@
         {
           "senseId": 1258,
           "definition": "Father or produce offspring.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "To father children or produce young.",
           "senseOrder": 2,
           "register": null,
           "alsoMeans": false,
-          "audioUrl": "audio/definitions/1258.mp3?v=86f627f2407c",
+          "audioUrl": "audio/definitions/1258.mp3?v=bb0042cc8e97",
           "examples": [],
           "distractors": []
         }
@@ -11110,10 +11200,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 156133,
-      "etymology": null,
+      "etymology": "From Greek ephemeros (\"lasting only a day\"), made of epi (\"on\") and hemera (\"day\"), by way of New Latin ephemerus.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "ephemeral nature",
+        "ephemeral existence",
+        "proved ephemeral"
+      ],
       "audioUrl": "audio/words/99.mp3?v=62c7cfe529e2",
       "hookAudioUrl": "audio/hooks/99.mp3?v=a888092c959d",
       "senses": [
@@ -11226,9 +11320,11 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 442422,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
+      "etymology": "From Greek epigramma (\"an inscription\"), from epigraphein (\"to write on, inscribe\"), made of epi (\"on\") and graphein (\"to write\"). Latin and Middle French passed it to English.",
+      "roots": [
+        "graphein"
+      ],
+      "watchOut": "An epigram is not an epigraph (a quotation that opens a book) or an epitaph (words on a tomb); it is a short, witty saying.",
       "pairings": [],
       "audioUrl": "audio/words/100.mp3?v=d2a22af7d67b",
       "hookAudioUrl": "audio/hooks/100.mp3?v=870fb989f109",
@@ -11321,19 +11417,22 @@
       "syllables": 4,
       "difficultyTier": 5,
       "frequencyRank": 3724728,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Medieval Latin aequivocare (\"to share a name\"), based on Late Latin aequivocus (\"ambiguous\"), made of aequus (\"equal\") and vocare (\"to call, name\"), a verb built on vox (\"voice\").",
+      "roots": [
+        "aequus",
+        "vocare"
+      ],
       "watchOut": null,
       "pairings": [],
       "audioUrl": "audio/words/101.mp3?v=8c305c16837b",
-      "hookAudioUrl": "audio/hooks/101.mp3?v=406a08f97e4f",
+      "hookAudioUrl": "audio/hooks/101.mp3?v=a2ec905d1ce0",
       "senses": [
         {
           "senseId": 181,
           "definition": "Hide your real position behind wording loose enough to be taken either way.",
           "plainLanguageDefinition": "To talk in a fuzzy way on purpose so no one can pin you down.",
           "senseOrder": 1,
-          "register": null,
+          "register": "formal",
           "alsoMeans": false,
           "audioUrl": "audio/definitions/181.mp3?v=436e7ea47a5f",
           "examples": [
@@ -11409,7 +11508,7 @@
         }
       ],
       "mnemonics": [
-        "Equivocate joins the Latin aequus, equal, and vox, voice: words that speak with two equal voices, so no one can tell which meaning you intend."
+        "Equivocate joins the Latin aequus, equal, and vocare, to call (from vox, voice): words that speak with two equal voices, so no one can tell which meaning you intend."
       ]
     },
     {
@@ -11420,10 +11519,15 @@
       "syllables": 3,
       "difficultyTier": 3,
       "frequencyRank": 417955,
-      "etymology": null,
-      "roots": [],
+      "etymology": "From Latin eruditus, a form of erudire (\"to educate, train\"), made of e- (\"out of\") and rudis (\"rough, raw, unskilled\"): training brings a person out of a raw state.",
+      "roots": [
+        "rudis"
+      ],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "erudite scholar",
+        "erudite work"
+      ],
       "audioUrl": "audio/words/102.mp3?v=1f2e816ac42f",
       "hookAudioUrl": "audio/hooks/102.mp3?v=531c862643e7",
       "senses": [
@@ -11523,10 +11627,14 @@
       "syllables": 4,
       "difficultyTier": 1,
       "frequencyRank": 117715,
-      "etymology": null,
+      "etymology": "From Greek esoterikos (\"for insiders\"), built on esotero (\"more inward\"), a form of eso (\"within\"). Its opposite, exoteric, described teaching open to the public.",
       "roots": [],
       "watchOut": null,
-      "pairings": [],
+      "pairings": [
+        "esoteric knowledge",
+        "esoteric teachings",
+        "esoteric meaning"
+      ],
       "audioUrl": "audio/words/103.mp3?v=2b5da19ddb87",
       "hookAudioUrl": "audio/hooks/103.mp3?v=f4059ac6697b",
       "senses": [
@@ -11622,10 +11730,16 @@
       "syllables": 3,
       "difficultyTier": 2,
       "frequencyRank": 306076,
-      "etymology": null,
-      "roots": [],
-      "watchOut": null,
-      "pairings": [],
+      "etymology": "From Medieval Latin eulogium, which seems to blend Greek eulogia (\"praise, good words\") with Latin elogium (\"an epitaph\"). The Greek word is built on eu (\"well\") and logos (\"word, reason\").",
+      "roots": [
+        "logos"
+      ],
+      "watchOut": "A eulogy is not a mournful poem (that is an elegy); it is a tribute praising someone, most often given at a funeral.",
+      "pairings": [
+        "delivered the eulogy",
+        "funeral eulogy",
+        "moving eulogy"
+      ],
       "audioUrl": "audio/words/104.mp3?v=f1cbc3778e5a",
       "hookAudioUrl": "audio/hooks/104.mp3?v=5218cb849daf",
       "senses": [
@@ -11689,11 +11803,11 @@
         {
           "senseId": 1259,
           "definition": "Lavish words of praise for a living person, a cause or a thing.",
-          "plainLanguageDefinition": null,
+          "plainLanguageDefinition": "High praise for someone or something, not only for a person who has died.",
           "senseOrder": 2,
           "register": null,
-          "alsoMeans": false,
-          "audioUrl": "audio/definitions/1259.mp3?v=29b62b7ecf96",
+          "alsoMeans": true,
+          "audioUrl": "audio/definitions/1259.mp3?v=e1ecfa6051eb",
           "examples": [],
           "distractors": []
         }

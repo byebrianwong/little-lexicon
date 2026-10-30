@@ -2,7 +2,7 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T06:08:12.339Z"
+    "updatedAt": "2026-10-30T06:09:02.412Z"
   },
   "counters": {
     "words": 617,
@@ -10,8 +10,8 @@
     "example_sentences": 6506,
     "word_relations": 6605,
     "distractors": 7333,
-    "mnemonics": 1023,
-    "reviews": 1066
+    "mnemonics": 1026,
+    "reviews": 1090
   },
   "words": [
     {
@@ -1282,8 +1282,17 @@
       "syllables": 4,
       "frequency_rank": 55920,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin discrepantia, from discrepare (\"to differ, disagree\"), which joins dis- (\"apart\") and crepare (\"to rattle, creak\").",
+      "audio_url": null,
+      "roots": [
+        "crepare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "apparent discrepancy",
+        "explain the discrepancy",
+        "slight discrepancy"
+      ]
     },
     {
       "id": 80,
@@ -1293,8 +1302,15 @@
       "syllables": 3,
       "frequency_rank": 686530,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French desparagier, from des- (\"dis-\") and parage (\"rank\"), built on pair (\"equal\"), from Latin par. English once also used it to mean to match unequally or to degrade, senses now obsolete.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "disparaging remarks",
+        "disparaging comments",
+        "disparage others"
+      ]
     },
     {
       "id": 81,
@@ -1304,8 +1320,17 @@
       "syllables": 3,
       "frequency_rank": 103622,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin disparatus (\"divided\"), perhaps by way of Middle French, from disparare (\"to divide\"), made of dis- (\"apart\") and parare (\"to arrange\"), the verb that is also inside separate.",
+      "audio_url": null,
+      "roots": [
+        "parare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "seemingly disparate",
+        "disparate elements",
+        "disparate sources"
+      ]
     },
     {
       "id": 82,
@@ -1315,8 +1340,13 @@
       "syllables": 3,
       "frequency_rank": 1551407,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French dessembler, a reshaping of Latin dissimulare (\"to hide, disguise\") under the influence of sembler (\"to seem\"). The Latin verb comes from dissimilis (\"unlike\"), built on similis (\"like\").",
+      "audio_url": null,
+      "roots": [
+        "similis"
+      ],
+      "watch_out": "Dissemble does not mean disassemble (take apart); it means to hide your real feelings or plans behind a pretense.",
+      "pairings": []
     },
     {
       "id": 83,
@@ -1326,8 +1356,17 @@
       "syllables": 4,
       "frequency_rank": 235505,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin disseminare (\"to scatter, broadcast\"), made of dis- (\"in all directions\") and seminare (\"to sow\"), from semen (\"seed\").",
+      "audio_url": null,
+      "roots": [
+        "semen"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "disseminate information",
+        "disseminate knowledge",
+        "widely disseminated"
+      ]
     },
     {
       "id": 84,
@@ -1337,8 +1376,17 @@
       "syllables": 3,
       "frequency_rank": 150274,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Middle French dissonance, from Latin dissonantia, from dissonare (\"to clash in sound, disagree\"), made of dis- (\"apart\") and sonare (\"to sound\").",
+      "audio_url": null,
+      "roots": [
+        "sonare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "cognitive dissonance",
+        "cultural dissonance",
+        "reduce dissonance"
+      ]
     },
     {
       "id": 85,
@@ -1348,8 +1396,17 @@
       "syllables": 2,
       "frequency_rank": 2023865,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin distendere (\"to stretch out, swell\"), made of dis- (\"apart\") and tendere (\"to stretch\").",
+      "audio_url": null,
+      "roots": [
+        "tendere"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "distended abdomen",
+        "distended bladder",
+        "distended veins"
+      ]
     },
     {
       "id": 86,
@@ -1359,8 +1416,15 @@
       "syllables": 3,
       "frequency_rank": 108846,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek dogmatikos (\"didactic\"), from dogma (\"an opinion, belief or decree\"), by way of Late Latin dogmaticus and Middle French dogmatique.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "dogmatic approach",
+        "dogmatic assertion",
+        "dogmatic attitude"
+      ]
     },
     {
       "id": 87,
@@ -1370,8 +1434,18 @@
       "syllables": 3,
       "frequency_rank": 73049,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin dubius (\"wavering, doubtful\"), a relative of doubt. Its deeper origin is uncertain, but it probably goes back to a root meaning \"two\", as in a mind torn between two choices.",
+      "audio_url": null,
+      "roots": [
+        "dubius"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "dubious claims",
+        "morally dubious",
+        "dubious reputation",
+        "dubious practices"
+      ]
     },
     {
       "id": 88,
@@ -1381,8 +1455,14 @@
       "syllables": 3,
       "frequency_rank": 900456,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin ebulliens, a form of ebullire (\"to boil or bubble up\"), from ex- (\"out\") and bullire (\"to bubble\"), the source of English boil.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "ebullient mood",
+        "ebullient personality"
+      ]
     },
     {
       "id": 89,
@@ -1392,8 +1472,15 @@
       "syllables": 3,
       "frequency_rank": 147825,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From French éclectique, from Greek eklektikos (\"selective\"), from eklegein (\"to pick out\"), made of ek (\"out\") and legein (\"to choose\"). It is a distant relative of elect.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "eclectic mix",
+        "eclectic approach",
+        "eclectic collection"
+      ]
     },
     {
       "id": 90,
@@ -1403,8 +1490,17 @@
       "syllables": 4,
       "frequency_rank": 24416,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Late Latin efficacia, from efficax (\"effective\"), from efficere (\"to bring about\"), made of ex- (\"out\") and facere (\"to do, make\"); it came into English through Old French efficace.",
+      "audio_url": null,
+      "roots": [
+        "facere"
+      ],
+      "watch_out": "Efficacy is not efficiency (doing a job with little waste); it is whether something produces the result it is meant to.",
+      "pairings": [
+        "clinical efficacy",
+        "therapeutic efficacy",
+        "proven efficacy"
+      ]
     },
     {
       "id": 91,
@@ -1426,8 +1522,15 @@
       "syllables": 3,
       "frequency_rank": 249567,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek elegeia, short for a phrase meaning \"elegiac song\", from elegos (\"a song of lament\"), which may come from Phrygian. It reached English through Latin elegia and Middle French elegie.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": "An elegy is not a speech praising the dead (that is a eulogy); it is a poem or song of mourning.",
+      "pairings": [
+        "funeral elegy",
+        "pastoral elegy",
+        "an elegy for"
+      ]
     },
     {
       "id": 93,
@@ -1437,8 +1540,18 @@
       "syllables": 3,
       "frequency_rank": 82501,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin eloquens (\"speaking\"), a form of eloqui (\"to speak out\"), from e- (\"out\") and loqui (\"to speak\"), by way of Old French.",
+      "audio_url": null,
+      "roots": [
+        "loqui"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "eloquent speech",
+        "eloquent speaker",
+        "eloquent plea",
+        "waxed eloquent"
+      ]
     },
     {
       "id": 94,
@@ -1448,8 +1561,17 @@
       "syllables": 3,
       "frequency_rank": 646640,
       "difficulty_tier": 4,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French embellir (\"to make beautiful\"), made of em- and bel (\"beautiful\"), which comes from Latin bellus.",
+      "audio_url": null,
+      "roots": [
+        "bellus"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "embellish the story",
+        "embellished version",
+        "embellish the truth"
+      ]
     },
     {
       "id": 95,
@@ -1459,8 +1581,15 @@
       "syllables": 4,
       "frequency_rank": 10477,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "Formed from empiric, which goes back through Latin empiricus to Greek empeiria (\"experience\"), built on peira (\"a trial\"): knowledge won by trying things. The look-alike empire has a separate history.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "empirical evidence",
+        "empirical research",
+        "empirical data"
+      ]
     },
     {
       "id": 96,
@@ -1470,8 +1599,14 @@
       "syllables": 3,
       "frequency_rank": 145250,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin aemulatus, a form of aemulari (\"to try to equal or outdo, to rival\"), from aemulus (\"a rival\").",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "worth emulating",
+        "emulate the success"
+      ]
     },
     {
       "id": 97,
@@ -1493,8 +1628,17 @@
       "syllables": 3,
       "frequency_rank": 254585,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Old French engendrer, from Latin ingenerare (\"to implant\"), made of in- (\"in\") and generare (\"to beget, produce\"), which comes from genus (\"birth, descent\").",
+      "audio_url": null,
+      "roots": [
+        "generare"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "engender trust",
+        "engender confidence",
+        "engender fear"
+      ]
     },
     {
       "id": 99,
@@ -1504,8 +1648,15 @@
       "syllables": 4,
       "frequency_rank": 156133,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek ephemeros (\"lasting only a day\"), made of epi (\"on\") and hemera (\"day\"), by way of New Latin ephemerus.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "ephemeral nature",
+        "ephemeral existence",
+        "proved ephemeral"
+      ]
     },
     {
       "id": 100,
@@ -1515,8 +1666,13 @@
       "syllables": 3,
       "frequency_rank": 442422,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek epigramma (\"an inscription\"), from epigraphein (\"to write on, inscribe\"), made of epi (\"on\") and graphein (\"to write\"). Latin and Middle French passed it to English.",
+      "audio_url": null,
+      "roots": [
+        "graphein"
+      ],
+      "watch_out": "An epigram is not an epigraph (a quotation that opens a book) or an epitaph (words on a tomb); it is a short, witty saying.",
+      "pairings": []
     },
     {
       "id": 101,
@@ -1526,8 +1682,14 @@
       "syllables": 4,
       "frequency_rank": 3724728,
       "difficulty_tier": 5,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin aequivocare (\"to share a name\"), based on Late Latin aequivocus (\"ambiguous\"), made of aequus (\"equal\") and vocare (\"to call, name\"), a verb built on vox (\"voice\").",
+      "audio_url": null,
+      "roots": [
+        "aequus",
+        "vocare"
+      ],
+      "watch_out": null,
+      "pairings": []
     },
     {
       "id": 102,
@@ -1537,8 +1699,16 @@
       "syllables": 3,
       "frequency_rank": 417955,
       "difficulty_tier": 3,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Latin eruditus, a form of erudire (\"to educate, train\"), made of e- (\"out of\") and rudis (\"rough, raw, unskilled\"): training brings a person out of a raw state.",
+      "audio_url": null,
+      "roots": [
+        "rudis"
+      ],
+      "watch_out": null,
+      "pairings": [
+        "erudite scholar",
+        "erudite work"
+      ]
     },
     {
       "id": 103,
@@ -1548,8 +1718,15 @@
       "syllables": 4,
       "frequency_rank": 117715,
       "difficulty_tier": 1,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Greek esoterikos (\"for insiders\"), built on esotero (\"more inward\"), a form of eso (\"within\"). Its opposite, exoteric, described teaching open to the public.",
+      "audio_url": null,
+      "roots": [],
+      "watch_out": null,
+      "pairings": [
+        "esoteric knowledge",
+        "esoteric teachings",
+        "esoteric meaning"
+      ]
     },
     {
       "id": 104,
@@ -1559,8 +1736,17 @@
       "syllables": 3,
       "frequency_rank": 306076,
       "difficulty_tier": 2,
-      "etymology": null,
-      "audio_url": null
+      "etymology": "From Medieval Latin eulogium, which seems to blend Greek eulogia (\"praise, good words\") with Latin elogium (\"an epitaph\"). The Greek word is built on eu (\"well\") and logos (\"word, reason\").",
+      "audio_url": null,
+      "roots": [
+        "logos"
+      ],
+      "watch_out": "A eulogy is not a mournful poem (that is an elegy); it is a tribute praising someone, most often given at a funeral.",
+      "pairings": [
+        "delivered the eulogy",
+        "funeral eulogy",
+        "moving eulogy"
+      ]
     },
     {
       "id": 105,
@@ -7786,7 +7972,7 @@
       "definition": "Unlike one another in their basic makeup, sharing few or no features.",
       "plain_language_definition": "Of very different kinds, with almost nothing alike about them.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 145,
@@ -7802,7 +7988,7 @@
       "definition": "Put news, knowledge or findings into wide circulation so that the public at large comes to hear of them.",
       "plain_language_definition": "To pass news or knowledge around until it is known far and wide.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 149,
@@ -7810,7 +7996,7 @@
       "definition": "An uneasy tension between beliefs, statements or actions that point in opposite directions.",
       "plain_language_definition": "A jarring mismatch between what someone believes, says or does.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 152,
@@ -7826,7 +8012,7 @@
       "definition": "Unwilling to let any fact or argument loosen one's grip on a cherished position.",
       "plain_language_definition": "Treating your own opinions as rules nobody may argue with.",
       "sense_order": 1,
-      "register": null
+      "register": "disapproving"
     },
     {
       "id": 158,
@@ -7858,7 +8044,7 @@
       "definition": "A remedy's or plan's power to bring about the change it aims at.",
       "plain_language_definition": "How well something, like a medicine or plan, actually does the job it is meant to do.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 164,
@@ -7922,7 +8108,7 @@
       "definition": "Breed a reaction in others, or a new state of affairs.",
       "plain_language_definition": "To make people come to feel something, such as trust or fear.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 179,
@@ -7946,7 +8132,7 @@
       "definition": "Hide your real position behind wording loose enough to be taken either way.",
       "plain_language_definition": "To talk in a fuzzy way on purpose so no one can pin you down.",
       "sense_order": 1,
-      "register": null
+      "register": "formal"
     },
     {
       "id": 182,
@@ -13396,33 +13582,37 @@
       "id": 1256,
       "word_id": 94,
       "definition": "Give a plain object or room a fancier look by adding trimmings, carving or other ornament.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To decorate something with ornaments, trim or other fancy touches.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1257,
       "word_id": 96,
       "definition": "Mimic a different machine in software so that its programs run unchanged.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To copy how another machine works, in software, so its programs can run.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": false
     },
     {
       "id": 1258,
       "word_id": 98,
       "definition": "Father or produce offspring.",
-      "plain_language_definition": null,
+      "plain_language_definition": "To father children or produce young.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1259,
       "word_id": 104,
       "definition": "Lavish words of praise for a living person, a cause or a thing.",
-      "plain_language_definition": null,
+      "plain_language_definition": "High praise for someone or something, not only for a person who has died.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1260,
@@ -13496,41 +13686,46 @@
       "id": 1268,
       "word_id": 84,
       "definition": "In music, a grating combination of notes that leaves the ear waiting for relief.",
-      "plain_language_definition": null,
+      "plain_language_definition": "In music, a clash of notes that sounds harsh and unresolved.",
       "sense_order": 2,
-      "register": null
+      "register": "technical",
+      "also_means": true
     },
     {
       "id": 1269,
       "word_id": 86,
       "definition": "Having to do with the formal teachings of a religion or school of thought.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Tied to the official beliefs that a church or school of thought teaches.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1270,
       "word_id": 87,
       "definition": "Of a person, holding back belief in something while still weighing it up.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Unsure about something and not yet ready to believe it.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1271,
       "word_id": 87,
       "definition": "Of a result, hanging in the balance with no clear sign of which way it will go.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Not yet settled, so it could still turn out either way.",
       "sense_order": 3,
-      "register": null
+      "register": null,
+      "also_means": false
     },
     {
       "id": 1272,
       "word_id": 93,
       "definition": "Of a gesture or expression, conveying a message as plainly as speech would.",
-      "plain_language_definition": null,
+      "plain_language_definition": "Saying something clearly with no words at all, as a look or a long silence can.",
       "sense_order": 2,
-      "register": null
+      "register": null,
+      "also_means": true
     },
     {
       "id": 1273,
@@ -66154,14 +66349,6 @@
       "revision": 3
     },
     {
-      "id": 405,
-      "word_id": 79,
-      "text": "Discrepancy comes from Latin discrepare, to sound different: when two accounts do not sound the same, there is a discrepancy.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
       "id": 406,
       "word_id": 138,
       "text": "Impassive joins im-, not, to the Latin root of passion (pati, to suffer or feel): an impassive face shows no passion.",
@@ -66301,14 +66488,6 @@
       "id": 424,
       "word_id": 87,
       "text": "Dubious shares its Latin root with doubt: a dubious claim is one you have good reason to doubt.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 425,
-      "word_id": 88,
-      "text": "Ebullient comes from the Latin ebullire, \"to boil over\": an ebullient person bubbles over with joy.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -66557,14 +66736,6 @@
       "id": 457,
       "word_id": 100,
       "text": "Epigram and telegram both end in gram, Greek for something written. Think of an epigram as a telegram of wit: short, because every word counts.",
-      "source": "claude",
-      "user_id": null,
-      "revision": 3
-    },
-    {
-      "id": 458,
-      "word_id": 101,
-      "text": "Equivocate joins the Latin aequus, equal, and vox, voice: words that speak with two equal voices, so no one can tell which meaning you intend.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -70749,6 +70920,30 @@
       "id": 1023,
       "word_id": 387,
       "text": "Largesse comes through French from Latin largus, which meant generous as well as abundant: largesse is generosity with an open hand.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1024,
+      "word_id": 79,
+      "text": "Discrepancy comes from Latin discrepare, to differ or disagree: when two accounts do not sound the same, there is a discrepancy.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1025,
+      "word_id": 88,
+      "text": "Ebullient comes from the Latin ebullire, \"to boil up\": an ebullient person bubbles over with joy.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1026,
+      "word_id": 101,
+      "text": "Equivocate joins the Latin aequus, equal, and vocare, to call (from vox, voice): words that speak with two equal voices, so no one can tell which meaning you intend.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -119364,8 +119559,8 @@
     },
     {
       "path": "definitions/1268.mp3",
-      "bytes": 22152,
-      "key": "0f4dfeb4702f1288",
+      "bytes": 16927,
+      "key": "a68ef0d149cca7fc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119385,8 +119580,8 @@
     },
     {
       "path": "definitions/1269.mp3",
-      "bytes": 18286,
-      "key": "96822c666c2f01df",
+      "bytes": 17554,
+      "key": "d2f4d81eba82edcc",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119399,15 +119594,15 @@
     },
     {
       "path": "definitions/1270.mp3",
-      "bytes": 17763,
-      "key": "3c2af40c211529ad",
+      "bytes": 14733,
+      "key": "e974d4b1b32cecbf",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
     {
       "path": "definitions/1271.mp3",
-      "bytes": 20167,
-      "key": "da29da40318f0b5b",
+      "bytes": 15151,
+      "key": "e0c1621f2a393d6c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119448,8 +119643,8 @@
     },
     {
       "path": "definitions/1272.mp3",
-      "bytes": 20167,
-      "key": "0ad7568e4a7ee6fc",
+      "bytes": 21316,
+      "key": "8c5b1ef1fc69fc09",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119462,8 +119657,8 @@
     },
     {
       "path": "definitions/1256.mp3",
-      "bytes": 23301,
-      "key": "82ea2da5a6259d96",
+      "bytes": 18077,
+      "key": "a05c95705c10e3f3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119483,8 +119678,8 @@
     },
     {
       "path": "definitions/1257.mp3",
-      "bytes": 19226,
-      "key": "123ce46c61bed230",
+      "bytes": 19853,
+      "key": "b50302f579b42489",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119497,8 +119692,8 @@
     },
     {
       "path": "definitions/1258.mp3",
-      "bytes": 9091,
-      "key": "375c690e76c4b992",
+      "bytes": 10867,
+      "key": "382f7a247af80a09",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -119546,8 +119741,8 @@
     },
     {
       "path": "definitions/1259.mp3",
-      "bytes": 17554,
-      "key": "aa8dba58e982d8e6",
+      "bytes": 18495,
+      "key": "1e1ce9009f6bca51",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -124971,8 +125166,8 @@
     },
     {
       "path": "hooks/79.mp3",
-      "bytes": 32810,
-      "key": "995c1ad2bc134151",
+      "bytes": 34482,
+      "key": "f5745cef0ea80df3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125034,8 +125229,8 @@
     },
     {
       "path": "hooks/88.mp3",
-      "bytes": 26227,
-      "key": "0698a7c42063d880",
+      "bytes": 25182,
+      "key": "16af655b1b12386c",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -125111,8 +125306,8 @@
     },
     {
       "path": "hooks/101.mp3",
-      "bytes": 38870,
-      "key": "cb185c2eb9c3ccb0",
+      "bytes": 44513,
+      "key": "0df235bf284575eb",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     },
@@ -165054,6 +165249,761 @@
         "alsoMeans": 5
       },
       "checker_notes": "Round 2: the new plain definition for the sound sense, 'Grating to listen to, like an out-of-tune piano or instruments playing in different keys', no longer follows WordUp's 'because the sounds do not blend' frame, and its examples differ from every dictionary's (WordUp's trumpet, buzzing speaker, voices and guitar chord; Vocabulary.com's traffic horns). Weakest point: 'Grating to listen to' alone could fit any harsh noise, though the examples make the clash of tones clear."
+    },
+    {
+      "id": 1067,
+      "word_id": 79,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary discrepancy (Latin discrepantia, from discrepo, from crepo) and the Latin pages discrepo (dis- + crepo; \"to disagree, differ\") and crepo (\"to rattle, creak\"). Root crepare: English decrepit comes from Latin decrepitus, from crepo (Wiktionary decrepit). Hook kept, scored 4: \"to sound different\" is the literal reading of dis- + crepare, though Wiktionary glosses discrepo only as \"to differ\". Tone null: only Cambridge marks it formal. Pairings from Ngram: apparent discrepancy 49, explain the discrepancy 27, slight discrepancy 14 per billion. Round 2: hook gloss of discrepare changed from \"to sound different\" to \"to differ or disagree\", to match the origin and Wiktionary's Latin discrepo.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the hook now glosses discrepare \"to differ or disagree\", which matches Wiktionary's discrepo and the origin; \"do not sound the same\" is now only an image, not a claim about the Latin. Weakest point: none of note."
+    },
+    {
+      "id": 1068,
+      "word_id": 80,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary disparage (Old French desparagier, des- + parage \"equal rank, rank\"; obsolete English senses \"to match unequally; to degrade\", \"marriage with an inferior\"), English parage (from Old French pair \"equal\" + -age) and French pair (from Latin par \"equal\"). The Old French desparagier page does not exist. No root: par is under 3 letters. Hook kept: the par in disparage does go back to Latin par through pair and parage. Tone formal: Oxford and Longman. Pairings: Ngram disparaging remarks 62, disparaging comments 33, disparage others 16. Round 2: register null (Cambridge gives no label). Origin no longer says the obsolete senses came first and drops \"in marriage\" (that detail is in the obsolete noun sense); it now gives the obsolete verb sense as Wiktionary does.",
+      "checker_scores": {
+        "origin": 4,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (Cambridge has no label). Origin 4: the facts are right (Wiktionary's obsolete \"to match unequally; to degrade or dishonor\"; Oxford's word origin also bases desparagier on Latin par), but \"English once also used it to mean to match unequally\" is stiff, and \"match unequally\" says nothing to a learner without \"in marriage\", which Oxford Learner's word origin (\"marry someone of unequal rank\") does support. Weakest pairing point: disparaging remarks and comments are near repeats."
+    },
+    {
+      "id": 1069,
+      "word_id": 81,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary disparate (Latin disparatus, from disparo \"to divide\", dis- \"apart\" + paro \"to arrange\"; either through Middle French desparat or directly, so \"perhaps by way of\") and the Latin page separo (se- + paro), which backs the hook. Tone formal: Oxford, Cambridge and Longman. Pairings: Ngram disparate elements 80, seemingly disparate 76, disparate sources 40. Left out disparate impact (a legal term).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. The origin keeps Wiktionary's either/or (Middle French desparat or Latin disparatus) as \"perhaps by way of Middle French\", and parare does sit inside separate (and prepare). formal is marked by all three learner's dictionaries. Weakest point: none of note; seemingly disparate, disparate elements and disparate sources are top Datamuse partners."
+    },
+    {
+      "id": 1070,
+      "word_id": 82,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut"
+      ],
+      "notes": "Origin checked against Wiktionary dissemble (Old French dessembler, from Latin dissimulo, reshaped after sembler, semblance; doublet of dissimulate) and the Latin pages dissimulo (from dissimilis \"unlike\"), dissimilis (dis- + similis) and simulo (from similis), which back the hook. Root similis also fits semblance. Tone formal: Oxford and Cambridge (Longman says literary). Watch-out: the common mix-up with disassemble; Wiktionary gives dissemble no \"take apart\" sense. No pairings: nothing is common (dissemble his 4.2 per billion; the rest are function words). Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Oxford and Cambridge mark it formal and Longman marks it literary, so neither label has the support it needs.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (formal in Oxford Learner's and Cambridge, literary in Longman). Weakest point: none of note."
+    },
+    {
+      "id": 1071,
+      "word_id": 83,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary disseminate (Latin dissemino \"to broadcast\", dis- \"in all directions\" + semino \"to sow\", from semen \"seed\"). Hook kept: Wiktionary seminar goes back through German Seminar to Latin seminarium, from semen, and seminal is from the same noun. Tone formal: all three learner's dictionaries. Pairings: Ngram disseminate information 204, widely disseminated 164, disseminate knowledge 48; left out the medical disseminated disease.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Origin and hook match Wiktionary (dis- in all directions, seminare to sow, semen seed; seminar and seminal share semen). formal is in all three dictionaries; the pairings are the top Datamuse partners. Weakest point: the origin's glosses follow Wiktionary's closely, acceptable for short shared facts."
+    },
+    {
+      "id": 1072,
+      "word_id": 84,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary dissonance (Middle French dissonance, Latin dissonantia) and the Latin pages dissonantia and dissono (dis- + sono \"to sound\"; \"to disagree in sound\"). Hook kept. Tone formal on the first sense (all three mark the \"disagreement\" sense formal); the music sense is technical (Cambridge specialized, Longman technical). Music sense shown although it is technical: it is the literal sense most readers meet in reviews and concert notes. Pairings: Ngram cognitive dissonance 468, cultural dissonance 15, reduce dissonance 10.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Latin dissono (dis- + sono; \"to disagree in sound\", \"to disagree, differ\") supports the origin and hook. formal on the disagreement sense is in all three dictionaries, and the music sense is labelled music, specialized and technical by them, the case the skill says to show. Weakest point: cultural dissonance shows the meaning less than cognitive dissonance or reduce dissonance."
+    },
+    {
+      "id": 1073,
+      "word_id": 85,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Wiktionary distend shows only a template, so the origin was checked against the Latin page distendo (dis- \"asunder, apart\" + tendo \"stretch\"; \"to stretch out, swell\"). Hook kept: extend and tension also come from tendere. Root tendere also fits portend. Tone formal: Oxford (formal or medical) and Longman. Pairings: Ngram distended abdomen 33, belly 19, stomach 17. Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Cambridge gives no label. Pairings: distended belly and stomach swapped for distended bladder (top Datamuse partner, Ngram 31 per billion) and distended veins (8), so the three do not name the same body part.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (Cambridge has no label). The pairings now cover abdomen, bladder (the top Datamuse partner) and veins, all in the tool's lists. Weakest point: the hook still pictures a belly, which is fine."
+    },
+    {
+      "id": 1074,
+      "word_id": 86,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary dogmatic (Middle French dogmatique and Late Latin dogmaticus, from Greek dogmatikos \"didactic\", from dogma) and the Greek page dogma (\"opinion, belief; decision, decree\"). No root: dogma is itself the English word and no other word in the list shares it. Hook kept. Tone disapproving: Oxford and Cambridge. Other sense shown: dogmatic theology is the most frequent pairing in Datamuse, and a reader who knows only the first sense would misread it. Pairings: Ngram dogmatic approach 15, dogmatic assertion 9, dogmatic attitude 6.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Also means 4: the doctrinal sense is current (AHD sense 1; dogmatic theology is the top Datamuse partner), but a general reader meets it mostly in theology, so showing it is a judgment call. Origin matches Wiktionary and the Greek dogma page (opinion, belief; decree). disapproving is marked by Oxford Learner's and Cambridge."
+    },
+    {
+      "id": 1075,
+      "word_id": 87,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary dubious (Latin dubius; like doubt, from duo) and the Latin page dubius, which calls the link to \"two\" somewhat uncertain but likely (through PIE *dwi-), so the origin hedges and does not name duo. Hook kept. Tone null: only Oxford marks the \"not honest\" sense disapproving. Shown: the \"unsure, doubting\" sense, which all three learner's dictionaries have; not shown: \"of uncertain outcome\", which is rare. Pairings: Ngram dubious distinction 56, morally dubious 33, dubious reputation 23, dubious claims 15. Round 2: dubious distinction (an ironic set phrase, not the first sense) replaced by dubious practices (Datamuse noun list, Ngram 11 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: dubious practices (11 per billion, in the Datamuse noun list) replaces the ironic dubious distinction; all four pairings now show the first sense. Weakest point: none of note."
+    },
+    {
+      "id": 1076,
+      "word_id": 88,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary ebullient (Latin ebulliens, from ebullio, from bullio \"to bubble up\", English boil) and the Latin page ebullio (ex- + bullio; \"to boil or bubble up\"). Hook changed: \"to boil over\" became \"to boil up\", since ebullio means to boil or bubble up, not to boil over. Tone formal: Oxford and Longman. Pairings: ebullient mood 6.9 and ebullient personality 3.4 per billion (top Datamuse nouns); nothing else is common (ebullient optimism 0.8). Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Cambridge gives no label.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (Cambridge has no label). Weakest point: none of note."
+    },
+    {
+      "id": 1077,
+      "word_id": 89,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary eclectic (French eclectique, from Greek eklektikos \"selective\", from eklego \"to pick, choose\", from ek \"out\" + lego \"to choose, count\"; cognate to elect). Hook kept. No root: legein is not a stem a learner would spot in other words. Tone formal: Oxford and Cambridge. Pairings: Ngram eclectic mix 115, eclectic approach 56, eclectic collection 42. Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Longman's formal label is on the noun, not the adjective.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (Longman's adjective has no label). Weakest point: none of note."
+    },
+    {
+      "id": 1078,
+      "word_id": 90,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary efficacy (Old French efficace, Late Latin efficacia, from efficax) and the Latin pages efficax (efficio + -ax) and efficio (ex- \"out of\" + facio \"to do, to make\"; \"to bring about\"). The hook makes no origin claim (a sound-alike; effect does come from the same verb). Tone formal: all three. Watch-out: efficacy and efficiency are often mixed up. Pairings: Ngram clinical efficacy 268, therapeutic efficacy 238, proven efficacy 40.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Origin checked against efficacy and efficacious (efficax from efficere); formal in all three dictionaries; the efficiency watch-out is a real mix-up stated correctly; proven efficacy is 40 per billion. Weakest point: two of the three pairings are medical."
+    },
+    {
+      "id": 1079,
+      "word_id": 92,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "watchOut",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary elegy (Middle French elegie, Latin elegia, Greek elegeia, short for elegeia ode \"an elegiac song\") and the Greek page elegeia (from elegeios, from elegos \"poem or song of lament\", perhaps from Phrygian, kept as \"may\"). Hook kept: elegos is the source. Tone null: no label in the three. Watch-out: the elegy and eulogy mix-up. Pairings: Ngram an elegy for 27, pastoral elegy 14, funeral elegy 8; an elegy for has a generic partner.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: \"an elegy for\" is a frame that fits many nouns and shows no partner; funeral elegy and pastoral elegy are fine. Origin: elegeia as an ellipsis of \"elegiac song\", elegos \"song of lament\", and the Phrygian hedge are all on Wiktionary's Greek pages. The eulogy watch-out is a classic mix-up."
+    },
+    {
+      "id": 1080,
+      "word_id": 93,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary eloquent (Old French eloquent, Latin eloquens, present participle of eloquor \"to speak out\", from e \"out\" + loquor \"to speak\"). Hook kept. Root loqui also fits loquacious, grandiloquent and interlocutor. Tone null: no label in the three. Shown: the sense of a look or silence that says something (Oxford, Longman). Pairings: Ngram eloquent speech 34, eloquent speaker 21, waxed eloquent 16, eloquent plea 10.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Origin matches Wiktionary (eloquor from e out + loquor speak). The wordless sense is current and its plain definition is clear. Weakest point: none of note."
+    },
+    {
+      "id": 1081,
+      "word_id": 94,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary embellish (Middle English embelishen, Old French embellir, from em- + bel) and Old French bel (from Latin bellus; \"graceful, beautiful\"). Hook kept. Tone null: only Oxford marks it formal. Shown: the \"decorate\" sense, which the learner's dictionaries list first. Pairings: Ngram embellished version 5.3, embellish the story 5.1, embellish the truth 3.8.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Old French bel from Latin bellus is on Wiktionary's Old French page; null tone is right (only Oxford Learner's marks formal); the decorate sense is current and well defined. Weakest point: embellish the truth (3.8 per billion) and embellish the story (5.1) are only moderately common, though they show the first sense."
+    },
+    {
+      "id": 1082,
+      "word_id": 95,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary empirical (empiric + -al) and English empiric (Latin empiricus, from Greek empeirikos \"experienced\", from empeiria \"experience\", from empeiros, from en + peira \"a trial, experiment, attempt\"; \"Not related to empire\"). Hook kept. No root: peira shows in no common English word. Tone null: only Oxford marks it formal. Pairings: Ngram empirical evidence 2136, empirical research 1461, empirical data 891. Round 2: origin reworded so it no longer follows the empiric entry clause by clause or repeats its \"Not related to empire\" aside.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the origin is now in its own words. Every step is supported by Wiktionary's empiric entry (Latin empiricus, Greek empeiria \"experience\", from empeiros, en + peira \"a trial\"); skipping empeirikos and empeiros is fine, and \"knowledge won by trying things\" is a fair reading of peira. The empire note is reworded. Weakest point: \"goes back through\" compresses two Greek steps."
+    },
+    {
+      "id": 1083,
+      "word_id": 96,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary emulate (Latin aemulatus, from aemulor \"to rival, emulate\") and the Latin page aemulor (from aemulus \"rival, emulator\"; \"to try to equal or excel, rival\"). Hook kept. Tone formal: Oxford and Cambridge. Computing sense not shown (a specialist sense), labeled technical as Oxford does. Pairings: Ngram worth emulating 18, emulate the success 7. Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Longman gives no label.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 4
+      },
+      "checker_notes": "Round 2: register null is right (Longman has no label). Also means 4 stays: the computing sense (Oxford Learner's sense 2, technical) is hidden, which is defensible though readers meet emulators fairly often."
+    },
+    {
+      "id": 1084,
+      "word_id": 98,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary engender, etymology 1 (Middle English engendren, Old French engendrer, Latin ingenero), and the Latin pages ingenero (in- + genero; \"to implant\") and genero (from genus \"descent, origin, birth\"; \"to beget, produce\"). Hook kept. Tone formal: all three. The \"father offspring\" sense is not shown: Wiktionary marks it obsolete and the learner's dictionaries leave it out. Pairings: Ngram engender trust 17, engender confidence 5, engender fear 5.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Latin ingenero (in- + genero, \"to implant\") and genero from genus (descent, origin, birth) support the origin and hook; formal in all three dictionaries. Weakest point: none of note; the hidden \"father offspring\" sense is rightly not shown."
+    },
+    {
+      "id": 1085,
+      "word_id": 99,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary ephemeral (New Latin ephemerus, from Greek ephemeros, from epi \"on\" + hemera \"day\"). Hook kept. No root: hemera shows in no common English word. Tone null: only Oxford marks it formal. Pairings: Ngram ephemeral nature 58, ephemeral existence 7, proved ephemeral 6.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Pairings 4: ephemeral nature is common (58 per billion) but generic; ephemeral existence and proved ephemeral show the sense better. Origin matches Wiktionary; null tone is right (only Oxford Learner's marks formal)."
+    },
+    {
+      "id": 1086,
+      "word_id": 100,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut"
+      ],
+      "notes": "Origin checked against Wiktionary epigram (Middle French epigramme, Latin epigramma, Greek epigramma \"inscription\") and the Greek pages epigramma (from epigrapho + -ma) and epigrapho (epi- + grapho; \"to write upon, inscribe\"). Root graphein (graph, paragraph, autograph). Hook kept, scored 4: the gram of epigram is graph- plus -ma, the same pieces as gramma, so \"Greek for something written\" holds, though Wiktionary derives epigramma from the verb. Watch-out: the classic epigram, epigraph, epitaph mix-up. No pairings: famous epigram is 4.1 per billion and witty epigram 0.7; Greek and Latin epigram name the genre.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "All good. Greek epigramma from epigrapho (epi + grapho) is on Wiktionary's Greek page; the epigraph/epitaph watch-out is a real mix-up. Empty pairings are right: witty epigrams is only 1.6 per billion. Weakest point: none of note."
+    },
+    {
+      "id": 1087,
+      "word_id": 101,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "register",
+        "hook"
+      ],
+      "notes": "Origin checked against Wiktionary equivocate (Medieval Latin aequivocatus, from aequivoco \"to be called by the same name\", from Late Latin aequivocus \"ambiguous\") and the Latin pages aequivocus (aequus \"equal\" + -vocus), -vocus (from voco \"to name, designate\") and voco (from vox \"voice, speech\"). Hook changed: it said the word joins aequus and vox; the second part is vocare, which comes from vox, so it now reads \"and vocare, to call (from vox, voice)\". Roots aequus (equanimity) and vocare (irrevocable). Tone formal: all three. No pairings: only prepositions follow it (equivocate on 4.2 per billion).",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out 4: null is acceptable, but equivocate used for equate (\"equivocate X with Y\") is a misuse a note could catch. Origin: Wiktionary has aequivocus from aequus + -vocus (from voco) and voco formed from the stem of vox, so \"made of aequus and vocare\" is a fair simplification; the corrected hook is accurate, and \"two equal voices\" is an image, not an origin claim."
+    },
+    {
+      "id": 1088,
+      "word_id": 102,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 4,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary erudite (Latin eruditus, from erudio \"educate, train\", from e- \"out of\" + rudis \"rude, unskilled\") and the Latin page rudis (\"rough, raw, uncultivated; unskilled\"; derived terms rudimentum, erudio; English rude comes from it), which backs the hook. Tone formal: Oxford (formal, approving) and Cambridge. Pairings: Ngram erudite scholar 9.6, erudite work 3.6; only two are common. Round 2: register set to null under the new rule (formal only when Oxford, Cambridge and Longman all mark the sense formal); Longman gives no label.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: register null is right (Longman has no label). Weakest point: none of note."
+    },
+    {
+      "id": 1089,
+      "word_id": 103,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "pairings"
+      ],
+      "notes": "Origin checked against Wiktionary esoteric (Greek esoterikos \"belonging to an inner circle\", from esotero \"further inside\", from eso \"within\"; the term first named the secret teachings of Greek philosophers, as against the public, exoteric ones). Hook kept. No root: eso shows in no other common English word. Tone null: only Oxford marks it formal. Pairings: Ngram esoteric knowledge 76, esoteric teachings 23, esoteric meaning 20. Round 2: origin reworded in my own phrasing; the second sentence no longer restates Wiktionary's note on the Greek philosophers.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Round 2: the origin now uses its own glosses (\"for insiders\", \"more inward\", \"a form of\" for the comparative) and states the exoteric contrast without retelling Wiktionary's parenthetical. Facts match Wiktionary and Oxford's word origin. Weakest point: \"a form of eso\" is vaguer than \"comparative of\", acceptable for learners."
+    },
+    {
+      "id": 1090,
+      "word_id": 104,
+      "rubric": "extras",
+      "rubric_version": 1,
+      "reviewed_at": "2026-10-30",
+      "scores": {
+        "origin": 5,
+        "hook": 4,
+        "tone": 5,
+        "watchOut": 5,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "verdict": "fixed",
+      "changed": [
+        "origin",
+        "roots",
+        "watchOut",
+        "pairings",
+        "otherSenses"
+      ],
+      "notes": "Origin checked against Wiktionary eulogy (Latin eulogium, apparently from a confusion between elogium and eulogia; hedge kept as \"seems to\"), English eulogium (Medieval Latin), the Latin page elogium (\"inscription on a tombstone, epitaph\") and the Greek pages eulogia (\"good words, praise\", from eulogos) and eulogos (eu- \"well\" + logos). Hook kept, scored 4: right about the Greek parts, though it skips the Latin mix-up. Watch-out: the eulogy and elegy mix-up. Shown: praise for the living (Oxford, Longman). Pairings: Ngram delivered the eulogy 9.3, funeral eulogy 5.5, moving eulogy 4.1. Round 2: watch-out reworded so it no longer echoes the learner's dictionaries' \"a speech or piece of writing praising\" frame.",
+      "checker_scores": {
+        "origin": 5,
+        "hook": 5,
+        "tone": 5,
+        "watchOut": 4,
+        "pairings": 5,
+        "alsoMeans": 5
+      },
+      "checker_notes": "Watch-out 4: the new clause no longer follows Oxford Learner's, but \"a tribute praising someone, most often given at a funeral\" now runs close to WordUp (\"a spoken or written tribute honoring a person who has just died, typically presented at a funeral\") with words swapped, and AHD has \"tribute, especially one praising someone\". Each part is shared by three or more sources (Oxford has \"a speech given at a funeral praising\"), so it is not a fail, but praise named without \"tribute\" and \"given at a funeral\" would be safer."
     }
   ]
 }
