@@ -4376,3 +4376,21 @@ Extras:
 ### Not run
 
 - The iOS simulator and the Android emulator.
+
+## OTA updates reach Android again (2026-11-02)
+
+After #58 merged, the `EAS Update` workflow published nothing. #58 added
+`__pycache__/` to the root `.gitignore`, and Expo's fingerprint hashes that
+file, so the Android runtime version moved from `2dc6d90` to `a655eb3` and no
+installed preview build could run the update. The rule now lives in
+`pipeline/.gitignore`, which the fingerprint does not read, and the root
+`.gitignore` is back to its content before #58.
+
+- `npx expo-updates runtimeversion:resolve --platform android` gives
+  `2dc6d90d6f02200628f16c4575f4b3a8c57c5e62` again, the runtime version of the
+  installed Android preview build. `pipeline/tools/__pycache__/` is still
+  ignored.
+- The first merge after this one publishes #58's changes to Android.
+
+For next time: the root `.gitignore` is part of the native fingerprint. Put
+ignore rules for `pipeline/` in `pipeline/.gitignore`.

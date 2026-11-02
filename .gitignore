@@ -60,6 +60,3 @@ chromatic-diagnostics.json
 
 # Vercel CLI link state
 .vercel/
-
-# Python bytecode from pipeline/tools
-__pycache__/
