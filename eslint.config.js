@@ -13,6 +13,7 @@ module.exports = defineConfig([
       '.expo/*',
       'storybook-static/*',
       'src/lib/database.types.ts',
+      '.rnstorybook/storybook.requires.ts',
     ],
   },
   {

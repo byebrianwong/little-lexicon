@@ -4394,3 +4394,87 @@ installed preview build could run the update. The rule now lives in
 
 For next time: the root `.gitignore` is part of the native fingerprint. Put
 ignore rules for `pipeline/` in `pipeline/.gitignore`.
+
+## Storybook on a device: spike (2026-11-02)
+
+Tried Storybook for React Native alongside the web Storybook, to see whether
+Chromatic's React Native guide (https://www.chromatic.com/docs/react-native/)
+can work here. The same story files now also run inside the app on the iOS
+simulator. Nothing has run on Chromatic: it has to enable React Native for a
+project first, and that has not been asked for.
+
+### What changed
+
+- Added `@storybook/react-native` 10.7.1 and a `.rnstorybook/` folder.
+- `metro.config.js` loads Storybook only when `EXPO_PUBLIC_STORYBOOK_ENABLED` is
+  `'true'`. Otherwise the app's Metro config is exactly what it was.
+- `app/_layout.tsx` did not change. `@storybook/react-native/withStorybook` swaps
+  the app's entry point for `.rnstorybook/index.tsx`. The older
+  `@storybook/react-native/metro/withStorybook`, which the package's readme
+  shows, has no swap, and would need the root switch in step 2 of Chromatic's
+  guide.
+- Moved `storybook`, `@storybook/addon-a11y` and
+  `@storybook/react-native-web-vite` from 10.6.0 to 10.6.5. The new package needs
+  `@storybook/react` 10.6.5, which needs `storybook` 10.6.5 or later.
+- `.rnstorybook/storybook.requires.ts` is generated, and it is committed on
+  purpose. If it is ignored, `import/no-unresolved` fails lint on CI. Ignoring it
+  in the root `.gitignore` also moved the fingerprint, as in the section above.
+
+To run it (Expo Go, on port 8083 if another server has 8081):
+
+```bash
+EXPO_PUBLIC_STORYBOOK_ENABLED=true npx expo start --clear
+```
+
+### Results
+
+- All 31 story files bundle through Metro, in development and as production
+  bundles for iOS and Android.
+- On the iOS simulator in Expo Go, all 201 stories rendered without an error,
+  switched over the websocket channel the way Chromatic drives them. Each
+  reported `storyFinished` with status `success`, except the first in each run,
+  which was already on screen and sent nothing. It rendered when reopened.
+  Message sent to `ws://localhost:7007`:
+  `{"type":"setCurrentStory","args":[{"storyId":"...","viewMode":"story"}]}`.
+- Looked at by eye: Button, Session, Home, Reveal, Stats, Settings. Newsreader,
+  the paper background and layout are right. The other stories were checked for
+  errors only.
+- With Storybook off, the fingerprint is unchanged on both platforms (Android is
+  still `2dc6d90`). The iOS bundle keeps its file name and size. The only bytes that
+differ are a random temp folder name Expo writes into it and the checksum at its
+end. Two exports of the same code differ in the same way.
+- `tsc`, lint, 428 Jest tests and the web Storybook build (201 stories) pass.
+
+### What does not work or differs
+
+- **No browsing UI on the device.** The default UI crashes in
+  `BottomSheetTextInput` ("Failed to obtain view for NativeViewGestureHandler").
+  The cause is not known. `@storybook/react-native-ui-lite` loads once
+  `@legendapp/list` is kept off the `browser` condition in `metro.config.js`, but
+  its menu did not open after two taps in the simulator. The UI is off, so the
+  screen shows one story. Chromatic turns the UI off for capture too.
+- **Play functions do not run on a device.** The package removes them, so the 66
+  stories that have one show their starting state and still report success.
+  Settings/ChangingKnownWordFrequency looks like the plain Settings story.
+- **Audio is not stubbed.** The web Storybook replaces `@/lib/audio` and
+  `expo-haptics` through Vite aliases, and Metro does not read those. Reveal
+  stories call the real `speakWord`.
+- `tsc` is not run over `.rnstorybook/` by `npm run typecheck`, the same as
+  `.storybook/`. Run by hand, the only errors are two in the generated file:
+  `disableUI` is missing from the package's own `ReactNativeOptions` type.
+
+### Not run
+
+- Android: the bundle builds, but no story has rendered on an emulator.
+- A release build. Chromatic builds with `expo prebuild`, then `gradlew
+  assembleRelease` and `xcodebuild` in Release mode. All of this ran in Expo Go.
+- A Chromatic build, and how a second project's status would interact with the
+  required "UI Tests" check.
+- A Chromatic build of the web Storybook at 10.6.5, which could show changes.
+
+### For the next step
+
+Chromatic's CLI reads a per-project flag to choose a web or native build, so
+native needs a second Chromatic project. TurboSnap is not supported on React
+Native, so each build captures every story on each platform. iOS builds need a
+macOS CI runner.
