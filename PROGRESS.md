@@ -4463,11 +4463,43 @@ end. Two exports of the same code differ in the same way.
   `.storybook/`. Run by hand, the only errors are two in the generated file:
   `disableUI` is missing from the package's own `ReactNativeOptions` type.
 
+### iOS release build
+
+Built commit `c82929a` from a clean clone with the command Chromatic's CI guide
+uses. `prebuild` plus `xcodebuild` took 4m 18s with Xcode 26.6. The CLI calls this
+command alpha.
+
+```bash
+LANG=en_US.UTF-8 npx chromatic react-native-build --platform=ios --output-dir=<dir>
+```
+
+- The `.app` launches on the simulator and shows Storybook with Newsreader.
+- On that same binary, all 201 stories reported `storyFinished` with status
+  `success` in 82 seconds, and the app did not crash. Six were looked at in Expo
+  Go earlier, and Session and Stats again here.
+- The capture host is baked into the bundle, so these 201 stories ran with its JS
+  bundle replaced by one pointing at a local websocket relay. The two bundles
+  differ by 47 bytes. Nothing has connected to Chromatic's real capture host or
+  used its secure websocket.
+
+Things that will catch someone out:
+
+- **`LANG`:** without a UTF-8 `LANG`, `pod install` crashes with an encoding error.
+  The CLI carries on and reports only that `LittleLexicon.xcworkspace` does not
+  exist. The real error is in its log file.
+- **Use a throwaway checkout:** `expo prebuild` writes `ios/`, which is not
+  ignored, rewrites the `android` and `ios` scripts in `package.json`, and the
+  build rewrites `.rnstorybook/storybook.requires.ts` with the capture host.
+- **Updates:** `expo-updates` stays on in this build and checks at every launch.
+  The server answers 400 because the build has no channel name, so an update
+  cannot replace Storybook.
+- **Replacing a bundle:** `expo-updates` copies the bundle on first launch and keeps
+  using that copy after a reinstall. Uninstall the app first.
+
 ### Not run
 
-- Android: the bundle builds, but no story has rendered on an emulator.
-- A release build. Chromatic builds with `expo prebuild`, then `gradlew
-  assembleRelease` and `xcodebuild` in Release mode. All of this ran in Expo Go.
+- Android: the bundle builds, but no story has rendered on an emulator. This Mac
+  has no Android SDK, so it needs an SDK or a CI runner.
 - A Chromatic build, and how a second project's status would interact with the
   required "UI Tests" check.
 - A Chromatic build of the web Storybook at 10.6.5, which could show changes.
