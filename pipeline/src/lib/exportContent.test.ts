@@ -1,6 +1,12 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { buildWordsFile, checkIdStability, type ContentRows } from './exportContent.ts';
+import {
+  buildWordsFile,
+  checkIdStability,
+  ETYMOLOGY_ATTRIBUTION,
+  WORDS_FILE_FORMAT,
+  type ContentRows,
+} from './exportContent.ts';
 
 function rows(): ContentRows {
   return {
@@ -65,7 +71,8 @@ test('buildWordsFile orders words by id and holds back words with no senses', ()
   assert.deepEqual(file.words.map((w) => w.headword), ['abate', 'laconic']);
   assert.deepEqual(heldBack, [{ headword: 'nosense', reason: 'no senses' }]);
   assert.deepEqual(file.attribution, ['credit']);
-  assert.equal(file.formatVersion, 1);
+  assert.equal(file.formatVersion, WORDS_FILE_FORMAT);
+  assert.equal(WORDS_FILE_FORMAT, 2);
 });
 
 test('buildWordsFile leaves out retired words', () => {
@@ -87,6 +94,54 @@ test('buildWordsFile maps rows to the app shape, generated examples first', () =
   assert.deepEqual(laconic.senses[0]!.distractors, [{ lemma: 'Very loud.', kind: 'mc', difficulty: 3 }]);
   assert.deepEqual(laconic.relations, [{ relatedLemma: 'terse', relationType: 'synonym' }]);
   assert.deepEqual(laconic.mnemonics, ['Global aid.'], 'personal mnemonics are not exported');
+});
+
+test('buildWordsFile gives words without extras empty roots, pairings and no watch-out note', () => {
+  const abate = buildWordsFile(rows(), []).file.words[0]!;
+  assert.deepEqual(
+    { etymology: abate.etymology, roots: abate.roots, watchOut: abate.watchOut, pairings: abate.pairings },
+    { etymology: null, roots: [], watchOut: null, pairings: [] },
+  );
+  assert.equal(abate.senses[0]!.alsoMeans, false);
+});
+
+test('buildWordsFile exports the extras, and Also means only on a later sense with a plain definition', () => {
+  const r = rows();
+  r.words = r.words.map((w) =>
+    w.headword === 'abate'
+      ? {
+          ...w,
+          etymology: 'From Old French abatre, to beat down.',
+          roots: ['batre'],
+          watch_out: 'Abate means to lessen, not to stop at once.',
+          pairings: ['tensions abate', 'abate a nuisance'],
+        }
+      : w,
+  );
+  r.senses.push(
+    // Shown: a later sense with a plain definition.
+    { id: 12, word_id: 1, definition: 'Remove a legal nuisance.', plain_language_definition: 'To end a nuisance by law.', sense_order: 2, register: 'technical', also_means: true },
+    // Not shown: flagged but without a plain definition.
+    { id: 13, word_id: 1, definition: 'Lower a price.', plain_language_definition: null, sense_order: 3, register: null, also_means: true },
+  );
+  // Not shown: the first sense never is.
+  r.senses = r.senses.map((s) => (s.id === 11 ? { ...s, also_means: true, register: 'formal' } : s));
+  const { file } = buildWordsFile(r, ['credit']);
+  const abate = file.words.find((w) => w.headword === 'abate')!;
+  assert.equal(abate.etymology, 'From Old French abatre, to beat down.');
+  assert.deepEqual(abate.roots, ['batre']);
+  assert.equal(abate.watchOut, 'Abate means to lessen, not to stop at once.');
+  assert.deepEqual(abate.pairings, ['tensions abate', 'abate a nuisance']);
+  assert.deepEqual(
+    abate.senses.map((s) => [s.senseId, s.register, s.alsoMeans]),
+    [
+      [11, 'formal', false],
+      [12, 'technical', true],
+      [13, null, false],
+    ],
+  );
+  assert.deepEqual(file.attribution, ['credit', ETYMOLOGY_ATTRIBUTION], 'origins add the Wiktionary credit');
+  assert.deepEqual(buildWordsFile(rows(), ['credit']).file.attribution, ['credit'], 'no origins, no credit');
 });
 
 test('checkIdStability accepts new words and reports removed ones', () => {

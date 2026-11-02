@@ -23,6 +23,7 @@ export function wantedClips(words: WordContent[]): Map<string, string> {
   };
   for (const word of words) {
     add(word.audioUrl);
+    add(word.hookAudioUrl);
     for (const sense of word.senses) {
       add(sense.audioUrl);
       for (const example of sense.examples) add(example.audioUrl);

@@ -156,6 +156,23 @@ export function buildPracticeChunk(input: PracticeChunkInput): SessionItem[] {
   return out;
 }
 
+/**
+ * How many times the learner has answered a word before, in any mode, across
+ * the given lists of answers (the loaded history and this run's). Practice
+ * items carry no SRS state, so this is the visit that picks which example
+ * sentence practice shows (lib/examples): the next one each time.
+ */
+export function practiceVisit(
+  wordId: number,
+  ...answerLists: readonly (readonly { wordId: number }[])[]
+): number {
+  let count = 0;
+  for (const answers of answerLists) {
+    for (const a of answers) if (a.wordId === wordId) count += 1;
+  }
+  return count;
+}
+
 function weightedPick<T>(items: readonly T[], weightOf: (item: T) => number, rng: () => number): T {
   const weights = items.map(weightOf);
   const total = weights.reduce((sum, w) => sum + w, 0);

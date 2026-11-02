@@ -22,7 +22,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-/** Shown after every mode, so its two states are the most-seen panels in the app. */
+/**
+ * Shown after every mode, so its two states are the most-seen panels in the
+ * app. insidious has a Watch out note, which the panel shows under the
+ * definition; it is the only extra the panel shows.
+ */
 export const Correct: Story = {};
 
 export const Incorrect: Story = {
@@ -42,6 +46,14 @@ export const IncorrectWithAttempt: Story = {
 /** After a graded review the panel also says when the word comes back. */
 export const WithNextDue: Story = {
   args: { nextDueLabel: 'in 8 days' },
+};
+
+/** A word with no Watch out note: nothing is added under the definition. */
+export const WithoutWatchOut: Story = {
+  args: {
+    content: word('ephemeral'),
+    example: word('ephemeral').senses[0]?.examples[0] ?? null,
+  },
 };
 
 /** A word with no example sentence still reveals cleanly. */

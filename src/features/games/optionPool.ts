@@ -220,14 +220,26 @@ export interface ClozeChoice {
  * sentence has enough wrong answers. Wrong answers come from the words being
  * played first, which the learner has at least seen, so the right answer does
  * not stand out as the only familiar one.
+ *
+ * `shown` is the sentence this visit shows on the other screens (lib/examples).
+ * It is tried last: the new-word card shows it just before the first question,
+ * so blanking it would give the answer away.
  */
 export function buildClozeChoice(
   content: WordContent,
   pool: OptionPool,
   rng: () => number,
+  shown: Pick<ExampleContent, 'exampleId'> | null = null,
 ): ClozeChoice | null {
   const exclude = new Set([content.headword.toLowerCase()]);
-  for (const example of shuffle(clozeChoiceExamples(content), rng)) {
+  const shuffled = shuffle(clozeChoiceExamples(content), rng);
+  const order = shown
+    ? [
+        ...shuffled.filter((e) => e.exampleId !== shown.exampleId),
+        ...shuffled.filter((e) => e.exampleId === shown.exampleId),
+      ]
+    : shuffled;
+  for (const example of order) {
     const candidates = clozeCandidates(
       content,
       articleBefore(example.text, example.clozeTarget ?? content.headword),

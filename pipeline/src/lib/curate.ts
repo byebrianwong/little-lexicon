@@ -12,7 +12,7 @@
 import { findWordToken, isOffensive } from './wordnet.ts';
 import type { Lexicon } from './revise.ts';
 import type { ContentRows } from './exportContent.ts';
-import type { SenseRow, WordRow } from './types.ts';
+import type { ReviewRow, SenseRow, WordRow } from './types.ts';
 import type { ReportNote } from './reports.ts';
 
 /** Bump when the rubric changes in a way that makes old reviews stale. */
@@ -124,8 +124,8 @@ export function overlap(a: string, b: string): number {
 export const NEAR_REPEAT = 0.5;
 const article = (noun: string): string => `${/^[aeiou]/i.test(noun) ? 'an' : 'a'} ${noun}`;
 const letters = (s: string): string => s.toLowerCase().replace(/[^a-z]/g, '');
-const isSentence = (s: string): boolean => /^[A-Z"']/.test(s.trim()) && /[.!?]["']?$/.test(s.trim());
-const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).length;
+export const isSentence = (s: string): boolean => /^[A-Z"']/.test(s.trim()) && /[.!?]["']?$/.test(s.trim());
+export const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).length;
 
 /**
  * Characters that never belong in word content: code and markup symbols,
@@ -133,6 +133,12 @@ const wordCount = (s: string): number => s.trim().split(/\s+/).filter(Boolean).l
  * "}]}```[instruction]@@" and a byte-order mark at the end of a hook.
  */
 const JUNK = /[`{}<>[\]\\|]|@@|[\u200b-\u200f\u2028\u2029\ufeff\ufffd]|[\u0300-\u036f]/;
+
+/** Whether text holds code or markup symbols, brackets, braces or invisible characters. */
+export const hasJunk = (text: string): boolean => JUNK.test(text);
+
+/** The house style bans em dashes (CLAUDE.md). */
+export const EM_DASH = '\u2014';
 
 /** An example tacked onto a definition: "..., like a dog that bites", "such as a coupon". */
 const ILLUSTRATION = /,\s*(like|such as|as when|the way)\s|\bsuch as\s/i;
@@ -263,10 +269,7 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
     }
   }
 
-  // Memory hook.
-  const hook = entry.hook.trim();
-  if (hook.length < 20 || hook.length > 240) p.push('hook must be 20 to 240 characters');
-  if (!letters(hook).includes(letters(word))) p.push('hook must name the word');
+  p.push(...checkHook(entry.hook, word));
 
   // Other senses: not shown on most screens, but their definitions become
   // fallback wrong answers for other words, so they must be clean too.
@@ -299,34 +302,58 @@ export function checkContent(entry: WorksheetEntry, env: CheckEnv): string[] {
   return p;
 }
 
-function scoreProblems(label: string, scores: Partial<Record<Criterion, number>> | null): string[] {
+/**
+ * What is wrong with a memory hook. Extras worksheets run the same checks on a
+ * hook they correct.
+ */
+export function checkHook(text: string, word: string): string[] {
+  const p: string[] = [];
+  const hook = text.trim();
+  if (hook.length < 20 || hook.length > 240) p.push('hook must be 20 to 240 characters');
+  if (!letters(hook).includes(letters(word))) p.push('hook must name the word');
+  return p;
+}
+
+function scoreProblems(
+  label: string,
+  scores: Partial<Record<string, number>> | null,
+  criteria: readonly string[],
+): string[] {
   if (!scores) return [`${label}.scores is not filled in`];
   const p: string[] = [];
-  for (const c of CRITERIA) {
+  for (const c of criteria) {
     const s = scores[c];
-    if (s === undefined) p.push(`${label}.scores.${c} is missing`);
+    if (s === undefined || s === null) p.push(`${label}.scores.${c} is missing`);
     else if (!Number.isInteger(s) || s < 1 || s > 5) p.push(`${label}.scores.${c} must be a whole number from 1 to 5`);
   }
   return p;
 }
 
+/** The writer's review and the second reviewer's scores, on any rubric. */
+export interface ReviewBlocks {
+  review: { scores: Partial<Record<string, number>> | null; verdict: Verdict | null; notes: string };
+  checker: { scores: Partial<Record<string, number>> | null; notes: string };
+}
+
 /**
- * Review problems: the writer's and the second reviewer's scores must be
- * filled in, and the verdict must agree with both and with the changes.
+ * Review problems on any rubric: the writer's and the second reviewer's scores
+ * must be filled in for every criterion, and the verdict must agree with both
+ * and with the changes.
  */
-export function checkReview(entry: WorksheetEntry, changed: string[]): string[] {
+export function checkVerdict(entry: ReviewBlocks, criteria: readonly string[], changed: string[]): string[] {
   const { scores, verdict, notes } = entry.review;
-  const p = [...scoreProblems('review', scores), ...scoreProblems('checker', entry.checker?.scores ?? null)];
-  if (p.length > 0) return p;
+  const checkerScores = entry.checker?.scores ?? null;
+  const p = [...scoreProblems('review', scores, criteria), ...scoreProblems('checker', checkerScores, criteria)];
+  if (p.length > 0 || !scores || !checkerScores) return p;
   if (verdict !== 'pass' && verdict !== 'fixed' && verdict !== 'flagged') {
     p.push('review.verdict must be "pass", "fixed" or "flagged"');
     return p;
   }
-  const low = CRITERIA.filter((c) => (scores![c] ?? 0) < PASS_SCORE);
+  const low = criteria.filter((c) => (scores[c] ?? 0) < PASS_SCORE);
   if (verdict !== 'flagged' && low.length > 0) {
     p.push(`verdict "${verdict}" needs every score at ${PASS_SCORE} or more; low: ${low.join(', ')}. Fix them or flag the word.`);
   }
-  const checkerLow = CRITERIA.filter((c) => (entry.checker.scores![c] ?? 0) < PASS_SCORE);
+  const checkerLow = criteria.filter((c) => (checkerScores[c] ?? 0) < PASS_SCORE);
   if (verdict !== 'flagged' && checkerLow.length > 0) {
     p.push(
       `the second reviewer scored ${checkerLow.join(', ')} under ${PASS_SCORE} ` +
@@ -337,6 +364,35 @@ export function checkReview(entry: WorksheetEntry, changed: string[]): string[] 
   if (verdict === 'pass' && changed.length > 0) p.push(`verdict "pass" but these fields changed: ${changed.join(', ')}; use "fixed"`);
   if (verdict === 'fixed' && changed.length === 0) p.push('verdict "fixed" but nothing changed; use "pass"');
   return p;
+}
+
+/**
+ * Review problems on the main rubric: the writer's and the second reviewer's
+ * scores must be filled in, and the verdict must agree with both and with the
+ * changes.
+ */
+export function checkReview(entry: WorksheetEntry, changed: string[]): string[] {
+  return checkVerdict(entry, CRITERIA, changed);
+}
+
+// --- reviews in the record ------------------------------------------------------
+
+/**
+ * Reviews on the main rubric. Extras reviews (lib/extras.ts) score other
+ * fields on their own rubric, so they never stand for a main review: a word
+ * with only an extras review is still unreviewed here.
+ */
+export function mainReviews(reviews: ReviewRow[]): ReviewRow[] {
+  return reviews.filter((r) => (r.rubric ?? 'main') === 'main');
+}
+
+/** The newest main review per word at the current rubric version. */
+export function currentReviews(reviews: ReviewRow[]): Map<number, ReviewRow> {
+  const out = new Map<number, ReviewRow>();
+  for (const r of mainReviews(reviews)) {
+    if (r.rubric_version === RUBRIC_VERSION) out.set(r.word_id, r);
+  }
+  return out;
 }
 
 /** Which content fields differ between the record's entry and the edited one. */

@@ -22,7 +22,12 @@ import { buildTrackers, type AnswerRecord } from '@/features/tracker/tracker';
 import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 import { GameProvider } from '@/features/games/GameContext';
 import { GameHost } from '@/features/games/GameHost';
-import { buildPracticeChunk, PRACTICE_CHUNK, practiceMode } from '@/features/games/practice';
+import {
+  buildPracticeChunk,
+  PRACTICE_CHUNK,
+  practiceMode,
+  practiceVisit,
+} from '@/features/games/practice';
 import { PracticeEmpty, PracticeLoading, PracticeRunner } from '@/features/games/PracticeView';
 import { useSettingsStore } from '@/features/settings/settingsStore';
 
@@ -98,6 +103,24 @@ export default function PracticeScreen() {
   );
 
   const current = queue[index];
+  // Practice items carry no SRS state, so the example sentence a word shows
+  // is picked by its earlier answers in any mode: the next one each time it
+  // comes back (lib/examples). This run's answers are not in the history yet.
+  const item = useMemo<SessionItem | undefined>(
+    () =>
+      current && {
+        ...current,
+        visit: practiceVisit(
+          current.content.wordId,
+          history.data ?? [],
+          runAnswers.current,
+        ),
+      },
+    // Worked out once per question, so a history reload part way through
+    // cannot change the sentence between the question and its reveal.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [current],
+  );
   const mode = useMemo(() => {
     if (!current) return null;
     return practiceMode(
@@ -139,7 +162,7 @@ export default function PracticeScreen() {
     return <PracticeEmpty onBack={() => router.replace('/(app)')} />;
   }
 
-  if (!current || !mode) return <PracticeLoading />;
+  if (!item || !mode) return <PracticeLoading />;
 
   const { answered, correct } = score.current;
 
@@ -151,8 +174,8 @@ export default function PracticeScreen() {
     >
       <GameProvider value={{ pool, profile, saved }}>
         <GameHost
-          key={`${current.content.wordId}-${index}`}
-          item={current}
+          key={`${item.content.wordId}-${index}`}
+          item={item}
           mode={mode}
           onOutcome={onOutcome}
           soundEnabled={soundEnabled}

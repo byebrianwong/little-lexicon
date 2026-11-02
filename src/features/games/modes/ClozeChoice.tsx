@@ -5,6 +5,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { Button, Label, Note } from '@/components/ui';
+import { exampleFor, visitOf } from '@/lib/examples';
 import { makeClozeBlank } from '@/lib/text';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
@@ -23,10 +24,11 @@ import { OptionButton, OptionList } from './OptionButton';
 export function ClozeChoice(props: GameModeProps) {
   const { pool } = useGameContext();
   const content = props.item.content;
-  // The sentence changes from one review to the next.
-  const seed = content.wordId * 100 + 3 + (props.item.state?.reps ?? 0);
+  // The sentence changes from one visit to the next, and is not the one this
+  // visit shows on the other screens when another will do (lib/examples).
+  const seed = content.wordId * 100 + 3 + visitOf(props.item);
   const choice = useMemo(
-    () => buildClozeChoice(content, pool, mulberry32(seed)),
+    () => buildClozeChoice(content, pool, mulberry32(seed), exampleFor(props.item)),
     // Built once per question, so a refill that grows the pool cannot reshuffle it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [seed],

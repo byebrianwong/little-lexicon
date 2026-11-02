@@ -51,7 +51,7 @@ function printSummary(ctx: RunContext, elapsedMs: number): void {
     `words revised        ${m.sensesRevised}`,
     `rejected (invalid)   ${m.invalidRejected}   escalated to Sonnet: ${m.escalatedToSonnet}`,
     `LLM tokens           in ${m.llmInputTokens}, out ${m.llmOutputTokens}  (est. $${m.llmCostUsd.toFixed(4)} if billed)`,
-    `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, definitions ${m.audioDefinitionsSynthed}, human recordings ${m.audioReusedHuman}`,
+    `audio clips          words ${m.audioWordsSynthed}, sentences ${m.audioSentencesSynthed}, definitions ${m.audioDefinitionsSynthed}, hooks ${m.audioHooksSynthed}, human recordings ${m.audioReusedHuman}`,
     `TTS characters       ${m.ttsChars}`,
     `audio this run       ${m.audioClips} clips, ${mb(m.audioBytes)}`,
     `exported             ${m.wordsExported} words, ${m.wordsHeldBack} held back, ${kb(m.exportBytes)} (${kb(m.exportGzipBytes)} compressed)`,

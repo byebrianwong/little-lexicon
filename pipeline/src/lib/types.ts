@@ -26,6 +26,10 @@ export interface WordRow {
   syllables: number | null;
   frequency_rank: number | null;
   difficulty_tier: number;
+  /**
+   * Where the word comes from, in one or two plain sentences, shown as an
+   * "Origin" line. Written on extras worksheets (lib/extras.ts).
+   */
   etymology: string | null;
   audio_url: string | null;
   /**
@@ -33,6 +37,18 @@ export interface WordRow {
    * is left out of the export, the difficulty tiers and content review.
    */
   retired?: string;
+  // The fields below are written on extras worksheets (lib/extras.ts). They
+  // are absent on words no extras worksheet has covered yet.
+  /**
+   * Root forms that link words in the list sharing a root (prolific and
+   * proliferate share Latin proles). Lowercase ASCII, 0 to 3, each named in
+   * `etymology`.
+   */
+  roots?: string[];
+  /** A "Watch out" note for a word people often misread or misuse, or null. */
+  watch_out?: string | null;
+  /** 2 to 4 common collocations of the first sense ("tensions abate"), or none. */
+  pairings?: string[];
 }
 
 export interface SenseRow {
@@ -41,7 +57,13 @@ export interface SenseRow {
   definition: string;
   plain_language_definition: string | null;
   sense_order: number;
+  /** A tone label from REGISTERS in lib/extras.ts, or null for a neutral word. */
   register: string | null;
+  /**
+   * On a sense after the first: show it under "Also means". Such a sense
+   * always has a plain_language_definition. Set on extras worksheets.
+   */
+  also_means?: boolean;
 }
 
 export interface ExampleRow {
@@ -86,12 +108,23 @@ export interface DistractorRow {
 }
 
 /**
- * One curation review of a word (lib/curate.ts). The newest review at the
- * current rubric version is the word's standing verdict.
+ * Which rubric a review used: the main one (lib/curate.ts: definition,
+ * examples, wrong answers and the rest) or the extras one (lib/extras.ts:
+ * origin, roots, tone, watch-out note, pairings, other meanings).
+ */
+export type ReviewRubric = 'main' | 'extras';
+
+/**
+ * One curation review of a word. The newest review at the current version of
+ * its rubric is the word's standing verdict on that rubric. The two rubrics
+ * never count for each other.
  */
 export interface ReviewRow {
   id: number;
   word_id: number;
+  /** Absent on main reviews, which were all written before extras existed. */
+  rubric?: ReviewRubric;
+  /** The version of this review's own rubric. */
   rubric_version: number;
   /** YYYY-MM-DD. */
   reviewed_at: string;

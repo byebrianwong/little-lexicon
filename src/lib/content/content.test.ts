@@ -1,5 +1,5 @@
 import { buildContentIndex, loadContent, WORDS_FILE_FORMAT, type WordsFile } from './index';
-import type { WordContent } from '@/lib/types';
+import type { Register, WordContent } from '@/lib/types';
 import { buildOptionPool, capsForWord } from '@/features/games/optionPool';
 
 function makeWord(wordId: number, headword: string, tier: number, rank: number | null): WordContent {
@@ -12,7 +12,11 @@ function makeWord(wordId: number, headword: string, tier: number, rank: number |
     difficultyTier: tier,
     frequencyRank: rank,
     etymology: null,
+    roots: [],
+    watchOut: null,
+    pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [
       {
         senseId: wordId * 10,
@@ -20,6 +24,7 @@ function makeWord(wordId: number, headword: string, tier: number, rank: number |
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        alsoMeans: false,
         audioUrl: null,
         examples: [],
         distractors: [],
@@ -116,6 +121,39 @@ describe('the committed words file', () => {
     for (const w of words) {
       for (const r of w.relations) expect(known.has(r.relationType)).toBe(true);
     }
+  });
+
+  it('has extras in the shape the screens expect', () => {
+    const registers: Register[] = [
+      'formal',
+      'informal',
+      'literary',
+      'disapproving',
+      'approving',
+      'humorous',
+      'old-fashioned',
+      'technical',
+    ];
+    for (const w of words) {
+      expect(w.roots.length).toBeLessThanOrEqual(3);
+      for (const root of w.roots) expect(root).toMatch(/^[a-z]{3,}$/);
+      expect(w.pairings.length === 0 || (w.pairings.length >= 2 && w.pairings.length <= 4)).toBe(true);
+      expect(w.watchOut === null || w.watchOut.trim().length > 0).toBe(true);
+      w.senses.forEach((s, i) => {
+        if (s.register !== null) expect(registers).toContain(s.register);
+        if (s.alsoMeans) {
+          expect(i).toBeGreaterThan(0);
+          expect(s.plainLanguageDefinition?.trim()).toBeTruthy();
+        }
+      });
+      expect(w.senses.filter((s) => s.alsoMeans).length).toBeLessThanOrEqual(2);
+    }
+  });
+
+  it('credits Wiktionary once any word has an origin', async () => {
+    const { attribution } = await loadContent();
+    const credited = attribution.some((line) => line.includes('Wiktionary'));
+    expect(credited).toBe(words.some((w) => w.etymology !== null));
   });
 
   it('contains no stub text from a pipeline dry run', () => {

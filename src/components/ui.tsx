@@ -672,18 +672,27 @@ export function TextButton({
   icon,
   onPress,
   accessibilityLabel,
+  role = 'button',
+  expanded,
   className,
 }: {
   label: string;
   icon?: IconName;
   onPress: () => void;
   accessibilityLabel?: string;
+  /** link for one that takes the reader to another word or place. */
+  role?: 'button' | 'link';
+  /** For a toggle that shows and hides something below it. */
+  expanded?: boolean;
   className?: string;
 }) {
   return (
     <Pressable
-      accessibilityRole="button"
+      accessibilityRole={role}
       accessibilityLabel={accessibilityLabel ?? label}
+      // aria-expanded reaches the browser as well as native; React Native
+      // Web ignores accessibilityState.
+      aria-expanded={expanded}
       onPress={onPress}
       className={tw(
         cx(

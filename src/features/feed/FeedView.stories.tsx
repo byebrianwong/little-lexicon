@@ -2,7 +2,7 @@ import type { Decorator, Meta, StoryObj } from '@storybook/react-native-web-vite
 import { expect, fn, userEvent, within } from 'storybook/test';
 import { WordsLayout } from '@/features/browse/WordsLayout';
 import { phone } from '@/stories/decorators';
-import { word } from '@/stories/fixtures';
+import { withoutExtras, word } from '@/stories/fixtures';
 import { FeedView } from './FeedView';
 
 const FIRST = word('sycophant');
@@ -61,6 +61,31 @@ export const FirstWord: Story = {
   play: async ({ canvasElement }) => {
     const canvas = await showsFirstWord(canvasElement);
     await expect(canvas.getByText('Scroll for the next word')).toBeInTheDocument();
+  },
+};
+
+/**
+ * A word with every extra. The feed shows only the tone label, beside the part
+ * of speech, and the Watch out note, under the definition.
+ */
+export const WordWithEveryExtra: Story = {
+  args: { words: [word('loquacious'), ...WORDS] },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(await canvas.findByText('loquacious')).toBeInTheDocument();
+    await expect(canvas.getByText('formal')).toBeInTheDocument();
+    await expect(canvas.getByText('Watch out')).toBeInTheDocument();
+    await expect(canvas.queryByText('Similar')).not.toBeInTheDocument();
+  },
+};
+
+/** A word with none of the extras looks as it did before them. */
+export const WordWithNoExtras: Story = {
+  args: { words: [withoutExtras(word('quixotic')), ...WORDS] },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await expect(await canvas.findByText('quixotic')).toBeInTheDocument();
+    await expect(canvas.queryByText('Watch out')).not.toBeInTheDocument();
   },
 };
 

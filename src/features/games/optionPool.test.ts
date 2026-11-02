@@ -20,6 +20,7 @@ function word(id: number, headword: string, def: string, distractors: string[]):
     plainLanguageDefinition: def,
     senseOrder: 1,
     register: null,
+    alsoMeans: false,
     audioUrl: null,
     examples: [{ exampleId: id * 1000, text: `${headword} used here.`, audioUrl: null, clozeTarget: headword }],
     distractors: distractors.map((d) => ({ lemma: d, kind: 'mc', difficulty: 3 })),
@@ -33,7 +34,11 @@ function word(id: number, headword: string, def: string, distractors: string[]):
     difficultyTier: 3,
     frequencyRank: id,
     etymology: null,
+    roots: [],
+    watchOut: null,
+    pairings: [],
     audioUrl: null,
+    hookAudioUrl: null,
     senses: [sense],
     relations: [{ relatedLemma: `syn${id}`, relationType: 'synonym' }],
     mnemonics: [],
@@ -110,6 +115,7 @@ function clozeWord(
         plainLanguageDefinition: null,
         senseOrder: 1,
         register: null,
+        alsoMeans: false,
         audioUrl: null,
         examples: sentences.map((s, i) => ({
           exampleId: id * 1000 + i,
@@ -216,6 +222,25 @@ describe('buildClozeChoice', () => {
     expect(buildClozeChoice(abate, pool, mulberry32(3))).toEqual(
       buildClozeChoice(abate, pool, mulberry32(3)),
     );
+  });
+
+  it('avoids the sentence the visit shows elsewhere, unless it is the only one', () => {
+    const three = clozeWord(50, 'abate', 'verb', '/əˈbeɪt/', [
+      'It began to abate.',
+      'The noise would abate soon.',
+      'Rain may abate.',
+    ]);
+    const pool = buildOptionPool(asItems([three, ...otherVerbs]));
+    const shown = three.senses[0]!.examples[1]!;
+    const pick = (seed: number, avoid: typeof shown | null) =>
+      buildClozeChoice(three, pool, mulberry32(seed), avoid)!.example;
+    const seeds = Array.from({ length: 20 }, (_, seed) => seed);
+    // Left to the shuffle, some seeds would pick it.
+    expect(seeds.some((seed) => pick(seed, null) === shown)).toBe(true);
+    for (const seed of seeds) expect(pick(seed, shown)).not.toBe(shown);
+
+    const only = abate.senses[0]!.examples[0]!;
+    expect(buildClozeChoice(abate, pool, mulberry32(1), only)!.example).toBe(only);
   });
 });
 

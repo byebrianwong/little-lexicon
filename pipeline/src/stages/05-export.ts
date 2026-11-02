@@ -6,8 +6,9 @@
 // because saved progress points at word ids. Reports the file size, since the
 // file ships inside the app.
 //
-// Also gives each exported word, sentence and definition the audioUrl of its
-// clip from stage 04 (public/audio, which the web export copies to the site).
+// Also gives each exported word, sentence, definition and memory hook the URL
+// of its clip from stage 04 (public/audio, which the web export copies to the
+// site).
 
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -28,6 +29,7 @@ interface ClipUrls {
   words: number;
   sentences: number;
   definitions: number;
+  hooks: number;
   bytes: number;
   human: boolean;
   /** Clips left out because their text or IPA changed after they were made. */
@@ -35,7 +37,8 @@ interface ClipUrls {
 }
 
 /**
- * Give each exported word, sentence and definition the audioUrl of its clip.
+ * Give each exported word, sentence, definition and memory hook the URL of its
+ * clip (a hook's goes in the word's hookAudioUrl).
  * Only clips whose file is on disk and that were made from the current text
  * and IPA get one, so the app never plays a clip that says something else.
  * Anything without one is spoken with the device's voice until stage 04 runs
@@ -43,7 +46,7 @@ interface ClipUrls {
  */
 async function attachClipUrls(ctx: RunContext, file: WordsFile): Promise<ClipUrls> {
   const clips = new Map((await ctx.store.listAudio()).map((c) => [c.path, c]));
-  const counts: ClipUrls = { words: 0, sentences: 0, definitions: 0, bytes: 0, human: false, stale: 0 };
+  const counts: ClipUrls = { words: 0, sentences: 0, definitions: 0, hooks: 0, bytes: 0, human: false, stale: 0 };
   const urlFor = async (
     path: string,
     word: { headword: string; ipa: string | null },
@@ -64,6 +67,13 @@ async function attachClipUrls(ctx: RunContext, file: WordsFile): Promise<ClipUrl
     const url = await urlFor(`words/${w.wordId}.mp3`, w, null);
     if (url) counts.words += 1;
     w.audioUrl = url ?? w.audioUrl;
+    // The app shows the first hook, and stage 04 reads the same one.
+    const hook = w.mnemonics[0];
+    if (hook !== undefined) {
+      const hookUrl = await urlFor(`hooks/${w.wordId}.mp3`, w, { kind: 'hook', text: hook });
+      if (hookUrl) counts.hooks += 1;
+      w.hookAudioUrl = hookUrl ?? w.hookAudioUrl;
+    }
     for (const s of w.senses) {
       const definition = spokenDefinition(s.plainLanguageDefinition, s.definition);
       const definitionUrl = await urlFor(`definitions/${s.senseId}.mp3`, w, {
@@ -142,8 +152,9 @@ export async function exportWords(ctx: RunContext): Promise<void> {
       `${(perWord / 1024).toFixed(2)} KB per word.`,
   );
   ctx.log.success(
-    `Export: clips for ${clips.words} of ${file.words.length} words, ${clips.sentences} sentences and ` +
-      `${clips.definitions} definitions, ${(clips.bytes / (1024 * 1024)).toFixed(2)} MB in ${ctx.paths.audioDir}.`,
+    `Export: clips for ${clips.words} of ${file.words.length} words, ${clips.sentences} sentences, ` +
+      `${clips.definitions} definitions and ${clips.hooks} hooks, ` +
+      `${(clips.bytes / (1024 * 1024)).toFixed(2)} MB in ${ctx.paths.audioDir}.`,
   );
   if (clips.stale > 0) {
     ctx.log.warn(

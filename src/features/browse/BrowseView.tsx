@@ -4,11 +4,14 @@
 // and the title and view switch above it from WordsLayout. What each filter
 // matches is in wordFilters.ts.
 //
-// Each row is set like a dictionary entry: the word, its pronunciation and
-// part of speech, then the definition. Opening a row adds the example, the
-// memory hook, audio and the Save control.
+// Each row is set like a dictionary entry: the word, its pronunciation, part
+// of speech and tone label, then the definition. Opening a row adds the
+// "Watch out" note, an example (with a control to step through the others),
+// every extra line (components/WordExtras), the memory hook, audio and the
+// Save control. This is the reference view, so it shows all the extras. A
+// "Same root" word is a link: it searches for that word and opens its row.
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { FlatList, Pressable, View } from 'react-native';
 import {
   Body,
@@ -26,8 +29,11 @@ import {
 } from '@/components/ui';
 import { Icon } from '@/components/Icon';
 import { colors } from '@/theme/colors';
-import { speakDefinition, speakSentence, speakWord } from '@/lib/audio';
+import { speakDefinition, speakHook, speakSentence, speakWord } from '@/lib/audio';
+import { pickExample } from '@/lib/examples';
 import type { WordContent } from '@/lib/types';
+import { EXTRA_LINES, wordExtras, type RootWord } from '@/lib/wordExtras';
+import { ExtraLines, ToneLabel, WatchOut } from '@/components/WordExtras';
 import { ReportProblem } from '@/features/report/ReportProblem';
 import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import type { WordTracker } from '@/features/tracker/tracker';
@@ -36,6 +42,7 @@ import {
   filterWords,
   NO_FILTERS,
   partsOfSpeech,
+  searchForWord,
   STATUS_FILTERS,
   TIERS,
   toggleTier,
@@ -67,6 +74,7 @@ export function BrowseView({
   const [openId, setOpenId] = useState<number | null>(null);
   const [filters, setFilters] = useState<WordFilters>(NO_FILTERS);
   const [filtersOpen, setFiltersOpen] = useState(initialFiltersOpen);
+  const listRef = useRef<FlatList<WordContent>>(null);
 
   const filtered = useMemo(
     () => filterWords(words ?? [], query, filters, { savedIds, trackers }),
@@ -74,6 +82,20 @@ export function BrowseView({
   );
   const parts = useMemo(() => partsOfSpeech(words ?? []), [words]);
   const active = activeFilterCount(filters);
+
+  // A "Same root" link: search for that word and open its row. Filters that
+  // would hide it are cleared (wordFilters searchForWord).
+  function goToWord(root: RootWord) {
+    const target = words?.find((w) => w.wordId === root.wordId);
+    if (!target) return;
+    const next = searchForWord(target, filters, { savedIds, trackers });
+    setQuery(next.query);
+    setFilters(next.filters);
+    setOpenId(target.wordId);
+    // The list keeps its offset, which would leave the word's heading above
+    // the top of the shorter list.
+    listRef.current?.scrollToOffset({ offset: 0, animated: false });
+  }
 
   return (
     <View className="flex-1">
@@ -157,6 +179,7 @@ export function BrowseView({
         </View>
       ) : (
         <FlatList
+          ref={listRef}
           data={filtered}
           keyExtractor={(w) => String(w.wordId)}
           contentContainerStyle={{
@@ -176,6 +199,8 @@ export function BrowseView({
           renderItem={({ item, index }) => (
             <WordRow
               word={item}
+              collection={words ?? []}
+              onRootWord={goToWord}
               first={index === 0}
               expanded={openId === item.wordId}
               onToggle={() => setOpenId(openId === item.wordId ? null : item.wordId)}
@@ -201,6 +226,8 @@ function FilterGroup({ label, children }: { label: string; children: React.React
 
 function WordRow({
   word,
+  collection,
+  onRootWord,
   first,
   expanded,
   onToggle,
@@ -209,6 +236,9 @@ function WordRow({
   onToggleSave,
 }: {
   word: WordContent;
+  /** Every word, for "Same root". */
+  collection: readonly WordContent[];
+  onRootWord: (word: RootWord) => void;
   first: boolean;
   expanded: boolean;
   onToggle: () => void;
@@ -217,8 +247,13 @@ function WordRow({
   onToggleSave: () => void;
 }) {
   const sense = word.senses[0];
-  const example = sense?.examples[0];
+  const examples = sense?.examples ?? [];
+  // Which example is shown: the first, until the learner steps to the next.
+  const [exampleStep, setExampleStep] = useState(0);
+  const example = pickExample(examples, exampleStep);
+  const nextStep = examples.length > 0 ? (exampleStep + 1) % examples.length : 0;
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
+  const extras = useMemo(() => wordExtras(word, collection), [word, collection]);
 
   // The toggle and the audio controls are siblings, never nested. React Native
   // Web renders every Pressable as a <button>, and a button inside a button is
@@ -241,6 +276,7 @@ function WordRow({
             {word.partOfSpeech ? (
               <Note className="text-[15px]">{word.partOfSpeech}</Note>
             ) : null}
+            <ToneLabel tone={extras.tone} />
           </View>
           <Row className="gap-2 pt-[6px]">
             <Label>{`Tier ${word.difficultyTier}`}</Label>
@@ -256,9 +292,26 @@ function WordRow({
 
       {expanded ? (
         <View className="gap-3 pb-5">
+          <WatchOut note={extras.watchOut} />
           {example ? (
-            <Note className="text-[17px] leading-[25px]">{`“${example.text}”`}</Note>
+            <View>
+              {/* Read out when it changes, so "Next example" is heard to work. */}
+              <Note
+                accessibilityLiveRegion="polite"
+                className="text-[17px] leading-[25px]"
+              >{`“${example.text}”`}</Note>
+              {examples.length > 1 ? (
+                <TextButton
+                  icon="arrow-right"
+                  label="Next example"
+                  accessibilityLabel={`Next example, ${nextStep + 1} of ${examples.length}`}
+                  onPress={() => setExampleStep(nextStep)}
+                />
+              ) : null}
+            </View>
           ) : null}
+
+          <ExtraLines extras={extras} lines={EXTRA_LINES} onRootWord={onRootWord} />
 
           {word.mnemonics[0] ? (
             <Section label="Memory hook" rule="hairline" className="mt-1">
@@ -292,6 +345,16 @@ function WordRow({
                 accessibilityLabel="Hear the example sentence"
                 onPress={() => {
                   if (soundEnabled) void speakSentence(example);
+                }}
+              />
+            ) : null}
+            {word.mnemonics[0] ? (
+              <TextButton
+                icon="speaker"
+                label="Hook"
+                accessibilityLabel="Memory hook: hear it read out"
+                onPress={() => {
+                  if (soundEnabled) void speakHook(word);
                 }}
               />
             ) : null}

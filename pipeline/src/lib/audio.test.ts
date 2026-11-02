@@ -5,15 +5,18 @@ import {
   clipMatches,
   clipUrl,
   definitionClipKey,
+  hookClipKey,
   humanClipKey,
   ipaToKokoro,
   kokoroText,
   pickUsRecording,
   sentenceClipKey,
+  shownHook,
   spokenDefinition,
   ttsVoiceLabel,
   wordClipKey,
 } from './audio.ts';
+import { buildWordsFile } from './exportContent.ts';
 
 test('ipaToKokoro turns IPA into Kokoro letters with stress before the vowel', () => {
   assert.equal(ipaToKokoro('/əˈbeɪt/'), 'əbˈAt');
@@ -72,6 +75,48 @@ test('clip keys change with the inputs each kind of clip depends on', () => {
   assert.notEqual(definitionClipKey(definition, word, voice), definitionClipKey(definition, fixed, voice));
   // The same text as a sentence and as a definition are different clips.
   assert.notEqual(definitionClipKey(text, word, voice), sentenceClipKey(text, word, voice));
+  const hook = 'Abate sounds like a bat that settles down.';
+  assert.notEqual(hookClipKey(hook, word, voice), hookClipKey('A bat settles.', word, voice));
+  assert.notEqual(hookClipKey(hook, word, voice), hookClipKey(hook, fixed, voice));
+  assert.notEqual(hookClipKey(hook, word, voice), hookClipKey(hook, word, ttsVoiceLabel('af_bella')));
+  assert.notEqual(hookClipKey(text, word, voice), definitionClipKey(text, word, voice));
+});
+
+test('shownHook reads the first global hook by id, as the app shows it', () => {
+  const mnemonics = [
+    { id: 9, word_id: 1, text: 'Later hook.', source: 'claude' as const, user_id: null },
+    { id: 3, word_id: 1, text: 'Personal hook.', source: 'claude' as const, user_id: 'user-1' },
+    { id: 5, word_id: 1, text: 'First hook.', source: 'claude' as const, user_id: null },
+  ];
+  assert.equal(shownHook(mnemonics), 'First hook.');
+  assert.equal(shownHook(mnemonics.filter((m) => m.user_id !== null)), null);
+  assert.equal(shownHook([]), null);
+  // Stage 05 reads the export's first hook; both must name the same one.
+  const { file } = buildWordsFile(
+    {
+      words: [
+        {
+          id: 1,
+          headword: 'abate',
+          part_of_speech: 'verb',
+          ipa: null,
+          syllables: 2,
+          frequency_rank: null,
+          difficulty_tier: 1,
+          etymology: null,
+          audio_url: null,
+        },
+      ],
+      senses: [{ id: 10, word_id: 1, definition: 'Lessen.', plain_language_definition: null, sense_order: 1, register: null }],
+      example_sentences: [],
+      word_relations: [],
+      mnemonics,
+      distractors: [],
+    },
+    [],
+  );
+  assert.equal(file.words[0]!.mnemonics[0], shownHook(mnemonics));
+  assert.equal(file.words[0]!.hookAudioUrl, null);
 });
 
 test('spokenDefinition reads the plain definition when there is one', () => {
@@ -96,6 +141,12 @@ test('clipMatches accepts only clips made from the current text and IPA', () => 
   assert.equal(clipMatches(definitionClip, word, { kind: 'definition', text: definition }), true);
   assert.equal(clipMatches(definitionClip, word, { kind: 'definition', text: 'To calm down.' }), false);
   assert.equal(clipMatches(definitionClip, fixed, { kind: 'definition', text: definition }), false);
+  const hook = 'Abate sounds like a bat that settles down.';
+  const hookClip = { source: 'tts', voice, key: hookClipKey(hook, word, voice) };
+  assert.equal(clipMatches(hookClip, word, { kind: 'hook', text: hook }), true);
+  assert.equal(clipMatches(hookClip, word, { kind: 'hook', text: 'A bat settles.' }), false);
+  assert.equal(clipMatches(hookClip, fixed, { kind: 'hook', text: hook }), false);
+  assert.equal(clipMatches(hookClip, word, { kind: 'definition', text: hook }), false);
   const human = { source: 'human', key: humanClipKey(word) };
   assert.equal(clipMatches(human, fixed, null), true);
   assert.equal(clipMatches({ source: 'tts', key: wordClip.key }, word, null), false);

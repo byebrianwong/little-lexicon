@@ -12,10 +12,18 @@
 //   npx tsx src/curate.ts resolve <worksheet...>             after apply, mark those words' reports resolved
 //   npx tsx src/curate.ts ipa <file.tsv>                     set pronunciations (headword<TAB>/ipa/ per line), remake clips and export
 //
+// Extras (origin, roots, tone, watch-out note, pairings, other meanings) have
+// their own worksheets and rubric (lib/extras.ts):
+//
+//   npx tsx src/curate.ts extras status
+//   npx tsx src/curate.ts extras next [--count=N] [--split=K] [--words=a,b]
+//   npx tsx src/curate.ts extras check <worksheet...>
+//   npx tsx src/curate.ts extras apply <worksheet>
+//
 // Worksheets go to out/curate/ (git-ignored). `apply` refuses the whole
 // worksheet if any word fails a check, so the record never holds half a batch.
-// `apply` and `ipa` then remake the clips their changes made stale (stage 04),
-// when the Kokoro env is set up, and export.
+// `apply`, `extras apply` and `ipa` then remake the clips their changes made
+// stale (stage 04), when the Kokoro env is set up, and export.
 
 import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -34,6 +42,8 @@ import {
   checkReview,
   CRITERIA,
   CURATED_REVISION,
+  currentReviews,
+  mainReviews,
   ipaSyllables,
   primarySense,
   problemKind,
@@ -62,6 +72,22 @@ import {
 } from './lib/reports.ts';
 import type { ContentRows } from './lib/exportContent.ts';
 import type { ReviewRow, WordRow } from './lib/types.ts';
+import {
+  applyExtrasEntry,
+  buildExtrasEntry,
+  checkExtras,
+  checkExtrasReview,
+  currentExtrasReviews,
+  EXTRAS_INSTRUCTIONS,
+  EXTRAS_RUBRIC_VERSION,
+  extrasCandidates,
+  extrasChangedFields,
+  extrasReviewsOf,
+  extrasShapeProblems,
+  summarizeExtras,
+  type ExtrasEntry,
+  type ExtrasWorksheet,
+} from './lib/extras.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DB_FILE = join(ROOT, 'data', 'content-db.json');
@@ -69,28 +95,29 @@ const OUT_DIR = join(ROOT, 'out', 'curate');
 const REPORTS_FILE = join(OUT_DIR, 'reports.json');
 const log = new Logger(false);
 
-async function openRecord(): Promise<{ store: JsonFileStore; rows: ContentRows; reviews: ReviewRow[] }> {
+interface OpenRecord {
+  store: JsonFileStore;
+  rows: ContentRows;
+  /** Main-rubric reviews only. Extras reviews never count as a main review. */
+  reviews: ReviewRow[];
+  /** Extras-rubric reviews only (lib/extras.ts). */
+  extrasReviews: ReviewRow[];
+}
+
+async function openRecord(): Promise<OpenRecord> {
   const store = new JsonFileStore(DB_FILE, join(ROOT, '..', 'assets', 'audio'), false, log);
   await store.init();
   // Retired words are not taught, so they are not reviewed. Writes go through
   // the store, which still holds every row.
   const all = await store.snapshot();
   const rows = { ...all, words: all.words.filter((w) => !w.retired) };
-  return { store, rows, reviews: await store.listReviews() };
+  const reviews = await store.listReviews();
+  return { store, rows, reviews: mainReviews(reviews), extrasReviews: extrasReviewsOf(reviews) };
 }
 
 async function openLexicon(): Promise<Lexicon> {
   const wordnet = loadWordNet(await ensureWordNet(join(ROOT, '.cache'), log));
   return (lemma) => partsOfSpeechOf(wordnet, lemma);
-}
-
-/** The newest review per word at the current rubric version. */
-function currentReviews(reviews: ReviewRow[]): Map<number, ReviewRow> {
-  const out = new Map<number, ReviewRow>();
-  for (const r of reviews) {
-    if (r.rubric_version === RUBRIC_VERSION) out.set(r.word_id, r);
-  }
-  return out;
 }
 
 function today(): string {
@@ -220,13 +247,11 @@ async function next(args: string[]): Promise<void> {
   // --split=K writes K worksheets, one per writer subagent in a big run.
   const parts = splitIntoParts(entries, Number.parseInt(parseOption(args, 'split') ?? '1', 10));
   const createdAt = new Date().toISOString();
-  const stamp = createdAt.replace(/[-:]/g, '').replace('T', '-').slice(0, 15);
   await mkdir(OUT_DIR, { recursive: true });
   for (const [i, part] of parts.entries()) {
     const sheet: Worksheet = { rubricVersion: RUBRIC_VERSION, createdAt, instructions: WORKSHEET_INSTRUCTIONS, words: part };
     if (reported) sheet.lastReviewId = Math.max(0, ...reviews.map((r) => r.id));
-    const suffix = parts.length > 1 ? `-${String.fromCharCode(97 + i)}` : '';
-    const file = join(OUT_DIR, `worksheet-${stamp}${suffix}.json`);
+    const file = worksheetFile('worksheet', createdAt, i, parts.length);
     await writeFile(file, JSON.stringify(sheet, null, 2) + '\n', 'utf8');
     console.log(file);
     for (const e of part) {
@@ -236,6 +261,13 @@ async function next(args: string[]): Promise<void> {
       );
     }
   }
+}
+
+/** out/curate/<prefix>-<time>[-a].json; the letter marks one part of a split run. */
+function worksheetFile(prefix: string, createdAt: string, part: number, parts: number): string {
+  const stamp = createdAt.replace(/[-:]/g, '').replace('T', '-').slice(0, 15);
+  const suffix = parts > 1 ? `-${String.fromCharCode(97 + part)}` : '';
+  return join(OUT_DIR, `${prefix}-${stamp}${suffix}.json`);
 }
 
 // --- check and apply ----------------------------------------------------------
@@ -249,7 +281,10 @@ interface Checked {
 
 async function readSheet(file: string): Promise<Worksheet> {
   if (!existsSync(file)) throw new Error(`No worksheet at ${file}`);
-  const sheet = JSON.parse(await readFile(file, 'utf8')) as Worksheet;
+  const sheet = JSON.parse(await readFile(file, 'utf8')) as Worksheet & { kind?: string };
+  if (sheet.kind === 'extras') {
+    throw new Error(`${file} is an extras worksheet. Use: npx tsx src/curate.ts extras check|apply <file>`);
+  }
   if (sheet.rubricVersion !== RUBRIC_VERSION) {
     throw new Error(`${file} uses rubric ${sheet.rubricVersion}; the current rubric is ${RUBRIC_VERSION}. Make a new one.`);
   }
@@ -486,6 +521,195 @@ async function remakeAudioAndExport(): Promise<void> {
   await exportWords(ctx);
 }
 
+// --- extras -------------------------------------------------------------------
+//
+// Origin, roots, tone, watch-out note, pairings and other meanings, on their own
+// worksheets and rubric (lib/extras.ts). These commands read extras reviews
+// only; the commands above read main reviews only.
+
+const EXTRAS_USAGE =
+  'Usage: npx tsx src/curate.ts extras <status | next [--count=N] [--split=K] [--words=a,b] | check <file...> | apply <file>>';
+
+async function extras(args: string[]): Promise<void> {
+  const [sub, ...rest] = args;
+  const files = rest.filter((a) => !a.startsWith('--')).map((a) => resolve(a));
+  if (sub === 'status') return extrasStatus();
+  if (sub === 'next') return extrasNext(rest);
+  if (sub === 'check' && files.length > 0) return extrasCheck(files);
+  if (sub === 'apply' && files.length === 1) return extrasApply(files[0]!);
+  console.log(EXTRAS_USAGE);
+  process.exitCode = 1;
+}
+
+async function extrasStatus(): Promise<void> {
+  const { rows, extrasReviews } = await openRecord();
+  const s = summarizeExtras(rows, extrasReviews);
+  console.log(`Extras rubric version ${EXTRAS_RUBRIC_VERSION}. ${s.words} words.`);
+  console.log(
+    `With an extras review: ${s.reviewed} (pass ${s.verdicts.pass}, fixed ${s.verdicts.fixed}, ` +
+      `flagged ${s.verdicts.flagged}). To review: ${s.words - s.reviewed}.`,
+  );
+  for (const f of s.flagged) console.log(`  flagged: ${f.headword}: ${f.notes}`);
+  const registers = Object.entries(s.registers).sort((a, b) => b[1] - a[1]);
+  console.log(`Origin: ${s.withOrigin}. Roots: ${s.withRoots}. Watch out: ${s.withWatchOut}. Pairings: ${s.withPairings}.`);
+  console.log(`Tone: ${registers.length ? registers.map(([r, n]) => `${r} ${n}`).join(', ') : 'none'} (senses).`);
+  console.log(`Other senses shown under Also means: ${s.alsoMeansSenses}.`);
+  if (s.sharedRoots.length > 0) {
+    console.log(`Roots that link words (${s.sharedRoots.length}):`);
+    for (const r of s.sharedRoots) console.log(`  ${r.root}: ${r.headwords.join(', ')}`);
+  }
+  if (s.loneRoots > 0) console.log(`Roots that only one word has so far: ${s.loneRoots}.`);
+}
+
+async function extrasNext(args: string[]): Promise<void> {
+  const { rows, extrasReviews } = await openRecord();
+  const count = Number.parseInt(parseOption(args, 'count') ?? '12', 10);
+  const named = parseOption(args, 'words')?.split(',').map((w) => w.trim().toLowerCase()).filter(Boolean);
+  const done = currentExtrasReviews(extrasReviews);
+  const words: WordRow[] = named
+    ? named.map((h) => {
+        const w = rows.words.find((x) => x.headword === h);
+        if (!w) throw new Error(`No word "${h}" in the record (or it is retired)`);
+        return w;
+      })
+    : extrasCandidates(rows, extrasReviews).slice(0, count);
+  if (words.length === 0) {
+    console.log('Every word has an extras review at this rubric version.');
+    return;
+  }
+  const entries = words.map((w) => buildExtrasEntry(rows, w));
+  const parts = splitIntoParts(entries, Number.parseInt(parseOption(args, 'split') ?? '1', 10));
+  const createdAt = new Date().toISOString();
+  await mkdir(OUT_DIR, { recursive: true });
+  for (const [i, part] of parts.entries()) {
+    const sheet: ExtrasWorksheet = {
+      kind: 'extras',
+      rubricVersion: EXTRAS_RUBRIC_VERSION,
+      createdAt,
+      instructions: EXTRAS_INSTRUCTIONS,
+      words: part,
+    };
+    const file = worksheetFile('extras', createdAt, i, parts.length);
+    await writeFile(file, JSON.stringify(sheet, null, 2) + '\n', 'utf8');
+    console.log(file);
+    for (const e of part) {
+      const n = e.otherSenses.length;
+      const others = n ? `, ${n} other sense${n === 1 ? '' : 's'}` : '';
+      console.log(`  ${e.headword.padEnd(16)} ${e.partOfSpeech}${others}${done.has(e.wordId) ? ' (already has extras)' : ''}`);
+    }
+  }
+}
+
+interface ExtrasChecked {
+  entry: ExtrasEntry;
+  changed: string[];
+  problems: string[];
+}
+
+async function readExtrasSheet(file: string): Promise<ExtrasWorksheet> {
+  if (!existsSync(file)) throw new Error(`No worksheet at ${file}`);
+  const sheet = JSON.parse(await readFile(file, 'utf8')) as Partial<ExtrasWorksheet>;
+  if (sheet.kind !== 'extras' || !Array.isArray(sheet.words)) {
+    throw new Error(`${file} is not an extras worksheet. Make one with: npx tsx src/curate.ts extras next`);
+  }
+  if (sheet.rubricVersion !== EXTRAS_RUBRIC_VERSION) {
+    throw new Error(
+      `${file} uses extras rubric ${sheet.rubricVersion}; the current one is ${EXTRAS_RUBRIC_VERSION}. Make a new one.`,
+    );
+  }
+  return sheet as ExtrasWorksheet;
+}
+
+/** Check one entry against the record's current extras for its word. */
+function checkExtrasEntry(entry: ExtrasEntry, rows: ContentRows): ExtrasChecked {
+  const word = rows.words.find((w) => w.id === entry.wordId);
+  if (!word || word.headword !== entry.headword) {
+    return { entry, changed: [], problems: [`wordId ${entry.wordId} is not "${entry.headword}" in the record`] };
+  }
+  // A malformed entry (wrong types) gets only its shape problems.
+  const shape = extrasShapeProblems(entry);
+  if (shape.length > 0) return { entry, changed: [], problems: shape };
+  const before = buildExtrasEntry(rows, word);
+  const changed = extrasChangedFields(before, entry);
+  return { entry, changed, problems: [...checkExtras(entry, before), ...checkExtrasReview(entry, changed)] };
+}
+
+function checkExtrasSheets(sheets: ExtrasWorksheet[], rows: ContentRows): ExtrasChecked[][] {
+  const all = sheets.flatMap((s) => s.words);
+  if (new Set(all.map((w) => w.wordId)).size !== all.length) throw new Error('A word appears twice across the worksheets');
+  return sheets.map((sheet) => sheet.words.map((entry) => checkExtrasEntry(entry, rows)));
+}
+
+function reportExtras(checked: ExtrasChecked[]): number {
+  let failing = 0;
+  for (const c of checked) {
+    const label = `${c.entry.headword} (${c.changed.length ? c.changed.join(', ') : 'no changes'})`;
+    if (c.problems.length === 0) console.log(`ok    ${label}`);
+    else {
+      failing += 1;
+      console.log(`FAIL  ${label}`);
+      for (const p of c.problems) console.log(`        - ${p}`);
+    }
+  }
+  return failing;
+}
+
+/**
+ * Each root these worksheets use, with every word that has it (in the record
+ * or the worksheets), so writers spell a shared root the same way.
+ */
+function rootLinks(sheets: ExtrasWorksheet[], rows: ContentRows): string[] {
+  const entries = sheets.flatMap((s) => s.words).filter((e) => Array.isArray(e.roots));
+  const inSheets = new Set(entries.map((e) => e.wordId));
+  const byRoot = new Map<string, string[]>();
+  const add = (root: string, headword: string): void => {
+    byRoot.set(root, [...(byRoot.get(root) ?? []), headword]);
+  };
+  for (const w of rows.words) {
+    if (!inSheets.has(w.id)) for (const r of w.roots ?? []) add(r, w.headword);
+  }
+  for (const e of entries) for (const r of e.roots) add(r, e.headword);
+  const used = [...new Set(entries.flatMap((e) => e.roots))].sort();
+  return used.map((r) => {
+    const words = byRoot.get(r) ?? [];
+    return `  ${r}: ${words.join(', ')}${words.length > 1 ? '' : ' (no other word yet)'}`;
+  });
+}
+
+async function extrasCheck(files: string[]): Promise<void> {
+  const { rows } = await openRecord();
+  const sheets = await Promise.all(files.map(readExtrasSheet));
+  const results = checkExtrasSheets(sheets, rows);
+  let failing = 0;
+  for (const [i, checked] of results.entries()) {
+    if (files.length > 1) console.log(`\n${files[i]}`);
+    failing += reportExtras(checked);
+  }
+  const links = rootLinks(sheets, rows);
+  if (links.length > 0) console.log(`\nRoots and the words that have them:\n${links.join('\n')}`);
+  console.log(
+    failing
+      ? `\n${failing} words fail. Fix them and check again.`
+      : '\nAll words pass. Apply each worksheet with: npx tsx src/curate.ts extras apply <worksheet>',
+  );
+  if (failing) process.exitCode = 1;
+}
+
+async function extrasApply(file: string): Promise<void> {
+  const { store, rows } = await openRecord();
+  const checked = checkExtrasSheets([await readExtrasSheet(file)], rows)[0] ?? [];
+  const failing = reportExtras(checked);
+  if (failing) {
+    console.log(`\n${failing} words fail. Nothing was written.`);
+    process.exitCode = 1;
+    return;
+  }
+  for (const { entry, changed } of checked) await applyExtrasEntry(store, rows, entry, changed, today());
+  await store.flush();
+  console.log(`\nApplied extras for ${checked.length} words to ${DB_FILE}.`);
+  await remakeAudioAndExport();
+}
+
 // --- learners' reports ------------------------------------------------------
 
 function supabaseAdmin(): SupabaseAdmin {
@@ -532,6 +756,7 @@ async function resolveCommand(files: string[]): Promise<void> {
     const sheet = await readSheet(file);
     const since = sheet.lastReviewId;
     if (since === undefined) throw new Error(`${file} was not made with next --reported, so resolve cannot tell what it answered`);
+    // `reviews` holds main reviews only, so an extras review never answers a report.
     const reviewedSince = (wordId: number): boolean => reviews.some((r) => r.word_id === wordId && r.id > since);
     const answered = groupByWord(
       reportsAnswered(open, { createdAt: sheet.createdAt, wordIds: sheet.words.map((w) => w.wordId) }, reviewedSince),
@@ -554,6 +779,7 @@ async function resolveCommand(files: string[]): Promise<void> {
 async function main(): Promise<void> {
   const [command, ...args] = process.argv.slice(2);
   const fileArgs = args.filter((a) => !a.startsWith('--')).map((a) => resolve(a));
+  if (command === 'extras') return extras(args);
   if (command === 'status') return status();
   if (command === 'next') return next(args);
   if (command === 'check' && fileArgs.length > 0) return check(fileArgs);
@@ -563,7 +789,7 @@ async function main(): Promise<void> {
   if (command === 'reports') return reports();
   if (command === 'resolve' && fileArgs.length > 0) return resolveCommand(fileArgs);
   console.log(
-    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] [--reported] | check <file...> | apply <file> | pos <word...> | ipa <file.tsv> | reports | resolve <file...>>',
+    'Usage: npx tsx src/curate.ts <status | next [--count=N] [--split=K] [--words=a,b] [--reported] | check <file...> | apply <file> | pos <word...> | ipa <file.tsv> | reports | resolve <file...> | extras ...>',
   );
   process.exitCode = 1;
 }

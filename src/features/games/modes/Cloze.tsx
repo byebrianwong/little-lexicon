@@ -12,6 +12,7 @@ import {
   makeClozeBlank,
   type AnswerGrade,
 } from '@/lib/text';
+import { avoidShown, exampleFor } from '@/lib/examples';
 import type { GameOutcome } from '@/srs/srs';
 import { useGameContext, useNextDueLabel } from '../GameContext';
 import { LetterCue } from '../LetterCue';
@@ -25,15 +26,20 @@ export function Cloze({ item, onOutcome, soundEnabled }: GameModeProps) {
   void useGameContext(); // ensure used within a provider
   const startedAt = useRef(Date.now()).current;
 
-  // Pick a sentence that has a cloze target.
+  // Pick a sentence that has a cloze target, other than the one this visit
+  // shows on the other screens when there is another (lib/examples).
   const example = useMemo(() => {
-    const withTarget = content.senses
-      .flatMap((s) => s.examples)
-      .filter((e) => (e.clozeTarget ?? '').trim() !== '');
+    const shown = exampleFor(item);
+    const withTarget = avoidShown(
+      content.senses
+        .flatMap((s) => s.examples)
+        .filter((e) => (e.clozeTarget ?? '').trim() !== ''),
+      shown,
+    );
     const rng = mulberry32(content.wordId + 7);
     return withTarget.length > 0
       ? withTarget[Math.floor(rng() * withTarget.length)]!
-      : (content.senses[0]?.examples[0] ?? null);
+      : shown;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [content.wordId]);
 

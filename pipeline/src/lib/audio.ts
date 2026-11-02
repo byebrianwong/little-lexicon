@@ -2,8 +2,8 @@
 //
 // The app plays clips from the web app's host. Stage 04 saves MP3s under
 // public/audio, which the web export copies to the site, and stage 05 gives
-// each word, sentence and definition in the words file the audioUrl of its
-// clip. Nothing here touches the network or the disk.
+// each word, sentence, definition and memory hook in the words file the URL
+// of its clip. Nothing here touches the network or the disk.
 
 import { createHash } from 'node:crypto';
 
@@ -141,19 +141,50 @@ export function spokenDefinition(plain: string | null, definition: string): stri
   return plain ?? definition;
 }
 
+/**
+ * Key of a TTS clip of a word's memory hook. Like a definition, it depends on
+ * the headword and IPA, because hooks usually say the headword.
+ */
+export function hookClipKey(text: string, word: KeyWord, voice: string): string {
+  return clipKey({ kind: 'hook', text, headword: word.headword, ipa: word.ipa, voice });
+}
+
+/**
+ * The memory hook a word's clip reads: the one the app shows under "Memory
+ * hook". That is the first of the word's global (not personalized) mnemonics
+ * in id order, the order the export lists them in (lib/exportContent.ts).
+ * Null when the word has none.
+ */
+export function shownHook(mnemonics: { id: number; text: string; user_id: string | null }[]): string | null {
+  const global = mnemonics.filter((m) => m.user_id === null).sort((a, b) => a.id - b.id);
+  return global[0]?.text ?? null;
+}
+
 /** Text a clip says other than the headword alone. */
 export interface SpokenText {
-  kind: 'sentence' | 'definition';
+  kind: 'sentence' | 'definition' | 'hook';
   text: string;
+}
+
+/** Key of a TTS clip that says `spoken`. */
+function spokenClipKey(spoken: SpokenText, word: KeyWord, voice: string): string {
+  switch (spoken.kind) {
+    case 'sentence':
+      return sentenceClipKey(spoken.text, word, voice);
+    case 'definition':
+      return definitionClipKey(spoken.text, word, voice);
+    case 'hook':
+      return hookClipKey(spoken.text, word, voice);
+  }
 }
 
 /**
  * True when a saved clip was made from the content it is filed under now.
- * `spoken` is the sentence or definition the clip reads, or null for the
- * headword clip. A clip goes out of date when its text is rewritten in place
- * or its word's IPA is fixed, until stage 04 runs again. The clip's own voice
- * is used, so changing KOKORO_VOICE alone does not make a clip count as out of
- * date here.
+ * `spoken` is the sentence, definition or memory hook the clip reads, or null
+ * for the headword clip. A clip goes out of date when its text is rewritten in
+ * place or its word's IPA is fixed, until stage 04 runs again. The clip's own
+ * voice is used, so changing KOKORO_VOICE alone does not make a clip count as
+ * out of date here.
  */
 export function clipMatches(
   clip: { key?: string; source?: string; voice?: string },
@@ -162,12 +193,7 @@ export function clipMatches(
 ): boolean {
   if (clip.source === 'human') return spoken === null && clip.key === humanClipKey(word);
   if (clip.source !== 'tts' || !clip.voice) return false;
-  const expected =
-    spoken === null
-      ? wordClipKey(word, clip.voice)
-      : spoken.kind === 'sentence'
-        ? sentenceClipKey(spoken.text, word, clip.voice)
-        : definitionClipKey(spoken.text, word, clip.voice);
+  const expected = spoken === null ? wordClipKey(word, clip.voice) : spokenClipKey(spoken, word, clip.voice);
   return clip.key === expected;
 }
 

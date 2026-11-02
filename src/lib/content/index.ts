@@ -9,7 +9,12 @@
 import type { WordContent } from '@/lib/types';
 import { importWordsFile } from './importWordsFile';
 
-export const WORDS_FILE_FORMAT = 1;
+/**
+ * The words file format this app reads. The pipeline writes the same number
+ * (pipeline/src/lib/exportContent.ts). 2 added roots, watchOut and pairings on
+ * words and alsoMeans on senses.
+ */
+export const WORDS_FILE_FORMAT = 2;
 
 export interface WordsFile {
   formatVersion: number;
