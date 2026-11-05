@@ -593,11 +593,18 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
       // outline is turned off because it drew a box around an underline and
       // sat flush against the text. Padding drops by a pixel on focus so the
       // thicker border does not move anything.
+      //
+      // ios:leading-none is there because React Native on iOS reuses native
+      // inputs. A line field that takes over a box's input keeps the box's line
+      // height on its placeholder, which puts the placeholder about 4 points
+      // below where typed text will appear. A line height set here replaces the
+      // leftover one. It equals the font size, which is already Newsreader's
+      // line height on iOS, so nothing else moves.
       className={tw(
         cx(
           'font-serif text-[20px] text-ink web:outline-none',
           variant === 'line'
-            ? 'border-b border-ink py-3 focus:border-b-2 focus:border-accent focus:pb-[11px]'
+            ? 'border-b border-ink py-3 ios:leading-none focus:border-b-2 focus:border-accent focus:pb-[11px]'
             : 'min-h-[110px] rounded-[3px] border border-line px-3 py-3 leading-[28px] focus:border-2 focus:border-ink focus:p-[11px]',
         ),
         className,
