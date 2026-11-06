@@ -591,8 +591,15 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
       // Focus is shown by the field's own rule: the underline doubles and
       // turns red, or the box's border doubles in ink. The browser's default
       // outline is turned off because it drew a box around an underline and
-      // sat flush against the text. Padding drops by a pixel on focus so the
-      // thicker border does not move anything.
+      // sat flush against the text.
+      //
+      // Padding drops by 1 on focus so the thicker border does not move
+      // anything. The focused padding is set per platform because px-3 and
+      // py-3 are 12 px on web but 10.5 points on iOS and Android, where
+      // NativeWind's rem is 14. So focused padding is 11 on web and 9.5 on
+      // native. The native box uses px- and py- rather than p-: NativeWind
+      // turns p-[...] into React Native's padding, which loses to the
+      // paddingTop and paddingLeft that px-3 and py-3 set.
       //
       // ios:leading-none is there because React Native on iOS reuses native
       // inputs. A line field that takes over a box's input keeps the box's line
@@ -604,8 +611,8 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
         cx(
           'font-serif text-[20px] text-ink web:outline-none',
           variant === 'line'
-            ? 'border-b border-ink py-3 ios:leading-none focus:border-b-2 focus:border-accent focus:pb-[11px]'
-            : 'min-h-[110px] rounded-[3px] border border-line px-3 py-3 leading-[28px] focus:border-2 focus:border-ink focus:p-[11px]',
+            ? 'border-b border-ink py-3 ios:leading-none focus:border-b-2 focus:border-accent web:focus:pb-[11px] native:focus:pb-[9.5px]'
+            : 'min-h-[110px] rounded-[3px] border border-line px-3 py-3 leading-[28px] focus:border-2 focus:border-ink web:focus:p-[11px] native:focus:px-[9.5px] native:focus:py-[9.5px]',
         ),
         className,
       )}

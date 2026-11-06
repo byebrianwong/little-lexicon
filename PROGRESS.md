@@ -4466,9 +4466,76 @@ On web, the input's computed line height stays `normal`, and no CSS rule applies
 - Nothing automated guards this. Chromatic captures web, where the class does nothing, and
   the shift needs two fields mounted one after another on iOS.
 
-### Found, not fixed
+### Found while doing this, fixed in #63
 
-Focusing any `TextField` on iOS moves the layout below it by about 1.5 points. The comment
-in `TextField` says it should not move. `py-3` is 10.5 points on native, because NativeWind's
-rem is 14 there, so `focus:pb-[11px]` makes the padding larger, not smaller, while the border
-also grows by 1 point. On web `py-3` is 12 px, so web does not move. Android was not measured.
+Focusing a `TextField` on iOS moved the layout below it by about 1.5 points. The cause was
+`focus:pb-[11px]` assuming web's 12 px `py-3`, which is 10.5 points on native. #63 fixed it,
+and the next section has the details. When #62 merged after it, the two class strings were
+combined: the `line` variant keeps #63's per-platform focus padding and adds `ios:leading-none`.
+
+## TextField focus no longer moves the layout on iOS and Android (2026-11-06)
+
+Focusing a `TextField` on iOS or Android made the layout below it move. It
+now moves nothing. Web did not move before and looks the same now.
+
+### Cause
+
+Two separate problems in the focus classes in `src/components/ui.tsx`.
+
+- `py-3` and `px-3` are 12 px on web but 10.5 points on native, because
+  NativeWind's rem is 14 there. The `line` field's `focus:pb-[11px]` was
+  written for web, so on native it made the bottom padding 0.5 points larger
+  while the border grew by 1 point. The field grew 1.5 points.
+- The `box` field's `focus:p-[11px]` never applied on native. NativeWind
+  turns `p-[...]` into React Native's `padding`, and React Native lets
+  `paddingTop` and the other single sides, which `px-3 py-3` set, win over
+  `padding`. So the border grew by 1 point on each side with no padding to
+  make up for it. The text moved 1 point down and right, and a box taller
+  than its 110-point minimum grew 2 points.
+
+### Fix
+
+The focused padding is now set per platform: `web:focus:pb-[11px]` and
+`native:focus:pb-[9.5px]` for the line, and `web:focus:p-[11px]` with
+`native:focus:px-[9.5px] native:focus:py-[9.5px]` for the box. 9.5 is
+10.5 minus the extra point of border. The web preset defines no `native:`
+variant and the native preset defines no `web:` variant, so each platform
+gets only its own class. Unfocused padding is unchanged on every platform.
+
+### Checks
+
+Measured from screenshots before and after focus. Positions are screenshot
+pixels.
+
+| Platform | Field | Before the fix | After the fix |
+| --- | --- | --- | --- |
+| iOS (iPhone 17 Pro, iOS 26.5, Expo Go, 3 px per point) | All words search (line) | Content below moved down 5 px | 0 px. Underline grows upward, bottom edge stays on the same row |
+| iOS | Report a problem (box, empty) | Placeholder moved 3 px right and down | Placeholder pixel-identical; only the caret differs |
+| iOS | Report a problem (box, 5 lines of text) | Not measured | Box top, bottom and the Send report button below unchanged |
+| iOS | Settings display name (line) | Not measured | Only the caret and the underline differ; Save button and the rest unchanged |
+| Android (Pixel 7 emulator, Android 14, Expo Go, 2.625 px per dp) | All words search (line) | Content below moved down 4 px; placeholder moved up 1 px | 0 px |
+| Android | Report a problem (box, empty) | Placeholder moved 2 px right and down | Placeholder offset unchanged; box height unchanged (289 px) |
+| Android | Report a problem (box, 4 lines of text) | Not measured | Box edges unchanged; text inside pixel-identical |
+
+- Unfocused screens are pixel-identical before and after the fix on both
+  iOS (All words) and Android (All words).
+- Web (dev server in the browser pane): the search field has 12 px bottom
+  padding and a 1 px border unfocused, 11 px and 2 px focused, 43 px tall
+  both ways, and the content below does not move. The report box has 12 px
+  padding and a 1 px border unfocused, 11 px and 2 px focused. These match
+  the values before the change.
+- The underline still doubles and turns red, and the box border still
+  doubles in ink, on all three platforms.
+- `npm run typecheck`, `npm run lint` and `npm test` (43 suites, 428 tests)
+  pass.
+
+### Not run
+
+- The sign-in and sign-up forms in the app. Demo mode skips them. They use
+  the same `line` field as the All words search, so they should behave the
+  same way.
+- A physical device or a release build.
+- Nothing automated guards this. Chromatic captures web only.
+
+PR #62 adds `ios:leading-none` to the same `line` class string, so whichever
+of the two merges second needs a one-line merge.
