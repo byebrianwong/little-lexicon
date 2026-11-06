@@ -4561,3 +4561,148 @@ Chromatic's CLI reads a per-project flag to choose a web or native build, so
 native needs a second Chromatic project. TurboSnap is not supported on React
 Native, so each build captures every story on each platform. iOS builds need a
 macOS CI runner.
+
+## iOS placeholder shift after a box field (2026-11-05)
+
+The Storybook spike saw `TextField` placeholders move about 4 points on iOS. This
+checked the real app. Users could see it, and it is now fixed.
+
+### What users saw
+
+On iOS, a `line` field could show its placeholder low: 4 points at 20 pt type, 5 points
+in the 18 pt All words search box. Typed text stayed in the normal place, so the text
+jumped up on the first keystroke.
+
+It needs a multi-line `box` field first. Open "Report a problem" on a word, cancel it,
+then open All words. Visiting a screen twice does not cause it. All words visited three
+times, and sign-in and sign-up visited in turn, matched pixel for pixel, including after
+typing and leaving.
+
+### Cause
+
+React Native on iOS reuses native text inputs, and line and box fields share them. A line
+field that takes over a box's input keeps the box's 28 pt line height on its placeholder.
+Typed text does not keep it.
+
+The evidence is the size of the shift, which is half the gap between the old line height
+and the font size:
+
+| Previous box's line height | Next line field's font | Shift predicted | Shift measured |
+| --- | --- | --- | --- |
+| 28 pt | 20 pt | 4 pt | 12 px (4 pt) |
+| 28 pt | 18 pt | 5 pt | 15 px (5 pt) |
+| 40 pt (test only) | 20 pt | 10 pt | 30 px (10 pt) |
+| none (test only) | 20 pt | 0 | 0 |
+
+Not traced: the exact line in UIKit or React Native that keeps the old value. The spike
+saw it on a second visit because its first story with a text input has a line field and a
+box field together, so later stories reused both. That part is inferred. Why its passes
+alternated (passes 1 and 3 matched, pass 2 differed) was not worked out.
+
+### Fix
+
+`ios:leading-none` on the `line` variant in `src/components/ui.tsx`. A line height set on
+the field replaces the leftover one. It equals the font size, which is already Newsreader's
+line height on iOS (ascent plus descent in the font file is exactly 1 em), so nothing else
+moves. It follows the font size, so the 18 pt search box works without its own class.
+
+### Checks
+
+On the iOS simulator (iPhone 17 Pro, iOS 26.5, Expo Go):
+
+- All words after the report box: placeholder at row 667 before, 652 after. After the fix
+  the screen matches a normal first visit pixel for pixel.
+- Screens with no box involved are pixel-identical before and after: All words, sign-in
+  and Settings. So is the typed and focused search box.
+- Cloze placeholder and typed text use the same rows (896 to 954).
+
+On Android (a temporary Android 14 emulator, Expo Go), the placeholder does not shift after
+a box, with or without this class. The field stays on the same rows with and without the
+class. The only differences are text smoothing of at most 3 out of 255, which also appear
+in an unrelated label.
+
+On web, the input's computed line height stays `normal`, and no CSS rule applies the class.
+
+`npm run typecheck`, `npm run lint` and `npm test` (428 tests) pass.
+
+### Not run, and what would not catch it
+
+- A physical iPhone or a release build. All iOS checks used Expo Go on the simulator.
+- A `use_it` card followed by a typed card in a real session. `use_it` uses the same box
+  field, so it should have caused the shift the same way before the fix.
+- Nothing automated guards this. Chromatic captures web, where the class does nothing, and
+  the shift needs two fields mounted one after another on iOS.
+
+### Found while doing this, fixed in #63
+
+Focusing a `TextField` on iOS moved the layout below it by about 1.5 points. The cause was
+`focus:pb-[11px]` assuming web's 12 px `py-3`, which is 10.5 points on native. #63 fixed it,
+and the next section has the details. When #62 merged after it, the two class strings were
+combined: the `line` variant keeps #63's per-platform focus padding and adds `ios:leading-none`.
+
+## TextField focus no longer moves the layout on iOS and Android (2026-11-06)
+
+Focusing a `TextField` on iOS or Android made the layout below it move. It
+now moves nothing. Web did not move before and looks the same now.
+
+### Cause
+
+Two separate problems in the focus classes in `src/components/ui.tsx`.
+
+- `py-3` and `px-3` are 12 px on web but 10.5 points on native, because
+  NativeWind's rem is 14 there. The `line` field's `focus:pb-[11px]` was
+  written for web, so on native it made the bottom padding 0.5 points larger
+  while the border grew by 1 point. The field grew 1.5 points.
+- The `box` field's `focus:p-[11px]` never applied on native. NativeWind
+  turns `p-[...]` into React Native's `padding`, and React Native lets
+  `paddingTop` and the other single sides, which `px-3 py-3` set, win over
+  `padding`. So the border grew by 1 point on each side with no padding to
+  make up for it. The text moved 1 point down and right, and a box taller
+  than its 110-point minimum grew 2 points.
+
+### Fix
+
+The focused padding is now set per platform: `web:focus:pb-[11px]` and
+`native:focus:pb-[9.5px]` for the line, and `web:focus:p-[11px]` with
+`native:focus:px-[9.5px] native:focus:py-[9.5px]` for the box. 9.5 is
+10.5 minus the extra point of border. The web preset defines no `native:`
+variant and the native preset defines no `web:` variant, so each platform
+gets only its own class. Unfocused padding is unchanged on every platform.
+
+### Checks
+
+Measured from screenshots before and after focus. Positions are screenshot
+pixels.
+
+| Platform | Field | Before the fix | After the fix |
+| --- | --- | --- | --- |
+| iOS (iPhone 17 Pro, iOS 26.5, Expo Go, 3 px per point) | All words search (line) | Content below moved down 5 px | 0 px. Underline grows upward, bottom edge stays on the same row |
+| iOS | Report a problem (box, empty) | Placeholder moved 3 px right and down | Placeholder pixel-identical; only the caret differs |
+| iOS | Report a problem (box, 5 lines of text) | Not measured | Box top, bottom and the Send report button below unchanged |
+| iOS | Settings display name (line) | Not measured | Only the caret and the underline differ; Save button and the rest unchanged |
+| Android (Pixel 7 emulator, Android 14, Expo Go, 2.625 px per dp) | All words search (line) | Content below moved down 4 px; placeholder moved up 1 px | 0 px |
+| Android | Report a problem (box, empty) | Placeholder moved 2 px right and down | Placeholder offset unchanged; box height unchanged (289 px) |
+| Android | Report a problem (box, 4 lines of text) | Not measured | Box edges unchanged; text inside pixel-identical |
+
+- Unfocused screens are pixel-identical before and after the fix on both
+  iOS (All words) and Android (All words).
+- Web (dev server in the browser pane): the search field has 12 px bottom
+  padding and a 1 px border unfocused, 11 px and 2 px focused, 43 px tall
+  both ways, and the content below does not move. The report box has 12 px
+  padding and a 1 px border unfocused, 11 px and 2 px focused. These match
+  the values before the change.
+- The underline still doubles and turns red, and the box border still
+  doubles in ink, on all three platforms.
+- `npm run typecheck`, `npm run lint` and `npm test` (43 suites, 428 tests)
+  pass.
+
+### Not run
+
+- The sign-in and sign-up forms in the app. Demo mode skips them. They use
+  the same `line` field as the All words search, so they should behave the
+  same way.
+- A physical device or a release build.
+- Nothing automated guards this. Chromatic captures web only.
+
+PR #62 adds `ios:leading-none` to the same `line` class string, so whichever
+of the two merges second needs a one-line merge.
