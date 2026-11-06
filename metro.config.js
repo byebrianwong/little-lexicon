@@ -24,7 +24,27 @@ const appConfig = withNativeWind(config, { input: './global.css' });
 // because it crashes in this app (see that file). The Chromatic CLI overrides
 // the websocket host when it builds for capture.
 if (process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === 'true') {
+  const path = require('node:path');
   const { withStorybook } = require('@storybook/react-native/withStorybook');
+
+  // The first two are the stubs the web Storybook sets up in .storybook/main.ts.
+  // Some stories speak a word on mount, and neither sound nor haptics show in a
+  // snapshot. The third replaces the spinner with a still shape, and its key is
+  // the path react-native/index.js requires it by.
+  const stubs = {
+    '@/lib/audio': path.resolve(__dirname, '.storybook/mocks/audio.ts'),
+    'expo-haptics': path.resolve(__dirname, '.storybook/mocks/expo-haptics.ts'),
+    './Libraries/Components/ActivityIndicator/ActivityIndicator': path.resolve(
+      __dirname,
+      '.rnstorybook/mocks/ActivityIndicator.tsx',
+    ),
+  };
+  const resolveRequest = appConfig.resolver.resolveRequest;
+  appConfig.resolver.resolveRequest = (context, moduleName, platform) =>
+    stubs[moduleName]
+      ? { type: 'sourceFile', filePath: stubs[moduleName] }
+      : (resolveRequest ?? context.resolveRequest)(context, moduleName, platform);
+
   module.exports = withStorybook(appConfig, {
     enabled: true,
     disableUI: true,

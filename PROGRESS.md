@@ -4456,9 +4456,11 @@ end. Two exports of the same code differ in the same way.
 - **Play functions do not run on a device.** The package removes them, so the 66
   stories that have one show their starting state and still report success.
   Settings/ChangingKnownWordFrequency looks like the plain Settings story.
-- **Audio is not stubbed.** The web Storybook replaces `@/lib/audio` and
-  `expo-haptics` through Vite aliases, and Metro does not read those. Reveal
-  stories call the real `speakWord`.
+- **Sound, haptics and spinners are stubbed.** With Storybook on,
+  `metro.config.js` replaces `@/lib/audio` and `expo-haptics` with the web
+  Storybook's stubs, and `ActivityIndicator` with a still ring from
+  `.rnstorybook/mocks/`. The audio stub was missing `speakDefinition` and
+  `speakHook`, so a story that called them would have failed. It has them now.
 - `tsc` is not run over `.rnstorybook/` by `npm run typecheck`, the same as
   `.storybook/`. Run by hand, the only errors are two in the generated file:
   `disableUI` is missing from the package's own `ReactNativeOptions` type.
@@ -4496,12 +4498,61 @@ Things that will catch someone out:
 - **Replacing a bundle:** `expo-updates` copies the bundle on first launch and keeps
   using that copy after a reinstall. Uninstall the app first.
 
+### Android release build
+
+This Mac does have an Android SDK. Older entries in this file say it does not, but
+those checks only looked in the default location. The SDK is Homebrew's, and JDK 17
+is keg-only, so neither is on the default path:
+
+```bash
+ANDROID_HOME=/opt/homebrew/share/android-commandlinetools JAVA_HOME=/opt/homebrew/opt/openjdk@17 LANG=en_US.UTF-8 npx chromatic react-native-build --platform=android --output-dir=<dir>
+```
+
+- The APK from this command launches on an Android 14 (API 34) emulator and shows
+  Storybook with Newsreader. It took 3m 14s with Gradle's caches already filled.
+- All 201 stories reported `success` in each of two launches, on an APK rebuilt to
+  point at the local relay, with `usesCleartextTraffic` added for that test only.
+  Home, Session, Reveal, Stats, Settings and Practice were looked at by eye.
+- **Build outside `/tmp`.** Under `/tmp`, which is a symlink on macOS, the build
+  fails with `libworklets.so ... missing and no known rule to make it`. CMake and
+  Ninja mix the two forms of the path (Reanimated issue 9151). The same commit built
+  from `~/.cache` passed. This should not affect a CI runner.
+- **Local emulators need `arm64-v8a`.** The CLI always builds `x86_64`. To run on
+  this Mac, a clone's `chromatic.config.json` needs
+  `"reactNative": { "androidBuildArchitectures": ["arm64-v8a"] }`. This is not
+  committed, because Chromatic's guide says its emulators run on hosted Linux.
+- Gradle downloaded the NDK, CMake, build tools and platform 36, about 3 GB in the
+  SDK folder, under licenses that were already accepted.
+
+### How repeatable the snapshots are
+
+Every story was captured in two separate launches, 700 ms after `storyFinished`, and
+the images were compared pixel by pixel, leaving out the band at the top of the
+screen. This is my own script, not Chromatic, so its timing may differ.
+
+- **iOS:** 0 of 201 differ between two full runs with the stubs. Before the spinner
+  stub, 12 differed: 11 spinners and one blinking cursor in
+  `screens-practice--in-progress`. The cursor has no stub and could show up again.
+- **Android:** 2 of 201 differ, both in the system keyboard. Stories with `autoFocus`
+  bring up the soft keyboard, about 21 of them, and its small chevron was caught
+  mid-fade. Whether Chromatic's emulator shows that keyboard is not known.
+- **Repeated images:** 52 or 53 snapshots match another story exactly, including 51
+  of the 66 stories with play functions. Leaving those out would save about a quarter
+  of the snapshots. They are still in.
+- **iOS placeholders move on a second visit.** Visiting a story with a `TextField`
+  again in the same launch puts its placeholder about 4 points lower, in about 40
+  stories. The first pass after a launch is repeatable. A separate session found it is
+  a real bug that users could see on iOS, and PR #62 fixes it in `TextField`. That PR
+  was open, not merged, on 2026-11-05.
+- A closed laptop lid pauses all of this. Nine stories timed out in one run at the
+  moment the sleep log shows the Mac going back to sleep.
+
 ### Not run
 
-- Android: the bundle builds, but no story has rendered on an emulator. This Mac
-  has no Android SDK, so it needs an SDK or a CI runner.
+- Android on API 36, the version Chromatic's guide names. This emulator image is
+  API 34.
 - A Chromatic build, and how a second project's status would interact with the
-  required "UI Tests" check.
+  required "UI Tests" check. Nothing has connected to the real capture host.
 - A Chromatic build of the web Storybook at 10.6.5, which could show changes.
 
 ### For the next step
