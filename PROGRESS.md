@@ -4395,6 +4395,84 @@ installed preview build could run the update. The rule now lives in
 For next time: the root `.gitignore` is part of the native fingerprint. Put
 ignore rules for `pipeline/` in `pipeline/.gitignore`.
 
+## iOS placeholder shift after a box field (2026-11-05)
+
+The Storybook spike saw `TextField` placeholders move about 4 points on iOS. This
+checked the real app. Users could see it, and it is now fixed.
+
+### What users saw
+
+On iOS, a `line` field could show its placeholder low: 4 points at 20 pt type, 5 points
+in the 18 pt All words search box. Typed text stayed in the normal place, so the text
+jumped up on the first keystroke.
+
+It needs a multi-line `box` field first. Open "Report a problem" on a word, cancel it,
+then open All words. Visiting a screen twice does not cause it. All words visited three
+times, and sign-in and sign-up visited in turn, matched pixel for pixel, including after
+typing and leaving.
+
+### Cause
+
+React Native on iOS reuses native text inputs, and line and box fields share them. A line
+field that takes over a box's input keeps the box's 28 pt line height on its placeholder.
+Typed text does not keep it.
+
+The evidence is the size of the shift, which is half the gap between the old line height
+and the font size:
+
+| Previous box's line height | Next line field's font | Shift predicted | Shift measured |
+| --- | --- | --- | --- |
+| 28 pt | 20 pt | 4 pt | 12 px (4 pt) |
+| 28 pt | 18 pt | 5 pt | 15 px (5 pt) |
+| 40 pt (test only) | 20 pt | 10 pt | 30 px (10 pt) |
+| none (test only) | 20 pt | 0 | 0 |
+
+Not traced: the exact line in UIKit or React Native that keeps the old value. The spike
+saw it on a second visit because its first story with a text input has a line field and a
+box field together, so later stories reused both. That part is inferred. Why its passes
+alternated (passes 1 and 3 matched, pass 2 differed) was not worked out.
+
+### Fix
+
+`ios:leading-none` on the `line` variant in `src/components/ui.tsx`. A line height set on
+the field replaces the leftover one. It equals the font size, which is already Newsreader's
+line height on iOS (ascent plus descent in the font file is exactly 1 em), so nothing else
+moves. It follows the font size, so the 18 pt search box works without its own class.
+
+### Checks
+
+On the iOS simulator (iPhone 17 Pro, iOS 26.5, Expo Go):
+
+- All words after the report box: placeholder at row 667 before, 652 after. After the fix
+  the screen matches a normal first visit pixel for pixel.
+- Screens with no box involved are pixel-identical before and after: All words, sign-in
+  and Settings. So is the typed and focused search box.
+- Cloze placeholder and typed text use the same rows (896 to 954).
+
+On Android (a temporary Android 14 emulator, Expo Go), the placeholder does not shift after
+a box, with or without this class. The field stays on the same rows with and without the
+class. The only differences are text smoothing of at most 3 out of 255, which also appear
+in an unrelated label.
+
+On web, the input's computed line height stays `normal`, and no CSS rule applies the class.
+
+`npm run typecheck`, `npm run lint` and `npm test` (428 tests) pass.
+
+### Not run, and what would not catch it
+
+- A physical iPhone or a release build. All iOS checks used Expo Go on the simulator.
+- A `use_it` card followed by a typed card in a real session. `use_it` uses the same box
+  field, so it should have caused the shift the same way before the fix.
+- Nothing automated guards this. Chromatic captures web, where the class does nothing, and
+  the shift needs two fields mounted one after another on iOS.
+
+### Found while doing this, fixed in #63
+
+Focusing a `TextField` on iOS moved the layout below it by about 1.5 points. The cause was
+`focus:pb-[11px]` assuming web's 12 px `py-3`, which is 10.5 points on native. #63 fixed it,
+and the next section has the details. When #62 merged after it, the two class strings were
+combined: the `line` variant keeps #63's per-platform focus padding and adds `ios:leading-none`.
+
 ## TextField focus no longer moves the layout on iOS and Android (2026-11-06)
 
 Focusing a `TextField` on iOS or Android made the layout below it move. It
