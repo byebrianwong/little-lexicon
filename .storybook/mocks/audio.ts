@@ -8,15 +8,31 @@
 //
 // The real module is exercised by the app, not by stories: it has no UI.
 
-import type { SpeakableExample, SpeakableWord, SpeakOptions } from '../../src/lib/audio';
+import type {
+  SpeakableExample,
+  SpeakableHook,
+  SpeakableSense,
+  SpeakableWord,
+  SpeakOptions,
+} from '../../src/lib/audio';
 
-export type { SpeakableExample, SpeakableWord, SpeakOptions };
+export type {
+  SpeakableExample,
+  SpeakableHook,
+  SpeakableSense,
+  SpeakableWord,
+  SpeakOptions,
+};
 
 export async function play(_opts: SpeakOptions): Promise<void> {}
 
 export async function speakWord(_word: SpeakableWord): Promise<void> {}
 
 export async function speakSentence(_example: SpeakableExample): Promise<void> {}
+
+export async function speakDefinition(_sense: SpeakableSense): Promise<void> {}
+
+export async function speakHook(_word: SpeakableHook): Promise<void> {}
 
 export function stopAudio(): void {}
 

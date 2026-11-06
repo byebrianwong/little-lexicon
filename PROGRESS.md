@@ -4395,6 +4395,173 @@ installed preview build could run the update. The rule now lives in
 For next time: the root `.gitignore` is part of the native fingerprint. Put
 ignore rules for `pipeline/` in `pipeline/.gitignore`.
 
+## Storybook on a device: spike (2026-11-02)
+
+Tried Storybook for React Native alongside the web Storybook, to see whether
+Chromatic's React Native guide (https://www.chromatic.com/docs/react-native/)
+can work here. The same story files now also run inside the app on the iOS
+simulator. Nothing has run on Chromatic: it has to enable React Native for a
+project first, and that has not been asked for.
+
+### What changed
+
+- Added `@storybook/react-native` 10.7.1 and a `.rnstorybook/` folder.
+- `metro.config.js` loads Storybook only when `EXPO_PUBLIC_STORYBOOK_ENABLED` is
+  `'true'`. Otherwise the app's Metro config is exactly what it was.
+- `app/_layout.tsx` did not change. `@storybook/react-native/withStorybook` swaps
+  the app's entry point for `.rnstorybook/index.tsx`. The older
+  `@storybook/react-native/metro/withStorybook`, which the package's readme
+  shows, has no swap, and would need the root switch in step 2 of Chromatic's
+  guide.
+- Moved `storybook`, `@storybook/addon-a11y` and
+  `@storybook/react-native-web-vite` from 10.6.0 to 10.6.5. The new package needs
+  `@storybook/react` 10.6.5, which needs `storybook` 10.6.5 or later.
+- `.rnstorybook/storybook.requires.ts` is generated, and it is committed on
+  purpose. If it is ignored, `import/no-unresolved` fails lint on CI. Ignoring it
+  in the root `.gitignore` also moved the fingerprint, as in the section above.
+
+To run it (Expo Go, on port 8083 if another server has 8081):
+
+```bash
+EXPO_PUBLIC_STORYBOOK_ENABLED=true npx expo start --clear
+```
+
+### Results
+
+- All 31 story files bundle through Metro, in development and as production
+  bundles for iOS and Android.
+- On the iOS simulator in Expo Go, all 201 stories rendered without an error,
+  switched over the websocket channel the way Chromatic drives them. Each
+  reported `storyFinished` with status `success`, except the first in each run,
+  which was already on screen and sent nothing. It rendered when reopened.
+  Message sent to `ws://localhost:7007`:
+  `{"type":"setCurrentStory","args":[{"storyId":"...","viewMode":"story"}]}`.
+- Looked at by eye: Button, Session, Home, Reveal, Stats, Settings. Newsreader,
+  the paper background and layout are right. The other stories were checked for
+  errors only.
+- With Storybook off, the fingerprint is unchanged on both platforms (Android is
+  still `2dc6d90`). The iOS bundle keeps its file name and size. The only bytes that
+differ are a random temp folder name Expo writes into it and the checksum at its
+end. Two exports of the same code differ in the same way.
+- `tsc`, lint, 428 Jest tests and the web Storybook build (201 stories) pass.
+
+### What does not work or differs
+
+- **No browsing UI on the device.** The default UI crashes in
+  `BottomSheetTextInput` ("Failed to obtain view for NativeViewGestureHandler").
+  The cause is not known. `@storybook/react-native-ui-lite` loads once
+  `@legendapp/list` is kept off the `browser` condition in `metro.config.js`, but
+  its menu did not open after two taps in the simulator. The UI is off, so the
+  screen shows one story. Chromatic turns the UI off for capture too.
+- **Play functions do not run on a device.** The package removes them, so the 66
+  stories that have one show their starting state and still report success.
+  Settings/ChangingKnownWordFrequency looks like the plain Settings story.
+- **Sound, haptics and spinners are stubbed.** With Storybook on,
+  `metro.config.js` replaces `@/lib/audio` and `expo-haptics` with the web
+  Storybook's stubs, and `ActivityIndicator` with a still ring from
+  `.rnstorybook/mocks/`. The audio stub was missing `speakDefinition` and
+  `speakHook`, so a story that called them would have failed. It has them now.
+- `tsc` is not run over `.rnstorybook/` by `npm run typecheck`, the same as
+  `.storybook/`. Run by hand, the only errors are two in the generated file:
+  `disableUI` is missing from the package's own `ReactNativeOptions` type.
+
+### iOS release build
+
+Built commit `c82929a` from a clean clone with the command Chromatic's CI guide
+uses. `prebuild` plus `xcodebuild` took 4m 18s with Xcode 26.6. The CLI calls this
+command alpha.
+
+```bash
+LANG=en_US.UTF-8 npx chromatic react-native-build --platform=ios --output-dir=<dir>
+```
+
+- The `.app` launches on the simulator and shows Storybook with Newsreader.
+- On that same binary, all 201 stories reported `storyFinished` with status
+  `success` in 82 seconds, and the app did not crash. Six were looked at in Expo
+  Go earlier, and Session and Stats again here.
+- The capture host is baked into the bundle, so these 201 stories ran with its JS
+  bundle replaced by one pointing at a local websocket relay. The two bundles
+  differ by 47 bytes. Nothing has connected to Chromatic's real capture host or
+  used its secure websocket.
+
+Things that will catch someone out:
+
+- **`LANG`:** without a UTF-8 `LANG`, `pod install` crashes with an encoding error.
+  The CLI carries on and reports only that `LittleLexicon.xcworkspace` does not
+  exist. The real error is in its log file.
+- **Use a throwaway checkout:** `expo prebuild` writes `ios/`, which is not
+  ignored, rewrites the `android` and `ios` scripts in `package.json`, and the
+  build rewrites `.rnstorybook/storybook.requires.ts` with the capture host.
+- **Updates:** `expo-updates` stays on in this build and checks at every launch.
+  The server answers 400 because the build has no channel name, so an update
+  cannot replace Storybook.
+- **Replacing a bundle:** `expo-updates` copies the bundle on first launch and keeps
+  using that copy after a reinstall. Uninstall the app first.
+
+### Android release build
+
+This Mac does have an Android SDK. Older entries in this file say it does not, but
+those checks only looked in the default location. The SDK is Homebrew's, and JDK 17
+is keg-only, so neither is on the default path:
+
+```bash
+ANDROID_HOME=/opt/homebrew/share/android-commandlinetools JAVA_HOME=/opt/homebrew/opt/openjdk@17 LANG=en_US.UTF-8 npx chromatic react-native-build --platform=android --output-dir=<dir>
+```
+
+- The APK from this command launches on an Android 14 (API 34) emulator and shows
+  Storybook with Newsreader. It took 3m 14s with Gradle's caches already filled.
+- All 201 stories reported `success` in each of two launches, on an APK rebuilt to
+  point at the local relay, with `usesCleartextTraffic` added for that test only.
+  Home, Session, Reveal, Stats, Settings and Practice were looked at by eye.
+- **Build outside `/tmp`.** Under `/tmp`, which is a symlink on macOS, the build
+  fails with `libworklets.so ... missing and no known rule to make it`. CMake and
+  Ninja mix the two forms of the path (Reanimated issue 9151). The same commit built
+  from `~/.cache` passed. This should not affect a CI runner.
+- **Local emulators need `arm64-v8a`.** The CLI always builds `x86_64`. To run on
+  this Mac, a clone's `chromatic.config.json` needs
+  `"reactNative": { "androidBuildArchitectures": ["arm64-v8a"] }`. This is not
+  committed, because Chromatic's guide says its emulators run on hosted Linux.
+- Gradle downloaded the NDK, CMake, build tools and platform 36, about 3 GB in the
+  SDK folder, under licenses that were already accepted.
+
+### How repeatable the snapshots are
+
+Every story was captured in two separate launches, 700 ms after `storyFinished`, and
+the images were compared pixel by pixel, leaving out the band at the top of the
+screen. This is my own script, not Chromatic, so its timing may differ.
+
+- **iOS:** 0 of 201 differ between two full runs with the stubs. Before the spinner
+  stub, 12 differed: 11 spinners and one blinking cursor in
+  `screens-practice--in-progress`. The cursor has no stub and could show up again.
+- **Android:** 2 of 201 differ, both in the system keyboard. Stories with `autoFocus`
+  bring up the soft keyboard, about 21 of them, and its small chevron was caught
+  mid-fade. Whether Chromatic's emulator shows that keyboard is not known.
+- **Repeated images:** 52 or 53 snapshots match another story exactly, including 51
+  of the 66 stories with play functions. Leaving those out would save about a quarter
+  of the snapshots. They are still in.
+- **iOS placeholders move on a second visit.** Visiting a story with a `TextField`
+  again in the same launch puts its placeholder about 4 points lower, in about 40
+  stories. The first pass after a launch is repeatable. A separate session found it is
+  a real bug that users could see on iOS, and PR #62 fixes it in `TextField`. That PR
+  was open, not merged, on 2026-11-05.
+- A closed laptop lid pauses all of this. Nine stories timed out in one run at the
+  moment the sleep log shows the Mac going back to sleep.
+
+### Not run
+
+- Android on API 36, the version Chromatic's guide names. This emulator image is
+  API 34.
+- A Chromatic build, and how a second project's status would interact with the
+  required "UI Tests" check. Nothing has connected to the real capture host.
+- A Chromatic build of the web Storybook at 10.6.5, which could show changes.
+
+### For the next step
+
+Chromatic's CLI reads a per-project flag to choose a web or native build, so
+native needs a second Chromatic project. TurboSnap is not supported on React
+Native, so each build captures every story on each platform. iOS builds need a
+macOS CI runner.
+
 ## iOS placeholder shift after a box field (2026-11-05)
 
 The Storybook spike saw `TextField` placeholders move about 4 points on iOS. This
