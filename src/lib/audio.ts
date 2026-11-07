@@ -61,15 +61,36 @@ let currentPlayer: AudioPlayer | null = null;
 // Each call takes a turn number, so a slow call cannot start after a newer one.
 let turn = 0;
 
-function releaseCurrent(): void {
-  if (currentPlayer) {
-    try {
-      currentPlayer.remove();
-    } catch (e) {
-      console.warn('audio: could not release the previous player', e);
-    }
-    currentPlayer = null;
+/**
+ * Stop the current clip and free its native player.
+ *
+ * Both calls are needed. In expo-audio 1.0, remove() only takes the player off
+ * the module's own list; it does not stop it or free it. release() is what
+ * stops playback and frees the native player (ExoPlayer on Android, AVPlayer
+ * on iOS), as the docs for createAudioPlayer ask. With remove() alone, every
+ * clip the app played stayed in memory until the JS garbage collector got to
+ * it, and a long session piled up a native player per clip. Android also
+ * keeps its list entry after release(), so remove() still has to come first.
+ */
+export function releasePlayer(player: Pick<AudioPlayer, 'remove' | 'release'>): void {
+  try {
+    player.remove();
+  } catch (e) {
+    console.warn('audio: could not remove the previous player from the list', e);
   }
+  try {
+    player.release();
+  } catch (e) {
+    console.warn('audio: could not release the previous player', e);
+  }
+}
+
+function releaseCurrent(): void {
+  const player = currentPlayer;
+  if (!player) return;
+  // Cleared first, so the load-timeout check never reads a released player.
+  currentPlayer = null;
+  releasePlayer(player);
 }
 
 /** Play a clip if there is one, else speak the fallback text. Fire-and-forget. */
