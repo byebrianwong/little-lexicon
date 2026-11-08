@@ -1,12 +1,18 @@
 // The speech fallback in play(): it speaks the word only when the clip did not
 // load, and never after the screen that asked for it has gone. Also which
-// clip speakHook plays.
+// clip speakHook plays, and that every clip's native player is released.
 
 import * as Speech from 'expo-speech';
-import { clipLoaded, speakHook, speakWord, stopAudio } from './audio';
+import { clipLoaded, releasePlayer, speakHook, speakWord, stopAudio } from './audio';
 
 // What the fake player reports when the load timeout checks it.
-const mockPlayer = { isLoaded: false, duration: 0, play: jest.fn(), remove: jest.fn() };
+const mockPlayer = {
+  isLoaded: false,
+  duration: 0,
+  play: jest.fn(),
+  remove: jest.fn(),
+  release: jest.fn(),
+};
 const mockCreatePlayer = jest.fn((_source: unknown) => mockPlayer);
 // The offline pack's copy of a clip; none unless a test sets one.
 const mockLocalClip = jest.fn((_audioUrl: string | null | undefined): { uri: string } | null => null);
@@ -63,6 +69,7 @@ describe('speakWord fallback', () => {
 
     expect(Speech.speak).not.toHaveBeenCalled();
     expect(mockPlayer.remove).not.toHaveBeenCalled();
+    expect(mockPlayer.release).not.toHaveBeenCalled();
   });
 
   it('speaks the word when the clip never loaded', async () => {
@@ -129,5 +136,60 @@ describe('speakHook', () => {
     await speakHook({ mnemonics: [], hookAudioUrl: null });
     expect(mockCreatePlayer).not.toHaveBeenCalled();
     expect(Speech.speak).not.toHaveBeenCalled();
+  });
+});
+
+describe('releasing players', () => {
+  it('releases the previous clip when the next one starts', async () => {
+    Object.assign(mockPlayer, { isLoaded: true, duration: 1.2 });
+    await speakWord(word);
+    expect(mockPlayer.release).not.toHaveBeenCalled();
+
+    await speakWord(word);
+    expect(mockCreatePlayer).toHaveBeenCalledTimes(2);
+    expect(mockPlayer.remove).toHaveBeenCalledTimes(1);
+    expect(mockPlayer.release).toHaveBeenCalledTimes(1);
+  });
+
+  it('releases the clip when the audio is stopped, and only once', async () => {
+    Object.assign(mockPlayer, { isLoaded: true, duration: 1.2 });
+    await speakWord(word);
+    stopAudio();
+    stopAudio();
+    expect(mockPlayer.remove).toHaveBeenCalledTimes(1);
+    expect(mockPlayer.release).toHaveBeenCalledTimes(1);
+  });
+
+  it('releases a clip that never loaded before speaking instead', async () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    Object.assign(mockPlayer, { isLoaded: false, duration: 0 });
+    await speakWord(word);
+    jest.advanceTimersByTime(5000);
+    expect(mockPlayer.release).toHaveBeenCalledTimes(1);
+    expect(Speech.speak).toHaveBeenCalledWith('laconic', expect.anything());
+    warn.mockRestore();
+  });
+
+  it('removes the player from the list before releasing it', () => {
+    const calls: string[] = [];
+    releasePlayer({
+      remove: () => calls.push('remove'),
+      release: () => calls.push('release'),
+    });
+    expect(calls).toEqual(['remove', 'release']);
+  });
+
+  it('still releases the player when remove() throws', () => {
+    const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const release = jest.fn();
+    releasePlayer({
+      remove: () => {
+        throw new Error('gone');
+      },
+      release,
+    });
+    expect(release).toHaveBeenCalledTimes(1);
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
   });
 });

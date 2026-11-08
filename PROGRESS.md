@@ -4706,3 +4706,76 @@ pixels.
 
 PR #62 adds `ios:leading-none` to the same `line` class string, so whichever
 of the two merges second needs a one-line merge.
+
+## Audio players are released after each clip (2026-11-07)
+
+Brian reported that the app sometimes closes on its own part way through a
+regular session. This change fixes a native memory leak in clip playback
+that matches that report. It has not been confirmed as the cause on a
+device: no crash log has been looked at yet.
+
+### Cause
+
+`src/lib/audio.ts` makes a new expo-audio player for every clip it plays
+(the word on the intro and on every answer reveal, plus any speaker taps)
+and frees the previous one with `player.remove()`. In expo-audio 1.0.13,
+`remove()` only takes the player off the module's own list
+(`registry.remove` in `ios/AudioModule.swift`, `players.remove` in
+`android/.../AudioModule.kt`). It does not stop or free the player. The
+native player is freed only by `release()` (`sharedObjectWillRelease` on
+iOS, `sharedObjectDidRelease` on Android), which Expo's docs ask for with
+`createAudioPlayer`: "it is your responsibility to call the `release()`
+method when the player is no longer needed"
+(https://docs.expo.dev/versions/v54.0.0/sdk/audio/).
+
+So each clip's AVPlayer (iOS) or ExoPlayer (Android) stayed alive until
+Hermes garbage collected its small JS wrapper. The 4-second load-timeout
+closure keeps each wrapper alive long enough to outlive a young-generation
+collection, so they can wait for a full collection, which is rare. On
+Android each leftover player also keeps its playback thread, its decoder
+and a coroutine that wakes every 500 ms. A long session gathers one of
+these per clip.
+
+`remove()` also never stopped a clip that was still playing on iOS or
+Android. #55's `stopAudio()` on leaving the intro, the reveal and Listening
+was checked on web only, where `remove()` does pause the clip.
+
+### What changed
+
+- `releasePlayer()` in `src/lib/audio.ts` calls `remove()` and then
+  `release()`, each in its own try/catch. `remove()` stays because on
+  Android `release()` leaves the player in the module's list.
+- `releaseCurrent()` clears `currentPlayer` before releasing it, so the
+  load-timeout check never reads a released player.
+- `stopAudio()` now stops a clip that is playing on iOS and Android, as #55
+  meant. Web is unchanged: `release()` is a no-op there.
+
+### Verified
+
+- 5 new unit tests in `src/lib/audio.test.ts`: the previous clip is
+  released when the next one starts, when audio stops (once only), and when
+  a clip falls back to speech; `remove()` runs before `release()`; and
+  `release()` still runs if `remove()` throws. All 5 fail with the
+  `release()` call taken out.
+- `npm run typecheck`, `npm run lint` and `npm test` (43 suites, 433 tests)
+  pass.
+
+### Not run
+
+- iOS simulator, Android emulator or a device. This session's container
+  has neither. The cause comes from reading expo-audio 1.0.13's native
+  source and Expo's docs.
+- A long session on a preview build to check the crash is gone. If it
+  still happens, the crash log decides the next step: Xcode's Devices and
+  Simulators window or Settings > Privacy & Security > Analytics Data on
+  iOS, `adb logcat -b crash` on Android.
+
+### Other possible causes, not changed
+
+- `applyUpdateOnStartup()` (`src/lib/updates.ts`) calls
+  `Updates.reloadAsync()` as soon as a new update finishes downloading.
+  The download can finish after a session has started, and the reload
+  sends the user back through the splash screen. This happens only on the
+  first launch after an update is published, which is every merge to main.
+- No screen has an error boundary. In a release build, an error thrown
+  while rendering closes the app.
