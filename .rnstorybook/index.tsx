@@ -3,11 +3,11 @@
 // never runs. That is why this file loads the stylesheet and fonts itself and
 // registers the root component.
 //
-// The browsing UI is off. The default UI crashes here in BottomSheetTextInput,
-// and the menu in @storybook/react-native-ui-lite did not open when tried. The
-// screen shows one story, and the websocket channel switches between stories.
-// That is the same mode Chromatic uses to capture. The websocket options are the
-// ones Chromatic's guide requires, and its CLI sets these variables.
+// The menu for browsing stories is on unless EXPO_PUBLIC_STORYBOOK_DISABLE_UI is
+// 'true'. The Chromatic CLI sets that variable when it builds for capture, so
+// there the screen shows one story and Chromatic switches stories over the
+// websocket channel. These options are the ones Chromatic's React Native guide
+// gives, and its CLI sets the variables they read.
 
 import '../global.css';
 
@@ -27,7 +27,7 @@ const StorybookUI = view.getStorybookUI({
   host: process.env.EXPO_PUBLIC_STORYBOOK_WEBSOCKET_HOST || 'localhost',
   port: parseInt(process.env.EXPO_PUBLIC_STORYBOOK_WEBSOCKET_PORT || '7007', 10),
   secured: process.env.EXPO_PUBLIC_STORYBOOK_WEBSOCKET_SECURED === 'true',
-  onDeviceUI: false,
+  onDeviceUI: process.env.EXPO_PUBLIC_STORYBOOK_DISABLE_UI !== 'true',
 });
 
 function StorybookRoot() {

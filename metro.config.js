@@ -20,9 +20,9 @@ const appConfig = withNativeWind(config, { input: './global.css' });
 
 // Storybook on a simulator or phone. The require sits inside the check so the
 // app's own builds never load Storybook. When this is on, withStorybook replaces
-// the app's entry point with .rnstorybook/index.tsx. The browsing UI stays off
-// because it crashes in this app (see that file). The Chromatic CLI overrides
-// the websocket host when it builds for capture.
+// the app's entry point with .rnstorybook/index.tsx. When the Chromatic CLI
+// builds for capture, it sets STORYBOOK_DISABLE_UI, which withStorybook reads to
+// leave out the menu for browsing stories, and it overrides the websocket host.
 if (process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === 'true') {
   const path = require('node:path');
   const { withStorybook } = require('@storybook/react-native/withStorybook');
@@ -47,7 +47,6 @@ if (process.env.EXPO_PUBLIC_STORYBOOK_ENABLED === 'true') {
 
   module.exports = withStorybook(appConfig, {
     enabled: true,
-    disableUI: true,
     websockets: { host: 'localhost', port: 7007 },
   });
 } else {
