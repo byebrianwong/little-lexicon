@@ -31,7 +31,8 @@ declare global {
 
 
 const annotations = [
-  require('./preview')
+  require('./preview'),
+  require("@storybook/react-native/preview")
 ];
 
 globalThis.STORIES = normalizedStories;
@@ -43,9 +44,7 @@ globalThis.STORYBOOK_WEBSOCKET = {
 
 module?.hot?.accept?.();
 
-const options = {
-  "disableUI": true
-}
+const options = {}
 
 if (!globalThis.view) {
   globalThis.view = start({

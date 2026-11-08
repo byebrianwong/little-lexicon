@@ -4449,7 +4449,8 @@ end. Two exports of the same code differ in the same way.
 
 - **No browsing UI on the device.** The default UI crashes in
   `BottomSheetTextInput` ("Failed to obtain view for NativeViewGestureHandler").
-  The cause is not known. `@storybook/react-native-ui-lite` loads once
+  The cause is not known. (Found and fixed on 2026-11-07: see "Storybook's menu
+  works on a device".) `@storybook/react-native-ui-lite` loads once
   `@legendapp/list` is kept off the `browser` condition in `metro.config.js`, but
   its menu did not open after two taps in the simulator. The UI is off, so the
   screen shows one story. Chromatic turns the UI off for capture too.
@@ -4779,3 +4780,92 @@ was checked on web only, where `remove()` does pause the clip.
   first launch after an update is published, which is every merge to main.
 - No screen has an error boundary. In a release build, an error thrown
   while rendering closes the app.
+
+## Storybook's menu works on a device (2026-11-07)
+
+The menu for browsing stories in Storybook on iOS and Android no longer
+crashes. The cause was this app's NativeWind version, not Storybook.
+
+### Cause
+
+- `babel.config.js` compiles JSX with NativeWind's runtime
+  (`jsxImportSource: 'nativewind'`). Metro also compiles some packages in
+  `node_modules` from their TypeScript source, because their `react-native`
+  field points there. `react-native-gesture-handler` and
+  `@gorhom/bottom-sheet` are two of them, so their JSX goes through NativeWind
+  too.
+- NativeWind wraps React Native's `TextInput` so it can read `className`.
+  In React Native 0.81, `TextInput` is a plain function that takes `ref` as a
+  prop. `react-native-css-interop` 0.1.22 (NativeWind 4.1.23) builds the
+  wrapped props as `{ ...props, ref }` with `ref` undefined, so the caller's
+  ref is lost.
+- The Storybook menu's search box is `BottomSheetTextInput`, which renders
+  gesture-handler's `TextInput`. That component needs the ref to find its
+  native view, and throws "Failed to obtain view for NativeViewGestureHandler"
+  when it gets none.
+- `react-native-css-interop` 0.2.1 (2025-09-14) changed the order to
+  `{ ref, ...props }`. Projects set up on Expo SDK 54 get NativeWind 4.2.x, so
+  they never see this.
+- The app's own code is affected too, but nothing shows it today. `TextField`
+  passes its ref to `TextInput`, and the ref came back null. No screen reads a
+  text field's ref yet, so `ref.current.focus()` would have failed silently.
+
+### What changed
+
+- `nativewind` 4.1.23 to 4.2.7 and `react-native-css-interop` 0.1.22 to 0.2.7.
+  The runtime diff between the two is about 160 lines: the ref fix,
+  `box-shadow` classes now parse on native (the app uses none), React Native's
+  own `SafeAreaView` is no longer wrapped (the app uses the one from
+  `react-native-safe-area-context`), color-scheme handling for React Native
+  0.82, and a Metro file-change event in the newer format.
+- The menu is on by default. `.rnstorybook/index.tsx` turns it off when
+  `EXPO_PUBLIC_STORYBOOK_DISABLE_UI` is `'true'`, as in Chromatic's React
+  Native guide. `withStorybook` reads `STORYBOOK_DISABLE_UI` itself, so
+  `metro.config.js` no longer sets `disableUI`. The Chromatic CLI sets both
+  variables when it builds for capture, so capture builds still have no menu.
+- `.rnstorybook/storybook.requires.ts` is regenerated for the default mode.
+  It now loads `@storybook/react-native/preview` and has no `disableUI`
+  option. To regenerate it by hand:
+  `npx sb-rn-get-stories --config-path .rnstorybook --host localhost --port 7007`.
+
+To run it:
+
+```bash
+EXPO_PUBLIC_STORYBOOK_ENABLED=true npx expo start --clear
+```
+
+To run it as Chromatic captures it (one story, no menu):
+
+```bash
+EXPO_PUBLIC_STORYBOOK_ENABLED=true STORYBOOK_DISABLE_UI=true EXPO_PUBLIC_STORYBOOK_DISABLE_UI=true npx expo start --clear
+```
+
+### Verified
+
+- Expo Go on the iOS 26.5 simulator (iPhone 17 Pro) and an Android 14 emulator:
+  the menu opens, the search box takes typing, and picking a result switches
+  the story. On iOS the menu sits in a bar at the bottom of the screen. On
+  Android it is a sheet with a "Storybook" header that you drag up.
+- With the menu off, all 201 stories reported `storyFinished` with status
+  `success` on both platforms, switched over the websocket channel. Six stories
+  on Android reported it more than once.
+- The native fingerprint is unchanged on both platforms (iOS `2b81723`,
+  Android `2dc6d90`), so this ships as an EAS Update with no new build.
+- The app in demo mode on iOS, Android and web: home, Words and onboarding
+  render, and the Words search field filters. Web console errors are the
+  same as on main (a NativeWind color-scheme error and two unknown-prop
+  warnings).
+- `npm run typecheck`, `npm run lint`, `npm test` (43 suites, 433 tests) and
+  the web Storybook build (201 stories) pass.
+
+### Not settled
+
+- Once on Android, Expo Go ran out of Java memory and closed after "Start
+  learning" in onboarding. The error came from OkHttp, its HTTP client, during
+  network requests. It did not happen again in two later runs of the same
+  steps on this branch, or in one on main. Whether it was linked to this change
+  is not known, but nothing in the NativeWind diff touches networking.
+- With the menu on, Storybook warns about a cycle in the `children` arg of the
+  Practice and Session stories. It is a warning only.
+- Chromatic has not run on the web Storybook with NativeWind 4.2.7. The PR's
+  "UI Tests" check will show whether any snapshot changed.
