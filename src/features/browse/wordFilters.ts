@@ -1,12 +1,14 @@
 // The search and filters on the "All words" view. Pure and unit tested.
 //
-// A word shows when it matches the search text and every filter that is on:
+// A word shows when it matches the search text (wordSearch.ts, which also
+// finds similar and opposite words) and every filter that is on:
 // - tiers: any of the chosen tiers (none chosen means every tier);
 // - status: saved, or what the word tracker says (features/tracker);
 // - part of speech.
 
 import type { WordContent } from '@/lib/types';
 import type { WordTracker } from '@/features/tracker/tracker';
+import { buildSearchIndex, searchWords, type SearchHit, type SearchIndex } from './wordSearch';
 
 export type StatusFilter = 'any' | 'saved' | 'learning' | 'known' | 'untested';
 
@@ -77,12 +79,12 @@ function matchesStatus(
   }
 }
 
-function matchesQuery(word: WordContent, query: string): boolean {
-  if (word.headword.toLowerCase().includes(query)) return true;
-  return word.senses.some(
-    (s) =>
-      s.definition.toLowerCase().includes(query) ||
-      (s.plainLanguageDefinition ?? '').toLowerCase().includes(query),
+/** Whether a word passes every filter that is on. */
+function passesFilters(word: WordContent, filters: WordFilters, ctx: FilterContext): boolean {
+  return (
+    (filters.tiers.length === 0 || filters.tiers.includes(word.difficultyTier)) &&
+    (filters.partOfSpeech === null || word.partOfSpeech === filters.partOfSpeech) &&
+    matchesStatus(word, filters.status, ctx)
   );
 }
 
@@ -96,23 +98,30 @@ export function searchForWord(
   filters: WordFilters,
   ctx: FilterContext,
 ): { query: string; filters: WordFilters } {
-  const passes = filterWords([word], '', filters, ctx).length > 0;
+  const passes = passesFilters(word, filters, ctx);
   return { query: word.headword, filters: passes ? filters : NO_FILTERS };
 }
 
-/** The words that match the search text and the filters, in their original order. */
+/**
+ * The words that match the search text and the filters, best match first,
+ * each with why it matched. With no search text, every word that passes the
+ * filters, in the collection's order.
+ */
+export function findWords(
+  index: SearchIndex,
+  query: string,
+  filters: WordFilters,
+  ctx: FilterContext,
+): SearchHit[] {
+  return searchWords(index, query).filter((hit) => passesFilters(hit.word, filters, ctx));
+}
+
+/** findWords for a list of words, without the reasons. */
 export function filterWords(
   words: readonly WordContent[],
   query: string,
   filters: WordFilters,
   ctx: FilterContext,
 ): WordContent[] {
-  const q = query.trim().toLowerCase();
-  return words.filter(
-    (w) =>
-      (filters.tiers.length === 0 || filters.tiers.includes(w.difficultyTier)) &&
-      (filters.partOfSpeech === null || w.partOfSpeech === filters.partOfSpeech) &&
-      matchesStatus(w, filters.status, ctx) &&
-      (q === '' || matchesQuery(w, q)),
-  );
+  return findWords(buildSearchIndex(words), query, filters, ctx).map((hit) => hit.word);
 }

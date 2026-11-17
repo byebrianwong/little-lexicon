@@ -15,6 +15,7 @@ const discover: Decorator = (Story, { args }) => (
     view="discover"
     onChangeView={() => {}}
     listCount={(args as { listCount?: number }).listCount}
+    onSearch={() => {}}
   >
     <Story />
   </WordsLayout>

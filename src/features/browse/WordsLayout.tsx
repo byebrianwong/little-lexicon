@@ -9,10 +9,14 @@
 //
 // The switch is drawn like the tab bar, as text with a short red rule under
 // the current view, because it is a second level of the same navigation.
+//
+// A search button sits beside the title on every view. It opens All words
+// with the cursor in the search box, so finding a word takes one tap from
+// anywhere on the tab.
 
 import { Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { cx, H1 } from '@/components/ui';
+import { cx, H1, IconButton } from '@/components/ui';
 
 export type WordsViewId = 'discover' | 'list' | 'learning' | 'all';
 
@@ -28,14 +32,29 @@ export interface WordsLayoutProps {
   onChangeView: (view: WordsViewId) => void;
   /** How many words are saved. Undefined while the list loads. */
   listCount: number | undefined;
+  /** Shows the search button, which calls this. */
+  onSearch?: () => void;
   children: React.ReactNode;
 }
 
-export function WordsLayout({ view, onChangeView, listCount, children }: WordsLayoutProps) {
+export function WordsLayout({
+  view,
+  onChangeView,
+  listCount,
+  onSearch,
+  children,
+}: WordsLayoutProps) {
   return (
     <SafeAreaView className="flex-1 bg-paper" edges={['top']}>
       <View className="w-full max-w-[640px] self-center px-6 pt-10">
-        <H1>Words</H1>
+        <View className="flex-row items-center justify-between">
+          <H1>Words</H1>
+          {onSearch ? (
+            // -mr-3 lines the drawn icon up with the column's right edge;
+            // the button around it is 44 px for the hit area.
+            <IconButton icon="search" label="Search words" onPress={onSearch} className="-mr-3" />
+          ) : null}
+        </View>
         {/* Four views fit one line on a 360-point phone with this gap. A
             narrower screen, or a long saved count, wraps the last one to a
             second line rather than cutting it off. */}

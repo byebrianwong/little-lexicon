@@ -82,6 +82,11 @@ export default function Words() {
   const { mutate: removeWord } = useRemoveFromList();
   const { mutate: storeKnown } = useMarkKnown();
 
+  // Set by the search button; All words puts the cursor in its search box
+  // and then turns this off.
+  const [focusSearch, setFocusSearch] = useState(false);
+  const searchFocused = useCallback(() => setFocusSearch(false), []);
+
   const [pendingKnown, setPendingKnown] = useState(EMPTY);
   const [known, setKnown] = useState(EMPTY);
   const [notice, setNotice] = useState<string | null>(null);
@@ -176,13 +181,23 @@ export default function Words() {
     router.setParams({ view: undefined, status: undefined });
   }, [viewParam, statusParam, changeView]);
 
+  function openSearch() {
+    changeView('all');
+    setFocusSearch(true);
+  }
+
   function startSession() {
     settle(null);
     pushOnce('/session');
   }
 
   return (
-    <WordsLayout view={view} onChangeView={changeView} listCount={list.data?.length}>
+    <WordsLayout
+      view={view}
+      onChangeView={changeView}
+      listCount={list.data?.length}
+      onSearch={openSearch}
+    >
       {/* The feed stays mounted when hidden so its place is kept. */}
       <View style={{ flex: 1, display: view === 'discover' ? 'flex' : 'none' }}>
         <FeedView
@@ -239,6 +254,8 @@ export default function Words() {
           savedIds={saved.savedIds}
           trackers={trackers}
           onToggleSave={saved.toggle}
+          focusSearch={focusSearch}
+          onSearchFocused={searchFocused}
         />
       ) : null}
     </WordsLayout>

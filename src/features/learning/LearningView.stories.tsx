@@ -8,7 +8,7 @@ import { LearningView, type LearningViewProps } from './LearningView';
 import type { WordStatus } from './wordProgress';
 
 const learningTab: Decorator = (Story) => (
-  <WordsLayout view="learning" onChangeView={() => {}} listCount={2}>
+  <WordsLayout view="learning" onChangeView={() => {}} listCount={2} onSearch={() => {}}>
     <Story />
   </WordsLayout>
 );
