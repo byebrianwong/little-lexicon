@@ -13247,7 +13247,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/fəˈleɪʃəs/",
       "syllables": 3,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 334718,
       "etymology": "Via Old French from Latin fallacia, \"deceit\", from fallax, \"deceptive\", from fallere, \"to deceive\". False and fallacy come from the same verb.",
       "roots": [
@@ -16305,7 +16305,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɪmˈpɝviəs/",
       "syllables": 4,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 206478,
       "etymology": "From Latin impervius, impassable, from in-, not, and pervius, having a way through, which joins per, through, and via, way.",
       "roots": [
@@ -21254,7 +21254,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/nɪˈfɛriəs/",
       "syllables": 4,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 592789,
       "etymology": "From Latin nefarius, from nefas (\"a wrong against divine law\"), which joins ne- (\"not\") to fas (\"what divine law allows\").",
       "roots": [],
@@ -25986,7 +25986,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈprɪˌstin/",
       "syllables": 2,
-      "difficultyTier": 1,
+      "difficultyTier": 2,
       "frequencyRank": 208595,
       "etymology": "From Latin pristinus (\"former, original\"), by way of Middle French: something pristine is still in its first, unspoiled state.",
       "roots": [],
@@ -31865,7 +31865,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ˈtæsəˌtɝn/",
       "syllables": 3,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 591040,
       "etymology": "Borrowed from French taciturne, or made by shortening taciturnity; either way it goes back to Latin tacitus (\"silent\"), from tacere (\"to be silent\"), the verb that also gives tacit.",
       "roots": [
@@ -37015,7 +37015,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/əˈsɪdʒuəs/",
       "syllables": 4,
-      "difficultyTier": 3,
+      "difficultyTier": 4,
       "frequencyRank": 586871,
       "etymology": "From Latin assiduus, built on assidere, to sit by or settle at, from ad- and sedere, to sit: an assiduous person stays seated at a task until it is done.",
       "roots": [
@@ -64429,7 +64429,7 @@
       "partOfSpeech": "adjective",
       "ipa": "/ɑˈstɛnsəbəl/",
       "syllables": 4,
-      "difficultyTier": 2,
+      "difficultyTier": 3,
       "frequencyRank": 336913,
       "etymology": "From French ostensible, from Latin ostensus (\"shown\"), a form of ostendere (\"to show\"): the ostensible reason is the one put on display.",
       "roots": [
@@ -69110,6 +69110,2397 @@
       ],
       "mnemonics": [
         "Wrest is related to wrestle: to wrest something away is to twist and pull it free, as a wrestler would."
+      ]
+    },
+    {
+      "wordId": 618,
+      "headword": "attrition",
+      "partOfSpeech": "noun",
+      "ipa": "/əˈtrɪʃən/",
+      "syllables": 3,
+      "difficultyTier": 1,
+      "frequencyRank": 153505,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/618.mp3?v=307fe8106de6",
+      "hookAudioUrl": "audio/hooks/618.mp3?v=92b26c814417",
+      "senses": [
+        {
+          "senseId": 1346,
+          "definition": "The slow thinning of a group or force as members drop out or are lost over time and not replaced.",
+          "plainLanguageDefinition": "A slow loss of people or strength over time, often because those who leave are not replaced.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1346.mp3?v=551f47a13de3",
+          "examples": [
+            {
+              "exampleId": 6576,
+              "text": "The chess club never banned anyone; it simply shrank through attrition as members moved away and nobody new signed up.",
+              "audioUrl": "audio/sentences/6576.mp3?v=4235dfa69a9a",
+              "clozeTarget": "attrition"
+            },
+            {
+              "exampleId": 6577,
+              "text": "By the last week of the expedition, attrition had cut the hiking party from fourteen to six, mostly through blisters and sprained ankles.",
+              "audioUrl": "audio/sentences/6577.mp3?v=fe49dd62d6c6",
+              "clozeTarget": "attrition"
+            },
+            {
+              "exampleId": 6578,
+              "text": "Long-term health studies have to plan for attrition, since some volunteers move, lose interest or stop answering calls over the years.",
+              "audioUrl": "audio/sentences/6578.mp3?v=3b1ca862d2fa",
+              "clozeTarget": "attrition"
+            },
+            {
+              "exampleId": 6579,
+              "text": "Every hard winter meant more attrition in the herd, as the oldest and weakest animals failed to find enough to eat.",
+              "audioUrl": "audio/sentences/6579.mp3?v=59ac80d9ee27",
+              "clozeTarget": "attrition"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "The naming of who made a work or what brought an event about.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A witness's signed or sworn word that a fact or document is authentic.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "The fondness, often romantic, that makes one person want to be near another.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "The reaching of a hard-won goal after years of work.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A test run on stage that a director uses to pick who gets a role.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        },
+        {
+          "senseId": 1399,
+          "definition": "The grinding down of rock or tooth enamel by repeated rubbing.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1399.mp3?v=c35a93bcfe34",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "depletion",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "dwindling",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "erosion",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "reduction",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "growth",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "replenishment",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Attrition comes from Latin terere, to rub: like a stone rubbed smaller by a stream, a group shrinks a little at a time."
+      ]
+    },
+    {
+      "wordId": 619,
+      "headword": "bifurcate",
+      "partOfSpeech": "verb",
+      "ipa": "/ˈbaɪfɚˌkeɪt/",
+      "syllables": 3,
+      "difficultyTier": 5,
+      "frequencyRank": 1990588,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/619.mp3?v=718c3d49599c",
+      "hookAudioUrl": "audio/hooks/619.mp3?v=345e28c669e2",
+      "senses": [
+        {
+          "senseId": 1349,
+          "definition": "Split into two diverging branches or paths, or make something split that way.",
+          "plainLanguageDefinition": "To split in two, the way a single road forks to the left and the right.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1349.mp3?v=3bcac11d65dc",
+          "examples": [
+            {
+              "exampleId": 6580,
+              "text": "Partway down the chest, the windpipe bifurcates, sending one airway into each lung.",
+              "audioUrl": "audio/sentences/6580.mp3?v=6f735675bc8e",
+              "clozeTarget": "bifurcates"
+            },
+            {
+              "exampleId": 6581,
+              "text": "The shipping company plans to bifurcate, with one new firm keeping the cargo ships and the other the ports.",
+              "audioUrl": "audio/sentences/6581.mp3?v=52abd9157a53",
+              "clozeTarget": "bifurcate"
+            },
+            {
+              "exampleId": 6582,
+              "text": "Economists warn that the housing market has bifurcated, with prices soaring in big cities while small towns stall.",
+              "audioUrl": "audio/sentences/6582.mp3?v=9ea73bbd9f3d",
+              "clozeTarget": "bifurcated"
+            },
+            {
+              "exampleId": 6583,
+              "text": "A single lightning bolt can bifurcate several times before it reaches the ground, splitting into ever thinner forks.",
+              "audioUrl": "audio/sentences/6583.mp3?v=41056da82478",
+              "clozeTarget": "bifurcate"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Make an idea murky on purpose so that others struggle to make sense of it.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Make up a lie or a bogus record and present it as fact.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Drive someone into a hot rage over some slight or wrong.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Make a bare overnight camp on the spot and move on at first light.",
+              "kind": "mc",
+              "difficulty": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "fork",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "split",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "branch",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "divide",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "converge",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "merge",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Bifurcate joins Latin bi-, 'two', with furca, 'fork': a path that bifurcates forks in two."
+      ]
+    },
+    {
+      "wordId": 620,
+      "headword": "expropriate",
+      "partOfSpeech": "verb",
+      "ipa": "/ɪkˈsproʊpriˌeɪt/",
+      "syllables": 4,
+      "difficultyTier": 5,
+      "frequencyRank": 1636040,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/620.mp3?v=13ebc65569de",
+      "hookAudioUrl": "audio/hooks/620.mp3?v=459f19ac8cee",
+      "senses": [
+        {
+          "senseId": 1351,
+          "definition": "Use official power to take private land or assets from their owners, often for public projects.",
+          "plainLanguageDefinition": "For a government to seize people's land, homes or businesses, often to put them to public use.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1351.mp3?v=222551dd1a01",
+          "examples": [
+            {
+              "exampleId": 6584,
+              "text": "In 1938 Mexico expropriated the oil fields run by American and British companies and placed them under a state firm.",
+              "audioUrl": "audio/sentences/6584.mp3?v=a362cbcb3576",
+              "clozeTarget": "expropriated"
+            },
+            {
+              "exampleId": 6585,
+              "text": "The heirs' lawyers argued that the painting had been expropriated from their Jewish grandparents in 1939, so the museum must give it back.",
+              "audioUrl": "audio/sentences/6585.mp3?v=1dd74135156f",
+              "clozeTarget": "expropriated"
+            },
+            {
+              "exampleId": 6586,
+              "text": "Under the new land reform law, estates larger than five hundred hectares were expropriated and divided among the farmworkers who tilled them.",
+              "audioUrl": "audio/sentences/6586.mp3?v=d5a08f1231e4",
+              "clozeTarget": "expropriated"
+            },
+            {
+              "exampleId": 6587,
+              "text": "During the French Revolution, the state expropriated the Church's vast lands and sold them off to pay down the national debt.",
+              "audioUrl": "audio/sentences/6587.mp3?v=7650bdc1ca6f",
+              "clozeTarget": "expropriated"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Move away from one's homeland to make a life abroad.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Cleanse oneself of guilt for a wrong by paying for it through hardship.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Censor a manuscript by deleting the lines that might shock or offend.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Push a request to the front of the line so it is handled sooner.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Try someone's patience to the breaking point.",
+              "kind": "mc",
+              "difficulty": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "confiscate",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "seize",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "commandeer",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "nationalize",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Expropriate holds Latin proprius, 'one's own', as in property; ex- means out, so the property is taken out of its owner's hands."
+      ]
+    },
+    {
+      "wordId": 621,
+      "headword": "extrapolate",
+      "partOfSpeech": "verb",
+      "ipa": "/ɪkˈstræpəˌleɪt/",
+      "syllables": 4,
+      "difficultyTier": 3,
+      "frequencyRank": 459768,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/621.mp3?v=c7f9e435b397",
+      "hookAudioUrl": "audio/hooks/621.mp3?v=01f0e7f852ee",
+      "senses": [
+        {
+          "senseId": 1352,
+          "definition": "Carry a pattern found in known data over to cases or times that were never measured.",
+          "plainLanguageDefinition": "To use what you already know to make a guess about what you have not seen yet.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1352.mp3?v=945412496afb",
+          "examples": [
+            {
+              "exampleId": 6572,
+              "text": "After timing her first five kilometers, the runner extrapolated a finishing time for the whole marathon, forgetting that she always slows down near the end.",
+              "audioUrl": "audio/sentences/6572.mp3?v=f08acdea9d8e",
+              "clozeTarget": "extrapolated"
+            },
+            {
+              "exampleId": 6573,
+              "text": "Astronomers extrapolated the comet's path from a week of sightings and predicted when it would swing past Earth again.",
+              "audioUrl": "audio/sentences/6573.mp3?v=926ed93a420d",
+              "clozeTarget": "extrapolated"
+            },
+            {
+              "exampleId": 6574,
+              "text": "If you extrapolate the line on this chart of the town's water use, the reservoir runs dry by late August.",
+              "audioUrl": "audio/sentences/6574.mp3?v=48cfc5b9463b",
+              "clozeTarget": "extrapolate"
+            },
+            {
+              "exampleId": 6575,
+              "text": "Engineers tested the cables at half their rated load and extrapolated how they would behave closer to the limit.",
+              "audioUrl": "audio/sentences/6575.mp3?v=78966597dc33",
+              "clozeTarget": "extrapolated"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Wriggle oneself or another out of a snare or a sticky situation.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Destroy something harmful so thoroughly that nothing is left to come back.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Make a heated protest to someone, urging them to drop a course they have chosen.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Break into a speech or a written passage with words of one's own.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Press a soft material through a shaped nozzle so it comes out in one long strip.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "project",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "infer",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "predict",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Extrapolate starts with extra-, Latin for 'outside': you carry a known pattern outside the range of the facts you have."
+      ]
+    },
+    {
+      "wordId": 622,
+      "headword": "genteel",
+      "partOfSpeech": "adjective",
+      "ipa": "/dʒɛnˈtil/",
+      "syllables": 2,
+      "difficultyTier": 2,
+      "frequencyRank": 229611,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/622.mp3?v=dcb2d5e6afaa",
+      "hookAudioUrl": "audio/hooks/622.mp3?v=60c75f90a7ee",
+      "senses": [
+        {
+          "senseId": 1355,
+          "definition": "Polished in an upper-class way, sometimes so carefully that it seems prim or put on.",
+          "plainLanguageDefinition": "Very proper and refined, in a fussy or upper-class way.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1355.mp3?v=0e55fb6cb84d",
+          "examples": [
+            {
+              "exampleId": 6588,
+              "text": "My grandmother never said that anyone had died, only that they had passed, since she always chose the most genteel word she could find.",
+              "audioUrl": "audio/sentences/6588.mp3?v=64a45908eec2",
+              "clozeTarget": "genteel"
+            },
+            {
+              "exampleId": 6589,
+              "text": "Readers expecting a genteel novel of drawing rooms and courtships were shocked by the brutal second half of the book.",
+              "audioUrl": "audio/sentences/6589.mp3?v=3553abfbd80d",
+              "clozeTarget": "genteel"
+            },
+            {
+              "exampleId": 6590,
+              "text": "The boxing club tried to look genteel for its charity gala, with the fighters in bow ties sipping sparkling water.",
+              "audioUrl": "audio/sentences/6590.mp3?v=a3571618daaa",
+              "clozeTarget": "genteel"
+            },
+            {
+              "exampleId": 6591,
+              "text": "She was raised to keep her elbows off the table and her opinions to herself, a genteel upbringing she spent college rebelling against.",
+              "audioUrl": "audio/sentences/6591.mp3?v=614283f977c3",
+              "clozeTarget": "genteel"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Smiling, chatty and warmly pleasant to be around.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Belonging to a people or faith other than the Jewish one.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Fitting the question being argued rather than straying off topic.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Plain and ordinary, with nothing at all to set it apart from others.",
+              "kind": "mc",
+              "difficulty": 2
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "refined",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "polite",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "cultivated",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "well-bred",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "coarse",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "uncouth",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "unrefined",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Genteel was borrowed from French gentil, 'of good family': picture the careful manners such families were expected to show."
+      ]
+    },
+    {
+      "wordId": 623,
+      "headword": "heuristic",
+      "partOfSpeech": "noun",
+      "ipa": "/hjʊˈrɪstɪk/",
+      "syllables": 3,
+      "difficultyTier": 1,
+      "frequencyRank": 100927,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/623.mp3?v=01ccfa9ef42b",
+      "hookAudioUrl": "audio/hooks/623.mp3?v=10c71473fa60",
+      "senses": [
+        {
+          "senseId": 1356,
+          "definition": "A rough rule of thumb that leads to a workable answer quickly, though not always the best or right one.",
+          "plainLanguageDefinition": "A shortcut for solving a problem or making a choice that works most of the time, but not always.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1356.mp3?v=b04a0c7444ae",
+          "examples": [
+            {
+              "exampleId": 6592,
+              "text": "Shoppers often use price as a heuristic for quality, assuming the more expensive bottle of wine must taste better.",
+              "audioUrl": "audio/sentences/6592.mp3?v=704b2896ee67",
+              "clozeTarget": "heuristic"
+            },
+            {
+              "exampleId": 6593,
+              "text": "Chess beginners learn the heuristic of controlling the center long before they can calculate complicated attacks.",
+              "audioUrl": "audio/sentences/6593.mp3?v=34c61ab08223",
+              "clozeTarget": "heuristic"
+            },
+            {
+              "exampleId": 6594,
+              "text": "Jeff Bezos's famous heuristic for team size was simple: if two pizzas cannot feed the group, it is too big.",
+              "audioUrl": "audio/sentences/6594.mp3?v=6414270139a0",
+              "clozeTarget": "heuristic"
+            },
+            {
+              "exampleId": 6595,
+              "text": "Psychologists have shown that a common heuristic, judging risk by how easily examples come to mind, leads people into predictable mistakes.",
+              "audioUrl": "audio/sentences/6595.mp3?v=41d8783bcfca",
+              "clozeTarget": "heuristic"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Reckless arrogance that sets a person up for a fall.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A view that a faith's leaders condemn as false teaching.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A gentle phrase that hints at something painful instead of naming it.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "The theory behind drawing meaning out of written works, from scripture to law.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A formal address in praise of someone, most often given after a death.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "rule of thumb",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "shortcut",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "guideline",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "algorithm",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Heuristic shares its Greek root with eureka, 'I have found it': a heuristic helps you find an answer fast."
+      ]
+    },
+    {
+      "wordId": 624,
+      "headword": "incendiary",
+      "partOfSpeech": "adjective",
+      "ipa": "/ɪnˈsɛndiˌɛri/",
+      "syllables": 5,
+      "difficultyTier": 3,
+      "frequencyRank": 445749,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/624.mp3?v=5cddc527a02b",
+      "hookAudioUrl": "audio/hooks/624.mp3?v=94aff6c82a76",
+      "senses": [
+        {
+          "senseId": 1357,
+          "definition": "Provocative enough to stir up fierce anger or conflict, often deliberately.",
+          "plainLanguageDefinition": "Likely to make people furious or start a fight, often on purpose.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1357.mp3?v=20e359d03a6b",
+          "examples": [
+            {
+              "exampleId": 6596,
+              "text": "Before the final, the coach pinned the rival captain's incendiary quote to the locker room wall to fire up his players.",
+              "audioUrl": "audio/sentences/6596.mp3?v=03ab848b2d0b",
+              "clozeTarget": "incendiary"
+            },
+            {
+              "exampleId": 6597,
+              "text": "One incendiary post from the radio host, falsely accusing a local family of poisoning the town's water, brought an angry mob to their door by nightfall.",
+              "audioUrl": "audio/sentences/6597.mp3?v=0507a0987acc",
+              "clozeTarget": "incendiary"
+            },
+            {
+              "exampleId": 6598,
+              "text": "The manager's incendiary memo calling the strikers lazy freeloaders brought hundreds more workers onto the picket line.",
+              "audioUrl": "audio/sentences/6598.mp3?v=af340daa0bb6",
+              "clozeTarget": "incendiary"
+            },
+            {
+              "exampleId": 6599,
+              "text": "The general's incendiary vow to 'take back what is ours' sent troops on both sides of the border to their posts within the hour.",
+              "audioUrl": "audio/sentences/6599.mp3?v=45185edd51cc",
+              "clozeTarget": "incendiary"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Coming along as a minor by-product of something bigger.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Newly emerging and not yet grown to full strength.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Unbroken and unending, often wearing on the nerves.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Hopeless to reform, sliding back into bad ways whatever is tried.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Going about unrecognized behind a disguise or borrowed name.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "senseId": 1400,
+          "definition": "Filled with fuel or chemicals meant to set its target ablaze.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1400.mp3?v=88fae1eaca17",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "inflammatory",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "provocative",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "rabble-rousing",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "seditious",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "conciliatory",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "soothing",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Incendiary comes from Latin incendere, 'to set on fire', which also gives incensed, 'furious': incendiary words leave people incensed."
+      ]
+    },
+    {
+      "wordId": 625,
+      "headword": "interloper",
+      "partOfSpeech": "noun",
+      "ipa": "/ˈɪntɚˌloʊpɚ/",
+      "syllables": 4,
+      "difficultyTier": 5,
+      "frequencyRank": 1298870,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/625.mp3?v=066244d7fffb",
+      "hookAudioUrl": "audio/hooks/625.mp3?v=bfb1e226800e",
+      "senses": [
+        {
+          "senseId": 1360,
+          "definition": "An outsider who intrudes where the people already present feel the newcomer has no right to be.",
+          "plainLanguageDefinition": "Someone who barges in among people who would rather the newcomer stayed away.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1360.mp3?v=5505d81d9e8c",
+          "examples": [
+            {
+              "exampleId": 6600,
+              "text": "The old fishermen saw the tech workers who had bought cottages along the harbor as interlopers who would never understand the town.",
+              "audioUrl": "audio/sentences/6600.mp3?v=b53f3ec41671",
+              "clozeTarget": "interlopers"
+            },
+            {
+              "exampleId": 6601,
+              "text": "Fans who had followed the band since its garage days treated the crowds drawn in by a car commercial as interlopers.",
+              "audioUrl": "audio/sentences/6601.mp3?v=d9f5d8d1caae",
+              "clozeTarget": "interlopers"
+            },
+            {
+              "exampleId": 6602,
+              "text": "During nesting season, any crow that strays near the hawks' tree is chased off as an interloper.",
+              "audioUrl": "audio/sentences/6602.mp3?v=8538fbf68c30",
+              "clozeTarget": "interloper"
+            },
+            {
+              "exampleId": 6603,
+              "text": "A reporter who slipped into the closed board meeting was spotted within minutes and escorted out as an interloper.",
+              "audioUrl": "audio/sentences/6603.mp3?v=2279179bf221",
+              "clozeTarget": "interloper"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "The partner on the other side of a talk or exchange of views.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "A person who relays a speaker's words to listeners who speak another language.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "A medical specialist who treats illness with drugs and leaves operations to surgeons.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "An official who grills a captive or suspect in hopes of a confession.",
+              "kind": "mc",
+              "difficulty": 5
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "intruder",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "trespasser",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "outsider",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "gatecrasher",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "insider",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Interloper joins inter-, 'between', with -loper, from Dutch loper, 'runner': an interloper runs in among people who never invited them."
+      ]
+    },
+    {
+      "wordId": 626,
+      "headword": "juncture",
+      "partOfSpeech": "noun",
+      "ipa": "/ˈdʒʌŋktʃɚ/",
+      "syllables": 2,
+      "difficultyTier": 1,
+      "frequencyRank": 106596,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/626.mp3?v=e567a6fa2e0c",
+      "hookAudioUrl": "audio/hooks/626.mp3?v=1616be2528f0",
+      "senses": [
+        {
+          "senseId": 1361,
+          "definition": "A moment in the course of events, often one where much depends on what happens next.",
+          "plainLanguageDefinition": "A moment in how things unfold, often one where a big choice has to be made.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1361.mp3?v=83fe4e7e3158",
+          "examples": [
+            {
+              "exampleId": 6604,
+              "text": "With the score tied and two minutes left, the game had reached the juncture where a single mistake would decide it.",
+              "audioUrl": "audio/sentences/6604.mp3?v=c831cbddb2dd",
+              "clozeTarget": "juncture"
+            },
+            {
+              "exampleId": 6605,
+              "text": "The novel leaves its heroine at a juncture: she can take the scholarship abroad or stay home to run the family farm.",
+              "audioUrl": "audio/sentences/6605.mp3?v=b35bf11766f0",
+              "clozeTarget": "juncture"
+            },
+            {
+              "exampleId": 6606,
+              "text": "At that juncture in the investigation, the detectives had a suspect and a motive but still no weapon.",
+              "audioUrl": "audio/sentences/6606.mp3?v=8e3fe5749c98",
+              "clozeTarget": "juncture"
+            },
+            {
+              "exampleId": 6607,
+              "text": "Looking back, she could name the exact juncture when baking bread stopped being a hobby and became a business.",
+              "audioUrl": "audio/sentences/6607.mp3?v=77dcf4f542a6",
+              "clozeTarget": "juncture"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "A court ruling that bars someone from carrying out a planned act.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A minor piece bolted onto a bigger whole to help it along.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A guess offered without the evidence to back it up.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A free trip for officials, dressed up as work but mostly for fun.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        },
+        {
+          "senseId": 1401,
+          "definition": "The spot where two pieces are fastened or fitted together.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1401.mp3?v=7ba9decb1a41",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "point",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "moment",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "stage",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "crossroads",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "critical point",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Juncture comes from Latin jungere, 'to join', like junction: picture a juncture as a junction in time, where the road ahead splits."
+      ]
+    },
+    {
+      "wordId": 627,
+      "headword": "moratorium",
+      "partOfSpeech": "noun",
+      "ipa": "/ˌmɔrəˈtɔriəm/",
+      "syllables": 5,
+      "difficultyTier": 2,
+      "frequencyRank": 287027,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/627.mp3?v=b4aed5b57a0e",
+      "hookAudioUrl": "audio/hooks/627.mp3?v=c23a8858d3c3",
+      "senses": [
+        {
+          "senseId": 1364,
+          "definition": "An official, time-limited ban on some action, often while its risks are studied.",
+          "plainLanguageDefinition": "A temporary ban, often set by a government, on doing a certain thing.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1364.mp3?v=c8fda5b30b55",
+          "examples": [
+            {
+              "exampleId": 6608,
+              "text": "After two climbers died in a month, the park service declared a moratorium on winter ascents of the north face.",
+              "audioUrl": "audio/sentences/6608.mp3?v=5744f2bed22b",
+              "clozeTarget": "moratorium"
+            },
+            {
+              "exampleId": 6609,
+              "text": "Scientists called for a moratorium on editing the genes of human embryos until the risks were better understood.",
+              "audioUrl": "audio/sentences/6609.mp3?v=e1f2c7a0e4b4",
+              "clozeTarget": "moratorium"
+            },
+            {
+              "exampleId": 6610,
+              "text": "My sister and I keep a strict moratorium on discussing politics at holiday dinners, and it has saved several evenings.",
+              "audioUrl": "audio/sentences/6610.mp3?v=ff5de914376c",
+              "clozeTarget": "moratorium"
+            },
+            {
+              "exampleId": 6611,
+              "text": "The airline lifted its moratorium on flights to the island once the volcano stopped spewing ash.",
+              "audioUrl": "audio/sentences/6611.mp3?v=e69e82d21d0c",
+              "clozeTarget": "moratorium"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "A typed office note that tells colleagues of a decision or change.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "The mood of a team or crew, shown in how eager and hopeful its members are.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "A sticky mess of problems in which every effort seems to sink.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "The share of a group that dies over a set period.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "The burning shame of a public humiliation.",
+              "kind": "mc",
+              "difficulty": 2
+            }
+          ]
+        },
+        {
+          "senseId": 1402,
+          "definition": "A legal grace period that lets debtors put off their payments for a time.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1402.mp3?v=6471e8f1fd2c",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "suspension",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "ban",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "halt",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "freeze",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "resumption",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Moratorium comes from Latin morari, 'to delay': a moratorium puts an activity on hold for a while."
+      ]
+    },
+    {
+      "wordId": 628,
+      "headword": "palpable",
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈpælpəbəl/",
+      "syllables": 3,
+      "difficultyTier": 3,
+      "frequencyRank": null,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/628.mp3?v=c42f8290b3a2",
+      "hookAudioUrl": "audio/hooks/628.mp3?v=17f3fe6b7c81",
+      "senses": [
+        {
+          "senseId": 1366,
+          "definition": "Sensed so strongly or seen so clearly that no one present could miss it.",
+          "plainLanguageDefinition": "So obvious that you can practically feel it in the air.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1366.mp3?v=a5fc48ca7f29",
+          "examples": [
+            {
+              "exampleId": 6612,
+              "text": "When the bride's former boyfriend walked into the reception, the awkwardness in the hall was palpable.",
+              "audioUrl": "audio/sentences/6612.mp3?v=a2395e3b067e",
+              "clozeTarget": "palpable"
+            },
+            {
+              "exampleId": 6613,
+              "text": "The two candidates' dislike for each other was palpable, even as they shook hands and smiled for the cameras.",
+              "audioUrl": "audio/sentences/6613.mp3?v=a10b35339d53",
+              "clozeTarget": "palpable"
+            },
+            {
+              "exampleId": 6614,
+              "text": "The boredom in the lecture hall was palpable: half the students were asleep and the rest were scrolling on their phones.",
+              "audioUrl": "audio/sentences/6614.mp3?v=6fbdb3f2114d",
+              "clozeTarget": "palpable"
+            },
+            {
+              "exampleId": 6615,
+              "text": "Deep in the cave, the children's fear was palpable; they stopped talking and gripped each other's hands.",
+              "audioUrl": "audio/sentences/6615.mp3?v=330780ad317f",
+              "clozeTarget": "palpable"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Mild enough in its terms that people will go along with it.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Pitifully small and hardly worth counting.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Guilty of a wrong and fairly open to blame for it.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Easing a sick person's suffering while doing nothing to cure the disease itself.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Built and fitted out on a royal scale, with sweeping rooms and costly finishes.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "senseId": 1403,
+          "definition": "Physically present in a way that a hand could feel.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1403.mp3?v=510fd8fddc01",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "obvious",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "evident",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unmistakable",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "manifest",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "perceptible",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "tangible",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "imperceptible",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "inconspicuous",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Palpable comes from Latin palpare, 'to touch': a palpable feeling is so strong you could almost reach out and touch it."
+      ]
+    },
+    {
+      "wordId": 629,
+      "headword": "praxis",
+      "partOfSpeech": "noun",
+      "ipa": "/ˈpræksɪs/",
+      "syllables": 2,
+      "difficultyTier": 1,
+      "frequencyRank": 128481,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/629.mp3?v=43410ae88de6",
+      "hookAudioUrl": "audio/hooks/629.mp3?v=1e3ac5d3fed0",
+      "senses": [
+        {
+          "senseId": 1369,
+          "definition": "Ideas carried out in practice, as opposed to just worked out in theory.",
+          "plainLanguageDefinition": "Turning what you know or believe into things you actually do.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1369.mp3?v=bcfdf3252684",
+          "examples": [
+            {
+              "exampleId": 6532,
+              "text": "The engineers wanted praxis, not more white papers, so they built a small test turbine on the factory roof.",
+              "audioUrl": "audio/sentences/6532.mp3?v=6cf7f8c0afe6",
+              "clozeTarget": "praxis"
+            },
+            {
+              "exampleId": 6533,
+              "text": "For the union organizer, reading about workers' rights mattered less than praxis: knocking on doors and signing people up.",
+              "audioUrl": "audio/sentences/6533.mp3?v=3192e28c9aea",
+              "clozeTarget": "praxis"
+            },
+            {
+              "exampleId": 6534,
+              "text": "Critics said the think tank turned out plenty of elegant theory but almost no praxis that changed how a single city was run.",
+              "audioUrl": "audio/sentences/6534.mp3?v=6a4cd9727501",
+              "clozeTarget": "praxis"
+            },
+            {
+              "exampleId": 6535,
+              "text": "Her book argues that caring about the planet means little without praxis, the daily habits of buying less and wasting less.",
+              "audioUrl": "audio/sentences/6535.mp3?v=f634755f88fb",
+              "clozeTarget": "praxis"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Permission handed to someone else to cast a vote in one's place.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A forecast of whether a sick patient or a shaky economy will pull through.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A made-up excuse that masks the real aim behind an act.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A brief write-up that boils a long document down to a page or so.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        },
+        {
+          "senseId": 1388,
+          "definition": "An established way of doing things that a group follows as a matter of course.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1388.mp3?v=3319afa49cab",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "practice",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "application",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "theory",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Praxis is Greek for action, and it shares a root with practical: praxis is where an idea stops being talk and gets done."
+      ]
+    },
+    {
+      "wordId": 630,
+      "headword": "prerogative",
+      "partOfSpeech": "noun",
+      "ipa": "/prɪˈrɑɡətɪv/",
+      "syllables": 4,
+      "difficultyTier": 1,
+      "frequencyRank": 118491,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/630.mp3?v=4f2f20f2e8c6",
+      "hookAudioUrl": "audio/hooks/630.mp3?v=ab57459ea958",
+      "senses": [
+        {
+          "senseId": 1370,
+          "definition": "A power or choice that goes with a certain role or rank, and is not open to others.",
+          "plainLanguageDefinition": "A special right to do or decide something that only you, or people in your role, have.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1370.mp3?v=d08bfef90fa6",
+          "examples": [
+            {
+              "exampleId": 6536,
+              "text": "Naming the new puppy was the youngest child's prerogative, so the family ended up with a dog called Pancake.",
+              "audioUrl": "audio/sentences/6536.mp3?v=e6db665cf5d2",
+              "clozeTarget": "prerogative"
+            },
+            {
+              "exampleId": 6537,
+              "text": "In this orchestra, choosing the encore is the conductor's prerogative, and the players simply learn whatever she picks.",
+              "audioUrl": "audio/sentences/6537.mp3?v=62099a46bc4b",
+              "clozeTarget": "prerogative"
+            },
+            {
+              "exampleId": 6538,
+              "text": "The referee has the prerogative to add extra time at the end of each half, and no coach can overrule him.",
+              "audioUrl": "audio/sentences/6538.mp3?v=c0087c3cd303",
+              "clozeTarget": "prerogative"
+            },
+            {
+              "exampleId": 6539,
+              "text": "As the host, Mina claimed the prerogative of carving the turkey, and nobody else dared reach for the knife.",
+              "audioUrl": "audio/sentences/6539.mp3?v=1ebd5baa1370",
+              "clozeTarget": "prerogative"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "A requirement to be met first, before anyone may go any further.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A mess someone has landed in, with no good way to get clear of it.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A starting belief accepted on trust rather than on evidence.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "The opening passage of a speech or charter, before the main business.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "A past ruling that judges point back to when a new case of the same kind arises.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "privilege",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "right",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "entitlement",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "exclusive right",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Prerogative shares Latin rogare, to ask, with interrogate: in Roman votes, being asked first (prae) was a special right, and that is what a prerogative is."
+      ]
+    },
+    {
+      "wordId": 631,
+      "headword": "seminal",
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈsɛmɪnəl/",
+      "syllables": 3,
+      "difficultyTier": 1,
+      "frequencyRank": 100146,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/631.mp3?v=a9acd1d6d8cc",
+      "hookAudioUrl": "audio/hooks/631.mp3?v=5430fa7ebc4e",
+      "senses": [
+        {
+          "senseId": 1371,
+          "definition": "Breaking new ground in a way that strongly shapes later work in the same field.",
+          "plainLanguageDefinition": "Being an early work that many later ones learned from and followed.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1371.mp3?v=b4143f113e6d",
+          "examples": [
+            {
+              "exampleId": 6540,
+              "text": "Many hip-hop producers name one seminal album from 1988 as the record that made them want to make beats.",
+              "audioUrl": "audio/sentences/6540.mp3?v=a5ad3eb9fd13",
+              "clozeTarget": "seminal"
+            },
+            {
+              "exampleId": 6541,
+              "text": "The game's seminal design, with its open world and branching quests, was copied by other studios for decades.",
+              "audioUrl": "audio/sentences/6541.mp3?v=54194564638a",
+              "clozeTarget": "seminal"
+            },
+            {
+              "exampleId": 6542,
+              "text": "Her seminal essay on busy sidewalks changed how a generation of city planners thought about streets.",
+              "audioUrl": "audio/sentences/6542.mp3?v=8af19e8dba3c",
+              "clozeTarget": "seminal"
+            },
+            {
+              "exampleId": 6543,
+              "text": "That seminal 1970s paper on bird migration set out the tracking methods that ornithologists still use today.",
+              "audioUrl": "audio/sentences/6543.mp3?v=ad9ac916606b",
+              "clozeTarget": "seminal"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Dealing with what words mean, apart from their grammar or sound.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "Existing only as a label, with no real substance behind it.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "Too faint or quick to register in awareness, yet still able to sway a person.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "Tied to one part of the year and absent the rest of it.",
+              "kind": "mc",
+              "difficulty": 1
+            },
+            {
+              "lemma": "Beyond any cure and certain to end in the patient's death.",
+              "kind": "mc",
+              "difficulty": 1
+            }
+          ]
+        },
+        {
+          "senseId": 1389,
+          "definition": "Relating to semen, the fluid that carries sperm.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1389.mp3?v=49a2733e20fa",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "influential",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "formative",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "germinal",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "original",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "derivative",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "unoriginal",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Seminal comes from Latin semen, seed: a seminal work is the seed that a whole field later grows from."
+      ]
+    },
+    {
+      "wordId": 632,
+      "headword": "sequester",
+      "partOfSpeech": "verb",
+      "ipa": "/sɪˈkwɛstɚ/",
+      "syllables": 3,
+      "difficultyTier": 5,
+      "frequencyRank": 1694594,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/632.mp3?v=857076716968",
+      "hookAudioUrl": "audio/hooks/632.mp3?v=dec15720f8a9",
+      "senses": [
+        {
+          "senseId": 1373,
+          "definition": "Set a person or thing apart and keep it out of others' reach for a time.",
+          "plainLanguageDefinition": "To keep someone or something shut away from everyone else for a while.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1373.mp3?v=69517af8e0d3",
+          "examples": [
+            {
+              "exampleId": 6544,
+              "text": "The novelist sequestered herself in a borrowed cabin with no internet until the final chapter was done.",
+              "audioUrl": "audio/sentences/6544.mp3?v=784627bab1b2",
+              "clozeTarget": "sequestered"
+            },
+            {
+              "exampleId": 6545,
+              "text": "Exam papers are sequestered in a locked vault until the morning of the test, so no teacher can peek.",
+              "audioUrl": "audio/sentences/6545.mp3?v=e96344528604",
+              "clozeTarget": "sequestered"
+            },
+            {
+              "exampleId": 6546,
+              "text": "Health officials sequestered the cruise passengers in their cabins for two weeks after the outbreak.",
+              "audioUrl": "audio/sentences/6546.mp3?v=520db5de21d6",
+              "clozeTarget": "sequestered"
+            },
+            {
+              "exampleId": 6547,
+              "text": "Because the trial led the evening news, the judge sequestered the jurors and had their phones collected each night.",
+              "audioUrl": "audio/sentences/6547.mp3?v=3a0b26c1d83b",
+              "clozeTarget": "sequestered"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Read off, one by one, the letters that make up a gene or genome.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Ask, through proper channels, to be given something.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Let savings or a lucky break slip away through foolish choices.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Float an idea for others to weigh, without pressing it.",
+              "kind": "mc",
+              "difficulty": 5
+            },
+            {
+              "lemma": "Slide straight into the next part of a show or talk with no pause between.",
+              "kind": "mc",
+              "difficulty": 5
+            }
+          ]
+        },
+        {
+          "senseId": 1390,
+          "definition": "Hold a debtor's property under a court order until a claim is settled.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1390.mp3?v=6ce4aedb13cf",
+          "examples": [],
+          "distractors": []
+        },
+        {
+          "senseId": 1391,
+          "definition": "Capture carbon dioxide or another gas and lock it away where it cannot reach the air.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 3,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1391.mp3?v=b94dbab2d119",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "isolate",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "seclude",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "cloister",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Sequester comes from Latin sequester, a trustee who held disputed goods apart until a quarrel was settled: whatever is sequestered is held apart too."
+      ]
+    },
+    {
+      "wordId": 633,
+      "headword": "stipulate",
+      "partOfSpeech": "verb",
+      "ipa": "/ˈstɪpjəˌleɪt/",
+      "syllables": 3,
+      "difficultyTier": 3,
+      "frequencyRank": 385311,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/633.mp3?v=658da90c23d5",
+      "hookAudioUrl": "audio/hooks/633.mp3?v=c8fb000401ce",
+      "senses": [
+        {
+          "senseId": 1376,
+          "definition": "Set down in binding terms a specific condition that must be met.",
+          "plainLanguageDefinition": "To make something a firm condition of a deal or a rule.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1376.mp3?v=d875075a2530",
+          "examples": [
+            {
+              "exampleId": 6548,
+              "text": "The donor's gift stipulated that the new library wing must stay open to the public every weekend.",
+              "audioUrl": "audio/sentences/6548.mp3?v=1799eede849d",
+              "clozeTarget": "stipulated"
+            },
+            {
+              "exampleId": 6549,
+              "text": "The singer's tour contract stipulates a bowl of green apples and a quiet room before every concert.",
+              "audioUrl": "audio/sentences/6549.mp3?v=6aa55ebf27dc",
+              "clozeTarget": "stipulates"
+            },
+            {
+              "exampleId": 6550,
+              "text": "Tournament rules stipulate that each chess clock be set to ninety minutes per player.",
+              "audioUrl": "audio/sentences/6550.mp3?v=5604aa20fb58",
+              "clozeTarget": "stipulate"
+            },
+            {
+              "exampleId": 6551,
+              "text": "The adoption papers stipulated that the rescued greyhound must never be left alone in a yard.",
+              "audioUrl": "audio/sentences/6551.mp3?v=3b3752139a91",
+              "clozeTarget": "stipulated"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Give a jolt that gets a process moving faster or growing more.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Mimic the look or workings of a real thing using a copy or a program.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Gamble on rising prices by buying shares or land to sell later.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Pin a badge of shame on someone that others then judge them by.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Dab a surface with tiny specks of paint to give it a grainy texture.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "senseId": 1392,
+          "definition": "Agree, in a lawsuit or debate, to treat a fact as settled so no one needs to prove it.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1392.mp3?v=03dad8cac85f",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "specify",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "require",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "lay down",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "prescribe",
+          "relationType": "synonym"
+        }
+      ],
+      "mnemonics": [
+        "Stipulate comes from Latin stipulari, to make someone formally promise the terms of a deal: what you stipulate becomes a term they must keep."
+      ]
+    },
+    {
+      "wordId": 634,
+      "headword": "subjugate",
+      "partOfSpeech": "verb",
+      "ipa": "/ˈsʌbdʒəˌɡeɪt/",
+      "syllables": 3,
+      "difficultyTier": 4,
+      "frequencyRank": 750372,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/634.mp3?v=1c35bd960d23",
+      "hookAudioUrl": "audio/hooks/634.mp3?v=888a2b643f60",
+      "senses": [
+        {
+          "senseId": 1379,
+          "definition": "Force a people or group under one's rule and keep them powerless.",
+          "plainLanguageDefinition": "To take control of people by force and keep them down.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1379.mp3?v=ae0409be6228",
+          "examples": [
+            {
+              "exampleId": 6552,
+              "text": "The novel imagines a future in which machines have subjugated humanity, and people are worked like slaves to keep the servers running.",
+              "audioUrl": "audio/sentences/6552.mp3?v=e75a154860f9",
+              "clozeTarget": "subjugated"
+            },
+            {
+              "exampleId": 6553,
+              "text": "For centuries the Spartans subjugated the helots, a farming people forced to hand over half of every harvest.",
+              "audioUrl": "audio/sentences/6553.mp3?v=83b7f429a9aa",
+              "clozeTarget": "subjugated"
+            },
+            {
+              "exampleId": 6554,
+              "text": "The empire's laws were written to subjugate the conquered provinces, barring their people from owning land or bearing arms.",
+              "audioUrl": "audio/sentences/6554.mp3?v=1d8cfe4e77b9",
+              "clozeTarget": "subjugate"
+            },
+            {
+              "exampleId": 6555,
+              "text": "Folk songs from the region still mourn the decades when a foreign crown subjugated their people and banned their language.",
+              "audioUrl": "audio/sentences/6555.mp3?v=9723db0759ba",
+              "clozeTarget": "subjugated"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Alter a verb's ending so it agrees with who is doing the action.",
+              "kind": "mc",
+              "difficulty": 4
+            },
+            {
+              "lemma": "Redirect a frowned-upon desire toward a more respectable outlet.",
+              "kind": "mc",
+              "difficulty": 4
+            },
+            {
+              "lemma": "Supply the proof that turns a claim into an established fact.",
+              "kind": "mc",
+              "difficulty": 4
+            },
+            {
+              "lemma": "Chip in public or private money to keep a business or service afloat.",
+              "kind": "mc",
+              "difficulty": 4
+            },
+            {
+              "lemma": "Fold a narrower idea into a broader category that now covers it.",
+              "kind": "mc",
+              "difficulty": 4
+            }
+          ]
+        },
+        {
+          "senseId": 1393,
+          "definition": "Rank one goal or interest below another and let it give way.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1393.mp3?v=b2b1e132281d",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "subdue",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "conquer",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "oppress",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "repress",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "enslave",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "subject",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "liberate",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "emancipate",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "free",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Subjugate is Latin sub, under, plus jugum, yoke: to subjugate a people is to force them under the yoke like oxen."
+      ]
+    },
+    {
+      "wordId": 635,
+      "headword": "subvert",
+      "partOfSpeech": "verb",
+      "ipa": "/səbˈvɝt/",
+      "syllables": 2,
+      "difficultyTier": 2,
+      "frequencyRank": 287387,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/635.mp3?v=f89fac3eebca",
+      "hookAudioUrl": "audio/hooks/635.mp3?v=6802eaf15528",
+      "senses": [
+        {
+          "senseId": 1381,
+          "definition": "Undercut the power of an established order, often by stealth.",
+          "plainLanguageDefinition": "To work against a system or idea in hidden ways, trying to bring it down.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1381.mp3?v=ad2b8dfed6aa",
+          "examples": [
+            {
+              "exampleId": 6556,
+              "text": "The hackers hoped to subvert the bank's security system by slipping a fake update into its software.",
+              "audioUrl": "audio/sentences/6556.mp3?v=7e45615b8296",
+              "clozeTarget": "subvert"
+            },
+            {
+              "exampleId": 6557,
+              "text": "Officials accused the smugglers of bribing border guards to subvert the trade embargo.",
+              "audioUrl": "audio/sentences/6557.mp3?v=1d4b4c3a0138",
+              "clozeTarget": "subvert"
+            },
+            {
+              "exampleId": 6558,
+              "text": "By quietly letting fans download its songs for free, the band set out to subvert the record labels' control over music.",
+              "audioUrl": "audio/sentences/6558.mp3?v=89bd5577db5c",
+              "clozeTarget": "subvert"
+            },
+            {
+              "exampleId": 6559,
+              "text": "The mayor's critics said her emergency powers were being used to subvert the city council rather than to fight the flood.",
+              "audioUrl": "audio/sentences/6559.mp3?v=a2efb94aff33",
+              "clozeTarget": "subvert"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Send traffic or a river off along a different route.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Head off a disaster just before it can strike.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Slide back to how things were before a change.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Calm down by degrees once the worst has passed.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Keep going on very little, with scarcely enough to eat.",
+              "kind": "mc",
+              "difficulty": 2
+            }
+          ]
+        },
+        {
+          "senseId": 1394,
+          "definition": "Turn someone against their own loyalties or principles.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1394.mp3?v=9ec6f8520440",
+          "examples": [],
+          "distractors": []
+        },
+        {
+          "senseId": 1395,
+          "definition": "Upend a familiar convention or what an audience expects to happen.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 3,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1395.mp3?v=f0f2ac27d7ed",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "undermine",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "sabotage",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "undercut",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "overthrow",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "destabilize",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "uphold",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "bolster",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Subvert is Latin sub, from below, plus vertere, to turn: to subvert a system is to tip it over from underneath."
+      ]
+    },
+    {
+      "wordId": 636,
+      "headword": "tepid",
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈtɛpɪd/",
+      "syllables": 2,
+      "difficultyTier": 3,
+      "frequencyRank": 491410,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/636.mp3?v=e3b3b02bcd32",
+      "hookAudioUrl": "audio/hooks/636.mp3?v=a7bd9a9aa8fa",
+      "senses": [
+        {
+          "senseId": 1384,
+          "definition": "Lukewarm in feeling, with only faint approval or interest behind it.",
+          "plainLanguageDefinition": "Only a little interested or pleased, rather than excited.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1384.mp3?v=ad9694b4b49a",
+          "examples": [
+            {
+              "exampleId": 6560,
+              "text": "Reviewers called the new phone \"fine,\" and shoppers were just as tepid: the lines outside the stores were gone by lunchtime.",
+              "audioUrl": "audio/sentences/6560.mp3?v=8962bf085836",
+              "clozeTarget": "tepid"
+            },
+            {
+              "exampleId": 6561,
+              "text": "The show's ratings stayed tepid all season, so the network quietly moved it to Saturday nights.",
+              "audioUrl": "audio/sentences/6561.mp3?v=1af18cdaacd7",
+              "clozeTarget": "tepid"
+            },
+            {
+              "exampleId": 6562,
+              "text": "Despite the free pizza, the 8 a.m. budget meeting drew a tepid turnout, and most of the chairs stayed empty.",
+              "audioUrl": "audio/sentences/6562.mp3?v=e5fb27a451bf",
+              "clozeTarget": "tepid"
+            },
+            {
+              "exampleId": 6563,
+              "text": "Most neighbors couldn't be bothered to sign up, and the tepid response left the volunteers with a warehouse of unused bins.",
+              "audioUrl": "audio/sentences/6563.mp3?v=31be72deb8a5",
+              "clozeTarget": "tepid"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Quick to shrink back from new people or risks.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Taken as agreed because no one objects, though nothing is said aloud.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Thick with floating grit that makes water look brown and murky.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Stinking of things left too long to rot.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Bloated and pompous in style, so that reading it is a slog.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "senseId": 1396,
+          "definition": "Only faintly warm, as water is after standing for a while.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1396.mp3?v=21d1c9991c0a",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "lukewarm",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "half-hearted",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unenthusiastic",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "cool",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "enthusiastic",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "eager",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "keen",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Tepid is Latin tepidus, lukewarm: a tepid welcome feels like bathwater that has gone cool."
+      ]
+    },
+    {
+      "wordId": 637,
+      "headword": "unfettered",
+      "partOfSpeech": "adjective",
+      "ipa": "/ʌnˈfɛtɚd/",
+      "syllables": 3,
+      "difficultyTier": 2,
+      "frequencyRank": 314587,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/637.mp3?v=7199772e173b",
+      "hookAudioUrl": "audio/hooks/637.mp3?v=16780f85a9a9",
+      "senses": [
+        {
+          "senseId": 1386,
+          "definition": "Free of any checks or restraints, so it can go as far as it will.",
+          "plainLanguageDefinition": "Completely free, with no limits on what it can do.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1386.mp3?v=744d51d5aa37",
+          "examples": [
+            {
+              "exampleId": 6564,
+              "text": "With the neighbors away for the summer, the kids had the unfettered run of the big backyard and the creek beyond it.",
+              "audioUrl": "audio/sentences/6564.mp3?v=becd2d3cf28e",
+              "clozeTarget": "unfettered"
+            },
+            {
+              "exampleId": 6565,
+              "text": "When the last dam on the river came down, salmon could swim unfettered from the ocean to their old spawning grounds.",
+              "audioUrl": "audio/sentences/6565.mp3?v=d0ca01135a11",
+              "clozeTarget": "unfettered"
+            },
+            {
+              "exampleId": 6566,
+              "text": "For the first time, the director worked unfettered by studio notes and shot the ending she had always wanted.",
+              "audioUrl": "audio/sentences/6566.mp3?v=6e13db438c9f",
+              "clozeTarget": "unfettered"
+            },
+            {
+              "exampleId": 6567,
+              "text": "Goats with unfettered access to a vegetable garden will strip it bare in a single afternoon.",
+              "audioUrl": "audio/sentences/6567.mp3?v=fddadcb70f6a",
+              "clozeTarget": "unfettered"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Never taught to read, or taught very little.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Showing someone at their worst, in a light that does them no favors.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Truly felt, with nothing put on for show.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Thrown off balance and ill at ease after some upset.",
+              "kind": "mc",
+              "difficulty": 2
+            },
+            {
+              "lemma": "Kept in its first form, with no edits or changes made.",
+              "kind": "mc",
+              "difficulty": 2
+            }
+          ]
+        },
+        {
+          "senseId": 1397,
+          "definition": "Not held by chains or leg irons.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1397.mp3?v=318ba48c000f",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "unrestrained",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unchecked",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unbridled",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unrestricted",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "unconstrained",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "restricted",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "constrained",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "restrained",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "limited",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Unfettered is un- plus fetter, a chain locked around a prisoner's ankles: unfettered power is power with its chains taken off."
+      ]
+    },
+    {
+      "wordId": 638,
+      "headword": "verdant",
+      "partOfSpeech": "adjective",
+      "ipa": "/ˈvɝdənt/",
+      "syllables": 2,
+      "difficultyTier": 3,
+      "frequencyRank": 586816,
+      "etymology": null,
+      "roots": [],
+      "watchOut": null,
+      "pairings": [],
+      "audioUrl": "audio/words/638.mp3?v=e5ca15fc2389",
+      "hookAudioUrl": "audio/hooks/638.mp3?v=2fb8cd7cc8f5",
+      "senses": [
+        {
+          "senseId": 1387,
+          "definition": "Lush and green with plants that are growing well.",
+          "plainLanguageDefinition": "Bright green and full of growing grass and trees.",
+          "senseOrder": 1,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1387.mp3?v=588a57918368",
+          "examples": [
+            {
+              "exampleId": 6568,
+              "text": "After days of dry scrub, the hikers stumbled into a verdant canyon fed by a hidden spring.",
+              "audioUrl": "audio/sentences/6568.mp3?v=d6d311193c28",
+              "clozeTarget": "verdant"
+            },
+            {
+              "exampleId": 6569,
+              "text": "The once-bare rooftop is now a verdant garden of ferns, herbs and climbing beans.",
+              "audioUrl": "audio/sentences/6569.mp3?v=fca794a6a437",
+              "clozeTarget": "verdant"
+            },
+            {
+              "exampleId": 6570,
+              "text": "The golf course stayed verdant all through the drought, thanks to millions of gallons of piped water.",
+              "audioUrl": "audio/sentences/6570.mp3?v=c6c0a2277f87",
+              "clozeTarget": "verdant"
+            },
+            {
+              "exampleId": 6571,
+              "text": "The abandoned rail line has become a verdant walking trail, its tracks hidden under moss and wildflowers.",
+              "audioUrl": "audio/sentences/6571.mp3?v=bf4a0e02781c",
+              "clozeTarget": "verdant"
+            }
+          ],
+          "distractors": [
+            {
+              "lemma": "Fired by deep devotion to a person or a cause.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Grimly witty, with jokes that bite at their target.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Long-winded, padding every point with needless words.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Given to telling the truth, even when a lie would be easier.",
+              "kind": "mc",
+              "difficulty": 3
+            },
+            {
+              "lemma": "Always on watch, ready to spot a threat the moment it appears.",
+              "kind": "mc",
+              "difficulty": 3
+            }
+          ]
+        },
+        {
+          "senseId": 1398,
+          "definition": "Having the fresh green color of young leaves.",
+          "plainLanguageDefinition": null,
+          "senseOrder": 2,
+          "register": null,
+          "alsoMeans": false,
+          "audioUrl": "audio/definitions/1398.mp3?v=8f0661ed81fc",
+          "examples": [],
+          "distractors": []
+        }
+      ],
+      "relations": [
+        {
+          "relatedLemma": "lush",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "green",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "leafy",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "grassy",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "luxuriant",
+          "relationType": "synonym"
+        },
+        {
+          "relatedLemma": "barren",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "arid",
+          "relationType": "antonym"
+        },
+        {
+          "relatedLemma": "parched",
+          "relationType": "antonym"
+        }
+      ],
+      "mnemonics": [
+        "Verdant goes back to Old French vert, green, the same vert found in verdigris, the green film on old copper: verdant land is green from end to end."
       ]
     }
   ]

@@ -593,6 +593,29 @@ visceral
 whet
 wrest
 
+# --- added 2026-11-16: praxis and 20 more words, chosen by modern frequency ---
+attrition
+bifurcate
+expropriate
+extrapolate
+genteel
+heuristic
+incendiary
+interloper
+juncture
+moratorium
+palpable
+praxis
+prerogative
+seminal
+sequester
+stipulate
+subjugate
+subvert
+tepid
+unfettered
+verdant
+
 # --- messy entries (exercise normalization/dedupe/drop in stage 01) ---
 Abate
 ABSCOND
