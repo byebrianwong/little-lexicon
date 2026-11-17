@@ -50,9 +50,17 @@ export function WordsLayout({
         <View className="flex-row items-center justify-between">
           <H1>Words</H1>
           {onSearch ? (
-            // -mr-3 lines the drawn icon up with the column's right edge;
-            // the button around it is 44 px for the hit area.
-            <IconButton icon="search" label="Search words" onPress={onSearch} className="-mr-3" />
+            // The button is 44 px square for the hit area. -mr-3 lines the
+            // drawn icon up with the column's right edge. -my-[2px] lets the
+            // button overhang the 40 px title line by 2 px above and below,
+            // so the row stays as tall as the title and nothing under it
+            // moves.
+            <IconButton
+              icon="search"
+              label="Search words"
+              onPress={onSearch}
+              className="-mr-3 -my-[2px]"
+            />
           ) : null}
         </View>
         {/* Four views fit one line on a 360-point phone with this gap. A
