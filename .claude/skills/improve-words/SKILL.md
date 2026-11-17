@@ -231,7 +231,8 @@ The writer prompt, with the paths filled in:
 For a request like "add 100 more words". First done on 2026-10-12 (abjure
 to venal, word ids 318 to 417), then again the same day (acolyte to wry,
 ids 418 to 517; 470 to 481 were held back unused), then on 2026-10-17
-(adjudicate to wrest, ids 518 to 617).
+(adjudicate to wrest, ids 518 to 617), then on 2026-11-16 (praxis and 20
+more, attrition to verdant, ids 618 to 638).
 
 1. Pick the words and check each one before it goes in, because a word's id
    is permanent once it is in the record. It must not already be in the
@@ -256,19 +257,28 @@ ids 418 to 517; 470 to 481 were held back unused), then on 2026-10-17
      timid) and near-copies of a taught word (contrition next to contrite,
      presage next to portend).
    - Treat the frequency of a name or brand with care (cavalier, craven,
-     aegis).
+     aegis). The frequency data includes film subtitles and social media,
+     so characters and titles count too: credence (a Fantastic Beasts
+     character), gambit (The Queen's Gambit), specter, juggernaut, motley
+     and praxis (the Praxis teacher exams).
    - Avoid words whose meaning is disputed today (bemused, enormity): the
      app shows one first sense, so either choice misleads.
 
    Start from two or three times as many candidates as you need. On the
-   second run, about 1,000 candidates gave 650 in the band. Have a subagent
-   check the shortlist against these rules before the words go in; it
-   swapped 5 of 100.
+   second run, about 1,000 candidates gave 650 in the band. Literary words
+   mostly fall under 0.3: on 2026-11-16 only 15 of 147 (hagiography,
+   jejune, sinecure and the like) were in the band, while 129 of 169 words
+   from news and essays were. Have a subagent check the shortlist against
+   these rules before the words go in; it swapped 5 of 100, and 4 of 21 on
+   2026-11-16. Give it each word's parts of speech in the prompt: a checker
+   that opened the WordNet entry files timed out twice.
 2. Add the words to the seed file as a dated section above the "messy
    entries" section.
 3. From `pipeline/`, run `npx tsx src/run.ts --only=words`, then
    `--only=senses`. Both are free (Datamuse and WordNet). Do not run the
-   `generate` stage; with no API key it skips itself.
+   `generate` stage; with no API key it skips itself. `words` looks up
+   every word on Datamuse and took 16.5 minutes for 626 words on
+   2026-11-16, so run it in the background.
 4. `words` re-tiers the whole list into five equal groups, so some existing
    words move one tier (55 of 291 on 2026-10-12). That is expected. The
    level picker's sample words are checked by
@@ -379,7 +389,10 @@ before handing a worksheet over.
 - **An example where a wrong answer fits the blank.** remonstrate's
   "gathered outside headquarters to remonstrate against the wage cuts"
   reads better with demonstrate, which was one of its wrong answers. Check
-  each example against the word's own wrong answers.
+  each example against the word's own wrong answers. On 2026-11-16 it
+  caught two new words: unflattering fit "unfettered rants" and
+  incessant fit "incessant insults". timid nearly fit two of tepid's
+  blanks too.
 - **WordNet first senses that belong to another word.** pugnacious came
   through as "tough and callous by virtue of experience" (hard-bitten's
   meaning), and every example followed it. savant led with "initiate".

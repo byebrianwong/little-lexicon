@@ -2,16 +2,16 @@
   "meta": {
     "note": "Pipeline record for Little Lexicon content. Word ids are permanent: saved progress refers to them. Edit content here, then run `npx tsx src/run.ts --only=export`.",
     "createdAt": "2026-09-27T21:49:57.900Z",
-    "updatedAt": "2026-10-30T08:51:36.653Z"
+    "updatedAt": "2026-11-17T08:13:53.638Z"
   },
   "counters": {
-    "words": 617,
-    "senses": 1345,
-    "example_sentences": 6506,
-    "word_relations": 6605,
-    "distractors": 7333,
-    "mnemonics": 1055,
-    "reviews": 1571
+    "words": 638,
+    "senses": 1403,
+    "example_sentences": 6615,
+    "word_relations": 6801,
+    "distractors": 7433,
+    "mnemonics": 1076,
+    "reviews": 1592
   },
   "words": [
     {
@@ -2166,7 +2166,7 @@
       "ipa": "/fəˈleɪʃəs/",
       "syllables": 3,
       "frequency_rank": 334718,
-      "difficulty_tier": 2,
+      "difficulty_tier": 3,
       "etymology": "Via Old French from Latin fallacia, \"deceit\", from fallax, \"deceptive\", from fallere, \"to deceive\". False and fallacy come from the same verb.",
       "audio_url": null,
       "roots": [
@@ -2632,7 +2632,7 @@
       "ipa": "/ɪmˈpɝviəs/",
       "syllables": 4,
       "frequency_rank": 206478,
-      "difficulty_tier": 1,
+      "difficulty_tier": 2,
       "etymology": "From Latin impervius, impassable, from in-, not, and pervius, having a way through, which joins per, through, and via, way.",
       "audio_url": null,
       "roots": [
@@ -3437,7 +3437,7 @@
       "ipa": "/nɪˈfɛriəs/",
       "syllables": 4,
       "frequency_rank": 592789,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": "From Latin nefarius, from nefas (\"a wrong against divine law\"), which joins ne- (\"not\") to fas (\"what divine law allows\").",
       "audio_url": null,
       "roots": [],
@@ -4186,7 +4186,7 @@
       "ipa": "/ˈprɪˌstin/",
       "syllables": 2,
       "frequency_rank": 208595,
-      "difficulty_tier": 1,
+      "difficulty_tier": 2,
       "etymology": "From Latin pristinus (\"former, original\"), by way of Middle French: something pristine is still in its first, unspoiled state.",
       "audio_url": null,
       "roots": [],
@@ -5166,7 +5166,7 @@
       "ipa": "/ˈtæsəˌtɝn/",
       "syllables": 3,
       "frequency_rank": 591040,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": "Borrowed from French taciturne, or made by shortening taciturnity; either way it goes back to Latin tacitus (\"silent\"), from tacere (\"to be silent\"), the verb that also gives tacit.",
       "audio_url": null,
       "roots": [
@@ -6008,7 +6008,7 @@
       "ipa": "/əˈsɪdʒuəs/",
       "syllables": 4,
       "frequency_rank": 586871,
-      "difficulty_tier": 3,
+      "difficulty_tier": 4,
       "etymology": "From Latin assiduus, built on assidere, to sit by or settle at, from ad- and sedere, to sit: an assiduous person stays seated at a task until it is done.",
       "audio_url": null,
       "roots": [
@@ -10371,7 +10371,7 @@
       "ipa": "/ɑˈstɛnsəbəl/",
       "syllables": 4,
       "frequency_rank": 336913,
-      "difficulty_tier": 2,
+      "difficulty_tier": 3,
       "etymology": "From French ostensible, from Latin ostensus (\"shown\"), a form of ostendere (\"to show\"): the ostensible reason is the one put on display.",
       "audio_url": null,
       "roots": [
@@ -11069,6 +11069,237 @@
         "wrest power",
         "wrest concessions"
       ]
+    },
+    {
+      "id": 618,
+      "headword": "attrition",
+      "part_of_speech": "noun",
+      "ipa": "/əˈtrɪʃən/",
+      "syllables": 3,
+      "frequency_rank": 153505,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 619,
+      "headword": "bifurcate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈbaɪfɚˌkeɪt/",
+      "syllables": 3,
+      "frequency_rank": 1990588,
+      "difficulty_tier": 5,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 620,
+      "headword": "expropriate",
+      "part_of_speech": "verb",
+      "ipa": "/ɪkˈsproʊpriˌeɪt/",
+      "syllables": 4,
+      "frequency_rank": 1636040,
+      "difficulty_tier": 5,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 621,
+      "headword": "extrapolate",
+      "part_of_speech": "verb",
+      "ipa": "/ɪkˈstræpəˌleɪt/",
+      "syllables": 4,
+      "frequency_rank": 459768,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 622,
+      "headword": "genteel",
+      "part_of_speech": "adjective",
+      "ipa": "/dʒɛnˈtil/",
+      "syllables": 2,
+      "frequency_rank": 229611,
+      "difficulty_tier": 2,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 623,
+      "headword": "heuristic",
+      "part_of_speech": "noun",
+      "ipa": "/hjʊˈrɪstɪk/",
+      "syllables": 3,
+      "frequency_rank": 100927,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 624,
+      "headword": "incendiary",
+      "part_of_speech": "adjective",
+      "ipa": "/ɪnˈsɛndiˌɛri/",
+      "syllables": 5,
+      "frequency_rank": 445749,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 625,
+      "headword": "interloper",
+      "part_of_speech": "noun",
+      "ipa": "/ˈɪntɚˌloʊpɚ/",
+      "syllables": 4,
+      "frequency_rank": 1298870,
+      "difficulty_tier": 5,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 626,
+      "headword": "juncture",
+      "part_of_speech": "noun",
+      "ipa": "/ˈdʒʌŋktʃɚ/",
+      "syllables": 2,
+      "frequency_rank": 106596,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 627,
+      "headword": "moratorium",
+      "part_of_speech": "noun",
+      "ipa": "/ˌmɔrəˈtɔriəm/",
+      "syllables": 5,
+      "frequency_rank": 287027,
+      "difficulty_tier": 2,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 628,
+      "headword": "palpable",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈpælpəbəl/",
+      "syllables": 3,
+      "frequency_rank": null,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 629,
+      "headword": "praxis",
+      "part_of_speech": "noun",
+      "ipa": "/ˈpræksɪs/",
+      "syllables": 2,
+      "frequency_rank": 128481,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 630,
+      "headword": "prerogative",
+      "part_of_speech": "noun",
+      "ipa": "/prɪˈrɑɡətɪv/",
+      "syllables": 4,
+      "frequency_rank": 118491,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 631,
+      "headword": "seminal",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈsɛmɪnəl/",
+      "syllables": 3,
+      "frequency_rank": 100146,
+      "difficulty_tier": 1,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 632,
+      "headword": "sequester",
+      "part_of_speech": "verb",
+      "ipa": "/sɪˈkwɛstɚ/",
+      "syllables": 3,
+      "frequency_rank": 1694594,
+      "difficulty_tier": 5,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 633,
+      "headword": "stipulate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈstɪpjəˌleɪt/",
+      "syllables": 3,
+      "frequency_rank": 385311,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 634,
+      "headword": "subjugate",
+      "part_of_speech": "verb",
+      "ipa": "/ˈsʌbdʒəˌɡeɪt/",
+      "syllables": 3,
+      "frequency_rank": 750372,
+      "difficulty_tier": 4,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 635,
+      "headword": "subvert",
+      "part_of_speech": "verb",
+      "ipa": "/səbˈvɝt/",
+      "syllables": 2,
+      "frequency_rank": 287387,
+      "difficulty_tier": 2,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 636,
+      "headword": "tepid",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈtɛpɪd/",
+      "syllables": 2,
+      "frequency_rank": 491410,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 637,
+      "headword": "unfettered",
+      "part_of_speech": "adjective",
+      "ipa": "/ʌnˈfɛtɚd/",
+      "syllables": 3,
+      "frequency_rank": 314587,
+      "difficulty_tier": 2,
+      "etymology": null,
+      "audio_url": null
+    },
+    {
+      "id": 638,
+      "headword": "verdant",
+      "part_of_speech": "adjective",
+      "ipa": "/ˈvɝdənt/",
+      "syllables": 2,
+      "frequency_rank": 586816,
+      "difficulty_tier": 3,
+      "etymology": null,
+      "audio_url": null
     }
   ],
   "senses": [
@@ -18319,6 +18550,302 @@
       "sense_order": 2,
       "register": null,
       "also_means": false
+    },
+    {
+      "id": 1346,
+      "word_id": 618,
+      "definition": "The slow thinning of a group or force as members drop out or are lost over time and not replaced.",
+      "plain_language_definition": "A slow loss of people or strength over time, often because those who leave are not replaced.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1349,
+      "word_id": 619,
+      "definition": "Split into two diverging branches or paths, or make something split that way.",
+      "plain_language_definition": "To split in two, the way a single road forks to the left and the right.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1351,
+      "word_id": 620,
+      "definition": "Use official power to take private land or assets from their owners, often for public projects.",
+      "plain_language_definition": "For a government to seize people's land, homes or businesses, often to put them to public use.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1352,
+      "word_id": 621,
+      "definition": "Carry a pattern found in known data over to cases or times that were never measured.",
+      "plain_language_definition": "To use what you already know to make a guess about what you have not seen yet.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1355,
+      "word_id": 622,
+      "definition": "Polished in an upper-class way, sometimes so carefully that it seems prim or put on.",
+      "plain_language_definition": "Very proper and refined, in a fussy or upper-class way.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1356,
+      "word_id": 623,
+      "definition": "A rough rule of thumb that leads to a workable answer quickly, though not always the best or right one.",
+      "plain_language_definition": "A shortcut for solving a problem or making a choice that works most of the time, but not always.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1357,
+      "word_id": 624,
+      "definition": "Provocative enough to stir up fierce anger or conflict, often deliberately.",
+      "plain_language_definition": "Likely to make people furious or start a fight, often on purpose.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1360,
+      "word_id": 625,
+      "definition": "An outsider who intrudes where the people already present feel the newcomer has no right to be.",
+      "plain_language_definition": "Someone who barges in among people who would rather the newcomer stayed away.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1361,
+      "word_id": 626,
+      "definition": "A moment in the course of events, often one where much depends on what happens next.",
+      "plain_language_definition": "A moment in how things unfold, often one where a big choice has to be made.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1364,
+      "word_id": 627,
+      "definition": "An official, time-limited ban on some action, often while its risks are studied.",
+      "plain_language_definition": "A temporary ban, often set by a government, on doing a certain thing.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1366,
+      "word_id": 628,
+      "definition": "Sensed so strongly or seen so clearly that no one present could miss it.",
+      "plain_language_definition": "So obvious that you can practically feel it in the air.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1369,
+      "word_id": 629,
+      "definition": "Ideas carried out in practice, as opposed to just worked out in theory.",
+      "plain_language_definition": "Turning what you know or believe into things you actually do.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1370,
+      "word_id": 630,
+      "definition": "A power or choice that goes with a certain role or rank, and is not open to others.",
+      "plain_language_definition": "A special right to do or decide something that only you, or people in your role, have.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1371,
+      "word_id": 631,
+      "definition": "Breaking new ground in a way that strongly shapes later work in the same field.",
+      "plain_language_definition": "Being an early work that many later ones learned from and followed.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1373,
+      "word_id": 632,
+      "definition": "Set a person or thing apart and keep it out of others' reach for a time.",
+      "plain_language_definition": "To keep someone or something shut away from everyone else for a while.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1376,
+      "word_id": 633,
+      "definition": "Set down in binding terms a specific condition that must be met.",
+      "plain_language_definition": "To make something a firm condition of a deal or a rule.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1379,
+      "word_id": 634,
+      "definition": "Force a people or group under one's rule and keep them powerless.",
+      "plain_language_definition": "To take control of people by force and keep them down.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1381,
+      "word_id": 635,
+      "definition": "Undercut the power of an established order, often by stealth.",
+      "plain_language_definition": "To work against a system or idea in hidden ways, trying to bring it down.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1384,
+      "word_id": 636,
+      "definition": "Lukewarm in feeling, with only faint approval or interest behind it.",
+      "plain_language_definition": "Only a little interested or pleased, rather than excited.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1386,
+      "word_id": 637,
+      "definition": "Free of any checks or restraints, so it can go as far as it will.",
+      "plain_language_definition": "Completely free, with no limits on what it can do.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1387,
+      "word_id": 638,
+      "definition": "Lush and green with plants that are growing well.",
+      "plain_language_definition": "Bright green and full of growing grass and trees.",
+      "sense_order": 1,
+      "register": null
+    },
+    {
+      "id": 1388,
+      "word_id": 629,
+      "definition": "An established way of doing things that a group follows as a matter of course.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1389,
+      "word_id": 631,
+      "definition": "Relating to semen, the fluid that carries sperm.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1390,
+      "word_id": 632,
+      "definition": "Hold a debtor's property under a court order until a claim is settled.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1391,
+      "word_id": 632,
+      "definition": "Capture carbon dioxide or another gas and lock it away where it cannot reach the air.",
+      "plain_language_definition": null,
+      "sense_order": 3,
+      "register": null
+    },
+    {
+      "id": 1392,
+      "word_id": 633,
+      "definition": "Agree, in a lawsuit or debate, to treat a fact as settled so no one needs to prove it.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1393,
+      "word_id": 634,
+      "definition": "Rank one goal or interest below another and let it give way.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1394,
+      "word_id": 635,
+      "definition": "Turn someone against their own loyalties or principles.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1395,
+      "word_id": 635,
+      "definition": "Upend a familiar convention or what an audience expects to happen.",
+      "plain_language_definition": null,
+      "sense_order": 3,
+      "register": null
+    },
+    {
+      "id": 1396,
+      "word_id": 636,
+      "definition": "Only faintly warm, as water is after standing for a while.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1397,
+      "word_id": 637,
+      "definition": "Not held by chains or leg irons.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1398,
+      "word_id": 638,
+      "definition": "Having the fresh green color of young leaves.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1399,
+      "word_id": 618,
+      "definition": "The grinding down of rock or tooth enamel by repeated rubbing.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1400,
+      "word_id": 624,
+      "definition": "Filled with fuel or chemicals meant to set its target ablaze.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1401,
+      "word_id": 626,
+      "definition": "The spot where two pieces are fastened or fitted together.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1402,
+      "word_id": 627,
+      "definition": "A legal grace period that lets debtors put off their payments for a time.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
+    },
+    {
+      "id": 1403,
+      "word_id": 628,
+      "definition": "Physically present in a way that a hand could feel.",
+      "plain_language_definition": null,
+      "sense_order": 2,
+      "register": null
     }
   ],
   "example_sentences": [
@@ -40908,6 +41435,762 @@
       "sense_id": 761,
       "text": "The dictator took malevolent pleasure in making prisoners beg for food they would never receive.",
       "cloze_target": "malevolent",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6532,
+      "sense_id": 1369,
+      "text": "The engineers wanted praxis, not more white papers, so they built a small test turbine on the factory roof.",
+      "cloze_target": "praxis",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6533,
+      "sense_id": 1369,
+      "text": "For the union organizer, reading about workers' rights mattered less than praxis: knocking on doors and signing people up.",
+      "cloze_target": "praxis",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6534,
+      "sense_id": 1369,
+      "text": "Critics said the think tank turned out plenty of elegant theory but almost no praxis that changed how a single city was run.",
+      "cloze_target": "praxis",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6535,
+      "sense_id": 1369,
+      "text": "Her book argues that caring about the planet means little without praxis, the daily habits of buying less and wasting less.",
+      "cloze_target": "praxis",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6536,
+      "sense_id": 1370,
+      "text": "Naming the new puppy was the youngest child's prerogative, so the family ended up with a dog called Pancake.",
+      "cloze_target": "prerogative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6537,
+      "sense_id": 1370,
+      "text": "In this orchestra, choosing the encore is the conductor's prerogative, and the players simply learn whatever she picks.",
+      "cloze_target": "prerogative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6538,
+      "sense_id": 1370,
+      "text": "The referee has the prerogative to add extra time at the end of each half, and no coach can overrule him.",
+      "cloze_target": "prerogative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6539,
+      "sense_id": 1370,
+      "text": "As the host, Mina claimed the prerogative of carving the turkey, and nobody else dared reach for the knife.",
+      "cloze_target": "prerogative",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6540,
+      "sense_id": 1371,
+      "text": "Many hip-hop producers name one seminal album from 1988 as the record that made them want to make beats.",
+      "cloze_target": "seminal",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6541,
+      "sense_id": 1371,
+      "text": "The game's seminal design, with its open world and branching quests, was copied by other studios for decades.",
+      "cloze_target": "seminal",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6542,
+      "sense_id": 1371,
+      "text": "Her seminal essay on busy sidewalks changed how a generation of city planners thought about streets.",
+      "cloze_target": "seminal",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6543,
+      "sense_id": 1371,
+      "text": "That seminal 1970s paper on bird migration set out the tracking methods that ornithologists still use today.",
+      "cloze_target": "seminal",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6544,
+      "sense_id": 1373,
+      "text": "The novelist sequestered herself in a borrowed cabin with no internet until the final chapter was done.",
+      "cloze_target": "sequestered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6545,
+      "sense_id": 1373,
+      "text": "Exam papers are sequestered in a locked vault until the morning of the test, so no teacher can peek.",
+      "cloze_target": "sequestered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6546,
+      "sense_id": 1373,
+      "text": "Health officials sequestered the cruise passengers in their cabins for two weeks after the outbreak.",
+      "cloze_target": "sequestered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6547,
+      "sense_id": 1373,
+      "text": "Because the trial led the evening news, the judge sequestered the jurors and had their phones collected each night.",
+      "cloze_target": "sequestered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6548,
+      "sense_id": 1376,
+      "text": "The donor's gift stipulated that the new library wing must stay open to the public every weekend.",
+      "cloze_target": "stipulated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6549,
+      "sense_id": 1376,
+      "text": "The singer's tour contract stipulates a bowl of green apples and a quiet room before every concert.",
+      "cloze_target": "stipulates",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6550,
+      "sense_id": 1376,
+      "text": "Tournament rules stipulate that each chess clock be set to ninety minutes per player.",
+      "cloze_target": "stipulate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6551,
+      "sense_id": 1376,
+      "text": "The adoption papers stipulated that the rescued greyhound must never be left alone in a yard.",
+      "cloze_target": "stipulated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6552,
+      "sense_id": 1379,
+      "text": "The novel imagines a future in which machines have subjugated humanity, and people are worked like slaves to keep the servers running.",
+      "cloze_target": "subjugated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6553,
+      "sense_id": 1379,
+      "text": "For centuries the Spartans subjugated the helots, a farming people forced to hand over half of every harvest.",
+      "cloze_target": "subjugated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6554,
+      "sense_id": 1379,
+      "text": "The empire's laws were written to subjugate the conquered provinces, barring their people from owning land or bearing arms.",
+      "cloze_target": "subjugate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6555,
+      "sense_id": 1379,
+      "text": "Folk songs from the region still mourn the decades when a foreign crown subjugated their people and banned their language.",
+      "cloze_target": "subjugated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6556,
+      "sense_id": 1381,
+      "text": "The hackers hoped to subvert the bank's security system by slipping a fake update into its software.",
+      "cloze_target": "subvert",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6557,
+      "sense_id": 1381,
+      "text": "Officials accused the smugglers of bribing border guards to subvert the trade embargo.",
+      "cloze_target": "subvert",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6558,
+      "sense_id": 1381,
+      "text": "By quietly letting fans download its songs for free, the band set out to subvert the record labels' control over music.",
+      "cloze_target": "subvert",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6559,
+      "sense_id": 1381,
+      "text": "The mayor's critics said her emergency powers were being used to subvert the city council rather than to fight the flood.",
+      "cloze_target": "subvert",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6560,
+      "sense_id": 1384,
+      "text": "Reviewers called the new phone \"fine,\" and shoppers were just as tepid: the lines outside the stores were gone by lunchtime.",
+      "cloze_target": "tepid",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6561,
+      "sense_id": 1384,
+      "text": "The show's ratings stayed tepid all season, so the network quietly moved it to Saturday nights.",
+      "cloze_target": "tepid",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6562,
+      "sense_id": 1384,
+      "text": "Despite the free pizza, the 8 a.m. budget meeting drew a tepid turnout, and most of the chairs stayed empty.",
+      "cloze_target": "tepid",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6563,
+      "sense_id": 1384,
+      "text": "Most neighbors couldn't be bothered to sign up, and the tepid response left the volunteers with a warehouse of unused bins.",
+      "cloze_target": "tepid",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6564,
+      "sense_id": 1386,
+      "text": "With the neighbors away for the summer, the kids had the unfettered run of the big backyard and the creek beyond it.",
+      "cloze_target": "unfettered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6565,
+      "sense_id": 1386,
+      "text": "When the last dam on the river came down, salmon could swim unfettered from the ocean to their old spawning grounds.",
+      "cloze_target": "unfettered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6566,
+      "sense_id": 1386,
+      "text": "For the first time, the director worked unfettered by studio notes and shot the ending she had always wanted.",
+      "cloze_target": "unfettered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6567,
+      "sense_id": 1386,
+      "text": "Goats with unfettered access to a vegetable garden will strip it bare in a single afternoon.",
+      "cloze_target": "unfettered",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6568,
+      "sense_id": 1387,
+      "text": "After days of dry scrub, the hikers stumbled into a verdant canyon fed by a hidden spring.",
+      "cloze_target": "verdant",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6569,
+      "sense_id": 1387,
+      "text": "The once-bare rooftop is now a verdant garden of ferns, herbs and climbing beans.",
+      "cloze_target": "verdant",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6570,
+      "sense_id": 1387,
+      "text": "The golf course stayed verdant all through the drought, thanks to millions of gallons of piped water.",
+      "cloze_target": "verdant",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6571,
+      "sense_id": 1387,
+      "text": "The abandoned rail line has become a verdant walking trail, its tracks hidden under moss and wildflowers.",
+      "cloze_target": "verdant",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6572,
+      "sense_id": 1352,
+      "text": "After timing her first five kilometers, the runner extrapolated a finishing time for the whole marathon, forgetting that she always slows down near the end.",
+      "cloze_target": "extrapolated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6573,
+      "sense_id": 1352,
+      "text": "Astronomers extrapolated the comet's path from a week of sightings and predicted when it would swing past Earth again.",
+      "cloze_target": "extrapolated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6574,
+      "sense_id": 1352,
+      "text": "If you extrapolate the line on this chart of the town's water use, the reservoir runs dry by late August.",
+      "cloze_target": "extrapolate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6575,
+      "sense_id": 1352,
+      "text": "Engineers tested the cables at half their rated load and extrapolated how they would behave closer to the limit.",
+      "cloze_target": "extrapolated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6576,
+      "sense_id": 1346,
+      "text": "The chess club never banned anyone; it simply shrank through attrition as members moved away and nobody new signed up.",
+      "cloze_target": "attrition",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6577,
+      "sense_id": 1346,
+      "text": "By the last week of the expedition, attrition had cut the hiking party from fourteen to six, mostly through blisters and sprained ankles.",
+      "cloze_target": "attrition",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6578,
+      "sense_id": 1346,
+      "text": "Long-term health studies have to plan for attrition, since some volunteers move, lose interest or stop answering calls over the years.",
+      "cloze_target": "attrition",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6579,
+      "sense_id": 1346,
+      "text": "Every hard winter meant more attrition in the herd, as the oldest and weakest animals failed to find enough to eat.",
+      "cloze_target": "attrition",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6580,
+      "sense_id": 1349,
+      "text": "Partway down the chest, the windpipe bifurcates, sending one airway into each lung.",
+      "cloze_target": "bifurcates",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6581,
+      "sense_id": 1349,
+      "text": "The shipping company plans to bifurcate, with one new firm keeping the cargo ships and the other the ports.",
+      "cloze_target": "bifurcate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6582,
+      "sense_id": 1349,
+      "text": "Economists warn that the housing market has bifurcated, with prices soaring in big cities while small towns stall.",
+      "cloze_target": "bifurcated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6583,
+      "sense_id": 1349,
+      "text": "A single lightning bolt can bifurcate several times before it reaches the ground, splitting into ever thinner forks.",
+      "cloze_target": "bifurcate",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6584,
+      "sense_id": 1351,
+      "text": "In 1938 Mexico expropriated the oil fields run by American and British companies and placed them under a state firm.",
+      "cloze_target": "expropriated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6585,
+      "sense_id": 1351,
+      "text": "The heirs' lawyers argued that the painting had been expropriated from their Jewish grandparents in 1939, so the museum must give it back.",
+      "cloze_target": "expropriated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6586,
+      "sense_id": 1351,
+      "text": "Under the new land reform law, estates larger than five hundred hectares were expropriated and divided among the farmworkers who tilled them.",
+      "cloze_target": "expropriated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6587,
+      "sense_id": 1351,
+      "text": "During the French Revolution, the state expropriated the Church's vast lands and sold them off to pay down the national debt.",
+      "cloze_target": "expropriated",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6588,
+      "sense_id": 1355,
+      "text": "My grandmother never said that anyone had died, only that they had passed, since she always chose the most genteel word she could find.",
+      "cloze_target": "genteel",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6589,
+      "sense_id": 1355,
+      "text": "Readers expecting a genteel novel of drawing rooms and courtships were shocked by the brutal second half of the book.",
+      "cloze_target": "genteel",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6590,
+      "sense_id": 1355,
+      "text": "The boxing club tried to look genteel for its charity gala, with the fighters in bow ties sipping sparkling water.",
+      "cloze_target": "genteel",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6591,
+      "sense_id": 1355,
+      "text": "She was raised to keep her elbows off the table and her opinions to herself, a genteel upbringing she spent college rebelling against.",
+      "cloze_target": "genteel",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6592,
+      "sense_id": 1356,
+      "text": "Shoppers often use price as a heuristic for quality, assuming the more expensive bottle of wine must taste better.",
+      "cloze_target": "heuristic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6593,
+      "sense_id": 1356,
+      "text": "Chess beginners learn the heuristic of controlling the center long before they can calculate complicated attacks.",
+      "cloze_target": "heuristic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6594,
+      "sense_id": 1356,
+      "text": "Jeff Bezos's famous heuristic for team size was simple: if two pizzas cannot feed the group, it is too big.",
+      "cloze_target": "heuristic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6595,
+      "sense_id": 1356,
+      "text": "Psychologists have shown that a common heuristic, judging risk by how easily examples come to mind, leads people into predictable mistakes.",
+      "cloze_target": "heuristic",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6596,
+      "sense_id": 1357,
+      "text": "Before the final, the coach pinned the rival captain's incendiary quote to the locker room wall to fire up his players.",
+      "cloze_target": "incendiary",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6597,
+      "sense_id": 1357,
+      "text": "One incendiary post from the radio host, falsely accusing a local family of poisoning the town's water, brought an angry mob to their door by nightfall.",
+      "cloze_target": "incendiary",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6598,
+      "sense_id": 1357,
+      "text": "The manager's incendiary memo calling the strikers lazy freeloaders brought hundreds more workers onto the picket line.",
+      "cloze_target": "incendiary",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6599,
+      "sense_id": 1357,
+      "text": "The general's incendiary vow to 'take back what is ours' sent troops on both sides of the border to their posts within the hour.",
+      "cloze_target": "incendiary",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6600,
+      "sense_id": 1360,
+      "text": "The old fishermen saw the tech workers who had bought cottages along the harbor as interlopers who would never understand the town.",
+      "cloze_target": "interlopers",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6601,
+      "sense_id": 1360,
+      "text": "Fans who had followed the band since its garage days treated the crowds drawn in by a car commercial as interlopers.",
+      "cloze_target": "interlopers",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6602,
+      "sense_id": 1360,
+      "text": "During nesting season, any crow that strays near the hawks' tree is chased off as an interloper.",
+      "cloze_target": "interloper",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6603,
+      "sense_id": 1360,
+      "text": "A reporter who slipped into the closed board meeting was spotted within minutes and escorted out as an interloper.",
+      "cloze_target": "interloper",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6604,
+      "sense_id": 1361,
+      "text": "With the score tied and two minutes left, the game had reached the juncture where a single mistake would decide it.",
+      "cloze_target": "juncture",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6605,
+      "sense_id": 1361,
+      "text": "The novel leaves its heroine at a juncture: she can take the scholarship abroad or stay home to run the family farm.",
+      "cloze_target": "juncture",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6606,
+      "sense_id": 1361,
+      "text": "At that juncture in the investigation, the detectives had a suspect and a motive but still no weapon.",
+      "cloze_target": "juncture",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6607,
+      "sense_id": 1361,
+      "text": "Looking back, she could name the exact juncture when baking bread stopped being a hobby and became a business.",
+      "cloze_target": "juncture",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6608,
+      "sense_id": 1364,
+      "text": "After two climbers died in a month, the park service declared a moratorium on winter ascents of the north face.",
+      "cloze_target": "moratorium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6609,
+      "sense_id": 1364,
+      "text": "Scientists called for a moratorium on editing the genes of human embryos until the risks were better understood.",
+      "cloze_target": "moratorium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6610,
+      "sense_id": 1364,
+      "text": "My sister and I keep a strict moratorium on discussing politics at holiday dinners, and it has saved several evenings.",
+      "cloze_target": "moratorium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6611,
+      "sense_id": 1364,
+      "text": "The airline lifted its moratorium on flights to the island once the volcano stopped spewing ash.",
+      "cloze_target": "moratorium",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6612,
+      "sense_id": 1366,
+      "text": "When the bride's former boyfriend walked into the reception, the awkwardness in the hall was palpable.",
+      "cloze_target": "palpable",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6613,
+      "sense_id": 1366,
+      "text": "The two candidates' dislike for each other was palpable, even as they shook hands and smiled for the cameras.",
+      "cloze_target": "palpable",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6614,
+      "sense_id": 1366,
+      "text": "The boredom in the lecture hall was palpable: half the students were asleep and the rest were scrolling on their phones.",
+      "cloze_target": "palpable",
+      "audio_url": null,
+      "source": "claude",
+      "is_generated": true
+    },
+    {
+      "id": 6615,
+      "sense_id": 1366,
+      "text": "Deep in the cave, the children's fear was palpable; they stopped talking and gripped each other's hands.",
+      "cloze_target": "palpable",
       "audio_url": null,
       "source": "claude",
       "is_generated": true
@@ -70117,6 +71400,839 @@
       "related_lemma": "differentiate",
       "relation_type": "antonym",
       "source": "claude"
+    },
+    {
+      "id": 6683,
+      "word_id": 629,
+      "related_lemma": "practice",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6684,
+      "word_id": 629,
+      "related_lemma": "application",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6685,
+      "word_id": 629,
+      "related_lemma": "theory",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6686,
+      "word_id": 630,
+      "related_lemma": "privilege",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6687,
+      "word_id": 630,
+      "related_lemma": "right",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6688,
+      "word_id": 630,
+      "related_lemma": "entitlement",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6689,
+      "word_id": 630,
+      "related_lemma": "exclusive right",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6690,
+      "word_id": 631,
+      "related_lemma": "influential",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6691,
+      "word_id": 631,
+      "related_lemma": "formative",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6692,
+      "word_id": 631,
+      "related_lemma": "germinal",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6693,
+      "word_id": 631,
+      "related_lemma": "original",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6694,
+      "word_id": 631,
+      "related_lemma": "derivative",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6695,
+      "word_id": 631,
+      "related_lemma": "unoriginal",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6696,
+      "word_id": 632,
+      "related_lemma": "isolate",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6697,
+      "word_id": 632,
+      "related_lemma": "seclude",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6698,
+      "word_id": 632,
+      "related_lemma": "cloister",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6699,
+      "word_id": 633,
+      "related_lemma": "specify",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6700,
+      "word_id": 633,
+      "related_lemma": "require",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6701,
+      "word_id": 633,
+      "related_lemma": "lay down",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6702,
+      "word_id": 633,
+      "related_lemma": "prescribe",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6703,
+      "word_id": 634,
+      "related_lemma": "subdue",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6704,
+      "word_id": 634,
+      "related_lemma": "conquer",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6705,
+      "word_id": 634,
+      "related_lemma": "oppress",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6706,
+      "word_id": 634,
+      "related_lemma": "repress",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6707,
+      "word_id": 634,
+      "related_lemma": "enslave",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6708,
+      "word_id": 634,
+      "related_lemma": "subject",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6709,
+      "word_id": 634,
+      "related_lemma": "liberate",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6710,
+      "word_id": 634,
+      "related_lemma": "emancipate",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6711,
+      "word_id": 634,
+      "related_lemma": "free",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6712,
+      "word_id": 635,
+      "related_lemma": "undermine",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6713,
+      "word_id": 635,
+      "related_lemma": "sabotage",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6714,
+      "word_id": 635,
+      "related_lemma": "undercut",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6715,
+      "word_id": 635,
+      "related_lemma": "overthrow",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6716,
+      "word_id": 635,
+      "related_lemma": "destabilize",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6717,
+      "word_id": 635,
+      "related_lemma": "uphold",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6718,
+      "word_id": 635,
+      "related_lemma": "bolster",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6719,
+      "word_id": 636,
+      "related_lemma": "lukewarm",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6720,
+      "word_id": 636,
+      "related_lemma": "half-hearted",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6721,
+      "word_id": 636,
+      "related_lemma": "unenthusiastic",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6722,
+      "word_id": 636,
+      "related_lemma": "cool",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6723,
+      "word_id": 636,
+      "related_lemma": "enthusiastic",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6724,
+      "word_id": 636,
+      "related_lemma": "eager",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6725,
+      "word_id": 636,
+      "related_lemma": "keen",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6726,
+      "word_id": 637,
+      "related_lemma": "unrestrained",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6727,
+      "word_id": 637,
+      "related_lemma": "unchecked",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6728,
+      "word_id": 637,
+      "related_lemma": "unbridled",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6729,
+      "word_id": 637,
+      "related_lemma": "unrestricted",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6730,
+      "word_id": 637,
+      "related_lemma": "unconstrained",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6731,
+      "word_id": 637,
+      "related_lemma": "restricted",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6732,
+      "word_id": 637,
+      "related_lemma": "constrained",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6733,
+      "word_id": 637,
+      "related_lemma": "restrained",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6734,
+      "word_id": 637,
+      "related_lemma": "limited",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6735,
+      "word_id": 638,
+      "related_lemma": "lush",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6736,
+      "word_id": 638,
+      "related_lemma": "green",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6737,
+      "word_id": 638,
+      "related_lemma": "leafy",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6738,
+      "word_id": 638,
+      "related_lemma": "grassy",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6739,
+      "word_id": 638,
+      "related_lemma": "luxuriant",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6740,
+      "word_id": 638,
+      "related_lemma": "barren",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6741,
+      "word_id": 638,
+      "related_lemma": "arid",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6742,
+      "word_id": 638,
+      "related_lemma": "parched",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6743,
+      "word_id": 621,
+      "related_lemma": "project",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6744,
+      "word_id": 621,
+      "related_lemma": "infer",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6745,
+      "word_id": 621,
+      "related_lemma": "predict",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6746,
+      "word_id": 618,
+      "related_lemma": "depletion",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6747,
+      "word_id": 618,
+      "related_lemma": "dwindling",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6748,
+      "word_id": 618,
+      "related_lemma": "erosion",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6749,
+      "word_id": 618,
+      "related_lemma": "reduction",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6750,
+      "word_id": 618,
+      "related_lemma": "growth",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6751,
+      "word_id": 618,
+      "related_lemma": "replenishment",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6752,
+      "word_id": 619,
+      "related_lemma": "fork",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6753,
+      "word_id": 619,
+      "related_lemma": "split",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6754,
+      "word_id": 619,
+      "related_lemma": "branch",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6755,
+      "word_id": 619,
+      "related_lemma": "divide",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6756,
+      "word_id": 619,
+      "related_lemma": "converge",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6757,
+      "word_id": 619,
+      "related_lemma": "merge",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6758,
+      "word_id": 620,
+      "related_lemma": "confiscate",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6759,
+      "word_id": 620,
+      "related_lemma": "seize",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6760,
+      "word_id": 620,
+      "related_lemma": "commandeer",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6761,
+      "word_id": 620,
+      "related_lemma": "nationalize",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6762,
+      "word_id": 622,
+      "related_lemma": "refined",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6763,
+      "word_id": 622,
+      "related_lemma": "polite",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6764,
+      "word_id": 622,
+      "related_lemma": "cultivated",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6765,
+      "word_id": 622,
+      "related_lemma": "well-bred",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6766,
+      "word_id": 622,
+      "related_lemma": "coarse",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6767,
+      "word_id": 622,
+      "related_lemma": "uncouth",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6768,
+      "word_id": 622,
+      "related_lemma": "unrefined",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6769,
+      "word_id": 623,
+      "related_lemma": "rule of thumb",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6770,
+      "word_id": 623,
+      "related_lemma": "shortcut",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6771,
+      "word_id": 623,
+      "related_lemma": "guideline",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6772,
+      "word_id": 623,
+      "related_lemma": "algorithm",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6773,
+      "word_id": 624,
+      "related_lemma": "inflammatory",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6774,
+      "word_id": 624,
+      "related_lemma": "provocative",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6775,
+      "word_id": 624,
+      "related_lemma": "rabble-rousing",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6776,
+      "word_id": 624,
+      "related_lemma": "seditious",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6777,
+      "word_id": 624,
+      "related_lemma": "conciliatory",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6778,
+      "word_id": 624,
+      "related_lemma": "soothing",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6779,
+      "word_id": 625,
+      "related_lemma": "intruder",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6780,
+      "word_id": 625,
+      "related_lemma": "trespasser",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6781,
+      "word_id": 625,
+      "related_lemma": "outsider",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6782,
+      "word_id": 625,
+      "related_lemma": "gatecrasher",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6783,
+      "word_id": 625,
+      "related_lemma": "insider",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6784,
+      "word_id": 626,
+      "related_lemma": "point",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6785,
+      "word_id": 626,
+      "related_lemma": "moment",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6786,
+      "word_id": 626,
+      "related_lemma": "stage",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6787,
+      "word_id": 626,
+      "related_lemma": "crossroads",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6788,
+      "word_id": 626,
+      "related_lemma": "critical point",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6789,
+      "word_id": 627,
+      "related_lemma": "suspension",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6790,
+      "word_id": 627,
+      "related_lemma": "ban",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6791,
+      "word_id": 627,
+      "related_lemma": "halt",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6792,
+      "word_id": 627,
+      "related_lemma": "freeze",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6793,
+      "word_id": 627,
+      "related_lemma": "resumption",
+      "relation_type": "antonym",
+      "source": "claude"
+    },
+    {
+      "id": 6794,
+      "word_id": 628,
+      "related_lemma": "obvious",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6795,
+      "word_id": 628,
+      "related_lemma": "evident",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6796,
+      "word_id": 628,
+      "related_lemma": "unmistakable",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6797,
+      "word_id": 628,
+      "related_lemma": "manifest",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6798,
+      "word_id": 628,
+      "related_lemma": "perceptible",
+      "relation_type": "synonym",
+      "source": "claude"
+    },
+    {
+      "id": 6799,
+      "word_id": 628,
+      "related_lemma": "tangible",
+      "relation_type": "synonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6800,
+      "word_id": 628,
+      "related_lemma": "imperceptible",
+      "relation_type": "antonym",
+      "source": "wordnet"
+    },
+    {
+      "id": 6801,
+      "word_id": 628,
+      "related_lemma": "inconspicuous",
+      "relation_type": "antonym",
+      "source": "claude"
     }
   ],
   "mnemonics": [
@@ -74952,6 +77068,174 @@
       "id": 1055,
       "word_id": 599,
       "text": "Stalwart probably comes from Old English stael, place, and weorth, worth: a stalwart friend is worth their place at your side.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1056,
+      "word_id": 629,
+      "text": "Praxis is Greek for action, and it shares a root with practical: praxis is where an idea stops being talk and gets done.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1057,
+      "word_id": 630,
+      "text": "Prerogative shares Latin rogare, to ask, with interrogate: in Roman votes, being asked first (prae) was a special right, and that is what a prerogative is.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1058,
+      "word_id": 631,
+      "text": "Seminal comes from Latin semen, seed: a seminal work is the seed that a whole field later grows from.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1059,
+      "word_id": 632,
+      "text": "Sequester comes from Latin sequester, a trustee who held disputed goods apart until a quarrel was settled: whatever is sequestered is held apart too.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1060,
+      "word_id": 633,
+      "text": "Stipulate comes from Latin stipulari, to make someone formally promise the terms of a deal: what you stipulate becomes a term they must keep.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1061,
+      "word_id": 634,
+      "text": "Subjugate is Latin sub, under, plus jugum, yoke: to subjugate a people is to force them under the yoke like oxen.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1062,
+      "word_id": 635,
+      "text": "Subvert is Latin sub, from below, plus vertere, to turn: to subvert a system is to tip it over from underneath.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1063,
+      "word_id": 636,
+      "text": "Tepid is Latin tepidus, lukewarm: a tepid welcome feels like bathwater that has gone cool.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1064,
+      "word_id": 637,
+      "text": "Unfettered is un- plus fetter, a chain locked around a prisoner's ankles: unfettered power is power with its chains taken off.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1065,
+      "word_id": 638,
+      "text": "Verdant goes back to Old French vert, green, the same vert found in verdigris, the green film on old copper: verdant land is green from end to end.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1066,
+      "word_id": 621,
+      "text": "Extrapolate starts with extra-, Latin for 'outside': you carry a known pattern outside the range of the facts you have.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1067,
+      "word_id": 618,
+      "text": "Attrition comes from Latin terere, to rub: like a stone rubbed smaller by a stream, a group shrinks a little at a time.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1068,
+      "word_id": 619,
+      "text": "Bifurcate joins Latin bi-, 'two', with furca, 'fork': a path that bifurcates forks in two.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1069,
+      "word_id": 620,
+      "text": "Expropriate holds Latin proprius, 'one's own', as in property; ex- means out, so the property is taken out of its owner's hands.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1070,
+      "word_id": 622,
+      "text": "Genteel was borrowed from French gentil, 'of good family': picture the careful manners such families were expected to show.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1071,
+      "word_id": 623,
+      "text": "Heuristic shares its Greek root with eureka, 'I have found it': a heuristic helps you find an answer fast.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1072,
+      "word_id": 624,
+      "text": "Incendiary comes from Latin incendere, 'to set on fire', which also gives incensed, 'furious': incendiary words leave people incensed.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1073,
+      "word_id": 625,
+      "text": "Interloper joins inter-, 'between', with -loper, from Dutch loper, 'runner': an interloper runs in among people who never invited them.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1074,
+      "word_id": 626,
+      "text": "Juncture comes from Latin jungere, 'to join', like junction: picture a juncture as a junction in time, where the road ahead splits.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1075,
+      "word_id": 627,
+      "text": "Moratorium comes from Latin morari, 'to delay': a moratorium puts an activity on hold for a while.",
+      "source": "claude",
+      "user_id": null,
+      "revision": 3
+    },
+    {
+      "id": 1076,
+      "word_id": 628,
+      "text": "Palpable comes from Latin palpare, 'to touch': a palpable feeling is so strong you could almost reach out and touch it.",
       "source": "claude",
       "user_id": null,
       "revision": 3
@@ -101939,6 +104223,1006 @@
       "source": "claude",
       "revision": 3,
       "lookalike": "malnourished"
+    },
+    {
+      "id": 7334,
+      "sense_id": 1369,
+      "distractor_lemma": "Permission handed to someone else to cast a vote in one's place.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "proxy"
+    },
+    {
+      "id": 7335,
+      "sense_id": 1369,
+      "distractor_lemma": "A forecast of whether a sick patient or a shaky economy will pull through.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prognosis"
+    },
+    {
+      "id": 7336,
+      "sense_id": 1369,
+      "distractor_lemma": "A made-up excuse that masks the real aim behind an act.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "pretext"
+    },
+    {
+      "id": 7337,
+      "sense_id": 1369,
+      "distractor_lemma": "A brief write-up that boils a long document down to a page or so.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "precis"
+    },
+    {
+      "id": 7338,
+      "sense_id": 1370,
+      "distractor_lemma": "A requirement to be met first, before anyone may go any further.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "prerequisite"
+    },
+    {
+      "id": 7339,
+      "sense_id": 1370,
+      "distractor_lemma": "A mess someone has landed in, with no good way to get clear of it.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "predicament"
+    },
+    {
+      "id": 7340,
+      "sense_id": 1370,
+      "distractor_lemma": "A starting belief accepted on trust rather than on evidence.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "presumption"
+    },
+    {
+      "id": 7341,
+      "sense_id": 1370,
+      "distractor_lemma": "The opening passage of a speech or charter, before the main business.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "preamble"
+    },
+    {
+      "id": 7342,
+      "sense_id": 1370,
+      "distractor_lemma": "A past ruling that judges point back to when a new case of the same kind arises.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "precedent"
+    },
+    {
+      "id": 7343,
+      "sense_id": 1371,
+      "distractor_lemma": "Dealing with what words mean, apart from their grammar or sound.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "semantic"
+    },
+    {
+      "id": 7344,
+      "sense_id": 1371,
+      "distractor_lemma": "Existing only as a label, with no real substance behind it.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "nominal"
+    },
+    {
+      "id": 7345,
+      "sense_id": 1371,
+      "distractor_lemma": "Too faint or quick to register in awareness, yet still able to sway a person.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "subliminal"
+    },
+    {
+      "id": 7346,
+      "sense_id": 1371,
+      "distractor_lemma": "Tied to one part of the year and absent the rest of it.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "seasonal"
+    },
+    {
+      "id": 7347,
+      "sense_id": 1371,
+      "distractor_lemma": "Beyond any cure and certain to end in the patient's death.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "terminal"
+    },
+    {
+      "id": 7348,
+      "sense_id": 1373,
+      "distractor_lemma": "Read off, one by one, the letters that make up a gene or genome.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "sequence"
+    },
+    {
+      "id": 7349,
+      "sense_id": 1373,
+      "distractor_lemma": "Ask, through proper channels, to be given something.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "request"
+    },
+    {
+      "id": 7350,
+      "sense_id": 1373,
+      "distractor_lemma": "Let savings or a lucky break slip away through foolish choices.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "squander"
+    },
+    {
+      "id": 7351,
+      "sense_id": 1373,
+      "distractor_lemma": "Float an idea for others to weigh, without pressing it.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "suggest"
+    },
+    {
+      "id": 7352,
+      "sense_id": 1373,
+      "distractor_lemma": "Slide straight into the next part of a show or talk with no pause between.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "segue"
+    },
+    {
+      "id": 7353,
+      "sense_id": 1376,
+      "distractor_lemma": "Give a jolt that gets a process moving faster or growing more.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "stimulate"
+    },
+    {
+      "id": 7354,
+      "sense_id": 1376,
+      "distractor_lemma": "Mimic the look or workings of a real thing using a copy or a program.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "simulate"
+    },
+    {
+      "id": 7355,
+      "sense_id": 1376,
+      "distractor_lemma": "Gamble on rising prices by buying shares or land to sell later.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "speculate"
+    },
+    {
+      "id": 7356,
+      "sense_id": 1376,
+      "distractor_lemma": "Pin a badge of shame on someone that others then judge them by.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "stigmatize"
+    },
+    {
+      "id": 7357,
+      "sense_id": 1376,
+      "distractor_lemma": "Dab a surface with tiny specks of paint to give it a grainy texture.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "stipple"
+    },
+    {
+      "id": 7358,
+      "sense_id": 1379,
+      "distractor_lemma": "Alter a verb's ending so it agrees with who is doing the action.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "conjugate"
+    },
+    {
+      "id": 7359,
+      "sense_id": 1379,
+      "distractor_lemma": "Redirect a frowned-upon desire toward a more respectable outlet.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "sublimate"
+    },
+    {
+      "id": 7360,
+      "sense_id": 1379,
+      "distractor_lemma": "Supply the proof that turns a claim into an established fact.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "substantiate"
+    },
+    {
+      "id": 7361,
+      "sense_id": 1379,
+      "distractor_lemma": "Chip in public or private money to keep a business or service afloat.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "subsidize"
+    },
+    {
+      "id": 7362,
+      "sense_id": 1379,
+      "distractor_lemma": "Fold a narrower idea into a broader category that now covers it.",
+      "kind": "mc",
+      "difficulty": 4,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "subsume"
+    },
+    {
+      "id": 7363,
+      "sense_id": 1381,
+      "distractor_lemma": "Send traffic or a river off along a different route.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "divert"
+    },
+    {
+      "id": 7364,
+      "sense_id": 1381,
+      "distractor_lemma": "Head off a disaster just before it can strike.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "avert"
+    },
+    {
+      "id": 7365,
+      "sense_id": 1381,
+      "distractor_lemma": "Slide back to how things were before a change.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "revert"
+    },
+    {
+      "id": 7366,
+      "sense_id": 1381,
+      "distractor_lemma": "Calm down by degrees once the worst has passed.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "subside"
+    },
+    {
+      "id": 7367,
+      "sense_id": 1381,
+      "distractor_lemma": "Keep going on very little, with scarcely enough to eat.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "subsist"
+    },
+    {
+      "id": 7368,
+      "sense_id": 1384,
+      "distractor_lemma": "Quick to shrink back from new people or risks.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "timid"
+    },
+    {
+      "id": 7369,
+      "sense_id": 1384,
+      "distractor_lemma": "Taken as agreed because no one objects, though nothing is said aloud.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "tacit"
+    },
+    {
+      "id": 7370,
+      "sense_id": 1384,
+      "distractor_lemma": "Thick with floating grit that makes water look brown and murky.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "turbid"
+    },
+    {
+      "id": 7371,
+      "sense_id": 1384,
+      "distractor_lemma": "Stinking of things left too long to rot.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fetid"
+    },
+    {
+      "id": 7372,
+      "sense_id": 1384,
+      "distractor_lemma": "Bloated and pompous in style, so that reading it is a slog.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "turgid"
+    },
+    {
+      "id": 7373,
+      "sense_id": 1386,
+      "distractor_lemma": "Never taught to read, or taught very little.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unlettered"
+    },
+    {
+      "id": 7374,
+      "sense_id": 1386,
+      "distractor_lemma": "Showing someone at their worst, in a light that does them no favors.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unflattering"
+    },
+    {
+      "id": 7375,
+      "sense_id": 1386,
+      "distractor_lemma": "Truly felt, with nothing put on for show.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unfeigned"
+    },
+    {
+      "id": 7376,
+      "sense_id": 1386,
+      "distractor_lemma": "Thrown off balance and ill at ease after some upset.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unsettled"
+    },
+    {
+      "id": 7377,
+      "sense_id": 1386,
+      "distractor_lemma": "Kept in its first form, with no edits or changes made.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "unaltered"
+    },
+    {
+      "id": 7378,
+      "sense_id": 1387,
+      "distractor_lemma": "Fired by deep devotion to a person or a cause.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "ardent"
+    },
+    {
+      "id": 7379,
+      "sense_id": 1387,
+      "distractor_lemma": "Grimly witty, with jokes that bite at their target.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mordant"
+    },
+    {
+      "id": 7380,
+      "sense_id": 1387,
+      "distractor_lemma": "Long-winded, padding every point with needless words.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "verbose"
+    },
+    {
+      "id": 7381,
+      "sense_id": 1387,
+      "distractor_lemma": "Given to telling the truth, even when a lie would be easier.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "veracious"
+    },
+    {
+      "id": 7382,
+      "sense_id": 1387,
+      "distractor_lemma": "Always on watch, ready to spot a threat the moment it appears.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "vigilant"
+    },
+    {
+      "id": 7383,
+      "sense_id": 1352,
+      "distractor_lemma": "Wriggle oneself or another out of a snare or a sticky situation.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extricate"
+    },
+    {
+      "id": 7384,
+      "sense_id": 1352,
+      "distractor_lemma": "Destroy something harmful so thoroughly that nothing is left to come back.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extirpate"
+    },
+    {
+      "id": 7385,
+      "sense_id": 1352,
+      "distractor_lemma": "Make a heated protest to someone, urging them to drop a course they have chosen.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "expostulate"
+    },
+    {
+      "id": 7386,
+      "sense_id": 1352,
+      "distractor_lemma": "Break into a speech or a written passage with words of one's own.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "interpolate"
+    },
+    {
+      "id": 7387,
+      "sense_id": 1352,
+      "distractor_lemma": "Press a soft material through a shaped nozzle so it comes out in one long strip.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "extrude"
+    },
+    {
+      "id": 7388,
+      "sense_id": 1346,
+      "distractor_lemma": "The naming of who made a work or what brought an event about.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "attribution"
+    },
+    {
+      "id": 7389,
+      "sense_id": 1346,
+      "distractor_lemma": "A witness's signed or sworn word that a fact or document is authentic.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "attestation"
+    },
+    {
+      "id": 7390,
+      "sense_id": 1346,
+      "distractor_lemma": "The fondness, often romantic, that makes one person want to be near another.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "attraction"
+    },
+    {
+      "id": 7391,
+      "sense_id": 1346,
+      "distractor_lemma": "The reaching of a hard-won goal after years of work.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "attainment"
+    },
+    {
+      "id": 7392,
+      "sense_id": 1346,
+      "distractor_lemma": "A test run on stage that a director uses to pick who gets a role.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "audition"
+    },
+    {
+      "id": 7393,
+      "sense_id": 1349,
+      "distractor_lemma": "Make an idea murky on purpose so that others struggle to make sense of it.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "obfuscate"
+    },
+    {
+      "id": 7394,
+      "sense_id": 1349,
+      "distractor_lemma": "Make up a lie or a bogus record and present it as fact.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "fabricate"
+    },
+    {
+      "id": 7395,
+      "sense_id": 1349,
+      "distractor_lemma": "Drive someone into a hot rage over some slight or wrong.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "infuriate"
+    },
+    {
+      "id": 7396,
+      "sense_id": 1349,
+      "distractor_lemma": "Make a bare overnight camp on the spot and move on at first light.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "bivouac"
+    },
+    {
+      "id": 7397,
+      "sense_id": 1351,
+      "distractor_lemma": "Move away from one's homeland to make a life abroad.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "expatriate"
+    },
+    {
+      "id": 7398,
+      "sense_id": 1351,
+      "distractor_lemma": "Cleanse oneself of guilt for a wrong by paying for it through hardship.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "expiate"
+    },
+    {
+      "id": 7399,
+      "sense_id": 1351,
+      "distractor_lemma": "Censor a manuscript by deleting the lines that might shock or offend.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "expurgate"
+    },
+    {
+      "id": 7400,
+      "sense_id": 1351,
+      "distractor_lemma": "Push a request to the front of the line so it is handled sooner.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "expedite"
+    },
+    {
+      "id": 7401,
+      "sense_id": 1351,
+      "distractor_lemma": "Try someone's patience to the breaking point.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "exasperate"
+    },
+    {
+      "id": 7402,
+      "sense_id": 1355,
+      "distractor_lemma": "Smiling, chatty and warmly pleasant to be around.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "genial"
+    },
+    {
+      "id": 7403,
+      "sense_id": 1355,
+      "distractor_lemma": "Belonging to a people or faith other than the Jewish one.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "gentile"
+    },
+    {
+      "id": 7404,
+      "sense_id": 1355,
+      "distractor_lemma": "Fitting the question being argued rather than straying off topic.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "germane"
+    },
+    {
+      "id": 7405,
+      "sense_id": 1355,
+      "distractor_lemma": "Plain and ordinary, with nothing at all to set it apart from others.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "generic"
+    },
+    {
+      "id": 7406,
+      "sense_id": 1356,
+      "distractor_lemma": "Reckless arrogance that sets a person up for a fall.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "hubris"
+    },
+    {
+      "id": 7407,
+      "sense_id": 1356,
+      "distractor_lemma": "A view that a faith's leaders condemn as false teaching.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "heresy"
+    },
+    {
+      "id": 7408,
+      "sense_id": 1356,
+      "distractor_lemma": "A gentle phrase that hints at something painful instead of naming it.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "euphemism"
+    },
+    {
+      "id": 7409,
+      "sense_id": 1356,
+      "distractor_lemma": "The theory behind drawing meaning out of written works, from scripture to law.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "hermeneutics"
+    },
+    {
+      "id": 7410,
+      "sense_id": 1356,
+      "distractor_lemma": "A formal address in praise of someone, most often given after a death.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "eulogy"
+    },
+    {
+      "id": 7411,
+      "sense_id": 1357,
+      "distractor_lemma": "Coming along as a minor by-product of something bigger.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "incidental"
+    },
+    {
+      "id": 7412,
+      "sense_id": 1357,
+      "distractor_lemma": "Newly emerging and not yet grown to full strength.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "incipient"
+    },
+    {
+      "id": 7413,
+      "sense_id": 1357,
+      "distractor_lemma": "Unbroken and unending, often wearing on the nerves.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "incessant"
+    },
+    {
+      "id": 7414,
+      "sense_id": 1357,
+      "distractor_lemma": "Hopeless to reform, sliding back into bad ways whatever is tried.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "incorrigible"
+    },
+    {
+      "id": 7415,
+      "sense_id": 1357,
+      "distractor_lemma": "Going about unrecognized behind a disguise or borrowed name.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "incognito"
+    },
+    {
+      "id": 7416,
+      "sense_id": 1360,
+      "distractor_lemma": "The partner on the other side of a talk or exchange of views.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "interlocutor"
+    },
+    {
+      "id": 7417,
+      "sense_id": 1360,
+      "distractor_lemma": "A person who relays a speaker's words to listeners who speak another language.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "interpreter"
+    },
+    {
+      "id": 7418,
+      "sense_id": 1360,
+      "distractor_lemma": "A medical specialist who treats illness with drugs and leaves operations to surgeons.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "internist"
+    },
+    {
+      "id": 7419,
+      "sense_id": 1360,
+      "distractor_lemma": "An official who grills a captive or suspect in hopes of a confession.",
+      "kind": "mc",
+      "difficulty": 5,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "interrogator"
+    },
+    {
+      "id": 7420,
+      "sense_id": 1361,
+      "distractor_lemma": "A court ruling that bars someone from carrying out a planned act.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "injunction"
+    },
+    {
+      "id": 7421,
+      "sense_id": 1361,
+      "distractor_lemma": "A minor piece bolted onto a bigger whole to help it along.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "adjunct"
+    },
+    {
+      "id": 7422,
+      "sense_id": 1361,
+      "distractor_lemma": "A guess offered without the evidence to back it up.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "conjecture"
+    },
+    {
+      "id": 7423,
+      "sense_id": 1361,
+      "distractor_lemma": "A free trip for officials, dressed up as work but mostly for fun.",
+      "kind": "mc",
+      "difficulty": 1,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "junket"
+    },
+    {
+      "id": 7424,
+      "sense_id": 1364,
+      "distractor_lemma": "A typed office note that tells colleagues of a decision or change.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "memorandum"
+    },
+    {
+      "id": 7425,
+      "sense_id": 1364,
+      "distractor_lemma": "The mood of a team or crew, shown in how eager and hopeful its members are.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "morale"
+    },
+    {
+      "id": 7426,
+      "sense_id": 1364,
+      "distractor_lemma": "A sticky mess of problems in which every effort seems to sink.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "morass"
+    },
+    {
+      "id": 7427,
+      "sense_id": 1364,
+      "distractor_lemma": "The share of a group that dies over a set period.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mortality"
+    },
+    {
+      "id": 7428,
+      "sense_id": 1364,
+      "distractor_lemma": "The burning shame of a public humiliation.",
+      "kind": "mc",
+      "difficulty": 2,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "mortification"
+    },
+    {
+      "id": 7429,
+      "sense_id": 1366,
+      "distractor_lemma": "Mild enough in its terms that people will go along with it.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "palatable"
+    },
+    {
+      "id": 7430,
+      "sense_id": 1366,
+      "distractor_lemma": "Pitifully small and hardly worth counting.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "paltry"
+    },
+    {
+      "id": 7431,
+      "sense_id": 1366,
+      "distractor_lemma": "Guilty of a wrong and fairly open to blame for it.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "culpable"
+    },
+    {
+      "id": 7432,
+      "sense_id": 1366,
+      "distractor_lemma": "Easing a sick person's suffering while doing nothing to cure the disease itself.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "palliative"
+    },
+    {
+      "id": 7433,
+      "sense_id": 1366,
+      "distractor_lemma": "Built and fitted out on a royal scale, with sweeping rooms and costly finishes.",
+      "kind": "mc",
+      "difficulty": 3,
+      "source": "claude",
+      "revision": 3,
+      "lookalike": "palatial"
     }
   ],
   "audio_objects": [
@@ -132697,6 +135981,1147 @@
       "path": "hooks/617.mp3",
       "bytes": 27794,
       "key": "a93916900f9a8f4d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/618.mp3",
+      "bytes": 6374,
+      "key": "59150caece624d47",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/619.mp3",
+      "bytes": 6374,
+      "key": "941cf1894e796eb7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/620.mp3",
+      "bytes": 6478,
+      "key": "9edde62d52beb89f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/621.mp3",
+      "bytes": 6583,
+      "key": "d4cfa13ce69d5fed",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/622.mp3",
+      "bytes": 6374,
+      "key": "0f422341d1a42232",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/623.mp3",
+      "bytes": 6269,
+      "key": "2cfa83387b997734",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/624.mp3",
+      "bytes": 7001,
+      "key": "7830a3f03c1c28ec",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/625.mp3",
+      "bytes": 6792,
+      "key": "6d6d5f490e630ba7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/626.mp3",
+      "bytes": 5851,
+      "key": "093289b9a37ae575",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/627.mp3",
+      "bytes": 6687,
+      "key": "af9fdaf19335ba84",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/628.mp3",
+      "bytes": 5851,
+      "key": "acdfdaf0fbb230aa",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/629.mp3",
+      "bytes": 6374,
+      "key": "dc610d8e300dc042",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/630.mp3",
+      "bytes": 6792,
+      "key": "083f05556b1cc714",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/631.mp3",
+      "bytes": 5851,
+      "key": "3be84bd3ddda48e5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/632.mp3",
+      "bytes": 6374,
+      "key": "2d80d0007310c7b8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/633.mp3",
+      "bytes": 6060,
+      "key": "b86f0843609a3b3c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/634.mp3",
+      "bytes": 6374,
+      "key": "03bf59c2d8b274c6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/635.mp3",
+      "bytes": 6060,
+      "key": "f39545f5272038ef",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/636.mp3",
+      "bytes": 5851,
+      "key": "66259dd3764d1e78",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/637.mp3",
+      "bytes": 6269,
+      "key": "65c9bda3493e6809",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "words/638.mp3",
+      "bytes": 6060,
+      "key": "cac3dfc208eb7806",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6532.mp3",
+      "bytes": 28108,
+      "key": "9510c6bce1c592fb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6533.mp3",
+      "bytes": 31347,
+      "key": "a4c2b18aff6afcf5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6534.mp3",
+      "bytes": 31660,
+      "key": "38663da50fa723ed",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6535.mp3",
+      "bytes": 31242,
+      "key": "57eb97bcca2b55fd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6536.mp3",
+      "bytes": 27585,
+      "key": "50180a104148627d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6537.mp3",
+      "bytes": 30198,
+      "key": "47c2ebbbedd82108",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6538.mp3",
+      "bytes": 26749,
+      "key": "feaef9cd2d9708f5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6539.mp3",
+      "bytes": 26227,
+      "key": "d2e0b260e9c90f49",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6540.mp3",
+      "bytes": 30198,
+      "key": "69228ca2b7a0b725",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6541.mp3",
+      "bytes": 29989,
+      "key": "b9d76a5612003304",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6542.mp3",
+      "bytes": 25182,
+      "key": "0c66040a1f290837",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6543.mp3",
+      "bytes": 31869,
+      "key": "e272c3b4192187c7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6544.mp3",
+      "bytes": 25704,
+      "key": "ae9dc7ad46b66455",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6545.mp3",
+      "bytes": 25496,
+      "key": "172c6be184a88bad",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6546.mp3",
+      "bytes": 23928,
+      "key": "c4f3b3d256d01094",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6547.mp3",
+      "bytes": 28212,
+      "key": "5a5a15c7512c115d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6548.mp3",
+      "bytes": 25809,
+      "key": "6806ab4b61f71737",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6549.mp3",
+      "bytes": 26854,
+      "key": "96875f61dd6bd4fe",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6550.mp3",
+      "bytes": 20898,
+      "key": "c92104430e8257dd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6551.mp3",
+      "bytes": 25809,
+      "key": "05336259d3ddea04",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6552.mp3",
+      "bytes": 35213,
+      "key": "2f6518bea5712421",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6553.mp3",
+      "bytes": 29153,
+      "key": "84e96f8b4ec5d3a8",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6554.mp3",
+      "bytes": 30616,
+      "key": "6d397773e678d4c5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6555.mp3",
+      "bytes": 30198,
+      "key": "bd71f43b19d4be6a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6556.mp3",
+      "bytes": 24973,
+      "key": "448f4c4790ad7707",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6557.mp3",
+      "bytes": 23510,
+      "key": "0070fd251a56484f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6558.mp3",
+      "bytes": 32601,
+      "key": "503f662254dfcde1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6559.mp3",
+      "bytes": 30720,
+      "key": "ca6943e12b0c6f78",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6560.mp3",
+      "bytes": 30929,
+      "key": "74450bb8c14f316c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6561.mp3",
+      "bytes": 24242,
+      "key": "30a7028203bef4ae",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6562.mp3",
+      "bytes": 28421,
+      "key": "5a4836a872b13087",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6563.mp3",
+      "bytes": 31451,
+      "key": "db5badd719386332",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6564.mp3",
+      "bytes": 27899,
+      "key": "72bedc93fd9269cf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6565.mp3",
+      "bytes": 28839,
+      "key": "8eb33842c3f9e3e0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6566.mp3",
+      "bytes": 27690,
+      "key": "996f269f0532cd49",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6567.mp3",
+      "bytes": 24033,
+      "key": "5add22c77832265d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6568.mp3",
+      "bytes": 25182,
+      "key": "2c71fd5ee0fd2032",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6569.mp3",
+      "bytes": 22152,
+      "key": "3aad8d7611bf687d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6570.mp3",
+      "bytes": 23928,
+      "key": "edd0142370e49fe3",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6571.mp3",
+      "bytes": 27272,
+      "key": "9005a15d2faf7448",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1346.mp3",
+      "bytes": 24137,
+      "key": "52742656a58e6cbd",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1349.mp3",
+      "bytes": 18599,
+      "key": "ded8d3cba364ffc0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1351.mp3",
+      "bytes": 25182,
+      "key": "700fa747bb8737b1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1352.mp3",
+      "bytes": 18181,
+      "key": "2b281760d908e525",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1355.mp3",
+      "bytes": 16405,
+      "key": "92c0d4a839d410b4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1356.mp3",
+      "bytes": 24869,
+      "key": "d2d502879b6449ca",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1357.mp3",
+      "bytes": 18077,
+      "key": "93c8f0d67e10b027",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1360.mp3",
+      "bytes": 19540,
+      "key": "2b40a43f99229abf",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1361.mp3",
+      "bytes": 20584,
+      "key": "413c45b2c19be211",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1364.mp3",
+      "bytes": 19017,
+      "key": "a272b7d426bca8eb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1366.mp3",
+      "bytes": 14211,
+      "key": "1d8119258488902b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1369.mp3",
+      "bytes": 16091,
+      "key": "1820a51c7655a41b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1388.mp3",
+      "bytes": 19749,
+      "key": "b8ad747a3b10d370",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1370.mp3",
+      "bytes": 21420,
+      "key": "a7d0158f18b5abdb",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1371.mp3",
+      "bytes": 16718,
+      "key": "6b3b1469f3a0f697",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1389.mp3",
+      "bytes": 13688,
+      "key": "9733ab9ecef47970",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1373.mp3",
+      "bytes": 17032,
+      "key": "f3b543f90c34bd41",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1390.mp3",
+      "bytes": 18390,
+      "key": "bacdc22759b88c41",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1391.mp3",
+      "bytes": 23092,
+      "key": "9f9fedd0a6329b9e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1376.mp3",
+      "bytes": 14211,
+      "key": "ad46930f5b2aebd9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1392.mp3",
+      "bytes": 22988,
+      "key": "2df9f0a2161ad17c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1379.mp3",
+      "bytes": 14524,
+      "key": "af46193d7f9408bc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1393.mp3",
+      "bytes": 16718,
+      "key": "810db97a5b23007e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1381.mp3",
+      "bytes": 19749,
+      "key": "2d3d5f6fadd8873e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1394.mp3",
+      "bytes": 14629,
+      "key": "6b82f390b0732bda",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1395.mp3",
+      "bytes": 18704,
+      "key": "3579cacaea245087",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1384.mp3",
+      "bytes": 15673,
+      "key": "7d9e08e96cb6e328",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1396.mp3",
+      "bytes": 17136,
+      "key": "3a96f3ca2ba3a0b2",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1386.mp3",
+      "bytes": 14315,
+      "key": "089ec4090a689f8b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1397.mp3",
+      "bytes": 11076,
+      "key": "efcc62af445d66c0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1387.mp3",
+      "bytes": 12852,
+      "key": "e6bb32b5ea7dd945",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1398.mp3",
+      "bytes": 11807,
+      "key": "62566683cacbd779",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/629.mp3",
+      "bytes": 31765,
+      "key": "37ceae72361f9e32",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/630.mp3",
+      "bytes": 40124,
+      "key": "3a4b202048ae50d7",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/631.mp3",
+      "bytes": 28212,
+      "key": "065937eaec8f6c56",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/632.mp3",
+      "bytes": 40124,
+      "key": "514907c403917d04",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/633.mp3",
+      "bytes": 34900,
+      "key": "5af0d20916b0d293",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/634.mp3",
+      "bytes": 32392,
+      "key": "c861ba1e6662dad5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/635.mp3",
+      "bytes": 30511,
+      "key": "a25a49b1bda8efe1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/636.mp3",
+      "bytes": 26749,
+      "key": "d210d0597eb25772",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/637.mp3",
+      "bytes": 33750,
+      "key": "085813173b17835b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/638.mp3",
+      "bytes": 40333,
+      "key": "c885479de904aa1b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6576.mp3",
+      "bytes": 29780,
+      "key": "36e2c5fdd18848fc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6577.mp3",
+      "bytes": 35109,
+      "key": "55c17f8bb6f9a643",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6578.mp3",
+      "bytes": 34377,
+      "key": "f99510f1e3f5fe1f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6579.mp3",
+      "bytes": 29048,
+      "key": "bb3c564db3416066",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6580.mp3",
+      "bytes": 22465,
+      "key": "6928c0c1affa1c67",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6581.mp3",
+      "bytes": 26540,
+      "key": "c074e577c756d40a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6582.mp3",
+      "bytes": 29884,
+      "key": "b89e57400f664f73",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6583.mp3",
+      "bytes": 28630,
+      "key": "71916585bf1a91a6",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6584.mp3",
+      "bytes": 35422,
+      "key": "44ad984ce3f27346",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6585.mp3",
+      "bytes": 35631,
+      "key": "a3c91ce6ba7c449e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6586.mp3",
+      "bytes": 36153,
+      "key": "b2641b6a09fc3177",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6587.mp3",
+      "bytes": 31869,
+      "key": "a2ff3678149d1ebc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6572.mp3",
+      "bytes": 39393,
+      "key": "1822bf70aabdf430",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6573.mp3",
+      "bytes": 28839,
+      "key": "5f20765f730d16f4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6574.mp3",
+      "bytes": 27063,
+      "key": "13d6a22679eeea6a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6575.mp3",
+      "bytes": 28421,
+      "key": "c565a3c1f73ba74e",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6588.mp3",
+      "bytes": 33228,
+      "key": "836ab93070686c1b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6589.mp3",
+      "bytes": 29153,
+      "key": "f5b89d5bf2331542",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6590.mp3",
+      "bytes": 29571,
+      "key": "5eb2f820ab1f2b3b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6591.mp3",
+      "bytes": 34168,
+      "key": "c613808a5fadfd6d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6592.mp3",
+      "bytes": 30511,
+      "key": "eabb947601ff5e4d",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6593.mp3",
+      "bytes": 28839,
+      "key": "7fb7b02e1725edaa",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6594.mp3",
+      "bytes": 29989,
+      "key": "c4fb8716bfaf92a4",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6595.mp3",
+      "bytes": 36571,
+      "key": "d1837f7bc1cebf48",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6596.mp3",
+      "bytes": 29362,
+      "key": "7346d2b040097c31",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6597.mp3",
+      "bytes": 39184,
+      "key": "00ff996e76638fdc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6598.mp3",
+      "bytes": 30407,
+      "key": "6756f0e42e177982",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6599.mp3",
+      "bytes": 32914,
+      "key": "fc0b31f1f0d9d476",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6600.mp3",
+      "bytes": 32287,
+      "key": "ad5d7d6905c967db",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6601.mp3",
+      "bytes": 31138,
+      "key": "8aeee37e54f14cc5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6602.mp3",
+      "bytes": 24451,
+      "key": "6cf0c8f5ccead125",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6603.mp3",
+      "bytes": 28212,
+      "key": "10b43e8879e8e477",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6604.mp3",
+      "bytes": 26540,
+      "key": "1eeec1ac096a4499",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6605.mp3",
+      "bytes": 30093,
+      "key": "8894cd97e6177474",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6606.mp3",
+      "bytes": 26122,
+      "key": "0deaf234c061debc",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6607.mp3",
+      "bytes": 27063,
+      "key": "b18624365049bafe",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6608.mp3",
+      "bytes": 28108,
+      "key": "deefa0d85078fdc5",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6609.mp3",
+      "bytes": 29989,
+      "key": "78d35b83adfff198",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6610.mp3",
+      "bytes": 31033,
+      "key": "a76ccd20dd9af323",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6611.mp3",
+      "bytes": 25704,
+      "key": "fc14f0ca47aa2d25",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6612.mp3",
+      "bytes": 23406,
+      "key": "463c89bbf81dd94a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6613.mp3",
+      "bytes": 27376,
+      "key": "7cf06518d516492b",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6614.mp3",
+      "bytes": 27690,
+      "key": "7b68be2dcf7be371",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "sentences/6615.mp3",
+      "bytes": 24033,
+      "key": "df4e452dacc13ba9",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1399.mp3",
+      "bytes": 17763,
+      "key": "a58747d255ced528",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1400.mp3",
+      "bytes": 16927,
+      "key": "ad2379a28258ba5a",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1401.mp3",
+      "bytes": 15464,
+      "key": "64704c320558df85",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1402.mp3",
+      "bytes": 18390,
+      "key": "ecf888c8957757b0",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "definitions/1403.mp3",
+      "bytes": 13793,
+      "key": "4f3793d44e56c64f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/618.mp3",
+      "bytes": 30616,
+      "key": "c5b770e6175a6777",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/619.mp3",
+      "bytes": 25913,
+      "key": "6a0774b3e5a81208",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/620.mp3",
+      "bytes": 35527,
+      "key": "82855144fefb3858",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/621.mp3",
+      "bytes": 30198,
+      "key": "cfbe580bef542964",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/622.mp3",
+      "bytes": 32078,
+      "key": "05863db189841458",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/623.mp3",
+      "bytes": 27690,
+      "key": "59ec161ea2ebe75f",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/624.mp3",
+      "bytes": 38243,
+      "key": "58f1ce2a33d71def",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/625.mp3",
+      "bytes": 35944,
+      "key": "e5f25cda8ab8ea2c",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/626.mp3",
+      "bytes": 33332,
+      "key": "162ce3b8c09da228",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/627.mp3",
+      "bytes": 27690,
+      "key": "f9b39f87b7a980a1",
+      "source": "tts",
+      "voice": "kokoro-82m/af_heart/32k"
+    },
+    {
+      "path": "hooks/628.mp3",
+      "bytes": 30407,
+      "key": "7e4e258dfe6068a3",
       "source": "tts",
       "voice": "kokoro-82m/af_heart/32k"
     }
@@ -185185,6 +189610,773 @@
         "alsoMeans": 4
       },
       "checker_notes": "All scores 4 or more. Origin checked against Wiktionary (Old English wraestan, to twist forcibly; see also writhe, wry). Formal is confirmed on Oxford's wrest from page, Cambridge and Longman. Weakest point: the shown sense's plain definition says 'a hard source by long effort', which reads awkwardly, and the sense is about great effort rather than long effort."
+    },
+    {
+      "id": 1572,
+      "word_id": 629,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3, definition 3, plain 1, examples 1, wrongAnswers 1, hook 1, related 3. WordNet's \"Translating an idea into action\" did not set practice against theory; the new definition leads with that contrast, and the plain one says it in everyday words. Kept the \"established custom\" sense (AHD, Vocabulary.com) as an other sense, reworded. New plain, 4 examples (architecture site work, union organizing, a think tank, daily habits), wrong answers (proxy, prognosis, pretext, precis, axis) and hook (Greek praxis, action, shares a root with practical). Added application as a synonym and theory as the antonym. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). Reworded prognosis (Longman frame), the other sense (Dictionary.com \"habit or custom\") and the hook. Web search found no match for the definition. Round 2: Reviewer: plain followed Collins (\"practical side of\"), example 1 retold WordUp's course-then-practice scene, axis was the wrong kind of thing, proxy read oddly, hook echoed Collins. New plain (turning knowledge or belief into action), example 1 is now engineers building a test turbine, dropped axis (4 options left), reworded proxy and the hook.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all scores 4 or more. Weakest: the new plain ('Turning what you know or believe into things you actually do') carries Oxford's 'a theory or a belief' pair and Cambridge's 'something that you have learned', but applying knowledge or belief in practice is the meaning Oxford, Cambridge, WordUp, AHD and Random House all share, so 4 with a note. The new example 1 (engineers who wanted praxis, not more white papers) is correct and has a clear clue, but praxis sits a little oddly in an engineering setting; the word belongs to education, activism and philosophy, where the other three examples are. Example 4's 'daily habits' leans slightly toward the custom sense. The new proxy option follows the shared frame (Cambridge 'authority given to a person to act for someone else, such as by voting for them', Oxford, WordUp). With axis dropped, the 4 options all tempt. The new hook is good."
+    },
+    {
+      "id": 1573,
+      "word_id": 630,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 5, definition 3, plain 1, examples 2, wrongAnswers 1, hook 1, related 3. First sense was right, but WordNet's text tracks AHD (\"exclusive right ... especially a hereditary or official right\"), so it is rewritten. New plain, 4 examples (naming a puppy, a conductor's encore, a referee's added time, a host carving), wrong answers (prerequisite, predicament, presumption, preamble, precedent; pejorative was dropped because WordNet has it only as an adjective) and hook (prae + rogare, the Roman voting group asked first, linked to interrogate). Dropped perquisite (a perk, another meaning); added entitlement and right. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). The first hook followed Vocabulary.com's \"goes back to a Latin root for a group having the right to vote first\" sentence, so it was rewritten from the interrogate angle. presumption uses its \"assumption\" sense, not its \"arrogance\" sense, which sits too close to claiming rights.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "checker_notes": "All scores 4 or more. Weakest: the definition follows the frame most dictionaries share (a right that goes with rank or position and is not open to everyone: Oxford, Random House, Cambridge, WordUp), so 4 not 5. precedent's option follows the shared court-ruling frame (WordUp 'a court decision from an earlier case that later judges may use in similar cases', Cambridge, Collins), allowed at 4. Hook: the Roman praerogativa was the voting unit picked by lot to vote first, so 'special right' is loose but acceptable. 'exclusive right' is a phrase, fine since WordNet lists it."
+    },
+    {
+      "id": 1574,
+      "word_id": 631,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 1, definition 2, plain 1, examples 1, wrongAnswers 1, hook 1, related 3. WordNet led with the semen sense. The first sense is now \"strongly shaping later work\", and the biological sense is kept only as an other sense in plain terms. Dropped WordNet's \"Containing seeds of later development\" (a near repeat of the new first sense). New plain, 4 examples (a 1988 hip-hop album, a game design, an essay on sidewalks, a bird-migration paper), wrong answers (semantic, nominal, subliminal, seasonal, terminal) and hook (Latin semen, seed). Dropped originative (rare); added influential, formative, original and derivative as an antonym. WordUp has no seminal page (\"Word not found\"). Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). Reworded semantic (AHD \"meaning in language\"). Web search found no match for the definition. Round 2: Reviewer: plain kept Vocabulary.com's \"so original ... that it will influence everything that comes after it\" structure. New plain from another angle (an early work later ones learned from and followed).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: all scores 4 or more. The new plain ('Being an early work that many later ones learned from and followed') no longer follows Vocabulary.com's frame. Weakest: it narrows the word to works, though seminal also describes ideas, studies and roles, and 'later ones learned from' has works doing the learning. nominal and terminal still share only the -minal ending."
+    },
+    {
+      "id": 1575,
+      "word_id": 632,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 2, definition 2, plain 1, examples 1, wrongAnswers 1, hook 1, related 2. WordNet led with \"Requisition forcibly, as of enemy property\". The first sense is now the one readers meet most: setting a person or thing apart (a jury, oneself, guarded papers). Kept the legal seizure of a debtor's property and the carbon-capture sense as other senses, reworded; dropped the chemistry ion sense. The budget sense is mainly a noun (\"the sequester\"), so it is left out. New plain, 4 examples (a novelist in a cabin, exam papers in a vault, cruise passengers in quarantine, jurors during a trial), wrong answers (sequence, request, squander, suggest, segue) and hook (Latin sequester, a trustee who held disputed goods apart). Replaced the seizure synonyms (impound, attach, confiscate, seize) with isolate, seclude, cloister. Left out question and pester as look-alikes: with request they made three \"asking\" options. WordUp has no sequester page. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). The jury example is the word's most common use, which Cambridge and Longman also show; its details (front-page trial, phones collected) differ from theirs. Reworded segue (Oxford's song/subject list).",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All scores 4 or more. Weakest: the legal other sense ('Hold a debtor's property under a court order until a claim is settled') sits close to Random House ('seize and hold, as the property and income of a debtor, until legal claims are satisfied'); Oxford, Cambridge and AHD share the meaning, so 4 with a note. Example 4 (jurors sequestered because the trial is in the news) is the stock scene in Cambridge, Longman and Vocabulary.com; allowed because it is the word's standard use. suggest shares little with sequester beyond the -est sound. The definition's 'keep it' after 'a person or thing' reads oddly for a person."
+    },
+    {
+      "id": 1576,
+      "word_id": 633,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 5, definition 3, plain 1, examples 2, wrongAnswers 1, hook 1, related 3. First sense was right, but WordNet's text tracks Random House (\"make an express demand or provision\"), so it is rewritten. Kept the court sense (agree a fact so it need not be proved, AHD 2 and 3) as an other sense, reworded; dropped the Roman oral-contract sense and \"Give a guarantee or promise of\". New plain, 4 examples (a donor's gift, a tour contract, chess tournament rules, adoption papers), all scenes absent from the dictionaries' many contract examples. New wrong answers (stimulate, simulate, speculate, stigmatize, stipple). Left out postulate: it sits next to the court sense. Hook uses Latin stipulari, to demand a formal promise; it avoids the unproven \"broken straw\" story. Swapped qualify and condition for require, lay down, prescribe. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All scores 4 or more. Weakest: the definition's 'a specific condition that must be met' is close to Vocabulary.com's 'stipulate that a certain condition must be met' (WordUp has 'which condition must be met'); it is a common phrase, so 4 with a note. stimulate's option borrows 'process' and 'faster' from WordUp ('make a process, activity, or system become more active, stronger, or faster'), but Oxford, Cambridge and Longman share the meaning. speculate's option is the shared buy-to-resell frame (Oxford, Longman, Cambridge, WordUp)."
+    },
+    {
+      "id": 1577,
+      "word_id": 634,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 4, definition 3, plain 1, examples 2, wrongAnswers 1, hook 1, related 3. WordNet's first sense, \"Put down by force or intimidation\", reads as suppressing a revolt; the new one is conquering a people and keeping them powerless. Reworded the other sense (rank one interest below another) away from WordUp's \"needs, wishes, or beliefs\" list. New plain, 4 examples (machines ruling humanity, Sparta and the helots, an empire's laws, folk songs about a foreign crown), wrong answers (conjugate, sublimate, substantiate, subsidize, subsume) and hook (sub + jugum, under the yoke; Wiktionary confirms). The hook does not name conjugate, which shares jugum. Dropped reduce and quash; added conquer, oppress, enslave and the antonyms liberate, emancipate, free. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "All scores 4 or more. Weakest: three of the four examples are an empire or foreign crown ruling a people, and example 3 (laws written to subjugate conquered provinces) is near WordUp's 'the occupying army subjugated the local people through harsh laws and secret police'. sublimate ('redirect a frowned-upon desire') sits fairly near subjugate's other sense (putting your own wishes below something else); not the same meaning, but worth a look. The definition follows the shared conquer-and-rule-without-freedom frame (Cambridge, WordUp, Longman). Related: 'subject' looks like the target, so it is an easy pick in the synonym game."
+    },
+    {
+      "id": 1578,
+      "word_id": 635,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 4, definition 2, plain 1, examples 1, wrongAnswers 1, hook 1, related 2. WordNet's \"Cause the downfall of; of rulers\" was a fragment. New first sense: undercut the power of an established order, often by stealth. Other senses: turning someone against their loyalties (WordNet's corrupt-morally sense, reworded) and upending a convention or an audience's expectations (common today). Dropped \"Destroy property or hinder normal operations\", which is sabotage. New plain, 4 examples (hackers and a bank, smugglers and an embargo, a band and the labels, emergency powers and a council), wrong answers (divert, avert, revert, subside, subsist) and hook (sub + vertere, turn from beneath; Wiktionary confirms). Left out invert, convert and pervert: each sits near a sense of subvert. Moved corrupt, pervert, demoralize out of the synonyms (other sense); added undermine, sabotage, undercut, destabilize and antonyms uphold, bolster. Shortened the definition so it is not the longest option by far. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All scores 4 or more. Weakest: example 1 (hackers subverting a bank's security system with a fake update) reads as getting around a defense, closer to AHD's 'render ineffective' or 'commandeer' senses than to undercutting an established order; example 2 (bribing guards to subvert an embargo) leans the same way. The plain sentence follows the frame Oxford, WordUp and Merriam-Webster Learner's share (secretly trying to destroy a system), so 4. avert's 'just before it can strike' echoes WordUp's 'often by acting just in time'."
+    },
+    {
+      "id": 1579,
+      "word_id": 636,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3, definition 3, plain 1, examples 1, wrongAnswers 1, hook 1, related 2. Moved the \"little enthusiasm\" sense to the front and kept \"slightly warm\" as an other sense. This is a judgment call worth a second look: Google Books 2010 to 2022 has \"tepid water\" about 9 times as often as \"tepid response\", but the figurative sense is the one tests and news writing use (tepid response, support, sales), and the record leads acerbic and caustic with their figurative senses the same way. All examples use the figurative sense. New plain, 4 examples, wrong answers (timid, tacit, turbid, fetid, turgid) and hook (Latin tepidus, lukewarm). Left out torpid, vapid, insipid and tenuous (too near \"half-hearted\") and torrid (reads as the opposite). Removed cool from the antonyms (it is a synonym of this sense) and the duplicate halfhearted; added unenthusiastic, and the antonyms enthusiastic, eager, keen. Examples checked so timid and tacit do not fit the blank. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). Replaced example 1, which shared WordUp's \"only tepid interest\". Round 2: Reviewer: timid (a wrong answer) could just about fit the blanks in examples 2 and 3. Replaced both with subjects that cannot be timid (TV ratings, a meeting's turnout).",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all scores 4 or more, judged under the accepted half-hearted first sense. timid no longer fits any blank. The new examples 2 (ratings stayed tepid) and 3 (a tepid turnout at a budget meeting) are natural enough: journalists use 'tepid turnout' and 'tepid ratings', and both measure faint interest. Weakest: all four examples now rest on low numbers (lines gone, ratings, empty chairs, few sign-ups), and none shows a person's lukewarm reaction directly, so the feeling in the definition is only implied. These uses also sit near Cambridge's 'not very good or strong' sense (tepid sales). The earlier points stand: the hook pairs the same three things as Vocabulary.com's note (tepidus 'lukewarm', bathwater left standing, a lukewarm greeting), and the tacit and turgid options echo WordUp."
+    },
+    {
+      "id": 1580,
+      "word_id": 637,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 2, definition 2, plain 1, examples 1, wrongAnswers 1, hook 1, related 2. WordNet led with the literal \"Not bound by shackles and chains\"; the first sense is now free of checks or restraints, and the literal one is an other sense. New plain, 4 examples (kids in a backyard, police search powers, a director free of studio notes, goats in a garden), wrong answers (unlettered, unflattering, unfeigned, unsettled, unaltered) and hook (fetter, an ankle chain). Replaced unchained, unshackled, untied (literal) with unrestrained, unchecked, unbridled, unrestricted, unconstrained; replaced bound with restricted, constrained, restrained, limited (not fettered, which is built on the word). Shortened the definition so it is not the longest option. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples). Example 4 uses the common pairing \"unfettered access\", which Cambridge and WordUp also use, in a new scene. Web search found no match for the definition. Round 2: Reviewer: example 2 (a law giving police unfettered power) retold Cambridge's law-gives-the-governor scene. Replaced it with an influencer's unreviewed posts. Round 3 (main session): example 2 replaced, because unflattering fit the influencer example's blank; the new scene (salmon after a dam is removed) needs a word about missing barriers.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 3: all scores 4 or more. The new example 2 (salmon swimming unfettered once the last dam came down) is natural, shows the first sense (a restraint removed, so the fish can go as far as they will) and gives a clear clue. None of the five look-alikes fits its blank, and no dictionary example (Oxford, Cambridge, Longman, WordUp) is about a river or fish. Two of the four examples are now about animals (salmon, goats); acceptable. Weakest, unchanged from round 1: example 3 (a director unfettered by studio notes) is near Cambridge's 'Poets are unfettered by the normal rules of sentence structure'. The plain opens like WordUp ('completely free ... no ... limits'). The other sense is near Vocabulary.com's 'not chained or shackled', but it is the literal meaning. unlettered's option has Longman's 'unable to read, or uneducated' shape."
+    },
+    {
+      "id": 1581,
+      "word_id": 638,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 4, definition 2, plain 1, examples 1, wrongAnswers 1, hook 1, related 1. WordNet's \"Characterized by abundance of verdure\" was nearly circular and the antonym \"scarce\" came from the abundance sense. New definition, plain, 4 examples (a canyon by a spring, a rooftop garden, a watered golf course in a drought, an old rail trail), wrong answers (ardent, mordant, verbose, veracious, vigilant) and hook. Kept a \"green in color\" other sense; left out the rare \"naive\" sense. The first hook used Vocabulary.com's French vert and Spanish verde trick, so it now links vert to verdigris instead. Synonyms lush, green, leafy, grassy, luxuriant; antonyms barren, arid, parched. Left out vibrant, rampant, dormant and vacant as look-alikes: too close in subject or opposite. Compared every definition, plain, other sense, wrong answer and hook against the downloaded Oxford Learner's, Cambridge, Longman, Dictionary.com, Vocabulary.com, American Heritage and WordUp pages (WordUp script text included) for the word and each look-alike, and reworded every shared run of 4 or more words that was not a stock phrase. Example scenes chosen to differ from the examples those dictionaries print (--examples).",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All scores 4 or more. Weakest: vigilant shares only the v and the -ant ending with verdant, so it tempts little, and its option ('Always on watch, ready to spot a threat the moment it appears') follows WordUp's two-part shape ('watching carefully for signs that trouble ... may appear, and ready to act quickly if it does'); five dictionaries share the watchful-for-danger meaning, so 4. veracious's 'Given to telling the truth' is the WordNet and Random House gloss ('habitually speaking the truth', 'given to expressing the truth') with a word changed; shared meaning. The 'inexperienced, naive' sense is not listed; optional."
+    },
+    {
+      "id": 1582,
+      "word_id": 621,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet led with 'draw from specific cases for more general cases', which is generalize; today the word mostly means projecting known data or trends beyond what was measured), definition 3, plain, examples, wrong answers and hook 1 (empty), related 2 (interpolate listed as a synonym, which it is not, and generalize belongs to WordNet's old first sense). Rewrote the definition for the projecting sense. Dropped both other senses: 'Estimate the value of something based on known values' repeats the new first sense, and the other named the word. Wrote plain, 4 examples (marathon pace, comet orbit, reservoir chart, cable load; none of the dictionaries' scenes), 5 wrong answers, hook and related words. interpolate's option uses its insert-words sense, not the maths sense (estimating between known values), which sits close to the target. Hook's claim checked: the word was formed from extra- plus the end of interpolate.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "All 4 or more. Weakest points: the definition's 'known data ... never measured' is narrower than the word (people also extrapolate from experience, not only measured data). Plain 'use what you already know to make a guess' shares Cambridge's idea ('guess ... using information that is already known'), but in its own words and as the plain meaning every dictionary gives. extricate ('oneself or another') and extirpate ('destroy something harmful ... thoroughly') follow the frame Oxford, Longman and Cambridge share; fine. interpolate's option uses the insert-words sense, good, but its maths sense sits beside the target, and example 2 (comet path 'from a week of sightings') could half-take 'interpolated'; the 'predicted when it would swing past' clue still points to extrapolate. Related: infer is broad."
+    },
+    {
+      "id": 1583,
+      "word_id": 618,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 2 (WordNet led with 'erosion by friction', the geology sense; readers today meet the gradual loss of staff, students, troops or customers), definition 2, plain, examples, wrong answers and hook 1, related 2 (abrasion, corrasion and friends belong to the friction sense, contrition to the church sense). Moved the reduction sense to the front. Kept the friction sense as one rewritten other sense; dropped the Catholic 'sorrow for sin from fear' sense, which is rare and would sit next to contrition as a fallback option. For the same reason contrition is not used as a look-alike. Examples avoid the dictionaries' scenes (war of attrition, staff not replaced, students leaving a course). Hook root checked: Latin atterere, from ad- plus terere, to rub. Round 2: attestation's option now describes a statement that something is true, not a pledge.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all 4 or more. The new attestation option ('A witness's signed or sworn word that a fact or document is authentic') is accurate and in its own words; 'signed or sworn' is the meaning AHD, Vocabulary.com and WordUp all give, and not every attestation comes from a witness, which is fine for a wrong answer. Still the weakest points from round 1: audition is a weak look-alike (only the a-...-ition shape); 'not replaced' is the workforce frame Oxford, Cambridge, Longman, Dictionary.com and WordUp share; the definition covers loss of numbers but not the wearing down of strength (war of attrition)."
+    },
+    {
+      "id": 1584,
+      "word_id": 619,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 4, definition 4 ('Split or divide into two.', accurate but bare), other sense 2 (a near copy of the first), plain, examples, wrong answers and hook 1, related 1 (empty). Rewrote the definition to cover both uses (a thing forks; someone splits a thing) and dropped the repeated other sense. Examples avoid the dictionaries' river, road and woodland path; they use anatomy, a company split, a market split and lightning. Look-alikes share sound (obfuscate, fabricate, suffocate) or the bi- start (bivouac, biodegrade). Hook checked: Medieval Latin bifurcatus, from bi- and furca. Round 2: rewrote bivouac's option around a camp struck at dawn (the old one kept WordUp's 'rough shelter'). Replaced suffocate (shared only -ocate) with infuriate, which shares the stressed 'fur' syllable and -ate, and dropped biodegrade (shared only bi-), leaving 4 options. Example 2 no longer says 'bifurcate into two'.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: all 4 or more. bivouac's new option ('Make a bare overnight camp on the spot and move on at first light') takes its own angle; no dictionary has 'on the spot' or 'first light'. infuriate ('Drive someone into a hot rage over some slight or wrong') does not follow the 'make someone extremely angry' frame of Oxford, Cambridge and Longman, or WordUp's 'very strong, often uncontrollable anger'; it shares the visible 'fur' with bifurcate, so it can tempt. New example 2 reads naturally, and no wrong answer fits any blank. Weakest point: only 4 options now, and fabricate shares only -ricate; obfuscate's 'murky on purpose' is the frame four dictionaries share."
+    },
+    {
+      "id": 1585,
+      "word_id": 620,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 4, definition 3 ('Deprive of possessions.' is too thin to tell it from rob or strip), plain, wrong answers and hook 1, examples 2 (one WordNet fragment), related 1 (empty). Rewrote the definition for the usual modern use (a state taking property, often for public use). Left out the 'take for one's own use' sense, which belongs to appropriate and misappropriate. Examples are historical or legal cases (Mexico's 1938 oil expropriation, Nazi-era art, land reform, French church lands), not the dictionaries' airport, dam, road, bakery or company-funds scenes. Did not use appropriate as a look-alike (too close in meaning) or exonerate (the record already has three options for it). Hook checked: Medieval Latin expropriatus, ex- plus proprius. Round 2: plain now makes the government the one taking ('For a government to seize ...'); the old 'To have the government seize' read as causing it. The art example now has the heirs' lawyers asking for the painting back.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all 4 or more. New plain ('For a government to seize people's land, homes or businesses, often to put them to public use') now makes the government the one taking; 'public use' is shared by Oxford, Cambridge, Longman, AHD and Dictionary.com, and the list is not a dictionary's. The new art example reads naturally (the heirs' lawyers now argue for return), and no wrong answer fits it. Still the weakest points: the definition follows Oxford's 'officially take away private property from its owner for public use' closely (shared meaning, 4 with a note); all four examples are states seizing property in history."
+    },
+    {
+      "id": 1586,
+      "word_id": 622,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet's 'refinement in taste and manners' misses the upper-class and often affected shade the word carries today), definition 3, plain, wrong answers and hook 1, examples 1 (one fragment), related 3 (civilized is looser). Rewrote the definition to include the class and the affectation. Examples avoid the dictionaries' accents, genteel poverty, tea, hotel lobbies, seaside towns and libraries. Left out gentle (Cambridge and Longman use it to define genteel) and genuine (it reads as the opposite of 'put on'), so only four look-alikes. Hook checked against Wiktionary: borrowed from French gentil, a doublet of gentle and gentile.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 5
+      },
+      "checker_notes": "All 4 or more. Weakest: generic's option 'Plain and ordinary, with nothing at all to set it apart from others.' opens like WordUp's 'bland and ordinary in a way that shows no imagination or distinctive character'; the idea is shared with Dictionary.com and Vocabulary.com, so 4 with a note. Example 2 could half-take 'a generic novel of drawing rooms', though 'brutal' points to genteel. The hook gives only the French source and 'picture the careful manners'; a link to gentle or gentleman would make it stick better. Plain's 'fussy' is a slightly off shade (prim or affected rather than fussy)."
+    },
+    {
+      "id": 1587,
+      "word_id": 623,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "partOfSpeech",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 2 (WordNet had only the adjective, 'relating to a general formulation that serves to guide investigation'; the common modern use is the noun, a rule of thumb), definition 3, plain, examples, wrong answers and hook 1, related 3 (one antonym, algorithmic). Changed partOfSpeech to noun and rewrote everything for it; there were no other senses to drop. Examples avoid the dictionaries' cooking, app-restart, rescue-search and classroom scenes. Look-alikes are abstract nouns that share the hyoo or he- sound (hubris, heresy, hermeneutics) or the eu- start (euphemism, eulogy). Hook checked: Greek heurisko, I find; eureka is heureka, I have found. Round 2: eulogy's option is now broader (not only a friend or relative at the funeral) and no longer the longest option.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all 4 or more. The new eulogy option ('A formal address in praise of someone, most often given after a death') is accurate and fixes the narrow 'friend or relative at the funeral'. It follows the frame every dictionary uses (a speech praising someone, especially someone who has died); it sits closest to Random House on Dictionary.com, 'a speech or writing in praise of a person ..., especially a set oration in honor of a deceased person', and Collins' 'formal speech'. Shared meaning, so 4 with a note. Other notes stand: hermeneutics' 'theory ... from scripture to law' shares AHD's 'theory ... especially of scriptural text' (also Dictionary.com, Vocabulary.com); 'algorithm' as an antonym is a textbook contrast rather than a true opposite."
+    },
+    {
+      "id": 1588,
+      "word_id": 624,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 5,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet led with 'involving deliberate burning of property'; learners mostly meet the word in 'incendiary remarks, rhetoric, speech'), definition 3, plain, wrong answers and hook 1, examples 1 (one fragment), related 3 (noncombustible belongs to the fire sense, unprovocative is barely a word). Led with the inflammatory sense and kept the fire-starting sense as one rewritten other sense. WordNet's 'arousing to action or rebellion' repeated the new first sense, so it went. A person could argue the fire sense should lead (Oxford, Cambridge and Longman list it first); I chose the sense a test-taker needs. Examples avoid the dictionaries' rally speeches, deleted tweets, headlines and lyrics. Left insidious out: the record already has two options for it. Hook checked: Latin incendere; incense the verb (to enrage) comes from its past participle. Round 2: examples 2 and 4 now each describe a single provoking act (one post, one vow), so incessant no longer fits the blank, and example 2 says whose door the mob came to. The fire-starting other sense no longer keeps Random House's 'buildings or other property' list.",
+      "checker_scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all 4 or more. The new other sense ('Filled with fuel or chemicals meant to set its target ablaze') takes its own angle (what the device holds); it is a little narrower than 'designed to cause fires', since it fits bombs and shells better than an incendiary attack or fire. New examples 2 (radio host's post, mob at the family's door) and 4 (general's vow, troops to their posts) read naturally and give clear clues. incessant no longer fits: a single post or a single vow cannot be incessant, and no other wrong answer fits any blank. Remaining notes from round 1: plain 'Likely to make people furious or start a fight' opens like WordUp's 'likely to make people very angry or push them toward violence' (the pair is also Oxford's and Cambridge's); incipient's option has the shape of WordUp's '... and not yet clearly established'; seditious is narrower."
+    },
+    {
+      "id": 1589,
+      "word_id": 625,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 4,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 4,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet's 'intrudes on the privacy or property of another without permission' reads as trespasser; today the word is mostly about someone unwelcome in a group, field or place), definition 3, plain, examples, wrong answers and hook 1, related 4. Rewrote the definition around the unwelcome outsider. Examples avoid the dictionaries' family, stage, game and party scenes. Left intermediary out: interlocutor has a go-between sense, so the two could be ruled out together. Only four look-alikes, all inter- person nouns. Hook checked against Wiktionary: inter- plus loper, runner or rover, as in landloper, from lope. Round 2: hook now says -loper came from Dutch loper, runner, instead of calling it an old English word. internist's option no longer follows Dictionary.com point by point (no 'adults'). plain no longer has an unclear 'they'.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "Round 2: all 4 or more. The hook is now accurate (Middle Dutch loper, 'runner', as in landloper). The new internist option ('A medical specialist who treats illness with drugs and leaves operations to surgeons') drops Dictionary.com's adults detail; its no-surgery idea is in every dictionary (Oxford: 'does not usually do medical operations'), and 'with drugs' is close to WordUp's 'using medication', so 4. It is also a bit narrow (internists diagnose too). New plain 'Someone who barges in among people who would rather the newcomer stayed away' is clear and not copied; weakest point: 'barges in' is more forceful than the word, since example 1's tech workers simply bought cottages."
+    },
+    {
+      "id": 1590,
+      "word_id": 626,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet's 'an event that occurs at a critical time' makes it an event, not a point in time), definition 3, other senses 3 (one repeats the first), plain, wrong answers and hook 1, examples 2 (one fragment), related 3 (articulation, join and joint belong to the joint sense). Rewrote the definition as a point in a run of events. Dropped the crisis other sense (a repeat) and rewrote the joint sense. Left junction out as a look-alike because it sits on the joint sense. Examples avoid the dictionaries' announcements, peace talks, factory decisions and the couple at a crossroads. Hook checked: Latin iunctura, from iungere, to join.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All 4 or more. Notes: plain 'A moment ..., often one where a big choice has to be made' has AHD's frame ('A point in time, especially one requiring a decision to be made'); the decision idea is also in Vocabulary.com and WordUp, so 4 with a note. The definition's 'A moment in the course of events, often one where ...' is the frame Oxford, Dictionary.com and WordUp share. Example 3 has a thin clue ('At that ___ in the investigation' also takes point or stage). adjunct's 'minor piece bolted onto a bigger whole' sits near the joint other sense and the hook's 'to join'; it tempts, which is fine, but watch it."
+    },
+    {
+      "id": 1591,
+      "word_id": 627,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet led with the legal debt-postponement sense; the common use is a temporary ban on an activity, which WordNet listed second), definition 3, plain, examples, wrong answers and hook 1, related 1 (empty). Moved the ban sense to the front and kept the debt sense as a rewritten other sense; WordNet's 'suspension of an ongoing activity' would now repeat the first, so it went. Examples avoid the dictionaries' whaling, weapons tests, drilling, casinos, construction and debt or rent scenes. Did not use oratorio (a piece of music is the wrong kind of thing) or mortgage (too near the debt sense). Hook checked: Late Latin moratorius, from morari, to delay.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 5
+      },
+      "checker_notes": "All 4 or more. Weakest: morale's option 'The mood of a team or crew, shown in how eager and hopeful its members are.' keeps AHD's frame ('The state of the spirits of a person or group as exhibited by confidence, cheerfulness ...') with each part swapped, and 'eager and hopeful' is Oxford's 'confidence and enthusiasm' in other words. The confidence-of-a-group idea is shared by Oxford, Cambridge, Longman and WordUp, so 4 with a note. memorandum's 'typed' is dated. The definition's 'official ... ban ... for a time' is the frame Oxford, Longman and Cambridge share."
+    },
+    {
+      "id": 1592,
+      "word_id": 628,
+      "rubric_version": 1,
+      "reviewed_at": "2026-11-17",
+      "scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 5,
+        "examples": 5,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "verdict": "fixed",
+      "changed": [
+        "otherSenses",
+        "definition",
+        "plain",
+        "examples",
+        "wrongAnswers",
+        "hook",
+        "synonyms",
+        "antonyms"
+      ],
+      "notes": "New word. Before: sense 3 (WordNet led with 'capable of being handled or touched'; the word is mostly used of feelings or facts so strong or plain they seem physical), definition 3, other senses 2 (one had a '(medicine)' label and failed the sentence check, the other repeated the new first sense), plain, wrong answers and hook 1, examples 1 (two fragments), related 3 (impalpable is built on the word and gives the antonym away). Rewrote the first sense, kept one rewritten touch sense (it also covers the medical use). Examples use feelings the dictionaries do not: awkwardness, dislike, boredom, fear (not tension, relief, joy, anger, grief or excitement). Left pallid out: the record already has an option for it, and both its senses are close to Oxford's and WordUp's text. Hook checked: Latin palpare, to touch softly. Round 2: palatial's option no longer follows Cambridge's and Longman's 'large and decorated' outline.",
+      "checker_scores": {
+        "sense": 5,
+        "definition": 4,
+        "plain": 4,
+        "examples": 4,
+        "wrongAnswers": 4,
+        "hook": 5,
+        "related": 4
+      },
+      "checker_notes": "Round 2: all 4 or more. The new palatial option ('Built and fitted out on a royal scale, with sweeping rooms and costly finishes') no longer follows Cambridge's 'large and highly decorated'. Its size-and-splendour pair is the meaning Cambridge, Longman and AHD ('spaciousness or ornateness') all give, so 4. Still noted from round 1: palliative ('Easing a sick person's suffering while doing nothing to cure the disease itself') runs in the order of WordUp's 'eases pain or other severe symptoms without curing the illness itself' (relieving without curing is in all five dictionaries); palatable echoes WordUp's 'easy enough for people to agree to'. All four examples use '[someone's feeling] was palpable'; tangible fits the physical other sense better."
     }
   ]
 }

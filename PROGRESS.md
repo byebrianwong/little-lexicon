@@ -2216,9 +2216,11 @@ in wrong answers. Curation will catch it word by word.
 ### Where to pick up
 
 - Follow `.claude/skills/improve-words/SKILL.md`, starting at "Start here".
-- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-10-25
-  (after re-review batch 4): all 579 taught words reviewed (26 more are
-  retired), 0 flagged, 0 to go. Batch 5 of the re-review of older words
+- `cd pipeline && npx tsx src/curate.ts status` shows progress. On 2026-11-16
+  (after adding praxis and 20 more): all 600 taught words reviewed (26 more
+  are retired), 0 flagged, 0 to go. `extras status`: 555 of 600 have an
+  extras review; the 21 new words and 24 older ones have none yet. Batch 5
+  of the re-review of older words
   (the last 89 last reviewed before 2026-10-17) is still to do. Every word has
   a plain definition, 3 or more examples, 4 or more wrong answers with
   look-alikes, a hook and a pronunciation. anachronism, euphemism,
@@ -2730,6 +2732,53 @@ in wrong answers. Curation will catch it word by word.
     and `apply` now remakes Kokoro clips. The uncommitted apply was undone,
     the branch brought up to date, and every worksheet applied again. The
     paused agents resumed with SendMessage and lost no work.
+- 2026-11-16: added praxis and 20 more words (ids 618 to 638). All 21
+  fixed, 0 flagged. Status now: 600 of 600 taught words reviewed.
+  - The words: attrition, bifurcate, expropriate, extrapolate, genteel,
+    heuristic, incendiary, interloper, juncture, moratorium, palpable,
+    praxis, prerogative, seminal, sequester, stipulate, subjugate,
+    subvert, tepid, unfettered, verdant.
+  - Why: Brian asked why praxis was missing. It had never been added: the
+    seed list is picked by hand, and the earlier runs' candidate lists were
+    not saved, so whether it was ever considered is unknown. It passes the
+    rules (0.78 per million, trend 51), though part of its count is the
+    Praxis teacher exams.
+  - Chosen as in "Adding new words", from 316 candidates. Only 15 of the
+    first 147, mostly literary words, were in the 0.3 to 4 band; 129 of a
+    second list of 169 words from news and essays were. The shortlist
+    check swapped 4 of 21: credence (near credulous, and a film
+    character's name), gambit (inflated by The Queen's Gambit), febrile
+    (near frenetic and fervid) and transgress (near contravene and flout)
+    went out; moratorium, attrition, incendiary and subjugate came in.
+  - The words stage took 16.5 minutes (a Datamuse lookup per word) and
+    moved 23 existing words one tier. praxis landed in tier 1, the most
+    common group, probably because Datamuse counts the exam name too.
+  - First senses changed from WordNet's: heuristic is now the noun (a rule
+    of thumb), seminal leads with "strongly shapes later work",
+    moratorium with a temporary ban (not a debt delay), attrition with a
+    gradual wearing down, and extrapolate with projecting known data.
+    tepid and incendiary lead with their figurative senses (half-hearted;
+    stirring up anger) and keep the literal ones as other senses, as
+    acerbic and caustic do.
+  - Review rounds: 6 of 21 failed the first review (praxis, seminal,
+    unfettered, bifurcate, expropriate, incendiary) and 1 the second
+    (unfettered, which the main session fixed in round 3). The failures
+    were copied wording (Collins's praxis definition, Vocabulary.com's
+    seminal frame, WordUp's bivouac option), example scenes retold from
+    WordUp and Cambridge, a wrong answer that fit an example's blank
+    (unflattering on unfettered, incessant on incendiary), and a plain
+    definition of expropriate that made the owner ask the government to
+    take the land.
+  - The reviewers also caught factual slips in options they scored 4
+    (attestation called a "pledge", a eulogy given "at the funeral", and
+    interloper's hook calling "loper" an English word). They were fixed in
+    round 2.
+  - The first shortlist checker timed out twice while reading the large
+    WordNet entry files. A new one, given the parts of speech in its
+    prompt, finished.
+  - Pronunciations were written by the writers, checked by the reviewers
+    and set with `curate.ts ipa`. expropriate uses /ɪk-/ like the other
+    ex- words. The 21 words have no extras (origin, tone, pairings) yet.
 
 ## The placement test no longer finishes during render
 
