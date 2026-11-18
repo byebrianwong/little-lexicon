@@ -4921,6 +4921,11 @@ has a search button that opens it in one tap.
   so the cursor never reached the box. The view now uses `autoFocus` for the
   mount that the search button causes, and `focus()` only when All words is
   already open.
+- The search button overhangs the title line by 2 px above and below
+  (`-my-[2px]`). On web it is 44 px, taller than the 40 px title, and at
+  first it made the header row 4 px taller, which moved every Words screen
+  down (Chromatic build 219 showed it). On iOS and Android it is 38.5 points,
+  because NativeWind's rem is 14 there, so native was never affected.
 
 ### Verified
 
@@ -4943,5 +4948,11 @@ has a search button that opens it in one tap.
 
 - Android was not run. The code is the same React Native on both platforms,
   but focus behaviour on Android is untested.
-- Chromatic has not run. Every Words story will show the new search button in
-  the header, and the All words stories show the new notes and links.
+
+### Chromatic
+
+Build 220 had 44 changes, all on Words stories and none from main: the
+search icon on every Words story (on the Discover, Saved and Learning
+samples checked, the icon was the only change), the new notes and links on
+the All words stories, and the 4 new stories. Brian accepted all 44 on
+2026-11-17.
