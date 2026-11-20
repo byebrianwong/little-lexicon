@@ -7,7 +7,7 @@ import { BrowseView } from './BrowseView';
 import { WordsLayout } from './WordsLayout';
 
 const allWords: Decorator = (Story) => (
-  <WordsLayout view="all" onChangeView={() => {}} listCount={2}>
+  <WordsLayout view="all" onChangeView={() => {}} listCount={2} onSearch={() => {}}>
     <Story />
   </WordsLayout>
 );
@@ -109,6 +109,65 @@ export const Searching: Story = {
     const canvas = within(canvasElement);
     await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'short');
     await expect(await canvas.findByText('ephemeral')).toBeInTheDocument();
+  },
+};
+
+/**
+ * A search for a word that is not in the collection lists the words near it,
+ * each with why: "practical" is a synonym of pragmatic and an antonym of
+ * quixotic.
+ */
+export const NearbyWords: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'practical');
+    await expect(
+      await canvas.findByRole('button', { name: 'pragmatic, similar to practical. Expand' }),
+    ).toBeInTheDocument();
+    await expect(
+      canvas.getByRole('button', { name: 'quixotic, opposite of practical. Expand' }),
+    ).toBeInTheDocument();
+  },
+};
+
+/**
+ * A search for a word in the collection puts it first, then the words it
+ * lists as similar or opposite and the words from the same root.
+ */
+export const WordAndItsNeighbours: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'laconic');
+    await expect(
+      await canvas.findByRole('button', { name: 'loquacious, opposite of laconic. Expand' }),
+    ).toBeInTheDocument();
+  },
+};
+
+/** A typo still finds the word, marked as a close spelling. */
+export const CloseSpelling: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.type(canvas.getByPlaceholderText('Search words and meanings'), 'ubiquitus');
+    await expect(
+      await canvas.findByRole('button', { name: 'ubiquitous, close spelling. Expand' }),
+    ).toBeInTheDocument();
+  },
+};
+
+/**
+ * A Similar or Opposite word is a link. One that is not in the collection
+ * becomes the search, which lists the words near it.
+ */
+export const RelatedWordLink: Story = {
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(await canvas.findByRole('button', { name: 'laconic. Expand' }));
+    await userEvent.click(await canvas.findByRole('link', { name: 'terse: search for this word' }));
+    await expect(canvas.getByPlaceholderText('Search words and meanings')).toHaveValue('terse');
+    await expect(
+      await canvas.findByRole('button', { name: 'laconic, similar to terse. Expand' }),
+    ).toBeInTheDocument();
   },
 };
 

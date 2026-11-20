@@ -4918,3 +4918,90 @@ EXPO_PUBLIC_STORYBOOK_ENABLED=true STORYBOOK_DISABLE_UI=true EXPO_PUBLIC_STORYBO
   Practice and Session stories. It is a warning only.
 - Chromatic has not run on the web Storybook with NativeWind 4.2.7. The PR's
   "UI Tests" check will show whether any snapshot changed.
+
+## Word search finds nearby words (2026-11-16)
+
+The All words search now finds a word from a word near it, and the Words tab
+has a search button that opens it in one tap.
+
+### What it does
+
+- A search button sits beside the "Words" title on every view of the tab. It
+  switches to All words and puts the cursor in the search box.
+- The search ranks results instead of filtering in collection order. Best
+  first: the headword itself, another form of it ("abated" finds abate),
+  headwords that start with or contain the text, words that list the text as a
+  synonym ("lessen" finds abate, mitigate, attenuate and alleviate), words that
+  list it as an antonym ("escalate" finds abate), and, when the text is a word
+  in the collection, its own synonyms and antonyms, words from the same root
+  and words that share a synonym or antonym with it. After those come close
+  spellings for typos ("obsequios" finds obsequious), definitions that use the
+  text ("calm" finds abate), and finally matches on the start of synonyms,
+  antonyms and definition words so results appear while typing.
+- A row found through a nearby word says why under its headword, as a
+  small-caps label and the word: "Similar to lessen", "Opposite of escalate",
+  "Same root as eloquent", "Meaning mentions calm" or "Close spelling". The
+  row's screen-reader label includes it too.
+- In an open row, each Similar and Opposite word is now a link. A word in the
+  collection opens its row, like a Same root link. Any other word becomes the
+  search, which lists the words near it.
+
+### Decisions
+
+- Search logic is in `src/features/browse/wordSearch.ts`, pure and tested. The
+  index is built once per word list, and a search over all 579 words takes
+  about 1 to 2 ms on a Mac, so it runs on every keystroke with no debounce.
+- Short searches match less, to keep the list from filling with weak matches:
+  one letter matches headword starts only, two add headwords that contain it,
+  three add synonyms, antonyms and definitions, four add close spellings.
+  Definition matching skips common words such as "the" and "with".
+- Close spellings rank below synonyms. Ranking them higher put a near miss on a
+  correctly spelled word above its real synonyms ("brave" listed craven before
+  audacious).
+- The stemmer is a short list of suffix rules, not a library. It misses some
+  forms (running and run) and is good enough for ranking.
+- Matching stays on definitions, synonyms, antonyms and roots. Examples,
+  pairings and memory hooks are not searched, because they made results noisy.
+- The search box keeps its placeholder, "Search words and meanings". A longer
+  one that names synonyms would probably not fit beside the entry count on a
+  360-point phone (estimated, not tried). The notes on each result explain
+  the nearby matches instead.
+- On iOS, calling `focus()` in the first effect after the view mounts was lost,
+  so the cursor never reached the box. The view now uses `autoFocus` for the
+  mount that the search button causes, and `focus()` only when All words is
+  already open.
+- The search button overhangs the title line by 2 px above and below
+  (`-my-[2px]`). On web it is 44 px, taller than the 40 px title, and at
+  first it made the header row 4 px taller, which moved every Words screen
+  down (Chromatic build 219 showed it). On iOS and Android it is 38.5 points,
+  because NativeWind's rem is 14 there, so native was never affected.
+
+### Verified
+
+- Web (demo mode, desktop and 375 px wide): the search button focuses the box,
+  "lessen", "obsequios" and "intensify" give the results above, the Opposite
+  link works, and switching back to All words by its tab does not take focus
+  again. Console errors are the same as on main (the NativeWind color-scheme
+  error and two unknown-prop warnings from Icon).
+- iOS 26.5 simulator (iPhone 17 Pro, Expo Go): the search button opens All
+  words with the cursor in the box (after the autoFocus fix), and "lessen"
+  lists the same four words with their notes.
+- Web Storybook: the new stories (Nearby Words, Word And Its Neighbours, Close
+  Spelling, Related Word Link) and the existing search stories pass their play
+  functions. The first story loaded after starting Storybook can fail once
+  while Vite reloads; a rerun passes.
+- `npx tsc --noEmit`, eslint on the changed files and `npx jest` (44 suites,
+  458 tests) pass.
+
+### Not checked
+
+- Android was not run. The code is the same React Native on both platforms,
+  but focus behaviour on Android is untested.
+
+### Chromatic
+
+Build 220 had 44 changes, all on Words stories and none from main: the
+search icon on every Words story (on the Discover, Saved and Learning
+samples checked, the icon was the only change), the new notes and links on
+the All words stories, and the 4 new stories. Brian accepted all 44 on
+2026-11-17.

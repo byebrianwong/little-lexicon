@@ -78,6 +78,59 @@ export function WatchOut({ note, className }: { note: string | null; className?:
   );
 }
 
+/**
+ * A labelled line of words where each word is a link. Each word is its own
+ * control, at the app's 44 px hit height, so the line is taller than a plain
+ * one.
+ */
+function LinkLine({
+  label,
+  links,
+}: {
+  label: string;
+  links: { key: string; text: string; accessibilityLabel: string; onPress: () => void }[];
+}) {
+  return (
+    <View className="flex-row flex-wrap items-center gap-x-4">
+      <Label>{label}</Label>
+      {links.map((l) => (
+        <TextButton
+          key={l.key}
+          label={l.text}
+          role="link"
+          accessibilityLabel={l.accessibilityLabel}
+          onPress={l.onPress}
+        />
+      ))}
+    </View>
+  );
+}
+
+/** Similar or Opposite: plain text, or a link per word that searches for it. */
+function RelatedWords({
+  label,
+  words,
+  onRelatedWord,
+}: {
+  label: string;
+  words: string[];
+  onRelatedWord?: (word: string) => void;
+}) {
+  if (!onRelatedWord) return <Line label={label}>{words.join(', ')}</Line>;
+  return (
+    <LinkLine
+      label={label}
+      links={words.map((w) => ({
+        key: w,
+        text: w,
+        // Starts with the visible text, so voice control finds it.
+        accessibilityLabel: `${w}: search for this word`,
+        onPress: () => onRelatedWord(w),
+      }))}
+    />
+  );
+}
+
 function SameRoot({
   words,
   onRootWord,
@@ -88,21 +141,17 @@ function SameRoot({
   if (!onRootWord) {
     return <Line label="Same root">{words.map((w) => w.headword).join(', ')}</Line>;
   }
-  // Each word is its own control, at the app's 44 px hit height.
   return (
-    <View className="flex-row flex-wrap items-center gap-x-4">
-      <Label>Same root</Label>
-      {words.map((w) => (
-        <TextButton
-          key={w.wordId}
-          label={w.headword}
-          role="link"
-          // Starts with the visible text, so voice control finds it.
-          accessibilityLabel={`${w.headword}: show this word`}
-          onPress={() => onRootWord(w)}
-        />
-      ))}
-    </View>
+    <LinkLine
+      label="Same root"
+      links={words.map((w) => ({
+        key: String(w.wordId),
+        text: w.headword,
+        // Starts with the visible text, so voice control finds it.
+        accessibilityLabel: `${w.headword}: show this word`,
+        onPress: () => onRootWord(w),
+      }))}
+    />
   );
 }
 
@@ -110,10 +159,12 @@ function ExtraLineView({
   line,
   extras,
   onRootWord,
+  onRelatedWord,
 }: {
   line: ExtraLine;
   extras: WordExtras;
   onRootWord?: (word: RootWord) => void;
+  onRelatedWord?: (word: string) => void;
 }) {
   switch (line) {
     case 'alsoMeans':
@@ -134,9 +185,11 @@ function ExtraLineView({
         </View>
       );
     case 'similar':
-      return <Line label="Similar">{extras.similar.join(', ')}</Line>;
+      return <RelatedWords label="Similar" words={extras.similar} onRelatedWord={onRelatedWord} />;
     case 'opposite':
-      return <Line label="Opposite">{extras.opposite.join(', ')}</Line>;
+      return (
+        <RelatedWords label="Opposite" words={extras.opposite} onRelatedWord={onRelatedWord} />
+      );
     case 'pairings':
       // Set in italic, like the example sentences: they are bits of real use.
       return (
@@ -159,12 +212,15 @@ export function ExtraLines({
   extras,
   lines,
   onRootWord,
+  onRelatedWord,
   className,
 }: {
   extras: WordExtras;
   lines: readonly ExtraLine[];
   /** Makes each "Same root" word a link that calls this. */
   onRootWord?: (word: RootWord) => void;
+  /** Makes each "Similar" and "Opposite" word a link that calls this. */
+  onRelatedWord?: (word: string) => void;
   className?: string;
 }) {
   const shown = linesToShow(extras, lines);
@@ -172,7 +228,13 @@ export function ExtraLines({
   return (
     <View className={tw('gap-1', className)}>
       {shown.map((line) => (
-        <ExtraLineView key={line} line={line} extras={extras} onRootWord={onRootWord} />
+        <ExtraLineView
+          key={line}
+          line={line}
+          extras={extras}
+          onRootWord={onRootWord}
+          onRelatedWord={onRelatedWord}
+        />
       ))}
     </View>
   );

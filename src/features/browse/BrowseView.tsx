@@ -4,15 +4,22 @@
 // and the title and view switch above it from WordsLayout. What each filter
 // matches is in wordFilters.ts.
 //
+// The search also finds words near what was typed: similar and opposite
+// words, words from the same root, close spellings and definitions
+// (wordSearch.ts). A row found that way says why under its headword
+// ("Similar to lessen"), so a list of near matches is not a puzzle.
+//
 // Each row is set like a dictionary entry: the word, its pronunciation, part
 // of speech and tone label, then the definition. Opening a row adds the
 // "Watch out" note, an example (with a control to step through the others),
 // every extra line (components/WordExtras), the memory hook, audio and the
 // Save control. This is the reference view, so it shows all the extras. A
 // "Same root" word is a link: it searches for that word and opens its row.
+// So is each "Similar" and "Opposite" word: it searches for that word, and
+// opens its row when the word is in the collection.
 
-import { useMemo, useRef, useState } from 'react';
-import { FlatList, Pressable, View } from 'react-native';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { FlatList, Pressable, TextInput, View } from 'react-native';
 import {
   Body,
   Choice,
@@ -39,7 +46,7 @@ import { SaveWordButton } from '@/features/feed/SaveWordButton';
 import type { WordTracker } from '@/features/tracker/tracker';
 import {
   activeFilterCount,
-  filterWords,
+  findWords,
   NO_FILTERS,
   partsOfSpeech,
   searchForWord,
@@ -48,6 +55,13 @@ import {
   toggleTier,
   type WordFilters,
 } from './wordFilters';
+import {
+  buildSearchIndex,
+  matchNote,
+  wordNamed,
+  type SearchHit,
+  type SearchMatch,
+} from './wordSearch';
 
 export interface BrowseViewProps {
   words: WordContent[] | undefined;
@@ -59,6 +73,12 @@ export interface BrowseViewProps {
   onToggleSave: (word: WordContent) => void;
   /** Open the filters on first render. For stories. */
   initialFiltersOpen?: boolean;
+  /**
+   * Put the cursor in the search box (and bring up the keyboard). The view
+   * calls onSearchFocused once it has, so the screen can turn this off.
+   */
+  focusSearch?: boolean;
+  onSearchFocused?: () => void;
 }
 
 export function BrowseView({
@@ -69,32 +89,72 @@ export function BrowseView({
   trackers,
   onToggleSave,
   initialFiltersOpen = false,
+  focusSearch = false,
+  onSearchFocused,
 }: BrowseViewProps) {
   const [query, setQuery] = useState('');
   const [openId, setOpenId] = useState<number | null>(null);
   const [filters, setFilters] = useState<WordFilters>(NO_FILTERS);
   const [filtersOpen, setFiltersOpen] = useState(initialFiltersOpen);
-  const listRef = useRef<FlatList<WordContent>>(null);
+  const listRef = useRef<FlatList<SearchHit>>(null);
+  const searchRef = useRef<TextInput>(null);
 
-  const filtered = useMemo(
-    () => filterWords(words ?? [], query, filters, { savedIds, trackers }),
-    [words, query, filters, savedIds, trackers],
+  // The search button can open this view, which mounts it. On iOS a focus()
+  // call in the first effect comes before the native input is ready and is
+  // lost, so a view opened that way asks through autoFocus, which the input
+  // applies once it is on screen. The value is kept for the view's life, so
+  // turning focusSearch off does not change it. The effect covers a press
+  // while the view is already open.
+  const [focusOnMount] = useState(focusSearch);
+  useEffect(() => {
+    if (!focusSearch) return;
+    searchRef.current?.focus();
+    onSearchFocused?.();
+  }, [focusSearch, onSearchFocused]);
+
+  // Built once per word list, so each keystroke only compares strings.
+  const index = useMemo(() => buildSearchIndex(words ?? []), [words]);
+  const hits = useMemo(
+    () => findWords(index, query, filters, { savedIds, trackers }),
+    [index, query, filters, savedIds, trackers],
   );
   const parts = useMemo(() => partsOfSpeech(words ?? []), [words]);
   const active = activeFilterCount(filters);
 
-  // A "Same root" link: search for that word and open its row. Filters that
-  // would hide it are cleared (wordFilters searchForWord).
-  function goToWord(root: RootWord) {
-    const target = words?.find((w) => w.wordId === root.wordId);
-    if (!target) return;
+  // The list keeps its offset after a link changes the search, which would
+  // leave the top results above the top of the shorter list.
+  function scrollToTop() {
+    listRef.current?.scrollToOffset({ offset: 0, animated: false });
+  }
+
+  // Search for a word in the collection and open its row. Filters that would
+  // hide it are cleared (wordFilters searchForWord).
+  function goToWord(target: WordContent) {
     const next = searchForWord(target, filters, { savedIds, trackers });
     setQuery(next.query);
     setFilters(next.filters);
     setOpenId(target.wordId);
-    // The list keeps its offset, which would leave the word's heading above
-    // the top of the shorter list.
-    listRef.current?.scrollToOffset({ offset: 0, animated: false });
+    scrollToTop();
+  }
+
+  // A "Same root" link.
+  function goToRootWord(root: RootWord) {
+    const target = words?.find((w) => w.wordId === root.wordId);
+    if (target) goToWord(target);
+  }
+
+  // A "Similar" or "Opposite" link. A word in the collection opens like a
+  // "Same root" link. Any other word becomes the search, which lists the
+  // words near it, with every row closed so they can be scanned.
+  function searchRelated(text: string) {
+    const target = wordNamed(index, text);
+    if (target) {
+      goToWord(target);
+      return;
+    }
+    setQuery(text);
+    setOpenId(null);
+    scrollToTop();
   }
 
   return (
@@ -102,6 +162,8 @@ export function BrowseView({
       <Column className="px-6 pt-4">
         <Row className="items-end gap-4">
           <TextField
+            ref={searchRef}
+            autoFocus={focusOnMount}
             value={query}
             onChangeText={setQuery}
             placeholder="Search words and meanings"
@@ -110,7 +172,7 @@ export function BrowseView({
             autoCorrect={false}
             className="flex-1 text-[18px]"
           />
-          <Note className="pb-3">{`${filtered.length} ${filtered.length === 1 ? 'entry' : 'entries'}`}</Note>
+          <Note className="pb-3">{`${hits.length} ${hits.length === 1 ? 'entry' : 'entries'}`}</Note>
         </Row>
         <Row className="items-center justify-between">
           <TextButton
@@ -180,8 +242,8 @@ export function BrowseView({
       ) : (
         <FlatList
           ref={listRef}
-          data={filtered}
-          keyExtractor={(w) => String(w.wordId)}
+          data={hits}
+          keyExtractor={(hit) => String(hit.word.wordId)}
           contentContainerStyle={{
             width: '100%',
             maxWidth: 640,
@@ -196,17 +258,19 @@ export function BrowseView({
               {active > 0 ? 'No word matches these filters.' : 'No word matches that search.'}
             </Note>
           }
-          renderItem={({ item, index }) => (
+          renderItem={({ item, index: at }) => (
             <WordRow
-              word={item}
+              word={item.word}
+              match={item.match}
               collection={words ?? []}
-              onRootWord={goToWord}
-              first={index === 0}
-              expanded={openId === item.wordId}
-              onToggle={() => setOpenId(openId === item.wordId ? null : item.wordId)}
+              onRootWord={goToRootWord}
+              onRelatedWord={searchRelated}
+              first={at === 0}
+              expanded={openId === item.word.wordId}
+              onToggle={() => setOpenId(openId === item.word.wordId ? null : item.word.wordId)}
               soundEnabled={soundEnabled}
-              saved={savedIds.has(item.wordId)}
-              onToggleSave={() => onToggleSave(item)}
+              saved={savedIds.has(item.word.wordId)}
+              onToggleSave={() => onToggleSave(item.word)}
             />
           )}
         />
@@ -226,8 +290,10 @@ function FilterGroup({ label, children }: { label: string; children: React.React
 
 function WordRow({
   word,
+  match,
   collection,
   onRootWord,
+  onRelatedWord,
   first,
   expanded,
   onToggle,
@@ -236,9 +302,12 @@ function WordRow({
   onToggleSave,
 }: {
   word: WordContent;
+  /** Why the search found this word. */
+  match: SearchMatch;
   /** Every word, for "Same root". */
   collection: readonly WordContent[];
   onRootWord: (word: RootWord) => void;
+  onRelatedWord: (word: string) => void;
   first: boolean;
   expanded: boolean;
   onToggle: () => void;
@@ -254,6 +323,8 @@ function WordRow({
   const nextStep = examples.length > 0 ? (exampleStep + 1) % examples.length : 0;
   const definition = sense?.plainLanguageDefinition ?? sense?.definition ?? '';
   const extras = useMemo(() => wordExtras(word, collection), [word, collection]);
+  const note = matchNote(match);
+  const noteText = note ? [note.label, note.word].filter(Boolean).join(' ') : null;
 
   // The toggle and the audio controls are siblings, never nested. React Native
   // Web renders every Pressable as a <button>, and a button inside a button is
@@ -263,7 +334,7 @@ function WordRow({
       <Pressable
         onPress={onToggle}
         accessibilityRole="button"
-        accessibilityLabel={`${word.headword}. ${expanded ? 'Collapse' : 'Expand'}`}
+        accessibilityLabel={`${word.headword}${noteText ? `, ${noteText.toLowerCase()}` : ''}. ${expanded ? 'Collapse' : 'Expand'}`}
         accessibilityState={{ expanded }}
         className="py-4 active:bg-paper-deep web:hover:bg-paper-deep"
       >
@@ -287,6 +358,13 @@ function WordRow({
             />
           </Row>
         </Row>
+        {note ? (
+          // Set like the extra lines: a small-caps label, then the word.
+          <Muted className="mt-1">
+            <Label className="leading-[23px]">{note.label}</Label>
+            {note.word ? `  ${note.word}` : null}
+          </Muted>
+        ) : null}
         <Body className="mt-1">{definition}</Body>
       </Pressable>
 
@@ -311,7 +389,12 @@ function WordRow({
             </View>
           ) : null}
 
-          <ExtraLines extras={extras} lines={EXTRA_LINES} onRootWord={onRootWord} />
+          <ExtraLines
+            extras={extras}
+            lines={EXTRA_LINES}
+            onRootWord={onRootWord}
+            onRelatedWord={onRelatedWord}
+          />
 
           {word.mnemonics[0] ? (
             <Section label="Memory hook" rule="hairline" className="mt-1">

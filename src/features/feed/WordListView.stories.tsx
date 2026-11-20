@@ -52,7 +52,12 @@ const TRACKERS = new Map<number, WordTracker>([
 const saved: Decorator = (Story, { args }) => {
   const entries = (args as { entries?: ListedWord[] }).entries;
   return (
-    <WordsLayout view="list" onChangeView={() => {}} listCount={entries?.length}>
+    <WordsLayout
+      view="list"
+      onChangeView={() => {}}
+      listCount={entries?.length}
+      onSearch={() => {}}
+    >
       <Story />
     </WordsLayout>
   );
